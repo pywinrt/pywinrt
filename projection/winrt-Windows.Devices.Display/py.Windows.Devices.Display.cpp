@@ -600,7 +600,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyType_Spec type_spec_DisplayMonitor =
     {
-        "_winrt_Windows_Devices_Display.DisplayMonitor",
+        "_winrt_windows_devices_display.DisplayMonitor",
         sizeof(py::wrapper::Windows::Devices::Display::DisplayMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -613,7 +613,7 @@ namespace py::cpp::Windows::Devices::Display
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Display",
+           "_winrt_windows_devices_display",
            module_doc,
            0,
            nullptr,
@@ -624,7 +624,7 @@ namespace py::cpp::Windows::Devices::Display
 
 } // py::cpp::Windows::Devices::Display
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Display(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_display(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Display;
 

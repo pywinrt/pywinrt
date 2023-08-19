@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.ExtendedExecution.Foreground")
+from . import _winrt_windows_applicationmodel_extendedexecution_foreground
 
 try:
     import winrt.windows.foundation
@@ -25,5 +24,5 @@ class ExtendedExecutionForegroundRevokedReason(enum.IntEnum):
     RESUMED = 0
     SYSTEM_POLICY = 1
 
-ExtendedExecutionForegroundRevokedEventArgs = _ns_module.ExtendedExecutionForegroundRevokedEventArgs
-ExtendedExecutionForegroundSession = _ns_module.ExtendedExecutionForegroundSession
+ExtendedExecutionForegroundRevokedEventArgs = _winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundRevokedEventArgs
+ExtendedExecutionForegroundSession = _winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundSession

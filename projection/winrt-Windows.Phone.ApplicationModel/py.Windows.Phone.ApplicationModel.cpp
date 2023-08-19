@@ -52,7 +52,7 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 
     static PyType_Spec type_spec_ApplicationProfile =
     {
-        "_winrt_Windows_Phone_ApplicationModel.ApplicationProfile",
+        "_winrt_windows_phone_applicationmodel.ApplicationProfile",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -73,7 +73,7 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 
     static PyType_Spec type_spec_ApplicationProfile_Meta =
     {
-        "_winrt_Windows_Phone_ApplicationModel.ApplicationProfile_Meta",
+        "_winrt_windows_phone_applicationmodel.ApplicationProfile_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_ApplicationModel",
+           "_winrt_windows_phone_applicationmodel",
            module_doc,
            0,
            nullptr,
@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Phone::ApplicationModel
 
 } // py::cpp::Windows::Phone::ApplicationModel
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_ApplicationModel(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_applicationmodel(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::ApplicationModel;
 

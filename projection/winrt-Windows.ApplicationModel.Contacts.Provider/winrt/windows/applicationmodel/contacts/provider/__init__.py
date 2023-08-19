@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Contacts.Provider")
+from . import _winrt_windows_applicationmodel_contacts_provider
 
 try:
     import winrt.windows.applicationmodel.contacts
@@ -26,5 +25,5 @@ class AddContactResult(enum.IntEnum):
     ALREADY_ADDED = 1
     UNAVAILABLE = 2
 
-ContactPickerUI = _ns_module.ContactPickerUI
-ContactRemovedEventArgs = _ns_module.ContactRemovedEventArgs
+ContactPickerUI = _winrt_windows_applicationmodel_contacts_provider.ContactPickerUI
+ContactRemovedEventArgs = _winrt_windows_applicationmodel_contacts_provider.ContactRemovedEventArgs

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Usb")
+from . import _winrt_windows_devices_usb
 
 try:
     import winrt.windows.foundation
@@ -55,25 +54,25 @@ class UsbWriteOptions(enum.IntFlag):
     AUTO_CLEAR_STALL = 0x1
     SHORT_PACKET_TERMINATE = 0x2
 
-UsbBulkInEndpointDescriptor = _ns_module.UsbBulkInEndpointDescriptor
-UsbBulkInPipe = _ns_module.UsbBulkInPipe
-UsbBulkOutEndpointDescriptor = _ns_module.UsbBulkOutEndpointDescriptor
-UsbBulkOutPipe = _ns_module.UsbBulkOutPipe
-UsbConfiguration = _ns_module.UsbConfiguration
-UsbConfigurationDescriptor = _ns_module.UsbConfigurationDescriptor
-UsbControlRequestType = _ns_module.UsbControlRequestType
-UsbDescriptor = _ns_module.UsbDescriptor
-UsbDevice = _ns_module.UsbDevice
-UsbDeviceClass = _ns_module.UsbDeviceClass
-UsbDeviceClasses = _ns_module.UsbDeviceClasses
-UsbDeviceDescriptor = _ns_module.UsbDeviceDescriptor
-UsbEndpointDescriptor = _ns_module.UsbEndpointDescriptor
-UsbInterface = _ns_module.UsbInterface
-UsbInterfaceDescriptor = _ns_module.UsbInterfaceDescriptor
-UsbInterfaceSetting = _ns_module.UsbInterfaceSetting
-UsbInterruptInEndpointDescriptor = _ns_module.UsbInterruptInEndpointDescriptor
-UsbInterruptInEventArgs = _ns_module.UsbInterruptInEventArgs
-UsbInterruptInPipe = _ns_module.UsbInterruptInPipe
-UsbInterruptOutEndpointDescriptor = _ns_module.UsbInterruptOutEndpointDescriptor
-UsbInterruptOutPipe = _ns_module.UsbInterruptOutPipe
-UsbSetupPacket = _ns_module.UsbSetupPacket
+UsbBulkInEndpointDescriptor = _winrt_windows_devices_usb.UsbBulkInEndpointDescriptor
+UsbBulkInPipe = _winrt_windows_devices_usb.UsbBulkInPipe
+UsbBulkOutEndpointDescriptor = _winrt_windows_devices_usb.UsbBulkOutEndpointDescriptor
+UsbBulkOutPipe = _winrt_windows_devices_usb.UsbBulkOutPipe
+UsbConfiguration = _winrt_windows_devices_usb.UsbConfiguration
+UsbConfigurationDescriptor = _winrt_windows_devices_usb.UsbConfigurationDescriptor
+UsbControlRequestType = _winrt_windows_devices_usb.UsbControlRequestType
+UsbDescriptor = _winrt_windows_devices_usb.UsbDescriptor
+UsbDevice = _winrt_windows_devices_usb.UsbDevice
+UsbDeviceClass = _winrt_windows_devices_usb.UsbDeviceClass
+UsbDeviceClasses = _winrt_windows_devices_usb.UsbDeviceClasses
+UsbDeviceDescriptor = _winrt_windows_devices_usb.UsbDeviceDescriptor
+UsbEndpointDescriptor = _winrt_windows_devices_usb.UsbEndpointDescriptor
+UsbInterface = _winrt_windows_devices_usb.UsbInterface
+UsbInterfaceDescriptor = _winrt_windows_devices_usb.UsbInterfaceDescriptor
+UsbInterfaceSetting = _winrt_windows_devices_usb.UsbInterfaceSetting
+UsbInterruptInEndpointDescriptor = _winrt_windows_devices_usb.UsbInterruptInEndpointDescriptor
+UsbInterruptInEventArgs = _winrt_windows_devices_usb.UsbInterruptInEventArgs
+UsbInterruptInPipe = _winrt_windows_devices_usb.UsbInterruptInPipe
+UsbInterruptOutEndpointDescriptor = _winrt_windows_devices_usb.UsbInterruptOutEndpointDescriptor
+UsbInterruptOutPipe = _winrt_windows_devices_usb.UsbInterruptOutPipe
+UsbSetupPacket = _winrt_windows_devices_usb.UsbSetupPacket

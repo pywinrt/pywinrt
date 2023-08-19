@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Diagnostics.DevicePortal")
+from . import _winrt_windows_system_diagnostics_deviceportal
 
 try:
     import winrt.windows.applicationmodel.appservice
@@ -39,6 +38,6 @@ class DevicePortalConnectionClosedReason(enum.IntEnum):
     USER_NOT_PRESENT = 4
     SERVICE_TERMINATED = 5
 
-DevicePortalConnection = _ns_module.DevicePortalConnection
-DevicePortalConnectionClosedEventArgs = _ns_module.DevicePortalConnectionClosedEventArgs
-DevicePortalConnectionRequestReceivedEventArgs = _ns_module.DevicePortalConnectionRequestReceivedEventArgs
+DevicePortalConnection = _winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection
+DevicePortalConnectionClosedEventArgs = _winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs
+DevicePortalConnectionRequestReceivedEventArgs = _winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs

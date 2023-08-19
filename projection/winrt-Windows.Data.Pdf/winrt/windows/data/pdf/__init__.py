@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Data.Pdf")
+from . import _winrt_windows_data_pdf
 
 try:
     import winrt.windows.foundation
@@ -32,7 +31,7 @@ class PdfPageRotation(enum.IntEnum):
     ROTATE180 = 2
     ROTATE270 = 3
 
-PdfDocument = _ns_module.PdfDocument
-PdfPage = _ns_module.PdfPage
-PdfPageDimensions = _ns_module.PdfPageDimensions
-PdfPageRenderOptions = _ns_module.PdfPageRenderOptions
+PdfDocument = _winrt_windows_data_pdf.PdfDocument
+PdfPage = _winrt_windows_data_pdf.PdfPage
+PdfPageDimensions = _winrt_windows_data_pdf.PdfPageDimensions
+PdfPageRenderOptions = _winrt_windows_data_pdf.PdfPageRenderOptions

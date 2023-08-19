@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Web.UI.Interop")
+from . import _winrt_windows_web_ui_interop
 
 try:
     import winrt.windows.applicationmodel.datatransfer
@@ -70,8 +69,8 @@ class WebViewControlProcessCapabilityState(enum.IntEnum):
     DISABLED = 1
     ENABLED = 2
 
-WebViewControl = _ns_module.WebViewControl
-WebViewControlAcceleratorKeyPressedEventArgs = _ns_module.WebViewControlAcceleratorKeyPressedEventArgs
-WebViewControlMoveFocusRequestedEventArgs = _ns_module.WebViewControlMoveFocusRequestedEventArgs
-WebViewControlProcess = _ns_module.WebViewControlProcess
-WebViewControlProcessOptions = _ns_module.WebViewControlProcessOptions
+WebViewControl = _winrt_windows_web_ui_interop.WebViewControl
+WebViewControlAcceleratorKeyPressedEventArgs = _winrt_windows_web_ui_interop.WebViewControlAcceleratorKeyPressedEventArgs
+WebViewControlMoveFocusRequestedEventArgs = _winrt_windows_web_ui_interop.WebViewControlMoveFocusRequestedEventArgs
+WebViewControlProcess = _winrt_windows_web_ui_interop.WebViewControlProcess
+WebViewControlProcessOptions = _winrt_windows_web_ui_interop.WebViewControlProcessOptions

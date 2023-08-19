@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Haptics")
+from . import _winrt_windows_devices_haptics
 
 try:
     import winrt.windows.foundation
@@ -22,7 +21,7 @@ class VibrationAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 2
     DENIED_BY_ENERGY_SAVER = 3
 
-KnownSimpleHapticsControllerWaveforms = _ns_module.KnownSimpleHapticsControllerWaveforms
-SimpleHapticsController = _ns_module.SimpleHapticsController
-SimpleHapticsControllerFeedback = _ns_module.SimpleHapticsControllerFeedback
-VibrationDevice = _ns_module.VibrationDevice
+KnownSimpleHapticsControllerWaveforms = _winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms
+SimpleHapticsController = _winrt_windows_devices_haptics.SimpleHapticsController
+SimpleHapticsControllerFeedback = _winrt_windows_devices_haptics.SimpleHapticsControllerFeedback
+VibrationDevice = _winrt_windows_devices_haptics.VibrationDevice

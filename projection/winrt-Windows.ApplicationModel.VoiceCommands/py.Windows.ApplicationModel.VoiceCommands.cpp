@@ -134,7 +134,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommand =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommand",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommand",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandCompletedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandCompletedEventArgs",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -324,7 +324,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandConfirmationResult =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandConfirmationResult",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandConfirmationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -806,7 +806,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandContentTile =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandContentTile",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandContentTile",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -954,7 +954,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandDefinition =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandDefinition",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinition",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1039,7 +1039,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandDefinitionManager =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandDefinitionManager",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1060,7 +1060,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandDefinitionManager_Meta =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandDefinitionManager_Meta",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1155,7 +1155,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandDisambiguationResult =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandDisambiguationResult",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandDisambiguationResult",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1521,7 +1521,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandResponse =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandResponse",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1542,7 +1542,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandResponse_Meta =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandResponse_Meta",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1936,7 +1936,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandServiceConnection =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandServiceConnection",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandServiceConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2130,7 +2130,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyType_Spec type_spec_VoiceCommandUserMessage =
     {
-        "_winrt_Windows_ApplicationModel_VoiceCommands.VoiceCommandUserMessage",
+        "_winrt_windows_applicationmodel_voicecommands.VoiceCommandUserMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2143,7 +2143,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_VoiceCommands",
+           "_winrt_windows_applicationmodel_voicecommands",
            module_doc,
            0,
            nullptr,
@@ -2154,7 +2154,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
 } // py::cpp::Windows::ApplicationModel::VoiceCommands
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_VoiceCommands(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::VoiceCommands;
 

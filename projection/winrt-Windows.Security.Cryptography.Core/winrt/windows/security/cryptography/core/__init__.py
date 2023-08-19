@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Cryptography.Core")
+from . import _winrt_windows_security_cryptography_core
 
 try:
     import winrt.windows.foundation
@@ -50,20 +49,20 @@ class CryptographicPublicKeyBlobType(enum.IntEnum):
     CAPI1_PUBLIC_KEY = 3
     B_CRYPT_ECC_FULL_PUBLIC_KEY = 4
 
-AsymmetricAlgorithmNames = _ns_module.AsymmetricAlgorithmNames
-AsymmetricKeyAlgorithmProvider = _ns_module.AsymmetricKeyAlgorithmProvider
-CryptographicEngine = _ns_module.CryptographicEngine
-CryptographicHash = _ns_module.CryptographicHash
-CryptographicKey = _ns_module.CryptographicKey
-EccCurveNames = _ns_module.EccCurveNames
-EncryptedAndAuthenticatedData = _ns_module.EncryptedAndAuthenticatedData
-HashAlgorithmNames = _ns_module.HashAlgorithmNames
-HashAlgorithmProvider = _ns_module.HashAlgorithmProvider
-KeyDerivationAlgorithmNames = _ns_module.KeyDerivationAlgorithmNames
-KeyDerivationAlgorithmProvider = _ns_module.KeyDerivationAlgorithmProvider
-KeyDerivationParameters = _ns_module.KeyDerivationParameters
-MacAlgorithmNames = _ns_module.MacAlgorithmNames
-MacAlgorithmProvider = _ns_module.MacAlgorithmProvider
-PersistedKeyProvider = _ns_module.PersistedKeyProvider
-SymmetricAlgorithmNames = _ns_module.SymmetricAlgorithmNames
-SymmetricKeyAlgorithmProvider = _ns_module.SymmetricKeyAlgorithmProvider
+AsymmetricAlgorithmNames = _winrt_windows_security_cryptography_core.AsymmetricAlgorithmNames
+AsymmetricKeyAlgorithmProvider = _winrt_windows_security_cryptography_core.AsymmetricKeyAlgorithmProvider
+CryptographicEngine = _winrt_windows_security_cryptography_core.CryptographicEngine
+CryptographicHash = _winrt_windows_security_cryptography_core.CryptographicHash
+CryptographicKey = _winrt_windows_security_cryptography_core.CryptographicKey
+EccCurveNames = _winrt_windows_security_cryptography_core.EccCurveNames
+EncryptedAndAuthenticatedData = _winrt_windows_security_cryptography_core.EncryptedAndAuthenticatedData
+HashAlgorithmNames = _winrt_windows_security_cryptography_core.HashAlgorithmNames
+HashAlgorithmProvider = _winrt_windows_security_cryptography_core.HashAlgorithmProvider
+KeyDerivationAlgorithmNames = _winrt_windows_security_cryptography_core.KeyDerivationAlgorithmNames
+KeyDerivationAlgorithmProvider = _winrt_windows_security_cryptography_core.KeyDerivationAlgorithmProvider
+KeyDerivationParameters = _winrt_windows_security_cryptography_core.KeyDerivationParameters
+MacAlgorithmNames = _winrt_windows_security_cryptography_core.MacAlgorithmNames
+MacAlgorithmProvider = _winrt_windows_security_cryptography_core.MacAlgorithmProvider
+PersistedKeyProvider = _winrt_windows_security_cryptography_core.PersistedKeyProvider
+SymmetricAlgorithmNames = _winrt_windows_security_cryptography_core.SymmetricAlgorithmNames
+SymmetricKeyAlgorithmProvider = _winrt_windows_security_cryptography_core.SymmetricKeyAlgorithmProvider

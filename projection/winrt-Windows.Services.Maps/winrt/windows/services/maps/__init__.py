@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Services.Maps")
+from . import _winrt_windows_services_maps
 
 try:
     import winrt.windows.devices.geolocation
@@ -158,19 +157,19 @@ class WaypointKind(enum.IntEnum):
     STOP = 0
     VIA = 1
 
-EnhancedWaypoint = _ns_module.EnhancedWaypoint
-ManeuverWarning = _ns_module.ManeuverWarning
-MapAddress = _ns_module.MapAddress
-MapLocation = _ns_module.MapLocation
-MapLocationFinder = _ns_module.MapLocationFinder
-MapLocationFinderResult = _ns_module.MapLocationFinderResult
-MapManager = _ns_module.MapManager
-MapRoute = _ns_module.MapRoute
-MapRouteDrivingOptions = _ns_module.MapRouteDrivingOptions
-MapRouteFinder = _ns_module.MapRouteFinder
-MapRouteFinderResult = _ns_module.MapRouteFinderResult
-MapRouteLeg = _ns_module.MapRouteLeg
-MapRouteManeuver = _ns_module.MapRouteManeuver
-MapService = _ns_module.MapService
-PlaceInfo = _ns_module.PlaceInfo
-PlaceInfoCreateOptions = _ns_module.PlaceInfoCreateOptions
+EnhancedWaypoint = _winrt_windows_services_maps.EnhancedWaypoint
+ManeuverWarning = _winrt_windows_services_maps.ManeuverWarning
+MapAddress = _winrt_windows_services_maps.MapAddress
+MapLocation = _winrt_windows_services_maps.MapLocation
+MapLocationFinder = _winrt_windows_services_maps.MapLocationFinder
+MapLocationFinderResult = _winrt_windows_services_maps.MapLocationFinderResult
+MapManager = _winrt_windows_services_maps.MapManager
+MapRoute = _winrt_windows_services_maps.MapRoute
+MapRouteDrivingOptions = _winrt_windows_services_maps.MapRouteDrivingOptions
+MapRouteFinder = _winrt_windows_services_maps.MapRouteFinder
+MapRouteFinderResult = _winrt_windows_services_maps.MapRouteFinderResult
+MapRouteLeg = _winrt_windows_services_maps.MapRouteLeg
+MapRouteManeuver = _winrt_windows_services_maps.MapRouteManeuver
+MapService = _winrt_windows_services_maps.MapService
+PlaceInfo = _winrt_windows_services_maps.PlaceInfo
+PlaceInfoCreateOptions = _winrt_windows_services_maps.PlaceInfoCreateOptions

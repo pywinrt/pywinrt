@@ -276,7 +276,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyType_Spec type_spec_CompositorController =
     {
-        "_winrt_Windows_UI_Composition_Core.CompositorController",
+        "_winrt_windows_ui_composition_core.CompositorController",
         sizeof(py::wrapper::Windows::UI::Composition::Core::CompositorController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -289,7 +289,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Composition_Core",
+           "_winrt_windows_ui_composition_core",
            module_doc,
            0,
            nullptr,
@@ -300,7 +300,7 @@ namespace py::cpp::Windows::UI::Composition::Core
 
 } // py::cpp::Windows::UI::Composition::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_core(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Composition::Core;
 

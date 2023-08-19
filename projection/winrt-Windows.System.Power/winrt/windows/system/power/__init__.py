@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Power")
+from . import _winrt_windows_system_power
 
 try:
     import winrt.windows.foundation
@@ -27,6 +26,6 @@ class PowerSupplyStatus(enum.IntEnum):
     INADEQUATE = 1
     ADEQUATE = 2
 
-BackgroundEnergyManager = _ns_module.BackgroundEnergyManager
-ForegroundEnergyManager = _ns_module.ForegroundEnergyManager
-PowerManager = _ns_module.PowerManager
+BackgroundEnergyManager = _winrt_windows_system_power.BackgroundEnergyManager
+ForegroundEnergyManager = _winrt_windows_system_power.ForegroundEnergyManager
+PowerManager = _winrt_windows_system_power.PowerManager

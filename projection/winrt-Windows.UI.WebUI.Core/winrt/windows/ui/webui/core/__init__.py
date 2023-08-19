@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.WebUI.Core")
+from . import _winrt_windows_ui_webui_core
 
 try:
     import winrt.windows.foundation
@@ -26,12 +25,12 @@ class WebUICommandBarClosedDisplayMode(enum.IntEnum):
     MINIMAL = 1
     COMPACT = 2
 
-WebUICommandBar = _ns_module.WebUICommandBar
-WebUICommandBarBitmapIcon = _ns_module.WebUICommandBarBitmapIcon
-WebUICommandBarConfirmationButton = _ns_module.WebUICommandBarConfirmationButton
-WebUICommandBarIconButton = _ns_module.WebUICommandBarIconButton
-WebUICommandBarItemInvokedEventArgs = _ns_module.WebUICommandBarItemInvokedEventArgs
-WebUICommandBarSizeChangedEventArgs = _ns_module.WebUICommandBarSizeChangedEventArgs
-WebUICommandBarSymbolIcon = _ns_module.WebUICommandBarSymbolIcon
-IWebUICommandBarElement = _ns_module.IWebUICommandBarElement
-IWebUICommandBarIcon = _ns_module.IWebUICommandBarIcon
+WebUICommandBar = _winrt_windows_ui_webui_core.WebUICommandBar
+WebUICommandBarBitmapIcon = _winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon
+WebUICommandBarConfirmationButton = _winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton
+WebUICommandBarIconButton = _winrt_windows_ui_webui_core.WebUICommandBarIconButton
+WebUICommandBarItemInvokedEventArgs = _winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs
+WebUICommandBarSizeChangedEventArgs = _winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs
+WebUICommandBarSymbolIcon = _winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon
+IWebUICommandBarElement = _winrt_windows_ui_webui_core.IWebUICommandBarElement
+IWebUICommandBarIcon = _winrt_windows_ui_webui_core.IWebUICommandBarIcon

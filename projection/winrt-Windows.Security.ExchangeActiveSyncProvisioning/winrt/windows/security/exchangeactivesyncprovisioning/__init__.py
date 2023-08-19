@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.ExchangeActiveSyncProvisioning")
+from . import _winrt_windows_security_exchangeactivesyncprovisioning
 
 try:
     import winrt.windows.foundation
@@ -109,6 +108,6 @@ class EasRequireEncryptionResult(enum.IntEnum):
     OS_NOT_PROTECTED = 11
     UNEXPECTED_FAILURE = 12
 
-EasClientDeviceInformation = _ns_module.EasClientDeviceInformation
-EasClientSecurityPolicy = _ns_module.EasClientSecurityPolicy
-EasComplianceResults = _ns_module.EasComplianceResults
+EasClientDeviceInformation = _winrt_windows_security_exchangeactivesyncprovisioning.EasClientDeviceInformation
+EasClientSecurityPolicy = _winrt_windows_security_exchangeactivesyncprovisioning.EasClientSecurityPolicy
+EasComplianceResults = _winrt_windows_security_exchangeactivesyncprovisioning.EasComplianceResults

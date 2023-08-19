@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Geolocation.Provider")
+from . import _winrt_windows_devices_geolocation_provider
 
 try:
     import winrt.windows.devices.geolocation
@@ -22,4 +21,4 @@ class LocationOverrideStatus(enum.IntEnum):
     ALREADY_STARTED = 2
     OTHER = 3
 
-GeolocationProvider = _ns_module.GeolocationProvider
+GeolocationProvider = _winrt_windows_devices_geolocation_provider.GeolocationProvider

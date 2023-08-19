@@ -620,7 +620,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_Certificate =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.Certificate",
+        "_winrt_windows_security_cryptography_certificates.Certificate",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -777,7 +777,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateChain =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateChain",
+        "_winrt_windows_security_cryptography_certificates.CertificateChain",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateChain),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -980,7 +980,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateEnrollmentManager =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateEnrollmentManager",
+        "_winrt_windows_security_cryptography_certificates.CertificateEnrollmentManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1001,7 +1001,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateEnrollmentManager_Meta =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateEnrollmentManager_Meta",
+        "_winrt_windows_security_cryptography_certificates.CertificateEnrollmentManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1276,7 +1276,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateExtension =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateExtension",
+        "_winrt_windows_security_cryptography_certificates.CertificateExtension",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1758,7 +1758,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateKeyUsages =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateKeyUsages",
+        "_winrt_windows_security_cryptography_certificates.CertificateKeyUsages",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2212,7 +2212,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateQuery =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateQuery",
+        "_winrt_windows_security_cryptography_certificates.CertificateQuery",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3186,7 +3186,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateRequestProperties =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateRequestProperties",
+        "_winrt_windows_security_cryptography_certificates.CertificateRequestProperties",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3347,7 +3347,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateStore =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateStore",
+        "_winrt_windows_security_cryptography_certificates.CertificateStore",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3533,7 +3533,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateStores =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateStores",
+        "_winrt_windows_security_cryptography_certificates.CertificateStores",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3555,7 +3555,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CertificateStores_Meta =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CertificateStores_Meta",
+        "_winrt_windows_security_cryptography_certificates.CertificateStores_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3933,7 +3933,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_ChainBuildingParameters =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.ChainBuildingParameters",
+        "_winrt_windows_security_cryptography_certificates.ChainBuildingParameters",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4127,7 +4127,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_ChainValidationParameters =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.ChainValidationParameters",
+        "_winrt_windows_security_cryptography_certificates.ChainValidationParameters",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4351,7 +4351,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CmsAttachedSignature =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CmsAttachedSignature",
+        "_winrt_windows_security_cryptography_certificates.CmsAttachedSignature",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CmsAttachedSignature),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4557,7 +4557,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CmsDetachedSignature =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CmsDetachedSignature",
+        "_winrt_windows_security_cryptography_certificates.CmsDetachedSignature",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CmsDetachedSignature),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4771,7 +4771,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CmsSignerInfo =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CmsSignerInfo",
+        "_winrt_windows_security_cryptography_certificates.CmsSignerInfo",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4906,7 +4906,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_CmsTimestampInfo =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.CmsTimestampInfo",
+        "_winrt_windows_security_cryptography_certificates.CmsTimestampInfo",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::CmsTimestampInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5130,7 +5130,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_KeyAlgorithmNames =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.KeyAlgorithmNames",
+        "_winrt_windows_security_cryptography_certificates.KeyAlgorithmNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5160,7 +5160,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_KeyAlgorithmNames_Meta =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.KeyAlgorithmNames_Meta",
+        "_winrt_windows_security_cryptography_certificates.KeyAlgorithmNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5279,7 +5279,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_KeyAttestationHelper =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.KeyAttestationHelper",
+        "_winrt_windows_security_cryptography_certificates.KeyAttestationHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5389,7 +5389,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_KeyStorageProviderNames =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.KeyStorageProviderNames",
+        "_winrt_windows_security_cryptography_certificates.KeyStorageProviderNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5413,7 +5413,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_KeyStorageProviderNames_Meta =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.KeyStorageProviderNames_Meta",
+        "_winrt_windows_security_cryptography_certificates.KeyStorageProviderNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5847,7 +5847,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_PfxImportParameters =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.PfxImportParameters",
+        "_winrt_windows_security_cryptography_certificates.PfxImportParameters",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5938,7 +5938,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_StandardCertificateStoreNames =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.StandardCertificateStoreNames",
+        "_winrt_windows_security_cryptography_certificates.StandardCertificateStoreNames",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5961,7 +5961,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_StandardCertificateStoreNames_Meta =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.StandardCertificateStoreNames_Meta",
+        "_winrt_windows_security_cryptography_certificates.StandardCertificateStoreNames_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6319,7 +6319,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_SubjectAlternativeNameInfo =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.SubjectAlternativeNameInfo",
+        "_winrt_windows_security_cryptography_certificates.SubjectAlternativeNameInfo",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6544,7 +6544,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_UserCertificateEnrollmentManager =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.UserCertificateEnrollmentManager",
+        "_winrt_windows_security_cryptography_certificates.UserCertificateEnrollmentManager",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6703,7 +6703,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyType_Spec type_spec_UserCertificateStore =
     {
-        "_winrt_Windows_Security_Cryptography_Certificates.UserCertificateStore",
+        "_winrt_windows_security_cryptography_certificates.UserCertificateStore",
         sizeof(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6716,7 +6716,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Cryptography_Certificates",
+           "_winrt_windows_security_cryptography_certificates",
            module_doc,
            0,
            nullptr,
@@ -6727,7 +6727,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
 } // py::cpp::Windows::Security::Cryptography::Certificates
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_Certificates(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_certificates(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Cryptography::Certificates;
 

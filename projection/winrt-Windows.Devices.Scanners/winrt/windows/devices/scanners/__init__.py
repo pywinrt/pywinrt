@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Scanners")
+from . import _winrt_windows_devices_scanners
 
 try:
     import winrt.windows.foundation
@@ -57,12 +56,12 @@ class ImageScannerScanSource(enum.IntEnum):
     FEEDER = 2
     AUTO_CONFIGURED = 3
 
-ImageScannerResolution = _ns_module.ImageScannerResolution
-ImageScanner = _ns_module.ImageScanner
-ImageScannerAutoConfiguration = _ns_module.ImageScannerAutoConfiguration
-ImageScannerFeederConfiguration = _ns_module.ImageScannerFeederConfiguration
-ImageScannerFlatbedConfiguration = _ns_module.ImageScannerFlatbedConfiguration
-ImageScannerPreviewResult = _ns_module.ImageScannerPreviewResult
-ImageScannerScanResult = _ns_module.ImageScannerScanResult
-IImageScannerFormatConfiguration = _ns_module.IImageScannerFormatConfiguration
-IImageScannerSourceConfiguration = _ns_module.IImageScannerSourceConfiguration
+ImageScannerResolution = _winrt_windows_devices_scanners.ImageScannerResolution
+ImageScanner = _winrt_windows_devices_scanners.ImageScanner
+ImageScannerAutoConfiguration = _winrt_windows_devices_scanners.ImageScannerAutoConfiguration
+ImageScannerFeederConfiguration = _winrt_windows_devices_scanners.ImageScannerFeederConfiguration
+ImageScannerFlatbedConfiguration = _winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration
+ImageScannerPreviewResult = _winrt_windows_devices_scanners.ImageScannerPreviewResult
+ImageScannerScanResult = _winrt_windows_devices_scanners.ImageScannerScanResult
+IImageScannerFormatConfiguration = _winrt_windows_devices_scanners.IImageScannerFormatConfiguration
+IImageScannerSourceConfiguration = _winrt_windows_devices_scanners.IImageScannerSourceConfiguration

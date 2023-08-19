@@ -254,7 +254,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_ImageFeatureDescriptor =
     {
-        "_winrt_Windows_AI_MachineLearning.ImageFeatureDescriptor",
+        "_winrt_windows_ai_machinelearning.ImageFeatureDescriptor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ImageFeatureDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -401,7 +401,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_ImageFeatureValue =
     {
-        "_winrt_Windows_AI_MachineLearning.ImageFeatureValue",
+        "_winrt_windows_ai_machinelearning.ImageFeatureValue",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ImageFeatureValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -901,7 +901,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_LearningModel =
     {
-        "_winrt_Windows_AI_MachineLearning.LearningModel",
+        "_winrt_windows_ai_machinelearning.LearningModel",
         sizeof(py::wrapper::Windows::AI::MachineLearning::LearningModel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1312,7 +1312,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_LearningModelBinding =
     {
-        "_winrt_Windows_AI_MachineLearning.LearningModelBinding",
+        "_winrt_windows_ai_machinelearning.LearningModelBinding",
         sizeof(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1484,7 +1484,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_LearningModelDevice =
     {
-        "_winrt_Windows_AI_MachineLearning.LearningModelDevice",
+        "_winrt_windows_ai_machinelearning.LearningModelDevice",
         sizeof(py::wrapper::Windows::AI::MachineLearning::LearningModelDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1639,7 +1639,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_LearningModelEvaluationResult =
     {
-        "_winrt_Windows_AI_MachineLearning.LearningModelEvaluationResult",
+        "_winrt_windows_ai_machinelearning.LearningModelEvaluationResult",
         sizeof(py::wrapper::Windows::AI::MachineLearning::LearningModelEvaluationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2017,7 +2017,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_LearningModelSession =
     {
-        "_winrt_Windows_AI_MachineLearning.LearningModelSession",
+        "_winrt_windows_ai_machinelearning.LearningModelSession",
         sizeof(py::wrapper::Windows::AI::MachineLearning::LearningModelSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2245,7 +2245,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_LearningModelSessionOptions =
     {
-        "_winrt_Windows_AI_MachineLearning.LearningModelSessionOptions",
+        "_winrt_windows_ai_machinelearning.LearningModelSessionOptions",
         sizeof(py::wrapper::Windows::AI::MachineLearning::LearningModelSessionOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2440,7 +2440,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_MapFeatureDescriptor =
     {
-        "_winrt_Windows_AI_MachineLearning.MapFeatureDescriptor",
+        "_winrt_windows_ai_machinelearning.MapFeatureDescriptor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::MapFeatureDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2615,7 +2615,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_SequenceFeatureDescriptor =
     {
-        "_winrt_Windows_AI_MachineLearning.SequenceFeatureDescriptor",
+        "_winrt_windows_ai_machinelearning.SequenceFeatureDescriptor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::SequenceFeatureDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3045,7 +3045,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorBoolean =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorBoolean",
+        "_winrt_windows_ai_machinelearning.TensorBoolean",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorBoolean),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3475,7 +3475,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorDouble =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorDouble",
+        "_winrt_windows_ai_machinelearning.TensorDouble",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorDouble),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3670,7 +3670,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorFeatureDescriptor =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorFeatureDescriptor",
+        "_winrt_windows_ai_machinelearning.TensorFeatureDescriptor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorFeatureDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4100,7 +4100,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorFloat =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorFloat",
+        "_winrt_windows_ai_machinelearning.TensorFloat",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorFloat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4530,7 +4530,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorFloat16Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorFloat16Bit",
+        "_winrt_windows_ai_machinelearning.TensorFloat16Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorFloat16Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4960,7 +4960,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorInt16Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorInt16Bit",
+        "_winrt_windows_ai_machinelearning.TensorInt16Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorInt16Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5390,7 +5390,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorInt32Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorInt32Bit",
+        "_winrt_windows_ai_machinelearning.TensorInt32Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorInt32Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5820,7 +5820,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorInt64Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorInt64Bit",
+        "_winrt_windows_ai_machinelearning.TensorInt64Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorInt64Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6250,7 +6250,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorInt8Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorInt8Bit",
+        "_winrt_windows_ai_machinelearning.TensorInt8Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorInt8Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6647,7 +6647,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorString =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorString",
+        "_winrt_windows_ai_machinelearning.TensorString",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorString),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7077,7 +7077,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorUInt16Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorUInt16Bit",
+        "_winrt_windows_ai_machinelearning.TensorUInt16Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorUInt16Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorUInt32Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorUInt32Bit",
+        "_winrt_windows_ai_machinelearning.TensorUInt32Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorUInt32Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7937,7 +7937,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorUInt64Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorUInt64Bit",
+        "_winrt_windows_ai_machinelearning.TensorUInt64Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorUInt64Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8367,7 +8367,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_TensorUInt8Bit =
     {
-        "_winrt_Windows_AI_MachineLearning.TensorUInt8Bit",
+        "_winrt_windows_ai_machinelearning.TensorUInt8Bit",
         sizeof(py::wrapper::Windows::AI::MachineLearning::TensorUInt8Bit),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8522,7 +8522,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_ILearningModelFeatureDescriptor =
     {
-        "_winrt_Windows_AI_MachineLearning.ILearningModelFeatureDescriptor",
+        "_winrt_windows_ai_machinelearning.ILearningModelFeatureDescriptor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8617,7 +8617,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_ILearningModelFeatureValue =
     {
-        "_winrt_Windows_AI_MachineLearning.ILearningModelFeatureValue",
+        "_winrt_windows_ai_machinelearning.ILearningModelFeatureValue",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ILearningModelFeatureValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8692,7 +8692,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_ILearningModelOperatorProvider =
     {
-        "_winrt_Windows_AI_MachineLearning.ILearningModelOperatorProvider",
+        "_winrt_windows_ai_machinelearning.ILearningModelOperatorProvider",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ILearningModelOperatorProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8827,7 +8827,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyType_Spec type_spec_ITensor =
     {
-        "_winrt_Windows_AI_MachineLearning.ITensor",
+        "_winrt_windows_ai_machinelearning.ITensor",
         sizeof(py::wrapper::Windows::AI::MachineLearning::ITensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8840,7 +8840,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_AI_MachineLearning",
+           "_winrt_windows_ai_machinelearning",
            module_doc,
            0,
            nullptr,
@@ -8851,7 +8851,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
 } // py::cpp::Windows::AI::MachineLearning
 
-PyMODINIT_FUNC PyInit__winrt_Windows_AI_MachineLearning(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
 {
     using namespace py::cpp::Windows::AI::MachineLearning;
 

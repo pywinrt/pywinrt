@@ -429,7 +429,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpBufferContent =
     {
-        "_winrt_Windows_Web_Http.HttpBufferContent",
+        "_winrt_windows_web_http.HttpBufferContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpBufferContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1307,7 +1307,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpClient =
     {
-        "_winrt_Windows_Web_Http.HttpClient",
+        "_winrt_windows_web_http.HttpClient",
         sizeof(py::wrapper::Windows::Web::Http::HttpClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1705,7 +1705,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpCookie =
     {
-        "_winrt_Windows_Web_Http.HttpCookie",
+        "_winrt_windows_web_http.HttpCookie",
         sizeof(py::wrapper::Windows::Web::Http::HttpCookie),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2053,7 +2053,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpCookieCollection =
     {
-        "_winrt_Windows_Web_Http.HttpCookieCollection",
+        "_winrt_windows_web_http.HttpCookieCollection",
         sizeof(py::wrapper::Windows::Web::Http::HttpCookieCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2246,7 +2246,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpCookieManager =
     {
-        "_winrt_Windows_Web_Http.HttpCookieManager",
+        "_winrt_windows_web_http.HttpCookieManager",
         sizeof(py::wrapper::Windows::Web::Http::HttpCookieManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2659,7 +2659,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpFormUrlEncodedContent =
     {
-        "_winrt_Windows_Web_Http.HttpFormUrlEncodedContent",
+        "_winrt_windows_web_http.HttpFormUrlEncodedContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2931,7 +2931,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpGetBufferResult =
     {
-        "_winrt_Windows_Web_Http.HttpGetBufferResult",
+        "_winrt_windows_web_http.HttpGetBufferResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpGetBufferResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3203,7 +3203,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpGetInputStreamResult =
     {
-        "_winrt_Windows_Web_Http.HttpGetInputStreamResult",
+        "_winrt_windows_web_http.HttpGetInputStreamResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3475,7 +3475,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpGetStringResult =
     {
-        "_winrt_Windows_Web_Http.HttpGetStringResult",
+        "_winrt_windows_web_http.HttpGetStringResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpGetStringResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3772,7 +3772,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpMethod =
     {
-        "_winrt_Windows_Web_Http.HttpMethod",
+        "_winrt_windows_web_http.HttpMethod",
         sizeof(py::wrapper::Windows::Web::Http::HttpMethod),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3799,7 +3799,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpMethod_Meta =
     {
-        "_winrt_Windows_Web_Http.HttpMethod_Meta",
+        "_winrt_windows_web_http.HttpMethod_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4318,7 +4318,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpMultipartContent =
     {
-        "_winrt_Windows_Web_Http.HttpMultipartContent",
+        "_winrt_windows_web_http.HttpMultipartContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpMultipartContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4866,7 +4866,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpMultipartFormDataContent =
     {
-        "_winrt_Windows_Web_Http.HttpMultipartFormDataContent",
+        "_winrt_windows_web_http.HttpMultipartFormDataContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5329,7 +5329,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpRequestMessage =
     {
-        "_winrt_Windows_Web_Http.HttpRequestMessage",
+        "_winrt_windows_web_http.HttpRequestMessage",
         sizeof(py::wrapper::Windows::Web::Http::HttpRequestMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5581,7 +5581,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpRequestResult =
     {
-        "_winrt_Windows_Web_Http.HttpRequestResult",
+        "_winrt_windows_web_http.HttpRequestResult",
         sizeof(py::wrapper::Windows::Web::Http::HttpRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6149,7 +6149,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpResponseMessage =
     {
-        "_winrt_Windows_Web_Http.HttpResponseMessage",
+        "_winrt_windows_web_http.HttpResponseMessage",
         sizeof(py::wrapper::Windows::Web::Http::HttpResponseMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6562,7 +6562,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpStreamContent =
     {
-        "_winrt_Windows_Web_Http.HttpStreamContent",
+        "_winrt_windows_web_http.HttpStreamContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpStreamContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7008,7 +7008,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpStringContent =
     {
-        "_winrt_Windows_Web_Http.HttpStringContent",
+        "_winrt_windows_web_http.HttpStringContent",
         sizeof(py::wrapper::Windows::Web::Http::HttpStringContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7207,7 +7207,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpTransportInformation =
     {
-        "_winrt_Windows_Web_Http.HttpTransportInformation",
+        "_winrt_windows_web_http.HttpTransportInformation",
         sizeof(py::wrapper::Windows::Web::Http::HttpTransportInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7551,7 +7551,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_IHttpContent =
     {
-        "_winrt_Windows_Web_Http.IHttpContent",
+        "_winrt_windows_web_http.IHttpContent",
         sizeof(py::wrapper::Windows::Web::Http::IHttpContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7826,7 +7826,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyType_Spec type_spec_HttpProgress =
     {
-        "_winrt_Windows_Web_Http.HttpProgress",
+        "_winrt_windows_web_http.HttpProgress",
         sizeof(py::wrapper::Windows::Web::Http::HttpProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7839,7 +7839,7 @@ namespace py::cpp::Windows::Web::Http
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Web_Http",
+           "_winrt_windows_web_http",
            module_doc,
            0,
            nullptr,
@@ -7850,7 +7850,7 @@ namespace py::cpp::Windows::Web::Http
 
 } // py::cpp::Windows::Web::Http
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_web_http(void) noexcept
 {
     using namespace py::cpp::Windows::Web::Http;
 

@@ -254,7 +254,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtension =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtension",
+        "_winrt_windows_applicationmodel_appextensions.AppExtension",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -648,7 +648,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionCatalog =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtensionCatalog",
+        "_winrt_windows_applicationmodel_appextensions.AppExtensionCatalog",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -783,7 +783,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageInstalledEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtensionPackageInstalledEventArgs",
+        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageInstalledEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -898,7 +898,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageStatusChangedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtensionPackageStatusChangedEventArgs",
+        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageUninstallingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtensionPackageUninstallingEventArgs",
+        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageUninstallingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1148,7 +1148,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageUpdatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtensionPackageUpdatedEventArgs",
+        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageUpdatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1263,7 +1263,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyType_Spec type_spec_AppExtensionPackageUpdatingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppExtensions.AppExtensionPackageUpdatingEventArgs",
+        "_winrt_windows_applicationmodel_appextensions.AppExtensionPackageUpdatingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1276,7 +1276,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_AppExtensions",
+           "_winrt_windows_applicationmodel_appextensions",
            module_doc,
            0,
            nullptr,
@@ -1287,7 +1287,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
 
 } // py::cpp::Windows::ApplicationModel::AppExtensions
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_AppExtensions(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::AppExtensions;
 

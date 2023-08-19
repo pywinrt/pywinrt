@@ -314,7 +314,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyType_Spec type_spec_HdmiDisplayInformation =
     {
-        "_winrt_Windows_Graphics_Display_Core.HdmiDisplayInformation",
+        "_winrt_windows_graphics_display_core.HdmiDisplayInformation",
         sizeof(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -641,7 +641,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyType_Spec type_spec_HdmiDisplayMode =
     {
-        "_winrt_Windows_Graphics_Display_Core.HdmiDisplayMode",
+        "_winrt_windows_graphics_display_core.HdmiDisplayMode",
         sizeof(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayMode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1126,7 +1126,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyType_Spec type_spec_HdmiDisplayHdr2086Metadata =
     {
-        "_winrt_Windows_Graphics_Display_Core.HdmiDisplayHdr2086Metadata",
+        "_winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata",
         sizeof(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1139,7 +1139,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Graphics_Display_Core",
+           "_winrt_windows_graphics_display_core",
            module_doc,
            0,
            nullptr,
@@ -1150,7 +1150,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
 } // py::cpp::Windows::Graphics::Display::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Display_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics_display_core(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::Display::Core;
 

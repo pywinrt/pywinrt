@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.AppRecording")
+from . import _winrt_windows_media_apprecording
 
 try:
     import winrt.windows.foundation
@@ -25,9 +24,9 @@ class AppRecordingSaveScreenshotOption(enum.IntEnum):
     NONE = 0
     HDR_CONTENT_VISIBLE = 1
 
-AppRecordingManager = _ns_module.AppRecordingManager
-AppRecordingResult = _ns_module.AppRecordingResult
-AppRecordingSaveScreenshotResult = _ns_module.AppRecordingSaveScreenshotResult
-AppRecordingSavedScreenshotInfo = _ns_module.AppRecordingSavedScreenshotInfo
-AppRecordingStatus = _ns_module.AppRecordingStatus
-AppRecordingStatusDetails = _ns_module.AppRecordingStatusDetails
+AppRecordingManager = _winrt_windows_media_apprecording.AppRecordingManager
+AppRecordingResult = _winrt_windows_media_apprecording.AppRecordingResult
+AppRecordingSaveScreenshotResult = _winrt_windows_media_apprecording.AppRecordingSaveScreenshotResult
+AppRecordingSavedScreenshotInfo = _winrt_windows_media_apprecording.AppRecordingSavedScreenshotInfo
+AppRecordingStatus = _winrt_windows_media_apprecording.AppRecordingStatus
+AppRecordingStatusDetails = _winrt_windows_media_apprecording.AppRecordingStatusDetails

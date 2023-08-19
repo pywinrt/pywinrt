@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Gaming.UI")
+from . import _winrt_windows_gaming_ui
 
 try:
     import winrt.windows.applicationmodel.activation
@@ -35,8 +34,8 @@ class GameChatOverlayPosition(enum.IntEnum):
     TOP_LEFT = 6
     TOP_RIGHT = 7
 
-GameBar = _ns_module.GameBar
-GameChatMessageReceivedEventArgs = _ns_module.GameChatMessageReceivedEventArgs
-GameChatOverlay = _ns_module.GameChatOverlay
-GameChatOverlayMessageSource = _ns_module.GameChatOverlayMessageSource
-GameUIProviderActivatedEventArgs = _ns_module.GameUIProviderActivatedEventArgs
+GameBar = _winrt_windows_gaming_ui.GameBar
+GameChatMessageReceivedEventArgs = _winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs
+GameChatOverlay = _winrt_windows_gaming_ui.GameChatOverlay
+GameChatOverlayMessageSource = _winrt_windows_gaming_ui.GameChatOverlayMessageSource
+GameUIProviderActivatedEventArgs = _winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs

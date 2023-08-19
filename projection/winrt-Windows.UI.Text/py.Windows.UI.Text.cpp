@@ -337,7 +337,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_ContentLinkInfo =
     {
-        "_winrt_Windows_UI_Text.ContentLinkInfo",
+        "_winrt_windows_ui_text.ContentLinkInfo",
         sizeof(py::wrapper::Windows::UI::Text::ContentLinkInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -621,7 +621,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_FontWeights =
     {
-        "_winrt_Windows_UI_Text.FontWeights",
+        "_winrt_windows_ui_text.FontWeights",
         sizeof(py::wrapper::Windows::UI::Text::FontWeights),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -652,7 +652,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_FontWeights_Meta =
     {
-        "_winrt_Windows_UI_Text.FontWeights_Meta",
+        "_winrt_windows_ui_text.FontWeights_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1761,7 +1761,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_RichEditTextDocument =
     {
-        "_winrt_Windows_UI_Text.RichEditTextDocument",
+        "_winrt_windows_ui_text.RichEditTextDocument",
         sizeof(py::wrapper::Windows::UI::Text::RichEditTextDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3447,7 +3447,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_RichEditTextRange =
     {
-        "_winrt_Windows_UI_Text.RichEditTextRange",
+        "_winrt_windows_ui_text.RichEditTextRange",
         sizeof(py::wrapper::Windows::UI::Text::RichEditTextRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3633,7 +3633,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_TextConstants =
     {
-        "_winrt_Windows_UI_Text.TextConstants",
+        "_winrt_windows_ui_text.TextConstants",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3661,7 +3661,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_TextConstants_Meta =
     {
-        "_winrt_Windows_UI_Text.TextConstants_Meta",
+        "_winrt_windows_ui_text.TextConstants_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4955,7 +4955,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_ITextCharacterFormat =
     {
-        "_winrt_Windows_UI_Text.ITextCharacterFormat",
+        "_winrt_windows_ui_text.ITextCharacterFormat",
         sizeof(py::wrapper::Windows::UI::Text::ITextCharacterFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5832,7 +5832,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_ITextDocument =
     {
-        "_winrt_Windows_UI_Text.ITextDocument",
+        "_winrt_windows_ui_text.ITextDocument",
         sizeof(py::wrapper::Windows::UI::Text::ITextDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7138,7 +7138,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_ITextParagraphFormat =
     {
-        "_winrt_Windows_UI_Text.ITextParagraphFormat",
+        "_winrt_windows_ui_text.ITextParagraphFormat",
         sizeof(py::wrapper::Windows::UI::Text::ITextParagraphFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8776,7 +8776,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_ITextRange =
     {
-        "_winrt_Windows_UI_Text.ITextRange",
+        "_winrt_windows_ui_text.ITextRange",
         sizeof(py::wrapper::Windows::UI::Text::ITextRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10717,7 +10717,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_ITextSelection =
     {
-        "_winrt_Windows_UI_Text.ITextSelection",
+        "_winrt_windows_ui_text.ITextSelection",
         sizeof(py::wrapper::Windows::UI::Text::ITextSelection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10817,7 +10817,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyType_Spec type_spec_FontWeight =
     {
-        "_winrt_Windows_UI_Text.FontWeight",
+        "_winrt_windows_ui_text.FontWeight",
         sizeof(py::wrapper::Windows::UI::Text::FontWeight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10830,7 +10830,7 @@ namespace py::cpp::Windows::UI::Text
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Text",
+           "_winrt_windows_ui_text",
            module_doc,
            0,
            nullptr,
@@ -10841,7 +10841,7 @@ namespace py::cpp::Windows::UI::Text
 
 } // py::cpp::Windows::UI::Text
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Text(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_text(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Text;
 

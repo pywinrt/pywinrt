@@ -106,7 +106,7 @@ namespace py::cpp::Windows::Management::Core
 
     static PyType_Spec type_spec_ApplicationDataManager =
     {
-        "_winrt_Windows_Management_Core.ApplicationDataManager",
+        "_winrt_windows_management_core.ApplicationDataManager",
         sizeof(py::wrapper::Windows::Management::Core::ApplicationDataManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -119,7 +119,7 @@ namespace py::cpp::Windows::Management::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Management_Core",
+           "_winrt_windows_management_core",
            module_doc,
            0,
            nullptr,
@@ -130,7 +130,7 @@ namespace py::cpp::Windows::Management::Core
 
 } // py::cpp::Windows::Management::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Management_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_management_core(void) noexcept
 {
     using namespace py::cpp::Windows::Management::Core;
 

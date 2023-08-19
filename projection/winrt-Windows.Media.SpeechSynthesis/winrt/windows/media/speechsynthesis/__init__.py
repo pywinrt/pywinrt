@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.SpeechSynthesis")
+from . import _winrt_windows_media_speechsynthesis
 
 try:
     import winrt.windows.foundation
@@ -43,7 +42,7 @@ class VoiceGender(enum.IntEnum):
     MALE = 0
     FEMALE = 1
 
-SpeechSynthesisStream = _ns_module.SpeechSynthesisStream
-SpeechSynthesizer = _ns_module.SpeechSynthesizer
-SpeechSynthesizerOptions = _ns_module.SpeechSynthesizerOptions
-VoiceInformation = _ns_module.VoiceInformation
+SpeechSynthesisStream = _winrt_windows_media_speechsynthesis.SpeechSynthesisStream
+SpeechSynthesizer = _winrt_windows_media_speechsynthesis.SpeechSynthesizer
+SpeechSynthesizerOptions = _winrt_windows_media_speechsynthesis.SpeechSynthesizerOptions
+VoiceInformation = _winrt_windows_media_speechsynthesis.VoiceInformation

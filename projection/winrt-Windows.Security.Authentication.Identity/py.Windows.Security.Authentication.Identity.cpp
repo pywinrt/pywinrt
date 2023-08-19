@@ -174,7 +174,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationInfo =
     {
-        "_winrt_Windows_Security_Authentication_Identity.EnterpriseKeyCredentialRegistrationInfo",
+        "_winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -298,7 +298,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager =
     {
-        "_winrt_Windows_Security_Authentication_Identity.EnterpriseKeyCredentialRegistrationManager",
+        "_winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -319,7 +319,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyType_Spec type_spec_EnterpriseKeyCredentialRegistrationManager_Meta =
     {
-        "_winrt_Windows_Security_Authentication_Identity.EnterpriseKeyCredentialRegistrationManager_Meta",
+        "_winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -332,7 +332,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Authentication_Identity",
+           "_winrt_windows_security_authentication_identity",
            module_doc,
            0,
            nullptr,
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
 } // py::cpp::Windows::Security::Authentication::Identity
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Identity(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Authentication::Identity;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Authorization.AppCapabilityAccess")
+from . import _winrt_windows_security_authorization_appcapabilityaccess
 
 try:
     import winrt.windows.foundation
@@ -28,5 +27,5 @@ class AppCapabilityAccessStatus(enum.IntEnum):
     USER_PROMPT_REQUIRED = 3
     ALLOWED = 4
 
-AppCapability = _ns_module.AppCapability
-AppCapabilityAccessChangedEventArgs = _ns_module.AppCapabilityAccessChangedEventArgs
+AppCapability = _winrt_windows_security_authorization_appcapabilityaccess.AppCapability
+AppCapabilityAccessChangedEventArgs = _winrt_windows_security_authorization_appcapabilityaccess.AppCapabilityAccessChangedEventArgs

@@ -248,7 +248,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyType_Spec type_spec_CustomDevice =
     {
-        "_winrt_Windows_Devices_Custom.CustomDevice",
+        "_winrt_windows_devices_custom.CustomDevice",
         sizeof(py::wrapper::Windows::Devices::Custom::CustomDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyType_Spec type_spec_IOControlCode =
     {
-        "_winrt_Windows_Devices_Custom.IOControlCode",
+        "_winrt_windows_devices_custom.IOControlCode",
         sizeof(py::wrapper::Windows::Devices::Custom::IOControlCode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyType_Spec type_spec_KnownDeviceTypes =
     {
-        "_winrt_Windows_Devices_Custom.KnownDeviceTypes",
+        "_winrt_windows_devices_custom.KnownDeviceTypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -525,7 +525,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyType_Spec type_spec_KnownDeviceTypes_Meta =
     {
-        "_winrt_Windows_Devices_Custom.KnownDeviceTypes_Meta",
+        "_winrt_windows_devices_custom.KnownDeviceTypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -700,7 +700,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyType_Spec type_spec_IIOControlCode =
     {
-        "_winrt_Windows_Devices_Custom.IIOControlCode",
+        "_winrt_windows_devices_custom.IIOControlCode",
         sizeof(py::wrapper::Windows::Devices::Custom::IIOControlCode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -713,7 +713,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Custom",
+           "_winrt_windows_devices_custom",
            module_doc,
            0,
            nullptr,
@@ -724,7 +724,7 @@ namespace py::cpp::Windows::Devices::Custom
 
 } // py::cpp::Windows::Devices::Custom
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Custom(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_custom(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Custom;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Adc.Provider")
+from . import _winrt_windows_devices_adc_provider
 
 try:
     import winrt.windows.foundation.collections
@@ -15,5 +14,5 @@ class ProviderAdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
     DIFFERENTIAL = 1
 
-IAdcControllerProvider = _ns_module.IAdcControllerProvider
-IAdcProvider = _ns_module.IAdcProvider
+IAdcControllerProvider = _winrt_windows_devices_adc_provider.IAdcControllerProvider
+IAdcProvider = _winrt_windows_devices_adc_provider.IAdcProvider

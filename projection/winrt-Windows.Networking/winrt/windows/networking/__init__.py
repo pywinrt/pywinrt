@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Networking")
+from . import _winrt_windows_networking
 
 try:
     import winrt.windows.networking.connectivity
@@ -25,5 +24,5 @@ class HostNameType(enum.IntEnum):
     IPV6 = 2
     BLUETOOTH = 3
 
-EndpointPair = _ns_module.EndpointPair
-HostName = _ns_module.HostName
+EndpointPair = _winrt_windows_networking.EndpointPair
+HostName = _winrt_windows_networking.HostName

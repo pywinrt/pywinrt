@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.PlayTo")
+from . import _winrt_windows_media_playto
 
 try:
     import winrt.windows.foundation
@@ -33,19 +32,19 @@ class PlayToConnectionState(enum.IntEnum):
     CONNECTED = 1
     RENDERING = 2
 
-CurrentTimeChangeRequestedEventArgs = _ns_module.CurrentTimeChangeRequestedEventArgs
-MuteChangeRequestedEventArgs = _ns_module.MuteChangeRequestedEventArgs
-PlayToConnection = _ns_module.PlayToConnection
-PlayToConnectionErrorEventArgs = _ns_module.PlayToConnectionErrorEventArgs
-PlayToConnectionStateChangedEventArgs = _ns_module.PlayToConnectionStateChangedEventArgs
-PlayToConnectionTransferredEventArgs = _ns_module.PlayToConnectionTransferredEventArgs
-PlayToManager = _ns_module.PlayToManager
-PlayToReceiver = _ns_module.PlayToReceiver
-PlayToSource = _ns_module.PlayToSource
-PlayToSourceDeferral = _ns_module.PlayToSourceDeferral
-PlayToSourceRequest = _ns_module.PlayToSourceRequest
-PlayToSourceRequestedEventArgs = _ns_module.PlayToSourceRequestedEventArgs
-PlayToSourceSelectedEventArgs = _ns_module.PlayToSourceSelectedEventArgs
-PlaybackRateChangeRequestedEventArgs = _ns_module.PlaybackRateChangeRequestedEventArgs
-SourceChangeRequestedEventArgs = _ns_module.SourceChangeRequestedEventArgs
-VolumeChangeRequestedEventArgs = _ns_module.VolumeChangeRequestedEventArgs
+CurrentTimeChangeRequestedEventArgs = _winrt_windows_media_playto.CurrentTimeChangeRequestedEventArgs
+MuteChangeRequestedEventArgs = _winrt_windows_media_playto.MuteChangeRequestedEventArgs
+PlayToConnection = _winrt_windows_media_playto.PlayToConnection
+PlayToConnectionErrorEventArgs = _winrt_windows_media_playto.PlayToConnectionErrorEventArgs
+PlayToConnectionStateChangedEventArgs = _winrt_windows_media_playto.PlayToConnectionStateChangedEventArgs
+PlayToConnectionTransferredEventArgs = _winrt_windows_media_playto.PlayToConnectionTransferredEventArgs
+PlayToManager = _winrt_windows_media_playto.PlayToManager
+PlayToReceiver = _winrt_windows_media_playto.PlayToReceiver
+PlayToSource = _winrt_windows_media_playto.PlayToSource
+PlayToSourceDeferral = _winrt_windows_media_playto.PlayToSourceDeferral
+PlayToSourceRequest = _winrt_windows_media_playto.PlayToSourceRequest
+PlayToSourceRequestedEventArgs = _winrt_windows_media_playto.PlayToSourceRequestedEventArgs
+PlayToSourceSelectedEventArgs = _winrt_windows_media_playto.PlayToSourceSelectedEventArgs
+PlaybackRateChangeRequestedEventArgs = _winrt_windows_media_playto.PlaybackRateChangeRequestedEventArgs
+SourceChangeRequestedEventArgs = _winrt_windows_media_playto.SourceChangeRequestedEventArgs
+VolumeChangeRequestedEventArgs = _winrt_windows_media_playto.VolumeChangeRequestedEventArgs

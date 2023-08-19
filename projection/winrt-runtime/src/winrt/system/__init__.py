@@ -1,24 +1,9 @@
 import sys
 import uuid
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
-from importlib.machinery import ExtensionFileLoader
-from importlib.util import module_from_spec, spec_from_loader
-from types import ModuleType
 
 from .._winrt import Array as Array
 from .._winrt import Object as Object
-from .._winrt import __file__ as _winrt_file
-
-
-def _import_ns_module(ns: str) -> ModuleType:
-    module_name = f"_winrt_{ns.replace('.', '_')}"
-    loader = ExtensionFileLoader(module_name, _winrt_file)
-    spec = spec_from_loader(module_name, loader)
-    assert spec is not None
-    module = module_from_spec(spec)
-    loader.exec_module(module)
-    return module
-
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
 # so we have to implement the protocols like this instead.

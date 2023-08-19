@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Storage.Streams")
+from . import _winrt_windows_storage_streams
 
 try:
     import winrt.windows.foundation
@@ -47,28 +46,28 @@ class UnicodeEncoding(enum.IntEnum):
     UTF16_L_E = 1
     UTF16_B_E = 2
 
-Buffer = _ns_module.Buffer
-DataReader = _ns_module.DataReader
-DataReaderLoadOperation = _ns_module.DataReaderLoadOperation
-DataWriter = _ns_module.DataWriter
-DataWriterStoreOperation = _ns_module.DataWriterStoreOperation
-FileInputStream = _ns_module.FileInputStream
-FileOutputStream = _ns_module.FileOutputStream
-FileRandomAccessStream = _ns_module.FileRandomAccessStream
-InMemoryRandomAccessStream = _ns_module.InMemoryRandomAccessStream
-InputStreamOverStream = _ns_module.InputStreamOverStream
-OutputStreamOverStream = _ns_module.OutputStreamOverStream
-RandomAccessStream = _ns_module.RandomAccessStream
-RandomAccessStreamOverStream = _ns_module.RandomAccessStreamOverStream
-RandomAccessStreamReference = _ns_module.RandomAccessStreamReference
-IBuffer = _ns_module.IBuffer
-IContentTypeProvider = _ns_module.IContentTypeProvider
-IDataReader = _ns_module.IDataReader
-IDataWriter = _ns_module.IDataWriter
-IInputStream = _ns_module.IInputStream
-IInputStreamReference = _ns_module.IInputStreamReference
-IOutputStream = _ns_module.IOutputStream
-IPropertySetSerializer = _ns_module.IPropertySetSerializer
-IRandomAccessStream = _ns_module.IRandomAccessStream
-IRandomAccessStreamReference = _ns_module.IRandomAccessStreamReference
-IRandomAccessStreamWithContentType = _ns_module.IRandomAccessStreamWithContentType
+Buffer = _winrt_windows_storage_streams.Buffer
+DataReader = _winrt_windows_storage_streams.DataReader
+DataReaderLoadOperation = _winrt_windows_storage_streams.DataReaderLoadOperation
+DataWriter = _winrt_windows_storage_streams.DataWriter
+DataWriterStoreOperation = _winrt_windows_storage_streams.DataWriterStoreOperation
+FileInputStream = _winrt_windows_storage_streams.FileInputStream
+FileOutputStream = _winrt_windows_storage_streams.FileOutputStream
+FileRandomAccessStream = _winrt_windows_storage_streams.FileRandomAccessStream
+InMemoryRandomAccessStream = _winrt_windows_storage_streams.InMemoryRandomAccessStream
+InputStreamOverStream = _winrt_windows_storage_streams.InputStreamOverStream
+OutputStreamOverStream = _winrt_windows_storage_streams.OutputStreamOverStream
+RandomAccessStream = _winrt_windows_storage_streams.RandomAccessStream
+RandomAccessStreamOverStream = _winrt_windows_storage_streams.RandomAccessStreamOverStream
+RandomAccessStreamReference = _winrt_windows_storage_streams.RandomAccessStreamReference
+IBuffer = _winrt_windows_storage_streams.IBuffer
+IContentTypeProvider = _winrt_windows_storage_streams.IContentTypeProvider
+IDataReader = _winrt_windows_storage_streams.IDataReader
+IDataWriter = _winrt_windows_storage_streams.IDataWriter
+IInputStream = _winrt_windows_storage_streams.IInputStream
+IInputStreamReference = _winrt_windows_storage_streams.IInputStreamReference
+IOutputStream = _winrt_windows_storage_streams.IOutputStream
+IPropertySetSerializer = _winrt_windows_storage_streams.IPropertySetSerializer
+IRandomAccessStream = _winrt_windows_storage_streams.IRandomAccessStream
+IRandomAccessStreamReference = _winrt_windows_storage_streams.IRandomAccessStreamReference
+IRandomAccessStreamWithContentType = _winrt_windows_storage_streams.IRandomAccessStreamWithContentType

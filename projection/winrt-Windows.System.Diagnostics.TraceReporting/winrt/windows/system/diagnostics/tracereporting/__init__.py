@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Diagnostics.TraceReporting")
+from . import _winrt_windows_system_diagnostics_tracereporting
 
 try:
     import winrt.windows.foundation.collections
@@ -39,6 +38,6 @@ class PlatformDiagnosticTraceSlotType(enum.IntEnum):
     ALWAYS_ON = 1
     MINI = 2
 
-PlatformDiagnosticActions = _ns_module.PlatformDiagnosticActions
-PlatformDiagnosticTraceInfo = _ns_module.PlatformDiagnosticTraceInfo
-PlatformDiagnosticTraceRuntimeInfo = _ns_module.PlatformDiagnosticTraceRuntimeInfo
+PlatformDiagnosticActions = _winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions
+PlatformDiagnosticTraceInfo = _winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceInfo
+PlatformDiagnosticTraceRuntimeInfo = _winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceRuntimeInfo

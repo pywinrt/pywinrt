@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.UserProfile")
+from . import _winrt_windows_system_userprofile
 
 try:
     import winrt.windows.foundation
@@ -54,14 +53,14 @@ class SetImageFeedResult(enum.IntEnum):
     CHANGE_DISABLED = 1
     USER_CANCELED = 2
 
-AdvertisingManager = _ns_module.AdvertisingManager
-AdvertisingManagerForUser = _ns_module.AdvertisingManagerForUser
-AssignedAccessSettings = _ns_module.AssignedAccessSettings
-DiagnosticsSettings = _ns_module.DiagnosticsSettings
-FirstSignInSettings = _ns_module.FirstSignInSettings
+AdvertisingManager = _winrt_windows_system_userprofile.AdvertisingManager
+AdvertisingManagerForUser = _winrt_windows_system_userprofile.AdvertisingManagerForUser
+AssignedAccessSettings = _winrt_windows_system_userprofile.AssignedAccessSettings
+DiagnosticsSettings = _winrt_windows_system_userprofile.DiagnosticsSettings
+FirstSignInSettings = _winrt_windows_system_userprofile.FirstSignInSettings
 winrt.system._mixin_mapping(FirstSignInSettings)
-GlobalizationPreferences = _ns_module.GlobalizationPreferences
-GlobalizationPreferencesForUser = _ns_module.GlobalizationPreferencesForUser
-LockScreen = _ns_module.LockScreen
-UserInformation = _ns_module.UserInformation
-UserProfilePersonalizationSettings = _ns_module.UserProfilePersonalizationSettings
+GlobalizationPreferences = _winrt_windows_system_userprofile.GlobalizationPreferences
+GlobalizationPreferencesForUser = _winrt_windows_system_userprofile.GlobalizationPreferencesForUser
+LockScreen = _winrt_windows_system_userprofile.LockScreen
+UserInformation = _winrt_windows_system_userprofile.UserInformation
+UserProfilePersonalizationSettings = _winrt_windows_system_userprofile.UserProfilePersonalizationSettings

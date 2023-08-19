@@ -106,7 +106,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyType_Spec type_spec_CoreAppWindowPreview =
     {
-        "_winrt_Windows_UI_Core_Preview.CoreAppWindowPreview",
+        "_winrt_windows_ui_core_preview.CoreAppWindowPreview",
         sizeof(py::wrapper::Windows::UI::Core::Preview::CoreAppWindowPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -259,7 +259,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyType_Spec type_spec_SystemNavigationCloseRequestedPreviewEventArgs =
     {
-        "_winrt_Windows_UI_Core_Preview.SystemNavigationCloseRequestedPreviewEventArgs",
+        "_winrt_windows_ui_core_preview.SystemNavigationCloseRequestedPreviewEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyType_Spec type_spec_SystemNavigationManagerPreview =
     {
-        "_winrt_Windows_UI_Core_Preview.SystemNavigationManagerPreview",
+        "_winrt_windows_ui_core_preview.SystemNavigationManagerPreview",
         sizeof(py::wrapper::Windows::UI::Core::Preview::SystemNavigationManagerPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -422,7 +422,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Core_Preview",
+           "_winrt_windows_ui_core_preview",
            module_doc,
            0,
            nullptr,
@@ -433,7 +433,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
 } // py::cpp::Windows::UI::Core::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Core::Preview;
 

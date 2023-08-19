@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Enumeration")
+from . import _winrt_windows_devices_enumeration
 
 try:
     import winrt.windows.applicationmodel.background
@@ -138,26 +137,26 @@ class Panel(enum.IntEnum):
     LEFT = 5
     RIGHT = 6
 
-DeviceAccessChangedEventArgs = _ns_module.DeviceAccessChangedEventArgs
-DeviceAccessInformation = _ns_module.DeviceAccessInformation
-DeviceConnectionChangeTriggerDetails = _ns_module.DeviceConnectionChangeTriggerDetails
-DeviceDisconnectButtonClickedEventArgs = _ns_module.DeviceDisconnectButtonClickedEventArgs
-DeviceInformation = _ns_module.DeviceInformation
-DeviceInformationCollection = _ns_module.DeviceInformationCollection
+DeviceAccessChangedEventArgs = _winrt_windows_devices_enumeration.DeviceAccessChangedEventArgs
+DeviceAccessInformation = _winrt_windows_devices_enumeration.DeviceAccessInformation
+DeviceConnectionChangeTriggerDetails = _winrt_windows_devices_enumeration.DeviceConnectionChangeTriggerDetails
+DeviceDisconnectButtonClickedEventArgs = _winrt_windows_devices_enumeration.DeviceDisconnectButtonClickedEventArgs
+DeviceInformation = _winrt_windows_devices_enumeration.DeviceInformation
+DeviceInformationCollection = _winrt_windows_devices_enumeration.DeviceInformationCollection
 winrt.system._mixin_sequence(DeviceInformationCollection)
-DeviceInformationCustomPairing = _ns_module.DeviceInformationCustomPairing
-DeviceInformationPairing = _ns_module.DeviceInformationPairing
-DeviceInformationUpdate = _ns_module.DeviceInformationUpdate
-DevicePairingRequestedEventArgs = _ns_module.DevicePairingRequestedEventArgs
-DevicePairingResult = _ns_module.DevicePairingResult
-DevicePicker = _ns_module.DevicePicker
-DevicePickerAppearance = _ns_module.DevicePickerAppearance
-DevicePickerFilter = _ns_module.DevicePickerFilter
-DeviceSelectedEventArgs = _ns_module.DeviceSelectedEventArgs
-DeviceThumbnail = _ns_module.DeviceThumbnail
-DeviceUnpairingResult = _ns_module.DeviceUnpairingResult
-DeviceWatcher = _ns_module.DeviceWatcher
-DeviceWatcherEvent = _ns_module.DeviceWatcherEvent
-DeviceWatcherTriggerDetails = _ns_module.DeviceWatcherTriggerDetails
-EnclosureLocation = _ns_module.EnclosureLocation
-IDevicePairingSettings = _ns_module.IDevicePairingSettings
+DeviceInformationCustomPairing = _winrt_windows_devices_enumeration.DeviceInformationCustomPairing
+DeviceInformationPairing = _winrt_windows_devices_enumeration.DeviceInformationPairing
+DeviceInformationUpdate = _winrt_windows_devices_enumeration.DeviceInformationUpdate
+DevicePairingRequestedEventArgs = _winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs
+DevicePairingResult = _winrt_windows_devices_enumeration.DevicePairingResult
+DevicePicker = _winrt_windows_devices_enumeration.DevicePicker
+DevicePickerAppearance = _winrt_windows_devices_enumeration.DevicePickerAppearance
+DevicePickerFilter = _winrt_windows_devices_enumeration.DevicePickerFilter
+DeviceSelectedEventArgs = _winrt_windows_devices_enumeration.DeviceSelectedEventArgs
+DeviceThumbnail = _winrt_windows_devices_enumeration.DeviceThumbnail
+DeviceUnpairingResult = _winrt_windows_devices_enumeration.DeviceUnpairingResult
+DeviceWatcher = _winrt_windows_devices_enumeration.DeviceWatcher
+DeviceWatcherEvent = _winrt_windows_devices_enumeration.DeviceWatcherEvent
+DeviceWatcherTriggerDetails = _winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails
+EnclosureLocation = _winrt_windows_devices_enumeration.EnclosureLocation
+IDevicePairingSettings = _winrt_windows_devices_enumeration.IDevicePairingSettings

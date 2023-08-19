@@ -238,7 +238,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_AggregateContactManager =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.AggregateContactManager",
+        "_winrt_windows_applicationmodel_contacts.AggregateContactManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1640,7 +1640,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_Contact =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.Contact",
+        "_winrt_windows_applicationmodel_contacts.Contact",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::Contact),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2074,7 +2074,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactAddress =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactAddress",
+        "_winrt_windows_applicationmodel_contacts.ContactAddress",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2444,7 +2444,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactAnnotation =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactAnnotation",
+        "_winrt_windows_applicationmodel_contacts.ContactAnnotation",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2767,7 +2767,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactAnnotationList =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactAnnotationList",
+        "_winrt_windows_applicationmodel_contacts.ContactAnnotationList",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3114,7 +3114,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactAnnotationStore =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactAnnotationStore",
+        "_winrt_windows_applicationmodel_contacts.ContactAnnotationStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3229,7 +3229,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactBatch =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactBatch",
+        "_winrt_windows_applicationmodel_contacts.ContactBatch",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactBatch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3390,7 +3390,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactCardDelayedDataLoader =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactCardDelayedDataLoader",
+        "_winrt_windows_applicationmodel_contacts.ContactCardDelayedDataLoader",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3604,7 +3604,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactCardOptions =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactCardOptions",
+        "_winrt_windows_applicationmodel_contacts.ContactCardOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3719,7 +3719,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactChange =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactChange",
+        "_winrt_windows_applicationmodel_contacts.ContactChange",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactChange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3888,7 +3888,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactChangeReader =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactChangeReader",
+        "_winrt_windows_applicationmodel_contacts.ContactChangeReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4075,7 +4075,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactChangeTracker =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactChangeTracker",
+        "_winrt_windows_applicationmodel_contacts.ContactChangeTracker",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeTracker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4181,7 +4181,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactChangedDeferral =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactChangedDeferral",
+        "_winrt_windows_applicationmodel_contacts.ContactChangedDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4286,7 +4286,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactChangedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactChangedEventArgs",
+        "_winrt_windows_applicationmodel_contacts.ContactChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4480,7 +4480,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactConnectedServiceAccount =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactConnectedServiceAccount",
+        "_winrt_windows_applicationmodel_contacts.ContactConnectedServiceAccount",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4818,7 +4818,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactDate =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactDate",
+        "_winrt_windows_applicationmodel_contacts.ContactDate",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5060,7 +5060,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactEmail =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactEmail",
+        "_winrt_windows_applicationmodel_contacts.ContactEmail",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactEmail),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5276,7 +5276,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactField =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactField",
+        "_winrt_windows_applicationmodel_contacts.ContactField",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactField),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5608,7 +5608,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactFieldFactory =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactFieldFactory",
+        "_winrt_windows_applicationmodel_contacts.ContactFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5683,7 +5683,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactGroup =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactGroup",
+        "_winrt_windows_applicationmodel_contacts.ContactGroup",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5940,7 +5940,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactInformation =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactInformation",
+        "_winrt_windows_applicationmodel_contacts.ContactInformation",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6235,7 +6235,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactInstantMessageField =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactInstantMessageField",
+        "_winrt_windows_applicationmodel_contacts.ContactInstantMessageField",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactInstantMessageField),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6717,7 +6717,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactJobInfo =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactJobInfo",
+        "_winrt_windows_applicationmodel_contacts.ContactJobInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6846,7 +6846,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactLaunchActionVerbs =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactLaunchActionVerbs",
+        "_winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6871,7 +6871,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactLaunchActionVerbs_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactLaunchActionVerbs_Meta",
+        "_winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7701,7 +7701,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactList =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactList",
+        "_winrt_windows_applicationmodel_contacts.ContactList",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7840,7 +7840,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactListLimitedWriteOperations =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactListLimitedWriteOperations",
+        "_winrt_windows_applicationmodel_contacts.ContactListLimitedWriteOperations",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9259,7 +9259,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactListSyncConstraints =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactListSyncConstraints",
+        "_winrt_windows_applicationmodel_contacts.ContactListSyncConstraints",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9553,7 +9553,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactListSyncManager =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactListSyncManager",
+        "_winrt_windows_applicationmodel_contacts.ContactListSyncManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9890,7 +9890,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactLocationField =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactLocationField",
+        "_winrt_windows_applicationmodel_contacts.ContactLocationField",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactLocationField),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10508,7 +10508,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactManager =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactManager",
+        "_winrt_windows_applicationmodel_contacts.ContactManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10531,7 +10531,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactManager_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactManager_Meta",
+        "_winrt_windows_applicationmodel_contacts.ContactManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -10905,7 +10905,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactManagerForUser =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactManagerForUser",
+        "_winrt_windows_applicationmodel_contacts.ContactManagerForUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11040,7 +11040,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactMatchReason =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactMatchReason",
+        "_winrt_windows_applicationmodel_contacts.ContactMatchReason",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactMatchReason),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11284,7 +11284,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactPanel =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactPanel",
+        "_winrt_windows_applicationmodel_contacts.ContactPanel",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11389,7 +11389,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactPanelClosingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactPanelClosingEventArgs",
+        "_winrt_windows_applicationmodel_contacts.ContactPanelClosingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11512,7 +11512,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactPanelLaunchFullAppRequestedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactPanelLaunchFullAppRequestedEventArgs",
+        "_winrt_windows_applicationmodel_contacts.ContactPanelLaunchFullAppRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11754,7 +11754,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactPhone =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactPhone",
+        "_winrt_windows_applicationmodel_contacts.ContactPhone",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactPhone),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12190,7 +12190,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactPicker =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactPicker",
+        "_winrt_windows_applicationmodel_contacts.ContactPicker",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12523,7 +12523,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactQueryOptions =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactQueryOptions",
+        "_winrt_windows_applicationmodel_contacts.ContactQueryOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12742,7 +12742,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactQueryTextSearch =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactQueryTextSearch",
+        "_winrt_windows_applicationmodel_contacts.ContactQueryTextSearch",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryTextSearch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12879,7 +12879,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactReader =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactReader",
+        "_winrt_windows_applicationmodel_contacts.ContactReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13121,7 +13121,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactSignificantOther =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactSignificantOther",
+        "_winrt_windows_applicationmodel_contacts.ContactSignificantOther",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactSignificantOther),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13590,7 +13590,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactStore =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactStore",
+        "_winrt_windows_applicationmodel_contacts.ContactStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13665,7 +13665,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactStoreNotificationTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactStoreNotificationTriggerDetails",
+        "_winrt_windows_applicationmodel_contacts.ContactStoreNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13907,7 +13907,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_ContactWebsite =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.ContactWebsite",
+        "_winrt_windows_applicationmodel_contacts.ContactWebsite",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::ContactWebsite),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14053,7 +14053,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_FullContactCardOptions =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.FullContactCardOptions",
+        "_winrt_windows_applicationmodel_contacts.FullContactCardOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::FullContactCardOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14227,7 +14227,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_KnownContactField =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.KnownContactField",
+        "_winrt_windows_applicationmodel_contacts.KnownContactField",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14251,7 +14251,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_KnownContactField_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.KnownContactField_Meta",
+        "_winrt_windows_applicationmodel_contacts.KnownContactField_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -14346,7 +14346,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_PinnedContactIdsQueryResult =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.PinnedContactIdsQueryResult",
+        "_winrt_windows_applicationmodel_contacts.PinnedContactIdsQueryResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14760,7 +14760,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_PinnedContactManager =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.PinnedContactManager",
+        "_winrt_windows_applicationmodel_contacts.PinnedContactManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14915,7 +14915,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_IContactField =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.IContactField",
+        "_winrt_windows_applicationmodel_contacts.IContactField",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactField),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15068,7 +15068,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_IContactFieldFactory =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.IContactFieldFactory",
+        "_winrt_windows_applicationmodel_contacts.IContactFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15220,7 +15220,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_IContactInstantMessageFieldFactory =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.IContactInstantMessageFieldFactory",
+        "_winrt_windows_applicationmodel_contacts.IContactInstantMessageFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15374,7 +15374,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyType_Spec type_spec_IContactLocationFieldFactory =
     {
-        "_winrt_Windows_ApplicationModel_Contacts.IContactLocationFieldFactory",
+        "_winrt_windows_applicationmodel_contacts.IContactLocationFieldFactory",
         sizeof(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15387,7 +15387,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Contacts",
+           "_winrt_windows_applicationmodel_contacts",
            module_doc,
            0,
            nullptr,
@@ -15398,7 +15398,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
 } // py::cpp::Windows::ApplicationModel::Contacts
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Contacts(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Contacts;
 

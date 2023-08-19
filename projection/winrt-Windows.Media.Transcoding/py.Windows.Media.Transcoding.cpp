@@ -582,7 +582,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyType_Spec type_spec_MediaTranscoder =
     {
-        "_winrt_Windows_Media_Transcoding.MediaTranscoder",
+        "_winrt_windows_media_transcoding.MediaTranscoder",
         sizeof(py::wrapper::Windows::Media::Transcoding::MediaTranscoder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyType_Spec type_spec_PrepareTranscodeResult =
     {
-        "_winrt_Windows_Media_Transcoding.PrepareTranscodeResult",
+        "_winrt_windows_media_transcoding.PrepareTranscodeResult",
         sizeof(py::wrapper::Windows::Media::Transcoding::PrepareTranscodeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -740,7 +740,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Transcoding",
+           "_winrt_windows_media_transcoding",
            module_doc,
            0,
            nullptr,
@@ -751,7 +751,7 @@ namespace py::cpp::Windows::Media::Transcoding
 
 } // py::cpp::Windows::Media::Transcoding
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Transcoding(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_transcoding(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Transcoding;
 

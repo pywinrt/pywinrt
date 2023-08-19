@@ -98,6 +98,17 @@ namespace pywinrt
             PYWINRT_VERSION_STRING);
     }
 
+    /**
+     * Writes the binary extension module name for the given namespace.
+     *
+     * Example: "Windows.Foundation" becomes "_winrt_windows_foundation".
+     */
+    void write_ns_module_name(writer& w, std::string_view const& ns)
+    {
+        auto segments = get_dotted_name_segments(ns);
+        w.write("_%_%", settings.module, bind_list<write_lower_case>("_", segments));
+    }
+
     void write_python_setup_filenames(
         writer& w, std::vector<std::string> const& namespaces)
     {
@@ -123,7 +134,11 @@ namespace pywinrt
             return;
         }
 
-        w.write("@ = _ns_module.@\n", type.TypeName(), type.TypeName());
+        w.write(
+            "@ = %.@\n",
+            type.TypeName(),
+            bind<write_ns_module_name>(type.TypeNamespace()),
+            type.TypeName());
 
         if (implements_imap(type))
         {
@@ -448,12 +463,6 @@ struct py_type<%>
             w.write("return nullptr;\n");
         }
         w.write("}\n\n");
-    }
-
-    void write_ns_module_name(writer& w, std::string_view const& ns)
-    {
-        auto segments = get_dotted_name_segments(ns);
-        w.write("_%_%", settings.module, bind_list("_", segments));
     }
 
     /**

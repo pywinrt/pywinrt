@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Composition.Scenes")
+from . import _winrt_windows_ui_composition_scenes
 
 try:
     import winrt.windows.foundation
@@ -53,23 +52,23 @@ class SceneWrappingMode(enum.IntEnum):
     MIRRORED_REPEAT = 1
     REPEAT = 2
 
-SceneBoundingBox = _ns_module.SceneBoundingBox
-SceneComponent = _ns_module.SceneComponent
-SceneComponentCollection = _ns_module.SceneComponentCollection
+SceneBoundingBox = _winrt_windows_ui_composition_scenes.SceneBoundingBox
+SceneComponent = _winrt_windows_ui_composition_scenes.SceneComponent
+SceneComponentCollection = _winrt_windows_ui_composition_scenes.SceneComponentCollection
 winrt.system._mixin_mutable_sequence(SceneComponentCollection)
-SceneMaterial = _ns_module.SceneMaterial
-SceneMaterialInput = _ns_module.SceneMaterialInput
-SceneMesh = _ns_module.SceneMesh
-SceneMeshMaterialAttributeMap = _ns_module.SceneMeshMaterialAttributeMap
+SceneMaterial = _winrt_windows_ui_composition_scenes.SceneMaterial
+SceneMaterialInput = _winrt_windows_ui_composition_scenes.SceneMaterialInput
+SceneMesh = _winrt_windows_ui_composition_scenes.SceneMesh
+SceneMeshMaterialAttributeMap = _winrt_windows_ui_composition_scenes.SceneMeshMaterialAttributeMap
 winrt.system._mixin_mutable_mapping(SceneMeshMaterialAttributeMap)
-SceneMeshRendererComponent = _ns_module.SceneMeshRendererComponent
-SceneMetallicRoughnessMaterial = _ns_module.SceneMetallicRoughnessMaterial
-SceneModelTransform = _ns_module.SceneModelTransform
-SceneNode = _ns_module.SceneNode
-SceneNodeCollection = _ns_module.SceneNodeCollection
+SceneMeshRendererComponent = _winrt_windows_ui_composition_scenes.SceneMeshRendererComponent
+SceneMetallicRoughnessMaterial = _winrt_windows_ui_composition_scenes.SceneMetallicRoughnessMaterial
+SceneModelTransform = _winrt_windows_ui_composition_scenes.SceneModelTransform
+SceneNode = _winrt_windows_ui_composition_scenes.SceneNode
+SceneNodeCollection = _winrt_windows_ui_composition_scenes.SceneNodeCollection
 winrt.system._mixin_mutable_sequence(SceneNodeCollection)
-SceneObject = _ns_module.SceneObject
-ScenePbrMaterial = _ns_module.ScenePbrMaterial
-SceneRendererComponent = _ns_module.SceneRendererComponent
-SceneSurfaceMaterialInput = _ns_module.SceneSurfaceMaterialInput
-SceneVisual = _ns_module.SceneVisual
+SceneObject = _winrt_windows_ui_composition_scenes.SceneObject
+ScenePbrMaterial = _winrt_windows_ui_composition_scenes.ScenePbrMaterial
+SceneRendererComponent = _winrt_windows_ui_composition_scenes.SceneRendererComponent
+SceneSurfaceMaterialInput = _winrt_windows_ui_composition_scenes.SceneSurfaceMaterialInput
+SceneVisual = _winrt_windows_ui_composition_scenes.SceneVisual

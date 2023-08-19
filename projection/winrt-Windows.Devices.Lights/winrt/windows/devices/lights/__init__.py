@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Lights")
+from . import _winrt_windows_devices_lights
 
 try:
     import winrt.windows.foundation
@@ -53,7 +52,7 @@ class LampPurposes(enum.IntFlag):
     ILLUMINATION = 0x10
     PRESENTATION = 0x20
 
-Lamp = _ns_module.Lamp
-LampArray = _ns_module.LampArray
-LampAvailabilityChangedEventArgs = _ns_module.LampAvailabilityChangedEventArgs
-LampInfo = _ns_module.LampInfo
+Lamp = _winrt_windows_devices_lights.Lamp
+LampArray = _winrt_windows_devices_lights.LampArray
+LampAvailabilityChangedEventArgs = _winrt_windows_devices_lights.LampAvailabilityChangedEventArgs
+LampInfo = _winrt_windows_devices_lights.LampInfo

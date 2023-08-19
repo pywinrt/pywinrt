@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.System.Power")
+from . import _winrt_windows_phone_system_power
 
 try:
     import winrt.windows.foundation
@@ -15,4 +14,4 @@ class PowerSavingMode(enum.IntEnum):
     OFF = 0
     ON = 1
 
-PowerManager = _ns_module.PowerManager
+PowerManager = _winrt_windows_phone_system_power.PowerManager

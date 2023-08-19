@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Printing")
+from . import _winrt_windows_ui_xaml_printing
 
 try:
     import winrt.windows.foundation
@@ -25,7 +24,7 @@ class PreviewPageCountType(enum.IntEnum):
     FINAL = 0
     INTERMEDIATE = 1
 
-AddPagesEventArgs = _ns_module.AddPagesEventArgs
-GetPreviewPageEventArgs = _ns_module.GetPreviewPageEventArgs
-PaginateEventArgs = _ns_module.PaginateEventArgs
-PrintDocument = _ns_module.PrintDocument
+AddPagesEventArgs = _winrt_windows_ui_xaml_printing.AddPagesEventArgs
+GetPreviewPageEventArgs = _winrt_windows_ui_xaml_printing.GetPreviewPageEventArgs
+PaginateEventArgs = _winrt_windows_ui_xaml_printing.PaginateEventArgs
+PrintDocument = _winrt_windows_ui_xaml_printing.PrintDocument

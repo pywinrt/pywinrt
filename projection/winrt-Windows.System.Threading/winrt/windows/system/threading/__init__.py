@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Threading")
+from . import _winrt_windows_system_threading
 
 try:
     import winrt.windows.foundation
@@ -20,5 +19,5 @@ class WorkItemPriority(enum.IntEnum):
     NORMAL = 0
     HIGH = 1
 
-ThreadPool = _ns_module.ThreadPool
-ThreadPoolTimer = _ns_module.ThreadPoolTimer
+ThreadPool = _winrt_windows_system_threading.ThreadPool
+ThreadPoolTimer = _winrt_windows_system_threading.ThreadPoolTimer

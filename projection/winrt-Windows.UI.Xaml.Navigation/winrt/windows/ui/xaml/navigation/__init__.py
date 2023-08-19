@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Navigation")
+from . import _winrt_windows_ui_xaml_navigation
 
 try:
     import winrt.windows.foundation
@@ -37,8 +36,8 @@ class NavigationMode(enum.IntEnum):
     FORWARD = 2
     REFRESH = 3
 
-FrameNavigationOptions = _ns_module.FrameNavigationOptions
-NavigatingCancelEventArgs = _ns_module.NavigatingCancelEventArgs
-NavigationEventArgs = _ns_module.NavigationEventArgs
-NavigationFailedEventArgs = _ns_module.NavigationFailedEventArgs
-PageStackEntry = _ns_module.PageStackEntry
+FrameNavigationOptions = _winrt_windows_ui_xaml_navigation.FrameNavigationOptions
+NavigatingCancelEventArgs = _winrt_windows_ui_xaml_navigation.NavigatingCancelEventArgs
+NavigationEventArgs = _winrt_windows_ui_xaml_navigation.NavigationEventArgs
+NavigationFailedEventArgs = _winrt_windows_ui_xaml_navigation.NavigationFailedEventArgs
+PageStackEntry = _winrt_windows_ui_xaml_navigation.PageStackEntry

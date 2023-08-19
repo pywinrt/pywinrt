@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Transcoding")
+from . import _winrt_windows_media_transcoding
 
 try:
     import winrt.windows.foundation
@@ -46,5 +45,5 @@ class TranscodeFailureReason(enum.IntEnum):
     INVALID_PROFILE = 2
     CODEC_NOT_FOUND = 3
 
-MediaTranscoder = _ns_module.MediaTranscoder
-PrepareTranscodeResult = _ns_module.PrepareTranscodeResult
+MediaTranscoder = _winrt_windows_media_transcoding.MediaTranscoder
+PrepareTranscodeResult = _winrt_windows_media_transcoding.PrepareTranscodeResult

@@ -144,7 +144,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_ApplicationLanguages =
     {
-        "_winrt_Windows_Globalization.ApplicationLanguages",
+        "_winrt_windows_globalization.ApplicationLanguages",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -167,7 +167,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_ApplicationLanguages_Meta =
     {
-        "_winrt_Windows_Globalization.ApplicationLanguages_Meta",
+        "_winrt_windows_globalization.ApplicationLanguages_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2973,7 +2973,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_Calendar =
     {
-        "_winrt_Windows_Globalization.Calendar",
+        "_winrt_windows_globalization.Calendar",
         sizeof(py::wrapper::Windows::Globalization::Calendar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3292,7 +3292,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_CalendarIdentifiers =
     {
-        "_winrt_Windows_Globalization.CalendarIdentifiers",
+        "_winrt_windows_globalization.CalendarIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3327,7 +3327,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_CalendarIdentifiers_Meta =
     {
-        "_winrt_Windows_Globalization.CalendarIdentifiers_Meta",
+        "_winrt_windows_globalization.CalendarIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3399,7 +3399,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_ClockIdentifiers =
     {
-        "_winrt_Windows_Globalization.ClockIdentifiers",
+        "_winrt_windows_globalization.ClockIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3421,7 +3421,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_ClockIdentifiers_Meta =
     {
-        "_winrt_Windows_Globalization.ClockIdentifiers_Meta",
+        "_winrt_windows_globalization.ClockIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3562,7 +3562,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_CurrencyAmount =
     {
-        "_winrt_Windows_Globalization.CurrencyAmount",
+        "_winrt_windows_globalization.CurrencyAmount",
         sizeof(py::wrapper::Windows::Globalization::CurrencyAmount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6674,7 +6674,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_CurrencyIdentifiers =
     {
-        "_winrt_Windows_Globalization.CurrencyIdentifiers",
+        "_winrt_windows_globalization.CurrencyIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6856,7 +6856,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_CurrencyIdentifiers_Meta =
     {
-        "_winrt_Windows_Globalization.CurrencyIdentifiers_Meta",
+        "_winrt_windows_globalization.CurrencyIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7141,7 +7141,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_GeographicRegion =
     {
-        "_winrt_Windows_Globalization.GeographicRegion",
+        "_winrt_windows_globalization.GeographicRegion",
         sizeof(py::wrapper::Windows::Globalization::GeographicRegion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7276,7 +7276,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_JapanesePhoneme =
     {
-        "_winrt_Windows_Globalization.JapanesePhoneme",
+        "_winrt_windows_globalization.JapanesePhoneme",
         sizeof(py::wrapper::Windows::Globalization::JapanesePhoneme),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7363,7 +7363,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_JapanesePhoneticAnalyzer =
     {
-        "_winrt_Windows_Globalization.JapanesePhoneticAnalyzer",
+        "_winrt_windows_globalization.JapanesePhoneticAnalyzer",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7730,7 +7730,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_Language =
     {
-        "_winrt_Windows_Globalization.Language",
+        "_winrt_windows_globalization.Language",
         sizeof(py::wrapper::Windows::Globalization::Language),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7751,7 +7751,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_Language_Meta =
     {
-        "_winrt_Windows_Globalization.Language_Meta",
+        "_winrt_windows_globalization.Language_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8697,7 +8697,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_NumeralSystemIdentifiers =
     {
-        "_winrt_Windows_Globalization.NumeralSystemIdentifiers",
+        "_winrt_windows_globalization.NumeralSystemIdentifiers",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8765,7 +8765,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyType_Spec type_spec_NumeralSystemIdentifiers_Meta =
     {
-        "_winrt_Windows_Globalization.NumeralSystemIdentifiers_Meta",
+        "_winrt_windows_globalization.NumeralSystemIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -8778,7 +8778,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Globalization",
+           "_winrt_windows_globalization",
            module_doc,
            0,
            nullptr,
@@ -8789,7 +8789,7 @@ namespace py::cpp::Windows::Globalization
 
 } // py::cpp::Windows::Globalization
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Globalization(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
 {
     using namespace py::cpp::Windows::Globalization;
 

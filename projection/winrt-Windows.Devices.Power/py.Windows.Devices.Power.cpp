@@ -250,7 +250,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyType_Spec type_spec_Battery =
     {
-        "_winrt_Windows_Devices_Power.Battery",
+        "_winrt_windows_devices_power.Battery",
         sizeof(py::wrapper::Windows::Devices::Power::Battery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyType_Spec type_spec_Battery_Meta =
     {
-        "_winrt_Windows_Devices_Power.Battery_Meta",
+        "_winrt_windows_devices_power.Battery_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyType_Spec type_spec_BatteryReport =
     {
-        "_winrt_Windows_Devices_Power.BatteryReport",
+        "_winrt_windows_devices_power.BatteryReport",
         sizeof(py::wrapper::Windows::Devices::Power::BatteryReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -459,7 +459,7 @@ namespace py::cpp::Windows::Devices::Power
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Power",
+           "_winrt_windows_devices_power",
            module_doc,
            0,
            nullptr,
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Devices::Power
 
 } // py::cpp::Windows::Devices::Power
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Power(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_power(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Power;
 

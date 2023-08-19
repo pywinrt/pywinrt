@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Credentials.UI")
+from . import _winrt_windows_security_credentials_ui
 
 try:
     import winrt.windows.foundation
@@ -46,7 +45,7 @@ class UserConsentVerifierAvailability(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     DEVICE_BUSY = 4
 
-CredentialPicker = _ns_module.CredentialPicker
-CredentialPickerOptions = _ns_module.CredentialPickerOptions
-CredentialPickerResults = _ns_module.CredentialPickerResults
-UserConsentVerifier = _ns_module.UserConsentVerifier
+CredentialPicker = _winrt_windows_security_credentials_ui.CredentialPicker
+CredentialPickerOptions = _winrt_windows_security_credentials_ui.CredentialPickerOptions
+CredentialPickerResults = _winrt_windows_security_credentials_ui.CredentialPickerResults
+UserConsentVerifier = _winrt_windows_security_credentials_ui.UserConsentVerifier

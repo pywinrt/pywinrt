@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Data.Xml.Dom")
+from . import _winrt_windows_data_xml_dom
 
 try:
     import winrt.windows.foundation
@@ -41,26 +40,26 @@ class NodeType(enum.IntEnum):
     DOCUMENT_FRAGMENT_NODE = 11
     NOTATION_NODE = 12
 
-DtdEntity = _ns_module.DtdEntity
-DtdNotation = _ns_module.DtdNotation
-XmlAttribute = _ns_module.XmlAttribute
-XmlCDataSection = _ns_module.XmlCDataSection
-XmlComment = _ns_module.XmlComment
-XmlDocument = _ns_module.XmlDocument
-XmlDocumentFragment = _ns_module.XmlDocumentFragment
-XmlDocumentType = _ns_module.XmlDocumentType
-XmlDomImplementation = _ns_module.XmlDomImplementation
-XmlElement = _ns_module.XmlElement
-XmlEntityReference = _ns_module.XmlEntityReference
-XmlLoadSettings = _ns_module.XmlLoadSettings
-XmlNamedNodeMap = _ns_module.XmlNamedNodeMap
+DtdEntity = _winrt_windows_data_xml_dom.DtdEntity
+DtdNotation = _winrt_windows_data_xml_dom.DtdNotation
+XmlAttribute = _winrt_windows_data_xml_dom.XmlAttribute
+XmlCDataSection = _winrt_windows_data_xml_dom.XmlCDataSection
+XmlComment = _winrt_windows_data_xml_dom.XmlComment
+XmlDocument = _winrt_windows_data_xml_dom.XmlDocument
+XmlDocumentFragment = _winrt_windows_data_xml_dom.XmlDocumentFragment
+XmlDocumentType = _winrt_windows_data_xml_dom.XmlDocumentType
+XmlDomImplementation = _winrt_windows_data_xml_dom.XmlDomImplementation
+XmlElement = _winrt_windows_data_xml_dom.XmlElement
+XmlEntityReference = _winrt_windows_data_xml_dom.XmlEntityReference
+XmlLoadSettings = _winrt_windows_data_xml_dom.XmlLoadSettings
+XmlNamedNodeMap = _winrt_windows_data_xml_dom.XmlNamedNodeMap
 winrt.system._mixin_sequence(XmlNamedNodeMap)
-XmlNodeList = _ns_module.XmlNodeList
+XmlNodeList = _winrt_windows_data_xml_dom.XmlNodeList
 winrt.system._mixin_sequence(XmlNodeList)
-XmlProcessingInstruction = _ns_module.XmlProcessingInstruction
-XmlText = _ns_module.XmlText
-IXmlCharacterData = _ns_module.IXmlCharacterData
-IXmlNode = _ns_module.IXmlNode
-IXmlNodeSelector = _ns_module.IXmlNodeSelector
-IXmlNodeSerializer = _ns_module.IXmlNodeSerializer
-IXmlText = _ns_module.IXmlText
+XmlProcessingInstruction = _winrt_windows_data_xml_dom.XmlProcessingInstruction
+XmlText = _winrt_windows_data_xml_dom.XmlText
+IXmlCharacterData = _winrt_windows_data_xml_dom.IXmlCharacterData
+IXmlNode = _winrt_windows_data_xml_dom.IXmlNode
+IXmlNodeSelector = _winrt_windows_data_xml_dom.IXmlNodeSelector
+IXmlNodeSerializer = _winrt_windows_data_xml_dom.IXmlNodeSerializer
+IXmlText = _winrt_windows_data_xml_dom.IXmlText

@@ -250,7 +250,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyType_Spec type_spec_WebAuthenticationBroker =
     {
-        "_winrt_Windows_Security_Authentication_Web.WebAuthenticationBroker",
+        "_winrt_windows_security_authentication_web.WebAuthenticationBroker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -385,7 +385,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyType_Spec type_spec_WebAuthenticationResult =
     {
-        "_winrt_Windows_Security_Authentication_Web.WebAuthenticationResult",
+        "_winrt_windows_security_authentication_web.WebAuthenticationResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::WebAuthenticationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Authentication_Web",
+           "_winrt_windows_security_authentication_web",
            module_doc,
            0,
            nullptr,
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
 } // py::cpp::Windows::Security::Authentication::Web
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Authentication::Web;
 

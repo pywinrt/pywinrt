@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Globalization.NumberFormatting")
+from . import _winrt_windows_globalization_numberformatting
 
 try:
     import winrt.windows.foundation
@@ -33,18 +32,18 @@ class RoundingAlgorithm(enum.IntEnum):
     ROUND_HALF_TO_EVEN = 9
     ROUND_HALF_TO_ODD = 10
 
-CurrencyFormatter = _ns_module.CurrencyFormatter
-DecimalFormatter = _ns_module.DecimalFormatter
-IncrementNumberRounder = _ns_module.IncrementNumberRounder
-NumeralSystemTranslator = _ns_module.NumeralSystemTranslator
-PercentFormatter = _ns_module.PercentFormatter
-PermilleFormatter = _ns_module.PermilleFormatter
-SignificantDigitsNumberRounder = _ns_module.SignificantDigitsNumberRounder
-INumberFormatter = _ns_module.INumberFormatter
-INumberFormatter2 = _ns_module.INumberFormatter2
-INumberFormatterOptions = _ns_module.INumberFormatterOptions
-INumberParser = _ns_module.INumberParser
-INumberRounder = _ns_module.INumberRounder
-INumberRounderOption = _ns_module.INumberRounderOption
-ISignedZeroOption = _ns_module.ISignedZeroOption
-ISignificantDigitsOption = _ns_module.ISignificantDigitsOption
+CurrencyFormatter = _winrt_windows_globalization_numberformatting.CurrencyFormatter
+DecimalFormatter = _winrt_windows_globalization_numberformatting.DecimalFormatter
+IncrementNumberRounder = _winrt_windows_globalization_numberformatting.IncrementNumberRounder
+NumeralSystemTranslator = _winrt_windows_globalization_numberformatting.NumeralSystemTranslator
+PercentFormatter = _winrt_windows_globalization_numberformatting.PercentFormatter
+PermilleFormatter = _winrt_windows_globalization_numberformatting.PermilleFormatter
+SignificantDigitsNumberRounder = _winrt_windows_globalization_numberformatting.SignificantDigitsNumberRounder
+INumberFormatter = _winrt_windows_globalization_numberformatting.INumberFormatter
+INumberFormatter2 = _winrt_windows_globalization_numberformatting.INumberFormatter2
+INumberFormatterOptions = _winrt_windows_globalization_numberformatting.INumberFormatterOptions
+INumberParser = _winrt_windows_globalization_numberformatting.INumberParser
+INumberRounder = _winrt_windows_globalization_numberformatting.INumberRounder
+INumberRounderOption = _winrt_windows_globalization_numberformatting.INumberRounderOption
+ISignedZeroOption = _winrt_windows_globalization_numberformatting.ISignedZeroOption
+ISignificantDigitsOption = _winrt_windows_globalization_numberformatting.ISignificantDigitsOption

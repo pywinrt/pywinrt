@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.WiFi")
+from . import _winrt_windows_devices_wifi
 
 try:
     import winrt.windows.foundation
@@ -115,12 +114,12 @@ class WiFiWpsKind(enum.IntEnum):
     ETHERNET = 4
     USB = 5
 
-WiFiAdapter = _ns_module.WiFiAdapter
-WiFiAvailableNetwork = _ns_module.WiFiAvailableNetwork
-WiFiConnectionResult = _ns_module.WiFiConnectionResult
-WiFiNetworkReport = _ns_module.WiFiNetworkReport
-WiFiOnDemandHotspotConnectTriggerDetails = _ns_module.WiFiOnDemandHotspotConnectTriggerDetails
-WiFiOnDemandHotspotConnectionResult = _ns_module.WiFiOnDemandHotspotConnectionResult
-WiFiOnDemandHotspotNetwork = _ns_module.WiFiOnDemandHotspotNetwork
-WiFiOnDemandHotspotNetworkProperties = _ns_module.WiFiOnDemandHotspotNetworkProperties
-WiFiWpsConfigurationResult = _ns_module.WiFiWpsConfigurationResult
+WiFiAdapter = _winrt_windows_devices_wifi.WiFiAdapter
+WiFiAvailableNetwork = _winrt_windows_devices_wifi.WiFiAvailableNetwork
+WiFiConnectionResult = _winrt_windows_devices_wifi.WiFiConnectionResult
+WiFiNetworkReport = _winrt_windows_devices_wifi.WiFiNetworkReport
+WiFiOnDemandHotspotConnectTriggerDetails = _winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectTriggerDetails
+WiFiOnDemandHotspotConnectionResult = _winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectionResult
+WiFiOnDemandHotspotNetwork = _winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork
+WiFiOnDemandHotspotNetworkProperties = _winrt_windows_devices_wifi.WiFiOnDemandHotspotNetworkProperties
+WiFiWpsConfigurationResult = _winrt_windows_devices_wifi.WiFiWpsConfigurationResult

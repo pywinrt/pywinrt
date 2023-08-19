@@ -193,7 +193,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_FrameNavigationOptions =
     {
-        "_winrt_Windows_UI_Xaml_Navigation.FrameNavigationOptions",
+        "_winrt_windows_ui_xaml_navigation.FrameNavigationOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::FrameNavigationOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -396,7 +396,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_NavigatingCancelEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Navigation.NavigatingCancelEventArgs",
+        "_winrt_windows_ui_xaml_navigation.NavigatingCancelEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -619,7 +619,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_NavigationEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Navigation.NavigationEventArgs",
+        "_winrt_windows_ui_xaml_navigation.NavigationEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::NavigationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -782,7 +782,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_NavigationFailedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Navigation.NavigationFailedEventArgs",
+        "_winrt_windows_ui_xaml_navigation.NavigationFailedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -963,7 +963,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_PageStackEntry =
     {
-        "_winrt_Windows_UI_Xaml_Navigation.PageStackEntry",
+        "_winrt_windows_ui_xaml_navigation.PageStackEntry",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::PageStackEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyType_Spec type_spec_PageStackEntry_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Navigation.PageStackEntry_Meta",
+        "_winrt_windows_ui_xaml_navigation.PageStackEntry_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -997,7 +997,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Navigation",
+           "_winrt_windows_ui_xaml_navigation",
            module_doc,
            0,
            nullptr,
@@ -1008,7 +1008,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
 } // py::cpp::Windows::UI::Xaml::Navigation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Navigation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_navigation(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Navigation;
 

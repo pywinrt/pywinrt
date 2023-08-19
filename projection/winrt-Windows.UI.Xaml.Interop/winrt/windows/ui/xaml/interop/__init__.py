@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Interop")
+from . import _winrt_windows_ui_xaml_interop
 
 try:
     import winrt.windows.foundation
@@ -23,11 +22,11 @@ class TypeKind(enum.IntEnum):
     METADATA = 1
     CUSTOM = 2
 
-TypeName = _ns_module.TypeName
-NotifyCollectionChangedEventArgs = _ns_module.NotifyCollectionChangedEventArgs
-IBindableIterable = _ns_module.IBindableIterable
-IBindableIterator = _ns_module.IBindableIterator
-IBindableObservableVector = _ns_module.IBindableObservableVector
-IBindableVector = _ns_module.IBindableVector
-IBindableVectorView = _ns_module.IBindableVectorView
-INotifyCollectionChanged = _ns_module.INotifyCollectionChanged
+TypeName = _winrt_windows_ui_xaml_interop.TypeName
+NotifyCollectionChangedEventArgs = _winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs
+IBindableIterable = _winrt_windows_ui_xaml_interop.IBindableIterable
+IBindableIterator = _winrt_windows_ui_xaml_interop.IBindableIterator
+IBindableObservableVector = _winrt_windows_ui_xaml_interop.IBindableObservableVector
+IBindableVector = _winrt_windows_ui_xaml_interop.IBindableVector
+IBindableVectorView = _winrt_windows_ui_xaml_interop.IBindableVectorView
+INotifyCollectionChanged = _winrt_windows_ui_xaml_interop.INotifyCollectionChanged

@@ -159,7 +159,7 @@ namespace py::cpp::Windows::System::Display
 
     static PyType_Spec type_spec_DisplayRequest =
     {
-        "_winrt_Windows_System_Display.DisplayRequest",
+        "_winrt_windows_system_display.DisplayRequest",
         sizeof(py::wrapper::Windows::System::Display::DisplayRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::System::Display
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Display",
+           "_winrt_windows_system_display",
            module_doc,
            0,
            nullptr,
@@ -183,7 +183,7 @@ namespace py::cpp::Windows::System::Display
 
 } // py::cpp::Windows::System::Display
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Display(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_display(void) noexcept
 {
     using namespace py::cpp::Windows::System::Display;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Protection")
+from . import _winrt_windows_media_protection
 
 try:
     import winrt.windows.foundation
@@ -69,14 +68,14 @@ class RevocationAndRenewalReasons(enum.IntFlag):
     COMPONENT_SIGNED_WITH_TEST_CERTIFICATE = 0x1000000
     ENCRYPTION_FAILURE = 0x10000000
 
-ComponentLoadFailedEventArgs = _ns_module.ComponentLoadFailedEventArgs
-ComponentRenewal = _ns_module.ComponentRenewal
-HdcpSession = _ns_module.HdcpSession
-MediaProtectionManager = _ns_module.MediaProtectionManager
-MediaProtectionPMPServer = _ns_module.MediaProtectionPMPServer
-MediaProtectionServiceCompletion = _ns_module.MediaProtectionServiceCompletion
-ProtectionCapabilities = _ns_module.ProtectionCapabilities
-RevocationAndRenewalInformation = _ns_module.RevocationAndRenewalInformation
-RevocationAndRenewalItem = _ns_module.RevocationAndRenewalItem
-ServiceRequestedEventArgs = _ns_module.ServiceRequestedEventArgs
-IMediaProtectionServiceRequest = _ns_module.IMediaProtectionServiceRequest
+ComponentLoadFailedEventArgs = _winrt_windows_media_protection.ComponentLoadFailedEventArgs
+ComponentRenewal = _winrt_windows_media_protection.ComponentRenewal
+HdcpSession = _winrt_windows_media_protection.HdcpSession
+MediaProtectionManager = _winrt_windows_media_protection.MediaProtectionManager
+MediaProtectionPMPServer = _winrt_windows_media_protection.MediaProtectionPMPServer
+MediaProtectionServiceCompletion = _winrt_windows_media_protection.MediaProtectionServiceCompletion
+ProtectionCapabilities = _winrt_windows_media_protection.ProtectionCapabilities
+RevocationAndRenewalInformation = _winrt_windows_media_protection.RevocationAndRenewalInformation
+RevocationAndRenewalItem = _winrt_windows_media_protection.RevocationAndRenewalItem
+ServiceRequestedEventArgs = _winrt_windows_media_protection.ServiceRequestedEventArgs
+IMediaProtectionServiceRequest = _winrt_windows_media_protection.IMediaProtectionServiceRequest

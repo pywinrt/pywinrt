@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Store.Preview")
+from . import _winrt_windows_applicationmodel_store_preview
 
 try:
     import winrt.windows.foundation
@@ -100,11 +99,11 @@ class StoreSystemFeature(enum.IntEnum):
     VIDEO_MEMORY1_G_B = 33
     ARCHITECTURE_ARM64 = 34
 
-DeliveryOptimizationSettings = _ns_module.DeliveryOptimizationSettings
-StoreConfiguration = _ns_module.StoreConfiguration
-StoreHardwareManufacturerInfo = _ns_module.StoreHardwareManufacturerInfo
-StorePreview = _ns_module.StorePreview
-StorePreviewProductInfo = _ns_module.StorePreviewProductInfo
-StorePreviewPurchaseResults = _ns_module.StorePreviewPurchaseResults
-StorePreviewSkuInfo = _ns_module.StorePreviewSkuInfo
-WebAuthenticationCoreManagerHelper = _ns_module.WebAuthenticationCoreManagerHelper
+DeliveryOptimizationSettings = _winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings
+StoreConfiguration = _winrt_windows_applicationmodel_store_preview.StoreConfiguration
+StoreHardwareManufacturerInfo = _winrt_windows_applicationmodel_store_preview.StoreHardwareManufacturerInfo
+StorePreview = _winrt_windows_applicationmodel_store_preview.StorePreview
+StorePreviewProductInfo = _winrt_windows_applicationmodel_store_preview.StorePreviewProductInfo
+StorePreviewPurchaseResults = _winrt_windows_applicationmodel_store_preview.StorePreviewPurchaseResults
+StorePreviewSkuInfo = _winrt_windows_applicationmodel_store_preview.StorePreviewSkuInfo
+WebAuthenticationCoreManagerHelper = _winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.HumanInterfaceDevice")
+from . import _winrt_windows_devices_humaninterfacedevice
 
 try:
     import winrt.windows.foundation
@@ -41,13 +40,13 @@ class HidReportType(enum.IntEnum):
     OUTPUT = 1
     FEATURE = 2
 
-HidBooleanControl = _ns_module.HidBooleanControl
-HidBooleanControlDescription = _ns_module.HidBooleanControlDescription
-HidCollection = _ns_module.HidCollection
-HidDevice = _ns_module.HidDevice
-HidFeatureReport = _ns_module.HidFeatureReport
-HidInputReport = _ns_module.HidInputReport
-HidInputReportReceivedEventArgs = _ns_module.HidInputReportReceivedEventArgs
-HidNumericControl = _ns_module.HidNumericControl
-HidNumericControlDescription = _ns_module.HidNumericControlDescription
-HidOutputReport = _ns_module.HidOutputReport
+HidBooleanControl = _winrt_windows_devices_humaninterfacedevice.HidBooleanControl
+HidBooleanControlDescription = _winrt_windows_devices_humaninterfacedevice.HidBooleanControlDescription
+HidCollection = _winrt_windows_devices_humaninterfacedevice.HidCollection
+HidDevice = _winrt_windows_devices_humaninterfacedevice.HidDevice
+HidFeatureReport = _winrt_windows_devices_humaninterfacedevice.HidFeatureReport
+HidInputReport = _winrt_windows_devices_humaninterfacedevice.HidInputReport
+HidInputReportReceivedEventArgs = _winrt_windows_devices_humaninterfacedevice.HidInputReportReceivedEventArgs
+HidNumericControl = _winrt_windows_devices_humaninterfacedevice.HidNumericControl
+HidNumericControlDescription = _winrt_windows_devices_humaninterfacedevice.HidNumericControlDescription
+HidOutputReport = _winrt_windows_devices_humaninterfacedevice.HidOutputReport

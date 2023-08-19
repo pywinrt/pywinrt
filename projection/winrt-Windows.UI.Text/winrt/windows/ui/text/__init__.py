@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Text")
+from . import _winrt_windows_ui_text
 
 try:
     import winrt.windows.foundation
@@ -349,14 +348,14 @@ class VerticalCharacterAlignment(enum.IntEnum):
     BASELINE = 1
     BOTTOM = 2
 
-FontWeight = _ns_module.FontWeight
-ContentLinkInfo = _ns_module.ContentLinkInfo
-FontWeights = _ns_module.FontWeights
-RichEditTextDocument = _ns_module.RichEditTextDocument
-RichEditTextRange = _ns_module.RichEditTextRange
-TextConstants = _ns_module.TextConstants
-ITextCharacterFormat = _ns_module.ITextCharacterFormat
-ITextDocument = _ns_module.ITextDocument
-ITextParagraphFormat = _ns_module.ITextParagraphFormat
-ITextRange = _ns_module.ITextRange
-ITextSelection = _ns_module.ITextSelection
+FontWeight = _winrt_windows_ui_text.FontWeight
+ContentLinkInfo = _winrt_windows_ui_text.ContentLinkInfo
+FontWeights = _winrt_windows_ui_text.FontWeights
+RichEditTextDocument = _winrt_windows_ui_text.RichEditTextDocument
+RichEditTextRange = _winrt_windows_ui_text.RichEditTextRange
+TextConstants = _winrt_windows_ui_text.TextConstants
+ITextCharacterFormat = _winrt_windows_ui_text.ITextCharacterFormat
+ITextDocument = _winrt_windows_ui_text.ITextDocument
+ITextParagraphFormat = _winrt_windows_ui_text.ITextParagraphFormat
+ITextRange = _winrt_windows_ui_text.ITextRange
+ITextSelection = _winrt_windows_ui_text.ITextSelection

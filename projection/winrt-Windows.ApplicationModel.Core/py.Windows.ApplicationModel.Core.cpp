@@ -196,7 +196,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_AppListEntry =
     {
-        "_winrt_Windows_ApplicationModel_Core.AppListEntry",
+        "_winrt_windows_applicationmodel_core.AppListEntry",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::AppListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -979,7 +979,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_CoreApplication =
     {
-        "_winrt_Windows_ApplicationModel_Core.CoreApplication",
+        "_winrt_windows_applicationmodel_core.CoreApplication",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_CoreApplication_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Core.CoreApplication_Meta",
+        "_winrt_windows_applicationmodel_core.CoreApplication_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1328,7 +1328,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_CoreApplicationView =
     {
-        "_winrt_Windows_ApplicationModel_Core.CoreApplicationView",
+        "_winrt_windows_applicationmodel_core.CoreApplicationView",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1621,7 +1621,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_CoreApplicationViewTitleBar =
     {
-        "_winrt_Windows_ApplicationModel_Core.CoreApplicationViewTitleBar",
+        "_winrt_windows_applicationmodel_core.CoreApplicationViewTitleBar",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1726,7 +1726,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_HostedViewClosingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Core.HostedViewClosingEventArgs",
+        "_winrt_windows_applicationmodel_core.HostedViewClosingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::HostedViewClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1852,7 +1852,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_UnhandledError =
     {
-        "_winrt_Windows_ApplicationModel_Core.UnhandledError",
+        "_winrt_windows_applicationmodel_core.UnhandledError",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::UnhandledError),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1947,7 +1947,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_UnhandledErrorDetectedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Core.UnhandledErrorDetectedEventArgs",
+        "_winrt_windows_applicationmodel_core.UnhandledErrorDetectedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2067,7 +2067,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_ICoreApplicationUnhandledError =
     {
-        "_winrt_Windows_ApplicationModel_Core.ICoreApplicationUnhandledError",
+        "_winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2303,7 +2303,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_IFrameworkView =
     {
-        "_winrt_Windows_ApplicationModel_Core.IFrameworkView",
+        "_winrt_windows_applicationmodel_core.IFrameworkView",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2408,7 +2408,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyType_Spec type_spec_IFrameworkViewSource =
     {
-        "_winrt_Windows_ApplicationModel_Core.IFrameworkViewSource",
+        "_winrt_windows_applicationmodel_core.IFrameworkViewSource",
         sizeof(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2421,7 +2421,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Core",
+           "_winrt_windows_applicationmodel_core",
            module_doc,
            0,
            nullptr,
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
 } // py::cpp::Windows::ApplicationModel::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Core;
 

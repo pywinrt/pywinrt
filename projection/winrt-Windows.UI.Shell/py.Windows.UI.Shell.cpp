@@ -65,7 +65,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_AdaptiveCardBuilder =
     {
-        "_winrt_Windows_UI_Shell.AdaptiveCardBuilder",
+        "_winrt_windows_ui_shell.AdaptiveCardBuilder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -191,7 +191,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_FocusSession =
     {
-        "_winrt_Windows_UI_Shell.FocusSession",
+        "_winrt_windows_ui_shell.FocusSession",
         sizeof(py::wrapper::Windows::UI::Shell::FocusSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_FocusSessionManager =
     {
-        "_winrt_Windows_UI_Shell.FocusSessionManager",
+        "_winrt_windows_ui_shell.FocusSessionManager",
         sizeof(py::wrapper::Windows::UI::Shell::FocusSessionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -514,7 +514,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_FocusSessionManager_Meta =
     {
-        "_winrt_Windows_UI_Shell.FocusSessionManager_Meta",
+        "_winrt_windows_ui_shell.FocusSessionManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -718,7 +718,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_SecurityAppManager =
     {
-        "_winrt_Windows_UI_Shell.SecurityAppManager",
+        "_winrt_windows_ui_shell.SecurityAppManager",
         sizeof(py::wrapper::Windows::UI::Shell::SecurityAppManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -861,7 +861,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_ShareWindowCommandEventArgs =
     {
-        "_winrt_Windows_UI_Shell.ShareWindowCommandEventArgs",
+        "_winrt_windows_ui_shell.ShareWindowCommandEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::ShareWindowCommandEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1149,7 +1149,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_ShareWindowCommandSource =
     {
-        "_winrt_Windows_UI_Shell.ShareWindowCommandSource",
+        "_winrt_windows_ui_shell.ShareWindowCommandSource",
         sizeof(py::wrapper::Windows::UI::Shell::ShareWindowCommandSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1514,7 +1514,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_TaskbarManager =
     {
-        "_winrt_Windows_UI_Shell.TaskbarManager",
+        "_winrt_windows_ui_shell.TaskbarManager",
         sizeof(py::wrapper::Windows::UI::Shell::TaskbarManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1883,7 +1883,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTab =
     {
-        "_winrt_Windows_UI_Shell.WindowTab",
+        "_winrt_windows_ui_shell.WindowTab",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTab),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1978,7 +1978,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabCloseRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Shell.WindowTabCloseRequestedEventArgs",
+        "_winrt_windows_ui_shell.WindowTabCloseRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabCloseRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2635,7 +2635,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabCollection =
     {
-        "_winrt_Windows_UI_Shell.WindowTabCollection",
+        "_winrt_windows_ui_shell.WindowTabCollection",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2829,7 +2829,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabGroup =
     {
-        "_winrt_Windows_UI_Shell.WindowTabGroup",
+        "_winrt_windows_ui_shell.WindowTabGroup",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2991,7 +2991,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabIcon =
     {
-        "_winrt_Windows_UI_Shell.WindowTabIcon",
+        "_winrt_windows_ui_shell.WindowTabIcon",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3391,7 +3391,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabManager =
     {
-        "_winrt_Windows_UI_Shell.WindowTabManager",
+        "_winrt_windows_ui_shell.WindowTabManager",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3486,7 +3486,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabSwitchRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Shell.WindowTabSwitchRequestedEventArgs",
+        "_winrt_windows_ui_shell.WindowTabSwitchRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3659,7 +3659,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabTearOutRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Shell.WindowTabTearOutRequestedEventArgs",
+        "_winrt_windows_ui_shell.WindowTabTearOutRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3872,7 +3872,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_WindowTabThumbnailRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Shell.WindowTabThumbnailRequestedEventArgs",
+        "_winrt_windows_ui_shell.WindowTabThumbnailRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3977,7 +3977,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_IAdaptiveCard =
     {
-        "_winrt_Windows_UI_Shell.IAdaptiveCard",
+        "_winrt_windows_ui_shell.IAdaptiveCard",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCard),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4084,7 +4084,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyType_Spec type_spec_IAdaptiveCardBuilderStatics =
     {
-        "_winrt_Windows_UI_Shell.IAdaptiveCardBuilderStatics",
+        "_winrt_windows_ui_shell.IAdaptiveCardBuilderStatics",
         sizeof(py::wrapper::Windows::UI::Shell::IAdaptiveCardBuilderStatics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4097,7 +4097,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Shell",
+           "_winrt_windows_ui_shell",
            module_doc,
            0,
            nullptr,
@@ -4108,7 +4108,7 @@ namespace py::cpp::Windows::UI::Shell
 
 } // py::cpp::Windows::UI::Shell
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Shell(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Shell;
 

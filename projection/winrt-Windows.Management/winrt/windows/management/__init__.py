@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Management")
+from . import _winrt_windows_management
 
 try:
     import winrt.windows.foundation
@@ -38,6 +37,6 @@ class MdmSessionState(enum.IntEnum):
     RETRYING = 5
     COMPLETED = 6
 
-MdmAlert = _ns_module.MdmAlert
-MdmSession = _ns_module.MdmSession
-MdmSessionManager = _ns_module.MdmSessionManager
+MdmAlert = _winrt_windows_management.MdmAlert
+MdmSession = _winrt_windows_management.MdmSession
+MdmSessionManager = _winrt_windows_management.MdmSessionManager

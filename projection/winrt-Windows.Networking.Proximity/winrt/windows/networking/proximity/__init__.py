@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Networking.Proximity")
+from . import _winrt_windows_networking_proximity
 
 try:
     import winrt.windows.foundation
@@ -57,10 +56,10 @@ class TriggeredConnectState(enum.IntEnum):
     CANCELED = 4
     FAILED = 5
 
-ConnectionRequestedEventArgs = _ns_module.ConnectionRequestedEventArgs
-PeerFinder = _ns_module.PeerFinder
-PeerInformation = _ns_module.PeerInformation
-PeerWatcher = _ns_module.PeerWatcher
-ProximityDevice = _ns_module.ProximityDevice
-ProximityMessage = _ns_module.ProximityMessage
-TriggeredConnectionStateChangedEventArgs = _ns_module.TriggeredConnectionStateChangedEventArgs
+ConnectionRequestedEventArgs = _winrt_windows_networking_proximity.ConnectionRequestedEventArgs
+PeerFinder = _winrt_windows_networking_proximity.PeerFinder
+PeerInformation = _winrt_windows_networking_proximity.PeerInformation
+PeerWatcher = _winrt_windows_networking_proximity.PeerWatcher
+ProximityDevice = _winrt_windows_networking_proximity.ProximityDevice
+ProximityMessage = _winrt_windows_networking_proximity.ProximityMessage
+TriggeredConnectionStateChangedEventArgs = _winrt_windows_networking_proximity.TriggeredConnectionStateChangedEventArgs

@@ -12,7 +12,7 @@ namespace py::cpp::Windows::Media::Render
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Render",
+           "_winrt_windows_media_render",
            module_doc,
            0,
            nullptr,
@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Media::Render
 
 } // py::cpp::Windows::Media::Render
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Render(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_render(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Render;
 

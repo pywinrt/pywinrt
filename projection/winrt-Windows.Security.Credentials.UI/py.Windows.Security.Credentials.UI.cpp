@@ -108,7 +108,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_CredentialPicker =
     {
-        "_winrt_Windows_Security_Credentials_UI.CredentialPicker",
+        "_winrt_windows_security_credentials_ui.CredentialPicker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -686,7 +686,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_CredentialPickerOptions =
     {
-        "_winrt_Windows_Security_Credentials_UI.CredentialPickerOptions",
+        "_winrt_windows_security_credentials_ui.CredentialPickerOptions",
         sizeof(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -901,7 +901,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_CredentialPickerResults =
     {
-        "_winrt_Windows_Security_Credentials_UI.CredentialPickerResults",
+        "_winrt_windows_security_credentials_ui.CredentialPickerResults",
         sizeof(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -997,7 +997,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyType_Spec type_spec_UserConsentVerifier =
     {
-        "_winrt_Windows_Security_Credentials_UI.UserConsentVerifier",
+        "_winrt_windows_security_credentials_ui.UserConsentVerifier",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1010,7 +1010,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Credentials_UI",
+           "_winrt_windows_security_credentials_ui",
            module_doc,
            0,
            nullptr,
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
 } // py::cpp::Windows::Security::Credentials::UI
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Credentials_UI(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Credentials::UI;
 

@@ -274,7 +274,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Matrix3x2 =
     {
-        "_winrt_Windows_Foundation_Numerics.Matrix3x2",
+        "_winrt_windows_foundation_numerics.Matrix3x2",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Matrix3x2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -899,7 +899,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Matrix4x4 =
     {
-        "_winrt_Windows_Foundation_Numerics.Matrix4x4",
+        "_winrt_windows_foundation_numerics.Matrix4x4",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Matrix4x4),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1034,7 +1034,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Plane =
     {
-        "_winrt_Windows_Foundation_Numerics.Plane",
+        "_winrt_windows_foundation_numerics.Plane",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Plane),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1239,7 +1239,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Quaternion =
     {
-        "_winrt_Windows_Foundation_Numerics.Quaternion",
+        "_winrt_windows_foundation_numerics.Quaternion",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Quaternion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1374,7 +1374,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Rational =
     {
-        "_winrt_Windows_Foundation_Numerics.Rational",
+        "_winrt_windows_foundation_numerics.Rational",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Rational),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1509,7 +1509,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Vector2 =
     {
-        "_winrt_Windows_Foundation_Numerics.Vector2",
+        "_winrt_windows_foundation_numerics.Vector2",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Vector2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1679,7 +1679,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Vector3 =
     {
-        "_winrt_Windows_Foundation_Numerics.Vector3",
+        "_winrt_windows_foundation_numerics.Vector3",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Vector3),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1884,7 +1884,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyType_Spec type_spec_Vector4 =
     {
-        "_winrt_Windows_Foundation_Numerics.Vector4",
+        "_winrt_windows_foundation_numerics.Vector4",
         sizeof(py::wrapper::Windows::Foundation::Numerics::Vector4),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1897,7 +1897,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Foundation_Numerics",
+           "_winrt_windows_foundation_numerics",
            module_doc,
            0,
            nullptr,
@@ -1908,7 +1908,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
 } // py::cpp::Windows::Foundation::Numerics
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Numerics(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
 {
     using namespace py::cpp::Windows::Foundation::Numerics;
 

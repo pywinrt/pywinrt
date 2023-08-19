@@ -519,7 +519,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommDeviceService =
     {
-        "_winrt_Windows_Devices_Bluetooth_Rfcomm.RfcommDeviceService",
+        "_winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceService",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommDeviceServicesResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_Rfcomm.RfcommDeviceServicesResult",
+        "_winrt_windows_devices_bluetooth_rfcomm.RfcommDeviceServicesResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -967,7 +967,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommServiceId =
     {
-        "_winrt_Windows_Devices_Bluetooth_Rfcomm.RfcommServiceId",
+        "_winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -993,7 +993,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommServiceId_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_Rfcomm.RfcommServiceId_Meta",
+        "_winrt_windows_devices_bluetooth_rfcomm.RfcommServiceId_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1226,7 +1226,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyType_Spec type_spec_RfcommServiceProvider =
     {
-        "_winrt_Windows_Devices_Bluetooth_Rfcomm.RfcommServiceProvider",
+        "_winrt_windows_devices_bluetooth_rfcomm.RfcommServiceProvider",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1239,7 +1239,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Bluetooth_Rfcomm",
+           "_winrt_windows_devices_bluetooth_rfcomm",
            module_doc,
            0,
            nullptr,
@@ -1250,7 +1250,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
 } // py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_Rfcomm(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm;
 

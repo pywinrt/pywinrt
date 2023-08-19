@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Storage.Search")
+from . import _winrt_windows_storage_search
 
 try:
     import winrt.windows.data.text
@@ -80,19 +79,19 @@ class IndexerOption(enum.IntEnum):
     DO_NOT_USE_INDEXER = 2
     ONLY_USE_INDEXER_AND_OPTIMIZE_FOR_INDEXED_PROPERTIES = 3
 
-SortEntry = _ns_module.SortEntry
-ContentIndexer = _ns_module.ContentIndexer
-ContentIndexerQuery = _ns_module.ContentIndexerQuery
-IndexableContent = _ns_module.IndexableContent
-QueryOptions = _ns_module.QueryOptions
-SortEntryVector = _ns_module.SortEntryVector
+SortEntry = _winrt_windows_storage_search.SortEntry
+ContentIndexer = _winrt_windows_storage_search.ContentIndexer
+ContentIndexerQuery = _winrt_windows_storage_search.ContentIndexerQuery
+IndexableContent = _winrt_windows_storage_search.IndexableContent
+QueryOptions = _winrt_windows_storage_search.QueryOptions
+SortEntryVector = _winrt_windows_storage_search.SortEntryVector
 winrt.system._mixin_mutable_sequence(SortEntryVector)
-StorageFileQueryResult = _ns_module.StorageFileQueryResult
-StorageFolderQueryResult = _ns_module.StorageFolderQueryResult
-StorageItemQueryResult = _ns_module.StorageItemQueryResult
-StorageLibraryChangeTrackerTriggerDetails = _ns_module.StorageLibraryChangeTrackerTriggerDetails
-StorageLibraryContentChangedTriggerDetails = _ns_module.StorageLibraryContentChangedTriggerDetails
-ValueAndLanguage = _ns_module.ValueAndLanguage
-IIndexableContent = _ns_module.IIndexableContent
-IStorageFolderQueryOperations = _ns_module.IStorageFolderQueryOperations
-IStorageQueryResultBase = _ns_module.IStorageQueryResultBase
+StorageFileQueryResult = _winrt_windows_storage_search.StorageFileQueryResult
+StorageFolderQueryResult = _winrt_windows_storage_search.StorageFolderQueryResult
+StorageItemQueryResult = _winrt_windows_storage_search.StorageItemQueryResult
+StorageLibraryChangeTrackerTriggerDetails = _winrt_windows_storage_search.StorageLibraryChangeTrackerTriggerDetails
+StorageLibraryContentChangedTriggerDetails = _winrt_windows_storage_search.StorageLibraryContentChangedTriggerDetails
+ValueAndLanguage = _winrt_windows_storage_search.ValueAndLanguage
+IIndexableContent = _winrt_windows_storage_search.IIndexableContent
+IStorageFolderQueryOperations = _winrt_windows_storage_search.IStorageFolderQueryOperations
+IStorageQueryResultBase = _winrt_windows_storage_search.IStorageQueryResultBase

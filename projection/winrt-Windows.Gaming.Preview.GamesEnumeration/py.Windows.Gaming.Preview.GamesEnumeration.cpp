@@ -283,7 +283,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameList =
     {
-        "_winrt_Windows_Gaming_Preview_GamesEnumeration.GameList",
+        "_winrt_windows_gaming_preview_gamesenumeration.GameList",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameListEntry =
     {
-        "_winrt_Windows_Gaming_Preview_GamesEnumeration.GameListEntry",
+        "_winrt_windows_gaming_preview_gamesenumeration.GameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1174,7 +1174,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameModeConfiguration =
     {
-        "_winrt_Windows_Gaming_Preview_GamesEnumeration.GameModeConfiguration",
+        "_winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_GameModeUserConfiguration =
     {
-        "_winrt_Windows_Gaming_Preview_GamesEnumeration.GameModeUserConfiguration",
+        "_winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyType_Spec type_spec_IGameListEntry =
     {
-        "_winrt_Windows_Gaming_Preview_GamesEnumeration.IGameListEntry",
+        "_winrt_windows_gaming_preview_gamesenumeration.IGameListEntry",
         sizeof(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1539,7 +1539,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Gaming_Preview_GamesEnumeration",
+           "_winrt_windows_gaming_preview_gamesenumeration",
            module_doc,
            0,
            nullptr,
@@ -1550,7 +1550,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
 } // py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Preview_GamesEnumeration(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_gaming_preview_gamesenumeration(void) noexcept
 {
     using namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration;
 

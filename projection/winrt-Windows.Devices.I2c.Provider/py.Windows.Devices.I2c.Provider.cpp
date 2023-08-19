@@ -218,7 +218,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyType_Spec type_spec_ProviderI2cConnectionSettings =
     {
-        "_winrt_Windows_Devices_I2c_Provider.ProviderI2cConnectionSettings",
+        "_winrt_windows_devices_i2c_provider.ProviderI2cConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -325,7 +325,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyType_Spec type_spec_II2cControllerProvider =
     {
-        "_winrt_Windows_Devices_I2c_Provider.II2cControllerProvider",
+        "_winrt_windows_devices_i2c_provider.II2cControllerProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -670,7 +670,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyType_Spec type_spec_II2cDeviceProvider =
     {
-        "_winrt_Windows_Devices_I2c_Provider.II2cDeviceProvider",
+        "_winrt_windows_devices_i2c_provider.II2cDeviceProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -775,7 +775,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyType_Spec type_spec_II2cProvider =
     {
-        "_winrt_Windows_Devices_I2c_Provider.II2cProvider",
+        "_winrt_windows_devices_i2c_provider.II2cProvider",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::II2cProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyType_Spec type_spec_ProviderI2cTransferResult =
     {
-        "_winrt_Windows_Devices_I2c_Provider.ProviderI2cTransferResult",
+        "_winrt_windows_devices_i2c_provider.ProviderI2cTransferResult",
         sizeof(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_I2c_Provider",
+           "_winrt_windows_devices_i2c_provider",
            module_doc,
            0,
            nullptr,
@@ -934,7 +934,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
 } // py::cpp::Windows::Devices::I2c::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_I2c_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c_provider(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::I2c::Provider;
 

@@ -288,7 +288,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyType_Spec type_spec_SocialDashboardItemUpdater =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo_Provider.SocialDashboardItemUpdater",
+        "_winrt_windows_applicationmodel_socialinfo_provider.SocialDashboardItemUpdater",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -453,7 +453,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyType_Spec type_spec_SocialFeedUpdater =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo_Provider.SocialFeedUpdater",
+        "_winrt_windows_applicationmodel_socialinfo_provider.SocialFeedUpdater",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -681,7 +681,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyType_Spec type_spec_SocialInfoProviderManager =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo_Provider.SocialInfoProviderManager",
+        "_winrt_windows_applicationmodel_socialinfo_provider.SocialInfoProviderManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_SocialInfo_Provider",
+           "_winrt_windows_applicationmodel_socialinfo_provider",
            module_doc,
            0,
            nullptr,
@@ -705,7 +705,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
 } // py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_SocialInfo_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider;
 

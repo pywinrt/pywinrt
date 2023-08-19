@@ -12,7 +12,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Text
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Automation_Text",
+           "_winrt_windows_ui_xaml_automation_text",
            module_doc,
            0,
            nullptr,
@@ -23,7 +23,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Text
 
 } // py::cpp::Windows::UI::Xaml::Automation::Text
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation_Text(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_text(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Automation::Text;
 

@@ -353,7 +353,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyType_Spec type_spec_IPwmControllerProvider =
     {
-        "_winrt_Windows_Devices_Pwm_Provider.IPwmControllerProvider",
+        "_winrt_windows_devices_pwm_provider.IPwmControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -458,7 +458,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyType_Spec type_spec_IPwmProvider =
     {
-        "_winrt_Windows_Devices_Pwm_Provider.IPwmProvider",
+        "_winrt_windows_devices_pwm_provider.IPwmProvider",
         sizeof(py::wrapper::Windows::Devices::Pwm::Provider::IPwmProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -471,7 +471,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Pwm_Provider",
+           "_winrt_windows_devices_pwm_provider",
            module_doc,
            0,
            nullptr,
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
 } // py::cpp::Windows::Devices::Pwm::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Pwm_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm_provider(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Pwm::Provider;
 

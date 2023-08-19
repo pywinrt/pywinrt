@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Globalization.DateTimeFormatting")
+from . import _winrt_windows_globalization_datetimeformatting
 
 try:
     import winrt.windows.foundation
@@ -51,4 +50,4 @@ class YearFormat(enum.IntEnum):
     ABBREVIATED = 2
     FULL = 3
 
-DateTimeFormatter = _ns_module.DateTimeFormatter
+DateTimeFormatter = _winrt_windows_globalization_datetimeformatting.DateTimeFormatter

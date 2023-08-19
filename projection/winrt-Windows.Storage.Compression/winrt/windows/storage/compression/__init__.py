@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Storage.Compression")
+from . import _winrt_windows_storage_compression
 
 try:
     import winrt.windows.foundation
@@ -24,5 +23,5 @@ class CompressAlgorithm(enum.IntEnum):
     XPRESS_HUFF = 4
     LZMS = 5
 
-Compressor = _ns_module.Compressor
-Decompressor = _ns_module.Decompressor
+Compressor = _winrt_windows_storage_compression.Compressor
+Decompressor = _winrt_windows_storage_compression.Decompressor

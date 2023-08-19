@@ -201,7 +201,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyType_Spec type_spec_DnssdRegistrationResult =
     {
-        "_winrt_Windows_Networking_ServiceDiscovery_Dnssd.DnssdRegistrationResult",
+        "_winrt_windows_networking_servicediscovery_dnssd.DnssdRegistrationResult",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -713,7 +713,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyType_Spec type_spec_DnssdServiceInstance =
     {
-        "_winrt_Windows_Networking_ServiceDiscovery_Dnssd.DnssdServiceInstance",
+        "_winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstance",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1061,7 +1061,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyType_Spec type_spec_DnssdServiceInstanceCollection =
     {
-        "_winrt_Windows_Networking_ServiceDiscovery_Dnssd.DnssdServiceInstanceCollection",
+        "_winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstanceCollection",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1353,7 +1353,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyType_Spec type_spec_DnssdServiceWatcher =
     {
-        "_winrt_Windows_Networking_ServiceDiscovery_Dnssd.DnssdServiceWatcher",
+        "_winrt_windows_networking_servicediscovery_dnssd.DnssdServiceWatcher",
         sizeof(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1366,7 +1366,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Networking_ServiceDiscovery_Dnssd",
+           "_winrt_windows_networking_servicediscovery_dnssd",
            module_doc,
            0,
            nullptr,
@@ -1377,7 +1377,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
 } // py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Networking_ServiceDiscovery_Dnssd(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_networking_servicediscovery_dnssd(void) noexcept
 {
     using namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd;
 

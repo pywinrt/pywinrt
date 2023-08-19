@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSource =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSource",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSource",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1231,7 +1231,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceAdvancedSettings =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceAdvancedSettings",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceAdvancedSettings",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1366,7 +1366,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceCorrelatedTimes =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceCorrelatedTimes",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCorrelatedTimes",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1521,7 +1521,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceCreationResult =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceCreationResult",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCreationResult",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1836,7 +1836,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1956,7 +1956,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDiagnostics =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDiagnostics",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnostics",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2091,7 +2091,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2366,7 +2366,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2661,7 +2661,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadFailedEventArgs =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadFailedEventArgs",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2767,7 +2767,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedDeferral =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadRequestedDeferral",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedDeferral",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3052,7 +3052,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3463,7 +3463,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadResult =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadResult",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadResult",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3618,7 +3618,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourceDownloadStatistics =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourceDownloadStatistics",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadStatistics",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3753,7 +3753,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyType_Spec type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Streaming_Adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs",
+        "_winrt_windows_media_streaming_adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3766,7 +3766,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Streaming_Adaptive",
+           "_winrt_windows_media_streaming_adaptive",
            module_doc,
            0,
            nullptr,
@@ -3777,7 +3777,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
 } // py::cpp::Windows::Media::Streaming::Adaptive
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Streaming_Adaptive(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_streaming_adaptive(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Streaming::Adaptive;
 

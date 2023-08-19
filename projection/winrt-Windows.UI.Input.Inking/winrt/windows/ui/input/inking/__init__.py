@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Input.Inking")
+from . import _winrt_windows_ui_input_inking
 
 try:
     import winrt.windows.foundation
@@ -95,31 +94,31 @@ class PenTipShape(enum.IntEnum):
     CIRCLE = 0
     RECTANGLE = 1
 
-InkDrawingAttributes = _ns_module.InkDrawingAttributes
-InkDrawingAttributesPencilProperties = _ns_module.InkDrawingAttributesPencilProperties
-InkInputConfiguration = _ns_module.InkInputConfiguration
-InkInputProcessingConfiguration = _ns_module.InkInputProcessingConfiguration
-InkManager = _ns_module.InkManager
-InkModelerAttributes = _ns_module.InkModelerAttributes
-InkPoint = _ns_module.InkPoint
-InkPresenter = _ns_module.InkPresenter
-InkPresenterProtractor = _ns_module.InkPresenterProtractor
-InkPresenterRuler = _ns_module.InkPresenterRuler
-InkRecognitionResult = _ns_module.InkRecognitionResult
-InkRecognizer = _ns_module.InkRecognizer
-InkRecognizerContainer = _ns_module.InkRecognizerContainer
-InkStroke = _ns_module.InkStroke
-InkStrokeBuilder = _ns_module.InkStrokeBuilder
-InkStrokeContainer = _ns_module.InkStrokeContainer
-InkStrokeInput = _ns_module.InkStrokeInput
-InkStrokeRenderingSegment = _ns_module.InkStrokeRenderingSegment
-InkStrokesCollectedEventArgs = _ns_module.InkStrokesCollectedEventArgs
-InkStrokesErasedEventArgs = _ns_module.InkStrokesErasedEventArgs
-InkSynchronizer = _ns_module.InkSynchronizer
-InkUnprocessedInput = _ns_module.InkUnprocessedInput
-PenAndInkSettings = _ns_module.PenAndInkSettings
-IInkPointFactory = _ns_module.IInkPointFactory
-IInkPresenterRulerFactory = _ns_module.IInkPresenterRulerFactory
-IInkPresenterStencil = _ns_module.IInkPresenterStencil
-IInkRecognizerContainer = _ns_module.IInkRecognizerContainer
-IInkStrokeContainer = _ns_module.IInkStrokeContainer
+InkDrawingAttributes = _winrt_windows_ui_input_inking.InkDrawingAttributes
+InkDrawingAttributesPencilProperties = _winrt_windows_ui_input_inking.InkDrawingAttributesPencilProperties
+InkInputConfiguration = _winrt_windows_ui_input_inking.InkInputConfiguration
+InkInputProcessingConfiguration = _winrt_windows_ui_input_inking.InkInputProcessingConfiguration
+InkManager = _winrt_windows_ui_input_inking.InkManager
+InkModelerAttributes = _winrt_windows_ui_input_inking.InkModelerAttributes
+InkPoint = _winrt_windows_ui_input_inking.InkPoint
+InkPresenter = _winrt_windows_ui_input_inking.InkPresenter
+InkPresenterProtractor = _winrt_windows_ui_input_inking.InkPresenterProtractor
+InkPresenterRuler = _winrt_windows_ui_input_inking.InkPresenterRuler
+InkRecognitionResult = _winrt_windows_ui_input_inking.InkRecognitionResult
+InkRecognizer = _winrt_windows_ui_input_inking.InkRecognizer
+InkRecognizerContainer = _winrt_windows_ui_input_inking.InkRecognizerContainer
+InkStroke = _winrt_windows_ui_input_inking.InkStroke
+InkStrokeBuilder = _winrt_windows_ui_input_inking.InkStrokeBuilder
+InkStrokeContainer = _winrt_windows_ui_input_inking.InkStrokeContainer
+InkStrokeInput = _winrt_windows_ui_input_inking.InkStrokeInput
+InkStrokeRenderingSegment = _winrt_windows_ui_input_inking.InkStrokeRenderingSegment
+InkStrokesCollectedEventArgs = _winrt_windows_ui_input_inking.InkStrokesCollectedEventArgs
+InkStrokesErasedEventArgs = _winrt_windows_ui_input_inking.InkStrokesErasedEventArgs
+InkSynchronizer = _winrt_windows_ui_input_inking.InkSynchronizer
+InkUnprocessedInput = _winrt_windows_ui_input_inking.InkUnprocessedInput
+PenAndInkSettings = _winrt_windows_ui_input_inking.PenAndInkSettings
+IInkPointFactory = _winrt_windows_ui_input_inking.IInkPointFactory
+IInkPresenterRulerFactory = _winrt_windows_ui_input_inking.IInkPresenterRulerFactory
+IInkPresenterStencil = _winrt_windows_ui_input_inking.IInkPresenterStencil
+IInkRecognizerContainer = _winrt_windows_ui_input_inking.IInkRecognizerContainer
+IInkStrokeContainer = _winrt_windows_ui_input_inking.IInkStrokeContainer

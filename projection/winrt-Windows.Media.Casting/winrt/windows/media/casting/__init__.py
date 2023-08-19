@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Casting")
+from . import _winrt_windows_media_casting
 
 try:
     import winrt.windows.devices.enumeration
@@ -53,10 +52,10 @@ class CastingPlaybackTypes(enum.IntFlag):
     VIDEO = 0x2
     PICTURE = 0x4
 
-CastingConnection = _ns_module.CastingConnection
-CastingConnectionErrorOccurredEventArgs = _ns_module.CastingConnectionErrorOccurredEventArgs
-CastingDevice = _ns_module.CastingDevice
-CastingDevicePicker = _ns_module.CastingDevicePicker
-CastingDevicePickerFilter = _ns_module.CastingDevicePickerFilter
-CastingDeviceSelectedEventArgs = _ns_module.CastingDeviceSelectedEventArgs
-CastingSource = _ns_module.CastingSource
+CastingConnection = _winrt_windows_media_casting.CastingConnection
+CastingConnectionErrorOccurredEventArgs = _winrt_windows_media_casting.CastingConnectionErrorOccurredEventArgs
+CastingDevice = _winrt_windows_media_casting.CastingDevice
+CastingDevicePicker = _winrt_windows_media_casting.CastingDevicePicker
+CastingDevicePickerFilter = _winrt_windows_media_casting.CastingDevicePickerFilter
+CastingDeviceSelectedEventArgs = _winrt_windows_media_casting.CastingDeviceSelectedEventArgs
+CastingSource = _winrt_windows_media_casting.CastingSource

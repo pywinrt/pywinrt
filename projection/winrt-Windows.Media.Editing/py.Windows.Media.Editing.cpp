@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_BackgroundAudioTrack =
     {
-        "_winrt_Windows_Media_Editing.BackgroundAudioTrack",
+        "_winrt_windows_media_editing.BackgroundAudioTrack",
         sizeof(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -575,7 +575,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_EmbeddedAudioTrack =
     {
-        "_winrt_Windows_Media_Editing.EmbeddedAudioTrack",
+        "_winrt_windows_media_editing.EmbeddedAudioTrack",
         sizeof(py::wrapper::Windows::Media::Editing::EmbeddedAudioTrack),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1193,7 +1193,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaClip =
     {
-        "_winrt_Windows_Media_Editing.MediaClip",
+        "_winrt_windows_media_editing.MediaClip",
         sizeof(py::wrapper::Windows::Media::Editing::MediaClip),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1743,7 +1743,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaComposition =
     {
-        "_winrt_Windows_Media_Editing.MediaComposition",
+        "_winrt_windows_media_editing.MediaComposition",
         sizeof(py::wrapper::Windows::Media::Editing::MediaComposition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2102,7 +2102,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaOverlay =
     {
-        "_winrt_Windows_Media_Editing.MediaOverlay",
+        "_winrt_windows_media_editing.MediaOverlay",
         sizeof(py::wrapper::Windows::Media::Editing::MediaOverlay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyType_Spec type_spec_MediaOverlayLayer =
     {
-        "_winrt_Windows_Media_Editing.MediaOverlayLayer",
+        "_winrt_windows_media_editing.MediaOverlayLayer",
         sizeof(py::wrapper::Windows::Media::Editing::MediaOverlayLayer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2298,7 +2298,7 @@ namespace py::cpp::Windows::Media::Editing
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Editing",
+           "_winrt_windows_media_editing",
            module_doc,
            0,
            nullptr,
@@ -2309,7 +2309,7 @@ namespace py::cpp::Windows::Media::Editing
 
 } // py::cpp::Windows::Media::Editing
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Editing(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_editing(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Editing;
 

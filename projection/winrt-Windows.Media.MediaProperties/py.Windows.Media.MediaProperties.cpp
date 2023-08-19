@@ -737,7 +737,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_AudioEncodingProperties =
     {
-        "_winrt_Windows_Media_MediaProperties.AudioEncodingProperties",
+        "_winrt_windows_media_mediaproperties.AudioEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -953,7 +953,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_ContainerEncodingProperties =
     {
-        "_winrt_Windows_Media_MediaProperties.ContainerEncodingProperties",
+        "_winrt_windows_media_mediaproperties.ContainerEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1177,7 +1177,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_H264ProfileIds =
     {
-        "_winrt_Windows_Media_MediaProperties.H264ProfileIds",
+        "_winrt_windows_media_mediaproperties.H264ProfileIds",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_H264ProfileIds_Meta =
     {
-        "_winrt_Windows_Media_MediaProperties.H264ProfileIds_Meta",
+        "_winrt_windows_media_mediaproperties.H264ProfileIds_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1701,7 +1701,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_ImageEncodingProperties =
     {
-        "_winrt_Windows_Media_MediaProperties.ImageEncodingProperties",
+        "_winrt_windows_media_mediaproperties.ImageEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2516,7 +2516,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_MediaEncodingProfile =
     {
-        "_winrt_Windows_Media_MediaProperties.MediaEncodingProfile",
+        "_winrt_windows_media_mediaproperties.MediaEncodingProfile",
         sizeof(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3538,7 +3538,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_MediaEncodingSubtypes =
     {
-        "_winrt_Windows_Media_MediaProperties.MediaEncodingSubtypes",
+        "_winrt_windows_media_mediaproperties.MediaEncodingSubtypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3610,7 +3610,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_MediaEncodingSubtypes_Meta =
     {
-        "_winrt_Windows_Media_MediaProperties.MediaEncodingSubtypes_Meta",
+        "_winrt_windows_media_mediaproperties.MediaEncodingSubtypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4040,7 +4040,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_MediaPropertySet =
     {
-        "_winrt_Windows_Media_MediaProperties.MediaPropertySet",
+        "_winrt_windows_media_mediaproperties.MediaPropertySet",
         sizeof(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4211,7 +4211,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_MediaRatio =
     {
-        "_winrt_Windows_Media_MediaProperties.MediaRatio",
+        "_winrt_windows_media_mediaproperties.MediaRatio",
         sizeof(py::wrapper::Windows::Media::MediaProperties::MediaRatio),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4340,7 +4340,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_Mpeg2ProfileIds =
     {
-        "_winrt_Windows_Media_MediaProperties.Mpeg2ProfileIds",
+        "_winrt_windows_media_mediaproperties.Mpeg2ProfileIds",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4365,7 +4365,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_Mpeg2ProfileIds_Meta =
     {
-        "_winrt_Windows_Media_MediaProperties.Mpeg2ProfileIds_Meta",
+        "_winrt_windows_media_mediaproperties.Mpeg2ProfileIds_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4777,7 +4777,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_TimedMetadataEncodingProperties =
     {
-        "_winrt_Windows_Media_MediaProperties.TimedMetadataEncodingProperties",
+        "_winrt_windows_media_mediaproperties.TimedMetadataEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5461,7 +5461,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_VideoEncodingProperties =
     {
-        "_winrt_Windows_Media_MediaProperties.VideoEncodingProperties",
+        "_winrt_windows_media_mediaproperties.VideoEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5624,7 +5624,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyType_Spec type_spec_IMediaEncodingProperties =
     {
-        "_winrt_Windows_Media_MediaProperties.IMediaEncodingProperties",
+        "_winrt_windows_media_mediaproperties.IMediaEncodingProperties",
         sizeof(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5637,7 +5637,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_MediaProperties",
+           "_winrt_windows_media_mediaproperties",
            module_doc,
            0,
            nullptr,
@@ -5648,7 +5648,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
 } // py::cpp::Windows::Media::MediaProperties
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_MediaProperties(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_mediaproperties(void) noexcept
 {
     using namespace py::cpp::Windows::Media::MediaProperties;
 

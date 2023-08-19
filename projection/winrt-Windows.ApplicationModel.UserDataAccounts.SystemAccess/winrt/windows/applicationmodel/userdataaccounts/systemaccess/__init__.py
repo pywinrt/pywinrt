@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.UserDataAccounts.SystemAccess")
+from . import _winrt_windows_applicationmodel_userdataaccounts_systemaccess
 
 try:
     import winrt.windows.foundation
@@ -55,5 +54,5 @@ class DeviceAccountSyncScheduleKind(enum.IntEnum):
     DAILY = 5
     AS_ITEMS_ARRIVE = 6
 
-DeviceAccountConfiguration = _ns_module.DeviceAccountConfiguration
-UserDataAccountSystemAccessManager = _ns_module.UserDataAccountSystemAccessManager
+DeviceAccountConfiguration = _winrt_windows_applicationmodel_userdataaccounts_systemaccess.DeviceAccountConfiguration
+UserDataAccountSystemAccessManager = _winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Foundation")
+from . import _winrt_windows_foundation
 
 try:
     import winrt.windows.foundation.collections
@@ -60,30 +59,30 @@ class PropertyType(enum.IntEnum):
     RECT_ARRAY = 1043
     OTHER_TYPE_ARRAY = 1044
 
-EventRegistrationToken = _ns_module.EventRegistrationToken
-HResult = _ns_module.HResult
-Point = _ns_module.Point
-Rect = _ns_module.Rect
-Size = _ns_module.Size
-Deferral = _ns_module.Deferral
-GuidHelper = _ns_module.GuidHelper
-MemoryBuffer = _ns_module.MemoryBuffer
-PropertyValue = _ns_module.PropertyValue
-Uri = _ns_module.Uri
-WwwFormUrlDecoder = _ns_module.WwwFormUrlDecoder
+EventRegistrationToken = _winrt_windows_foundation.EventRegistrationToken
+HResult = _winrt_windows_foundation.HResult
+Point = _winrt_windows_foundation.Point
+Rect = _winrt_windows_foundation.Rect
+Size = _winrt_windows_foundation.Size
+Deferral = _winrt_windows_foundation.Deferral
+GuidHelper = _winrt_windows_foundation.GuidHelper
+MemoryBuffer = _winrt_windows_foundation.MemoryBuffer
+PropertyValue = _winrt_windows_foundation.PropertyValue
+Uri = _winrt_windows_foundation.Uri
+WwwFormUrlDecoder = _winrt_windows_foundation.WwwFormUrlDecoder
 winrt.system._mixin_sequence(WwwFormUrlDecoder)
-WwwFormUrlDecoderEntry = _ns_module.WwwFormUrlDecoderEntry
-IAsyncAction = _ns_module.IAsyncAction
-IAsyncActionWithProgress = _ns_module.IAsyncActionWithProgress
-IAsyncInfo = _ns_module.IAsyncInfo
-IAsyncOperationWithProgress = _ns_module.IAsyncOperationWithProgress
-IAsyncOperation = _ns_module.IAsyncOperation
-IClosable = _ns_module.IClosable
-IGetActivationFactory = _ns_module.IGetActivationFactory
-IMemoryBuffer = _ns_module.IMemoryBuffer
-IMemoryBufferReference = _ns_module.IMemoryBufferReference
-IPropertyValue = _ns_module.IPropertyValue
-IReferenceArray = _ns_module.IReferenceArray
-IReference = _ns_module.IReference
-IStringable = _ns_module.IStringable
-IWwwFormUrlDecoderEntry = _ns_module.IWwwFormUrlDecoderEntry
+WwwFormUrlDecoderEntry = _winrt_windows_foundation.WwwFormUrlDecoderEntry
+IAsyncAction = _winrt_windows_foundation.IAsyncAction
+IAsyncActionWithProgress = _winrt_windows_foundation.IAsyncActionWithProgress
+IAsyncInfo = _winrt_windows_foundation.IAsyncInfo
+IAsyncOperationWithProgress = _winrt_windows_foundation.IAsyncOperationWithProgress
+IAsyncOperation = _winrt_windows_foundation.IAsyncOperation
+IClosable = _winrt_windows_foundation.IClosable
+IGetActivationFactory = _winrt_windows_foundation.IGetActivationFactory
+IMemoryBuffer = _winrt_windows_foundation.IMemoryBuffer
+IMemoryBufferReference = _winrt_windows_foundation.IMemoryBufferReference
+IPropertyValue = _winrt_windows_foundation.IPropertyValue
+IReferenceArray = _winrt_windows_foundation.IReferenceArray
+IReference = _winrt_windows_foundation.IReference
+IStringable = _winrt_windows_foundation.IStringable
+IWwwFormUrlDecoderEntry = _winrt_windows_foundation.IWwwFormUrlDecoderEntry

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.WiFiDirect")
+from . import _winrt_windows_devices_wifidirect
 
 try:
     import winrt.windows.devices.enumeration
@@ -69,13 +68,13 @@ class WiFiDirectPairingProcedure(enum.IntEnum):
     GROUP_OWNER_NEGOTIATION = 0
     INVITATION = 1
 
-WiFiDirectAdvertisement = _ns_module.WiFiDirectAdvertisement
-WiFiDirectAdvertisementPublisher = _ns_module.WiFiDirectAdvertisementPublisher
-WiFiDirectAdvertisementPublisherStatusChangedEventArgs = _ns_module.WiFiDirectAdvertisementPublisherStatusChangedEventArgs
-WiFiDirectConnectionListener = _ns_module.WiFiDirectConnectionListener
-WiFiDirectConnectionParameters = _ns_module.WiFiDirectConnectionParameters
-WiFiDirectConnectionRequest = _ns_module.WiFiDirectConnectionRequest
-WiFiDirectConnectionRequestedEventArgs = _ns_module.WiFiDirectConnectionRequestedEventArgs
-WiFiDirectDevice = _ns_module.WiFiDirectDevice
-WiFiDirectInformationElement = _ns_module.WiFiDirectInformationElement
-WiFiDirectLegacySettings = _ns_module.WiFiDirectLegacySettings
+WiFiDirectAdvertisement = _winrt_windows_devices_wifidirect.WiFiDirectAdvertisement
+WiFiDirectAdvertisementPublisher = _winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisher
+WiFiDirectAdvertisementPublisherStatusChangedEventArgs = _winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs
+WiFiDirectConnectionListener = _winrt_windows_devices_wifidirect.WiFiDirectConnectionListener
+WiFiDirectConnectionParameters = _winrt_windows_devices_wifidirect.WiFiDirectConnectionParameters
+WiFiDirectConnectionRequest = _winrt_windows_devices_wifidirect.WiFiDirectConnectionRequest
+WiFiDirectConnectionRequestedEventArgs = _winrt_windows_devices_wifidirect.WiFiDirectConnectionRequestedEventArgs
+WiFiDirectDevice = _winrt_windows_devices_wifidirect.WiFiDirectDevice
+WiFiDirectInformationElement = _winrt_windows_devices_wifidirect.WiFiDirectInformationElement
+WiFiDirectLegacySettings = _winrt_windows_devices_wifidirect.WiFiDirectLegacySettings

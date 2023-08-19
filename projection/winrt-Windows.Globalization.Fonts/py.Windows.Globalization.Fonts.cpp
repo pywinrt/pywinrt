@@ -174,7 +174,7 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyType_Spec type_spec_LanguageFont =
     {
-        "_winrt_Windows_Globalization_Fonts.LanguageFont",
+        "_winrt_windows_globalization_fonts.LanguageFont",
         sizeof(py::wrapper::Windows::Globalization::Fonts::LanguageFont),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -494,7 +494,7 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyType_Spec type_spec_LanguageFontGroup =
     {
-        "_winrt_Windows_Globalization_Fonts.LanguageFontGroup",
+        "_winrt_windows_globalization_fonts.LanguageFontGroup",
         sizeof(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -507,7 +507,7 @@ namespace py::cpp::Windows::Globalization::Fonts
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Globalization_Fonts",
+           "_winrt_windows_globalization_fonts",
            module_doc,
            0,
            nullptr,
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::Globalization::Fonts
 
 } // py::cpp::Windows::Globalization::Fonts
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_Fonts(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_globalization_fonts(void) noexcept
 {
     using namespace py::cpp::Windows::Globalization::Fonts;
 

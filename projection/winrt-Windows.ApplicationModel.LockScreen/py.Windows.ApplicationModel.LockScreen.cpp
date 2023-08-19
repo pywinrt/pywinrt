@@ -180,7 +180,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockApplicationHost =
     {
-        "_winrt_Windows_ApplicationModel_LockScreen.LockApplicationHost",
+        "_winrt_windows_applicationmodel_lockscreen.LockApplicationHost",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenBadge =
     {
-        "_winrt_Windows_ApplicationModel_LockScreen.LockScreenBadge",
+        "_winrt_windows_applicationmodel_lockscreen.LockScreenBadge",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -701,7 +701,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenInfo =
     {
-        "_winrt_Windows_ApplicationModel_LockScreen.LockScreenInfo",
+        "_winrt_windows_applicationmodel_lockscreen.LockScreenInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -807,7 +807,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenUnlockingDeferral =
     {
-        "_winrt_Windows_ApplicationModel_LockScreen.LockScreenUnlockingDeferral",
+        "_winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -932,7 +932,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyType_Spec type_spec_LockScreenUnlockingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_LockScreen.LockScreenUnlockingEventArgs",
+        "_winrt_windows_applicationmodel_lockscreen.LockScreenUnlockingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -945,7 +945,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_LockScreen",
+           "_winrt_windows_applicationmodel_lockscreen",
            module_doc,
            0,
            nullptr,
@@ -956,7 +956,7 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
 
 } // py::cpp::Windows::ApplicationModel::LockScreen
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_LockScreen(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_lockscreen(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::LockScreen;
 

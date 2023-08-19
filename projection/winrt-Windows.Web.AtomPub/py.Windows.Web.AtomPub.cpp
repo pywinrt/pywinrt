@@ -777,7 +777,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_AtomPubClient =
     {
-        "_winrt_Windows_Web_AtomPub.AtomPubClient",
+        "_winrt_windows_web_atompub.AtomPubClient",
         sizeof(py::wrapper::Windows::Web::AtomPub::AtomPubClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1244,7 +1244,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_ResourceCollection =
     {
-        "_winrt_Windows_Web_AtomPub.ResourceCollection",
+        "_winrt_windows_web_atompub.ResourceCollection",
         sizeof(py::wrapper::Windows::Web::AtomPub::ResourceCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1651,7 +1651,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_ServiceDocument =
     {
-        "_winrt_Windows_Web_AtomPub.ServiceDocument",
+        "_winrt_windows_web_atompub.ServiceDocument",
         sizeof(py::wrapper::Windows::Web::AtomPub::ServiceDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2078,7 +2078,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyType_Spec type_spec_Workspace =
     {
-        "_winrt_Windows_Web_AtomPub.Workspace",
+        "_winrt_windows_web_atompub.Workspace",
         sizeof(py::wrapper::Windows::Web::AtomPub::Workspace),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2091,7 +2091,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Web_AtomPub",
+           "_winrt_windows_web_atompub",
            module_doc,
            0,
            nullptr,
@@ -2102,7 +2102,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
 } // py::cpp::Windows::Web::AtomPub
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Web_AtomPub(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_web_atompub(void) noexcept
 {
     using namespace py::cpp::Windows::Web::AtomPub;
 

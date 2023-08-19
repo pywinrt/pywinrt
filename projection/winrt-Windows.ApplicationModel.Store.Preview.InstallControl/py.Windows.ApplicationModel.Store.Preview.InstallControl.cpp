@@ -758,7 +758,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_AppInstallItem =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.AppInstallItem",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2209,7 +2209,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_AppInstallManager =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.AppInstallManager",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2304,7 +2304,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_AppInstallManagerItemEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.AppInstallManagerItemEventArgs",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManagerItemEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3122,7 +3122,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_AppInstallOptions =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.AppInstallOptions",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3357,7 +3357,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_AppInstallStatus =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.AppInstallStatus",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallStatus",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3599,7 +3599,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_AppUpdateOptions =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.AppUpdateOptions",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.AppUpdateOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3694,7 +3694,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyType_Spec type_spec_GetEntitlementResult =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl.GetEntitlementResult",
+        "_winrt_windows_applicationmodel_store_preview_installcontrol.GetEntitlementResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3707,7 +3707,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Store_Preview_InstallControl",
+           "_winrt_windows_applicationmodel_store_preview_installcontrol",
            module_doc,
            0,
            nullptr,
@@ -3718,7 +3718,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
 } // py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview_InstallControl(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontrol(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
 

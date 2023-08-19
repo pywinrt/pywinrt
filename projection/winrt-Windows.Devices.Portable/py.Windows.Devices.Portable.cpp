@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyType_Spec type_spec_ServiceDevice =
     {
-        "_winrt_Windows_Devices_Portable.ServiceDevice",
+        "_winrt_windows_devices_portable.ServiceDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -193,7 +193,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyType_Spec type_spec_StorageDevice =
     {
-        "_winrt_Windows_Devices_Portable.StorageDevice",
+        "_winrt_windows_devices_portable.StorageDevice",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -206,7 +206,7 @@ namespace py::cpp::Windows::Devices::Portable
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Portable",
+           "_winrt_windows_devices_portable",
            module_doc,
            0,
            nullptr,
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::Devices::Portable
 
 } // py::cpp::Windows::Devices::Portable
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Portable(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_portable(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Portable;
 

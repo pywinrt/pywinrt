@@ -94,7 +94,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 
     static PyType_Spec type_spec_DesktopWindowTarget =
     {
-        "_winrt_Windows_UI_Composition_Desktop.DesktopWindowTarget",
+        "_winrt_windows_ui_composition_desktop.DesktopWindowTarget",
         sizeof(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -107,7 +107,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Composition_Desktop",
+           "_winrt_windows_ui_composition_desktop",
            module_doc,
            0,
            nullptr,
@@ -118,7 +118,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 
 } // py::cpp::Windows::UI::Composition::Desktop
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition_Desktop(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_desktop(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Composition::Desktop;
 

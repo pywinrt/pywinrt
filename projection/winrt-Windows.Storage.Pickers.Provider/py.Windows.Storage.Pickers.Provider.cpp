@@ -402,7 +402,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_FileOpenPickerUI =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.FileOpenPickerUI",
+        "_winrt_windows_storage_pickers_provider.FileOpenPickerUI",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -497,7 +497,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_FileRemovedEventArgs =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.FileRemovedEventArgs",
+        "_winrt_windows_storage_pickers_provider.FileRemovedEventArgs",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::FileRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -802,7 +802,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_FileSavePickerUI =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.FileSavePickerUI",
+        "_winrt_windows_storage_pickers_provider.FileSavePickerUI",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_PickerClosingDeferral =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.PickerClosingDeferral",
+        "_winrt_windows_storage_pickers_provider.PickerClosingDeferral",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1023,7 +1023,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_PickerClosingEventArgs =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.PickerClosingEventArgs",
+        "_winrt_windows_storage_pickers_provider.PickerClosingEventArgs",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1148,7 +1148,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_PickerClosingOperation =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.PickerClosingOperation",
+        "_winrt_windows_storage_pickers_provider.PickerClosingOperation",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_TargetFileRequest =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.TargetFileRequest",
+        "_winrt_windows_storage_pickers_provider.TargetFileRequest",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1407,7 +1407,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_TargetFileRequestDeferral =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.TargetFileRequestDeferral",
+        "_winrt_windows_storage_pickers_provider.TargetFileRequestDeferral",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1502,7 +1502,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyType_Spec type_spec_TargetFileRequestedEventArgs =
     {
-        "_winrt_Windows_Storage_Pickers_Provider.TargetFileRequestedEventArgs",
+        "_winrt_windows_storage_pickers_provider.TargetFileRequestedEventArgs",
         sizeof(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1515,7 +1515,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Storage_Pickers_Provider",
+           "_winrt_windows_storage_pickers_provider",
            module_doc,
            0,
            nullptr,
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
 } // py::cpp::Windows::Storage::Pickers::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Pickers_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers_provider(void) noexcept
 {
     using namespace py::cpp::Windows::Storage::Pickers::Provider;
 

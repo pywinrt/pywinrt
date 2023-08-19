@@ -114,7 +114,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveBlobGetResult =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveBlobGetResult",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveBlobGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveBlobInfo =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveBlobInfo",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfo",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -344,7 +344,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveBlobInfoGetResult =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveBlobInfoGetResult",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfoGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -500,7 +500,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveBlobInfoQuery =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveBlobInfoQuery",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfoQuery",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -779,7 +779,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveContainer =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveContainer",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveContainer",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -954,7 +954,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveContainerInfo =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveContainerInfo",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfo",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1069,7 +1069,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveContainerInfoGetResult =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveContainerInfoGetResult",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfoGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1225,7 +1225,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveContainerInfoQuery =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveContainerInfoQuery",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfoQuery",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1320,7 +1320,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveOperationResult =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveOperationResult",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveOperationResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1645,7 +1645,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveProvider =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveProvider",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveProvider",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1760,7 +1760,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyType_Spec type_spec_GameSaveProviderGetResult =
     {
-        "_winrt_Windows_Gaming_XboxLive_Storage.GameSaveProviderGetResult",
+        "_winrt_windows_gaming_xboxlive_storage.GameSaveProviderGetResult",
         sizeof(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1773,7 +1773,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Gaming_XboxLive_Storage",
+           "_winrt_windows_gaming_xboxlive_storage",
            module_doc,
            0,
            nullptr,
@@ -1784,7 +1784,7 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
 
 } // py::cpp::Windows::Gaming::XboxLive::Storage
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_XboxLive_Storage(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_gaming_xboxlive_storage(void) noexcept
 {
     using namespace py::cpp::Windows::Gaming::XboxLive::Storage;
 

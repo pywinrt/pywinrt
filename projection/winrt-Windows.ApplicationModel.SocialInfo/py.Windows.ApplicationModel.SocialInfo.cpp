@@ -321,7 +321,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyType_Spec type_spec_SocialFeedChildItem =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo.SocialFeedChildItem",
+        "_winrt_windows_applicationmodel_socialinfo.SocialFeedChildItem",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -540,7 +540,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyType_Spec type_spec_SocialFeedContent =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo.SocialFeedContent",
+        "_winrt_windows_applicationmodel_socialinfo.SocialFeedContent",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1102,7 +1102,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyType_Spec type_spec_SocialFeedItem =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo.SocialFeedItem",
+        "_winrt_windows_applicationmodel_socialinfo.SocialFeedItem",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1412,7 +1412,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyType_Spec type_spec_SocialFeedSharedItem =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo.SocialFeedSharedItem",
+        "_winrt_windows_applicationmodel_socialinfo.SocialFeedSharedItem",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1686,7 +1686,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyType_Spec type_spec_SocialItemThumbnail =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo.SocialItemThumbnail",
+        "_winrt_windows_applicationmodel_socialinfo.SocialItemThumbnail",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyType_Spec type_spec_SocialUserInfo =
     {
-        "_winrt_Windows_ApplicationModel_SocialInfo.SocialUserInfo",
+        "_winrt_windows_applicationmodel_socialinfo.SocialUserInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1966,7 +1966,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_SocialInfo",
+           "_winrt_windows_applicationmodel_socialinfo",
            module_doc,
            0,
            nullptr,
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
 
 } // py::cpp::Windows::ApplicationModel::SocialInfo
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_SocialInfo(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::SocialInfo;
 

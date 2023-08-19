@@ -693,7 +693,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyType_Spec type_spec_DateTimeFormatter =
     {
-        "_winrt_Windows_Globalization_DateTimeFormatting.DateTimeFormatter",
+        "_winrt_windows_globalization_datetimeformatting.DateTimeFormatter",
         sizeof(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -717,7 +717,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyType_Spec type_spec_DateTimeFormatter_Meta =
     {
-        "_winrt_Windows_Globalization_DateTimeFormatting.DateTimeFormatter_Meta",
+        "_winrt_windows_globalization_datetimeformatting.DateTimeFormatter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Globalization_DateTimeFormatting",
+           "_winrt_windows_globalization_datetimeformatting",
            module_doc,
            0,
            nullptr,
@@ -741,7 +741,7 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
 
 } // py::cpp::Windows::Globalization::DateTimeFormatting
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_DateTimeFormatting(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_globalization_datetimeformatting(void) noexcept
 {
     using namespace py::cpp::Windows::Globalization::DateTimeFormatting;
 

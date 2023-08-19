@@ -3,14 +3,13 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Diagnostics.Telemetry")
+from . import _winrt_windows_system_diagnostics_telemetry
 
 class PlatformTelemetryRegistrationStatus(enum.IntEnum):
     SUCCESS = 0
     SETTINGS_OUT_OF_RANGE = 1
     UNKNOWN_FAILURE = 2
 
-PlatformTelemetryClient = _ns_module.PlatformTelemetryClient
-PlatformTelemetryRegistrationResult = _ns_module.PlatformTelemetryRegistrationResult
-PlatformTelemetryRegistrationSettings = _ns_module.PlatformTelemetryRegistrationSettings
+PlatformTelemetryClient = _winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient
+PlatformTelemetryRegistrationResult = _winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationResult
+PlatformTelemetryRegistrationSettings = _winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationSettings

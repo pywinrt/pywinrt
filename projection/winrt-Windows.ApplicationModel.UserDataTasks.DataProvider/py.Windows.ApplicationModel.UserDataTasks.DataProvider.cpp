@@ -330,7 +330,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskDataProviderConnection =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskDataProviderConnection",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskDataProviderTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskDataProviderTriggerDetails",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -602,7 +602,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequest =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListCompleteTaskRequest",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListCompleteTaskRequestEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListCompleteTaskRequestEventArgs",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -904,7 +904,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequest =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListCreateOrUpdateTaskRequest",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCreateOrUpdateTaskRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1029,7 +1029,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListCreateOrUpdateTaskRequestEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCreateOrUpdateTaskRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1204,7 +1204,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequest =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListDeleteTaskRequest",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListDeleteTaskRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListDeleteTaskRequestEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListDeleteTaskRequestEventArgs",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListDeleteTaskRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1504,7 +1504,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequest =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListSkipOccurrenceRequest",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSkipOccurrenceRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1629,7 +1629,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListSkipOccurrenceRequestEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListSkipOccurrenceRequestEventArgs",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSkipOccurrenceRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1784,7 +1784,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequest =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListSyncManagerSyncRequest",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSyncManagerSyncRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1909,7 +1909,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyType_Spec type_spec_UserDataTaskListSyncManagerSyncRequestEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider.UserDataTaskListSyncManagerSyncRequestEventArgs",
+        "_winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListSyncManagerSyncRequestEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1922,7 +1922,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_UserDataTasks_DataProvider",
+           "_winrt_windows_applicationmodel_userdatatasks_dataprovider",
            module_doc,
            0,
            nullptr,
@@ -1933,7 +1933,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
 } // py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataTasks_DataProvider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks_dataprovider(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider;
 

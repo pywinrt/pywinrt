@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 
     static PyType_Spec type_spec_SoundLevelBroker =
     {
-        "_winrt_Windows_Media_Core_Preview.SoundLevelBroker",
+        "_winrt_windows_media_core_preview.SoundLevelBroker",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -118,7 +118,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 
     static PyType_Spec type_spec_SoundLevelBroker_Meta =
     {
-        "_winrt_Windows_Media_Core_Preview.SoundLevelBroker_Meta",
+        "_winrt_windows_media_core_preview.SoundLevelBroker_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -131,7 +131,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Core_Preview",
+           "_winrt_windows_media_core_preview",
            module_doc,
            0,
            nullptr,
@@ -142,7 +142,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 
 } // py::cpp::Windows::Media::Core::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Core_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_core_preview(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Core::Preview;
 

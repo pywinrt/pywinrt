@@ -146,7 +146,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_AppDisplayInfo =
     {
-        "_winrt_Windows_ApplicationModel.AppDisplayInfo",
+        "_winrt_windows_applicationmodel.AppDisplayInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::AppDisplayInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -445,7 +445,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_AppInfo =
     {
-        "_winrt_Windows_ApplicationModel.AppInfo",
+        "_winrt_windows_applicationmodel.AppInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::AppInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -466,7 +466,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_AppInfo_Meta =
     {
-        "_winrt_Windows_ApplicationModel.AppInfo_Meta",
+        "_winrt_windows_applicationmodel.AppInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -861,7 +861,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_AppInstallerInfo =
     {
-        "_winrt_Windows_ApplicationModel.AppInstallerInfo",
+        "_winrt_windows_applicationmodel.AppInstallerInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::AppInstallerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1149,7 +1149,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_AppInstance =
     {
-        "_winrt_Windows_ApplicationModel.AppInstance",
+        "_winrt_windows_applicationmodel.AppInstance",
         sizeof(py::wrapper::Windows::ApplicationModel::AppInstance),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1170,7 +1170,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_AppInstance_Meta =
     {
-        "_winrt_Windows_ApplicationModel.AppInstance_Meta",
+        "_winrt_windows_applicationmodel.AppInstance_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1235,7 +1235,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_CameraApplicationManager =
     {
-        "_winrt_Windows_ApplicationModel.CameraApplicationManager",
+        "_winrt_windows_applicationmodel.CameraApplicationManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1307,7 +1307,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_DesignMode =
     {
-        "_winrt_Windows_ApplicationModel.DesignMode",
+        "_winrt_windows_applicationmodel.DesignMode",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1329,7 +1329,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_DesignMode_Meta =
     {
-        "_winrt_Windows_ApplicationModel.DesignMode_Meta",
+        "_winrt_windows_applicationmodel.DesignMode_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1434,7 +1434,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_EnteredBackgroundEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.EnteredBackgroundEventArgs",
+        "_winrt_windows_applicationmodel.EnteredBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::EnteredBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1774,7 +1774,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_FindRelatedPackagesOptions =
     {
-        "_winrt_Windows_ApplicationModel.FindRelatedPackagesOptions",
+        "_winrt_windows_applicationmodel.FindRelatedPackagesOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1889,7 +1889,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_FullTrustProcessLaunchResult =
     {
-        "_winrt_Windows_ApplicationModel.FullTrustProcessLaunchResult",
+        "_winrt_windows_applicationmodel.FullTrustProcessLaunchResult",
         sizeof(py::wrapper::Windows::ApplicationModel::FullTrustProcessLaunchResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2091,7 +2091,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_FullTrustProcessLauncher =
     {
-        "_winrt_Windows_ApplicationModel.FullTrustProcessLauncher",
+        "_winrt_windows_applicationmodel.FullTrustProcessLauncher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2196,7 +2196,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_LeavingBackgroundEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.LeavingBackgroundEventArgs",
+        "_winrt_windows_applicationmodel.LeavingBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::LeavingBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2331,7 +2331,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_LimitedAccessFeatureRequestResult =
     {
-        "_winrt_Windows_ApplicationModel.LimitedAccessFeatureRequestResult",
+        "_winrt_windows_applicationmodel.LimitedAccessFeatureRequestResult",
         sizeof(py::wrapper::Windows::ApplicationModel::LimitedAccessFeatureRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2399,7 +2399,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_LimitedAccessFeatures =
     {
-        "_winrt_Windows_ApplicationModel.LimitedAccessFeatures",
+        "_winrt_windows_applicationmodel.LimitedAccessFeatures",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3497,7 +3497,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_Package =
     {
-        "_winrt_Windows_ApplicationModel.Package",
+        "_winrt_windows_applicationmodel.Package",
         sizeof(py::wrapper::Windows::ApplicationModel::Package),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3518,7 +3518,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_Package_Meta =
     {
-        "_winrt_Windows_ApplicationModel.Package_Meta",
+        "_winrt_windows_applicationmodel.Package_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4085,7 +4085,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageCatalog =
     {
-        "_winrt_Windows_ApplicationModel.PackageCatalog",
+        "_winrt_windows_applicationmodel.PackageCatalog",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageCatalog),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4200,7 +4200,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageCatalogAddOptionalPackageResult =
     {
-        "_winrt_Windows_ApplicationModel.PackageCatalogAddOptionalPackageResult",
+        "_winrt_windows_applicationmodel.PackageCatalogAddOptionalPackageResult",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4335,7 +4335,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageCatalogAddResourcePackageResult =
     {
-        "_winrt_Windows_ApplicationModel.PackageCatalogAddResourcePackageResult",
+        "_winrt_windows_applicationmodel.PackageCatalogAddResourcePackageResult",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4450,7 +4450,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageCatalogRemoveOptionalPackagesResult =
     {
-        "_winrt_Windows_ApplicationModel.PackageCatalogRemoveOptionalPackagesResult",
+        "_winrt_windows_applicationmodel.PackageCatalogRemoveOptionalPackagesResult",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4565,7 +4565,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageCatalogRemoveResourcePackagesResult =
     {
-        "_winrt_Windows_ApplicationModel.PackageCatalogRemoveResourcePackagesResult",
+        "_winrt_windows_applicationmodel.PackageCatalogRemoveResourcePackagesResult",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4739,7 +4739,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageContentGroup =
     {
-        "_winrt_Windows_ApplicationModel.PackageContentGroup",
+        "_winrt_windows_applicationmodel.PackageContentGroup",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageContentGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4760,7 +4760,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageContentGroup_Meta =
     {
-        "_winrt_Windows_ApplicationModel.PackageContentGroup_Meta",
+        "_winrt_windows_applicationmodel.PackageContentGroup_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4975,7 +4975,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageContentGroupStagingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.PackageContentGroupStagingEventArgs",
+        "_winrt_windows_applicationmodel.PackageContentGroupStagingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageContentGroupStagingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5250,7 +5250,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageId =
     {
-        "_winrt_Windows_ApplicationModel.PackageId",
+        "_winrt_windows_applicationmodel.PackageId",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5425,7 +5425,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageInstallingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.PackageInstallingEventArgs",
+        "_winrt_windows_applicationmodel.PackageInstallingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageInstallingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5600,7 +5600,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageStagingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.PackageStagingEventArgs",
+        "_winrt_windows_applicationmodel.PackageStagingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageStagingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5945,7 +5945,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageStatus =
     {
-        "_winrt_Windows_ApplicationModel.PackageStatus",
+        "_winrt_windows_applicationmodel.PackageStatus",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6040,7 +6040,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageStatusChangedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.PackageStatusChangedEventArgs",
+        "_winrt_windows_applicationmodel.PackageStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6215,7 +6215,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageUninstallingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.PackageUninstallingEventArgs",
+        "_winrt_windows_applicationmodel.PackageUninstallingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageUninstallingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6330,7 +6330,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageUpdateAvailabilityResult =
     {
-        "_winrt_Windows_ApplicationModel.PackageUpdateAvailabilityResult",
+        "_winrt_windows_applicationmodel.PackageUpdateAvailabilityResult",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageUpdateAvailabilityResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6525,7 +6525,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageUpdatingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.PackageUpdatingEventArgs",
+        "_winrt_windows_applicationmodel.PackageUpdatingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageUpdatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6763,7 +6763,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_StartupTask =
     {
-        "_winrt_Windows_ApplicationModel.StartupTask",
+        "_winrt_windows_applicationmodel.StartupTask",
         sizeof(py::wrapper::Windows::ApplicationModel::StartupTask),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6869,7 +6869,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_SuspendingDeferral =
     {
-        "_winrt_Windows_ApplicationModel.SuspendingDeferral",
+        "_winrt_windows_applicationmodel.SuspendingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::SuspendingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6964,7 +6964,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_SuspendingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.SuspendingEventArgs",
+        "_winrt_windows_applicationmodel.SuspendingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::SuspendingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7089,7 +7089,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_SuspendingOperation =
     {
-        "_winrt_Windows_ApplicationModel.SuspendingOperation",
+        "_winrt_windows_applicationmodel.SuspendingOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::SuspendingOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7194,7 +7194,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_IEnteredBackgroundEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.IEnteredBackgroundEventArgs",
+        "_winrt_windows_applicationmodel.IEnteredBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::IEnteredBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7299,7 +7299,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_ILeavingBackgroundEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.ILeavingBackgroundEventArgs",
+        "_winrt_windows_applicationmodel.ILeavingBackgroundEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ILeavingBackgroundEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7406,7 +7406,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_IPackageCatalogStatics2 =
     {
-        "_winrt_Windows_ApplicationModel.IPackageCatalogStatics2",
+        "_winrt_windows_applicationmodel.IPackageCatalogStatics2",
         sizeof(py::wrapper::Windows::ApplicationModel::IPackageCatalogStatics2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7512,7 +7512,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_ISuspendingDeferral =
     {
-        "_winrt_Windows_ApplicationModel.ISuspendingDeferral",
+        "_winrt_windows_applicationmodel.ISuspendingDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7607,7 +7607,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_ISuspendingEventArgs =
     {
-        "_winrt_Windows_ApplicationModel.ISuspendingEventArgs",
+        "_winrt_windows_applicationmodel.ISuspendingEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7732,7 +7732,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_ISuspendingOperation =
     {
-        "_winrt_Windows_ApplicationModel.ISuspendingOperation",
+        "_winrt_windows_applicationmodel.ISuspendingOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::ISuspendingOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7832,7 +7832,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageInstallProgress =
     {
-        "_winrt_Windows_ApplicationModel.PackageInstallProgress",
+        "_winrt_windows_applicationmodel.PackageInstallProgress",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageInstallProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8037,7 +8037,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyType_Spec type_spec_PackageVersion =
     {
-        "_winrt_Windows_ApplicationModel.PackageVersion",
+        "_winrt_windows_applicationmodel.PackageVersion",
         sizeof(py::wrapper::Windows::ApplicationModel::PackageVersion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8050,7 +8050,7 @@ namespace py::cpp::Windows::ApplicationModel
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel",
+           "_winrt_windows_applicationmodel",
            module_doc,
            0,
            nullptr,
@@ -8061,7 +8061,7 @@ namespace py::cpp::Windows::ApplicationModel
 
 } // py::cpp::Windows::ApplicationModel
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel;
 

@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyType_Spec type_spec_GameControllerProviderInfo =
     {
-        "_winrt_Windows_Gaming_Input_Preview.GameControllerProviderInfo",
+        "_winrt_windows_gaming_input_preview.GameControllerProviderInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -110,7 +110,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Gaming_Input_Preview",
+           "_winrt_windows_gaming_input_preview",
            module_doc,
            0,
            nullptr,
@@ -121,7 +121,7 @@ namespace py::cpp::Windows::Gaming::Input::Preview
 
 } // py::cpp::Windows::Gaming::Input::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_preview(void) noexcept
 {
     using namespace py::cpp::Windows::Gaming::Input::Preview;
 

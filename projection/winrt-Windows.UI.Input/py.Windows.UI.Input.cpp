@@ -127,7 +127,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_AttachableInputObject =
     {
-        "_winrt_Windows_UI_Input.AttachableInputObject",
+        "_winrt_windows_ui_input.AttachableInputObject",
         sizeof(py::wrapper::Windows::UI::Input::AttachableInputObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_CrossSlidingEventArgs =
     {
-        "_winrt_Windows_UI_Input.CrossSlidingEventArgs",
+        "_winrt_windows_ui_input.CrossSlidingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -437,7 +437,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_DraggingEventArgs =
     {
-        "_winrt_Windows_UI_Input.DraggingEventArgs",
+        "_winrt_windows_ui_input.DraggingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::DraggingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_EdgeGesture =
     {
-        "_winrt_Windows_UI_Input.EdgeGesture",
+        "_winrt_windows_ui_input.EdgeGesture",
         sizeof(py::wrapper::Windows::UI::Input::EdgeGesture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_EdgeGestureEventArgs =
     {
-        "_winrt_Windows_UI_Input.EdgeGestureEventArgs",
+        "_winrt_windows_ui_input.EdgeGestureEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::EdgeGestureEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2667,7 +2667,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_GestureRecognizer =
     {
-        "_winrt_Windows_UI_Input.GestureRecognizer",
+        "_winrt_windows_ui_input.GestureRecognizer",
         sizeof(py::wrapper::Windows::UI::Input::GestureRecognizer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2842,7 +2842,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_HoldingEventArgs =
     {
-        "_winrt_Windows_UI_Input.HoldingEventArgs",
+        "_winrt_windows_ui_input.HoldingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::HoldingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2982,7 +2982,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_InputActivationListener =
     {
-        "_winrt_Windows_UI_Input.InputActivationListener",
+        "_winrt_windows_ui_input.InputActivationListener",
         sizeof(py::wrapper::Windows::UI::Input::InputActivationListener),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3077,7 +3077,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_InputActivationListenerActivationChangedEventArgs =
     {
-        "_winrt_Windows_UI_Input.InputActivationListenerActivationChangedEventArgs",
+        "_winrt_windows_ui_input.InputActivationListenerActivationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3320,7 +3320,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_KeyboardDeliveryInterceptor =
     {
-        "_winrt_Windows_UI_Input.KeyboardDeliveryInterceptor",
+        "_winrt_windows_ui_input.KeyboardDeliveryInterceptor",
         sizeof(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3515,7 +3515,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_ManipulationCompletedEventArgs =
     {
-        "_winrt_Windows_UI_Input.ManipulationCompletedEventArgs",
+        "_winrt_windows_ui_input.ManipulationCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3710,7 +3710,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_ManipulationInertiaStartingEventArgs =
     {
-        "_winrt_Windows_UI_Input.ManipulationInertiaStartingEventArgs",
+        "_winrt_windows_ui_input.ManipulationInertiaStartingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3865,7 +3865,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_ManipulationStartedEventArgs =
     {
-        "_winrt_Windows_UI_Input.ManipulationStartedEventArgs",
+        "_winrt_windows_ui_input.ManipulationStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4080,7 +4080,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_ManipulationUpdatedEventArgs =
     {
-        "_winrt_Windows_UI_Input.ManipulationUpdatedEventArgs",
+        "_winrt_windows_ui_input.ManipulationUpdatedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4347,7 +4347,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_MouseWheelParameters =
     {
-        "_winrt_Windows_UI_Input.MouseWheelParameters",
+        "_winrt_windows_ui_input.MouseWheelParameters",
         sizeof(py::wrapper::Windows::UI::Input::MouseWheelParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4688,7 +4688,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_PointerPoint =
     {
-        "_winrt_Windows_UI_Input.PointerPoint",
+        "_winrt_windows_ui_input.PointerPoint",
         sizeof(py::wrapper::Windows::UI::Input::PointerPoint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5289,7 +5289,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_PointerPointProperties =
     {
-        "_winrt_Windows_UI_Input.PointerPointProperties",
+        "_winrt_windows_ui_input.PointerPointProperties",
         sizeof(py::wrapper::Windows::UI::Input::PointerPointProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5490,7 +5490,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_PointerVisualizationSettings =
     {
-        "_winrt_Windows_UI_Input.PointerVisualizationSettings",
+        "_winrt_windows_ui_input.PointerVisualizationSettings",
         sizeof(py::wrapper::Windows::UI::Input::PointerVisualizationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6191,7 +6191,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialController =
     {
-        "_winrt_Windows_UI_Input.RadialController",
+        "_winrt_windows_ui_input.RadialController",
         sizeof(py::wrapper::Windows::UI::Input::RadialController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6306,7 +6306,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerButtonClickedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerButtonClickedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6421,7 +6421,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerButtonHoldingEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerButtonHoldingEventArgs",
+        "_winrt_windows_ui_input.RadialControllerButtonHoldingEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonHoldingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6536,7 +6536,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerButtonPressedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerButtonPressedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerButtonPressedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6651,7 +6651,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerButtonReleasedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerButtonReleasedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerButtonReleasedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerButtonReleasedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7030,7 +7030,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerConfiguration =
     {
-        "_winrt_Windows_UI_Input.RadialControllerConfiguration",
+        "_winrt_windows_ui_input.RadialControllerConfiguration",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7052,7 +7052,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerConfiguration_Meta =
     {
-        "_winrt_Windows_UI_Input.RadialControllerConfiguration_Meta",
+        "_winrt_windows_ui_input.RadialControllerConfiguration_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7187,7 +7187,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerControlAcquiredEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerControlAcquiredEventArgs",
+        "_winrt_windows_ui_input.RadialControllerControlAcquiredEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerControlAcquiredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7423,7 +7423,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerMenu =
     {
-        "_winrt_Windows_UI_Input.RadialControllerMenu",
+        "_winrt_windows_ui_input.RadialControllerMenu",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerMenu),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7734,7 +7734,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerMenuItem =
     {
-        "_winrt_Windows_UI_Input.RadialControllerMenuItem",
+        "_winrt_windows_ui_input.RadialControllerMenuItem",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerMenuItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7889,7 +7889,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerRotationChangedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerRotationChangedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerRotationChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8004,7 +8004,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerScreenContact =
     {
-        "_winrt_Windows_UI_Input.RadialControllerScreenContact",
+        "_winrt_windows_ui_input.RadialControllerScreenContact",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContact),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8139,7 +8139,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerScreenContactContinuedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerScreenContactContinuedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerScreenContactContinuedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8254,7 +8254,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerScreenContactEndedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerScreenContactEndedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerScreenContactEndedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8389,7 +8389,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RadialControllerScreenContactStartedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RadialControllerScreenContactStartedEventArgs",
+        "_winrt_windows_ui_input.RadialControllerScreenContactStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8524,7 +8524,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_RightTappedEventArgs =
     {
-        "_winrt_Windows_UI_Input.RightTappedEventArgs",
+        "_winrt_windows_ui_input.RightTappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::RightTappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8811,7 +8811,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_SystemButtonEventController =
     {
-        "_winrt_Windows_UI_Input.SystemButtonEventController",
+        "_winrt_windows_ui_input.SystemButtonEventController",
         sizeof(py::wrapper::Windows::UI::Input::SystemButtonEventController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8954,7 +8954,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_SystemFunctionButtonEventArgs =
     {
-        "_winrt_Windows_UI_Input.SystemFunctionButtonEventArgs",
+        "_winrt_windows_ui_input.SystemFunctionButtonEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::SystemFunctionButtonEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9117,7 +9117,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_SystemFunctionLockChangedEventArgs =
     {
-        "_winrt_Windows_UI_Input.SystemFunctionLockChangedEventArgs",
+        "_winrt_windows_ui_input.SystemFunctionLockChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9280,7 +9280,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_SystemFunctionLockIndicatorChangedEventArgs =
     {
-        "_winrt_Windows_UI_Input.SystemFunctionLockIndicatorChangedEventArgs",
+        "_winrt_windows_ui_input.SystemFunctionLockIndicatorChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9435,7 +9435,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_TappedEventArgs =
     {
-        "_winrt_Windows_UI_Input.TappedEventArgs",
+        "_winrt_windows_ui_input.TappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Input::TappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9607,7 +9607,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_IPointerPointTransform =
     {
-        "_winrt_Windows_UI_Input.IPointerPointTransform",
+        "_winrt_windows_ui_input.IPointerPointTransform",
         sizeof(py::wrapper::Windows::UI::Input::IPointerPointTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9812,7 +9812,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_CrossSlideThresholds =
     {
-        "_winrt_Windows_UI_Input.CrossSlideThresholds",
+        "_winrt_windows_ui_input.CrossSlideThresholds",
         sizeof(py::wrapper::Windows::UI::Input::CrossSlideThresholds),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10017,7 +10017,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_ManipulationDelta =
     {
-        "_winrt_Windows_UI_Input.ManipulationDelta",
+        "_winrt_windows_ui_input.ManipulationDelta",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationDelta),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10187,7 +10187,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyType_Spec type_spec_ManipulationVelocities =
     {
-        "_winrt_Windows_UI_Input.ManipulationVelocities",
+        "_winrt_windows_ui_input.ManipulationVelocities",
         sizeof(py::wrapper::Windows::UI::Input::ManipulationVelocities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10200,7 +10200,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Input",
+           "_winrt_windows_ui_input",
            module_doc,
            0,
            nullptr,
@@ -10211,7 +10211,7 @@ namespace py::cpp::Windows::UI::Input
 
 } // py::cpp::Windows::UI::Input
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Input;
 

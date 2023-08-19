@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyType_Spec type_spec_Battery =
     {
-        "_winrt_Windows_Phone_Devices_Power.Battery",
+        "_winrt_windows_phone_devices_power.Battery",
         sizeof(py::wrapper::Windows::Phone::Devices::Power::Battery),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -202,7 +202,7 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_Devices_Power",
+           "_winrt_windows_phone_devices_power",
            module_doc,
            0,
            nullptr,
@@ -213,7 +213,7 @@ namespace py::cpp::Windows::Phone::Devices::Power
 
 } // py::cpp::Windows::Phone::Devices::Power
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Devices_Power(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_power(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::Devices::Power;
 

@@ -232,7 +232,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_JumpList =
     {
-        "_winrt_Windows_UI_StartScreen.JumpList",
+        "_winrt_windows_ui_startscreen.JumpList",
         sizeof(py::wrapper::Windows::UI::StartScreen::JumpList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -622,7 +622,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_JumpListItem =
     {
-        "_winrt_Windows_UI_StartScreen.JumpListItem",
+        "_winrt_windows_ui_startscreen.JumpListItem",
         sizeof(py::wrapper::Windows::UI::StartScreen::JumpListItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1880,7 +1880,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_SecondaryTile =
     {
-        "_winrt_Windows_UI_StartScreen.SecondaryTile",
+        "_winrt_windows_ui_startscreen.SecondaryTile",
         sizeof(py::wrapper::Windows::UI::StartScreen::SecondaryTile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2551,7 +2551,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_SecondaryTileVisualElements =
     {
-        "_winrt_Windows_UI_StartScreen.SecondaryTileVisualElements",
+        "_winrt_windows_ui_startscreen.SecondaryTileVisualElements",
         sizeof(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2868,7 +2868,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_StartScreenManager =
     {
-        "_winrt_Windows_UI_StartScreen.StartScreenManager",
+        "_winrt_windows_ui_startscreen.StartScreenManager",
         sizeof(py::wrapper::Windows::UI::StartScreen::StartScreenManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3087,7 +3087,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_TileMixedRealityModel =
     {
-        "_winrt_Windows_UI_StartScreen.TileMixedRealityModel",
+        "_winrt_windows_ui_startscreen.TileMixedRealityModel",
         sizeof(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3252,7 +3252,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_VisualElementsRequest =
     {
-        "_winrt_Windows_UI_StartScreen.VisualElementsRequest",
+        "_winrt_windows_ui_startscreen.VisualElementsRequest",
         sizeof(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3358,7 +3358,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_VisualElementsRequestDeferral =
     {
-        "_winrt_Windows_UI_StartScreen.VisualElementsRequestDeferral",
+        "_winrt_windows_ui_startscreen.VisualElementsRequestDeferral",
         sizeof(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3453,7 +3453,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyType_Spec type_spec_VisualElementsRequestedEventArgs =
     {
-        "_winrt_Windows_UI_StartScreen.VisualElementsRequestedEventArgs",
+        "_winrt_windows_ui_startscreen.VisualElementsRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3466,7 +3466,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_StartScreen",
+           "_winrt_windows_ui_startscreen",
            module_doc,
            0,
            nullptr,
@@ -3477,7 +3477,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
 } // py::cpp::Windows::UI::StartScreen
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_StartScreen(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
 {
     using namespace py::cpp::Windows::UI::StartScreen;
 

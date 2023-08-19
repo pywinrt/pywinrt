@@ -94,7 +94,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
     static PyType_Spec type_spec_ExtendedExecutionForegroundRevokedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_ExtendedExecution_Foreground.ExtendedExecutionForegroundRevokedEventArgs",
+        "_winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundRevokedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
     static PyType_Spec type_spec_ExtendedExecutionForegroundSession =
     {
-        "_winrt_Windows_ApplicationModel_ExtendedExecution_Foreground.ExtendedExecutionForegroundSession",
+        "_winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -429,7 +429,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_ExtendedExecution_Foreground",
+           "_winrt_windows_applicationmodel_extendedexecution_foreground",
            module_doc,
            0,
            nullptr,
@@ -440,7 +440,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
 } // py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ExtendedExecution_Foreground(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution_foreground(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground;
 

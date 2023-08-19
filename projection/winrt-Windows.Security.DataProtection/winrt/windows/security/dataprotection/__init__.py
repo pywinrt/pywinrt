@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.DataProtection")
+from . import _winrt_windows_security_dataprotection
 
 try:
     import winrt.windows.foundation
@@ -40,7 +39,7 @@ class UserDataStorageItemProtectionStatus(enum.IntEnum):
     NOT_PROTECTABLE = 1
     DATA_UNAVAILABLE = 2
 
-UserDataAvailabilityStateChangedEventArgs = _ns_module.UserDataAvailabilityStateChangedEventArgs
-UserDataBufferUnprotectResult = _ns_module.UserDataBufferUnprotectResult
-UserDataProtectionManager = _ns_module.UserDataProtectionManager
-UserDataStorageItemProtectionInfo = _ns_module.UserDataStorageItemProtectionInfo
+UserDataAvailabilityStateChangedEventArgs = _winrt_windows_security_dataprotection.UserDataAvailabilityStateChangedEventArgs
+UserDataBufferUnprotectResult = _winrt_windows_security_dataprotection.UserDataBufferUnprotectResult
+UserDataProtectionManager = _winrt_windows_security_dataprotection.UserDataProtectionManager
+UserDataStorageItemProtectionInfo = _winrt_windows_security_dataprotection.UserDataStorageItemProtectionInfo

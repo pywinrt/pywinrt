@@ -555,7 +555,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_Clipboard =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.Clipboard",
+        "_winrt_windows_applicationmodel_datatransfer.Clipboard",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -789,7 +789,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ClipboardContentOptions =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ClipboardContentOptions",
+        "_winrt_windows_applicationmodel_datatransfer.ClipboardContentOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -864,7 +864,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ClipboardHistoryChangedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ClipboardHistoryChangedEventArgs",
+        "_winrt_windows_applicationmodel_datatransfer.ClipboardHistoryChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -999,7 +999,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ClipboardHistoryItem =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ClipboardHistoryItem",
+        "_winrt_windows_applicationmodel_datatransfer.ClipboardHistoryItem",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1114,7 +1114,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ClipboardHistoryItemsResult =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ClipboardHistoryItemsResult",
+        "_winrt_windows_applicationmodel_datatransfer.ClipboardHistoryItemsResult",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1864,7 +1864,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataPackage =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataPackage",
+        "_winrt_windows_applicationmodel_datatransfer.DataPackage",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2867,7 +2867,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataPackagePropertySet =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataPackagePropertySet",
+        "_winrt_windows_applicationmodel_datatransfer.DataPackagePropertySet",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3445,7 +3445,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataPackagePropertySetView =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataPackagePropertySetView",
+        "_winrt_windows_applicationmodel_datatransfer.DataPackagePropertySetView",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4080,7 +4080,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataPackageView =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataPackageView",
+        "_winrt_windows_applicationmodel_datatransfer.DataPackageView",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4186,7 +4186,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataProviderDeferral =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataProviderDeferral",
+        "_winrt_windows_applicationmodel_datatransfer.DataProviderDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4364,7 +4364,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataProviderRequest =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataProviderRequest",
+        "_winrt_windows_applicationmodel_datatransfer.DataProviderRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4570,7 +4570,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataRequest =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataRequest",
+        "_winrt_windows_applicationmodel_datatransfer.DataRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4676,7 +4676,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataRequestDeferral =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataRequestDeferral",
+        "_winrt_windows_applicationmodel_datatransfer.DataRequestDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4771,7 +4771,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataRequestedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataRequestedEventArgs",
+        "_winrt_windows_applicationmodel_datatransfer.DataRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5093,7 +5093,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_DataTransferManager =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.DataTransferManager",
+        "_winrt_windows_applicationmodel_datatransfer.DataTransferManager",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::DataTransferManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5191,7 +5191,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_HtmlFormatHelper =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.HtmlFormatHelper",
+        "_winrt_windows_applicationmodel_datatransfer.HtmlFormatHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5306,7 +5306,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_OperationCompletedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.OperationCompletedEventArgs",
+        "_winrt_windows_applicationmodel_datatransfer.OperationCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5401,7 +5401,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ShareCompletedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ShareCompletedEventArgs",
+        "_winrt_windows_applicationmodel_datatransfer.ShareCompletedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5612,7 +5612,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ShareProvider =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ShareProvider",
+        "_winrt_windows_applicationmodel_datatransfer.ShareProvider",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5758,7 +5758,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ShareProviderOperation =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ShareProviderOperation",
+        "_winrt_windows_applicationmodel_datatransfer.ShareProviderOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProviderOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5903,7 +5903,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ShareProvidersRequestedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ShareProvidersRequestedEventArgs",
+        "_winrt_windows_applicationmodel_datatransfer.ShareProvidersRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6018,7 +6018,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ShareTargetInfo =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ShareTargetInfo",
+        "_winrt_windows_applicationmodel_datatransfer.ShareTargetInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTargetInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6212,7 +6212,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_ShareUIOptions =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.ShareUIOptions",
+        "_winrt_windows_applicationmodel_datatransfer.ShareUIOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareUIOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6343,7 +6343,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_SharedStorageAccessManager =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.SharedStorageAccessManager",
+        "_winrt_windows_applicationmodel_datatransfer.SharedStorageAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6548,7 +6548,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_StandardDataFormats =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.StandardDataFormats",
+        "_winrt_windows_applicationmodel_datatransfer.StandardDataFormats",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6577,7 +6577,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_StandardDataFormats_Meta =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.StandardDataFormats_Meta",
+        "_winrt_windows_applicationmodel_datatransfer.StandardDataFormats_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6672,7 +6672,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyType_Spec type_spec_TargetApplicationChosenEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_DataTransfer.TargetApplicationChosenEventArgs",
+        "_winrt_windows_applicationmodel_datatransfer.TargetApplicationChosenEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6685,7 +6685,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_DataTransfer",
+           "_winrt_windows_applicationmodel_datatransfer",
            module_doc,
            0,
            nullptr,
@@ -6696,7 +6696,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
 
 } // py::cpp::Windows::ApplicationModel::DataTransfer
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_DataTransfer(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::DataTransfer;
 

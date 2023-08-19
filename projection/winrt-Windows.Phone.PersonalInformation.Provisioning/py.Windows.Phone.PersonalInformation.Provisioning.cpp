@@ -133,7 +133,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyType_Spec type_spec_ContactPartnerProvisioningManager =
     {
-        "_winrt_Windows_Phone_PersonalInformation_Provisioning.ContactPartnerProvisioningManager",
+        "_winrt_windows_phone_personalinformation_provisioning.ContactPartnerProvisioningManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -242,7 +242,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyType_Spec type_spec_MessagePartnerProvisioningManager =
     {
-        "_winrt_Windows_Phone_PersonalInformation_Provisioning.MessagePartnerProvisioningManager",
+        "_winrt_windows_phone_personalinformation_provisioning.MessagePartnerProvisioningManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_PersonalInformation_Provisioning",
+           "_winrt_windows_phone_personalinformation_provisioning",
            module_doc,
            0,
            nullptr,
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
 } // py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_PersonalInformation_Provisioning(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation_provisioning(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning;
 

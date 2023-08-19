@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.DataTransfer.DragDrop.Core")
+from . import _winrt_windows_applicationmodel_datatransfer_dragdrop_core
 
 try:
     import winrt.windows.applicationmodel.datatransfer
@@ -30,9 +29,9 @@ class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0
     DEFERRED = 0x1
 
-CoreDragDropManager = _ns_module.CoreDragDropManager
-CoreDragInfo = _ns_module.CoreDragInfo
-CoreDragOperation = _ns_module.CoreDragOperation
-CoreDragUIOverride = _ns_module.CoreDragUIOverride
-CoreDropOperationTargetRequestedEventArgs = _ns_module.CoreDropOperationTargetRequestedEventArgs
-ICoreDropOperationTarget = _ns_module.ICoreDropOperationTarget
+CoreDragDropManager = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager
+CoreDragInfo = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo
+CoreDragOperation = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragOperation
+CoreDragUIOverride = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride
+CoreDropOperationTargetRequestedEventArgs = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDropOperationTargetRequestedEventArgs
+ICoreDropOperationTarget = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.ICoreDropOperationTarget

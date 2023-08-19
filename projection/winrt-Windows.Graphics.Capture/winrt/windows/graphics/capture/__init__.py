@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Graphics.Capture")
+from . import _winrt_windows_graphics_capture
 
 try:
     import winrt.windows.foundation
@@ -50,9 +49,9 @@ class GraphicsCaptureAccessKind(enum.IntEnum):
     BORDERLESS = 0
     PROGRAMMATIC = 1
 
-Direct3D11CaptureFrame = _ns_module.Direct3D11CaptureFrame
-Direct3D11CaptureFramePool = _ns_module.Direct3D11CaptureFramePool
-GraphicsCaptureAccess = _ns_module.GraphicsCaptureAccess
-GraphicsCaptureItem = _ns_module.GraphicsCaptureItem
-GraphicsCapturePicker = _ns_module.GraphicsCapturePicker
-GraphicsCaptureSession = _ns_module.GraphicsCaptureSession
+Direct3D11CaptureFrame = _winrt_windows_graphics_capture.Direct3D11CaptureFrame
+Direct3D11CaptureFramePool = _winrt_windows_graphics_capture.Direct3D11CaptureFramePool
+GraphicsCaptureAccess = _winrt_windows_graphics_capture.GraphicsCaptureAccess
+GraphicsCaptureItem = _winrt_windows_graphics_capture.GraphicsCaptureItem
+GraphicsCapturePicker = _winrt_windows_graphics_capture.GraphicsCapturePicker
+GraphicsCaptureSession = _winrt_windows_graphics_capture.GraphicsCaptureSession

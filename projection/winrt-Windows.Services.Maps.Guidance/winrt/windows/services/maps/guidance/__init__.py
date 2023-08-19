@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Services.Maps.Guidance")
+from . import _winrt_windows_services_maps_guidance
 
 try:
     import winrt.windows.devices.geolocation
@@ -122,14 +121,14 @@ class GuidanceMode(enum.IntEnum):
     NAVIGATION = 2
     TRACKING = 3
 
-GuidanceAudioNotificationRequestedEventArgs = _ns_module.GuidanceAudioNotificationRequestedEventArgs
-GuidanceLaneInfo = _ns_module.GuidanceLaneInfo
-GuidanceManeuver = _ns_module.GuidanceManeuver
-GuidanceMapMatchedCoordinate = _ns_module.GuidanceMapMatchedCoordinate
-GuidanceNavigator = _ns_module.GuidanceNavigator
-GuidanceReroutedEventArgs = _ns_module.GuidanceReroutedEventArgs
-GuidanceRoadSegment = _ns_module.GuidanceRoadSegment
-GuidanceRoadSignpost = _ns_module.GuidanceRoadSignpost
-GuidanceRoute = _ns_module.GuidanceRoute
-GuidanceTelemetryCollector = _ns_module.GuidanceTelemetryCollector
-GuidanceUpdatedEventArgs = _ns_module.GuidanceUpdatedEventArgs
+GuidanceAudioNotificationRequestedEventArgs = _winrt_windows_services_maps_guidance.GuidanceAudioNotificationRequestedEventArgs
+GuidanceLaneInfo = _winrt_windows_services_maps_guidance.GuidanceLaneInfo
+GuidanceManeuver = _winrt_windows_services_maps_guidance.GuidanceManeuver
+GuidanceMapMatchedCoordinate = _winrt_windows_services_maps_guidance.GuidanceMapMatchedCoordinate
+GuidanceNavigator = _winrt_windows_services_maps_guidance.GuidanceNavigator
+GuidanceReroutedEventArgs = _winrt_windows_services_maps_guidance.GuidanceReroutedEventArgs
+GuidanceRoadSegment = _winrt_windows_services_maps_guidance.GuidanceRoadSegment
+GuidanceRoadSignpost = _winrt_windows_services_maps_guidance.GuidanceRoadSignpost
+GuidanceRoute = _winrt_windows_services_maps_guidance.GuidanceRoute
+GuidanceTelemetryCollector = _winrt_windows_services_maps_guidance.GuidanceTelemetryCollector
+GuidanceUpdatedEventArgs = _winrt_windows_services_maps_guidance.GuidanceUpdatedEventArgs

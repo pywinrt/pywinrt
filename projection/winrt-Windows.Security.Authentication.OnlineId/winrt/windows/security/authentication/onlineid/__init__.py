@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Authentication.OnlineId")
+from . import _winrt_windows_security_authentication_onlineid
 
 try:
     import winrt.windows.foundation
@@ -31,13 +30,13 @@ class OnlineIdSystemTicketStatus(enum.IntEnum):
     ERROR = 1
     SERVICE_CONNECTION_ERROR = 2
 
-OnlineIdAuthenticator = _ns_module.OnlineIdAuthenticator
-OnlineIdServiceTicket = _ns_module.OnlineIdServiceTicket
-OnlineIdServiceTicketRequest = _ns_module.OnlineIdServiceTicketRequest
-OnlineIdSystemAuthenticator = _ns_module.OnlineIdSystemAuthenticator
-OnlineIdSystemAuthenticatorForUser = _ns_module.OnlineIdSystemAuthenticatorForUser
-OnlineIdSystemIdentity = _ns_module.OnlineIdSystemIdentity
-OnlineIdSystemTicketResult = _ns_module.OnlineIdSystemTicketResult
-SignOutUserOperation = _ns_module.SignOutUserOperation
-UserAuthenticationOperation = _ns_module.UserAuthenticationOperation
-UserIdentity = _ns_module.UserIdentity
+OnlineIdAuthenticator = _winrt_windows_security_authentication_onlineid.OnlineIdAuthenticator
+OnlineIdServiceTicket = _winrt_windows_security_authentication_onlineid.OnlineIdServiceTicket
+OnlineIdServiceTicketRequest = _winrt_windows_security_authentication_onlineid.OnlineIdServiceTicketRequest
+OnlineIdSystemAuthenticator = _winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticator
+OnlineIdSystemAuthenticatorForUser = _winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticatorForUser
+OnlineIdSystemIdentity = _winrt_windows_security_authentication_onlineid.OnlineIdSystemIdentity
+OnlineIdSystemTicketResult = _winrt_windows_security_authentication_onlineid.OnlineIdSystemTicketResult
+SignOutUserOperation = _winrt_windows_security_authentication_onlineid.SignOutUserOperation
+UserAuthenticationOperation = _winrt_windows_security_authentication_onlineid.UserAuthenticationOperation
+UserIdentity = _winrt_windows_security_authentication_onlineid.UserIdentity

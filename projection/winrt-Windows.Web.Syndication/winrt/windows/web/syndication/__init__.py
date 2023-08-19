@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Web.Syndication")
+from . import _winrt_windows_web_syndication
 
 try:
     import winrt.windows.data.xml.dom
@@ -47,20 +46,20 @@ class SyndicationTextType(enum.IntEnum):
     HTML = 1
     XHTML = 2
 
-RetrievalProgress = _ns_module.RetrievalProgress
-TransferProgress = _ns_module.TransferProgress
-SyndicationAttribute = _ns_module.SyndicationAttribute
-SyndicationCategory = _ns_module.SyndicationCategory
-SyndicationClient = _ns_module.SyndicationClient
-SyndicationContent = _ns_module.SyndicationContent
-SyndicationError = _ns_module.SyndicationError
-SyndicationFeed = _ns_module.SyndicationFeed
-SyndicationGenerator = _ns_module.SyndicationGenerator
-SyndicationItem = _ns_module.SyndicationItem
-SyndicationLink = _ns_module.SyndicationLink
-SyndicationNode = _ns_module.SyndicationNode
-SyndicationPerson = _ns_module.SyndicationPerson
-SyndicationText = _ns_module.SyndicationText
-ISyndicationClient = _ns_module.ISyndicationClient
-ISyndicationNode = _ns_module.ISyndicationNode
-ISyndicationText = _ns_module.ISyndicationText
+RetrievalProgress = _winrt_windows_web_syndication.RetrievalProgress
+TransferProgress = _winrt_windows_web_syndication.TransferProgress
+SyndicationAttribute = _winrt_windows_web_syndication.SyndicationAttribute
+SyndicationCategory = _winrt_windows_web_syndication.SyndicationCategory
+SyndicationClient = _winrt_windows_web_syndication.SyndicationClient
+SyndicationContent = _winrt_windows_web_syndication.SyndicationContent
+SyndicationError = _winrt_windows_web_syndication.SyndicationError
+SyndicationFeed = _winrt_windows_web_syndication.SyndicationFeed
+SyndicationGenerator = _winrt_windows_web_syndication.SyndicationGenerator
+SyndicationItem = _winrt_windows_web_syndication.SyndicationItem
+SyndicationLink = _winrt_windows_web_syndication.SyndicationLink
+SyndicationNode = _winrt_windows_web_syndication.SyndicationNode
+SyndicationPerson = _winrt_windows_web_syndication.SyndicationPerson
+SyndicationText = _winrt_windows_web_syndication.SyndicationText
+ISyndicationClient = _winrt_windows_web_syndication.ISyndicationClient
+ISyndicationNode = _winrt_windows_web_syndication.ISyndicationNode
+ISyndicationText = _winrt_windows_web_syndication.ISyndicationText

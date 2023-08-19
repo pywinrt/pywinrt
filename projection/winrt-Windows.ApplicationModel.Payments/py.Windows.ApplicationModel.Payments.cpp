@@ -645,7 +645,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentAddress =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentAddress",
+        "_winrt_windows_applicationmodel_payments.PaymentAddress",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentCanMakePaymentResult =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentCanMakePaymentResult",
+        "_winrt_windows_applicationmodel_payments.PaymentCanMakePaymentResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1027,7 +1027,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentCurrencyAmount =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentCurrencyAmount",
+        "_winrt_windows_applicationmodel_payments.PaymentCurrencyAmount",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1348,7 +1348,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentDetails =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentDetails",
+        "_winrt_windows_applicationmodel_payments.PaymentDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1564,7 +1564,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentDetailsModifier =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentDetailsModifier",
+        "_winrt_windows_applicationmodel_payments.PaymentDetailsModifier",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1809,7 +1809,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentItem =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentItem",
+        "_winrt_windows_applicationmodel_payments.PaymentItem",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2022,7 +2022,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentMediator =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentMediator",
+        "_winrt_windows_applicationmodel_payments.PaymentMediator",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2175,7 +2175,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentMerchantInfo =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentMerchantInfo",
+        "_winrt_windows_applicationmodel_payments.PaymentMerchantInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentMerchantInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2331,7 +2331,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentMethodData =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentMethodData",
+        "_winrt_windows_applicationmodel_payments.PaymentMethodData",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentMethodData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2669,7 +2669,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentOptions =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentOptions",
+        "_winrt_windows_applicationmodel_payments.PaymentOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2924,7 +2924,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentRequest =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentRequest",
+        "_winrt_windows_applicationmodel_payments.PaymentRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3092,7 +3092,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentRequestChangedArgs =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentRequestChangedArgs",
+        "_winrt_windows_applicationmodel_payments.PaymentRequestChangedArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3352,7 +3352,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentRequestChangedResult =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentRequestChangedResult",
+        "_winrt_windows_applicationmodel_payments.PaymentRequestChangedResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3467,7 +3467,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentRequestSubmitResult =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentRequestSubmitResult",
+        "_winrt_windows_applicationmodel_payments.PaymentRequestSubmitResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3694,7 +3694,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentResponse =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentResponse",
+        "_winrt_windows_applicationmodel_payments.PaymentResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4022,7 +4022,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentShippingOption =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentShippingOption",
+        "_winrt_windows_applicationmodel_payments.PaymentShippingOption",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4178,7 +4178,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyType_Spec type_spec_PaymentToken =
     {
-        "_winrt_Windows_ApplicationModel_Payments.PaymentToken",
+        "_winrt_windows_applicationmodel_payments.PaymentToken",
         sizeof(py::wrapper::Windows::ApplicationModel::Payments::PaymentToken),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4191,7 +4191,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Payments",
+           "_winrt_windows_applicationmodel_payments",
            module_doc,
            0,
            nullptr,
@@ -4202,7 +4202,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
 } // py::cpp::Windows::ApplicationModel::Payments
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Payments(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Payments;
 

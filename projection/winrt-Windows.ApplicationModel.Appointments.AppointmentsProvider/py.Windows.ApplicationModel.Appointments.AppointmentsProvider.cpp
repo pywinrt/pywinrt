@@ -242,7 +242,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyType_Spec type_spec_AddAppointmentOperation =
     {
-        "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider.AddAppointmentOperation",
+        "_winrt_windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -371,7 +371,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs =
     {
-        "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider.AppointmentsProviderLaunchActionVerbs",
+        "_winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -396,7 +396,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyType_Spec type_spec_AppointmentsProviderLaunchActionVerbs_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider.AppointmentsProviderLaunchActionVerbs_Meta",
+        "_winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -657,7 +657,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyType_Spec type_spec_RemoveAppointmentOperation =
     {
-        "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider.RemoveAppointmentOperation",
+        "_winrt_windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -940,7 +940,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyType_Spec type_spec_ReplaceAppointmentOperation =
     {
-        "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider.ReplaceAppointmentOperation",
+        "_winrt_windows_applicationmodel_appointments_appointmentsprovider.ReplaceAppointmentOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -953,7 +953,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider",
+           "_winrt_windows_applicationmodel_appointments_appointmentsprovider",
            module_doc,
            0,
            nullptr,
@@ -964,7 +964,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
 } // py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Appointments_AppointmentsProvider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_appointmentsprovider(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider;
 

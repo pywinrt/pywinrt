@@ -134,7 +134,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyType_Spec type_spec_OemSupportInfo =
     {
-        "_winrt_Windows_System_Profile_SystemManufacturers.OemSupportInfo",
+        "_winrt_windows_system_profile_systemmanufacturers.OemSupportInfo",
         sizeof(py::wrapper::Windows::System::Profile::SystemManufacturers::OemSupportInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyType_Spec type_spec_SmbiosInformation =
     {
-        "_winrt_Windows_System_Profile_SystemManufacturers.SmbiosInformation",
+        "_winrt_windows_system_profile_systemmanufacturers.SmbiosInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -208,7 +208,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyType_Spec type_spec_SmbiosInformation_Meta =
     {
-        "_winrt_Windows_System_Profile_SystemManufacturers.SmbiosInformation_Meta",
+        "_winrt_windows_system_profile_systemmanufacturers.SmbiosInformation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -423,7 +423,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyType_Spec type_spec_SystemSupportDeviceInfo =
     {
-        "_winrt_Windows_System_Profile_SystemManufacturers.SystemSupportDeviceInfo",
+        "_winrt_windows_system_profile_systemmanufacturers.SystemSupportDeviceInfo",
         sizeof(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -514,7 +514,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyType_Spec type_spec_SystemSupportInfo =
     {
-        "_winrt_Windows_System_Profile_SystemManufacturers.SystemSupportInfo",
+        "_winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -537,7 +537,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyType_Spec type_spec_SystemSupportInfo_Meta =
     {
-        "_winrt_Windows_System_Profile_SystemManufacturers.SystemSupportInfo_Meta",
+        "_winrt_windows_system_profile_systemmanufacturers.SystemSupportInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Profile_SystemManufacturers",
+           "_winrt_windows_system_profile_systemmanufacturers",
            module_doc,
            0,
            nullptr,
@@ -561,7 +561,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
 } // py::cpp::Windows::System::Profile::SystemManufacturers
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile_SystemManufacturers(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) noexcept
 {
     using namespace py::cpp::Windows::System::Profile::SystemManufacturers;
 

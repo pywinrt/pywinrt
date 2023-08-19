@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Input.Preview.Injection")
+from . import _winrt_windows_ui_input_preview_injection
 
 try:
     import winrt.windows.foundation.collections
@@ -97,12 +96,12 @@ class InjectedInputVisualizationMode(enum.IntEnum):
     DEFAULT = 1
     INDIRECT = 2
 
-InjectedInputPoint = _ns_module.InjectedInputPoint
-InjectedInputPointerInfo = _ns_module.InjectedInputPointerInfo
-InjectedInputRectangle = _ns_module.InjectedInputRectangle
-InjectedInputGamepadInfo = _ns_module.InjectedInputGamepadInfo
-InjectedInputKeyboardInfo = _ns_module.InjectedInputKeyboardInfo
-InjectedInputMouseInfo = _ns_module.InjectedInputMouseInfo
-InjectedInputPenInfo = _ns_module.InjectedInputPenInfo
-InjectedInputTouchInfo = _ns_module.InjectedInputTouchInfo
-InputInjector = _ns_module.InputInjector
+InjectedInputPoint = _winrt_windows_ui_input_preview_injection.InjectedInputPoint
+InjectedInputPointerInfo = _winrt_windows_ui_input_preview_injection.InjectedInputPointerInfo
+InjectedInputRectangle = _winrt_windows_ui_input_preview_injection.InjectedInputRectangle
+InjectedInputGamepadInfo = _winrt_windows_ui_input_preview_injection.InjectedInputGamepadInfo
+InjectedInputKeyboardInfo = _winrt_windows_ui_input_preview_injection.InjectedInputKeyboardInfo
+InjectedInputMouseInfo = _winrt_windows_ui_input_preview_injection.InjectedInputMouseInfo
+InjectedInputPenInfo = _winrt_windows_ui_input_preview_injection.InjectedInputPenInfo
+InjectedInputTouchInfo = _winrt_windows_ui_input_preview_injection.InjectedInputTouchInfo
+InputInjector = _winrt_windows_ui_input_preview_injection.InputInjector

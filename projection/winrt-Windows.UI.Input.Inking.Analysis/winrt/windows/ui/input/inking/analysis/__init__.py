@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Input.Inking.Analysis")
+from . import _winrt_windows_ui_input_inking_analysis
 
 try:
     import winrt.windows.foundation
@@ -58,16 +57,16 @@ class InkAnalysisStrokeKind(enum.IntEnum):
     WRITING = 1
     DRAWING = 2
 
-InkAnalysisInkBullet = _ns_module.InkAnalysisInkBullet
-InkAnalysisInkDrawing = _ns_module.InkAnalysisInkDrawing
-InkAnalysisInkWord = _ns_module.InkAnalysisInkWord
-InkAnalysisLine = _ns_module.InkAnalysisLine
-InkAnalysisListItem = _ns_module.InkAnalysisListItem
-InkAnalysisNode = _ns_module.InkAnalysisNode
-InkAnalysisParagraph = _ns_module.InkAnalysisParagraph
-InkAnalysisResult = _ns_module.InkAnalysisResult
-InkAnalysisRoot = _ns_module.InkAnalysisRoot
-InkAnalysisWritingRegion = _ns_module.InkAnalysisWritingRegion
-InkAnalyzer = _ns_module.InkAnalyzer
-IInkAnalysisNode = _ns_module.IInkAnalysisNode
-IInkAnalyzerFactory = _ns_module.IInkAnalyzerFactory
+InkAnalysisInkBullet = _winrt_windows_ui_input_inking_analysis.InkAnalysisInkBullet
+InkAnalysisInkDrawing = _winrt_windows_ui_input_inking_analysis.InkAnalysisInkDrawing
+InkAnalysisInkWord = _winrt_windows_ui_input_inking_analysis.InkAnalysisInkWord
+InkAnalysisLine = _winrt_windows_ui_input_inking_analysis.InkAnalysisLine
+InkAnalysisListItem = _winrt_windows_ui_input_inking_analysis.InkAnalysisListItem
+InkAnalysisNode = _winrt_windows_ui_input_inking_analysis.InkAnalysisNode
+InkAnalysisParagraph = _winrt_windows_ui_input_inking_analysis.InkAnalysisParagraph
+InkAnalysisResult = _winrt_windows_ui_input_inking_analysis.InkAnalysisResult
+InkAnalysisRoot = _winrt_windows_ui_input_inking_analysis.InkAnalysisRoot
+InkAnalysisWritingRegion = _winrt_windows_ui_input_inking_analysis.InkAnalysisWritingRegion
+InkAnalyzer = _winrt_windows_ui_input_inking_analysis.InkAnalyzer
+IInkAnalysisNode = _winrt_windows_ui_input_inking_analysis.IInkAnalysisNode
+IInkAnalyzerFactory = _winrt_windows_ui_input_inking_analysis.IInkAnalyzerFactory

@@ -100,7 +100,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyType_Spec type_spec_NamedPolicy =
     {
-        "_winrt_Windows_Management_Policies.NamedPolicy",
+        "_winrt_windows_management_policies.NamedPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -490,7 +490,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyType_Spec type_spec_NamedPolicyData =
     {
-        "_winrt_Windows_Management_Policies.NamedPolicyData",
+        "_winrt_windows_management_policies.NamedPolicyData",
         sizeof(py::wrapper::Windows::Management::Policies::NamedPolicyData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -503,7 +503,7 @@ namespace py::cpp::Windows::Management::Policies
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Management_Policies",
+           "_winrt_windows_management_policies",
            module_doc,
            0,
            nullptr,
@@ -514,7 +514,7 @@ namespace py::cpp::Windows::Management::Policies
 
 } // py::cpp::Windows::Management::Policies
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Management_Policies(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_management_policies(void) noexcept
 {
     using namespace py::cpp::Windows::Management::Policies;
 

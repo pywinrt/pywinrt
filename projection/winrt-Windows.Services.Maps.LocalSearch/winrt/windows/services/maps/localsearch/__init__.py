@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Services.Maps.LocalSearch")
+from . import _winrt_windows_services_maps_localsearch
 
 try:
     import winrt.windows.devices.geolocation
@@ -41,10 +40,10 @@ class LocalLocationFinderStatus(enum.IntEnum):
     NETWORK_FAILURE = 6
     NOT_SUPPORTED = 7
 
-LocalCategories = _ns_module.LocalCategories
-LocalLocation = _ns_module.LocalLocation
-LocalLocationFinder = _ns_module.LocalLocationFinder
-LocalLocationFinderResult = _ns_module.LocalLocationFinderResult
-LocalLocationHoursOfOperationItem = _ns_module.LocalLocationHoursOfOperationItem
-LocalLocationRatingInfo = _ns_module.LocalLocationRatingInfo
-PlaceInfoHelper = _ns_module.PlaceInfoHelper
+LocalCategories = _winrt_windows_services_maps_localsearch.LocalCategories
+LocalLocation = _winrt_windows_services_maps_localsearch.LocalLocation
+LocalLocationFinder = _winrt_windows_services_maps_localsearch.LocalLocationFinder
+LocalLocationFinderResult = _winrt_windows_services_maps_localsearch.LocalLocationFinderResult
+LocalLocationHoursOfOperationItem = _winrt_windows_services_maps_localsearch.LocalLocationHoursOfOperationItem
+LocalLocationRatingInfo = _winrt_windows_services_maps_localsearch.LocalLocationRatingInfo
+PlaceInfoHelper = _winrt_windows_services_maps_localsearch.PlaceInfoHelper

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Networking.Connectivity")
+from . import _winrt_windows_networking_connectivity
 
 try:
     import winrt.windows.foundation
@@ -145,29 +144,29 @@ class WwanNetworkRegistrationState(enum.IntEnum):
     PARTNER = 5
     DENIED = 6
 
-NetworkUsageStates = _ns_module.NetworkUsageStates
-AttributedNetworkUsage = _ns_module.AttributedNetworkUsage
-CellularApnContext = _ns_module.CellularApnContext
-ConnectionCost = _ns_module.ConnectionCost
-ConnectionProfile = _ns_module.ConnectionProfile
-ConnectionProfileFilter = _ns_module.ConnectionProfileFilter
-ConnectionSession = _ns_module.ConnectionSession
-ConnectivityInterval = _ns_module.ConnectivityInterval
-ConnectivityManager = _ns_module.ConnectivityManager
-DataPlanStatus = _ns_module.DataPlanStatus
-DataPlanUsage = _ns_module.DataPlanUsage
-DataUsage = _ns_module.DataUsage
-IPInformation = _ns_module.IPInformation
-LanIdentifier = _ns_module.LanIdentifier
-LanIdentifierData = _ns_module.LanIdentifierData
-NetworkAdapter = _ns_module.NetworkAdapter
-NetworkInformation = _ns_module.NetworkInformation
-NetworkItem = _ns_module.NetworkItem
-NetworkSecuritySettings = _ns_module.NetworkSecuritySettings
-NetworkStateChangeEventDetails = _ns_module.NetworkStateChangeEventDetails
-NetworkUsage = _ns_module.NetworkUsage
-ProviderNetworkUsage = _ns_module.ProviderNetworkUsage
-ProxyConfiguration = _ns_module.ProxyConfiguration
-RoutePolicy = _ns_module.RoutePolicy
-WlanConnectionProfileDetails = _ns_module.WlanConnectionProfileDetails
-WwanConnectionProfileDetails = _ns_module.WwanConnectionProfileDetails
+NetworkUsageStates = _winrt_windows_networking_connectivity.NetworkUsageStates
+AttributedNetworkUsage = _winrt_windows_networking_connectivity.AttributedNetworkUsage
+CellularApnContext = _winrt_windows_networking_connectivity.CellularApnContext
+ConnectionCost = _winrt_windows_networking_connectivity.ConnectionCost
+ConnectionProfile = _winrt_windows_networking_connectivity.ConnectionProfile
+ConnectionProfileFilter = _winrt_windows_networking_connectivity.ConnectionProfileFilter
+ConnectionSession = _winrt_windows_networking_connectivity.ConnectionSession
+ConnectivityInterval = _winrt_windows_networking_connectivity.ConnectivityInterval
+ConnectivityManager = _winrt_windows_networking_connectivity.ConnectivityManager
+DataPlanStatus = _winrt_windows_networking_connectivity.DataPlanStatus
+DataPlanUsage = _winrt_windows_networking_connectivity.DataPlanUsage
+DataUsage = _winrt_windows_networking_connectivity.DataUsage
+IPInformation = _winrt_windows_networking_connectivity.IPInformation
+LanIdentifier = _winrt_windows_networking_connectivity.LanIdentifier
+LanIdentifierData = _winrt_windows_networking_connectivity.LanIdentifierData
+NetworkAdapter = _winrt_windows_networking_connectivity.NetworkAdapter
+NetworkInformation = _winrt_windows_networking_connectivity.NetworkInformation
+NetworkItem = _winrt_windows_networking_connectivity.NetworkItem
+NetworkSecuritySettings = _winrt_windows_networking_connectivity.NetworkSecuritySettings
+NetworkStateChangeEventDetails = _winrt_windows_networking_connectivity.NetworkStateChangeEventDetails
+NetworkUsage = _winrt_windows_networking_connectivity.NetworkUsage
+ProviderNetworkUsage = _winrt_windows_networking_connectivity.ProviderNetworkUsage
+ProxyConfiguration = _winrt_windows_networking_connectivity.ProxyConfiguration
+RoutePolicy = _winrt_windows_networking_connectivity.RoutePolicy
+WlanConnectionProfileDetails = _winrt_windows_networking_connectivity.WlanConnectionProfileDetails
+WwanConnectionProfileDetails = _winrt_windows_networking_connectivity.WwanConnectionProfileDetails

@@ -340,7 +340,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyType_Spec type_spec_GameService =
     {
-        "_winrt_Windows_Phone_System_UserProfile_GameServices_Core.GameService",
+        "_winrt_windows_phone_system_userprofile_gameservices_core.GameService",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -361,7 +361,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyType_Spec type_spec_GameService_Meta =
     {
-        "_winrt_Windows_Phone_System_UserProfile_GameServices_Core.GameService_Meta",
+        "_winrt_windows_phone_system_userprofile_gameservices_core.GameService_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -468,7 +468,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyType_Spec type_spec_GameServicePropertyCollection =
     {
-        "_winrt_Windows_Phone_System_UserProfile_GameServices_Core.GameServicePropertyCollection",
+        "_winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection",
         sizeof(py::wrapper::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -481,7 +481,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_System_UserProfile_GameServices_Core",
+           "_winrt_windows_phone_system_userprofile_gameservices_core",
            module_doc,
            0,
            nullptr,
@@ -492,7 +492,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
 } // py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_System_UserProfile_GameServices_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core;
 

@@ -849,7 +849,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundDownloader =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundDownloader",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundDownloader",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferCompletionGroup =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferCompletionGroup",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroup",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1133,7 +1133,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferCompletionGroupTriggerDetails =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferCompletionGroupTriggerDetails",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroupTriggerDetails",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1362,7 +1362,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferContentPart =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferContentPart",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferContentPart",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1428,7 +1428,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferError =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferError",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1603,7 +1603,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferGroup =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferGroup",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferGroup",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1748,7 +1748,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferRangesDownloadedEventArgs =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferRangesDownloadedEventArgs",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2653,7 +2653,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundUploader =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundUploader",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundUploader",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2766,7 +2766,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_ContentPrefetcher =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.ContentPrefetcher",
+        "_winrt_windows_networking_backgroundtransfer.ContentPrefetcher",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2789,7 +2789,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_ContentPrefetcher_Meta =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.ContentPrefetcher_Meta",
+        "_winrt_windows_networking_backgroundtransfer.ContentPrefetcher_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3603,7 +3603,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_DownloadOperation =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.DownloadOperation",
+        "_winrt_windows_networking_backgroundtransfer.DownloadOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3758,7 +3758,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_ResponseInformation =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.ResponseInformation",
+        "_winrt_windows_networking_backgroundtransfer.ResponseInformation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3853,7 +3853,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_UnconstrainedTransferRequestResult =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.UnconstrainedTransferRequestResult",
+        "_winrt_windows_networking_backgroundtransfer.UnconstrainedTransferRequestResult",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4384,7 +4384,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_UploadOperation =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.UploadOperation",
+        "_winrt_windows_networking_backgroundtransfer.UploadOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4733,7 +4733,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_IBackgroundTransferBase =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.IBackgroundTransferBase",
+        "_winrt_windows_networking_backgroundtransfer.IBackgroundTransferBase",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4873,7 +4873,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_IBackgroundTransferContentPartFactory =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.IBackgroundTransferContentPartFactory",
+        "_winrt_windows_networking_backgroundtransfer.IBackgroundTransferContentPartFactory",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5138,7 +5138,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_IBackgroundTransferOperation =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.IBackgroundTransferOperation",
+        "_winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperation",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5261,7 +5261,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_IBackgroundTransferOperationPriority =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.IBackgroundTransferOperationPriority",
+        "_winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperationPriority",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5501,7 +5501,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundDownloadProgress =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundDownloadProgress",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundDownloadProgress",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5636,7 +5636,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundTransferFileRange =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundTransferFileRange",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundTransferFileRange",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5946,7 +5946,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyType_Spec type_spec_BackgroundUploadProgress =
     {
-        "_winrt_Windows_Networking_BackgroundTransfer.BackgroundUploadProgress",
+        "_winrt_windows_networking_backgroundtransfer.BackgroundUploadProgress",
         sizeof(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5959,7 +5959,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Networking_BackgroundTransfer",
+           "_winrt_windows_networking_backgroundtransfer",
            module_doc,
            0,
            nullptr,
@@ -5970,7 +5970,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
 } // py::cpp::Windows::Networking::BackgroundTransfer
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Networking_BackgroundTransfer(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcept
 {
     using namespace py::cpp::Windows::Networking::BackgroundTransfer;
 

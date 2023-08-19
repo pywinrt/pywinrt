@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorAuthenticationManager =
     {
-        "_winrt_Windows_Security_Authentication_Identity_Core.MicrosoftAccountMultiFactorAuthenticationManager",
+        "_winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorAuthenticationManager",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorAuthenticationManager_Meta =
     {
-        "_winrt_Windows_Security_Authentication_Identity_Core.MicrosoftAccountMultiFactorAuthenticationManager_Meta",
+        "_winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorAuthenticationManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -535,7 +535,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorGetSessionsResult =
     {
-        "_winrt_Windows_Security_Authentication_Identity_Core.MicrosoftAccountMultiFactorGetSessionsResult",
+        "_winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorGetSessionsResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -690,7 +690,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorOneTimeCodedInfo =
     {
-        "_winrt_Windows_Security_Authentication_Identity_Core.MicrosoftAccountMultiFactorOneTimeCodedInfo",
+        "_winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorOneTimeCodedInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorSessionInfo =
     {
-        "_winrt_Windows_Security_Authentication_Identity_Core.MicrosoftAccountMultiFactorSessionInfo",
+        "_winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorSessionInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1040,7 +1040,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyType_Spec type_spec_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo =
     {
-        "_winrt_Windows_Security_Authentication_Identity_Core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo",
+        "_winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo",
         sizeof(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Authentication_Identity_Core",
+           "_winrt_windows_security_authentication_identity_core",
            module_doc,
            0,
            nullptr,
@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
 
 } // py::cpp::Windows::Security::Authentication::Identity::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Identity_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_core(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Authentication::Identity::Core;
 

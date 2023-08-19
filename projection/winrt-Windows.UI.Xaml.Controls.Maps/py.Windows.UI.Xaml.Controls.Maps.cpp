@@ -142,7 +142,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_CustomMapTileDataSource =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.CustomMapTileDataSource",
+        "_winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -416,7 +416,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_HttpMapTileDataSource =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.HttpMapTileDataSource",
+        "_winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -622,7 +622,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_LocalMapTileDataSource =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.LocalMapTileDataSource",
+        "_winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -760,7 +760,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapActualCameraChangedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapActualCameraChangedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapActualCameraChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -898,7 +898,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapActualCameraChangingEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapActualCameraChangingEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapActualCameraChangingEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1267,7 +1267,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapBillboard =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapBillboard",
+        "_winrt_windows_ui_xaml_controls_maps.MapBillboard",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1290,7 +1290,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapBillboard_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapBillboard_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapBillboard_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1682,7 +1682,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapCamera =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapCamera",
+        "_winrt_windows_ui_xaml_controls_maps.MapCamera",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1840,7 +1840,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapContextRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapContextRequestedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapContextRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6298,7 +6298,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControl =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControl",
+        "_winrt_windows_ui_xaml_controls_maps.MapControl",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6358,7 +6358,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControl_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControl_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapControl_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6476,7 +6476,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkClickEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlBusinessLandmarkClickEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkClickEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6594,7 +6594,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlBusinessLandmarkPointerEnteredEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkPointerEnteredEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6712,7 +6712,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkPointerExitedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlBusinessLandmarkPointerExitedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkPointerExitedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6830,7 +6830,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlBusinessLandmarkRightTappedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlBusinessLandmarkRightTappedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkRightTappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7322,7 +7322,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlDataHelper =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlDataHelper",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlDataHelper",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7480,7 +7480,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlTransitFeatureClickEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlTransitFeatureClickEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlTransitFeatureClickEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7638,7 +7638,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlTransitFeaturePointerEnteredEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlTransitFeaturePointerEnteredEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlTransitFeaturePointerEnteredEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7796,7 +7796,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlTransitFeaturePointerExitedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlTransitFeaturePointerExitedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlTransitFeaturePointerExitedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7954,7 +7954,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapControlTransitFeatureRightTappedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapControlTransitFeatureRightTappedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapControlTransitFeatureRightTappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8052,7 +8052,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapCustomExperience =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapCustomExperience",
+        "_winrt_windows_ui_xaml_controls_maps.MapCustomExperience",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8150,7 +8150,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapCustomExperienceChangedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapCustomExperienceChangedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapCustomExperienceChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8717,7 +8717,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElement =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElement",
+        "_winrt_windows_ui_xaml_controls_maps.MapElement",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8744,7 +8744,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElement_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElement_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapElement_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9225,7 +9225,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElement3D =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElement3D",
+        "_winrt_windows_ui_xaml_controls_maps.MapElement3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9250,7 +9250,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElement3D_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElement3D_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapElement3D_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9408,7 +9408,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementClickEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementClickEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementClickEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9566,7 +9566,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementPointerEnteredEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementPointerEnteredEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementPointerEnteredEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9724,7 +9724,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementPointerExitedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementPointerExitedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementPointerExitedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10069,7 +10069,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementsLayer =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementsLayer",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementsLayer",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10090,7 +10090,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementsLayer_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementsLayer_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementsLayer_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -10248,7 +10248,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementsLayerClickEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementsLayerClickEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementsLayerClickEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10406,7 +10406,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementsLayerContextRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementsLayerContextRequestedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementsLayerContextRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10564,7 +10564,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementsLayerPointerEnteredEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementsLayerPointerEnteredEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementsLayerPointerEnteredEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10722,7 +10722,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapElementsLayerPointerExitedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapElementsLayerPointerExitedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapElementsLayerPointerExitedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11136,7 +11136,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapIcon =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapIcon",
+        "_winrt_windows_ui_xaml_controls_maps.MapIcon",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11160,7 +11160,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapIcon_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapIcon_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapIcon_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -11298,7 +11298,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapInputEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapInputEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapInputEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11569,7 +11569,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapItemsControl =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapItemsControl",
+        "_winrt_windows_ui_xaml_controls_maps.MapItemsControl",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapItemsControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11592,7 +11592,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapItemsControl_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapItemsControl_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapItemsControl_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -11891,7 +11891,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapLayer =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapLayer",
+        "_winrt_windows_ui_xaml_controls_maps.MapLayer",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11914,7 +11914,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapLayer_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapLayer_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapLayer_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12065,7 +12065,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapModel3D =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapModel3D",
+        "_winrt_windows_ui_xaml_controls_maps.MapModel3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12480,7 +12480,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapPolygon =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapPolygon",
+        "_winrt_windows_ui_xaml_controls_maps.MapPolygon",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12503,7 +12503,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapPolygon_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapPolygon_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapPolygon_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12831,7 +12831,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapPolyline =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapPolyline",
+        "_winrt_windows_ui_xaml_controls_maps.MapPolyline",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12853,7 +12853,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapPolyline_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapPolyline_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapPolyline_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -12991,7 +12991,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapRightTappedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapRightTappedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapRightTappedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13207,7 +13207,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapRouteView =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapRouteView",
+        "_winrt_windows_ui_xaml_controls_maps.MapRouteView",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13597,7 +13597,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapScene =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapScene",
+        "_winrt_windows_ui_xaml_controls_maps.MapScene",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapScene),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13961,7 +13961,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapStyleSheet =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapStyleSheet",
+        "_winrt_windows_ui_xaml_controls_maps.MapStyleSheet",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapStyleSheet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15211,7 +15211,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapStyleSheetEntries =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapStyleSheetEntries",
+        "_winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntries",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15295,7 +15295,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapStyleSheetEntries_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapStyleSheetEntries_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntries_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15386,7 +15386,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapStyleSheetEntryStates =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapStyleSheetEntryStates",
+        "_winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntryStates",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15409,7 +15409,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapStyleSheetEntryStates_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapStyleSheetEntryStates_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntryStates_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -15547,7 +15547,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTargetCameraChangedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTargetCameraChangedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapTargetCameraChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15723,7 +15723,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileBitmapRequest =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileBitmapRequest",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequest",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15852,7 +15852,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileBitmapRequestDeferral =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileBitmapRequestDeferral",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequestDeferral",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16050,7 +16050,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileBitmapRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileBitmapRequestedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16148,7 +16148,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileDataSource =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileDataSource",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17382,7 +17382,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileSource =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileSource",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17417,7 +17417,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileSource_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileSource_Meta",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileSource_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -17593,7 +17593,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileUriRequest =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileUriRequest",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileUriRequest",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17722,7 +17722,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileUriRequestDeferral =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileUriRequestDeferral",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileUriRequestDeferral",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17920,7 +17920,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapTileUriRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapTileUriRequestedEventArgs",
+        "_winrt_windows_ui_xaml_controls_maps.MapTileUriRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18326,7 +18326,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_StreetsideExperience =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.StreetsideExperience",
+        "_winrt_windows_ui_xaml_controls_maps.StreetsideExperience",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18474,7 +18474,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_StreetsidePanorama =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.StreetsidePanorama",
+        "_winrt_windows_ui_xaml_controls_maps.StreetsidePanorama",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18609,7 +18609,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyType_Spec type_spec_MapZoomLevelRange =
     {
-        "_winrt_Windows_UI_Xaml_Controls_Maps.MapZoomLevelRange",
+        "_winrt_windows_ui_xaml_controls_maps.MapZoomLevelRange",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18622,7 +18622,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Controls_Maps",
+           "_winrt_windows_ui_xaml_controls_maps",
            module_doc,
            0,
            nullptr,
@@ -18633,7 +18633,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
 } // py::cpp::Windows::UI::Xaml::Controls::Maps
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Controls_Maps(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Controls::Maps;
 

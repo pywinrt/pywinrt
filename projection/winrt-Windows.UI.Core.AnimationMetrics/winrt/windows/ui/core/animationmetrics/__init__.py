@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Core.AnimationMetrics")
+from . import _winrt_windows_ui_core_animationmetrics
 
 try:
     import winrt.windows.foundation
@@ -81,9 +80,9 @@ class PropertyAnimationType(enum.IntEnum):
     TRANSLATION = 1
     OPACITY = 2
 
-AnimationDescription = _ns_module.AnimationDescription
-OpacityAnimation = _ns_module.OpacityAnimation
-PropertyAnimation = _ns_module.PropertyAnimation
-ScaleAnimation = _ns_module.ScaleAnimation
-TranslationAnimation = _ns_module.TranslationAnimation
-IPropertyAnimation = _ns_module.IPropertyAnimation
+AnimationDescription = _winrt_windows_ui_core_animationmetrics.AnimationDescription
+OpacityAnimation = _winrt_windows_ui_core_animationmetrics.OpacityAnimation
+PropertyAnimation = _winrt_windows_ui_core_animationmetrics.PropertyAnimation
+ScaleAnimation = _winrt_windows_ui_core_animationmetrics.ScaleAnimation
+TranslationAnimation = _winrt_windows_ui_core_animationmetrics.TranslationAnimation
+IPropertyAnimation = _winrt_windows_ui_core_animationmetrics.IPropertyAnimation

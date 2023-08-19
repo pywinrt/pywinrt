@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyType_Spec type_spec_SpatialGraphInteropFrameOfReferencePreview =
     {
-        "_winrt_Windows_Perception_Spatial_Preview.SpatialGraphInteropFrameOfReferencePreview",
+        "_winrt_windows_perception_spatial_preview.SpatialGraphInteropFrameOfReferencePreview",
         sizeof(py::wrapper::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyType_Spec type_spec_SpatialGraphInteropPreview =
     {
-        "_winrt_Windows_Perception_Spatial_Preview.SpatialGraphInteropPreview",
+        "_winrt_windows_perception_spatial_preview.SpatialGraphInteropPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -363,7 +363,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Perception_Spatial_Preview",
+           "_winrt_windows_perception_spatial_preview",
            module_doc,
            0,
            nullptr,
@@ -374,7 +374,7 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
 } // py::cpp::Windows::Perception::Spatial::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_preview(void) noexcept
 {
     using namespace py::cpp::Windows::Perception::Spatial::Preview;
 

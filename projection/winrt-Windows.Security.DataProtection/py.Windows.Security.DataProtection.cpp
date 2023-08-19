@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataAvailabilityStateChangedEventArgs =
     {
-        "_winrt_Windows_Security_DataProtection.UserDataAvailabilityStateChangedEventArgs",
+        "_winrt_windows_security_dataprotection.UserDataAvailabilityStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -219,7 +219,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataBufferUnprotectResult =
     {
-        "_winrt_Windows_Security_DataProtection.UserDataBufferUnprotectResult",
+        "_winrt_windows_security_dataprotection.UserDataBufferUnprotectResult",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataBufferUnprotectResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -563,7 +563,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataProtectionManager =
     {
-        "_winrt_Windows_Security_DataProtection.UserDataProtectionManager",
+        "_winrt_windows_security_dataprotection.UserDataProtectionManager",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyType_Spec type_spec_UserDataStorageItemProtectionInfo =
     {
-        "_winrt_Windows_Security_DataProtection.UserDataStorageItemProtectionInfo",
+        "_winrt_windows_security_dataprotection.UserDataStorageItemProtectionInfo",
         sizeof(py::wrapper::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -671,7 +671,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_DataProtection",
+           "_winrt_windows_security_dataprotection",
            module_doc,
            0,
            nullptr,
@@ -682,7 +682,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
 } // py::cpp::Windows::Security::DataProtection
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_DataProtection(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_dataprotection(void) noexcept
 {
     using namespace py::cpp::Windows::Security::DataProtection;
 

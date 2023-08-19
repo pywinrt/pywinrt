@@ -291,7 +291,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyType_Spec type_spec_Compressor =
     {
-        "_winrt_Windows_Storage_Compression.Compressor",
+        "_winrt_windows_storage_compression.Compressor",
         sizeof(py::wrapper::Windows::Storage::Compression::Compressor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -508,7 +508,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyType_Spec type_spec_Decompressor =
     {
-        "_winrt_Windows_Storage_Compression.Decompressor",
+        "_winrt_windows_storage_compression.Decompressor",
         sizeof(py::wrapper::Windows::Storage::Compression::Decompressor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -521,7 +521,7 @@ namespace py::cpp::Windows::Storage::Compression
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Storage_Compression",
+           "_winrt_windows_storage_compression",
            module_doc,
            0,
            nullptr,
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::Storage::Compression
 
 } // py::cpp::Windows::Storage::Compression
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Compression(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_storage_compression(void) noexcept
 {
     using namespace py::cpp::Windows::Storage::Compression;
 

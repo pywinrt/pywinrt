@@ -203,7 +203,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_Deferral =
     {
-        "_winrt_Windows_Foundation.Deferral",
+        "_winrt_windows_foundation.Deferral",
         sizeof(py::wrapper::Windows::Foundation::Deferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -319,7 +319,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_GuidHelper =
     {
-        "_winrt_Windows_Foundation.GuidHelper",
+        "_winrt_windows_foundation.GuidHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -340,7 +340,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_GuidHelper_Meta =
     {
-        "_winrt_Windows_Foundation.GuidHelper_Meta",
+        "_winrt_windows_foundation.GuidHelper_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -523,7 +523,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_MemoryBuffer =
     {
-        "_winrt_Windows_Foundation.MemoryBuffer",
+        "_winrt_windows_foundation.MemoryBuffer",
         sizeof(py::wrapper::Windows::Foundation::MemoryBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1803,7 +1803,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_PropertyValue =
     {
-        "_winrt_Windows_Foundation.PropertyValue",
+        "_winrt_windows_foundation.PropertyValue",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2431,7 +2431,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_Uri =
     {
-        "_winrt_Windows_Foundation.Uri",
+        "_winrt_windows_foundation.Uri",
         sizeof(py::wrapper::Windows::Foundation::Uri),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2836,7 +2836,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_WwwFormUrlDecoder =
     {
-        "_winrt_Windows_Foundation.WwwFormUrlDecoder",
+        "_winrt_windows_foundation.WwwFormUrlDecoder",
         sizeof(py::wrapper::Windows::Foundation::WwwFormUrlDecoder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2951,7 +2951,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_WwwFormUrlDecoderEntry =
     {
-        "_winrt_Windows_Foundation.WwwFormUrlDecoderEntry",
+        "_winrt_windows_foundation.WwwFormUrlDecoderEntry",
         sizeof(py::wrapper::Windows::Foundation::WwwFormUrlDecoderEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3233,7 +3233,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IAsyncAction =
     {
-        "_winrt_Windows_Foundation.IAsyncAction",
+        "_winrt_windows_foundation.IAsyncAction",
         sizeof(py::wrapper::Windows::Foundation::IAsyncAction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3391,7 +3391,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IAsyncActionWithProgress =
     {
-        "_winrt_Windows_Foundation.IAsyncActionWithProgress",
+        "_winrt_windows_foundation.IAsyncActionWithProgress",
         sizeof(py::wrapper::Windows::Foundation::IAsyncActionWithProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3588,7 +3588,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IAsyncInfo =
     {
-        "_winrt_Windows_Foundation.IAsyncInfo",
+        "_winrt_windows_foundation.IAsyncInfo",
         sizeof(py::wrapper::Windows::Foundation::IAsyncInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3746,7 +3746,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IAsyncOperationWithProgress =
     {
-        "_winrt_Windows_Foundation.IAsyncOperationWithProgress",
+        "_winrt_windows_foundation.IAsyncOperationWithProgress",
         sizeof(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3881,7 +3881,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IAsyncOperation =
     {
-        "_winrt_Windows_Foundation.IAsyncOperation",
+        "_winrt_windows_foundation.IAsyncOperation",
         sizeof(py::wrapper::Windows::Foundation::IAsyncOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4009,7 +4009,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IClosable =
     {
-        "_winrt_Windows_Foundation.IClosable",
+        "_winrt_windows_foundation.IClosable",
         sizeof(py::wrapper::Windows::Foundation::IClosable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4116,7 +4116,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IGetActivationFactory =
     {
-        "_winrt_Windows_Foundation.IGetActivationFactory",
+        "_winrt_windows_foundation.IGetActivationFactory",
         sizeof(py::wrapper::Windows::Foundation::IGetActivationFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4274,7 +4274,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IMemoryBuffer =
     {
-        "_winrt_Windows_Foundation.IMemoryBuffer",
+        "_winrt_windows_foundation.IMemoryBuffer",
         sizeof(py::wrapper::Windows::Foundation::IMemoryBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4488,7 +4488,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IMemoryBufferReference =
     {
-        "_winrt_Windows_Foundation.IMemoryBufferReference",
+        "_winrt_windows_foundation.IMemoryBufferReference",
         sizeof(py::wrapper::Windows::Foundation::IMemoryBufferReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5884,7 +5884,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IPropertyValue =
     {
-        "_winrt_Windows_Foundation.IPropertyValue",
+        "_winrt_windows_foundation.IPropertyValue",
         sizeof(py::wrapper::Windows::Foundation::IPropertyValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6194,7 +6194,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IReferenceArray =
     {
-        "_winrt_Windows_Foundation.IReferenceArray",
+        "_winrt_windows_foundation.IReferenceArray",
         sizeof(py::wrapper::Windows::Foundation::IReferenceArray),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6504,7 +6504,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IReference =
     {
-        "_winrt_Windows_Foundation.IReference",
+        "_winrt_windows_foundation.IReference",
         sizeof(py::wrapper::Windows::Foundation::IReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6623,7 +6623,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IStringable =
     {
-        "_winrt_Windows_Foundation.IStringable",
+        "_winrt_windows_foundation.IStringable",
         sizeof(py::wrapper::Windows::Foundation::IStringable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6738,7 +6738,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_IWwwFormUrlDecoderEntry =
     {
-        "_winrt_Windows_Foundation.IWwwFormUrlDecoderEntry",
+        "_winrt_windows_foundation.IWwwFormUrlDecoderEntry",
         sizeof(py::wrapper::Windows::Foundation::IWwwFormUrlDecoderEntry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6839,7 +6839,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_EventRegistrationToken =
     {
-        "_winrt_Windows_Foundation.EventRegistrationToken",
+        "_winrt_windows_foundation.EventRegistrationToken",
         sizeof(py::wrapper::Windows::Foundation::EventRegistrationToken),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6940,7 +6940,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_HResult =
     {
-        "_winrt_Windows_Foundation.HResult",
+        "_winrt_windows_foundation.HResult",
         sizeof(py::wrapper::Windows::Foundation::HResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7075,7 +7075,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_Point =
     {
-        "_winrt_Windows_Foundation.Point",
+        "_winrt_windows_foundation.Point",
         sizeof(py::wrapper::Windows::Foundation::Point),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7280,7 +7280,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_Rect =
     {
-        "_winrt_Windows_Foundation.Rect",
+        "_winrt_windows_foundation.Rect",
         sizeof(py::wrapper::Windows::Foundation::Rect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7415,7 +7415,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyType_Spec type_spec_Size =
     {
-        "_winrt_Windows_Foundation.Size",
+        "_winrt_windows_foundation.Size",
         sizeof(py::wrapper::Windows::Foundation::Size),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7428,7 +7428,7 @@ namespace py::cpp::Windows::Foundation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Foundation",
+           "_winrt_windows_foundation",
            module_doc,
            0,
            nullptr,
@@ -7439,7 +7439,7 @@ namespace py::cpp::Windows::Foundation
 
 } // py::cpp::Windows::Foundation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Foundation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
 {
     using namespace py::cpp::Windows::Foundation;
 

@@ -216,7 +216,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_BasicProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.BasicProperties",
+        "_winrt_windows_storage_fileproperties.BasicProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::BasicProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -509,7 +509,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_DocumentProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.DocumentProperties",
+        "_winrt_windows_storage_fileproperties.DocumentProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::DocumentProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -641,7 +641,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_GeotagHelper =
     {
-        "_winrt_Windows_Storage_FileProperties.GeotagHelper",
+        "_winrt_windows_storage_fileproperties.GeotagHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1178,7 +1178,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_ImageProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.ImageProperties",
+        "_winrt_windows_storage_fileproperties.ImageProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::ImageProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1907,7 +1907,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_MusicProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.MusicProperties",
+        "_winrt_windows_storage_fileproperties.MusicProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::MusicProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2184,7 +2184,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_StorageItemContentProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.StorageItemContentProperties",
+        "_winrt_windows_storage_fileproperties.StorageItemContentProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2743,7 +2743,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_StorageItemThumbnail =
     {
-        "_winrt_Windows_Storage_FileProperties.StorageItemThumbnail",
+        "_winrt_windows_storage_fileproperties.StorageItemThumbnail",
         sizeof(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3360,7 +3360,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_VideoProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.VideoProperties",
+        "_winrt_windows_storage_fileproperties.VideoProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::VideoProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3517,7 +3517,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyType_Spec type_spec_IStorageItemExtraProperties =
     {
-        "_winrt_Windows_Storage_FileProperties.IStorageItemExtraProperties",
+        "_winrt_windows_storage_fileproperties.IStorageItemExtraProperties",
         sizeof(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3530,7 +3530,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Storage_FileProperties",
+           "_winrt_windows_storage_fileproperties",
            module_doc,
            0,
            nullptr,
@@ -3541,7 +3541,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
 } // py::cpp::Windows::Storage::FileProperties
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Storage_FileProperties(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_storage_fileproperties(void) noexcept
 {
     using namespace py::cpp::Windows::Storage::FileProperties;
 

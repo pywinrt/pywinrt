@@ -84,7 +84,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_AdvertisingManager =
     {
-        "_winrt_Windows_System_UserProfile.AdvertisingManager",
+        "_winrt_windows_system_userprofile.AdvertisingManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -105,7 +105,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_AdvertisingManager_Meta =
     {
-        "_winrt_Windows_System_UserProfile.AdvertisingManager_Meta",
+        "_winrt_windows_system_userprofile.AdvertisingManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -220,7 +220,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_AdvertisingManagerForUser =
     {
-        "_winrt_Windows_System_UserProfile.AdvertisingManagerForUser",
+        "_winrt_windows_system_userprofile.AdvertisingManagerForUser",
         sizeof(py::wrapper::Windows::System::UserProfile::AdvertisingManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -417,7 +417,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_AssignedAccessSettings =
     {
-        "_winrt_Windows_System_UserProfile.AssignedAccessSettings",
+        "_winrt_windows_system_userprofile.AssignedAccessSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::AssignedAccessSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -594,7 +594,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_DiagnosticsSettings =
     {
-        "_winrt_Windows_System_UserProfile.DiagnosticsSettings",
+        "_winrt_windows_system_userprofile.DiagnosticsSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::DiagnosticsSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -922,7 +922,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_FirstSignInSettings =
     {
-        "_winrt_Windows_System_UserProfile.FirstSignInSettings",
+        "_winrt_windows_system_userprofile.FirstSignInSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::FirstSignInSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1166,7 +1166,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_GlobalizationPreferences =
     {
-        "_winrt_Windows_System_UserProfile.GlobalizationPreferences",
+        "_winrt_windows_system_userprofile.GlobalizationPreferences",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1192,7 +1192,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_GlobalizationPreferences_Meta =
     {
-        "_winrt_Windows_System_UserProfile.GlobalizationPreferences_Meta",
+        "_winrt_windows_system_userprofile.GlobalizationPreferences_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1407,7 +1407,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_GlobalizationPreferencesForUser =
     {
-        "_winrt_Windows_System_UserProfile.GlobalizationPreferencesForUser",
+        "_winrt_windows_system_userprofile.GlobalizationPreferencesForUser",
         sizeof(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1616,7 +1616,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_LockScreen =
     {
-        "_winrt_Windows_System_UserProfile.LockScreen",
+        "_winrt_windows_system_userprofile.LockScreen",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1637,7 +1637,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_LockScreen_Meta =
     {
-        "_winrt_Windows_System_UserProfile.LockScreen_Meta",
+        "_winrt_windows_system_userprofile.LockScreen_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2098,7 +2098,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_UserInformation =
     {
-        "_winrt_Windows_System_UserProfile.UserInformation",
+        "_winrt_windows_system_userprofile.UserInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2120,7 +2120,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_UserInformation_Meta =
     {
-        "_winrt_Windows_System_UserProfile.UserInformation_Meta",
+        "_winrt_windows_system_userprofile.UserInformation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2308,7 +2308,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_UserProfilePersonalizationSettings =
     {
-        "_winrt_Windows_System_UserProfile.UserProfilePersonalizationSettings",
+        "_winrt_windows_system_userprofile.UserProfilePersonalizationSettings",
         sizeof(py::wrapper::Windows::System::UserProfile::UserProfilePersonalizationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2329,7 +2329,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyType_Spec type_spec_UserProfilePersonalizationSettings_Meta =
     {
-        "_winrt_Windows_System_UserProfile.UserProfilePersonalizationSettings_Meta",
+        "_winrt_windows_system_userprofile.UserProfilePersonalizationSettings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2342,7 +2342,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_UserProfile",
+           "_winrt_windows_system_userprofile",
            module_doc,
            0,
            nullptr,
@@ -2353,7 +2353,7 @@ namespace py::cpp::Windows::System::UserProfile
 
 } // py::cpp::Windows::System::UserProfile
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_UserProfile(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_userprofile(void) noexcept
 {
     using namespace py::cpp::Windows::System::UserProfile;
 

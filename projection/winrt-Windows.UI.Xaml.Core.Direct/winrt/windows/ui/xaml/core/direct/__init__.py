@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Core.Direct")
+from . import _winrt_windows_ui_xaml_core_direct
 
 try:
     import winrt.windows.foundation
@@ -2094,5 +2093,5 @@ class XamlTypeIndex(enum.IntEnum):
     THEME_SHADOW = 964
     XAML_U_I_COMMAND = 969
 
-XamlDirect = _ns_module.XamlDirect
-IXamlDirectObject = _ns_module.IXamlDirectObject
+XamlDirect = _winrt_windows_ui_xaml_core_direct.XamlDirect
+IXamlDirectObject = _winrt_windows_ui_xaml_core_direct.IXamlDirectObject

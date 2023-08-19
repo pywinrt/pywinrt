@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Storage.Pickers.Provider")
+from . import _winrt_windows_storage_pickers_provider
 
 try:
     import winrt.windows.foundation
@@ -36,12 +35,12 @@ class SetFileNameResult(enum.IntEnum):
     NOT_ALLOWED = 1
     UNAVAILABLE = 2
 
-FileOpenPickerUI = _ns_module.FileOpenPickerUI
-FileRemovedEventArgs = _ns_module.FileRemovedEventArgs
-FileSavePickerUI = _ns_module.FileSavePickerUI
-PickerClosingDeferral = _ns_module.PickerClosingDeferral
-PickerClosingEventArgs = _ns_module.PickerClosingEventArgs
-PickerClosingOperation = _ns_module.PickerClosingOperation
-TargetFileRequest = _ns_module.TargetFileRequest
-TargetFileRequestDeferral = _ns_module.TargetFileRequestDeferral
-TargetFileRequestedEventArgs = _ns_module.TargetFileRequestedEventArgs
+FileOpenPickerUI = _winrt_windows_storage_pickers_provider.FileOpenPickerUI
+FileRemovedEventArgs = _winrt_windows_storage_pickers_provider.FileRemovedEventArgs
+FileSavePickerUI = _winrt_windows_storage_pickers_provider.FileSavePickerUI
+PickerClosingDeferral = _winrt_windows_storage_pickers_provider.PickerClosingDeferral
+PickerClosingEventArgs = _winrt_windows_storage_pickers_provider.PickerClosingEventArgs
+PickerClosingOperation = _winrt_windows_storage_pickers_provider.PickerClosingOperation
+TargetFileRequest = _winrt_windows_storage_pickers_provider.TargetFileRequest
+TargetFileRequestDeferral = _winrt_windows_storage_pickers_provider.TargetFileRequestDeferral
+TargetFileRequestedEventArgs = _winrt_windows_storage_pickers_provider.TargetFileRequestedEventArgs

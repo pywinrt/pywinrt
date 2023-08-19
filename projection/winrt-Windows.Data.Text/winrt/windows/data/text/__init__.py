@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Data.Text")
+from . import _winrt_windows_data_text
 
 try:
     import winrt.windows.foundation
@@ -71,15 +70,15 @@ class UnicodeNumericType(enum.IntEnum):
     DIGIT = 2
     NUMERIC = 3
 
-TextSegment = _ns_module.TextSegment
-AlternateWordForm = _ns_module.AlternateWordForm
-SelectableWordSegment = _ns_module.SelectableWordSegment
-SelectableWordsSegmenter = _ns_module.SelectableWordsSegmenter
-SemanticTextQuery = _ns_module.SemanticTextQuery
-TextConversionGenerator = _ns_module.TextConversionGenerator
-TextPhoneme = _ns_module.TextPhoneme
-TextPredictionGenerator = _ns_module.TextPredictionGenerator
-TextReverseConversionGenerator = _ns_module.TextReverseConversionGenerator
-UnicodeCharacters = _ns_module.UnicodeCharacters
-WordSegment = _ns_module.WordSegment
-WordsSegmenter = _ns_module.WordsSegmenter
+TextSegment = _winrt_windows_data_text.TextSegment
+AlternateWordForm = _winrt_windows_data_text.AlternateWordForm
+SelectableWordSegment = _winrt_windows_data_text.SelectableWordSegment
+SelectableWordsSegmenter = _winrt_windows_data_text.SelectableWordsSegmenter
+SemanticTextQuery = _winrt_windows_data_text.SemanticTextQuery
+TextConversionGenerator = _winrt_windows_data_text.TextConversionGenerator
+TextPhoneme = _winrt_windows_data_text.TextPhoneme
+TextPredictionGenerator = _winrt_windows_data_text.TextPredictionGenerator
+TextReverseConversionGenerator = _winrt_windows_data_text.TextReverseConversionGenerator
+UnicodeCharacters = _winrt_windows_data_text.UnicodeCharacters
+WordSegment = _winrt_windows_data_text.WordSegment
+WordsSegmenter = _winrt_windows_data_text.WordsSegmenter

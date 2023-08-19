@@ -300,7 +300,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyType_Spec type_spec_PlatformDiagnosticActions =
     {
-        "_winrt_Windows_System_Diagnostics_TraceReporting.PlatformDiagnosticActions",
+        "_winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -495,7 +495,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyType_Spec type_spec_PlatformDiagnosticTraceInfo =
     {
-        "_winrt_Windows_System_Diagnostics_TraceReporting.PlatformDiagnosticTraceInfo",
+        "_winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyType_Spec type_spec_PlatformDiagnosticTraceRuntimeInfo =
     {
-        "_winrt_Windows_System_Diagnostics_TraceReporting.PlatformDiagnosticTraceRuntimeInfo",
+        "_winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceRuntimeInfo",
         sizeof(py::wrapper::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -623,7 +623,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Diagnostics_TraceReporting",
+           "_winrt_windows_system_diagnostics_tracereporting",
            module_doc,
            0,
            nullptr,
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 
 } // py::cpp::Windows::System::Diagnostics::TraceReporting
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics_TraceReporting(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_tracereporting(void) noexcept
 {
     using namespace py::cpp::Windows::System::Diagnostics::TraceReporting;
 

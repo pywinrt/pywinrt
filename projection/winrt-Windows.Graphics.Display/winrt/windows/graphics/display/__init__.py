@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Graphics.Display")
+from . import _winrt_windows_graphics_display
 
 try:
     import winrt.windows.foundation
@@ -79,14 +78,14 @@ class ResolutionScale(enum.IntEnum):
     SCALE450_PERCENT = 450
     SCALE500_PERCENT = 500
 
-NitRange = _ns_module.NitRange
-AdvancedColorInfo = _ns_module.AdvancedColorInfo
-BrightnessOverride = _ns_module.BrightnessOverride
-BrightnessOverrideSettings = _ns_module.BrightnessOverrideSettings
-ColorOverrideSettings = _ns_module.ColorOverrideSettings
-DisplayEnhancementOverride = _ns_module.DisplayEnhancementOverride
-DisplayEnhancementOverrideCapabilities = _ns_module.DisplayEnhancementOverrideCapabilities
-DisplayEnhancementOverrideCapabilitiesChangedEventArgs = _ns_module.DisplayEnhancementOverrideCapabilitiesChangedEventArgs
-DisplayInformation = _ns_module.DisplayInformation
-DisplayProperties = _ns_module.DisplayProperties
-DisplayServices = _ns_module.DisplayServices
+NitRange = _winrt_windows_graphics_display.NitRange
+AdvancedColorInfo = _winrt_windows_graphics_display.AdvancedColorInfo
+BrightnessOverride = _winrt_windows_graphics_display.BrightnessOverride
+BrightnessOverrideSettings = _winrt_windows_graphics_display.BrightnessOverrideSettings
+ColorOverrideSettings = _winrt_windows_graphics_display.ColorOverrideSettings
+DisplayEnhancementOverride = _winrt_windows_graphics_display.DisplayEnhancementOverride
+DisplayEnhancementOverrideCapabilities = _winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilities
+DisplayEnhancementOverrideCapabilitiesChangedEventArgs = _winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs
+DisplayInformation = _winrt_windows_graphics_display.DisplayInformation
+DisplayProperties = _winrt_windows_graphics_display.DisplayProperties
+DisplayServices = _winrt_windows_graphics_display.DisplayServices

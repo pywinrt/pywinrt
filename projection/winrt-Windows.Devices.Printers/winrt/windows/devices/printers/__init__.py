@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Printers")
+from . import _winrt_windows_devices_printers
 
 try:
     import winrt.windows.foundation
@@ -64,15 +63,15 @@ class PageConfigurationSource(enum.IntEnum):
     PRINT_JOB_CONFIGURATION = 0
     PDL_CONTENT = 1
 
-IppAttributeError = _ns_module.IppAttributeError
-IppAttributeValue = _ns_module.IppAttributeValue
-IppIntegerRange = _ns_module.IppIntegerRange
-IppPrintDevice = _ns_module.IppPrintDevice
-IppResolution = _ns_module.IppResolution
-IppSetAttributesResult = _ns_module.IppSetAttributesResult
-IppTextWithLanguage = _ns_module.IppTextWithLanguage
-PageConfigurationSettings = _ns_module.PageConfigurationSettings
-PdlPassthroughProvider = _ns_module.PdlPassthroughProvider
-PdlPassthroughTarget = _ns_module.PdlPassthroughTarget
-Print3DDevice = _ns_module.Print3DDevice
-PrintSchema = _ns_module.PrintSchema
+IppAttributeError = _winrt_windows_devices_printers.IppAttributeError
+IppAttributeValue = _winrt_windows_devices_printers.IppAttributeValue
+IppIntegerRange = _winrt_windows_devices_printers.IppIntegerRange
+IppPrintDevice = _winrt_windows_devices_printers.IppPrintDevice
+IppResolution = _winrt_windows_devices_printers.IppResolution
+IppSetAttributesResult = _winrt_windows_devices_printers.IppSetAttributesResult
+IppTextWithLanguage = _winrt_windows_devices_printers.IppTextWithLanguage
+PageConfigurationSettings = _winrt_windows_devices_printers.PageConfigurationSettings
+PdlPassthroughProvider = _winrt_windows_devices_printers.PdlPassthroughProvider
+PdlPassthroughTarget = _winrt_windows_devices_printers.PdlPassthroughTarget
+Print3DDevice = _winrt_windows_devices_printers.Print3DDevice
+PrintSchema = _winrt_windows_devices_printers.PrintSchema

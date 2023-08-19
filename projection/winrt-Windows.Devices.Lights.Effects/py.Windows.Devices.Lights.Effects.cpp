@@ -357,7 +357,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayBitmapEffect =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayBitmapEffect",
+        "_winrt_windows_devices_lights_effects.LampArrayBitmapEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayBitmapRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayBitmapRequestedEventArgs",
+        "_winrt_windows_devices_lights_effects.LampArrayBitmapRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayBlinkEffect =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayBlinkEffect",
+        "_winrt_windows_devices_lights_effects.LampArrayBlinkEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1359,7 +1359,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayColorRampEffect =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayColorRampEffect",
+        "_winrt_windows_devices_lights_effects.LampArrayColorRampEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1649,7 +1649,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayCustomEffect =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayCustomEffect",
+        "_winrt_windows_devices_lights_effects.LampArrayCustomEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2422,7 +2422,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayEffectPlaylist =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayEffectPlaylist",
+        "_winrt_windows_devices_lights_effects.LampArrayEffectPlaylist",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2763,7 +2763,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArraySolidEffect =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArraySolidEffect",
+        "_winrt_windows_devices_lights_effects.LampArraySolidEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2993,7 +2993,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_LampArrayUpdateRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_Lights_Effects.LampArrayUpdateRequestedEventArgs",
+        "_winrt_windows_devices_lights_effects.LampArrayUpdateRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3116,7 +3116,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyType_Spec type_spec_ILampArrayEffect =
     {
-        "_winrt_Windows_Devices_Lights_Effects.ILampArrayEffect",
+        "_winrt_windows_devices_lights_effects.ILampArrayEffect",
         sizeof(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3129,7 +3129,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Lights_Effects",
+           "_winrt_windows_devices_lights_effects",
            module_doc,
            0,
            nullptr,
@@ -3140,7 +3140,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
 } // py::cpp::Windows::Devices::Lights::Effects
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Lights_Effects(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Lights::Effects;
 

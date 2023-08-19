@@ -249,7 +249,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_TestRunner =
     {
-        "_winrt_TestComponent.TestRunner",
+        "_winrt_testcomponent.TestRunner",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3625,7 +3625,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_ITests =
     {
-        "_winrt_TestComponent.ITests",
+        "_winrt_testcomponent.ITests",
         sizeof(py::wrapper::TestComponent::ITests),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4040,7 +4040,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Blittable =
     {
-        "_winrt_TestComponent.Blittable",
+        "_winrt_testcomponent.Blittable",
         sizeof(py::wrapper::TestComponent::Blittable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4175,7 +4175,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_Nested =
     {
-        "_winrt_TestComponent.Nested",
+        "_winrt_testcomponent.Nested",
         sizeof(py::wrapper::TestComponent::Nested),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4380,7 +4380,7 @@ namespace py::cpp::TestComponent
 
     static PyType_Spec type_spec_NonBlittable =
     {
-        "_winrt_TestComponent.NonBlittable",
+        "_winrt_testcomponent.NonBlittable",
         sizeof(py::wrapper::TestComponent::NonBlittable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4393,7 +4393,7 @@ namespace py::cpp::TestComponent
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_TestComponent",
+           "_winrt_testcomponent",
            module_doc,
            0,
            nullptr,
@@ -4404,7 +4404,7 @@ namespace py::cpp::TestComponent
 
 } // py::cpp::TestComponent
 
-PyMODINIT_FUNC PyInit__winrt_TestComponent(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
 {
     using namespace py::cpp::TestComponent;
 

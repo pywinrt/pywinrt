@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbBulkInEndpointDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbBulkInEndpointDescriptor",
+        "_winrt_windows_devices_usb.UsbBulkInEndpointDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbBulkInEndpointDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -378,7 +378,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbBulkInPipe =
     {
-        "_winrt_Windows_Devices_Usb.UsbBulkInPipe",
+        "_winrt_windows_devices_usb.UsbBulkInPipe",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -513,7 +513,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbBulkOutEndpointDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbBulkOutEndpointDescriptor",
+        "_winrt_windows_devices_usb.UsbBulkOutEndpointDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -706,7 +706,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbBulkOutPipe =
     {
-        "_winrt_Windows_Devices_Usb.UsbBulkOutPipe",
+        "_winrt_windows_devices_usb.UsbBulkOutPipe",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -841,7 +841,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbConfiguration =
     {
-        "_winrt_Windows_Devices_Usb.UsbConfiguration",
+        "_winrt_windows_devices_usb.UsbConfiguration",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1073,7 +1073,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbConfigurationDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbConfigurationDescriptor",
+        "_winrt_windows_devices_usb.UsbConfigurationDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbConfigurationDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1363,7 +1363,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbControlRequestType =
     {
-        "_winrt_Windows_Devices_Usb.UsbControlRequestType",
+        "_winrt_windows_devices_usb.UsbControlRequestType",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbControlRequestType),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1511,7 +1511,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbDescriptor",
+        "_winrt_windows_devices_usb.UsbDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1944,7 +1944,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbDevice =
     {
-        "_winrt_Windows_Devices_Usb.UsbDevice",
+        "_winrt_windows_devices_usb.UsbDevice",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2186,7 +2186,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbDeviceClass =
     {
-        "_winrt_Windows_Devices_Usb.UsbDeviceClass",
+        "_winrt_windows_devices_usb.UsbDeviceClass",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbDeviceClass),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbDeviceClasses =
     {
-        "_winrt_Windows_Devices_Usb.UsbDeviceClasses",
+        "_winrt_windows_devices_usb.UsbDeviceClasses",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbDeviceClasses),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbDeviceClasses_Meta =
     {
-        "_winrt_Windows_Devices_Usb.UsbDeviceClasses_Meta",
+        "_winrt_windows_devices_usb.UsbDeviceClasses_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2656,7 +2656,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbDeviceDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbDeviceDescriptor",
+        "_winrt_windows_devices_usb.UsbDeviceDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2948,7 +2948,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbEndpointDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbEndpointDescriptor",
+        "_winrt_windows_devices_usb.UsbEndpointDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3163,7 +3163,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterface =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterface",
+        "_winrt_windows_devices_usb.UsbInterface",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3415,7 +3415,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterfaceDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterfaceDescriptor",
+        "_winrt_windows_devices_usb.UsbInterfaceDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3660,7 +3660,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterfaceSetting =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterfaceSetting",
+        "_winrt_windows_devices_usb.UsbInterfaceSetting",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3815,7 +3815,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterruptInEndpointDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterruptInEndpointDescriptor",
+        "_winrt_windows_devices_usb.UsbInterruptInEndpointDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3910,7 +3910,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterruptInEventArgs =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterruptInEventArgs",
+        "_winrt_windows_devices_usb.UsbInterruptInEventArgs",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterruptInEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4080,7 +4080,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterruptInPipe =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterruptInPipe",
+        "_winrt_windows_devices_usb.UsbInterruptInPipe",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterruptInPipe),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4235,7 +4235,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterruptOutEndpointDescriptor =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterruptOutEndpointDescriptor",
+        "_winrt_windows_devices_usb.UsbInterruptOutEndpointDescriptor",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4428,7 +4428,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbInterruptOutPipe =
     {
-        "_winrt_Windows_Devices_Usb.UsbInterruptOutPipe",
+        "_winrt_windows_devices_usb.UsbInterruptOutPipe",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4781,7 +4781,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyType_Spec type_spec_UsbSetupPacket =
     {
-        "_winrt_Windows_Devices_Usb.UsbSetupPacket",
+        "_winrt_windows_devices_usb.UsbSetupPacket",
         sizeof(py::wrapper::Windows::Devices::Usb::UsbSetupPacket),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4794,7 +4794,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Usb",
+           "_winrt_windows_devices_usb",
            module_doc,
            0,
            nullptr,
@@ -4805,7 +4805,7 @@ namespace py::cpp::Windows::Devices::Usb
 
 } // py::cpp::Windows::Devices::Usb
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Usb(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_usb(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Usb;
 

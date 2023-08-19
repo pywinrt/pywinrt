@@ -254,7 +254,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchor =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchor",
+        "_winrt_windows_perception_spatial.SpatialAnchor",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialAnchor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -389,7 +389,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchorExportSufficiency =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchorExportSufficiency",
+        "_winrt_windows_perception_spatial.SpatialAnchorExportSufficiency",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExportSufficiency),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -591,7 +591,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchorExporter =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchorExporter",
+        "_winrt_windows_perception_spatial.SpatialAnchorExporter",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExporter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -655,7 +655,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchorManager =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchorManager",
+        "_winrt_windows_perception_spatial.SpatialAnchorManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -750,7 +750,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchorRawCoordinateSystemAdjustedEventArgs =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs",
+        "_winrt_windows_perception_spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchorStore =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchorStore",
+        "_winrt_windows_perception_spatial.SpatialAnchorStore",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialAnchorStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1081,7 +1081,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialAnchorTransferManager =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialAnchorTransferManager",
+        "_winrt_windows_perception_spatial.SpatialAnchorTransferManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialBoundingVolume =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialBoundingVolume",
+        "_winrt_windows_perception_spatial.SpatialBoundingVolume",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialBoundingVolume),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1395,7 +1395,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialCoordinateSystem =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialCoordinateSystem",
+        "_winrt_windows_perception_spatial.SpatialCoordinateSystem",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialCoordinateSystem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1571,7 +1571,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntity =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntity",
+        "_winrt_windows_perception_spatial.SpatialEntity",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialEntity),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1666,7 +1666,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntityAddedEventArgs =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntityAddedEventArgs",
+        "_winrt_windows_perception_spatial.SpatialEntityAddedEventArgs",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialEntityAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1761,7 +1761,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntityRemovedEventArgs =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntityRemovedEventArgs",
+        "_winrt_windows_perception_spatial.SpatialEntityRemovedEventArgs",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1981,7 +1981,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntityStore =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntityStore",
+        "_winrt_windows_perception_spatial.SpatialEntityStore",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialEntityStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2002,7 +2002,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntityStore_Meta =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntityStore_Meta",
+        "_winrt_windows_perception_spatial.SpatialEntityStore_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2097,7 +2097,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntityUpdatedEventArgs =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntityUpdatedEventArgs",
+        "_winrt_windows_perception_spatial.SpatialEntityUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2434,7 +2434,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialEntityWatcher =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialEntityWatcher",
+        "_winrt_windows_perception_spatial.SpatialEntityWatcher",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2669,7 +2669,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialLocation =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialLocation",
+        "_winrt_windows_perception_spatial.SpatialLocation",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialLocation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3103,7 +3103,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialLocator =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialLocator",
+        "_winrt_windows_perception_spatial.SpatialLocator",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialLocator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3371,7 +3371,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialLocatorAttachedFrameOfReference =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialLocatorAttachedFrameOfReference",
+        "_winrt_windows_perception_spatial.SpatialLocatorAttachedFrameOfReference",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3494,7 +3494,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialLocatorPositionalTrackingDeactivatingEventArgs =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs",
+        "_winrt_windows_perception_spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3787,7 +3787,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialStageFrameOfReference =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialStageFrameOfReference",
+        "_winrt_windows_perception_spatial.SpatialStageFrameOfReference",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3808,7 +3808,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialStageFrameOfReference_Meta =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialStageFrameOfReference_Meta",
+        "_winrt_windows_perception_spatial.SpatialStageFrameOfReference_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3903,7 +3903,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialStationaryFrameOfReference =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialStationaryFrameOfReference",
+        "_winrt_windows_perception_spatial.SpatialStationaryFrameOfReference",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialStationaryFrameOfReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4038,7 +4038,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialBoundingBox =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialBoundingBox",
+        "_winrt_windows_perception_spatial.SpatialBoundingBox",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4313,7 +4313,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialBoundingFrustum =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialBoundingFrustum",
+        "_winrt_windows_perception_spatial.SpatialBoundingFrustum",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4483,7 +4483,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialBoundingOrientedBox =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialBoundingOrientedBox",
+        "_winrt_windows_perception_spatial.SpatialBoundingOrientedBox",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4618,7 +4618,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialBoundingSphere =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialBoundingSphere",
+        "_winrt_windows_perception_spatial.SpatialBoundingSphere",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4753,7 +4753,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyType_Spec type_spec_SpatialRay =
     {
-        "_winrt_Windows_Perception_Spatial.SpatialRay",
+        "_winrt_windows_perception_spatial.SpatialRay",
         sizeof(py::wrapper::Windows::Perception::Spatial::SpatialRay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4766,7 +4766,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Perception_Spatial",
+           "_winrt_windows_perception_spatial",
            module_doc,
            0,
            nullptr,
@@ -4777,7 +4777,7 @@ namespace py::cpp::Windows::Perception::Spatial
 
 } // py::cpp::Windows::Perception::Spatial
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Spatial(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial(void) noexcept
 {
     using namespace py::cpp::Windows::Perception::Spatial;
 

@@ -162,7 +162,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyType_Spec type_spec_AppBroadcastingMonitor =
     {
-        "_winrt_Windows_Media_AppBroadcasting.AppBroadcastingMonitor",
+        "_winrt_windows_media_appbroadcasting.AppBroadcastingMonitor",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -277,7 +277,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyType_Spec type_spec_AppBroadcastingStatus =
     {
-        "_winrt_Windows_Media_AppBroadcasting.AppBroadcastingStatus",
+        "_winrt_windows_media_appbroadcasting.AppBroadcastingStatus",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -512,7 +512,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyType_Spec type_spec_AppBroadcastingStatusDetails =
     {
-        "_winrt_Windows_Media_AppBroadcasting.AppBroadcastingStatusDetails",
+        "_winrt_windows_media_appbroadcasting.AppBroadcastingStatusDetails",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyType_Spec type_spec_AppBroadcastingUI =
     {
-        "_winrt_Windows_Media_AppBroadcasting.AppBroadcastingUI",
+        "_winrt_windows_media_appbroadcasting.AppBroadcastingUI",
         sizeof(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingUI),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -723,7 +723,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_AppBroadcasting",
+           "_winrt_windows_media_appbroadcasting",
            module_doc,
            0,
            nullptr,
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
 } // py::cpp::Windows::Media::AppBroadcasting
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_AppBroadcasting(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_appbroadcasting(void) noexcept
 {
     using namespace py::cpp::Windows::Media::AppBroadcasting;
 

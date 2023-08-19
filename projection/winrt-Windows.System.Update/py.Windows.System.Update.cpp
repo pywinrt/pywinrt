@@ -234,7 +234,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyType_Spec type_spec_SystemUpdateItem =
     {
-        "_winrt_Windows_System_Update.SystemUpdateItem",
+        "_winrt_windows_system_update.SystemUpdateItem",
         sizeof(py::wrapper::Windows::System::Update::SystemUpdateItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -369,7 +369,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyType_Spec type_spec_SystemUpdateLastErrorInfo =
     {
-        "_winrt_Windows_System_Update.SystemUpdateLastErrorInfo",
+        "_winrt_windows_system_update.SystemUpdateLastErrorInfo",
         sizeof(py::wrapper::Windows::System::Update::SystemUpdateLastErrorInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1001,7 +1001,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyType_Spec type_spec_SystemUpdateManager =
     {
-        "_winrt_Windows_System_Update.SystemUpdateManager",
+        "_winrt_windows_system_update.SystemUpdateManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1032,7 +1032,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyType_Spec type_spec_SystemUpdateManager_Meta =
     {
-        "_winrt_Windows_System_Update.SystemUpdateManager_Meta",
+        "_winrt_windows_system_update.SystemUpdateManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1045,7 +1045,7 @@ namespace py::cpp::Windows::System::Update
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Update",
+           "_winrt_windows_system_update",
            module_doc,
            0,
            nullptr,
@@ -1056,7 +1056,7 @@ namespace py::cpp::Windows::System::Update
 
 } // py::cpp::Windows::System::Update
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Update(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
 {
     using namespace py::cpp::Windows::System::Update;
 

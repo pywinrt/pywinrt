@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Gaming.Preview.GamesEnumeration")
+from . import _winrt_windows_gaming_preview_gamesenumeration
 
 try:
     import winrt.windows.applicationmodel
@@ -37,8 +36,8 @@ class GameListEntryLaunchableState(enum.IntEnum):
     BY_USER_PROVIDED_PATH = 2
     BY_TILE = 3
 
-GameList = _ns_module.GameList
-GameListEntry = _ns_module.GameListEntry
-GameModeConfiguration = _ns_module.GameModeConfiguration
-GameModeUserConfiguration = _ns_module.GameModeUserConfiguration
-IGameListEntry = _ns_module.IGameListEntry
+GameList = _winrt_windows_gaming_preview_gamesenumeration.GameList
+GameListEntry = _winrt_windows_gaming_preview_gamesenumeration.GameListEntry
+GameModeConfiguration = _winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration
+GameModeUserConfiguration = _winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration
+IGameListEntry = _winrt_windows_gaming_preview_gamesenumeration.IGameListEntry

@@ -134,7 +134,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationConnection =
     {
-        "_winrt_Windows_UI_UIAutomation.AutomationConnection",
+        "_winrt_windows_ui_uiautomation.AutomationConnection",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationConnectionBoundObject =
     {
-        "_winrt_Windows_UI_UIAutomation.AutomationConnectionBoundObject",
+        "_winrt_windows_ui_uiautomation.AutomationConnectionBoundObject",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationConnectionBoundObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationElement =
     {
-        "_winrt_Windows_UI_UIAutomation.AutomationElement",
+        "_winrt_windows_ui_uiautomation.AutomationElement",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -439,7 +439,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyType_Spec type_spec_AutomationTextRange =
     {
-        "_winrt_Windows_UI_UIAutomation.AutomationTextRange",
+        "_winrt_windows_ui_uiautomation.AutomationTextRange",
         sizeof(py::wrapper::Windows::UI::UIAutomation::AutomationTextRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -452,7 +452,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_UIAutomation",
+           "_winrt_windows_ui_uiautomation",
            module_doc,
            0,
            nullptr,
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
 } // py::cpp::Windows::UI::UIAutomation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_UIAutomation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation(void) noexcept
 {
     using namespace py::cpp::Windows::UI::UIAutomation;
 

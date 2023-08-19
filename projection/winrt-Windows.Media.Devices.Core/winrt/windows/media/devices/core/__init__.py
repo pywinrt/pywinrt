@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Devices.Core")
+from . import _winrt_windows_media_devices_core
 
 try:
     import winrt.windows.foundation
@@ -36,18 +35,18 @@ class FrameFlashMode(enum.IntEnum):
     ENABLE = 1
     GLOBAL = 2
 
-CameraIntrinsics = _ns_module.CameraIntrinsics
-DepthCorrelatedCoordinateMapper = _ns_module.DepthCorrelatedCoordinateMapper
-FrameControlCapabilities = _ns_module.FrameControlCapabilities
-FrameController = _ns_module.FrameController
-FrameExposureCapabilities = _ns_module.FrameExposureCapabilities
-FrameExposureCompensationCapabilities = _ns_module.FrameExposureCompensationCapabilities
-FrameExposureCompensationControl = _ns_module.FrameExposureCompensationControl
-FrameExposureControl = _ns_module.FrameExposureControl
-FrameFlashCapabilities = _ns_module.FrameFlashCapabilities
-FrameFlashControl = _ns_module.FrameFlashControl
-FrameFocusCapabilities = _ns_module.FrameFocusCapabilities
-FrameFocusControl = _ns_module.FrameFocusControl
-FrameIsoSpeedCapabilities = _ns_module.FrameIsoSpeedCapabilities
-FrameIsoSpeedControl = _ns_module.FrameIsoSpeedControl
-VariablePhotoSequenceController = _ns_module.VariablePhotoSequenceController
+CameraIntrinsics = _winrt_windows_media_devices_core.CameraIntrinsics
+DepthCorrelatedCoordinateMapper = _winrt_windows_media_devices_core.DepthCorrelatedCoordinateMapper
+FrameControlCapabilities = _winrt_windows_media_devices_core.FrameControlCapabilities
+FrameController = _winrt_windows_media_devices_core.FrameController
+FrameExposureCapabilities = _winrt_windows_media_devices_core.FrameExposureCapabilities
+FrameExposureCompensationCapabilities = _winrt_windows_media_devices_core.FrameExposureCompensationCapabilities
+FrameExposureCompensationControl = _winrt_windows_media_devices_core.FrameExposureCompensationControl
+FrameExposureControl = _winrt_windows_media_devices_core.FrameExposureControl
+FrameFlashCapabilities = _winrt_windows_media_devices_core.FrameFlashCapabilities
+FrameFlashControl = _winrt_windows_media_devices_core.FrameFlashControl
+FrameFocusCapabilities = _winrt_windows_media_devices_core.FrameFocusCapabilities
+FrameFocusControl = _winrt_windows_media_devices_core.FrameFocusControl
+FrameIsoSpeedCapabilities = _winrt_windows_media_devices_core.FrameIsoSpeedCapabilities
+FrameIsoSpeedControl = _winrt_windows_media_devices_core.FrameIsoSpeedControl
+VariablePhotoSequenceController = _winrt_windows_media_devices_core.VariablePhotoSequenceController

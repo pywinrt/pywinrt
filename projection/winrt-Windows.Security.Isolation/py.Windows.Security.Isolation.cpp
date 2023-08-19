@@ -670,7 +670,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironment =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironment",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironment",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -838,7 +838,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentCreateResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1024,7 +1024,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentFile =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentFile",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentFile",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1096,7 +1096,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentHost",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1118,7 +1118,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentHost_Meta =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentHost_Meta",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentLaunchFileResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentLaunchFileResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentLaunchFileResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOptions =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentOptions",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentOptions",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2053,7 +2053,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistration =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentOwnerRegistration",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistration",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2231,7 +2231,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentOwnerRegistrationData",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationData",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2346,7 +2346,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentPostMessageResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentPostMessageResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentPostMessageResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2670,7 +2670,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentProcess =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentProcess",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentProcess",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2816,7 +2816,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentShareFileRequestOptions",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileRequestOptions",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2951,7 +2951,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFileResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentShareFileResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3097,7 +3097,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3212,7 +3212,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentShareFolderResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentShareFolderResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3347,7 +3347,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentStartProcessResult =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentStartProcessResult",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentStartProcessResult",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3493,7 +3493,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentTelemetryParameters =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentTelemetryParameters",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3668,7 +3668,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentUserInfo =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentUserInfo",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3835,7 +3835,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsHostMessenger =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsHostMessenger",
+        "_winrt_windows_security_isolation.IsolatedWindowsHostMessenger",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3970,7 +3970,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyType_Spec type_spec_IsolatedWindowsEnvironmentCreateProgress =
     {
-        "_winrt_Windows_Security_Isolation.IsolatedWindowsEnvironmentCreateProgress",
+        "_winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateProgress",
         sizeof(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3983,7 +3983,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Isolation",
+           "_winrt_windows_security_isolation",
            module_doc,
            0,
            nullptr,
@@ -3994,7 +3994,7 @@ namespace py::cpp::Windows::Security::Isolation
 
 } // py::cpp::Windows::Security::Isolation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Isolation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Isolation;
 

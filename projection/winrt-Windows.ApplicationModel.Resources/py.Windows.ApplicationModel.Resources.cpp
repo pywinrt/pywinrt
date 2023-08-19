@@ -372,7 +372,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyType_Spec type_spec_ResourceLoader =
     {
-        "_winrt_Windows_ApplicationModel_Resources.ResourceLoader",
+        "_winrt_windows_applicationmodel_resources.ResourceLoader",
         sizeof(py::wrapper::Windows::ApplicationModel::Resources::ResourceLoader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -385,7 +385,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Resources",
+           "_winrt_windows_applicationmodel_resources",
            module_doc,
            0,
            nullptr,
@@ -396,7 +396,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
 
 } // py::cpp::Windows::ApplicationModel::Resources
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Resources(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Resources;
 

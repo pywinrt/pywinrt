@@ -154,7 +154,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyType_Spec type_spec_VariablePhotoCapturedEventArgs =
     {
-        "_winrt_Windows_Media_Capture_Core.VariablePhotoCapturedEventArgs",
+        "_winrt_windows_media_capture_core.VariablePhotoCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -439,7 +439,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyType_Spec type_spec_VariablePhotoSequenceCapture =
     {
-        "_winrt_Windows_Media_Capture_Core.VariablePhotoSequenceCapture",
+        "_winrt_windows_media_capture_core.VariablePhotoSequenceCapture",
         sizeof(py::wrapper::Windows::Media::Capture::Core::VariablePhotoSequenceCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -452,7 +452,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Capture_Core",
+           "_winrt_windows_media_capture_core",
            module_doc,
            0,
            nullptr,
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::Media::Capture::Core
 
 } // py::cpp::Windows::Media::Capture::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_capture_core(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Capture::Core;
 

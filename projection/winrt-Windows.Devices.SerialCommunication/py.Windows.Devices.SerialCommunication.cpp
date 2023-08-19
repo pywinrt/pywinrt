@@ -94,7 +94,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyType_Spec type_spec_ErrorReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_SerialCommunication.ErrorReceivedEventArgs",
+        "_winrt_windows_devices_serialcommunication.ErrorReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -189,7 +189,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyType_Spec type_spec_PinChangedEventArgs =
     {
-        "_winrt_Windows_Devices_SerialCommunication.PinChangedEventArgs",
+        "_winrt_windows_devices_serialcommunication.PinChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::SerialCommunication::PinChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1182,7 +1182,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyType_Spec type_spec_SerialDevice =
     {
-        "_winrt_Windows_Devices_SerialCommunication.SerialDevice",
+        "_winrt_windows_devices_serialcommunication.SerialDevice",
         sizeof(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1195,7 +1195,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_SerialCommunication",
+           "_winrt_windows_devices_serialcommunication",
            module_doc,
            0,
            nullptr,
@@ -1206,7 +1206,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
 } // py::cpp::Windows::Devices::SerialCommunication
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_SerialCommunication(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::SerialCommunication;
 

@@ -94,7 +94,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyType_Spec type_spec_ExtendedExecutionRevokedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_ExtendedExecution.ExtendedExecutionRevokedEventArgs",
+        "_winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -464,7 +464,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyType_Spec type_spec_ExtendedExecutionSession =
     {
-        "_winrt_Windows_ApplicationModel_ExtendedExecution.ExtendedExecutionSession",
+        "_winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession",
         sizeof(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -477,7 +477,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_ExtendedExecution",
+           "_winrt_windows_applicationmodel_extendedexecution",
            module_doc,
            0,
            nullptr,
@@ -488,7 +488,7 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 
 } // py::cpp::Windows::ApplicationModel::ExtendedExecution
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_ExtendedExecution(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::ExtendedExecution;
 

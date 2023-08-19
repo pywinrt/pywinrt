@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.RemoteDesktop.Provider")
+from . import _winrt_windows_system_remotedesktop_provider
 
 try:
     import winrt.windows.foundation
@@ -22,4 +21,4 @@ class RemoteDesktopConnectionStatus(enum.IntEnum):
     USER_INPUT_NEEDED = 2
     DISCONNECTED = 3
 
-RemoteDesktopConnectionInfo = _ns_module.RemoteDesktopConnectionInfo
+RemoteDesktopConnectionInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo

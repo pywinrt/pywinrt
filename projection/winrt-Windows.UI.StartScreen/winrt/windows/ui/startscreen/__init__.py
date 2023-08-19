@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.StartScreen")
+from . import _winrt_windows_ui_startscreen
 
 try:
     import winrt.windows.applicationmodel.core
@@ -74,12 +73,12 @@ class TileSize(enum.IntEnum):
     SQUARE71X71 = 6
     SQUARE44X44 = 7
 
-JumpList = _ns_module.JumpList
-JumpListItem = _ns_module.JumpListItem
-SecondaryTile = _ns_module.SecondaryTile
-SecondaryTileVisualElements = _ns_module.SecondaryTileVisualElements
-StartScreenManager = _ns_module.StartScreenManager
-TileMixedRealityModel = _ns_module.TileMixedRealityModel
-VisualElementsRequest = _ns_module.VisualElementsRequest
-VisualElementsRequestDeferral = _ns_module.VisualElementsRequestDeferral
-VisualElementsRequestedEventArgs = _ns_module.VisualElementsRequestedEventArgs
+JumpList = _winrt_windows_ui_startscreen.JumpList
+JumpListItem = _winrt_windows_ui_startscreen.JumpListItem
+SecondaryTile = _winrt_windows_ui_startscreen.SecondaryTile
+SecondaryTileVisualElements = _winrt_windows_ui_startscreen.SecondaryTileVisualElements
+StartScreenManager = _winrt_windows_ui_startscreen.StartScreenManager
+TileMixedRealityModel = _winrt_windows_ui_startscreen.TileMixedRealityModel
+VisualElementsRequest = _winrt_windows_ui_startscreen.VisualElementsRequest
+VisualElementsRequestDeferral = _winrt_windows_ui_startscreen.VisualElementsRequestDeferral
+VisualElementsRequestedEventArgs = _winrt_windows_ui_startscreen.VisualElementsRequestedEventArgs

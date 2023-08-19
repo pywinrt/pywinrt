@@ -442,7 +442,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectService =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectService",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectService",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1180,7 +1180,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceAdvertiser =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceAdvertiser",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceAdvertiser",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAdvertiser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceAutoAcceptSessionConnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1410,7 +1410,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceProvisioningInfo =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceProvisioningInfo",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceProvisioningInfo",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceProvisioningInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceRemotePortAddedEventArgs =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceRemotePortAddedEventArgs",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceRemotePortAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceRemotePortAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1977,7 +1977,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceSession =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceSession",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceSession",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2072,7 +2072,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionDeferredEventArgs =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceSessionDeferredEventArgs",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionDeferredEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionDeferredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2260,7 +2260,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionRequest =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceSessionRequest",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequest",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2365,7 +2365,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyType_Spec type_spec_WiFiDirectServiceSessionRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_WiFiDirect_Services.WiFiDirectServiceSessionRequestedEventArgs",
+        "_winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::WiFiDirect::Services::WiFiDirectServiceSessionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2378,7 +2378,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_WiFiDirect_Services",
+           "_winrt_windows_devices_wifidirect_services",
            module_doc,
            0,
            nullptr,
@@ -2389,7 +2389,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect::Services
 
 } // py::cpp::Windows::Devices::WiFiDirect::Services
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_WiFiDirect_Services(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect_services(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::WiFiDirect::Services;
 

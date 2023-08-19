@@ -116,7 +116,7 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyType_Spec type_spec_PowerManager =
     {
-        "_winrt_Windows_Phone_System_Power.PowerManager",
+        "_winrt_windows_phone_system_power.PowerManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -138,7 +138,7 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyType_Spec type_spec_PowerManager_Meta =
     {
-        "_winrt_Windows_Phone_System_Power.PowerManager_Meta",
+        "_winrt_windows_phone_system_power.PowerManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -151,7 +151,7 @@ namespace py::cpp::Windows::Phone::System::Power
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_System_Power",
+           "_winrt_windows_phone_system_power",
            module_doc,
            0,
            nullptr,
@@ -162,7 +162,7 @@ namespace py::cpp::Windows::Phone::System::Power
 
 } // py::cpp::Windows::Phone::System::Power
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_System_Power(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_system_power(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::System::Power;
 

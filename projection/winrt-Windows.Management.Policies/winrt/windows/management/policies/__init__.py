@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Management.Policies")
+from . import _winrt_windows_management_policies
 
 try:
     import winrt.windows.foundation
@@ -29,5 +28,5 @@ class NamedPolicyKind(enum.IntEnum):
     INT64 = 4
     STRING = 5
 
-NamedPolicy = _ns_module.NamedPolicy
-NamedPolicyData = _ns_module.NamedPolicyData
+NamedPolicy = _winrt_windows_management_policies.NamedPolicy
+NamedPolicyData = _winrt_windows_management_policies.NamedPolicyData

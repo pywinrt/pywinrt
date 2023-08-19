@@ -337,7 +337,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyType_Spec type_spec_PhoneCallOrigin =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Provider.PhoneCallOrigin",
+        "_winrt_windows_applicationmodel_calls_provider.PhoneCallOrigin",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyType_Spec type_spec_PhoneCallOriginManager =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Provider.PhoneCallOriginManager",
+        "_winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -526,7 +526,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyType_Spec type_spec_PhoneCallOriginManager_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Provider.PhoneCallOriginManager_Meta",
+        "_winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Calls_Provider",
+           "_winrt_windows_applicationmodel_calls_provider",
            module_doc,
            0,
            nullptr,
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 
 } // py::cpp::Windows::ApplicationModel::Calls::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_provider(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Calls::Provider;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Geolocation")
+from . import _winrt_windows_devices_geolocation
 
 try:
     import winrt.windows.foundation
@@ -65,21 +64,21 @@ class VisitStateChange(enum.IntEnum):
     DEPARTED = 2
     OTHER_MOVEMENT = 3
 
-BasicGeoposition = _ns_module.BasicGeoposition
-CivicAddress = _ns_module.CivicAddress
-GeoboundingBox = _ns_module.GeoboundingBox
-Geocircle = _ns_module.Geocircle
-Geocoordinate = _ns_module.Geocoordinate
-GeocoordinateSatelliteData = _ns_module.GeocoordinateSatelliteData
-Geolocator = _ns_module.Geolocator
-Geopath = _ns_module.Geopath
-Geopoint = _ns_module.Geopoint
-Geoposition = _ns_module.Geoposition
-Geovisit = _ns_module.Geovisit
-GeovisitMonitor = _ns_module.GeovisitMonitor
-GeovisitStateChangedEventArgs = _ns_module.GeovisitStateChangedEventArgs
-GeovisitTriggerDetails = _ns_module.GeovisitTriggerDetails
-PositionChangedEventArgs = _ns_module.PositionChangedEventArgs
-StatusChangedEventArgs = _ns_module.StatusChangedEventArgs
-VenueData = _ns_module.VenueData
-IGeoshape = _ns_module.IGeoshape
+BasicGeoposition = _winrt_windows_devices_geolocation.BasicGeoposition
+CivicAddress = _winrt_windows_devices_geolocation.CivicAddress
+GeoboundingBox = _winrt_windows_devices_geolocation.GeoboundingBox
+Geocircle = _winrt_windows_devices_geolocation.Geocircle
+Geocoordinate = _winrt_windows_devices_geolocation.Geocoordinate
+GeocoordinateSatelliteData = _winrt_windows_devices_geolocation.GeocoordinateSatelliteData
+Geolocator = _winrt_windows_devices_geolocation.Geolocator
+Geopath = _winrt_windows_devices_geolocation.Geopath
+Geopoint = _winrt_windows_devices_geolocation.Geopoint
+Geoposition = _winrt_windows_devices_geolocation.Geoposition
+Geovisit = _winrt_windows_devices_geolocation.Geovisit
+GeovisitMonitor = _winrt_windows_devices_geolocation.GeovisitMonitor
+GeovisitStateChangedEventArgs = _winrt_windows_devices_geolocation.GeovisitStateChangedEventArgs
+GeovisitTriggerDetails = _winrt_windows_devices_geolocation.GeovisitTriggerDetails
+PositionChangedEventArgs = _winrt_windows_devices_geolocation.PositionChangedEventArgs
+StatusChangedEventArgs = _winrt_windows_devices_geolocation.StatusChangedEventArgs
+VenueData = _winrt_windows_devices_geolocation.VenueData
+IGeoshape = _winrt_windows_devices_geolocation.IGeoshape

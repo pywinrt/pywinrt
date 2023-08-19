@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Core")
+from . import _winrt_windows_ui_core
 
 try:
     import winrt.windows.foundation
@@ -125,39 +124,39 @@ class CoreWindowFlowDirection(enum.IntEnum):
     LEFT_TO_RIGHT = 0
     RIGHT_TO_LEFT = 1
 
-CorePhysicalKeyStatus = _ns_module.CorePhysicalKeyStatus
-CoreProximityEvaluation = _ns_module.CoreProximityEvaluation
-AcceleratorKeyEventArgs = _ns_module.AcceleratorKeyEventArgs
-AutomationProviderRequestedEventArgs = _ns_module.AutomationProviderRequestedEventArgs
-BackRequestedEventArgs = _ns_module.BackRequestedEventArgs
-CharacterReceivedEventArgs = _ns_module.CharacterReceivedEventArgs
-ClosestInteractiveBoundsRequestedEventArgs = _ns_module.ClosestInteractiveBoundsRequestedEventArgs
-CoreAcceleratorKeys = _ns_module.CoreAcceleratorKeys
-CoreComponentInputSource = _ns_module.CoreComponentInputSource
-CoreCursor = _ns_module.CoreCursor
-CoreDispatcher = _ns_module.CoreDispatcher
-CoreIndependentInputSource = _ns_module.CoreIndependentInputSource
-CoreIndependentInputSourceController = _ns_module.CoreIndependentInputSourceController
-CoreWindow = _ns_module.CoreWindow
-CoreWindowDialog = _ns_module.CoreWindowDialog
-CoreWindowEventArgs = _ns_module.CoreWindowEventArgs
-CoreWindowFlyout = _ns_module.CoreWindowFlyout
-CoreWindowPopupShowingEventArgs = _ns_module.CoreWindowPopupShowingEventArgs
-CoreWindowResizeManager = _ns_module.CoreWindowResizeManager
-IdleDispatchedHandlerArgs = _ns_module.IdleDispatchedHandlerArgs
-InputEnabledEventArgs = _ns_module.InputEnabledEventArgs
-KeyEventArgs = _ns_module.KeyEventArgs
-PointerEventArgs = _ns_module.PointerEventArgs
-SystemNavigationManager = _ns_module.SystemNavigationManager
-TouchHitTestingEventArgs = _ns_module.TouchHitTestingEventArgs
-VisibilityChangedEventArgs = _ns_module.VisibilityChangedEventArgs
-WindowActivatedEventArgs = _ns_module.WindowActivatedEventArgs
-WindowSizeChangedEventArgs = _ns_module.WindowSizeChangedEventArgs
-ICoreAcceleratorKeys = _ns_module.ICoreAcceleratorKeys
-ICoreInputSourceBase = _ns_module.ICoreInputSourceBase
-ICorePointerInputSource = _ns_module.ICorePointerInputSource
-ICorePointerInputSource2 = _ns_module.ICorePointerInputSource2
-ICorePointerRedirector = _ns_module.ICorePointerRedirector
-ICoreWindow = _ns_module.ICoreWindow
-ICoreWindowEventArgs = _ns_module.ICoreWindowEventArgs
-IInitializeWithCoreWindow = _ns_module.IInitializeWithCoreWindow
+CorePhysicalKeyStatus = _winrt_windows_ui_core.CorePhysicalKeyStatus
+CoreProximityEvaluation = _winrt_windows_ui_core.CoreProximityEvaluation
+AcceleratorKeyEventArgs = _winrt_windows_ui_core.AcceleratorKeyEventArgs
+AutomationProviderRequestedEventArgs = _winrt_windows_ui_core.AutomationProviderRequestedEventArgs
+BackRequestedEventArgs = _winrt_windows_ui_core.BackRequestedEventArgs
+CharacterReceivedEventArgs = _winrt_windows_ui_core.CharacterReceivedEventArgs
+ClosestInteractiveBoundsRequestedEventArgs = _winrt_windows_ui_core.ClosestInteractiveBoundsRequestedEventArgs
+CoreAcceleratorKeys = _winrt_windows_ui_core.CoreAcceleratorKeys
+CoreComponentInputSource = _winrt_windows_ui_core.CoreComponentInputSource
+CoreCursor = _winrt_windows_ui_core.CoreCursor
+CoreDispatcher = _winrt_windows_ui_core.CoreDispatcher
+CoreIndependentInputSource = _winrt_windows_ui_core.CoreIndependentInputSource
+CoreIndependentInputSourceController = _winrt_windows_ui_core.CoreIndependentInputSourceController
+CoreWindow = _winrt_windows_ui_core.CoreWindow
+CoreWindowDialog = _winrt_windows_ui_core.CoreWindowDialog
+CoreWindowEventArgs = _winrt_windows_ui_core.CoreWindowEventArgs
+CoreWindowFlyout = _winrt_windows_ui_core.CoreWindowFlyout
+CoreWindowPopupShowingEventArgs = _winrt_windows_ui_core.CoreWindowPopupShowingEventArgs
+CoreWindowResizeManager = _winrt_windows_ui_core.CoreWindowResizeManager
+IdleDispatchedHandlerArgs = _winrt_windows_ui_core.IdleDispatchedHandlerArgs
+InputEnabledEventArgs = _winrt_windows_ui_core.InputEnabledEventArgs
+KeyEventArgs = _winrt_windows_ui_core.KeyEventArgs
+PointerEventArgs = _winrt_windows_ui_core.PointerEventArgs
+SystemNavigationManager = _winrt_windows_ui_core.SystemNavigationManager
+TouchHitTestingEventArgs = _winrt_windows_ui_core.TouchHitTestingEventArgs
+VisibilityChangedEventArgs = _winrt_windows_ui_core.VisibilityChangedEventArgs
+WindowActivatedEventArgs = _winrt_windows_ui_core.WindowActivatedEventArgs
+WindowSizeChangedEventArgs = _winrt_windows_ui_core.WindowSizeChangedEventArgs
+ICoreAcceleratorKeys = _winrt_windows_ui_core.ICoreAcceleratorKeys
+ICoreInputSourceBase = _winrt_windows_ui_core.ICoreInputSourceBase
+ICorePointerInputSource = _winrt_windows_ui_core.ICorePointerInputSource
+ICorePointerInputSource2 = _winrt_windows_ui_core.ICorePointerInputSource2
+ICorePointerRedirector = _winrt_windows_ui_core.ICorePointerRedirector
+ICoreWindow = _winrt_windows_ui_core.ICoreWindow
+ICoreWindowEventArgs = _winrt_windows_ui_core.ICoreWindowEventArgs
+IInitializeWithCoreWindow = _winrt_windows_ui_core.IInitializeWithCoreWindow

@@ -236,7 +236,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyType_Spec type_spec_Playlist =
     {
-        "_winrt_Windows_Media_Playlists.Playlist",
+        "_winrt_windows_media_playlists.Playlist",
         sizeof(py::wrapper::Windows::Media::Playlists::Playlist),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -249,7 +249,7 @@ namespace py::cpp::Windows::Media::Playlists
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Playlists",
+           "_winrt_windows_media_playlists",
            module_doc,
            0,
            nullptr,
@@ -260,7 +260,7 @@ namespace py::cpp::Windows::Media::Playlists
 
 } // py::cpp::Windows::Media::Playlists
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Playlists(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_playlists(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Playlists;
 

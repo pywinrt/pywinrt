@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Preview")
+from . import _winrt_windows_system_preview
 
 try:
     import winrt.windows.devices.sensors
@@ -24,6 +23,6 @@ class HingeState(enum.IntEnum):
     CONVEX = 4
     FULL = 5
 
-TwoPanelHingedDevicePosturePreview = _ns_module.TwoPanelHingedDevicePosturePreview
-TwoPanelHingedDevicePosturePreviewReading = _ns_module.TwoPanelHingedDevicePosturePreviewReading
-TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = _ns_module.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs
+TwoPanelHingedDevicePosturePreview = _winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview
+TwoPanelHingedDevicePosturePreviewReading = _winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading
+TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = _winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs

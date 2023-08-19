@@ -52,7 +52,7 @@ namespace py::cpp::Windows::System::RemoteDesktop
 
     static PyType_Spec type_spec_InteractiveSession =
     {
-        "_winrt_Windows_System_RemoteDesktop.InteractiveSession",
+        "_winrt_windows_system_remotedesktop.InteractiveSession",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -73,7 +73,7 @@ namespace py::cpp::Windows::System::RemoteDesktop
 
     static PyType_Spec type_spec_InteractiveSession_Meta =
     {
-        "_winrt_Windows_System_RemoteDesktop.InteractiveSession_Meta",
+        "_winrt_windows_system_remotedesktop.InteractiveSession_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::System::RemoteDesktop
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_RemoteDesktop",
+           "_winrt_windows_system_remotedesktop",
            module_doc,
            0,
            nullptr,
@@ -97,7 +97,7 @@ namespace py::cpp::Windows::System::RemoteDesktop
 
 } // py::cpp::Windows::System::RemoteDesktop
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_RemoteDesktop(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop(void) noexcept
 {
     using namespace py::cpp::Windows::System::RemoteDesktop;
 

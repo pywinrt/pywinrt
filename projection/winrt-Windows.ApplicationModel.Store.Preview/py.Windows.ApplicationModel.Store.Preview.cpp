@@ -144,7 +144,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_DeliveryOptimizationSettings =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.DeliveryOptimizationSettings",
+        "_winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1043,7 +1043,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StoreConfiguration =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StoreConfiguration",
+        "_winrt_windows_applicationmodel_store_preview.StoreConfiguration",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1065,7 +1065,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StoreConfiguration_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StoreConfiguration_Meta",
+        "_winrt_windows_applicationmodel_store_preview.StoreConfiguration_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1220,7 +1220,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StoreHardwareManufacturerInfo =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StoreHardwareManufacturerInfo",
+        "_winrt_windows_applicationmodel_store_preview.StoreHardwareManufacturerInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1317,7 +1317,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StorePreview =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StorePreview",
+        "_winrt_windows_applicationmodel_store_preview.StorePreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1492,7 +1492,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StorePreviewProductInfo =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StorePreviewProductInfo",
+        "_winrt_windows_applicationmodel_store_preview.StorePreviewProductInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1587,7 +1587,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StorePreviewPurchaseResults =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StorePreviewPurchaseResults",
+        "_winrt_windows_applicationmodel_store_preview.StorePreviewPurchaseResults",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1842,7 +1842,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_StorePreviewSkuInfo =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.StorePreviewSkuInfo",
+        "_winrt_windows_applicationmodel_store_preview.StorePreviewSkuInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1931,7 +1931,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyType_Spec type_spec_WebAuthenticationCoreManagerHelper =
     {
-        "_winrt_Windows_ApplicationModel_Store_Preview.WebAuthenticationCoreManagerHelper",
+        "_winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1944,7 +1944,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Store_Preview",
+           "_winrt_windows_applicationmodel_store_preview",
            module_doc,
            0,
            nullptr,
@@ -1955,7 +1955,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
 } // py::cpp::Windows::ApplicationModel::Store::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Store::Preview;
 

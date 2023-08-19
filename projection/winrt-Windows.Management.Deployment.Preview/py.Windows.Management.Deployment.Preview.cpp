@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
     static PyType_Spec type_spec_ClassicAppManager =
     {
-        "_winrt_Windows_Management_Deployment_Preview.ClassicAppManager",
+        "_winrt_windows_management_deployment_preview.ClassicAppManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -180,7 +180,7 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
     static PyType_Spec type_spec_InstalledClassicAppInfo =
     {
-        "_winrt_Windows_Management_Deployment_Preview.InstalledClassicAppInfo",
+        "_winrt_windows_management_deployment_preview.InstalledClassicAppInfo",
         sizeof(py::wrapper::Windows::Management::Deployment::Preview::InstalledClassicAppInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -193,7 +193,7 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Management_Deployment_Preview",
+           "_winrt_windows_management_deployment_preview",
            module_doc,
            0,
            nullptr,
@@ -204,7 +204,7 @@ namespace py::cpp::Windows::Management::Deployment::Preview
 
 } // py::cpp::Windows::Management::Deployment::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Management_Deployment_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_management_deployment_preview(void) noexcept
 {
     using namespace py::cpp::Windows::Management::Deployment::Preview;
 

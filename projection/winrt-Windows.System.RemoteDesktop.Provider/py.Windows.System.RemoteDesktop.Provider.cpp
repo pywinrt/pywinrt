@@ -140,7 +140,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
     static PyType_Spec type_spec_RemoteDesktopConnectionInfo =
     {
-        "_winrt_Windows_System_RemoteDesktop_Provider.RemoteDesktopConnectionInfo",
+        "_winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -153,7 +153,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_RemoteDesktop_Provider",
+           "_winrt_windows_system_remotedesktop_provider",
            module_doc,
            0,
            nullptr,
@@ -164,7 +164,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Provider
 
 } // py::cpp::Windows::System::RemoteDesktop::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_RemoteDesktop_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_provider(void) noexcept
 {
     using namespace py::cpp::Windows::System::RemoteDesktop::Provider;
 

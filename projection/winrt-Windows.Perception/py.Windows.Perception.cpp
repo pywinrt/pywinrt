@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Perception
 
     static PyType_Spec type_spec_PerceptionTimestamp =
     {
-        "_winrt_Windows_Perception.PerceptionTimestamp",
+        "_winrt_windows_perception.PerceptionTimestamp",
         sizeof(py::wrapper::Windows::Perception::PerceptionTimestamp),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Perception
 
     static PyType_Spec type_spec_PerceptionTimestampHelper =
     {
-        "_winrt_Windows_Perception.PerceptionTimestampHelper",
+        "_winrt_windows_perception.PerceptionTimestampHelper",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::Perception
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Perception",
+           "_winrt_windows_perception",
            module_doc,
            0,
            nullptr,
@@ -256,7 +256,7 @@ namespace py::cpp::Windows::Perception
 
 } // py::cpp::Windows::Perception
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Perception(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_perception(void) noexcept
 {
     using namespace py::cpp::Windows::Perception;
 

@@ -300,7 +300,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyType_Spec type_spec_RemoteTextConnection =
     {
-        "_winrt_Windows_System_RemoteDesktop_Input.RemoteTextConnection",
+        "_winrt_windows_system_remotedesktop_input.RemoteTextConnection",
         sizeof(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -313,7 +313,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_RemoteDesktop_Input",
+           "_winrt_windows_system_remotedesktop_input",
            module_doc,
            0,
            nullptr,
@@ -324,7 +324,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
 
 } // py::cpp::Windows::System::RemoteDesktop::Input
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_RemoteDesktop_Input(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop_input(void) noexcept
 {
     using namespace py::cpp::Windows::System::RemoteDesktop::Input;
 

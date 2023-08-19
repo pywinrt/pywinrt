@@ -367,7 +367,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingConnection =
     {
-        "_winrt_Windows_Media_Casting.CastingConnection",
+        "_winrt_windows_media_casting.CastingConnection",
         sizeof(py::wrapper::Windows::Media::Casting::CastingConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingConnectionErrorOccurredEventArgs =
     {
-        "_winrt_Windows_Media_Casting.CastingConnectionErrorOccurredEventArgs",
+        "_winrt_windows_media_casting.CastingConnectionErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -805,7 +805,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingDevice =
     {
-        "_winrt_Windows_Media_Casting.CastingDevice",
+        "_winrt_windows_media_casting.CastingDevice",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1119,7 +1119,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingDevicePicker =
     {
-        "_winrt_Windows_Media_Casting.CastingDevicePicker",
+        "_winrt_windows_media_casting.CastingDevicePicker",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDevicePicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1358,7 +1358,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingDevicePickerFilter =
     {
-        "_winrt_Windows_Media_Casting.CastingDevicePickerFilter",
+        "_winrt_windows_media_casting.CastingDevicePickerFilter",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1453,7 +1453,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingDeviceSelectedEventArgs =
     {
-        "_winrt_Windows_Media_Casting.CastingDeviceSelectedEventArgs",
+        "_winrt_windows_media_casting.CastingDeviceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Media::Casting::CastingDeviceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1576,7 +1576,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyType_Spec type_spec_CastingSource =
     {
-        "_winrt_Windows_Media_Casting.CastingSource",
+        "_winrt_windows_media_casting.CastingSource",
         sizeof(py::wrapper::Windows::Media::Casting::CastingSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1589,7 +1589,7 @@ namespace py::cpp::Windows::Media::Casting
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Casting",
+           "_winrt_windows_media_casting",
            module_doc,
            0,
            nullptr,
@@ -1600,7 +1600,7 @@ namespace py::cpp::Windows::Media::Casting
 
 } // py::cpp::Windows::Media::Casting
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Casting(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_casting(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Casting;
 

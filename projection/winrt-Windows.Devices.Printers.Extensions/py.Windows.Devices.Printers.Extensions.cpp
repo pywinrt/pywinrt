@@ -262,7 +262,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_Print3DWorkflow =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.Print3DWorkflow",
+        "_winrt_windows_devices_printers_extensions.Print3DWorkflow",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -456,7 +456,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_Print3DWorkflowPrintRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.Print3DWorkflowPrintRequestedEventArgs",
+        "_winrt_windows_devices_printers_extensions.Print3DWorkflowPrintRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -551,7 +551,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_Print3DWorkflowPrinterChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.Print3DWorkflowPrinterChangedEventArgs",
+        "_winrt_windows_devices_printers_extensions.Print3DWorkflowPrinterChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -617,7 +617,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_PrintExtensionContext =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.PrintExtensionContext",
+        "_winrt_windows_devices_printers_extensions.PrintExtensionContext",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -760,7 +760,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_PrintNotificationEventDetails =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.PrintNotificationEventDetails",
+        "_winrt_windows_devices_printers_extensions.PrintNotificationEventDetails",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -900,7 +900,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_PrintTaskConfiguration =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.PrintTaskConfiguration",
+        "_winrt_windows_devices_printers_extensions.PrintTaskConfiguration",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1089,7 +1089,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_PrintTaskConfigurationSaveRequest =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.PrintTaskConfigurationSaveRequest",
+        "_winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequest",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1195,7 +1195,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedDeferral =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.PrintTaskConfigurationSaveRequestedDeferral",
+        "_winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedDeferral",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1290,7 +1290,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyType_Spec type_spec_PrintTaskConfigurationSaveRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_Printers_Extensions.PrintTaskConfigurationSaveRequestedEventArgs",
+        "_winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1303,7 +1303,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Printers_Extensions",
+           "_winrt_windows_devices_printers_extensions",
            module_doc,
            0,
            nullptr,
@@ -1314,7 +1314,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
 } // py::cpp::Windows::Devices::Printers::Extensions
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Printers_Extensions(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_printers_extensions(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Printers::Extensions;
 

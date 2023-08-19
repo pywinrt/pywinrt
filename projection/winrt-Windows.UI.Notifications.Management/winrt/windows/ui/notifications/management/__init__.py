@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Notifications.Management")
+from . import _winrt_windows_ui_notifications_management
 
 try:
     import winrt.windows.foundation
@@ -26,4 +25,4 @@ class UserNotificationListenerAccessStatus(enum.IntEnum):
     ALLOWED = 1
     DENIED = 2
 
-UserNotificationListener = _ns_module.UserNotificationListener
+UserNotificationListener = _winrt_windows_ui_notifications_management.UserNotificationListener

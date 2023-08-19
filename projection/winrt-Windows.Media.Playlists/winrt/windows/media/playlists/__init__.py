@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Playlists")
+from . import _winrt_windows_media_playlists
 
 try:
     import winrt.windows.foundation
@@ -26,4 +25,4 @@ class PlaylistFormat(enum.IntEnum):
     ZUNE = 1
     M3U = 2
 
-Playlist = _ns_module.Playlist
+Playlist = _winrt_windows_media_playlists.Playlist

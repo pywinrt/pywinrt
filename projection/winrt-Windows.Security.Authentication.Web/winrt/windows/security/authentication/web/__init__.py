@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Authentication.Web")
+from . import _winrt_windows_security_authentication_web
 
 try:
     import winrt.windows.foundation
@@ -33,5 +32,5 @@ class WebAuthenticationStatus(enum.IntEnum):
     USER_CANCEL = 1
     ERROR_HTTP = 2
 
-WebAuthenticationBroker = _ns_module.WebAuthenticationBroker
-WebAuthenticationResult = _ns_module.WebAuthenticationResult
+WebAuthenticationBroker = _winrt_windows_security_authentication_web.WebAuthenticationBroker
+WebAuthenticationResult = _winrt_windows_security_authentication_web.WebAuthenticationResult

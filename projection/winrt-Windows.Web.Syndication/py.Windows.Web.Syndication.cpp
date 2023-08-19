@@ -258,7 +258,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationAttribute =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationAttribute",
+        "_winrt_windows_web_syndication.SyndicationAttribute",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationAttribute),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -844,7 +844,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationCategory =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationCategory",
+        "_winrt_windows_web_syndication.SyndicationCategory",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationCategory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1263,7 +1263,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationClient =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationClient",
+        "_winrt_windows_web_syndication.SyndicationClient",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1896,7 +1896,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationContent =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationContent",
+        "_winrt_windows_web_syndication.SyndicationContent",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationContent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1962,7 +1962,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationError =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationError",
+        "_winrt_windows_web_syndication.SyndicationError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3039,7 +3039,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationFeed =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationFeed",
+        "_winrt_windows_web_syndication.SyndicationFeed",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationFeed),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3608,7 +3608,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationGenerator =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationGenerator",
+        "_winrt_windows_web_syndication.SyndicationGenerator",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationGenerator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4693,7 +4693,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationItem =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationItem",
+        "_winrt_windows_web_syndication.SyndicationItem",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5425,7 +5425,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationLink =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationLink",
+        "_winrt_windows_web_syndication.SyndicationLink",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationLink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5852,7 +5852,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationNode =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationNode",
+        "_winrt_windows_web_syndication.SyndicationNode",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6438,7 +6438,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationPerson =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationPerson",
+        "_winrt_windows_web_syndication.SyndicationPerson",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationPerson),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7023,7 +7023,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_SyndicationText =
     {
-        "_winrt_Windows_Web_Syndication.SyndicationText",
+        "_winrt_windows_web_syndication.SyndicationText",
         sizeof(py::wrapper::Windows::Web::Syndication::SyndicationText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7404,7 +7404,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_ISyndicationClient =
     {
-        "_winrt_Windows_Web_Syndication.ISyndicationClient",
+        "_winrt_windows_web_syndication.ISyndicationClient",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7791,7 +7791,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_ISyndicationNode =
     {
-        "_winrt_Windows_Web_Syndication.ISyndicationNode",
+        "_winrt_windows_web_syndication.ISyndicationNode",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8322,7 +8322,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_ISyndicationText =
     {
-        "_winrt_Windows_Web_Syndication.ISyndicationText",
+        "_winrt_windows_web_syndication.ISyndicationText",
         sizeof(py::wrapper::Windows::Web::Syndication::ISyndicationText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8457,7 +8457,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_RetrievalProgress =
     {
-        "_winrt_Windows_Web_Syndication.RetrievalProgress",
+        "_winrt_windows_web_syndication.RetrievalProgress",
         sizeof(py::wrapper::Windows::Web::Syndication::RetrievalProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8662,7 +8662,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyType_Spec type_spec_TransferProgress =
     {
-        "_winrt_Windows_Web_Syndication.TransferProgress",
+        "_winrt_windows_web_syndication.TransferProgress",
         sizeof(py::wrapper::Windows::Web::Syndication::TransferProgress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8675,7 +8675,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Web_Syndication",
+           "_winrt_windows_web_syndication",
            module_doc,
            0,
            nullptr,
@@ -8686,7 +8686,7 @@ namespace py::cpp::Windows::Web::Syndication
 
 } // py::cpp::Windows::Web::Syndication
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Web_Syndication(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
 {
     using namespace py::cpp::Windows::Web::Syndication;
 

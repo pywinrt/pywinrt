@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.I2c")
+from . import _winrt_windows_devices_i2c
 
 try:
     import winrt.windows.devices.i2c.provider
@@ -36,8 +35,8 @@ class I2cTransferStatus(enum.IntEnum):
     CLOCK_STRETCH_TIMEOUT = 3
     UNKNOWN_ERROR = 4
 
-I2cTransferResult = _ns_module.I2cTransferResult
-I2cConnectionSettings = _ns_module.I2cConnectionSettings
-I2cController = _ns_module.I2cController
-I2cDevice = _ns_module.I2cDevice
-II2cDeviceStatics = _ns_module.II2cDeviceStatics
+I2cTransferResult = _winrt_windows_devices_i2c.I2cTransferResult
+I2cConnectionSettings = _winrt_windows_devices_i2c.I2cConnectionSettings
+I2cController = _winrt_windows_devices_i2c.I2cController
+I2cDevice = _winrt_windows_devices_i2c.I2cDevice
+II2cDeviceStatics = _winrt_windows_devices_i2c.II2cDeviceStatics

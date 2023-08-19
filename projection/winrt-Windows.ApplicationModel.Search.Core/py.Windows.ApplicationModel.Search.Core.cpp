@@ -74,7 +74,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyType_Spec type_spec_RequestingFocusOnKeyboardInputEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Search_Core.RequestingFocusOnKeyboardInputEventArgs",
+        "_winrt_windows_applicationmodel_search_core.RequestingFocusOnKeyboardInputEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -269,7 +269,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyType_Spec type_spec_SearchSuggestion =
     {
-        "_winrt_Windows_ApplicationModel_Search_Core.SearchSuggestion",
+        "_winrt_windows_applicationmodel_search_core.SearchSuggestion",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -770,7 +770,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyType_Spec type_spec_SearchSuggestionManager =
     {
-        "_winrt_Windows_ApplicationModel_Search_Core.SearchSuggestionManager",
+        "_winrt_windows_applicationmodel_search_core.SearchSuggestionManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -925,7 +925,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyType_Spec type_spec_SearchSuggestionsRequestedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Search_Core.SearchSuggestionsRequestedEventArgs",
+        "_winrt_windows_applicationmodel_search_core.SearchSuggestionsRequestedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -938,7 +938,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Search_Core",
+           "_winrt_windows_applicationmodel_search_core",
            module_doc,
            0,
            nullptr,
@@ -949,7 +949,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
 } // py::cpp::Windows::ApplicationModel::Search::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Search_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search_core(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Search::Core;
 

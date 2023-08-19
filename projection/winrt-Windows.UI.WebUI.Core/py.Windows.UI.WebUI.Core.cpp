@@ -587,7 +587,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBar =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBar",
+        "_winrt_windows_ui_webui_core.WebUICommandBar",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -748,7 +748,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarBitmapIcon =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBarBitmapIcon",
+        "_winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -939,7 +939,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarConfirmationButton =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBarConfirmationButton",
+        "_winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1322,7 +1322,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarIconButton =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBarIconButton",
+        "_winrt_windows_ui_webui_core.WebUICommandBarIconButton",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1417,7 +1417,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarItemInvokedEventArgs =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBarItemInvokedEventArgs",
+        "_winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1512,7 +1512,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarSizeChangedEventArgs =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBarSizeChangedEventArgs",
+        "_winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1673,7 +1673,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_WebUICommandBarSymbolIcon =
     {
-        "_winrt_Windows_UI_WebUI_Core.WebUICommandBarSymbolIcon",
+        "_winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1748,7 +1748,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_IWebUICommandBarElement =
     {
-        "_winrt_Windows_UI_WebUI_Core.IWebUICommandBarElement",
+        "_winrt_windows_ui_webui_core.IWebUICommandBarElement",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyType_Spec type_spec_IWebUICommandBarIcon =
     {
-        "_winrt_Windows_UI_WebUI_Core.IWebUICommandBarIcon",
+        "_winrt_windows_ui_webui_core.IWebUICommandBarIcon",
         sizeof(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1836,7 +1836,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_WebUI_Core",
+           "_winrt_windows_ui_webui_core",
            module_doc,
            0,
            nullptr,
@@ -1847,7 +1847,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
 } // py::cpp::Windows::UI::WebUI::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_WebUI_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
 {
     using namespace py::cpp::Windows::UI::WebUI::Core;
 

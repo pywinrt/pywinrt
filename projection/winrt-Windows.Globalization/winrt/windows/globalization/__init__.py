@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Globalization")
+from . import _winrt_windows_globalization
 
 try:
     import winrt.windows.foundation
@@ -36,14 +35,14 @@ class LanguageLayoutDirection(enum.IntEnum):
     TTB_LTR = 2
     TTB_RTL = 3
 
-ApplicationLanguages = _ns_module.ApplicationLanguages
-Calendar = _ns_module.Calendar
-CalendarIdentifiers = _ns_module.CalendarIdentifiers
-ClockIdentifiers = _ns_module.ClockIdentifiers
-CurrencyAmount = _ns_module.CurrencyAmount
-CurrencyIdentifiers = _ns_module.CurrencyIdentifiers
-GeographicRegion = _ns_module.GeographicRegion
-JapanesePhoneme = _ns_module.JapanesePhoneme
-JapanesePhoneticAnalyzer = _ns_module.JapanesePhoneticAnalyzer
-Language = _ns_module.Language
-NumeralSystemIdentifiers = _ns_module.NumeralSystemIdentifiers
+ApplicationLanguages = _winrt_windows_globalization.ApplicationLanguages
+Calendar = _winrt_windows_globalization.Calendar
+CalendarIdentifiers = _winrt_windows_globalization.CalendarIdentifiers
+ClockIdentifiers = _winrt_windows_globalization.ClockIdentifiers
+CurrencyAmount = _winrt_windows_globalization.CurrencyAmount
+CurrencyIdentifiers = _winrt_windows_globalization.CurrencyIdentifiers
+GeographicRegion = _winrt_windows_globalization.GeographicRegion
+JapanesePhoneme = _winrt_windows_globalization.JapanesePhoneme
+JapanesePhoneticAnalyzer = _winrt_windows_globalization.JapanesePhoneticAnalyzer
+Language = _winrt_windows_globalization.Language
+NumeralSystemIdentifiers = _winrt_windows_globalization.NumeralSystemIdentifiers

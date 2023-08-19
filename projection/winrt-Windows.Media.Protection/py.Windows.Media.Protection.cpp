@@ -114,7 +114,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_ComponentLoadFailedEventArgs =
     {
-        "_winrt_Windows_Media_Protection.ComponentLoadFailedEventArgs",
+        "_winrt_windows_media_protection.ComponentLoadFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::ComponentLoadFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -180,7 +180,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_ComponentRenewal =
     {
-        "_winrt_Windows_Media_Protection.ComponentRenewal",
+        "_winrt_windows_media_protection.ComponentRenewal",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -470,7 +470,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_HdcpSession =
     {
-        "_winrt_Windows_Media_Protection.HdcpSession",
+        "_winrt_windows_media_protection.HdcpSession",
         sizeof(py::wrapper::Windows::Media::Protection::HdcpSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -723,7 +723,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_MediaProtectionManager =
     {
-        "_winrt_Windows_Media_Protection.MediaProtectionManager",
+        "_winrt_windows_media_protection.MediaProtectionManager",
         sizeof(py::wrapper::Windows::Media::Protection::MediaProtectionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -843,7 +843,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_MediaProtectionPMPServer =
     {
-        "_winrt_Windows_Media_Protection.MediaProtectionPMPServer",
+        "_winrt_windows_media_protection.MediaProtectionPMPServer",
         sizeof(py::wrapper::Windows::Media::Protection::MediaProtectionPMPServer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_MediaProtectionServiceCompletion =
     {
-        "_winrt_Windows_Media_Protection.MediaProtectionServiceCompletion",
+        "_winrt_windows_media_protection.MediaProtectionServiceCompletion",
         sizeof(py::wrapper::Windows::Media::Protection::MediaProtectionServiceCompletion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1082,7 +1082,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_ProtectionCapabilities =
     {
-        "_winrt_Windows_Media_Protection.ProtectionCapabilities",
+        "_winrt_windows_media_protection.ProtectionCapabilities",
         sizeof(py::wrapper::Windows::Media::Protection::ProtectionCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1177,7 +1177,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_RevocationAndRenewalInformation =
     {
-        "_winrt_Windows_Media_Protection.RevocationAndRenewalInformation",
+        "_winrt_windows_media_protection.RevocationAndRenewalInformation",
         sizeof(py::wrapper::Windows::Media::Protection::RevocationAndRenewalInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1352,7 +1352,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_RevocationAndRenewalItem =
     {
-        "_winrt_Windows_Media_Protection.RevocationAndRenewalItem",
+        "_winrt_windows_media_protection.RevocationAndRenewalItem",
         sizeof(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1487,7 +1487,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_ServiceRequestedEventArgs =
     {
-        "_winrt_Windows_Media_Protection.ServiceRequestedEventArgs",
+        "_winrt_windows_media_protection.ServiceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Protection::ServiceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1602,7 +1602,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyType_Spec type_spec_IMediaProtectionServiceRequest =
     {
-        "_winrt_Windows_Media_Protection.IMediaProtectionServiceRequest",
+        "_winrt_windows_media_protection.IMediaProtectionServiceRequest",
         sizeof(py::wrapper::Windows::Media::Protection::IMediaProtectionServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::Media::Protection
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Protection",
+           "_winrt_windows_media_protection",
            module_doc,
            0,
            nullptr,
@@ -1626,7 +1626,7 @@ namespace py::cpp::Windows::Media::Protection
 
 } // py::cpp::Windows::Media::Protection
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Protection(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Protection;
 

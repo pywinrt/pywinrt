@@ -119,7 +119,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_SysStorageProviderEventReceivedEventArgs =
     {
-        "_winrt_Windows_System_Implementation_FileExplorer.SysStorageProviderEventReceivedEventArgs",
+        "_winrt_windows_system_implementation_fileexplorer.SysStorageProviderEventReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::SysStorageProviderEventReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -239,7 +239,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_ISysStorageProviderEventSource =
     {
-        "_winrt_Windows_System_Implementation_FileExplorer.ISysStorageProviderEventSource",
+        "_winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_ISysStorageProviderHandlerFactory =
     {
-        "_winrt_Windows_System_Implementation_FileExplorer.ISysStorageProviderHandlerFactory",
+        "_winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -486,7 +486,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyType_Spec type_spec_ISysStorageProviderHttpRequestProvider =
     {
-        "_winrt_Windows_System_Implementation_FileExplorer.ISysStorageProviderHttpRequestProvider",
+        "_winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHttpRequestProvider",
         sizeof(py::wrapper::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -499,7 +499,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Implementation_FileExplorer",
+           "_winrt_windows_system_implementation_fileexplorer",
            module_doc,
            0,
            nullptr,
@@ -510,7 +510,7 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
 
 } // py::cpp::Windows::System::Implementation::FileExplorer
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Implementation_FileExplorer(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_implementation_fileexplorer(void) noexcept
 {
     using namespace py::cpp::Windows::System::Implementation::FileExplorer;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Foundation.Metadata")
+from . import _winrt_windows_foundation_metadata
 
 class AttributeTargets(enum.IntFlag):
     ALL = 0xffffffff
@@ -56,4 +55,4 @@ class ThreadingModel(enum.IntEnum):
     BOTH = 3
     INVALID_THREADING = 0
 
-ApiInformation = _ns_module.ApiInformation
+ApiInformation = _winrt_windows_foundation_metadata.ApiInformation

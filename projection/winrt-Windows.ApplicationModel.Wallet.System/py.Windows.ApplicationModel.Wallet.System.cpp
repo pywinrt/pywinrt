@@ -277,7 +277,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyType_Spec type_spec_WalletItemSystemStore =
     {
-        "_winrt_Windows_ApplicationModel_Wallet_System.WalletItemSystemStore",
+        "_winrt_windows_applicationmodel_wallet_system.WalletItemSystemStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -341,7 +341,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyType_Spec type_spec_WalletManagerSystem =
     {
-        "_winrt_Windows_ApplicationModel_Wallet_System.WalletManagerSystem",
+        "_winrt_windows_applicationmodel_wallet_system.WalletManagerSystem",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Wallet_System",
+           "_winrt_windows_applicationmodel_wallet_system",
            module_doc,
            0,
            nullptr,
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
 } // py::cpp::Windows::ApplicationModel::Wallet::System
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Wallet_System(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet_system(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Wallet::System;
 

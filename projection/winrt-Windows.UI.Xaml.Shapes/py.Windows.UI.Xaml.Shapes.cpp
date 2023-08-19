@@ -97,7 +97,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Ellipse =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Ellipse",
+        "_winrt_windows_ui_xaml_shapes.Ellipse",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Ellipse),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -463,7 +463,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Line =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Line",
+        "_winrt_windows_ui_xaml_shapes.Line",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Line),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -487,7 +487,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Line_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Line_Meta",
+        "_winrt_windows_ui_xaml_shapes.Line_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -652,7 +652,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Path =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Path",
+        "_winrt_windows_ui_xaml_shapes.Path",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Path),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -673,7 +673,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Path_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Path_Meta",
+        "_winrt_windows_ui_xaml_shapes.Path_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -905,7 +905,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Polygon =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Polygon",
+        "_winrt_windows_ui_xaml_shapes.Polygon",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Polygon),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -927,7 +927,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Polygon_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Polygon_Meta",
+        "_winrt_windows_ui_xaml_shapes.Polygon_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1159,7 +1159,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Polyline =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Polyline",
+        "_winrt_windows_ui_xaml_shapes.Polyline",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Polyline),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1181,7 +1181,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Polyline_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Polyline_Meta",
+        "_winrt_windows_ui_xaml_shapes.Polyline_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Rectangle =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Rectangle",
+        "_winrt_windows_ui_xaml_shapes.Rectangle",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Rectangle),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1435,7 +1435,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Rectangle_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Rectangle_Meta",
+        "_winrt_windows_ui_xaml_shapes.Rectangle_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2297,7 +2297,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Shape =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Shape",
+        "_winrt_windows_ui_xaml_shapes.Shape",
         sizeof(py::wrapper::Windows::UI::Xaml::Shapes::Shape),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2328,7 +2328,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyType_Spec type_spec_Shape_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Shapes.Shape_Meta",
+        "_winrt_windows_ui_xaml_shapes.Shape_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2341,7 +2341,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Shapes",
+           "_winrt_windows_ui_xaml_shapes",
            module_doc,
            0,
            nullptr,
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
 } // py::cpp::Windows::UI::Xaml::Shapes
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Shapes(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Shapes;
 

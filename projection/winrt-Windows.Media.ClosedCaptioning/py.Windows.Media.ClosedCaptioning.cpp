@@ -306,7 +306,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyType_Spec type_spec_ClosedCaptionProperties =
     {
-        "_winrt_Windows_Media_ClosedCaptioning.ClosedCaptionProperties",
+        "_winrt_windows_media_closedcaptioning.ClosedCaptionProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyType_Spec type_spec_ClosedCaptionProperties_Meta =
     {
-        "_winrt_Windows_Media_ClosedCaptioning.ClosedCaptionProperties_Meta",
+        "_winrt_windows_media_closedcaptioning.ClosedCaptionProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -351,7 +351,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_ClosedCaptioning",
+           "_winrt_windows_media_closedcaptioning",
            module_doc,
            0,
            nullptr,
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Media::ClosedCaptioning
 
 } // py::cpp::Windows::Media::ClosedCaptioning
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_ClosedCaptioning(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_closedcaptioning(void) noexcept
 {
     using namespace py::cpp::Windows::Media::ClosedCaptioning;
 

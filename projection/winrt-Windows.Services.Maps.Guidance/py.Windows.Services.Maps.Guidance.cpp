@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceAudioNotificationRequestedEventArgs =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceAudioNotificationRequestedEventArgs",
+        "_winrt_windows_services_maps_guidance.GuidanceAudioNotificationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -249,7 +249,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceLaneInfo =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceLaneInfo",
+        "_winrt_windows_services_maps_guidance.GuidanceLaneInfo",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceLaneInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -564,7 +564,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceManeuver =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceManeuver",
+        "_winrt_windows_services_maps_guidance.GuidanceManeuver",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -739,7 +739,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceMapMatchedCoordinate =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceMapMatchedCoordinate",
+        "_winrt_windows_services_maps_guidance.GuidanceMapMatchedCoordinate",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1678,7 +1678,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceNavigator =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceNavigator",
+        "_winrt_windows_services_maps_guidance.GuidanceNavigator",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1699,7 +1699,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceNavigator_Meta =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceNavigator_Meta",
+        "_winrt_windows_services_maps_guidance.GuidanceNavigator_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1794,7 +1794,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceReroutedEventArgs =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceReroutedEventArgs",
+        "_winrt_windows_services_maps_guidance.GuidanceReroutedEventArgs",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2069,7 +2069,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceRoadSegment =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceRoadSegment",
+        "_winrt_windows_services_maps_guidance.GuidanceRoadSegment",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2244,7 +2244,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceRoadSignpost =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceRoadSignpost",
+        "_winrt_windows_services_maps_guidance.GuidanceRoadSignpost",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2533,7 +2533,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceRoute =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceRoute",
+        "_winrt_windows_services_maps_guidance.GuidanceRoute",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2813,7 +2813,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceTelemetryCollector =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceTelemetryCollector",
+        "_winrt_windows_services_maps_guidance.GuidanceTelemetryCollector",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3168,7 +3168,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyType_Spec type_spec_GuidanceUpdatedEventArgs =
     {
-        "_winrt_Windows_Services_Maps_Guidance.GuidanceUpdatedEventArgs",
+        "_winrt_windows_services_maps_guidance.GuidanceUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3181,7 +3181,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Services_Maps_Guidance",
+           "_winrt_windows_services_maps_guidance",
            module_doc,
            0,
            nullptr,
@@ -3192,7 +3192,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
 
 } // py::cpp::Windows::Services::Maps::Guidance
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_Guidance(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
 {
     using namespace py::cpp::Windows::Services::Maps::Guidance;
 

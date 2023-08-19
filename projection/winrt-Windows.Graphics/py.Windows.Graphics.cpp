@@ -74,7 +74,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyType_Spec type_spec_IGeometrySource2D =
     {
-        "_winrt_Windows_Graphics.IGeometrySource2D",
+        "_winrt_windows_graphics.IGeometrySource2D",
         sizeof(py::wrapper::Windows::Graphics::IGeometrySource2D),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -209,7 +209,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyType_Spec type_spec_DisplayAdapterId =
     {
-        "_winrt_Windows_Graphics.DisplayAdapterId",
+        "_winrt_windows_graphics.DisplayAdapterId",
         sizeof(py::wrapper::Windows::Graphics::DisplayAdapterId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -309,7 +309,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyType_Spec type_spec_DisplayId =
     {
-        "_winrt_Windows_Graphics.DisplayId",
+        "_winrt_windows_graphics.DisplayId",
         sizeof(py::wrapper::Windows::Graphics::DisplayId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -444,7 +444,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyType_Spec type_spec_PointInt32 =
     {
-        "_winrt_Windows_Graphics.PointInt32",
+        "_winrt_windows_graphics.PointInt32",
         sizeof(py::wrapper::Windows::Graphics::PointInt32),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -649,7 +649,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyType_Spec type_spec_RectInt32 =
     {
-        "_winrt_Windows_Graphics.RectInt32",
+        "_winrt_windows_graphics.RectInt32",
         sizeof(py::wrapper::Windows::Graphics::RectInt32),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -784,7 +784,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyType_Spec type_spec_SizeInt32 =
     {
-        "_winrt_Windows_Graphics.SizeInt32",
+        "_winrt_windows_graphics.SizeInt32",
         sizeof(py::wrapper::Windows::Graphics::SizeInt32),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -797,7 +797,7 @@ namespace py::cpp::Windows::Graphics
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Graphics",
+           "_winrt_windows_graphics",
            module_doc,
            0,
            nullptr,
@@ -808,7 +808,7 @@ namespace py::cpp::Windows::Graphics
 
 } // py::cpp::Windows::Graphics
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Graphics(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics;
 

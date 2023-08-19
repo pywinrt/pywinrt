@@ -194,7 +194,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.AppointmentsProviderAddAppointmentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.AppointmentsProviderAddAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -389,7 +389,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.AppointmentsProviderRemoveAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.AppointmentsProviderReplaceAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -819,7 +819,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.AppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1034,7 +1034,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.AppointmentsProviderShowTimeFrameActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.AppointmentsProviderShowTimeFrameActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1129,7 +1129,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_BackgroundActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.BackgroundActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.BackgroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1304,7 +1304,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_BarcodeScannerPreviewActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.BarcodeScannerPreviewActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.BarcodeScannerPreviewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1479,7 +1479,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_CachedFileUpdaterActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.CachedFileUpdaterActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.CachedFileUpdaterActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1654,7 +1654,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_CameraSettingsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.CameraSettingsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.CameraSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1829,7 +1829,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_CommandLineActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.CommandLineActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.CommandLineActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2022,7 +2022,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_CommandLineActivationOperation =
     {
-        "_winrt_Windows_ApplicationModel_Activation.CommandLineActivationOperation",
+        "_winrt_windows_applicationmodel_activation.CommandLineActivationOperation",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2237,7 +2237,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactMapActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactMapActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactMapActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2647,7 +2647,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactMessageActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactMessageActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactMessageActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2842,7 +2842,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactPanelActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactPanelActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactPanelActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2997,7 +2997,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactPickerActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactPickerActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3212,7 +3212,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactPostActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactPostActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactPostActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3427,7 +3427,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ContactVideoCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ContactVideoCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ContactVideoCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3662,7 +3662,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_DeviceActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.DeviceActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.DeviceActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3837,7 +3837,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_DevicePairingActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.DevicePairingActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.DevicePairingActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4092,7 +4092,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_DialReceiverActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.DialReceiverActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.DialReceiverActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4367,7 +4367,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_FileActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.FileActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.FileActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4562,7 +4562,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_FileOpenPickerActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.FileOpenPickerActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.FileOpenPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4757,7 +4757,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_FileOpenPickerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.FileOpenPickerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.FileOpenPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4972,7 +4972,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_FileSavePickerActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.FileSavePickerActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.FileSavePickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5167,7 +5167,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_FileSavePickerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.FileSavePickerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.FileSavePickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5362,7 +5362,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_FolderPickerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.FolderPickerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.FolderPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5637,7 +5637,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_LaunchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.LaunchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.LaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5812,7 +5812,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_LockScreenActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.LockScreenActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.LockScreenActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6047,7 +6047,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_LockScreenCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.LockScreenCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.LockScreenCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6182,7 +6182,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_LockScreenComponentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.LockScreenComponentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.LockScreenComponentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6357,7 +6357,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_PhoneCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.PhoneCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.PhoneCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6512,7 +6512,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_PickerReturnedActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.PickerReturnedActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.PickerReturnedActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6667,7 +6667,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_Print3DWorkflowActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.Print3DWorkflowActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.Print3DWorkflowActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6822,7 +6822,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_PrintTaskSettingsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.PrintTaskSettingsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.PrintTaskSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7077,7 +7077,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ProtocolActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ProtocolActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ProtocolActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7352,7 +7352,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ProtocolForResultsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ProtocolForResultsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ProtocolForResultsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7527,7 +7527,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_RestrictedLaunchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.RestrictedLaunchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.RestrictedLaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7782,7 +7782,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_SearchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.SearchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.SearchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7957,7 +7957,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ShareTargetActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ShareTargetActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ShareTargetActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8097,7 +8097,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_SplashScreen =
     {
-        "_winrt_Windows_ApplicationModel_Activation.SplashScreen",
+        "_winrt_windows_applicationmodel_activation.SplashScreen",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::SplashScreen),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8272,7 +8272,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_StartupTaskActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.StartupTaskActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.StartupTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8367,7 +8367,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_TileActivatedInfo =
     {
-        "_winrt_Windows_ApplicationModel_Activation.TileActivatedInfo",
+        "_winrt_windows_applicationmodel_activation.TileActivatedInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::TileActivatedInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8582,7 +8582,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ToastNotificationActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ToastNotificationActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ToastNotificationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8737,7 +8737,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_UserDataAccountProviderActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.UserDataAccountProviderActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.UserDataAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8912,7 +8912,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_VoiceCommandActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.VoiceCommandActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.VoiceCommandActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9107,7 +9107,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_WalletActionActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.WalletActionActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.WalletActionActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9282,7 +9282,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_WebAccountProviderActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.WebAccountProviderActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.WebAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9457,7 +9457,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_WebAuthenticationBrokerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.WebAuthenticationBrokerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.WebAuthenticationBrokerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9592,7 +9592,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9747,7 +9747,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IActivatedEventArgsWithUser =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IActivatedEventArgsWithUser",
+        "_winrt_windows_applicationmodel_activation.IActivatedEventArgsWithUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9902,7 +9902,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IApplicationViewActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IApplicationViewActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IApplicationViewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10057,7 +10057,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IAppointmentsProviderActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IAppointmentsProviderActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IAppointmentsProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10232,7 +10232,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IAppointmentsProviderAddAppointmentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IAppointmentsProviderAddAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10407,7 +10407,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IAppointmentsProviderRemoveAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10582,7 +10582,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IAppointmentsProviderReplaceAppointmentActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10797,7 +10797,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10992,7 +10992,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IAppointmentsProviderShowTimeFrameActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11087,7 +11087,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IBackgroundActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IBackgroundActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IBackgroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11242,7 +11242,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IBarcodeScannerPreviewActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IBarcodeScannerPreviewActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IBarcodeScannerPreviewActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11397,7 +11397,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ICachedFileUpdaterActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ICachedFileUpdaterActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ICachedFileUpdaterActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11572,7 +11572,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ICameraSettingsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ICameraSettingsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ICameraSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11727,7 +11727,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ICommandLineActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ICommandLineActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ICommandLineActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11882,7 +11882,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12097,7 +12097,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12292,7 +12292,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactMapActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactMapActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactMapActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12507,7 +12507,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactMessageActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactMessageActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactMessageActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12622,7 +12622,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactPanelActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactPanelActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactPanelActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12777,7 +12777,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactPickerActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactPickerActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12992,7 +12992,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactPostActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactPostActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactPostActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13207,7 +13207,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactVideoCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactVideoCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactVideoCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13362,7 +13362,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContactsProviderActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContactsProviderActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContactsProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13517,7 +13517,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IContinuationActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IContinuationActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IContinuationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13692,7 +13692,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IDeviceActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IDeviceActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IDeviceActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13847,7 +13847,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IDevicePairingActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IDevicePairingActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IDevicePairingActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14042,7 +14042,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IDialReceiverActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IDialReceiverActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IDialReceiverActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14217,7 +14217,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IFileActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14372,7 +14372,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileActivatedEventArgsWithCallerPackageFamilyName",
+        "_winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithCallerPackageFamilyName",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14567,7 +14567,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileActivatedEventArgsWithNeighboringFiles =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileActivatedEventArgsWithNeighboringFiles",
+        "_winrt_windows_applicationmodel_activation.IFileActivatedEventArgsWithNeighboringFiles",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14722,7 +14722,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileOpenPickerActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14817,7 +14817,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileOpenPickerActivatedEventArgs2 =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileOpenPickerActivatedEventArgs2",
+        "_winrt_windows_applicationmodel_activation.IFileOpenPickerActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14992,7 +14992,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileOpenPickerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileOpenPickerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.IFileOpenPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15147,7 +15147,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileSavePickerActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15262,7 +15262,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileSavePickerActivatedEventArgs2 =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileSavePickerActivatedEventArgs2",
+        "_winrt_windows_applicationmodel_activation.IFileSavePickerActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15437,7 +15437,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFileSavePickerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFileSavePickerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.IFileSavePickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15612,7 +15612,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IFolderPickerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IFolderPickerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.IFolderPickerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15787,7 +15787,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ILaunchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ILaunchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15982,7 +15982,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ILaunchActivatedEventArgs2 =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ILaunchActivatedEventArgs2",
+        "_winrt_windows_applicationmodel_activation.ILaunchActivatedEventArgs2",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16137,7 +16137,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ILockScreenActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ILockScreenActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ILockScreenActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16332,7 +16332,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ILockScreenCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ILockScreenCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ILockScreenCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16487,7 +16487,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IPhoneCallActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IPhoneCallActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IPhoneCallActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16642,7 +16642,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IPickerReturnedActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IPickerReturnedActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IPickerReturnedActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16797,7 +16797,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IPrelaunchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IPrelaunchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IPrelaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16952,7 +16952,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IPrint3DWorkflowActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IPrint3DWorkflowActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IPrint3DWorkflowActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17107,7 +17107,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IPrintTaskSettingsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IPrintTaskSettingsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IPrintTaskSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17262,7 +17262,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IProtocolActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IProtocolActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17437,7 +17437,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
+        "_winrt_windows_applicationmodel_activation.IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17592,7 +17592,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IProtocolForResultsActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IProtocolForResultsActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IProtocolForResultsActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17747,7 +17747,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IRestrictedLaunchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IRestrictedLaunchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IRestrictedLaunchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17922,7 +17922,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ISearchActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ISearchActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.ISearchActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18017,7 +18017,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_ISearchActivatedEventArgsWithLinguisticDetails =
     {
-        "_winrt_Windows_ApplicationModel_Activation.ISearchActivatedEventArgsWithLinguisticDetails",
+        "_winrt_windows_applicationmodel_activation.ISearchActivatedEventArgsWithLinguisticDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18172,7 +18172,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IShareTargetActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IShareTargetActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IShareTargetActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18327,7 +18327,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IStartupTaskActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IStartupTaskActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IStartupTaskActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18502,7 +18502,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IToastNotificationActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IToastNotificationActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IToastNotificationActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18657,7 +18657,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IUserDataAccountProviderActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IUserDataAccountProviderActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IUserDataAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18812,7 +18812,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IViewSwitcherProvider =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IViewSwitcherProvider",
+        "_winrt_windows_applicationmodel_activation.IViewSwitcherProvider",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18967,7 +18967,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IVoiceCommandActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IVoiceCommandActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IVoiceCommandActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19162,7 +19162,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IWalletActionActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IWalletActionActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IWalletActionActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19317,7 +19317,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IWebAccountProviderActivatedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IWebAccountProviderActivatedEventArgs",
+        "_winrt_windows_applicationmodel_activation.IWebAccountProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19492,7 +19492,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyType_Spec type_spec_IWebAuthenticationBrokerContinuationEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Activation.IWebAuthenticationBrokerContinuationEventArgs",
+        "_winrt_windows_applicationmodel_activation.IWebAuthenticationBrokerContinuationEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19505,7 +19505,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Activation",
+           "_winrt_windows_applicationmodel_activation",
            module_doc,
            0,
            nullptr,
@@ -19516,7 +19516,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
 
 } // py::cpp::Windows::ApplicationModel::Activation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Activation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Activation;
 

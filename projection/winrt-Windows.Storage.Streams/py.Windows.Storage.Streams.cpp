@@ -252,7 +252,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_Buffer =
     {
-        "_winrt_Windows_Storage_Streams.Buffer",
+        "_winrt_windows_storage_streams.Buffer",
         sizeof(py::wrapper::Windows::Storage::Streams::Buffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1180,7 +1180,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_DataReader =
     {
-        "_winrt_Windows_Storage_Streams.DataReader",
+        "_winrt_windows_storage_streams.DataReader",
         sizeof(py::wrapper::Windows::Storage::Streams::DataReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1461,7 +1461,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_DataReaderLoadOperation =
     {
-        "_winrt_Windows_Storage_Streams.DataReaderLoadOperation",
+        "_winrt_windows_storage_streams.DataReaderLoadOperation",
         sizeof(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2445,7 +2445,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_DataWriter =
     {
-        "_winrt_Windows_Storage_Streams.DataWriter",
+        "_winrt_windows_storage_streams.DataWriter",
         sizeof(py::wrapper::Windows::Storage::Streams::DataWriter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2726,7 +2726,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_DataWriterStoreOperation =
     {
-        "_winrt_Windows_Storage_Streams.DataWriterStoreOperation",
+        "_winrt_windows_storage_streams.DataWriterStoreOperation",
         sizeof(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2888,7 +2888,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_FileInputStream =
     {
-        "_winrt_Windows_Storage_Streams.FileInputStream",
+        "_winrt_windows_storage_streams.FileInputStream",
         sizeof(py::wrapper::Windows::Storage::Streams::FileInputStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3078,7 +3078,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_FileOutputStream =
     {
-        "_winrt_Windows_Storage_Streams.FileOutputStream",
+        "_winrt_windows_storage_streams.FileOutputStream",
         sizeof(py::wrapper::Windows::Storage::Streams::FileOutputStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3761,7 +3761,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_FileRandomAccessStream =
     {
-        "_winrt_Windows_Storage_Streams.FileRandomAccessStream",
+        "_winrt_windows_storage_streams.FileRandomAccessStream",
         sizeof(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4243,7 +4243,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_InMemoryRandomAccessStream =
     {
-        "_winrt_Windows_Storage_Streams.InMemoryRandomAccessStream",
+        "_winrt_windows_storage_streams.InMemoryRandomAccessStream",
         sizeof(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4405,7 +4405,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_InputStreamOverStream =
     {
-        "_winrt_Windows_Storage_Streams.InputStreamOverStream",
+        "_winrt_windows_storage_streams.InputStreamOverStream",
         sizeof(py::wrapper::Windows::Storage::Streams::InputStreamOverStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4595,7 +4595,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_OutputStreamOverStream =
     {
-        "_winrt_Windows_Storage_Streams.OutputStreamOverStream",
+        "_winrt_windows_storage_streams.OutputStreamOverStream",
         sizeof(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4717,7 +4717,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_RandomAccessStream =
     {
-        "_winrt_Windows_Storage_Streams.RandomAccessStream",
+        "_winrt_windows_storage_streams.RandomAccessStream",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5176,7 +5176,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_RandomAccessStreamOverStream =
     {
-        "_winrt_Windows_Storage_Streams.RandomAccessStreamOverStream",
+        "_winrt_windows_storage_streams.RandomAccessStreamOverStream",
         sizeof(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5377,7 +5377,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_RandomAccessStreamReference =
     {
-        "_winrt_Windows_Storage_Streams.RandomAccessStreamReference",
+        "_winrt_windows_storage_streams.RandomAccessStreamReference",
         sizeof(py::wrapper::Windows::Storage::Streams::RandomAccessStreamReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5541,7 +5541,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IBuffer =
     {
-        "_winrt_Windows_Storage_Streams.IBuffer",
+        "_winrt_windows_storage_streams.IBuffer",
         sizeof(py::wrapper::Windows::Storage::Streams::IBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5636,7 +5636,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IContentTypeProvider =
     {
-        "_winrt_Windows_Storage_Streams.IContentTypeProvider",
+        "_winrt_windows_storage_streams.IContentTypeProvider",
         sizeof(py::wrapper::Windows::Storage::Streams::IContentTypeProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6454,7 +6454,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IDataReader =
     {
-        "_winrt_Windows_Storage_Streams.IDataReader",
+        "_winrt_windows_storage_streams.IDataReader",
         sizeof(py::wrapper::Windows::Storage::Streams::IDataReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7347,7 +7347,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IDataWriter =
     {
-        "_winrt_Windows_Storage_Streams.IDataWriter",
+        "_winrt_windows_storage_streams.IDataWriter",
         sizeof(py::wrapper::Windows::Storage::Streams::IDataWriter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7509,7 +7509,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IInputStream =
     {
-        "_winrt_Windows_Storage_Streams.IInputStream",
+        "_winrt_windows_storage_streams.IInputStream",
         sizeof(py::wrapper::Windows::Storage::Streams::IInputStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7614,7 +7614,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IInputStreamReference =
     {
-        "_winrt_Windows_Storage_Streams.IInputStreamReference",
+        "_winrt_windows_storage_streams.IInputStreamReference",
         sizeof(py::wrapper::Windows::Storage::Streams::IInputStreamReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7804,7 +7804,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IOutputStream =
     {
-        "_winrt_Windows_Storage_Streams.IOutputStream",
+        "_winrt_windows_storage_streams.IOutputStream",
         sizeof(py::wrapper::Windows::Storage::Streams::IOutputStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7945,7 +7945,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IPropertySetSerializer =
     {
-        "_winrt_Windows_Storage_Streams.IPropertySetSerializer",
+        "_winrt_windows_storage_streams.IPropertySetSerializer",
         sizeof(py::wrapper::Windows::Storage::Streams::IPropertySetSerializer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8404,7 +8404,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IRandomAccessStream =
     {
-        "_winrt_Windows_Storage_Streams.IRandomAccessStream",
+        "_winrt_windows_storage_streams.IRandomAccessStream",
         sizeof(py::wrapper::Windows::Storage::Streams::IRandomAccessStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8509,7 +8509,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IRandomAccessStreamReference =
     {
-        "_winrt_Windows_Storage_Streams.IRandomAccessStreamReference",
+        "_winrt_windows_storage_streams.IRandomAccessStreamReference",
         sizeof(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8988,7 +8988,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyType_Spec type_spec_IRandomAccessStreamWithContentType =
     {
-        "_winrt_Windows_Storage_Streams.IRandomAccessStreamWithContentType",
+        "_winrt_windows_storage_streams.IRandomAccessStreamWithContentType",
         sizeof(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9001,7 +9001,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Storage_Streams",
+           "_winrt_windows_storage_streams",
            module_doc,
            0,
            nullptr,
@@ -9012,7 +9012,7 @@ namespace py::cpp::Windows::Storage::Streams
 
 } // py::cpp::Windows::Storage::Streams
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Storage_Streams(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
 {
     using namespace py::cpp::Windows::Storage::Streams;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Update")
+from . import _winrt_windows_system_update
 
 try:
     import winrt.windows.foundation
@@ -52,6 +51,6 @@ class SystemUpdateStartInstallAction(enum.IntEnum):
     UP_TO_REBOOT = 0
     ALLOW_REBOOT = 1
 
-SystemUpdateItem = _ns_module.SystemUpdateItem
-SystemUpdateLastErrorInfo = _ns_module.SystemUpdateLastErrorInfo
-SystemUpdateManager = _ns_module.SystemUpdateManager
+SystemUpdateItem = _winrt_windows_system_update.SystemUpdateItem
+SystemUpdateLastErrorInfo = _winrt_windows_system_update.SystemUpdateLastErrorInfo
+SystemUpdateManager = _winrt_windows_system_update.SystemUpdateManager

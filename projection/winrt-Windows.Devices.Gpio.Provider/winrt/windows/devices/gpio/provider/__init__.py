@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Gpio.Provider")
+from . import _winrt_windows_devices_gpio_provider
 
 try:
     import winrt.windows.foundation
@@ -38,7 +37,7 @@ class ProviderGpioSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED_READ_ONLY = 1
 
-GpioPinProviderValueChangedEventArgs = _ns_module.GpioPinProviderValueChangedEventArgs
-IGpioControllerProvider = _ns_module.IGpioControllerProvider
-IGpioPinProvider = _ns_module.IGpioPinProvider
-IGpioProvider = _ns_module.IGpioProvider
+GpioPinProviderValueChangedEventArgs = _winrt_windows_devices_gpio_provider.GpioPinProviderValueChangedEventArgs
+IGpioControllerProvider = _winrt_windows_devices_gpio_provider.IGpioControllerProvider
+IGpioPinProvider = _winrt_windows_devices_gpio_provider.IGpioPinProvider
+IGpioProvider = _winrt_windows_devices_gpio_provider.IGpioProvider

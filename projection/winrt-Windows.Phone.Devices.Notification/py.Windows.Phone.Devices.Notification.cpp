@@ -168,7 +168,7 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
     static PyType_Spec type_spec_VibrationDevice =
     {
-        "_winrt_Windows_Phone_Devices_Notification.VibrationDevice",
+        "_winrt_windows_phone_devices_notification.VibrationDevice",
         sizeof(py::wrapper::Windows::Phone::Devices::Notification::VibrationDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -181,7 +181,7 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_Devices_Notification",
+           "_winrt_windows_phone_devices_notification",
            module_doc,
            0,
            nullptr,
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Phone::Devices::Notification
 
 } // py::cpp::Windows::Phone::Devices::Notification
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Devices_Notification(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_notification(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::Devices::Notification;
 

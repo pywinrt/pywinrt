@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Cryptography")
+from . import _winrt_windows_security_cryptography
 
 try:
     import winrt.windows.storage.streams
@@ -16,4 +15,4 @@ class BinaryStringEncoding(enum.IntEnum):
     UTF16_L_E = 1
     UTF16_B_E = 2
 
-CryptographicBuffer = _ns_module.CryptographicBuffer
+CryptographicBuffer = _winrt_windows_security_cryptography.CryptographicBuffer

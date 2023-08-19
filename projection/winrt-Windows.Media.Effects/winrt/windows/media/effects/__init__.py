@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Effects")
+from . import _winrt_windows_media_effects
 
 try:
     import winrt.windows.foundation
@@ -104,22 +103,22 @@ class MediaMemoryTypes(enum.IntEnum):
     CPU = 1
     GPU_AND_CPU = 2
 
-AudioCaptureEffectsManager = _ns_module.AudioCaptureEffectsManager
-AudioEffect = _ns_module.AudioEffect
-AudioEffectDefinition = _ns_module.AudioEffectDefinition
-AudioEffectsManager = _ns_module.AudioEffectsManager
-AudioRenderEffectsManager = _ns_module.AudioRenderEffectsManager
-CompositeVideoFrameContext = _ns_module.CompositeVideoFrameContext
-ProcessAudioFrameContext = _ns_module.ProcessAudioFrameContext
-ProcessVideoFrameContext = _ns_module.ProcessVideoFrameContext
-SlowMotionEffectDefinition = _ns_module.SlowMotionEffectDefinition
-VideoCompositorDefinition = _ns_module.VideoCompositorDefinition
-VideoEffectDefinition = _ns_module.VideoEffectDefinition
-VideoTransformEffectDefinition = _ns_module.VideoTransformEffectDefinition
-VideoTransformSphericalProjection = _ns_module.VideoTransformSphericalProjection
-IAudioEffectDefinition = _ns_module.IAudioEffectDefinition
-IBasicAudioEffect = _ns_module.IBasicAudioEffect
-IBasicVideoEffect = _ns_module.IBasicVideoEffect
-IVideoCompositor = _ns_module.IVideoCompositor
-IVideoCompositorDefinition = _ns_module.IVideoCompositorDefinition
-IVideoEffectDefinition = _ns_module.IVideoEffectDefinition
+AudioCaptureEffectsManager = _winrt_windows_media_effects.AudioCaptureEffectsManager
+AudioEffect = _winrt_windows_media_effects.AudioEffect
+AudioEffectDefinition = _winrt_windows_media_effects.AudioEffectDefinition
+AudioEffectsManager = _winrt_windows_media_effects.AudioEffectsManager
+AudioRenderEffectsManager = _winrt_windows_media_effects.AudioRenderEffectsManager
+CompositeVideoFrameContext = _winrt_windows_media_effects.CompositeVideoFrameContext
+ProcessAudioFrameContext = _winrt_windows_media_effects.ProcessAudioFrameContext
+ProcessVideoFrameContext = _winrt_windows_media_effects.ProcessVideoFrameContext
+SlowMotionEffectDefinition = _winrt_windows_media_effects.SlowMotionEffectDefinition
+VideoCompositorDefinition = _winrt_windows_media_effects.VideoCompositorDefinition
+VideoEffectDefinition = _winrt_windows_media_effects.VideoEffectDefinition
+VideoTransformEffectDefinition = _winrt_windows_media_effects.VideoTransformEffectDefinition
+VideoTransformSphericalProjection = _winrt_windows_media_effects.VideoTransformSphericalProjection
+IAudioEffectDefinition = _winrt_windows_media_effects.IAudioEffectDefinition
+IBasicAudioEffect = _winrt_windows_media_effects.IBasicAudioEffect
+IBasicVideoEffect = _winrt_windows_media_effects.IBasicVideoEffect
+IVideoCompositor = _winrt_windows_media_effects.IVideoCompositor
+IVideoCompositorDefinition = _winrt_windows_media_effects.IVideoCompositorDefinition
+IVideoEffectDefinition = _winrt_windows_media_effects.IVideoEffectDefinition

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Hosting")
+from . import _winrt_windows_ui_xaml_hosting
 
 try:
     import winrt.windows.foundation
@@ -50,17 +49,17 @@ class XamlSourceFocusNavigationReason(enum.IntEnum):
     RIGHT = 9
     DOWN = 10
 
-DesignerAppExitedEventArgs = _ns_module.DesignerAppExitedEventArgs
-DesignerAppManager = _ns_module.DesignerAppManager
-DesignerAppView = _ns_module.DesignerAppView
-DesktopWindowXamlSource = _ns_module.DesktopWindowXamlSource
-DesktopWindowXamlSourceGotFocusEventArgs = _ns_module.DesktopWindowXamlSourceGotFocusEventArgs
-DesktopWindowXamlSourceTakeFocusRequestedEventArgs = _ns_module.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
-ElementCompositionPreview = _ns_module.ElementCompositionPreview
-WindowsXamlManager = _ns_module.WindowsXamlManager
-XamlSourceFocusNavigationRequest = _ns_module.XamlSourceFocusNavigationRequest
-XamlSourceFocusNavigationResult = _ns_module.XamlSourceFocusNavigationResult
-XamlUIPresenter = _ns_module.XamlUIPresenter
-IXamlUIPresenterHost = _ns_module.IXamlUIPresenterHost
-IXamlUIPresenterHost2 = _ns_module.IXamlUIPresenterHost2
-IXamlUIPresenterHost3 = _ns_module.IXamlUIPresenterHost3
+DesignerAppExitedEventArgs = _winrt_windows_ui_xaml_hosting.DesignerAppExitedEventArgs
+DesignerAppManager = _winrt_windows_ui_xaml_hosting.DesignerAppManager
+DesignerAppView = _winrt_windows_ui_xaml_hosting.DesignerAppView
+DesktopWindowXamlSource = _winrt_windows_ui_xaml_hosting.DesktopWindowXamlSource
+DesktopWindowXamlSourceGotFocusEventArgs = _winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs
+DesktopWindowXamlSourceTakeFocusRequestedEventArgs = _winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
+ElementCompositionPreview = _winrt_windows_ui_xaml_hosting.ElementCompositionPreview
+WindowsXamlManager = _winrt_windows_ui_xaml_hosting.WindowsXamlManager
+XamlSourceFocusNavigationRequest = _winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationRequest
+XamlSourceFocusNavigationResult = _winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationResult
+XamlUIPresenter = _winrt_windows_ui_xaml_hosting.XamlUIPresenter
+IXamlUIPresenterHost = _winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost
+IXamlUIPresenterHost2 = _winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2
+IXamlUIPresenterHost3 = _winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Storage")
+from . import _winrt_windows_storage
 
 try:
     import winrt.windows.foundation
@@ -139,49 +138,49 @@ class StreamedFileFailureMode(enum.IntEnum):
     CURRENTLY_UNAVAILABLE = 1
     INCOMPLETE = 2
 
-AppDataPaths = _ns_module.AppDataPaths
-ApplicationData = _ns_module.ApplicationData
-ApplicationDataCompositeValue = _ns_module.ApplicationDataCompositeValue
+AppDataPaths = _winrt_windows_storage.AppDataPaths
+ApplicationData = _winrt_windows_storage.ApplicationData
+ApplicationDataCompositeValue = _winrt_windows_storage.ApplicationDataCompositeValue
 winrt.system._mixin_mutable_mapping(ApplicationDataCompositeValue)
-ApplicationDataContainer = _ns_module.ApplicationDataContainer
-ApplicationDataContainerSettings = _ns_module.ApplicationDataContainerSettings
+ApplicationDataContainer = _winrt_windows_storage.ApplicationDataContainer
+ApplicationDataContainerSettings = _winrt_windows_storage.ApplicationDataContainerSettings
 winrt.system._mixin_mutable_mapping(ApplicationDataContainerSettings)
-CachedFileManager = _ns_module.CachedFileManager
-DownloadsFolder = _ns_module.DownloadsFolder
-FileIO = _ns_module.FileIO
-KnownFolders = _ns_module.KnownFolders
-PathIO = _ns_module.PathIO
-SetVersionDeferral = _ns_module.SetVersionDeferral
-SetVersionRequest = _ns_module.SetVersionRequest
-StorageFile = _ns_module.StorageFile
-StorageFolder = _ns_module.StorageFolder
-StorageLibrary = _ns_module.StorageLibrary
-StorageLibraryChange = _ns_module.StorageLibraryChange
-StorageLibraryChangeReader = _ns_module.StorageLibraryChangeReader
-StorageLibraryChangeTracker = _ns_module.StorageLibraryChangeTracker
-StorageLibraryChangeTrackerOptions = _ns_module.StorageLibraryChangeTrackerOptions
-StorageLibraryLastChangeId = _ns_module.StorageLibraryLastChangeId
-StorageProvider = _ns_module.StorageProvider
-StorageStreamTransaction = _ns_module.StorageStreamTransaction
-StreamedFileDataRequest = _ns_module.StreamedFileDataRequest
-SystemAudioProperties = _ns_module.SystemAudioProperties
-SystemDataPaths = _ns_module.SystemDataPaths
-SystemGPSProperties = _ns_module.SystemGPSProperties
-SystemImageProperties = _ns_module.SystemImageProperties
-SystemMediaProperties = _ns_module.SystemMediaProperties
-SystemMusicProperties = _ns_module.SystemMusicProperties
-SystemPhotoProperties = _ns_module.SystemPhotoProperties
-SystemProperties = _ns_module.SystemProperties
-SystemVideoProperties = _ns_module.SystemVideoProperties
-UserDataPaths = _ns_module.UserDataPaths
-IStorageFile = _ns_module.IStorageFile
-IStorageFile2 = _ns_module.IStorageFile2
-IStorageFilePropertiesWithAvailability = _ns_module.IStorageFilePropertiesWithAvailability
-IStorageFolder = _ns_module.IStorageFolder
-IStorageFolder2 = _ns_module.IStorageFolder2
-IStorageItem = _ns_module.IStorageItem
-IStorageItem2 = _ns_module.IStorageItem2
-IStorageItemProperties = _ns_module.IStorageItemProperties
-IStorageItemProperties2 = _ns_module.IStorageItemProperties2
-IStorageItemPropertiesWithProvider = _ns_module.IStorageItemPropertiesWithProvider
-IStreamedFileDataRequest = _ns_module.IStreamedFileDataRequest
+CachedFileManager = _winrt_windows_storage.CachedFileManager
+DownloadsFolder = _winrt_windows_storage.DownloadsFolder
+FileIO = _winrt_windows_storage.FileIO
+KnownFolders = _winrt_windows_storage.KnownFolders
+PathIO = _winrt_windows_storage.PathIO
+SetVersionDeferral = _winrt_windows_storage.SetVersionDeferral
+SetVersionRequest = _winrt_windows_storage.SetVersionRequest
+StorageFile = _winrt_windows_storage.StorageFile
+StorageFolder = _winrt_windows_storage.StorageFolder
+StorageLibrary = _winrt_windows_storage.StorageLibrary
+StorageLibraryChange = _winrt_windows_storage.StorageLibraryChange
+StorageLibraryChangeReader = _winrt_windows_storage.StorageLibraryChangeReader
+StorageLibraryChangeTracker = _winrt_windows_storage.StorageLibraryChangeTracker
+StorageLibraryChangeTrackerOptions = _winrt_windows_storage.StorageLibraryChangeTrackerOptions
+StorageLibraryLastChangeId = _winrt_windows_storage.StorageLibraryLastChangeId
+StorageProvider = _winrt_windows_storage.StorageProvider
+StorageStreamTransaction = _winrt_windows_storage.StorageStreamTransaction
+StreamedFileDataRequest = _winrt_windows_storage.StreamedFileDataRequest
+SystemAudioProperties = _winrt_windows_storage.SystemAudioProperties
+SystemDataPaths = _winrt_windows_storage.SystemDataPaths
+SystemGPSProperties = _winrt_windows_storage.SystemGPSProperties
+SystemImageProperties = _winrt_windows_storage.SystemImageProperties
+SystemMediaProperties = _winrt_windows_storage.SystemMediaProperties
+SystemMusicProperties = _winrt_windows_storage.SystemMusicProperties
+SystemPhotoProperties = _winrt_windows_storage.SystemPhotoProperties
+SystemProperties = _winrt_windows_storage.SystemProperties
+SystemVideoProperties = _winrt_windows_storage.SystemVideoProperties
+UserDataPaths = _winrt_windows_storage.UserDataPaths
+IStorageFile = _winrt_windows_storage.IStorageFile
+IStorageFile2 = _winrt_windows_storage.IStorageFile2
+IStorageFilePropertiesWithAvailability = _winrt_windows_storage.IStorageFilePropertiesWithAvailability
+IStorageFolder = _winrt_windows_storage.IStorageFolder
+IStorageFolder2 = _winrt_windows_storage.IStorageFolder2
+IStorageItem = _winrt_windows_storage.IStorageItem
+IStorageItem2 = _winrt_windows_storage.IStorageItem2
+IStorageItemProperties = _winrt_windows_storage.IStorageItemProperties
+IStorageItemProperties2 = _winrt_windows_storage.IStorageItemProperties2
+IStorageItemPropertiesWithProvider = _winrt_windows_storage.IStorageItemPropertiesWithProvider
+IStreamedFileDataRequest = _winrt_windows_storage.IStreamedFileDataRequest

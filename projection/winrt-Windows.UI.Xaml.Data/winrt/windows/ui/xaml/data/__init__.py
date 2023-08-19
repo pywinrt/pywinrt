@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Data")
+from . import _winrt_windows_ui_xaml_data
 
 try:
     import winrt.windows.foundation
@@ -42,25 +41,25 @@ class UpdateSourceTrigger(enum.IntEnum):
     EXPLICIT = 2
     LOST_FOCUS = 3
 
-LoadMoreItemsResult = _ns_module.LoadMoreItemsResult
-Binding = _ns_module.Binding
-BindingBase = _ns_module.BindingBase
-BindingExpression = _ns_module.BindingExpression
-BindingExpressionBase = _ns_module.BindingExpressionBase
-BindingOperations = _ns_module.BindingOperations
-CollectionViewSource = _ns_module.CollectionViewSource
-CurrentChangingEventArgs = _ns_module.CurrentChangingEventArgs
-ItemIndexRange = _ns_module.ItemIndexRange
-PropertyChangedEventArgs = _ns_module.PropertyChangedEventArgs
-RelativeSource = _ns_module.RelativeSource
-ICollectionView = _ns_module.ICollectionView
+LoadMoreItemsResult = _winrt_windows_ui_xaml_data.LoadMoreItemsResult
+Binding = _winrt_windows_ui_xaml_data.Binding
+BindingBase = _winrt_windows_ui_xaml_data.BindingBase
+BindingExpression = _winrt_windows_ui_xaml_data.BindingExpression
+BindingExpressionBase = _winrt_windows_ui_xaml_data.BindingExpressionBase
+BindingOperations = _winrt_windows_ui_xaml_data.BindingOperations
+CollectionViewSource = _winrt_windows_ui_xaml_data.CollectionViewSource
+CurrentChangingEventArgs = _winrt_windows_ui_xaml_data.CurrentChangingEventArgs
+ItemIndexRange = _winrt_windows_ui_xaml_data.ItemIndexRange
+PropertyChangedEventArgs = _winrt_windows_ui_xaml_data.PropertyChangedEventArgs
+RelativeSource = _winrt_windows_ui_xaml_data.RelativeSource
+ICollectionView = _winrt_windows_ui_xaml_data.ICollectionView
 winrt.system._mixin_mutable_sequence(ICollectionView)
-ICollectionViewFactory = _ns_module.ICollectionViewFactory
-ICollectionViewGroup = _ns_module.ICollectionViewGroup
-ICustomProperty = _ns_module.ICustomProperty
-ICustomPropertyProvider = _ns_module.ICustomPropertyProvider
-IItemsRangeInfo = _ns_module.IItemsRangeInfo
-INotifyPropertyChanged = _ns_module.INotifyPropertyChanged
-ISelectionInfo = _ns_module.ISelectionInfo
-ISupportIncrementalLoading = _ns_module.ISupportIncrementalLoading
-IValueConverter = _ns_module.IValueConverter
+ICollectionViewFactory = _winrt_windows_ui_xaml_data.ICollectionViewFactory
+ICollectionViewGroup = _winrt_windows_ui_xaml_data.ICollectionViewGroup
+ICustomProperty = _winrt_windows_ui_xaml_data.ICustomProperty
+ICustomPropertyProvider = _winrt_windows_ui_xaml_data.ICustomPropertyProvider
+IItemsRangeInfo = _winrt_windows_ui_xaml_data.IItemsRangeInfo
+INotifyPropertyChanged = _winrt_windows_ui_xaml_data.INotifyPropertyChanged
+ISelectionInfo = _winrt_windows_ui_xaml_data.ISelectionInfo
+ISupportIncrementalLoading = _winrt_windows_ui_xaml_data.ISupportIncrementalLoading
+IValueConverter = _winrt_windows_ui_xaml_data.IValueConverter

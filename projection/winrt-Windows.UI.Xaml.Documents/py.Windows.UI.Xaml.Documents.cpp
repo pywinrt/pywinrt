@@ -409,7 +409,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Block =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Block",
+        "_winrt_windows_ui_xaml_documents.Block",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Block),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Block_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Block_Meta",
+        "_winrt_windows_ui_xaml_documents.Block_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1057,7 +1057,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_BlockCollection =
     {
-        "_winrt_Windows_UI_Xaml_Documents.BlockCollection",
+        "_winrt_windows_ui_xaml_documents.BlockCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1155,7 +1155,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Bold =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Bold",
+        "_winrt_windows_ui_xaml_documents.Bold",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Bold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_ContactContentLinkProvider =
     {
-        "_winrt_Windows_UI_Xaml_Documents.ContactContentLinkProvider",
+        "_winrt_windows_ui_xaml_documents.ContactContentLinkProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::ContactContentLinkProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2476,7 +2476,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_ContentLink =
     {
-        "_winrt_Windows_UI_Xaml_Documents.ContentLink",
+        "_winrt_windows_ui_xaml_documents.ContentLink",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::ContentLink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2510,7 +2510,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_ContentLink_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.ContentLink_Meta",
+        "_winrt_windows_ui_xaml_documents.ContentLink_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2653,7 +2653,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_ContentLinkInvokedEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Documents.ContentLinkInvokedEventArgs",
+        "_winrt_windows_ui_xaml_documents.ContentLinkInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2728,7 +2728,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_ContentLinkProvider =
     {
-        "_winrt_Windows_UI_Xaml_Documents.ContentLinkProvider",
+        "_winrt_windows_ui_xaml_documents.ContentLinkProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3374,7 +3374,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_ContentLinkProviderCollection =
     {
-        "_winrt_Windows_UI_Xaml_Documents.ContentLinkProviderCollection",
+        "_winrt_windows_ui_xaml_documents.ContentLinkProviderCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4142,7 +4142,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Glyphs =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Glyphs",
+        "_winrt_windows_ui_xaml_documents.Glyphs",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Glyphs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4172,7 +4172,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Glyphs_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Glyphs_Meta",
+        "_winrt_windows_ui_xaml_documents.Glyphs_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5347,7 +5347,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Hyperlink =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Hyperlink",
+        "_winrt_windows_ui_xaml_documents.Hyperlink",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5381,7 +5381,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Hyperlink_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Hyperlink_Meta",
+        "_winrt_windows_ui_xaml_documents.Hyperlink_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5456,7 +5456,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_HyperlinkClickEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Documents.HyperlinkClickEventArgs",
+        "_winrt_windows_ui_xaml_documents.HyperlinkClickEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5531,7 +5531,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Inline =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Inline",
+        "_winrt_windows_ui_xaml_documents.Inline",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Inline),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6154,7 +6154,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_InlineCollection =
     {
-        "_winrt_Windows_UI_Xaml_Documents.InlineCollection",
+        "_winrt_windows_ui_xaml_documents.InlineCollection",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6300,7 +6300,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_InlineUIContainer =
     {
-        "_winrt_Windows_UI_Xaml_Documents.InlineUIContainer",
+        "_winrt_windows_ui_xaml_documents.InlineUIContainer",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6398,7 +6398,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Italic =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Italic",
+        "_winrt_windows_ui_xaml_documents.Italic",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Italic),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6496,7 +6496,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_LineBreak =
     {
-        "_winrt_Windows_UI_Xaml_Documents.LineBreak",
+        "_winrt_windows_ui_xaml_documents.LineBreak",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::LineBreak),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6681,7 +6681,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Paragraph =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Paragraph",
+        "_winrt_windows_ui_xaml_documents.Paragraph",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Paragraph),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6702,7 +6702,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Paragraph_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Paragraph_Meta",
+        "_winrt_windows_ui_xaml_documents.Paragraph_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6800,7 +6800,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_PlaceContentLinkProvider =
     {
-        "_winrt_Windows_UI_Xaml_Documents.PlaceContentLinkProvider",
+        "_winrt_windows_ui_xaml_documents.PlaceContentLinkProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::PlaceContentLinkProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7013,7 +7013,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Run =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Run",
+        "_winrt_windows_ui_xaml_documents.Run",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Run),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7034,7 +7034,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Run_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Run_Meta",
+        "_winrt_windows_ui_xaml_documents.Run_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7180,7 +7180,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Span =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Span",
+        "_winrt_windows_ui_xaml_documents.Span",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Span),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8807,7 +8807,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextElement =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextElement",
+        "_winrt_windows_ui_xaml_documents.TextElement",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8845,7 +8845,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextElement_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextElement_Meta",
+        "_winrt_windows_ui_xaml_documents.TextElement_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9097,7 +9097,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextHighlighter =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextHighlighter",
+        "_winrt_windows_ui_xaml_documents.TextHighlighter",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextHighlighter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9119,7 +9119,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextHighlighter_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextHighlighter_Meta",
+        "_winrt_windows_ui_xaml_documents.TextHighlighter_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9194,7 +9194,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextHighlighterBase =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextHighlighterBase",
+        "_winrt_windows_ui_xaml_documents.TextHighlighterBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextHighlighterBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9414,7 +9414,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextPointer =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextPointer",
+        "_winrt_windows_ui_xaml_documents.TextPointer",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextPointer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13144,7 +13144,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Typography =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Typography",
+        "_winrt_windows_ui_xaml_documents.Typography",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Typography),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13207,7 +13207,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Typography_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Typography_Meta",
+        "_winrt_windows_ui_xaml_documents.Typography_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13305,7 +13305,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_Underline =
     {
-        "_winrt_Windows_UI_Xaml_Documents.Underline",
+        "_winrt_windows_ui_xaml_documents.Underline",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Underline),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13440,7 +13440,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyType_Spec type_spec_TextRange =
     {
-        "_winrt_Windows_UI_Xaml_Documents.TextRange",
+        "_winrt_windows_ui_xaml_documents.TextRange",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13453,7 +13453,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Documents",
+           "_winrt_windows_ui_xaml_documents",
            module_doc,
            0,
            nullptr,
@@ -13464,7 +13464,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
 } // py::cpp::Windows::UI::Xaml::Documents
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Documents(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Documents;
 

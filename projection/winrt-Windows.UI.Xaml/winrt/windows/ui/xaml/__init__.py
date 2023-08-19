@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml")
+from . import _winrt_windows_ui_xaml
 
 try:
     import winrt.windows.applicationmodel.activation
@@ -342,87 +341,87 @@ class Visibility(enum.IntEnum):
     VISIBLE = 0
     COLLAPSED = 1
 
-CornerRadius = _ns_module.CornerRadius
-Duration = _ns_module.Duration
-GridLength = _ns_module.GridLength
-Thickness = _ns_module.Thickness
-AdaptiveTrigger = _ns_module.AdaptiveTrigger
-Application = _ns_module.Application
-ApplicationInitializationCallbackParams = _ns_module.ApplicationInitializationCallbackParams
-BindingFailedEventArgs = _ns_module.BindingFailedEventArgs
-BringIntoViewOptions = _ns_module.BringIntoViewOptions
-BringIntoViewRequestedEventArgs = _ns_module.BringIntoViewRequestedEventArgs
-BrushTransition = _ns_module.BrushTransition
-ColorPaletteResources = _ns_module.ColorPaletteResources
-CornerRadiusHelper = _ns_module.CornerRadiusHelper
-DataContextChangedEventArgs = _ns_module.DataContextChangedEventArgs
-DataTemplate = _ns_module.DataTemplate
-DataTemplateKey = _ns_module.DataTemplateKey
-DebugSettings = _ns_module.DebugSettings
-DependencyObject = _ns_module.DependencyObject
-DependencyObjectCollection = _ns_module.DependencyObjectCollection
+CornerRadius = _winrt_windows_ui_xaml.CornerRadius
+Duration = _winrt_windows_ui_xaml.Duration
+GridLength = _winrt_windows_ui_xaml.GridLength
+Thickness = _winrt_windows_ui_xaml.Thickness
+AdaptiveTrigger = _winrt_windows_ui_xaml.AdaptiveTrigger
+Application = _winrt_windows_ui_xaml.Application
+ApplicationInitializationCallbackParams = _winrt_windows_ui_xaml.ApplicationInitializationCallbackParams
+BindingFailedEventArgs = _winrt_windows_ui_xaml.BindingFailedEventArgs
+BringIntoViewOptions = _winrt_windows_ui_xaml.BringIntoViewOptions
+BringIntoViewRequestedEventArgs = _winrt_windows_ui_xaml.BringIntoViewRequestedEventArgs
+BrushTransition = _winrt_windows_ui_xaml.BrushTransition
+ColorPaletteResources = _winrt_windows_ui_xaml.ColorPaletteResources
+CornerRadiusHelper = _winrt_windows_ui_xaml.CornerRadiusHelper
+DataContextChangedEventArgs = _winrt_windows_ui_xaml.DataContextChangedEventArgs
+DataTemplate = _winrt_windows_ui_xaml.DataTemplate
+DataTemplateKey = _winrt_windows_ui_xaml.DataTemplateKey
+DebugSettings = _winrt_windows_ui_xaml.DebugSettings
+DependencyObject = _winrt_windows_ui_xaml.DependencyObject
+DependencyObjectCollection = _winrt_windows_ui_xaml.DependencyObjectCollection
 winrt.system._mixin_mutable_sequence(DependencyObjectCollection)
-DependencyProperty = _ns_module.DependencyProperty
-DependencyPropertyChangedEventArgs = _ns_module.DependencyPropertyChangedEventArgs
-DispatcherTimer = _ns_module.DispatcherTimer
-DragEventArgs = _ns_module.DragEventArgs
-DragOperationDeferral = _ns_module.DragOperationDeferral
-DragStartingEventArgs = _ns_module.DragStartingEventArgs
-DragUI = _ns_module.DragUI
-DragUIOverride = _ns_module.DragUIOverride
-DropCompletedEventArgs = _ns_module.DropCompletedEventArgs
-DurationHelper = _ns_module.DurationHelper
-EffectiveViewportChangedEventArgs = _ns_module.EffectiveViewportChangedEventArgs
-ElementFactoryGetArgs = _ns_module.ElementFactoryGetArgs
-ElementFactoryRecycleArgs = _ns_module.ElementFactoryRecycleArgs
-ElementSoundPlayer = _ns_module.ElementSoundPlayer
-EventTrigger = _ns_module.EventTrigger
-ExceptionRoutedEventArgs = _ns_module.ExceptionRoutedEventArgs
-FrameworkElement = _ns_module.FrameworkElement
-FrameworkTemplate = _ns_module.FrameworkTemplate
-FrameworkView = _ns_module.FrameworkView
-FrameworkViewSource = _ns_module.FrameworkViewSource
-GridLengthHelper = _ns_module.GridLengthHelper
-MediaFailedRoutedEventArgs = _ns_module.MediaFailedRoutedEventArgs
-PointHelper = _ns_module.PointHelper
-PropertyMetadata = _ns_module.PropertyMetadata
-PropertyPath = _ns_module.PropertyPath
-RectHelper = _ns_module.RectHelper
-ResourceDictionary = _ns_module.ResourceDictionary
+DependencyProperty = _winrt_windows_ui_xaml.DependencyProperty
+DependencyPropertyChangedEventArgs = _winrt_windows_ui_xaml.DependencyPropertyChangedEventArgs
+DispatcherTimer = _winrt_windows_ui_xaml.DispatcherTimer
+DragEventArgs = _winrt_windows_ui_xaml.DragEventArgs
+DragOperationDeferral = _winrt_windows_ui_xaml.DragOperationDeferral
+DragStartingEventArgs = _winrt_windows_ui_xaml.DragStartingEventArgs
+DragUI = _winrt_windows_ui_xaml.DragUI
+DragUIOverride = _winrt_windows_ui_xaml.DragUIOverride
+DropCompletedEventArgs = _winrt_windows_ui_xaml.DropCompletedEventArgs
+DurationHelper = _winrt_windows_ui_xaml.DurationHelper
+EffectiveViewportChangedEventArgs = _winrt_windows_ui_xaml.EffectiveViewportChangedEventArgs
+ElementFactoryGetArgs = _winrt_windows_ui_xaml.ElementFactoryGetArgs
+ElementFactoryRecycleArgs = _winrt_windows_ui_xaml.ElementFactoryRecycleArgs
+ElementSoundPlayer = _winrt_windows_ui_xaml.ElementSoundPlayer
+EventTrigger = _winrt_windows_ui_xaml.EventTrigger
+ExceptionRoutedEventArgs = _winrt_windows_ui_xaml.ExceptionRoutedEventArgs
+FrameworkElement = _winrt_windows_ui_xaml.FrameworkElement
+FrameworkTemplate = _winrt_windows_ui_xaml.FrameworkTemplate
+FrameworkView = _winrt_windows_ui_xaml.FrameworkView
+FrameworkViewSource = _winrt_windows_ui_xaml.FrameworkViewSource
+GridLengthHelper = _winrt_windows_ui_xaml.GridLengthHelper
+MediaFailedRoutedEventArgs = _winrt_windows_ui_xaml.MediaFailedRoutedEventArgs
+PointHelper = _winrt_windows_ui_xaml.PointHelper
+PropertyMetadata = _winrt_windows_ui_xaml.PropertyMetadata
+PropertyPath = _winrt_windows_ui_xaml.PropertyPath
+RectHelper = _winrt_windows_ui_xaml.RectHelper
+ResourceDictionary = _winrt_windows_ui_xaml.ResourceDictionary
 winrt.system._mixin_mutable_mapping(ResourceDictionary)
-RoutedEvent = _ns_module.RoutedEvent
-RoutedEventArgs = _ns_module.RoutedEventArgs
-ScalarTransition = _ns_module.ScalarTransition
-Setter = _ns_module.Setter
-SetterBase = _ns_module.SetterBase
-SetterBaseCollection = _ns_module.SetterBaseCollection
+RoutedEvent = _winrt_windows_ui_xaml.RoutedEvent
+RoutedEventArgs = _winrt_windows_ui_xaml.RoutedEventArgs
+ScalarTransition = _winrt_windows_ui_xaml.ScalarTransition
+Setter = _winrt_windows_ui_xaml.Setter
+SetterBase = _winrt_windows_ui_xaml.SetterBase
+SetterBaseCollection = _winrt_windows_ui_xaml.SetterBaseCollection
 winrt.system._mixin_mutable_sequence(SetterBaseCollection)
-SizeChangedEventArgs = _ns_module.SizeChangedEventArgs
-SizeHelper = _ns_module.SizeHelper
-StateTrigger = _ns_module.StateTrigger
-StateTriggerBase = _ns_module.StateTriggerBase
-Style = _ns_module.Style
-TargetPropertyPath = _ns_module.TargetPropertyPath
-ThicknessHelper = _ns_module.ThicknessHelper
-TriggerAction = _ns_module.TriggerAction
-TriggerActionCollection = _ns_module.TriggerActionCollection
+SizeChangedEventArgs = _winrt_windows_ui_xaml.SizeChangedEventArgs
+SizeHelper = _winrt_windows_ui_xaml.SizeHelper
+StateTrigger = _winrt_windows_ui_xaml.StateTrigger
+StateTriggerBase = _winrt_windows_ui_xaml.StateTriggerBase
+Style = _winrt_windows_ui_xaml.Style
+TargetPropertyPath = _winrt_windows_ui_xaml.TargetPropertyPath
+ThicknessHelper = _winrt_windows_ui_xaml.ThicknessHelper
+TriggerAction = _winrt_windows_ui_xaml.TriggerAction
+TriggerActionCollection = _winrt_windows_ui_xaml.TriggerActionCollection
 winrt.system._mixin_mutable_sequence(TriggerActionCollection)
-TriggerBase = _ns_module.TriggerBase
-TriggerCollection = _ns_module.TriggerCollection
+TriggerBase = _winrt_windows_ui_xaml.TriggerBase
+TriggerCollection = _winrt_windows_ui_xaml.TriggerCollection
 winrt.system._mixin_mutable_sequence(TriggerCollection)
-UIElement = _ns_module.UIElement
-UIElementWeakCollection = _ns_module.UIElementWeakCollection
+UIElement = _winrt_windows_ui_xaml.UIElement
+UIElementWeakCollection = _winrt_windows_ui_xaml.UIElementWeakCollection
 winrt.system._mixin_mutable_sequence(UIElementWeakCollection)
-UnhandledExceptionEventArgs = _ns_module.UnhandledExceptionEventArgs
-Vector3Transition = _ns_module.Vector3Transition
-VisualState = _ns_module.VisualState
-VisualStateChangedEventArgs = _ns_module.VisualStateChangedEventArgs
-VisualStateGroup = _ns_module.VisualStateGroup
-VisualStateManager = _ns_module.VisualStateManager
-VisualTransition = _ns_module.VisualTransition
-Window = _ns_module.Window
-WindowCreatedEventArgs = _ns_module.WindowCreatedEventArgs
-XamlRoot = _ns_module.XamlRoot
-XamlRootChangedEventArgs = _ns_module.XamlRootChangedEventArgs
-IDataTemplateExtension = _ns_module.IDataTemplateExtension
-IElementFactory = _ns_module.IElementFactory
+UnhandledExceptionEventArgs = _winrt_windows_ui_xaml.UnhandledExceptionEventArgs
+Vector3Transition = _winrt_windows_ui_xaml.Vector3Transition
+VisualState = _winrt_windows_ui_xaml.VisualState
+VisualStateChangedEventArgs = _winrt_windows_ui_xaml.VisualStateChangedEventArgs
+VisualStateGroup = _winrt_windows_ui_xaml.VisualStateGroup
+VisualStateManager = _winrt_windows_ui_xaml.VisualStateManager
+VisualTransition = _winrt_windows_ui_xaml.VisualTransition
+Window = _winrt_windows_ui_xaml.Window
+WindowCreatedEventArgs = _winrt_windows_ui_xaml.WindowCreatedEventArgs
+XamlRoot = _winrt_windows_ui_xaml.XamlRoot
+XamlRootChangedEventArgs = _winrt_windows_ui_xaml.XamlRootChangedEventArgs
+IDataTemplateExtension = _winrt_windows_ui_xaml.IDataTemplateExtension
+IElementFactory = _winrt_windows_ui_xaml.IElementFactory

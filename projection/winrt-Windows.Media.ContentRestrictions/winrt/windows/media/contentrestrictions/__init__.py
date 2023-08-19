@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.ContentRestrictions")
+from . import _winrt_windows_media_contentrestrictions
 
 try:
     import winrt.windows.foundation
@@ -35,6 +34,6 @@ class RatedContentCategory(enum.IntEnum):
     TELEVISION = 4
     MUSIC = 5
 
-ContentRestrictionsBrowsePolicy = _ns_module.ContentRestrictionsBrowsePolicy
-RatedContentDescription = _ns_module.RatedContentDescription
-RatedContentRestrictions = _ns_module.RatedContentRestrictions
+ContentRestrictionsBrowsePolicy = _winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy
+RatedContentDescription = _winrt_windows_media_contentrestrictions.RatedContentDescription
+RatedContentRestrictions = _winrt_windows_media_contentrestrictions.RatedContentRestrictions

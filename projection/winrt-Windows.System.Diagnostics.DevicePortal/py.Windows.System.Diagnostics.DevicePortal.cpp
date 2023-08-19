@@ -330,7 +330,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyType_Spec type_spec_DevicePortalConnection =
     {
-        "_winrt_Windows_System_Diagnostics_DevicePortal.DevicePortalConnection",
+        "_winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyType_Spec type_spec_DevicePortalConnectionClosedEventArgs =
     {
-        "_winrt_Windows_System_Diagnostics_DevicePortal.DevicePortalConnectionClosedEventArgs",
+        "_winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyType_Spec type_spec_DevicePortalConnectionRequestReceivedEventArgs =
     {
-        "_winrt_Windows_System_Diagnostics_DevicePortal.DevicePortalConnectionRequestReceivedEventArgs",
+        "_winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs",
         sizeof(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -623,7 +623,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Diagnostics_DevicePortal",
+           "_winrt_windows_system_diagnostics_deviceportal",
            module_doc,
            0,
            nullptr,
@@ -634,7 +634,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
 } // py::cpp::Windows::System::Diagnostics::DevicePortal
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics_DevicePortal(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_deviceportal(void) noexcept
 {
     using namespace py::cpp::Windows::System::Diagnostics::DevicePortal;
 

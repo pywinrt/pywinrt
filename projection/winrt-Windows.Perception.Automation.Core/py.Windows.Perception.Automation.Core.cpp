@@ -66,7 +66,7 @@ namespace py::cpp::Windows::Perception::Automation::Core
 
     static PyType_Spec type_spec_CorePerceptionAutomation =
     {
-        "_winrt_Windows_Perception_Automation_Core.CorePerceptionAutomation",
+        "_winrt_windows_perception_automation_core.CorePerceptionAutomation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -79,7 +79,7 @@ namespace py::cpp::Windows::Perception::Automation::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Perception_Automation_Core",
+           "_winrt_windows_perception_automation_core",
            module_doc,
            0,
            nullptr,
@@ -90,7 +90,7 @@ namespace py::cpp::Windows::Perception::Automation::Core
 
 } // py::cpp::Windows::Perception::Automation::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Perception_Automation_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_perception_automation_core(void) noexcept
 {
     using namespace py::cpp::Windows::Perception::Automation::Core;
 

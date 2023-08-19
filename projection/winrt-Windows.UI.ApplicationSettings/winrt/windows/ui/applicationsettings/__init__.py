@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.ApplicationSettings")
+from . import _winrt_windows_ui_applicationsettings
 
 try:
     import winrt.windows.foundation
@@ -50,14 +49,14 @@ class WebAccountAction(enum.IntEnum):
     MANAGE = 3
     MORE = 4
 
-AccountsSettingsPane = _ns_module.AccountsSettingsPane
-AccountsSettingsPaneCommandsRequestedEventArgs = _ns_module.AccountsSettingsPaneCommandsRequestedEventArgs
-AccountsSettingsPaneEventDeferral = _ns_module.AccountsSettingsPaneEventDeferral
-CredentialCommand = _ns_module.CredentialCommand
-SettingsCommand = _ns_module.SettingsCommand
-SettingsPane = _ns_module.SettingsPane
-SettingsPaneCommandsRequest = _ns_module.SettingsPaneCommandsRequest
-SettingsPaneCommandsRequestedEventArgs = _ns_module.SettingsPaneCommandsRequestedEventArgs
-WebAccountCommand = _ns_module.WebAccountCommand
-WebAccountInvokedArgs = _ns_module.WebAccountInvokedArgs
-WebAccountProviderCommand = _ns_module.WebAccountProviderCommand
+AccountsSettingsPane = _winrt_windows_ui_applicationsettings.AccountsSettingsPane
+AccountsSettingsPaneCommandsRequestedEventArgs = _winrt_windows_ui_applicationsettings.AccountsSettingsPaneCommandsRequestedEventArgs
+AccountsSettingsPaneEventDeferral = _winrt_windows_ui_applicationsettings.AccountsSettingsPaneEventDeferral
+CredentialCommand = _winrt_windows_ui_applicationsettings.CredentialCommand
+SettingsCommand = _winrt_windows_ui_applicationsettings.SettingsCommand
+SettingsPane = _winrt_windows_ui_applicationsettings.SettingsPane
+SettingsPaneCommandsRequest = _winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequest
+SettingsPaneCommandsRequestedEventArgs = _winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequestedEventArgs
+WebAccountCommand = _winrt_windows_ui_applicationsettings.WebAccountCommand
+WebAccountInvokedArgs = _winrt_windows_ui_applicationsettings.WebAccountInvokedArgs
+WebAccountProviderCommand = _winrt_windows_ui_applicationsettings.WebAccountProviderCommand

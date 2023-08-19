@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Lights.Effects")
+from . import _winrt_windows_devices_lights_effects
 
 try:
     import winrt.windows.devices.lights
@@ -43,13 +42,13 @@ class LampArrayRepetitionMode(enum.IntEnum):
     OCCURRENCES = 0
     FOREVER = 1
 
-LampArrayBitmapEffect = _ns_module.LampArrayBitmapEffect
-LampArrayBitmapRequestedEventArgs = _ns_module.LampArrayBitmapRequestedEventArgs
-LampArrayBlinkEffect = _ns_module.LampArrayBlinkEffect
-LampArrayColorRampEffect = _ns_module.LampArrayColorRampEffect
-LampArrayCustomEffect = _ns_module.LampArrayCustomEffect
-LampArrayEffectPlaylist = _ns_module.LampArrayEffectPlaylist
+LampArrayBitmapEffect = _winrt_windows_devices_lights_effects.LampArrayBitmapEffect
+LampArrayBitmapRequestedEventArgs = _winrt_windows_devices_lights_effects.LampArrayBitmapRequestedEventArgs
+LampArrayBlinkEffect = _winrt_windows_devices_lights_effects.LampArrayBlinkEffect
+LampArrayColorRampEffect = _winrt_windows_devices_lights_effects.LampArrayColorRampEffect
+LampArrayCustomEffect = _winrt_windows_devices_lights_effects.LampArrayCustomEffect
+LampArrayEffectPlaylist = _winrt_windows_devices_lights_effects.LampArrayEffectPlaylist
 winrt.system._mixin_sequence(LampArrayEffectPlaylist)
-LampArraySolidEffect = _ns_module.LampArraySolidEffect
-LampArrayUpdateRequestedEventArgs = _ns_module.LampArrayUpdateRequestedEventArgs
-ILampArrayEffect = _ns_module.ILampArrayEffect
+LampArraySolidEffect = _winrt_windows_devices_lights_effects.LampArraySolidEffect
+LampArrayUpdateRequestedEventArgs = _winrt_windows_devices_lights_effects.LampArrayUpdateRequestedEventArgs
+ILampArrayEffect = _winrt_windows_devices_lights_effects.ILampArrayEffect

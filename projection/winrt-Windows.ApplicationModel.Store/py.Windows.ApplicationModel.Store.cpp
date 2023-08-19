@@ -545,7 +545,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_CurrentApp =
     {
-        "_winrt_Windows_ApplicationModel_Store.CurrentApp",
+        "_winrt_windows_applicationmodel_store.CurrentApp",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_CurrentApp_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Store.CurrentApp_Meta",
+        "_winrt_windows_applicationmodel_store.CurrentApp_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_CurrentAppSimulator =
     {
-        "_winrt_Windows_ApplicationModel_Store.CurrentAppSimulator",
+        "_winrt_windows_applicationmodel_store.CurrentAppSimulator",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_CurrentAppSimulator_Meta =
     {
-        "_winrt_Windows_ApplicationModel_Store.CurrentAppSimulator_Meta",
+        "_winrt_windows_applicationmodel_store.CurrentAppSimulator_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1270,7 +1270,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_LicenseInformation =
     {
-        "_winrt_Windows_ApplicationModel_Store.LicenseInformation",
+        "_winrt_windows_applicationmodel_store.LicenseInformation",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1545,7 +1545,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_ListingInformation =
     {
-        "_winrt_Windows_ApplicationModel_Store.ListingInformation",
+        "_winrt_windows_applicationmodel_store.ListingInformation",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ListingInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1700,7 +1700,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_ProductLicense =
     {
-        "_winrt_Windows_ApplicationModel_Store.ProductLicense",
+        "_winrt_windows_applicationmodel_store.ProductLicense",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ProductLicense),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2015,7 +2015,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_ProductListing =
     {
-        "_winrt_Windows_ApplicationModel_Store.ProductListing",
+        "_winrt_windows_applicationmodel_store.ProductListing",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ProductListing),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2272,7 +2272,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_ProductPurchaseDisplayProperties =
     {
-        "_winrt_Windows_ApplicationModel_Store.ProductPurchaseDisplayProperties",
+        "_winrt_windows_applicationmodel_store.ProductPurchaseDisplayProperties",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2427,7 +2427,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_PurchaseResults =
     {
-        "_winrt_Windows_ApplicationModel_Store.PurchaseResults",
+        "_winrt_windows_applicationmodel_store.PurchaseResults",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::PurchaseResults),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2562,7 +2562,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyType_Spec type_spec_UnfulfilledConsumable =
     {
-        "_winrt_Windows_ApplicationModel_Store.UnfulfilledConsumable",
+        "_winrt_windows_applicationmodel_store.UnfulfilledConsumable",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::UnfulfilledConsumable),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2575,7 +2575,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Store",
+           "_winrt_windows_applicationmodel_store",
            module_doc,
            0,
            nullptr,
@@ -2586,7 +2586,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
 
 } // py::cpp::Windows::ApplicationModel::Store
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Store;
 

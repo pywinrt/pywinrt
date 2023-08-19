@@ -232,7 +232,7 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
     static PyType_Spec type_spec_AudioRoutingManager =
     {
-        "_winrt_Windows_Phone_Media_Devices.AudioRoutingManager",
+        "_winrt_windows_phone_media_devices.AudioRoutingManager",
         sizeof(py::wrapper::Windows::Phone::Media::Devices::AudioRoutingManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -245,7 +245,7 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_Media_Devices",
+           "_winrt_windows_phone_media_devices",
            module_doc,
            0,
            nullptr,
@@ -256,7 +256,7 @@ namespace py::cpp::Windows::Phone::Media::Devices
 
 } // py::cpp::Windows::Phone::Media::Devices
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Media_Devices(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_media_devices(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::Media::Devices;
 

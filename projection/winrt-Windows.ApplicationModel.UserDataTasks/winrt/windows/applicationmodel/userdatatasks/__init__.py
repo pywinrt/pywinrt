@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.UserDataTasks")
+from . import _winrt_windows_applicationmodel_userdatatasks
 
 try:
     import winrt.windows.foundation
@@ -99,14 +98,14 @@ class UserDataTaskWeekOfMonth(enum.IntEnum):
     FOURTH = 3
     LAST = 4
 
-UserDataTask = _ns_module.UserDataTask
-UserDataTaskBatch = _ns_module.UserDataTaskBatch
-UserDataTaskList = _ns_module.UserDataTaskList
-UserDataTaskListLimitedWriteOperations = _ns_module.UserDataTaskListLimitedWriteOperations
-UserDataTaskListSyncManager = _ns_module.UserDataTaskListSyncManager
-UserDataTaskManager = _ns_module.UserDataTaskManager
-UserDataTaskQueryOptions = _ns_module.UserDataTaskQueryOptions
-UserDataTaskReader = _ns_module.UserDataTaskReader
-UserDataTaskRecurrenceProperties = _ns_module.UserDataTaskRecurrenceProperties
-UserDataTaskRegenerationProperties = _ns_module.UserDataTaskRegenerationProperties
-UserDataTaskStore = _ns_module.UserDataTaskStore
+UserDataTask = _winrt_windows_applicationmodel_userdatatasks.UserDataTask
+UserDataTaskBatch = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskBatch
+UserDataTaskList = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskList
+UserDataTaskListLimitedWriteOperations = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskListLimitedWriteOperations
+UserDataTaskListSyncManager = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskListSyncManager
+UserDataTaskManager = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskManager
+UserDataTaskQueryOptions = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskQueryOptions
+UserDataTaskReader = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskReader
+UserDataTaskRecurrenceProperties = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskRecurrenceProperties
+UserDataTaskRegenerationProperties = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskRegenerationProperties
+UserDataTaskStore = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskStore

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Security.Credentials")
+from . import _winrt_windows_security_credentials
 
 try:
     import winrt.windows.foundation
@@ -61,15 +60,15 @@ class WebAccountState(enum.IntEnum):
     CONNECTED = 1
     ERROR = 2
 
-KeyCredential = _ns_module.KeyCredential
-KeyCredentialAttestationResult = _ns_module.KeyCredentialAttestationResult
-KeyCredentialManager = _ns_module.KeyCredentialManager
-KeyCredentialOperationResult = _ns_module.KeyCredentialOperationResult
-KeyCredentialRetrievalResult = _ns_module.KeyCredentialRetrievalResult
-PasswordCredential = _ns_module.PasswordCredential
-PasswordCredentialPropertyStore = _ns_module.PasswordCredentialPropertyStore
+KeyCredential = _winrt_windows_security_credentials.KeyCredential
+KeyCredentialAttestationResult = _winrt_windows_security_credentials.KeyCredentialAttestationResult
+KeyCredentialManager = _winrt_windows_security_credentials.KeyCredentialManager
+KeyCredentialOperationResult = _winrt_windows_security_credentials.KeyCredentialOperationResult
+KeyCredentialRetrievalResult = _winrt_windows_security_credentials.KeyCredentialRetrievalResult
+PasswordCredential = _winrt_windows_security_credentials.PasswordCredential
+PasswordCredentialPropertyStore = _winrt_windows_security_credentials.PasswordCredentialPropertyStore
 winrt.system._mixin_mutable_mapping(PasswordCredentialPropertyStore)
-PasswordVault = _ns_module.PasswordVault
-WebAccount = _ns_module.WebAccount
-WebAccountProvider = _ns_module.WebAccountProvider
-IWebAccount = _ns_module.IWebAccount
+PasswordVault = _winrt_windows_security_credentials.PasswordVault
+WebAccount = _winrt_windows_security_credentials.WebAccount
+WebAccountProvider = _winrt_windows_security_credentials.WebAccountProvider
+IWebAccount = _winrt_windows_security_credentials.IWebAccount

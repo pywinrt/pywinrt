@@ -117,7 +117,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_AddPagesEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Printing.AddPagesEventArgs",
+        "_winrt_windows_ui_xaml_printing.AddPagesEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::AddPagesEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -235,7 +235,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_GetPreviewPageEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Printing.GetPreviewPageEventArgs",
+        "_winrt_windows_ui_xaml_printing.GetPreviewPageEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::GetPreviewPageEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -373,7 +373,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PaginateEventArgs =
     {
-        "_winrt_Windows_UI_Xaml_Printing.PaginateEventArgs",
+        "_winrt_windows_ui_xaml_printing.PaginateEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PaginateEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -808,7 +808,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PrintDocument =
     {
-        "_winrt_Windows_UI_Xaml_Printing.PrintDocument",
+        "_winrt_windows_ui_xaml_printing.PrintDocument",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -829,7 +829,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyType_Spec type_spec_PrintDocument_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Printing.PrintDocument_Meta",
+        "_winrt_windows_ui_xaml_printing.PrintDocument_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -842,7 +842,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Printing",
+           "_winrt_windows_ui_xaml_printing",
            module_doc,
            0,
            nullptr,
@@ -853,7 +853,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
 
 } // py::cpp::Windows::UI::Xaml::Printing
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Printing(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_printing(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Printing;
 

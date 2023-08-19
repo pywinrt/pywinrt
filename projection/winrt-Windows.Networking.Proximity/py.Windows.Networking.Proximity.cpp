@@ -94,7 +94,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_ConnectionRequestedEventArgs =
     {
-        "_winrt_Windows_Networking_Proximity.ConnectionRequestedEventArgs",
+        "_winrt_windows_networking_proximity.ConnectionRequestedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Proximity::ConnectionRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_PeerFinder =
     {
-        "_winrt_Windows_Networking_Proximity.PeerFinder",
+        "_winrt_windows_networking_proximity.PeerFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -705,7 +705,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_PeerFinder_Meta =
     {
-        "_winrt_Windows_Networking_Proximity.PeerFinder_Meta",
+        "_winrt_windows_networking_proximity.PeerFinder_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -880,7 +880,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_PeerInformation =
     {
-        "_winrt_Windows_Networking_Proximity.PeerInformation",
+        "_winrt_windows_networking_proximity.PeerInformation",
         sizeof(py::wrapper::Windows::Networking::Proximity::PeerInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1262,7 +1262,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_PeerWatcher =
     {
-        "_winrt_Windows_Networking_Proximity.PeerWatcher",
+        "_winrt_windows_networking_proximity.PeerWatcher",
         sizeof(py::wrapper::Windows::Networking::Proximity::PeerWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1841,7 +1841,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_ProximityDevice =
     {
-        "_winrt_Windows_Networking_Proximity.ProximityDevice",
+        "_winrt_windows_networking_proximity.ProximityDevice",
         sizeof(py::wrapper::Windows::Networking::Proximity::ProximityDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1996,7 +1996,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_ProximityMessage =
     {
-        "_winrt_Windows_Networking_Proximity.ProximityMessage",
+        "_winrt_windows_networking_proximity.ProximityMessage",
         sizeof(py::wrapper::Windows::Networking::Proximity::ProximityMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2131,7 +2131,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyType_Spec type_spec_TriggeredConnectionStateChangedEventArgs =
     {
-        "_winrt_Windows_Networking_Proximity.TriggeredConnectionStateChangedEventArgs",
+        "_winrt_windows_networking_proximity.TriggeredConnectionStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2144,7 +2144,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Networking_Proximity",
+           "_winrt_windows_networking_proximity",
            module_doc,
            0,
            nullptr,
@@ -2155,7 +2155,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
 } // py::cpp::Windows::Networking::Proximity
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Proximity(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
 {
     using namespace py::cpp::Windows::Networking::Proximity;
 

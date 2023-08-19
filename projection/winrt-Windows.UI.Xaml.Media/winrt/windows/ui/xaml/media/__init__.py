@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Media")
+from . import _winrt_windows_ui_xaml_media
 
 try:
     import winrt.windows.foundation
@@ -171,80 +170,80 @@ class SweepDirection(enum.IntEnum):
     COUNTERCLOCKWISE = 0
     CLOCKWISE = 1
 
-Matrix = _ns_module.Matrix
-AcrylicBrush = _ns_module.AcrylicBrush
-ArcSegment = _ns_module.ArcSegment
-BezierSegment = _ns_module.BezierSegment
-BitmapCache = _ns_module.BitmapCache
-Brush = _ns_module.Brush
-BrushCollection = _ns_module.BrushCollection
+Matrix = _winrt_windows_ui_xaml_media.Matrix
+AcrylicBrush = _winrt_windows_ui_xaml_media.AcrylicBrush
+ArcSegment = _winrt_windows_ui_xaml_media.ArcSegment
+BezierSegment = _winrt_windows_ui_xaml_media.BezierSegment
+BitmapCache = _winrt_windows_ui_xaml_media.BitmapCache
+Brush = _winrt_windows_ui_xaml_media.Brush
+BrushCollection = _winrt_windows_ui_xaml_media.BrushCollection
 winrt.system._mixin_mutable_sequence(BrushCollection)
-CacheMode = _ns_module.CacheMode
-CompositeTransform = _ns_module.CompositeTransform
-CompositionTarget = _ns_module.CompositionTarget
-DoubleCollection = _ns_module.DoubleCollection
+CacheMode = _winrt_windows_ui_xaml_media.CacheMode
+CompositeTransform = _winrt_windows_ui_xaml_media.CompositeTransform
+CompositionTarget = _winrt_windows_ui_xaml_media.CompositionTarget
+DoubleCollection = _winrt_windows_ui_xaml_media.DoubleCollection
 winrt.system._mixin_mutable_sequence(DoubleCollection)
-EllipseGeometry = _ns_module.EllipseGeometry
-FontFamily = _ns_module.FontFamily
-GeneralTransform = _ns_module.GeneralTransform
-Geometry = _ns_module.Geometry
-GeometryCollection = _ns_module.GeometryCollection
+EllipseGeometry = _winrt_windows_ui_xaml_media.EllipseGeometry
+FontFamily = _winrt_windows_ui_xaml_media.FontFamily
+GeneralTransform = _winrt_windows_ui_xaml_media.GeneralTransform
+Geometry = _winrt_windows_ui_xaml_media.Geometry
+GeometryCollection = _winrt_windows_ui_xaml_media.GeometryCollection
 winrt.system._mixin_mutable_sequence(GeometryCollection)
-GeometryGroup = _ns_module.GeometryGroup
-GradientBrush = _ns_module.GradientBrush
-GradientStop = _ns_module.GradientStop
-GradientStopCollection = _ns_module.GradientStopCollection
+GeometryGroup = _winrt_windows_ui_xaml_media.GeometryGroup
+GradientBrush = _winrt_windows_ui_xaml_media.GradientBrush
+GradientStop = _winrt_windows_ui_xaml_media.GradientStop
+GradientStopCollection = _winrt_windows_ui_xaml_media.GradientStopCollection
 winrt.system._mixin_mutable_sequence(GradientStopCollection)
-ImageBrush = _ns_module.ImageBrush
-ImageSource = _ns_module.ImageSource
-LineGeometry = _ns_module.LineGeometry
-LineSegment = _ns_module.LineSegment
-LinearGradientBrush = _ns_module.LinearGradientBrush
-LoadedImageSourceLoadCompletedEventArgs = _ns_module.LoadedImageSourceLoadCompletedEventArgs
-LoadedImageSurface = _ns_module.LoadedImageSurface
-Matrix3DProjection = _ns_module.Matrix3DProjection
-MatrixHelper = _ns_module.MatrixHelper
-MatrixTransform = _ns_module.MatrixTransform
-MediaTransportControlsThumbnailRequestedEventArgs = _ns_module.MediaTransportControlsThumbnailRequestedEventArgs
-PartialMediaFailureDetectedEventArgs = _ns_module.PartialMediaFailureDetectedEventArgs
-PathFigure = _ns_module.PathFigure
-PathFigureCollection = _ns_module.PathFigureCollection
+ImageBrush = _winrt_windows_ui_xaml_media.ImageBrush
+ImageSource = _winrt_windows_ui_xaml_media.ImageSource
+LineGeometry = _winrt_windows_ui_xaml_media.LineGeometry
+LineSegment = _winrt_windows_ui_xaml_media.LineSegment
+LinearGradientBrush = _winrt_windows_ui_xaml_media.LinearGradientBrush
+LoadedImageSourceLoadCompletedEventArgs = _winrt_windows_ui_xaml_media.LoadedImageSourceLoadCompletedEventArgs
+LoadedImageSurface = _winrt_windows_ui_xaml_media.LoadedImageSurface
+Matrix3DProjection = _winrt_windows_ui_xaml_media.Matrix3DProjection
+MatrixHelper = _winrt_windows_ui_xaml_media.MatrixHelper
+MatrixTransform = _winrt_windows_ui_xaml_media.MatrixTransform
+MediaTransportControlsThumbnailRequestedEventArgs = _winrt_windows_ui_xaml_media.MediaTransportControlsThumbnailRequestedEventArgs
+PartialMediaFailureDetectedEventArgs = _winrt_windows_ui_xaml_media.PartialMediaFailureDetectedEventArgs
+PathFigure = _winrt_windows_ui_xaml_media.PathFigure
+PathFigureCollection = _winrt_windows_ui_xaml_media.PathFigureCollection
 winrt.system._mixin_mutable_sequence(PathFigureCollection)
-PathGeometry = _ns_module.PathGeometry
-PathSegment = _ns_module.PathSegment
-PathSegmentCollection = _ns_module.PathSegmentCollection
+PathGeometry = _winrt_windows_ui_xaml_media.PathGeometry
+PathSegment = _winrt_windows_ui_xaml_media.PathSegment
+PathSegmentCollection = _winrt_windows_ui_xaml_media.PathSegmentCollection
 winrt.system._mixin_mutable_sequence(PathSegmentCollection)
-PlaneProjection = _ns_module.PlaneProjection
-PointCollection = _ns_module.PointCollection
+PlaneProjection = _winrt_windows_ui_xaml_media.PlaneProjection
+PointCollection = _winrt_windows_ui_xaml_media.PointCollection
 winrt.system._mixin_mutable_sequence(PointCollection)
-PolyBezierSegment = _ns_module.PolyBezierSegment
-PolyLineSegment = _ns_module.PolyLineSegment
-PolyQuadraticBezierSegment = _ns_module.PolyQuadraticBezierSegment
-Projection = _ns_module.Projection
-QuadraticBezierSegment = _ns_module.QuadraticBezierSegment
-RateChangedRoutedEventArgs = _ns_module.RateChangedRoutedEventArgs
-RectangleGeometry = _ns_module.RectangleGeometry
-RenderedEventArgs = _ns_module.RenderedEventArgs
-RenderingEventArgs = _ns_module.RenderingEventArgs
-RevealBackgroundBrush = _ns_module.RevealBackgroundBrush
-RevealBorderBrush = _ns_module.RevealBorderBrush
-RevealBrush = _ns_module.RevealBrush
-RotateTransform = _ns_module.RotateTransform
-ScaleTransform = _ns_module.ScaleTransform
-Shadow = _ns_module.Shadow
-SkewTransform = _ns_module.SkewTransform
-SolidColorBrush = _ns_module.SolidColorBrush
-ThemeShadow = _ns_module.ThemeShadow
-TileBrush = _ns_module.TileBrush
-TimelineMarker = _ns_module.TimelineMarker
-TimelineMarkerCollection = _ns_module.TimelineMarkerCollection
+PolyBezierSegment = _winrt_windows_ui_xaml_media.PolyBezierSegment
+PolyLineSegment = _winrt_windows_ui_xaml_media.PolyLineSegment
+PolyQuadraticBezierSegment = _winrt_windows_ui_xaml_media.PolyQuadraticBezierSegment
+Projection = _winrt_windows_ui_xaml_media.Projection
+QuadraticBezierSegment = _winrt_windows_ui_xaml_media.QuadraticBezierSegment
+RateChangedRoutedEventArgs = _winrt_windows_ui_xaml_media.RateChangedRoutedEventArgs
+RectangleGeometry = _winrt_windows_ui_xaml_media.RectangleGeometry
+RenderedEventArgs = _winrt_windows_ui_xaml_media.RenderedEventArgs
+RenderingEventArgs = _winrt_windows_ui_xaml_media.RenderingEventArgs
+RevealBackgroundBrush = _winrt_windows_ui_xaml_media.RevealBackgroundBrush
+RevealBorderBrush = _winrt_windows_ui_xaml_media.RevealBorderBrush
+RevealBrush = _winrt_windows_ui_xaml_media.RevealBrush
+RotateTransform = _winrt_windows_ui_xaml_media.RotateTransform
+ScaleTransform = _winrt_windows_ui_xaml_media.ScaleTransform
+Shadow = _winrt_windows_ui_xaml_media.Shadow
+SkewTransform = _winrt_windows_ui_xaml_media.SkewTransform
+SolidColorBrush = _winrt_windows_ui_xaml_media.SolidColorBrush
+ThemeShadow = _winrt_windows_ui_xaml_media.ThemeShadow
+TileBrush = _winrt_windows_ui_xaml_media.TileBrush
+TimelineMarker = _winrt_windows_ui_xaml_media.TimelineMarker
+TimelineMarkerCollection = _winrt_windows_ui_xaml_media.TimelineMarkerCollection
 winrt.system._mixin_mutable_sequence(TimelineMarkerCollection)
-TimelineMarkerRoutedEventArgs = _ns_module.TimelineMarkerRoutedEventArgs
-Transform = _ns_module.Transform
-TransformCollection = _ns_module.TransformCollection
+TimelineMarkerRoutedEventArgs = _winrt_windows_ui_xaml_media.TimelineMarkerRoutedEventArgs
+Transform = _winrt_windows_ui_xaml_media.Transform
+TransformCollection = _winrt_windows_ui_xaml_media.TransformCollection
 winrt.system._mixin_mutable_sequence(TransformCollection)
-TransformGroup = _ns_module.TransformGroup
-TranslateTransform = _ns_module.TranslateTransform
-VisualTreeHelper = _ns_module.VisualTreeHelper
-XamlCompositionBrushBase = _ns_module.XamlCompositionBrushBase
-XamlLight = _ns_module.XamlLight
+TransformGroup = _winrt_windows_ui_xaml_media.TransformGroup
+TranslateTransform = _winrt_windows_ui_xaml_media.TranslateTransform
+VisualTreeHelper = _winrt_windows_ui_xaml_media.VisualTreeHelper
+XamlCompositionBrushBase = _winrt_windows_ui_xaml_media.XamlCompositionBrushBase
+XamlLight = _winrt_windows_ui_xaml_media.XamlLight

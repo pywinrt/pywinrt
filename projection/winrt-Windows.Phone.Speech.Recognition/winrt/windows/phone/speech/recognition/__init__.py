@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.Speech.Recognition")
+from . import _winrt_windows_phone_speech_recognition
 
 class SpeechRecognitionUIStatus(enum.IntEnum):
     SUCCEEDED = 0

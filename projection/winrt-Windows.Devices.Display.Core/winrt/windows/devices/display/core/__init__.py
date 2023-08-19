@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Display.Core")
+from . import _winrt_windows_devices_display_core
 
 try:
     import winrt.windows.devices.display
@@ -168,27 +167,27 @@ class DisplayWireFormatPixelEncoding(enum.IntEnum):
     YCC420 = 3
     INTENSITY = 4
 
-DisplayPresentationRate = _ns_module.DisplayPresentationRate
-DisplayAdapter = _ns_module.DisplayAdapter
-DisplayDevice = _ns_module.DisplayDevice
-DisplayFence = _ns_module.DisplayFence
-DisplayManager = _ns_module.DisplayManager
-DisplayManagerChangedEventArgs = _ns_module.DisplayManagerChangedEventArgs
-DisplayManagerDisabledEventArgs = _ns_module.DisplayManagerDisabledEventArgs
-DisplayManagerEnabledEventArgs = _ns_module.DisplayManagerEnabledEventArgs
-DisplayManagerPathsFailedOrInvalidatedEventArgs = _ns_module.DisplayManagerPathsFailedOrInvalidatedEventArgs
-DisplayManagerResultWithState = _ns_module.DisplayManagerResultWithState
-DisplayModeInfo = _ns_module.DisplayModeInfo
-DisplayPath = _ns_module.DisplayPath
-DisplayPrimaryDescription = _ns_module.DisplayPrimaryDescription
-DisplayScanout = _ns_module.DisplayScanout
-DisplaySource = _ns_module.DisplaySource
-DisplayState = _ns_module.DisplayState
-DisplayStateOperationResult = _ns_module.DisplayStateOperationResult
-DisplaySurface = _ns_module.DisplaySurface
-DisplayTarget = _ns_module.DisplayTarget
-DisplayTask = _ns_module.DisplayTask
-DisplayTaskPool = _ns_module.DisplayTaskPool
-DisplayTaskResult = _ns_module.DisplayTaskResult
-DisplayView = _ns_module.DisplayView
-DisplayWireFormat = _ns_module.DisplayWireFormat
+DisplayPresentationRate = _winrt_windows_devices_display_core.DisplayPresentationRate
+DisplayAdapter = _winrt_windows_devices_display_core.DisplayAdapter
+DisplayDevice = _winrt_windows_devices_display_core.DisplayDevice
+DisplayFence = _winrt_windows_devices_display_core.DisplayFence
+DisplayManager = _winrt_windows_devices_display_core.DisplayManager
+DisplayManagerChangedEventArgs = _winrt_windows_devices_display_core.DisplayManagerChangedEventArgs
+DisplayManagerDisabledEventArgs = _winrt_windows_devices_display_core.DisplayManagerDisabledEventArgs
+DisplayManagerEnabledEventArgs = _winrt_windows_devices_display_core.DisplayManagerEnabledEventArgs
+DisplayManagerPathsFailedOrInvalidatedEventArgs = _winrt_windows_devices_display_core.DisplayManagerPathsFailedOrInvalidatedEventArgs
+DisplayManagerResultWithState = _winrt_windows_devices_display_core.DisplayManagerResultWithState
+DisplayModeInfo = _winrt_windows_devices_display_core.DisplayModeInfo
+DisplayPath = _winrt_windows_devices_display_core.DisplayPath
+DisplayPrimaryDescription = _winrt_windows_devices_display_core.DisplayPrimaryDescription
+DisplayScanout = _winrt_windows_devices_display_core.DisplayScanout
+DisplaySource = _winrt_windows_devices_display_core.DisplaySource
+DisplayState = _winrt_windows_devices_display_core.DisplayState
+DisplayStateOperationResult = _winrt_windows_devices_display_core.DisplayStateOperationResult
+DisplaySurface = _winrt_windows_devices_display_core.DisplaySurface
+DisplayTarget = _winrt_windows_devices_display_core.DisplayTarget
+DisplayTask = _winrt_windows_devices_display_core.DisplayTask
+DisplayTaskPool = _winrt_windows_devices_display_core.DisplayTaskPool
+DisplayTaskResult = _winrt_windows_devices_display_core.DisplayTaskResult
+DisplayView = _winrt_windows_devices_display_core.DisplayView
+DisplayWireFormat = _winrt_windows_devices_display_core.DisplayWireFormat

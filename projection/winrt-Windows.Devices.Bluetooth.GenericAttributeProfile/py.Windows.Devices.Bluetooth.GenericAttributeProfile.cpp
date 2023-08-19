@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattCharacteristic =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattCharacteristic",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristic",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2307,7 +2307,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattCharacteristicUuids =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattCharacteristicUuids",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicUuids",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2408,7 +2408,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattCharacteristicUuids_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattCharacteristicUuids_Meta",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicUuids_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2543,7 +2543,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattCharacteristicsResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattCharacteristicsResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicsResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2698,7 +2698,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattClientNotificationResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattClientNotificationResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattClientNotificationResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3007,7 +3007,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattDescriptor =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattDescriptor",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptor",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3155,7 +3155,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattDescriptorUuids =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattDescriptorUuids",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorUuids",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3181,7 +3181,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattDescriptorUuids_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattDescriptorUuids_Meta",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorUuids_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3316,7 +3316,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattDescriptorsResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattDescriptorsResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorsResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4253,7 +4253,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattDeviceService =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattDeviceService",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattDeviceService",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4388,7 +4388,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattDeviceServicesResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattDeviceServicesResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4864,7 +4864,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalCharacteristic =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalCharacteristic",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalCharacteristic",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5222,7 +5222,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalCharacteristicParameters =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalCharacteristicParameters",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalCharacteristicParameters",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5337,7 +5337,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalCharacteristicResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalCharacteristicResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalCharacteristicResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5582,7 +5582,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalDescriptor =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalDescriptor",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalDescriptor",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5824,7 +5824,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalDescriptorParameters =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalDescriptorParameters",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalDescriptorParameters",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5939,7 +5939,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalDescriptorResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalDescriptorResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalDescriptorResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6087,7 +6087,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattLocalService =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattLocalService",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalService",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6317,7 +6317,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattPresentationFormat =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattPresentationFormat",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormat",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6338,7 +6338,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattPresentationFormat_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattPresentationFormat_Meta",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormat_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6885,7 +6885,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattPresentationFormatTypes =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattPresentationFormatTypes",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormatTypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6932,7 +6932,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattPresentationFormatTypes_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattPresentationFormatTypes_Meta",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormatTypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7289,7 +7289,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattProtocolError =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattProtocolError",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattProtocolError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7326,7 +7326,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattProtocolError_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattProtocolError_Meta",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattProtocolError_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7461,7 +7461,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattReadClientCharacteristicConfigurationDescriptorResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattReadClientCharacteristicConfigurationDescriptorResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattReadClientCharacteristicConfigurationDescriptorResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7707,7 +7707,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattReadRequest =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattReadRequest",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattReadRequest",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7862,7 +7862,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattReadRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattReadRequestedEventArgs",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattReadRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7997,7 +7997,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattReadResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattReadResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattReadResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8189,7 +8189,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattReliableWriteTransaction =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattReliableWriteTransaction",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattReliableWriteTransaction",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8304,7 +8304,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattRequestStateChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattRequestStateChangedEventArgs",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattRequestStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8579,7 +8579,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattServiceProvider =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattServiceProvider",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProvider",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8694,7 +8694,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattServiceProviderAdvertisementStatusChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattServiceProviderAdvertisementStatusChangedEventArgs",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProviderAdvertisementStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8936,7 +8936,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattServiceProviderAdvertisingParameters =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattServiceProviderAdvertisingParameters",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProviderAdvertisingParameters",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9051,7 +9051,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattServiceProviderResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattServiceProviderResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProviderResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9503,7 +9503,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattServiceUuids =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattServiceUuids",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceUuids",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9545,7 +9545,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattServiceUuids_Meta =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattServiceUuids_Meta",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceUuids_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -9923,7 +9923,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattSession =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattSession",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattSession",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10038,7 +10038,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattSessionStatusChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattSessionStatusChangedEventArgs",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattSessionStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10198,7 +10198,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattSubscribedClient =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattSubscribedClient",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattSubscribedClient",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10313,7 +10313,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattValueChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattValueChangedEventArgs",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattValueChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10577,7 +10577,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattWriteRequest =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattWriteRequest",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattWriteRequest",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10732,7 +10732,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattWriteRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattWriteRequestedEventArgs",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattWriteRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10847,7 +10847,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyType_Spec type_spec_GattWriteResult =
     {
-        "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile.GattWriteResult",
+        "_winrt_windows_devices_bluetooth_genericattributeprofile.GattWriteResult",
         sizeof(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10860,7 +10860,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Bluetooth_GenericAttributeProfile",
+           "_winrt_windows_devices_bluetooth_genericattributeprofile",
            module_doc,
            0,
            nullptr,
@@ -10871,7 +10871,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
 } // py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Bluetooth_GenericAttributeProfile(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_genericattributeprofile(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Payments")
+from . import _winrt_windows_applicationmodel_payments
 
 try:
     import winrt.windows.foundation
@@ -49,20 +48,20 @@ class PaymentShippingType(enum.IntEnum):
     DELIVERY = 1
     PICKUP = 2
 
-PaymentAddress = _ns_module.PaymentAddress
-PaymentCanMakePaymentResult = _ns_module.PaymentCanMakePaymentResult
-PaymentCurrencyAmount = _ns_module.PaymentCurrencyAmount
-PaymentDetails = _ns_module.PaymentDetails
-PaymentDetailsModifier = _ns_module.PaymentDetailsModifier
-PaymentItem = _ns_module.PaymentItem
-PaymentMediator = _ns_module.PaymentMediator
-PaymentMerchantInfo = _ns_module.PaymentMerchantInfo
-PaymentMethodData = _ns_module.PaymentMethodData
-PaymentOptions = _ns_module.PaymentOptions
-PaymentRequest = _ns_module.PaymentRequest
-PaymentRequestChangedArgs = _ns_module.PaymentRequestChangedArgs
-PaymentRequestChangedResult = _ns_module.PaymentRequestChangedResult
-PaymentRequestSubmitResult = _ns_module.PaymentRequestSubmitResult
-PaymentResponse = _ns_module.PaymentResponse
-PaymentShippingOption = _ns_module.PaymentShippingOption
-PaymentToken = _ns_module.PaymentToken
+PaymentAddress = _winrt_windows_applicationmodel_payments.PaymentAddress
+PaymentCanMakePaymentResult = _winrt_windows_applicationmodel_payments.PaymentCanMakePaymentResult
+PaymentCurrencyAmount = _winrt_windows_applicationmodel_payments.PaymentCurrencyAmount
+PaymentDetails = _winrt_windows_applicationmodel_payments.PaymentDetails
+PaymentDetailsModifier = _winrt_windows_applicationmodel_payments.PaymentDetailsModifier
+PaymentItem = _winrt_windows_applicationmodel_payments.PaymentItem
+PaymentMediator = _winrt_windows_applicationmodel_payments.PaymentMediator
+PaymentMerchantInfo = _winrt_windows_applicationmodel_payments.PaymentMerchantInfo
+PaymentMethodData = _winrt_windows_applicationmodel_payments.PaymentMethodData
+PaymentOptions = _winrt_windows_applicationmodel_payments.PaymentOptions
+PaymentRequest = _winrt_windows_applicationmodel_payments.PaymentRequest
+PaymentRequestChangedArgs = _winrt_windows_applicationmodel_payments.PaymentRequestChangedArgs
+PaymentRequestChangedResult = _winrt_windows_applicationmodel_payments.PaymentRequestChangedResult
+PaymentRequestSubmitResult = _winrt_windows_applicationmodel_payments.PaymentRequestSubmitResult
+PaymentResponse = _winrt_windows_applicationmodel_payments.PaymentResponse
+PaymentShippingOption = _winrt_windows_applicationmodel_payments.PaymentShippingOption
+PaymentToken = _winrt_windows_applicationmodel_payments.PaymentToken

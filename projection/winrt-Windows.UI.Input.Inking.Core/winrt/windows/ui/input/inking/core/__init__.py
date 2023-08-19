@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Input.Inking.Core")
+from . import _winrt_windows_ui_input_inking_core
 
 try:
     import winrt.windows.foundation
@@ -41,8 +40,8 @@ class CoreWetStrokeDisposition(enum.IntEnum):
     COMPLETED = 1
     CANCELED = 2
 
-CoreIncrementalInkStroke = _ns_module.CoreIncrementalInkStroke
-CoreInkIndependentInputSource = _ns_module.CoreInkIndependentInputSource
-CoreInkPresenterHost = _ns_module.CoreInkPresenterHost
-CoreWetStrokeUpdateEventArgs = _ns_module.CoreWetStrokeUpdateEventArgs
-CoreWetStrokeUpdateSource = _ns_module.CoreWetStrokeUpdateSource
+CoreIncrementalInkStroke = _winrt_windows_ui_input_inking_core.CoreIncrementalInkStroke
+CoreInkIndependentInputSource = _winrt_windows_ui_input_inking_core.CoreInkIndependentInputSource
+CoreInkPresenterHost = _winrt_windows_ui_input_inking_core.CoreInkPresenterHost
+CoreWetStrokeUpdateEventArgs = _winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateEventArgs
+CoreWetStrokeUpdateSource = _winrt_windows_ui_input_inking_core.CoreWetStrokeUpdateSource

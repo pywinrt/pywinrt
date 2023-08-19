@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.PersonalInformation")
+from . import _winrt_windows_phone_personalinformation
 
 try:
     import winrt.windows.foundation
@@ -43,13 +42,13 @@ class VCardFormat(enum.IntEnum):
     VERSION2_1 = 0
     VERSION3 = 1
 
-ContactAddress = _ns_module.ContactAddress
-ContactChangeRecord = _ns_module.ContactChangeRecord
-ContactInformation = _ns_module.ContactInformation
-ContactQueryOptions = _ns_module.ContactQueryOptions
-ContactQueryResult = _ns_module.ContactQueryResult
-ContactStore = _ns_module.ContactStore
-KnownContactProperties = _ns_module.KnownContactProperties
-StoredContact = _ns_module.StoredContact
-IContactInformation = _ns_module.IContactInformation
-IContactInformation2 = _ns_module.IContactInformation2
+ContactAddress = _winrt_windows_phone_personalinformation.ContactAddress
+ContactChangeRecord = _winrt_windows_phone_personalinformation.ContactChangeRecord
+ContactInformation = _winrt_windows_phone_personalinformation.ContactInformation
+ContactQueryOptions = _winrt_windows_phone_personalinformation.ContactQueryOptions
+ContactQueryResult = _winrt_windows_phone_personalinformation.ContactQueryResult
+ContactStore = _winrt_windows_phone_personalinformation.ContactStore
+KnownContactProperties = _winrt_windows_phone_personalinformation.KnownContactProperties
+StoredContact = _winrt_windows_phone_personalinformation.StoredContact
+IContactInformation = _winrt_windows_phone_personalinformation.IContactInformation
+IContactInformation2 = _winrt_windows_phone_personalinformation.IContactInformation2

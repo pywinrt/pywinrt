@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Gaming.Input.Custom")
+from . import _winrt_windows_gaming_input_custom
 
 try:
     import winrt.windows.foundation
@@ -48,16 +47,16 @@ class XusbDeviceType(enum.IntEnum):
     UNKNOWN = 0
     GAMEPAD = 1
 
-GameControllerVersionInfo = _ns_module.GameControllerVersionInfo
-GipFirmwareUpdateProgress = _ns_module.GipFirmwareUpdateProgress
-GameControllerFactoryManager = _ns_module.GameControllerFactoryManager
-GipFirmwareUpdateResult = _ns_module.GipFirmwareUpdateResult
-GipGameControllerProvider = _ns_module.GipGameControllerProvider
-HidGameControllerProvider = _ns_module.HidGameControllerProvider
-XusbGameControllerProvider = _ns_module.XusbGameControllerProvider
-ICustomGameControllerFactory = _ns_module.ICustomGameControllerFactory
-IGameControllerInputSink = _ns_module.IGameControllerInputSink
-IGameControllerProvider = _ns_module.IGameControllerProvider
-IGipGameControllerInputSink = _ns_module.IGipGameControllerInputSink
-IHidGameControllerInputSink = _ns_module.IHidGameControllerInputSink
-IXusbGameControllerInputSink = _ns_module.IXusbGameControllerInputSink
+GameControllerVersionInfo = _winrt_windows_gaming_input_custom.GameControllerVersionInfo
+GipFirmwareUpdateProgress = _winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress
+GameControllerFactoryManager = _winrt_windows_gaming_input_custom.GameControllerFactoryManager
+GipFirmwareUpdateResult = _winrt_windows_gaming_input_custom.GipFirmwareUpdateResult
+GipGameControllerProvider = _winrt_windows_gaming_input_custom.GipGameControllerProvider
+HidGameControllerProvider = _winrt_windows_gaming_input_custom.HidGameControllerProvider
+XusbGameControllerProvider = _winrt_windows_gaming_input_custom.XusbGameControllerProvider
+ICustomGameControllerFactory = _winrt_windows_gaming_input_custom.ICustomGameControllerFactory
+IGameControllerInputSink = _winrt_windows_gaming_input_custom.IGameControllerInputSink
+IGameControllerProvider = _winrt_windows_gaming_input_custom.IGameControllerProvider
+IGipGameControllerInputSink = _winrt_windows_gaming_input_custom.IGipGameControllerInputSink
+IHidGameControllerInputSink = _winrt_windows_gaming_input_custom.IHidGameControllerInputSink
+IXusbGameControllerInputSink = _winrt_windows_gaming_input_custom.IXusbGameControllerInputSink

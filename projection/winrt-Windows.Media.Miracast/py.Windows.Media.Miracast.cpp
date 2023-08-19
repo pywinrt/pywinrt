@@ -484,7 +484,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiver =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiver",
+        "_winrt_windows_media_miracast.MiracastReceiver",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverApplySettingsResult =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverApplySettingsResult",
+        "_winrt_windows_media_miracast.MiracastReceiverApplySettingsResult",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverApplySettingsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -984,7 +984,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverConnection =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverConnection",
+        "_winrt_windows_media_miracast.MiracastReceiverConnection",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1129,7 +1129,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverConnectionCreatedEventArgs =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverConnectionCreatedEventArgs",
+        "_winrt_windows_media_miracast.MiracastReceiverConnectionCreatedEventArgs",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1374,7 +1374,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverCursorImageChannel =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverCursorImageChannel",
+        "_winrt_windows_media_miracast.MiracastReceiverCursorImageChannel",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1545,7 +1545,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverCursorImageChannelSettings =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverCursorImageChannelSettings",
+        "_winrt_windows_media_miracast.MiracastReceiverCursorImageChannelSettings",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1640,7 +1640,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverDisconnectedEventArgs =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverDisconnectedEventArgs",
+        "_winrt_windows_media_miracast.MiracastReceiverDisconnectedEventArgs",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1896,7 +1896,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverGameControllerDevice =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverGameControllerDevice",
+        "_winrt_windows_media_miracast.MiracastReceiverGameControllerDevice",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2011,7 +2011,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverInputDevices =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverInputDevices",
+        "_winrt_windows_media_miracast.MiracastReceiverInputDevices",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverInputDevices),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2219,7 +2219,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverKeyboardDevice =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverKeyboardDevice",
+        "_winrt_windows_media_miracast.MiracastReceiverKeyboardDevice",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2384,7 +2384,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverMediaSourceCreatedEventArgs =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverMediaSourceCreatedEventArgs",
+        "_winrt_windows_media_miracast.MiracastReceiverMediaSourceCreatedEventArgs",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2803,7 +2803,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverSession =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverSession",
+        "_winrt_windows_media_miracast.MiracastReceiverSession",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2918,7 +2918,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverSessionStartResult =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverSessionStartResult",
+        "_winrt_windows_media_miracast.MiracastReceiverSessionStartResult",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverSessionStartResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3233,7 +3233,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverSettings =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverSettings",
+        "_winrt_windows_media_miracast.MiracastReceiverSettings",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3408,7 +3408,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverStatus =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverStatus",
+        "_winrt_windows_media_miracast.MiracastReceiverStatus",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3656,7 +3656,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverStreamControl =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverStreamControl",
+        "_winrt_windows_media_miracast.MiracastReceiverStreamControl",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3827,7 +3827,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastReceiverVideoStreamSettings =
     {
-        "_winrt_Windows_Media_Miracast.MiracastReceiverVideoStreamSettings",
+        "_winrt_windows_media_miracast.MiracastReceiverVideoStreamSettings",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4068,7 +4068,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyType_Spec type_spec_MiracastTransmitter =
     {
-        "_winrt_Windows_Media_Miracast.MiracastTransmitter",
+        "_winrt_windows_media_miracast.MiracastTransmitter",
         sizeof(py::wrapper::Windows::Media::Miracast::MiracastTransmitter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4081,7 +4081,7 @@ namespace py::cpp::Windows::Media::Miracast
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Miracast",
+           "_winrt_windows_media_miracast",
            module_doc,
            0,
            nullptr,
@@ -4092,7 +4092,7 @@ namespace py::cpp::Windows::Media::Miracast
 
 } // py::cpp::Windows::Media::Miracast
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Miracast(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_miracast(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Miracast;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Graphics.Printing")
+from . import _winrt_windows_graphics_printing
 
 try:
     import winrt.windows.applicationmodel.datatransfer
@@ -336,22 +335,22 @@ class PrintTaskCompletion(enum.IntEnum):
     FAILED = 2
     SUBMITTED = 3
 
-PrintPageDescription = _ns_module.PrintPageDescription
-PrintManager = _ns_module.PrintManager
-PrintPageInfo = _ns_module.PrintPageInfo
-PrintPageRange = _ns_module.PrintPageRange
-PrintPageRangeOptions = _ns_module.PrintPageRangeOptions
-PrintTask = _ns_module.PrintTask
-PrintTaskCompletedEventArgs = _ns_module.PrintTaskCompletedEventArgs
-PrintTaskOptions = _ns_module.PrintTaskOptions
-PrintTaskProgressingEventArgs = _ns_module.PrintTaskProgressingEventArgs
-PrintTaskRequest = _ns_module.PrintTaskRequest
-PrintTaskRequestedDeferral = _ns_module.PrintTaskRequestedDeferral
-PrintTaskRequestedEventArgs = _ns_module.PrintTaskRequestedEventArgs
-PrintTaskSourceRequestedArgs = _ns_module.PrintTaskSourceRequestedArgs
-PrintTaskSourceRequestedDeferral = _ns_module.PrintTaskSourceRequestedDeferral
-StandardPrintTaskOptions = _ns_module.StandardPrintTaskOptions
-IPrintDocumentSource = _ns_module.IPrintDocumentSource
-IPrintTaskOptionsCore = _ns_module.IPrintTaskOptionsCore
-IPrintTaskOptionsCoreProperties = _ns_module.IPrintTaskOptionsCoreProperties
-IPrintTaskOptionsCoreUIConfiguration = _ns_module.IPrintTaskOptionsCoreUIConfiguration
+PrintPageDescription = _winrt_windows_graphics_printing.PrintPageDescription
+PrintManager = _winrt_windows_graphics_printing.PrintManager
+PrintPageInfo = _winrt_windows_graphics_printing.PrintPageInfo
+PrintPageRange = _winrt_windows_graphics_printing.PrintPageRange
+PrintPageRangeOptions = _winrt_windows_graphics_printing.PrintPageRangeOptions
+PrintTask = _winrt_windows_graphics_printing.PrintTask
+PrintTaskCompletedEventArgs = _winrt_windows_graphics_printing.PrintTaskCompletedEventArgs
+PrintTaskOptions = _winrt_windows_graphics_printing.PrintTaskOptions
+PrintTaskProgressingEventArgs = _winrt_windows_graphics_printing.PrintTaskProgressingEventArgs
+PrintTaskRequest = _winrt_windows_graphics_printing.PrintTaskRequest
+PrintTaskRequestedDeferral = _winrt_windows_graphics_printing.PrintTaskRequestedDeferral
+PrintTaskRequestedEventArgs = _winrt_windows_graphics_printing.PrintTaskRequestedEventArgs
+PrintTaskSourceRequestedArgs = _winrt_windows_graphics_printing.PrintTaskSourceRequestedArgs
+PrintTaskSourceRequestedDeferral = _winrt_windows_graphics_printing.PrintTaskSourceRequestedDeferral
+StandardPrintTaskOptions = _winrt_windows_graphics_printing.StandardPrintTaskOptions
+IPrintDocumentSource = _winrt_windows_graphics_printing.IPrintDocumentSource
+IPrintTaskOptionsCore = _winrt_windows_graphics_printing.IPrintTaskOptionsCore
+IPrintTaskOptionsCoreProperties = _winrt_windows_graphics_printing.IPrintTaskOptionsCoreProperties
+IPrintTaskOptionsCoreUIConfiguration = _winrt_windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration

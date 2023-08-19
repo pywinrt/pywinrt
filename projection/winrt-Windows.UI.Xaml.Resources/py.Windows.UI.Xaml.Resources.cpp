@@ -173,7 +173,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
     static PyType_Spec type_spec_CustomXamlResourceLoader =
     {
-        "_winrt_Windows_UI_Xaml_Resources.CustomXamlResourceLoader",
+        "_winrt_windows_ui_xaml_resources.CustomXamlResourceLoader",
         sizeof(py::wrapper::Windows::UI::Xaml::Resources::CustomXamlResourceLoader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -194,7 +194,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
     static PyType_Spec type_spec_CustomXamlResourceLoader_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Resources.CustomXamlResourceLoader_Meta",
+        "_winrt_windows_ui_xaml_resources.CustomXamlResourceLoader_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Resources",
+           "_winrt_windows_ui_xaml_resources",
            module_doc,
            0,
            nullptr,
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::UI::Xaml::Resources
 
 } // py::cpp::Windows::UI::Xaml::Resources
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Resources(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_resources(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Resources;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.VoiceCommands")
+from . import _winrt_windows_applicationmodel_voicecommands
 
 try:
     import winrt.windows.applicationmodel.appservice
@@ -55,13 +54,13 @@ class VoiceCommandContentTileType(enum.IntEnum):
     TITLE_WITH280X140_ICON = 6
     TITLE_WITH280X140_ICON_AND_TEXT = 7
 
-VoiceCommand = _ns_module.VoiceCommand
-VoiceCommandCompletedEventArgs = _ns_module.VoiceCommandCompletedEventArgs
-VoiceCommandConfirmationResult = _ns_module.VoiceCommandConfirmationResult
-VoiceCommandContentTile = _ns_module.VoiceCommandContentTile
-VoiceCommandDefinition = _ns_module.VoiceCommandDefinition
-VoiceCommandDefinitionManager = _ns_module.VoiceCommandDefinitionManager
-VoiceCommandDisambiguationResult = _ns_module.VoiceCommandDisambiguationResult
-VoiceCommandResponse = _ns_module.VoiceCommandResponse
-VoiceCommandServiceConnection = _ns_module.VoiceCommandServiceConnection
-VoiceCommandUserMessage = _ns_module.VoiceCommandUserMessage
+VoiceCommand = _winrt_windows_applicationmodel_voicecommands.VoiceCommand
+VoiceCommandCompletedEventArgs = _winrt_windows_applicationmodel_voicecommands.VoiceCommandCompletedEventArgs
+VoiceCommandConfirmationResult = _winrt_windows_applicationmodel_voicecommands.VoiceCommandConfirmationResult
+VoiceCommandContentTile = _winrt_windows_applicationmodel_voicecommands.VoiceCommandContentTile
+VoiceCommandDefinition = _winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinition
+VoiceCommandDefinitionManager = _winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager
+VoiceCommandDisambiguationResult = _winrt_windows_applicationmodel_voicecommands.VoiceCommandDisambiguationResult
+VoiceCommandResponse = _winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse
+VoiceCommandServiceConnection = _winrt_windows_applicationmodel_voicecommands.VoiceCommandServiceConnection
+VoiceCommandUserMessage = _winrt_windows_applicationmodel_voicecommands.VoiceCommandUserMessage

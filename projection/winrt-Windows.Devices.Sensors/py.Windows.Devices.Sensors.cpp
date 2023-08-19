@@ -552,7 +552,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Accelerometer =
     {
-        "_winrt_Windows_Devices_Sensors.Accelerometer",
+        "_winrt_windows_devices_sensors.Accelerometer",
         sizeof(py::wrapper::Windows::Devices::Sensors::Accelerometer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -771,7 +771,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AccelerometerDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.AccelerometerDataThreshold",
+        "_winrt_windows_devices_sensors.AccelerometerDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -966,7 +966,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AccelerometerReading =
     {
-        "_winrt_Windows_Devices_Sensors.AccelerometerReading",
+        "_winrt_windows_devices_sensors.AccelerometerReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::AccelerometerReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1061,7 +1061,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AccelerometerReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.AccelerometerReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.AccelerometerReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1156,7 +1156,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AccelerometerShakenEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.AccelerometerShakenEventArgs",
+        "_winrt_windows_devices_sensors.AccelerometerShakenEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::AccelerometerShakenEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1551,7 +1551,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ActivitySensor =
     {
-        "_winrt_Windows_Devices_Sensors.ActivitySensor",
+        "_winrt_windows_devices_sensors.ActivitySensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::ActivitySensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1686,7 +1686,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ActivitySensorReading =
     {
-        "_winrt_Windows_Devices_Sensors.ActivitySensorReading",
+        "_winrt_windows_devices_sensors.ActivitySensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::ActivitySensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1781,7 +1781,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ActivitySensorReadingChangeReport =
     {
-        "_winrt_Windows_Devices_Sensors.ActivitySensorReadingChangeReport",
+        "_winrt_windows_devices_sensors.ActivitySensorReadingChangeReport",
         sizeof(py::wrapper::Windows::Devices::Sensors::ActivitySensorReadingChangeReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1876,7 +1876,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ActivitySensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.ActivitySensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.ActivitySensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1981,7 +1981,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ActivitySensorTriggerDetails =
     {
-        "_winrt_Windows_Devices_Sensors.ActivitySensorTriggerDetails",
+        "_winrt_windows_devices_sensors.ActivitySensorTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Sensors::ActivitySensorTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2104,7 +2104,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AdaptiveDimmingOptions =
     {
-        "_winrt_Windows_Devices_Sensors.AdaptiveDimmingOptions",
+        "_winrt_windows_devices_sensors.AdaptiveDimmingOptions",
         sizeof(py::wrapper::Windows::Devices::Sensors::AdaptiveDimmingOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2440,7 +2440,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Altimeter =
     {
-        "_winrt_Windows_Devices_Sensors.Altimeter",
+        "_winrt_windows_devices_sensors.Altimeter",
         sizeof(py::wrapper::Windows::Devices::Sensors::Altimeter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2595,7 +2595,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AltimeterReading =
     {
-        "_winrt_Windows_Devices_Sensors.AltimeterReading",
+        "_winrt_windows_devices_sensors.AltimeterReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::AltimeterReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2690,7 +2690,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_AltimeterReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.AltimeterReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.AltimeterReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3108,7 +3108,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Barometer =
     {
-        "_winrt_Windows_Devices_Sensors.Barometer",
+        "_winrt_windows_devices_sensors.Barometer",
         sizeof(py::wrapper::Windows::Devices::Sensors::Barometer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3231,7 +3231,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_BarometerDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.BarometerDataThreshold",
+        "_winrt_windows_devices_sensors.BarometerDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::BarometerDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3386,7 +3386,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_BarometerReading =
     {
-        "_winrt_Windows_Devices_Sensors.BarometerReading",
+        "_winrt_windows_devices_sensors.BarometerReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::BarometerReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3481,7 +3481,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_BarometerReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.BarometerReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.BarometerReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::BarometerReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3947,7 +3947,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Compass =
     {
-        "_winrt_Windows_Devices_Sensors.Compass",
+        "_winrt_windows_devices_sensors.Compass",
         sizeof(py::wrapper::Windows::Devices::Sensors::Compass),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4070,7 +4070,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_CompassDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.CompassDataThreshold",
+        "_winrt_windows_devices_sensors.CompassDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::CompassDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4265,7 +4265,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_CompassReading =
     {
-        "_winrt_Windows_Devices_Sensors.CompassReading",
+        "_winrt_windows_devices_sensors.CompassReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::CompassReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4360,7 +4360,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_CompassReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.CompassReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.CompassReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::CompassReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4826,7 +4826,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Gyrometer =
     {
-        "_winrt_Windows_Devices_Sensors.Gyrometer",
+        "_winrt_windows_devices_sensors.Gyrometer",
         sizeof(py::wrapper::Windows::Devices::Sensors::Gyrometer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5045,7 +5045,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_GyrometerDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.GyrometerDataThreshold",
+        "_winrt_windows_devices_sensors.GyrometerDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5240,7 +5240,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_GyrometerReading =
     {
-        "_winrt_Windows_Devices_Sensors.GyrometerReading",
+        "_winrt_windows_devices_sensors.GyrometerReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::GyrometerReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5335,7 +5335,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_GyrometerReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.GyrometerReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.GyrometerReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5470,7 +5470,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HingeAngleReading =
     {
-        "_winrt_Windows_Devices_Sensors.HingeAngleReading",
+        "_winrt_windows_devices_sensors.HingeAngleReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::HingeAngleReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5833,7 +5833,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HingeAngleSensor =
     {
-        "_winrt_Windows_Devices_Sensors.HingeAngleSensor",
+        "_winrt_windows_devices_sensors.HingeAngleSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5928,7 +5928,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HingeAngleSensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.HingeAngleSensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.HingeAngleSensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6123,7 +6123,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HumanPresenceFeatures =
     {
-        "_winrt_Windows_Devices_Sensors.HumanPresenceFeatures",
+        "_winrt_windows_devices_sensors.HumanPresenceFeatures",
         sizeof(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6527,7 +6527,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HumanPresenceSensor =
     {
-        "_winrt_Windows_Devices_Sensors.HumanPresenceSensor",
+        "_winrt_windows_devices_sensors.HumanPresenceSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6682,7 +6682,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HumanPresenceSensorReading =
     {
-        "_winrt_Windows_Devices_Sensors.HumanPresenceSensorReading",
+        "_winrt_windows_devices_sensors.HumanPresenceSensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6777,7 +6777,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HumanPresenceSensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.HumanPresenceSensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.HumanPresenceSensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7560,7 +7560,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_HumanPresenceSettings =
     {
-        "_winrt_Windows_Devices_Sensors.HumanPresenceSettings",
+        "_winrt_windows_devices_sensors.HumanPresenceSettings",
         sizeof(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8098,7 +8098,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Inclinometer =
     {
-        "_winrt_Windows_Devices_Sensors.Inclinometer",
+        "_winrt_windows_devices_sensors.Inclinometer",
         sizeof(py::wrapper::Windows::Devices::Sensors::Inclinometer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8317,7 +8317,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_InclinometerDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.InclinometerDataThreshold",
+        "_winrt_windows_devices_sensors.InclinometerDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8532,7 +8532,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_InclinometerReading =
     {
-        "_winrt_Windows_Devices_Sensors.InclinometerReading",
+        "_winrt_windows_devices_sensors.InclinometerReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::InclinometerReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8627,7 +8627,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_InclinometerReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.InclinometerReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.InclinometerReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9045,7 +9045,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_LightSensor =
     {
-        "_winrt_Windows_Devices_Sensors.LightSensor",
+        "_winrt_windows_devices_sensors.LightSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::LightSensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9216,7 +9216,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_LightSensorDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.LightSensorDataThreshold",
+        "_winrt_windows_devices_sensors.LightSensorDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9371,7 +9371,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_LightSensorReading =
     {
-        "_winrt_Windows_Devices_Sensors.LightSensorReading",
+        "_winrt_windows_devices_sensors.LightSensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::LightSensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9466,7 +9466,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_LightSensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.LightSensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.LightSensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9589,7 +9589,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_LockOnLeaveOptions =
     {
-        "_winrt_Windows_Devices_Sensors.LockOnLeaveOptions",
+        "_winrt_windows_devices_sensors.LockOnLeaveOptions",
         sizeof(py::wrapper::Windows::Devices::Sensors::LockOnLeaveOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10055,7 +10055,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Magnetometer =
     {
-        "_winrt_Windows_Devices_Sensors.Magnetometer",
+        "_winrt_windows_devices_sensors.Magnetometer",
         sizeof(py::wrapper::Windows::Devices::Sensors::Magnetometer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10274,7 +10274,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_MagnetometerDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.MagnetometerDataThreshold",
+        "_winrt_windows_devices_sensors.MagnetometerDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10489,7 +10489,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_MagnetometerReading =
     {
-        "_winrt_Windows_Devices_Sensors.MagnetometerReading",
+        "_winrt_windows_devices_sensors.MagnetometerReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::MagnetometerReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10584,7 +10584,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_MagnetometerReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.MagnetometerReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.MagnetometerReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11144,7 +11144,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_OrientationSensor =
     {
-        "_winrt_Windows_Devices_Sensors.OrientationSensor",
+        "_winrt_windows_devices_sensors.OrientationSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::OrientationSensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11339,7 +11339,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_OrientationSensorReading =
     {
-        "_winrt_Windows_Devices_Sensors.OrientationSensorReading",
+        "_winrt_windows_devices_sensors.OrientationSensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11434,7 +11434,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_OrientationSensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.OrientationSensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.OrientationSensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11869,7 +11869,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_Pedometer =
     {
-        "_winrt_Windows_Devices_Sensors.Pedometer",
+        "_winrt_windows_devices_sensors.Pedometer",
         sizeof(py::wrapper::Windows::Devices::Sensors::Pedometer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11970,7 +11970,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_PedometerDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.PedometerDataThreshold",
+        "_winrt_windows_devices_sensors.PedometerDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::PedometerDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12125,7 +12125,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_PedometerReading =
     {
-        "_winrt_Windows_Devices_Sensors.PedometerReading",
+        "_winrt_windows_devices_sensors.PedometerReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::PedometerReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12220,7 +12220,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_PedometerReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.PedometerReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.PedometerReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::PedometerReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12554,7 +12554,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ProximitySensor =
     {
-        "_winrt_Windows_Devices_Sensors.ProximitySensor",
+        "_winrt_windows_devices_sensors.ProximitySensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::ProximitySensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12654,7 +12654,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ProximitySensorDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.ProximitySensorDataThreshold",
+        "_winrt_windows_devices_sensors.ProximitySensorDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::ProximitySensorDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12782,7 +12782,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ProximitySensorDisplayOnOffController =
     {
-        "_winrt_Windows_Devices_Sensors.ProximitySensorDisplayOnOffController",
+        "_winrt_windows_devices_sensors.ProximitySensorDisplayOnOffController",
         sizeof(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12917,7 +12917,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ProximitySensorReading =
     {
-        "_winrt_Windows_Devices_Sensors.ProximitySensorReading",
+        "_winrt_windows_devices_sensors.ProximitySensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::ProximitySensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13012,7 +13012,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ProximitySensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.ProximitySensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors.ProximitySensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13127,7 +13127,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_SensorDataThresholdTriggerDetails =
     {
-        "_winrt_Windows_Devices_Sensors.SensorDataThresholdTriggerDetails",
+        "_winrt_windows_devices_sensors.SensorDataThresholdTriggerDetails",
         sizeof(py::wrapper::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13282,7 +13282,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_SensorQuaternion =
     {
-        "_winrt_Windows_Devices_Sensors.SensorQuaternion",
+        "_winrt_windows_devices_sensors.SensorQuaternion",
         sizeof(py::wrapper::Windows::Devices::Sensors::SensorQuaternion),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13537,7 +13537,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_SensorRotationMatrix =
     {
-        "_winrt_Windows_Devices_Sensors.SensorRotationMatrix",
+        "_winrt_windows_devices_sensors.SensorRotationMatrix",
         sizeof(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13847,7 +13847,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_SimpleOrientationSensor =
     {
-        "_winrt_Windows_Devices_Sensors.SimpleOrientationSensor",
+        "_winrt_windows_devices_sensors.SimpleOrientationSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13962,7 +13962,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_SimpleOrientationSensorOrientationChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors.SimpleOrientationSensorOrientationChangedEventArgs",
+        "_winrt_windows_devices_sensors.SimpleOrientationSensorOrientationChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14133,7 +14133,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_WakeOnApproachOptions =
     {
-        "_winrt_Windows_Devices_Sensors.WakeOnApproachOptions",
+        "_winrt_windows_devices_sensors.WakeOnApproachOptions",
         sizeof(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14208,7 +14208,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyType_Spec type_spec_ISensorDataThreshold =
     {
-        "_winrt_Windows_Devices_Sensors.ISensorDataThreshold",
+        "_winrt_windows_devices_sensors.ISensorDataThreshold",
         sizeof(py::wrapper::Windows::Devices::Sensors::ISensorDataThreshold),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14221,7 +14221,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Sensors",
+           "_winrt_windows_devices_sensors",
            module_doc,
            0,
            nullptr,
@@ -14232,7 +14232,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
 } // py::cpp::Windows::Devices::Sensors
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sensors(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Sensors;
 

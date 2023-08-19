@@ -170,7 +170,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_AmbientLight =
     {
-        "_winrt_Windows_UI_Composition.AmbientLight",
+        "_winrt_windows_ui_composition.AmbientLight",
         sizeof(py::wrapper::Windows::UI::Composition::AmbientLight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_AnimationController =
     {
-        "_winrt_Windows_UI_Composition.AnimationController",
+        "_winrt_windows_ui_composition.AnimationController",
         sizeof(py::wrapper::Windows::UI::Composition::AnimationController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -511,7 +511,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_AnimationController_Meta =
     {
-        "_winrt_Windows_UI_Composition.AnimationController_Meta",
+        "_winrt_windows_ui_composition.AnimationController_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_AnimationPropertyInfo =
     {
-        "_winrt_Windows_UI_Composition.AnimationPropertyInfo",
+        "_winrt_windows_ui_composition.AnimationPropertyInfo",
         sizeof(py::wrapper::Windows::UI::Composition::AnimationPropertyInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -809,7 +809,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_BackEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.BackEasingFunction",
+        "_winrt_windows_ui_composition.BackEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::BackEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -918,7 +918,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_BooleanKeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.BooleanKeyFrameAnimation",
+        "_winrt_windows_ui_composition.BooleanKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BooleanKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_BounceEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.BounceEasingFunction",
+        "_winrt_windows_ui_composition.BounceEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::BounceEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1224,7 +1224,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_BounceScalarNaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.BounceScalarNaturalMotionAnimation",
+        "_winrt_windows_ui_composition.BounceScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BounceScalarNaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1395,7 +1395,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_BounceVector2NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.BounceVector2NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.BounceVector2NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BounceVector2NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1566,7 +1566,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_BounceVector3NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.BounceVector3NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.BounceVector3NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::BounceVector3NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1661,7 +1661,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CircleEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.CircleEasingFunction",
+        "_winrt_windows_ui_composition.CircleEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::CircleEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1841,7 +1841,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ColorKeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.ColorKeyFrameAnimation",
+        "_winrt_windows_ui_composition.ColorKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ColorKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2422,7 +2422,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionAnimation =
     {
-        "_winrt_Windows_UI_Composition.CompositionAnimation",
+        "_winrt_windows_ui_composition.CompositionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2658,7 +2658,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionAnimationGroup =
     {
-        "_winrt_Windows_UI_Composition.CompositionAnimationGroup",
+        "_winrt_windows_ui_composition.CompositionAnimationGroup",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionAnimationGroup),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2733,7 +2733,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionBackdropBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionBackdropBrush",
+        "_winrt_windows_ui_composition.CompositionBackdropBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionBackdropBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2808,7 +2808,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionBatchCompletedEventArgs =
     {
-        "_winrt_Windows_UI_Composition.CompositionBatchCompletedEventArgs",
+        "_winrt_windows_ui_composition.CompositionBatchCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionBatchCompletedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2883,7 +2883,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionBrush",
+        "_winrt_windows_ui_composition.CompositionBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3093,7 +3093,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionCapabilities =
     {
-        "_winrt_Windows_UI_Composition.CompositionCapabilities",
+        "_winrt_windows_ui_composition.CompositionCapabilities",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3504,7 +3504,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionClip =
     {
-        "_winrt_Windows_UI_Composition.CompositionClip",
+        "_winrt_windows_ui_composition.CompositionClip",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionClip),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3627,7 +3627,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionColorBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionColorBrush",
+        "_winrt_windows_ui_composition.CompositionColorBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionColorBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3798,7 +3798,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionColorGradientStop =
     {
-        "_winrt_Windows_UI_Composition.CompositionColorGradientStop",
+        "_winrt_windows_ui_composition.CompositionColorGradientStop",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionColorGradientStop),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4421,7 +4421,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionColorGradientStopCollection =
     {
-        "_winrt_Windows_UI_Composition.CompositionColorGradientStopCollection",
+        "_winrt_windows_ui_composition.CompositionColorGradientStopCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionColorGradientStopCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4581,7 +4581,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionCommitBatch =
     {
-        "_winrt_Windows_UI_Composition.CompositionCommitBatch",
+        "_winrt_windows_ui_composition.CompositionCommitBatch",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionCommitBatch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4676,7 +4676,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionContainerShape =
     {
-        "_winrt_Windows_UI_Composition.CompositionContainerShape",
+        "_winrt_windows_ui_composition.CompositionContainerShape",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionContainerShape),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4976,7 +4976,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionDrawingSurface =
     {
-        "_winrt_Windows_UI_Composition.CompositionDrawingSurface",
+        "_winrt_windows_ui_composition.CompositionDrawingSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5408,7 +5408,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.CompositionEasingFunction",
+        "_winrt_windows_ui_composition.CompositionEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5549,7 +5549,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionEffectBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionEffectBrush",
+        "_winrt_windows_ui_composition.CompositionEffectBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEffectBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5694,7 +5694,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionEffectFactory =
     {
-        "_winrt_Windows_UI_Composition.CompositionEffectFactory",
+        "_winrt_windows_ui_composition.CompositionEffectFactory",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEffectFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5814,7 +5814,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionEffectSourceParameter =
     {
-        "_winrt_Windows_UI_Composition.CompositionEffectSourceParameter",
+        "_winrt_windows_ui_composition.CompositionEffectSourceParameter",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEffectSourceParameter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5985,7 +5985,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionEllipseGeometry =
     {
-        "_winrt_Windows_UI_Composition.CompositionEllipseGeometry",
+        "_winrt_windows_ui_composition.CompositionEllipseGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionEllipseGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6156,7 +6156,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionGeometricClip =
     {
-        "_winrt_Windows_UI_Composition.CompositionGeometricClip",
+        "_winrt_windows_ui_composition.CompositionGeometricClip",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGeometricClip),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6375,7 +6375,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionGeometry =
     {
-        "_winrt_Windows_UI_Composition.CompositionGeometry",
+        "_winrt_windows_ui_composition.CompositionGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6950,7 +6950,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionGradientBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionGradientBrush",
+        "_winrt_windows_ui_composition.CompositionGradientBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7273,7 +7273,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionGraphicsDevice =
     {
-        "_winrt_Windows_UI_Composition.CompositionGraphicsDevice",
+        "_winrt_windows_ui_composition.CompositionGraphicsDevice",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionGraphicsDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7436,7 +7436,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionLight =
     {
-        "_winrt_Windows_UI_Composition.CompositionLight",
+        "_winrt_windows_ui_composition.CompositionLight",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionLight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7607,7 +7607,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionLineGeometry =
     {
-        "_winrt_Windows_UI_Composition.CompositionLineGeometry",
+        "_winrt_windows_ui_composition.CompositionLineGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionLineGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7778,7 +7778,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionLinearGradientBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionLinearGradientBrush",
+        "_winrt_windows_ui_composition.CompositionLinearGradientBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionLinearGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7949,7 +7949,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionMaskBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionMaskBrush",
+        "_winrt_windows_ui_composition.CompositionMaskBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionMaskBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8136,7 +8136,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionMipmapSurface =
     {
-        "_winrt_Windows_UI_Composition.CompositionMipmapSurface",
+        "_winrt_windows_ui_composition.CompositionMipmapSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionMipmapSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8805,7 +8805,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionNineGridBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionNineGridBrush",
+        "_winrt_windows_ui_composition.CompositionNineGridBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionNineGridBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9400,7 +9400,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionObject =
     {
-        "_winrt_Windows_UI_Composition.CompositionObject",
+        "_winrt_windows_ui_composition.CompositionObject",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9500,7 +9500,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionPath =
     {
-        "_winrt_Windows_UI_Composition.CompositionPath",
+        "_winrt_windows_ui_composition.CompositionPath",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionPath),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9623,7 +9623,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionPathGeometry =
     {
-        "_winrt_Windows_UI_Composition.CompositionPathGeometry",
+        "_winrt_windows_ui_composition.CompositionPathGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionPathGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9930,7 +9930,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionProjectedShadow =
     {
-        "_winrt_Windows_UI_Composition.CompositionProjectedShadow",
+        "_winrt_windows_ui_composition.CompositionProjectedShadow",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10101,7 +10101,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionProjectedShadowCaster =
     {
-        "_winrt_Windows_UI_Composition.CompositionProjectedShadowCaster",
+        "_winrt_windows_ui_composition.CompositionProjectedShadowCaster",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowCaster),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10457,7 +10457,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection =
     {
-        "_winrt_Windows_UI_Composition.CompositionProjectedShadowCasterCollection",
+        "_winrt_windows_ui_composition.CompositionProjectedShadowCasterCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowCasterCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10478,7 +10478,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionProjectedShadowCasterCollection_Meta =
     {
-        "_winrt_Windows_UI_Composition.CompositionProjectedShadowCasterCollection_Meta",
+        "_winrt_windows_ui_composition.CompositionProjectedShadowCasterCollection_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -10601,7 +10601,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionProjectedShadowReceiver =
     {
-        "_winrt_Windows_UI_Composition.CompositionProjectedShadowReceiver",
+        "_winrt_windows_ui_composition.CompositionProjectedShadowReceiver",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowReceiver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10837,7 +10837,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionProjectedShadowReceiverUnorderedCollection =
     {
-        "_winrt_Windows_UI_Composition.CompositionProjectedShadowReceiverUnorderedCollection",
+        "_winrt_windows_ui_composition.CompositionProjectedShadowReceiverUnorderedCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11623,7 +11623,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionPropertySet =
     {
-        "_winrt_Windows_UI_Composition.CompositionPropertySet",
+        "_winrt_windows_ui_composition.CompositionPropertySet",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionPropertySet),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11842,7 +11842,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionRadialGradientBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionRadialGradientBrush",
+        "_winrt_windows_ui_composition.CompositionRadialGradientBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionRadialGradientBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12013,7 +12013,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionRectangleGeometry =
     {
-        "_winrt_Windows_UI_Composition.CompositionRectangleGeometry",
+        "_winrt_windows_ui_composition.CompositionRectangleGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionRectangleGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12232,7 +12232,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionRoundedRectangleGeometry =
     {
-        "_winrt_Windows_UI_Composition.CompositionRoundedRectangleGeometry",
+        "_winrt_windows_ui_composition.CompositionRoundedRectangleGeometry",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionRoundedRectangleGeometry),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12485,7 +12485,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionScopedBatch =
     {
-        "_winrt_Windows_UI_Composition.CompositionScopedBatch",
+        "_winrt_windows_ui_composition.CompositionScopedBatch",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionScopedBatch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12560,7 +12560,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionShadow =
     {
-        "_winrt_Windows_UI_Composition.CompositionShadow",
+        "_winrt_windows_ui_composition.CompositionShadow",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionShadow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12923,7 +12923,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionShape =
     {
-        "_winrt_Windows_UI_Composition.CompositionShape",
+        "_winrt_windows_ui_composition.CompositionShape",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionShape),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13546,7 +13546,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionShapeCollection =
     {
-        "_winrt_Windows_UI_Composition.CompositionShapeCollection",
+        "_winrt_windows_ui_composition.CompositionShapeCollection",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionShapeCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14169,7 +14169,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionSpriteShape =
     {
-        "_winrt_Windows_UI_Composition.CompositionSpriteShape",
+        "_winrt_windows_ui_composition.CompositionSpriteShape",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionSpriteShape),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14792,7 +14792,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionStrokeDashArray =
     {
-        "_winrt_Windows_UI_Composition.CompositionStrokeDashArray",
+        "_winrt_windows_ui_composition.CompositionStrokeDashArray",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionStrokeDashArray),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15491,7 +15491,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionSurfaceBrush =
     {
-        "_winrt_Windows_UI_Composition.CompositionSurfaceBrush",
+        "_winrt_windows_ui_composition.CompositionSurfaceBrush",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionSurfaceBrush),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15614,7 +15614,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionTarget =
     {
-        "_winrt_Windows_UI_Composition.CompositionTarget",
+        "_winrt_windows_ui_composition.CompositionTarget",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionTarget),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15689,7 +15689,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionTransform =
     {
-        "_winrt_Windows_UI_Composition.CompositionTransform",
+        "_winrt_windows_ui_composition.CompositionTransform",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionTransform),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16004,7 +16004,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionViewBox =
     {
-        "_winrt_Windows_UI_Composition.CompositionViewBox",
+        "_winrt_windows_ui_composition.CompositionViewBox",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionViewBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16112,7 +16112,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionVirtualDrawingSurface =
     {
-        "_winrt_Windows_UI_Composition.CompositionVirtualDrawingSurface",
+        "_winrt_windows_ui_composition.CompositionVirtualDrawingSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionVirtualDrawingSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16331,7 +16331,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CompositionVisualSurface =
     {
-        "_winrt_Windows_UI_Composition.CompositionVisualSurface",
+        "_winrt_windows_ui_composition.CompositionVisualSurface",
         sizeof(py::wrapper::Windows::UI::Composition::CompositionVisualSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18810,7 +18810,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Compositor =
     {
-        "_winrt_Windows_UI_Composition.Compositor",
+        "_winrt_windows_ui_composition.Compositor",
         sizeof(py::wrapper::Windows::UI::Composition::Compositor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18832,7 +18832,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Compositor_Meta =
     {
-        "_winrt_Windows_UI_Composition.Compositor_Meta",
+        "_winrt_windows_ui_composition.Compositor_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -18927,7 +18927,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ContainerVisual =
     {
-        "_winrt_Windows_UI_Composition.ContainerVisual",
+        "_winrt_windows_ui_composition.ContainerVisual",
         sizeof(py::wrapper::Windows::UI::Composition::ContainerVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19042,7 +19042,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_CubicBezierEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.CubicBezierEasingFunction",
+        "_winrt_windows_ui_composition.CubicBezierEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::CubicBezierEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19313,7 +19313,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_DelegatedInkTrailVisual =
     {
-        "_winrt_Windows_UI_Composition.DelegatedInkTrailVisual",
+        "_winrt_windows_ui_composition.DelegatedInkTrailVisual",
         sizeof(py::wrapper::Windows::UI::Composition::DelegatedInkTrailVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19580,7 +19580,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_DistantLight =
     {
-        "_winrt_Windows_UI_Composition.DistantLight",
+        "_winrt_windows_ui_composition.DistantLight",
         sizeof(py::wrapper::Windows::UI::Composition::DistantLight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19943,7 +19943,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_DropShadow =
     {
-        "_winrt_Windows_UI_Composition.DropShadow",
+        "_winrt_windows_ui_composition.DropShadow",
         sizeof(py::wrapper::Windows::UI::Composition::DropShadow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20078,7 +20078,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ElasticEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.ElasticEasingFunction",
+        "_winrt_windows_ui_composition.ElasticEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::ElasticEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20193,7 +20193,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ExponentialEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.ExponentialEasingFunction",
+        "_winrt_windows_ui_composition.ExponentialEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::ExponentialEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20316,7 +20316,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ExpressionAnimation =
     {
-        "_winrt_Windows_UI_Composition.ExpressionAnimation",
+        "_winrt_windows_ui_composition.ExpressionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ExpressionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20723,7 +20723,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ImplicitAnimationCollection =
     {
-        "_winrt_Windows_UI_Composition.ImplicitAnimationCollection",
+        "_winrt_windows_ui_composition.ImplicitAnimationCollection",
         sizeof(py::wrapper::Windows::UI::Composition::ImplicitAnimationCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21130,7 +21130,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_InitialValueExpressionCollection =
     {
-        "_winrt_Windows_UI_Composition.InitialValueExpressionCollection",
+        "_winrt_windows_ui_composition.InitialValueExpressionCollection",
         sizeof(py::wrapper::Windows::UI::Composition::InitialValueExpressionCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21397,7 +21397,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_InsetClip =
     {
-        "_winrt_Windows_UI_Composition.InsetClip",
+        "_winrt_windows_ui_composition.InsetClip",
         sizeof(py::wrapper::Windows::UI::Composition::InsetClip),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21885,7 +21885,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_KeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.KeyFrameAnimation",
+        "_winrt_windows_ui_composition.KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22056,7 +22056,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_LayerVisual =
     {
-        "_winrt_Windows_UI_Composition.LayerVisual",
+        "_winrt_windows_ui_composition.LayerVisual",
         sizeof(py::wrapper::Windows::UI::Composition::LayerVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22131,7 +22131,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_LinearEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.LinearEasingFunction",
+        "_winrt_windows_ui_composition.LinearEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::LinearEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22350,7 +22350,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22482,7 +22482,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_PathKeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.PathKeyFrameAnimation",
+        "_winrt_windows_ui_composition.PathKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::PathKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22989,7 +22989,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_PointLight =
     {
-        "_winrt_Windows_UI_Composition.PointLight",
+        "_winrt_windows_ui_composition.PointLight",
         sizeof(py::wrapper::Windows::UI::Composition::PointLight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23104,7 +23104,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_PowerEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.PowerEasingFunction",
+        "_winrt_windows_ui_composition.PowerEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::PowerEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23236,7 +23236,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_QuaternionKeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.QuaternionKeyFrameAnimation",
+        "_winrt_windows_ui_composition.QuaternionKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::QuaternionKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23695,7 +23695,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_RectangleClip =
     {
-        "_winrt_Windows_UI_Composition.RectangleClip",
+        "_winrt_windows_ui_composition.RectangleClip",
         sizeof(py::wrapper::Windows::UI::Composition::RectangleClip),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23818,7 +23818,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_RedirectVisual =
     {
-        "_winrt_Windows_UI_Composition.RedirectVisual",
+        "_winrt_windows_ui_composition.RedirectVisual",
         sizeof(py::wrapper::Windows::UI::Composition::RedirectVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23913,7 +23913,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_RenderingDeviceReplacedEventArgs =
     {
-        "_winrt_Windows_UI_Composition.RenderingDeviceReplacedEventArgs",
+        "_winrt_windows_ui_composition.RenderingDeviceReplacedEventArgs",
         sizeof(py::wrapper::Windows::UI::Composition::RenderingDeviceReplacedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24045,7 +24045,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ScalarKeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.ScalarKeyFrameAnimation",
+        "_winrt_windows_ui_composition.ScalarKeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ScalarKeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24264,7 +24264,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ScalarNaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.ScalarNaturalMotionAnimation",
+        "_winrt_windows_ui_composition.ScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24407,7 +24407,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ShapeVisual =
     {
-        "_winrt_Windows_UI_Composition.ShapeVisual",
+        "_winrt_windows_ui_composition.ShapeVisual",
         sizeof(py::wrapper::Windows::UI::Composition::ShapeVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24502,7 +24502,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_SineEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.SineEasingFunction",
+        "_winrt_windows_ui_composition.SineEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::SineEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25345,7 +25345,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_SpotLight =
     {
-        "_winrt_Windows_UI_Composition.SpotLight",
+        "_winrt_windows_ui_composition.SpotLight",
         sizeof(py::wrapper::Windows::UI::Composition::SpotLight),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25516,7 +25516,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_SpringScalarNaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.SpringScalarNaturalMotionAnimation",
+        "_winrt_windows_ui_composition.SpringScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::SpringScalarNaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25687,7 +25687,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_SpringVector2NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.SpringVector2NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.SpringVector2NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::SpringVector2NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25858,7 +25858,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_SpringVector3NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.SpringVector3NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.SpringVector3NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::SpringVector3NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26029,7 +26029,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_SpriteVisual =
     {
-        "_winrt_Windows_UI_Composition.SpriteVisual",
+        "_winrt_windows_ui_composition.SpriteVisual",
         sizeof(py::wrapper::Windows::UI::Composition::SpriteVisual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26344,7 +26344,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_StepEasingFunction =
     {
-        "_winrt_Windows_UI_Composition.StepEasingFunction",
+        "_winrt_windows_ui_composition.StepEasingFunction",
         sizeof(py::wrapper::Windows::UI::Composition::StepEasingFunction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26476,7 +26476,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector2KeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.Vector2KeyFrameAnimation",
+        "_winrt_windows_ui_composition.Vector2KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector2KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26695,7 +26695,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector2NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.Vector2NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.Vector2NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -26827,7 +26827,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector3KeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.Vector3KeyFrameAnimation",
+        "_winrt_windows_ui_composition.Vector3KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector3KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -27046,7 +27046,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector3NaturalMotionAnimation =
     {
-        "_winrt_Windows_UI_Composition.Vector3NaturalMotionAnimation",
+        "_winrt_windows_ui_composition.Vector3NaturalMotionAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -27178,7 +27178,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Vector4KeyFrameAnimation =
     {
-        "_winrt_Windows_UI_Composition.Vector4KeyFrameAnimation",
+        "_winrt_windows_ui_composition.Vector4KeyFrameAnimation",
         sizeof(py::wrapper::Windows::UI::Composition::Vector4KeyFrameAnimation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -28281,7 +28281,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_Visual =
     {
-        "_winrt_Windows_UI_Composition.Visual",
+        "_winrt_windows_ui_composition.Visual",
         sizeof(py::wrapper::Windows::UI::Composition::Visual),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -28618,7 +28618,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_VisualCollection =
     {
-        "_winrt_Windows_UI_Composition.VisualCollection",
+        "_winrt_windows_ui_composition.VisualCollection",
         sizeof(py::wrapper::Windows::UI::Composition::VisualCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -28854,7 +28854,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_VisualUnorderedCollection =
     {
-        "_winrt_Windows_UI_Composition.VisualUnorderedCollection",
+        "_winrt_windows_ui_composition.VisualUnorderedCollection",
         sizeof(py::wrapper::Windows::UI::Composition::VisualUnorderedCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -28963,7 +28963,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_IAnimationObject =
     {
-        "_winrt_Windows_UI_Composition.IAnimationObject",
+        "_winrt_windows_ui_composition.IAnimationObject",
         sizeof(py::wrapper::Windows::UI::Composition::IAnimationObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29038,7 +29038,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ICompositionAnimationBase =
     {
-        "_winrt_Windows_UI_Composition.ICompositionAnimationBase",
+        "_winrt_windows_ui_composition.ICompositionAnimationBase",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionAnimationBase),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29161,7 +29161,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ICompositionSupportsSystemBackdrop =
     {
-        "_winrt_Windows_UI_Composition.ICompositionSupportsSystemBackdrop",
+        "_winrt_windows_ui_composition.ICompositionSupportsSystemBackdrop",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSupportsSystemBackdrop),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29236,7 +29236,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ICompositionSurface =
     {
-        "_winrt_Windows_UI_Composition.ICompositionSurface",
+        "_winrt_windows_ui_composition.ICompositionSurface",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSurface),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29341,7 +29341,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_ICompositionSurfaceFacade =
     {
-        "_winrt_Windows_UI_Composition.ICompositionSurfaceFacade",
+        "_winrt_windows_ui_composition.ICompositionSurfaceFacade",
         sizeof(py::wrapper::Windows::UI::Composition::ICompositionSurfaceFacade),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29416,7 +29416,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_IVisualElement =
     {
-        "_winrt_Windows_UI_Composition.IVisualElement",
+        "_winrt_windows_ui_composition.IVisualElement",
         sizeof(py::wrapper::Windows::UI::Composition::IVisualElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29521,7 +29521,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_IVisualElement2 =
     {
-        "_winrt_Windows_UI_Composition.IVisualElement2",
+        "_winrt_windows_ui_composition.IVisualElement2",
         sizeof(py::wrapper::Windows::UI::Composition::IVisualElement2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29656,7 +29656,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyType_Spec type_spec_InkTrailPoint =
     {
-        "_winrt_Windows_UI_Composition.InkTrailPoint",
+        "_winrt_windows_ui_composition.InkTrailPoint",
         sizeof(py::wrapper::Windows::UI::Composition::InkTrailPoint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -29669,7 +29669,7 @@ namespace py::cpp::Windows::UI::Composition
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Composition",
+           "_winrt_windows_ui_composition",
            module_doc,
            0,
            nullptr,
@@ -29680,7 +29680,7 @@ namespace py::cpp::Windows::UI::Composition
 
 } // py::cpp::Windows::UI::Composition
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Composition(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Composition;
 

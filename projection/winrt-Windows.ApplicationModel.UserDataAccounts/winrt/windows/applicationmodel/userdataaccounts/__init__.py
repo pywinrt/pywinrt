@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.UserDataAccounts")
+from . import _winrt_windows_applicationmodel_userdataaccounts
 
 try:
     import winrt.windows.applicationmodel.appointments
@@ -60,8 +59,8 @@ class UserDataAccountStoreAccessType(enum.IntEnum):
     ALL_ACCOUNTS_READ_ONLY = 0
     APP_ACCOUNTS_READ_WRITE = 1
 
-UserDataAccount = _ns_module.UserDataAccount
-UserDataAccountManager = _ns_module.UserDataAccountManager
-UserDataAccountManagerForUser = _ns_module.UserDataAccountManagerForUser
-UserDataAccountStore = _ns_module.UserDataAccountStore
-UserDataAccountStoreChangedEventArgs = _ns_module.UserDataAccountStoreChangedEventArgs
+UserDataAccount = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccount
+UserDataAccountManager = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager
+UserDataAccountManagerForUser = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManagerForUser
+UserDataAccountStore = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStore
+UserDataAccountStoreChangedEventArgs = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStoreChangedEventArgs

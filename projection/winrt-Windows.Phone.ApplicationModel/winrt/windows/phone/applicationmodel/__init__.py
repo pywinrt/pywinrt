@@ -3,11 +3,10 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.ApplicationModel")
+from . import _winrt_windows_phone_applicationmodel
 
 class ApplicationProfileModes(enum.IntFlag):
     DEFAULT = 0
     ALTERNATE = 0x1
 
-ApplicationProfile = _ns_module.ApplicationProfile
+ApplicationProfile = _winrt_windows_phone_applicationmodel.ApplicationProfile

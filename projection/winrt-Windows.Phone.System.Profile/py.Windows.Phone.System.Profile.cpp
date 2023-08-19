@@ -52,7 +52,7 @@ namespace py::cpp::Windows::Phone::System::Profile
 
     static PyType_Spec type_spec_RetailMode =
     {
-        "_winrt_Windows_Phone_System_Profile.RetailMode",
+        "_winrt_windows_phone_system_profile.RetailMode",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -73,7 +73,7 @@ namespace py::cpp::Windows::Phone::System::Profile
 
     static PyType_Spec type_spec_RetailMode_Meta =
     {
-        "_winrt_Windows_Phone_System_Profile.RetailMode_Meta",
+        "_winrt_windows_phone_system_profile.RetailMode_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -86,7 +86,7 @@ namespace py::cpp::Windows::Phone::System::Profile
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_System_Profile",
+           "_winrt_windows_phone_system_profile",
            module_doc,
            0,
            nullptr,
@@ -97,7 +97,7 @@ namespace py::cpp::Windows::Phone::System::Profile
 
 } // py::cpp::Windows::Phone::System::Profile
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_System_Profile(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_system_profile(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::System::Profile;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Gaming.Input")
+from . import _winrt_windows_gaming_input
 
 try:
     import winrt.windows.devices.haptics
@@ -215,18 +214,18 @@ class RequiredUINavigationButtons(enum.IntFlag):
     LEFT = 0x40
     RIGHT = 0x80
 
-ArcadeStickReading = _ns_module.ArcadeStickReading
-FlightStickReading = _ns_module.FlightStickReading
-GamepadReading = _ns_module.GamepadReading
-GamepadVibration = _ns_module.GamepadVibration
-RacingWheelReading = _ns_module.RacingWheelReading
-UINavigationReading = _ns_module.UINavigationReading
-ArcadeStick = _ns_module.ArcadeStick
-FlightStick = _ns_module.FlightStick
-Gamepad = _ns_module.Gamepad
-Headset = _ns_module.Headset
-RacingWheel = _ns_module.RacingWheel
-RawGameController = _ns_module.RawGameController
-UINavigationController = _ns_module.UINavigationController
-IGameController = _ns_module.IGameController
-IGameControllerBatteryInfo = _ns_module.IGameControllerBatteryInfo
+ArcadeStickReading = _winrt_windows_gaming_input.ArcadeStickReading
+FlightStickReading = _winrt_windows_gaming_input.FlightStickReading
+GamepadReading = _winrt_windows_gaming_input.GamepadReading
+GamepadVibration = _winrt_windows_gaming_input.GamepadVibration
+RacingWheelReading = _winrt_windows_gaming_input.RacingWheelReading
+UINavigationReading = _winrt_windows_gaming_input.UINavigationReading
+ArcadeStick = _winrt_windows_gaming_input.ArcadeStick
+FlightStick = _winrt_windows_gaming_input.FlightStick
+Gamepad = _winrt_windows_gaming_input.Gamepad
+Headset = _winrt_windows_gaming_input.Headset
+RacingWheel = _winrt_windows_gaming_input.RacingWheel
+RawGameController = _winrt_windows_gaming_input.RawGameController
+UINavigationController = _winrt_windows_gaming_input.UINavigationController
+IGameController = _winrt_windows_gaming_input.IGameController
+IGameControllerBatteryInfo = _winrt_windows_gaming_input.IGameControllerBatteryInfo

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Store.LicenseManagement")
+from . import _winrt_windows_applicationmodel_store_licensemanagement
 
 try:
     import winrt.windows.foundation
@@ -25,6 +24,6 @@ class LicenseRefreshOption(enum.IntEnum):
     RUNNING_LICENSES = 0
     ALL_LICENSES = 1
 
-LicenseManager = _ns_module.LicenseManager
-LicenseSatisfactionInfo = _ns_module.LicenseSatisfactionInfo
-LicenseSatisfactionResult = _ns_module.LicenseSatisfactionResult
+LicenseManager = _winrt_windows_applicationmodel_store_licensemanagement.LicenseManager
+LicenseSatisfactionInfo = _winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo
+LicenseSatisfactionResult = _winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult

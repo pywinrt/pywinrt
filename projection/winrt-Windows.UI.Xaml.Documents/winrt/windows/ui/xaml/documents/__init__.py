@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Documents")
+from . import _winrt_windows_ui_xaml_documents
 
 try:
     import winrt.windows.foundation
@@ -49,33 +48,33 @@ class UnderlineStyle(enum.IntEnum):
     NONE = 0
     SINGLE = 1
 
-TextRange = _ns_module.TextRange
-Block = _ns_module.Block
-BlockCollection = _ns_module.BlockCollection
+TextRange = _winrt_windows_ui_xaml_documents.TextRange
+Block = _winrt_windows_ui_xaml_documents.Block
+BlockCollection = _winrt_windows_ui_xaml_documents.BlockCollection
 winrt.system._mixin_mutable_sequence(BlockCollection)
-Bold = _ns_module.Bold
-ContactContentLinkProvider = _ns_module.ContactContentLinkProvider
-ContentLink = _ns_module.ContentLink
-ContentLinkInvokedEventArgs = _ns_module.ContentLinkInvokedEventArgs
-ContentLinkProvider = _ns_module.ContentLinkProvider
-ContentLinkProviderCollection = _ns_module.ContentLinkProviderCollection
+Bold = _winrt_windows_ui_xaml_documents.Bold
+ContactContentLinkProvider = _winrt_windows_ui_xaml_documents.ContactContentLinkProvider
+ContentLink = _winrt_windows_ui_xaml_documents.ContentLink
+ContentLinkInvokedEventArgs = _winrt_windows_ui_xaml_documents.ContentLinkInvokedEventArgs
+ContentLinkProvider = _winrt_windows_ui_xaml_documents.ContentLinkProvider
+ContentLinkProviderCollection = _winrt_windows_ui_xaml_documents.ContentLinkProviderCollection
 winrt.system._mixin_mutable_sequence(ContentLinkProviderCollection)
-Glyphs = _ns_module.Glyphs
-Hyperlink = _ns_module.Hyperlink
-HyperlinkClickEventArgs = _ns_module.HyperlinkClickEventArgs
-Inline = _ns_module.Inline
-InlineCollection = _ns_module.InlineCollection
+Glyphs = _winrt_windows_ui_xaml_documents.Glyphs
+Hyperlink = _winrt_windows_ui_xaml_documents.Hyperlink
+HyperlinkClickEventArgs = _winrt_windows_ui_xaml_documents.HyperlinkClickEventArgs
+Inline = _winrt_windows_ui_xaml_documents.Inline
+InlineCollection = _winrt_windows_ui_xaml_documents.InlineCollection
 winrt.system._mixin_mutable_sequence(InlineCollection)
-InlineUIContainer = _ns_module.InlineUIContainer
-Italic = _ns_module.Italic
-LineBreak = _ns_module.LineBreak
-Paragraph = _ns_module.Paragraph
-PlaceContentLinkProvider = _ns_module.PlaceContentLinkProvider
-Run = _ns_module.Run
-Span = _ns_module.Span
-TextElement = _ns_module.TextElement
-TextHighlighter = _ns_module.TextHighlighter
-TextHighlighterBase = _ns_module.TextHighlighterBase
-TextPointer = _ns_module.TextPointer
-Typography = _ns_module.Typography
-Underline = _ns_module.Underline
+InlineUIContainer = _winrt_windows_ui_xaml_documents.InlineUIContainer
+Italic = _winrt_windows_ui_xaml_documents.Italic
+LineBreak = _winrt_windows_ui_xaml_documents.LineBreak
+Paragraph = _winrt_windows_ui_xaml_documents.Paragraph
+PlaceContentLinkProvider = _winrt_windows_ui_xaml_documents.PlaceContentLinkProvider
+Run = _winrt_windows_ui_xaml_documents.Run
+Span = _winrt_windows_ui_xaml_documents.Span
+TextElement = _winrt_windows_ui_xaml_documents.TextElement
+TextHighlighter = _winrt_windows_ui_xaml_documents.TextHighlighter
+TextHighlighterBase = _winrt_windows_ui_xaml_documents.TextHighlighterBase
+TextPointer = _winrt_windows_ui_xaml_documents.TextPointer
+Typography = _winrt_windows_ui_xaml_documents.Typography
+Underline = _winrt_windows_ui_xaml_documents.Underline

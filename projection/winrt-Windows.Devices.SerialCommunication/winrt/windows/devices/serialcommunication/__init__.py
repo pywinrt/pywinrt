@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.SerialCommunication")
+from . import _winrt_windows_devices_serialcommunication
 
 try:
     import winrt.windows.foundation
@@ -48,6 +47,6 @@ class SerialStopBitCount(enum.IntEnum):
     ONE_POINT_FIVE = 1
     TWO = 2
 
-ErrorReceivedEventArgs = _ns_module.ErrorReceivedEventArgs
-PinChangedEventArgs = _ns_module.PinChangedEventArgs
-SerialDevice = _ns_module.SerialDevice
+ErrorReceivedEventArgs = _winrt_windows_devices_serialcommunication.ErrorReceivedEventArgs
+PinChangedEventArgs = _winrt_windows_devices_serialcommunication.PinChangedEventArgs
+SerialDevice = _winrt_windows_devices_serialcommunication.SerialDevice

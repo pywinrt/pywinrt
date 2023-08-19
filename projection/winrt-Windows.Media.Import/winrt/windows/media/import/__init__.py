@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Import")
+from . import _winrt_windows_media_import
 
 try:
     import winrt.windows.foundation
@@ -95,17 +94,17 @@ class PhotoImportSubfolderDateFormat(enum.IntEnum):
     YEAR_MONTH = 1
     YEAR_MONTH_DAY = 2
 
-PhotoImportProgress = _ns_module.PhotoImportProgress
-PhotoImportDeleteImportedItemsFromSourceResult = _ns_module.PhotoImportDeleteImportedItemsFromSourceResult
-PhotoImportFindItemsResult = _ns_module.PhotoImportFindItemsResult
-PhotoImportImportItemsResult = _ns_module.PhotoImportImportItemsResult
-PhotoImportItem = _ns_module.PhotoImportItem
-PhotoImportItemImportedEventArgs = _ns_module.PhotoImportItemImportedEventArgs
-PhotoImportManager = _ns_module.PhotoImportManager
-PhotoImportOperation = _ns_module.PhotoImportOperation
-PhotoImportSelectionChangedEventArgs = _ns_module.PhotoImportSelectionChangedEventArgs
-PhotoImportSession = _ns_module.PhotoImportSession
-PhotoImportSidecar = _ns_module.PhotoImportSidecar
-PhotoImportSource = _ns_module.PhotoImportSource
-PhotoImportStorageMedium = _ns_module.PhotoImportStorageMedium
-PhotoImportVideoSegment = _ns_module.PhotoImportVideoSegment
+PhotoImportProgress = _winrt_windows_media_import.PhotoImportProgress
+PhotoImportDeleteImportedItemsFromSourceResult = _winrt_windows_media_import.PhotoImportDeleteImportedItemsFromSourceResult
+PhotoImportFindItemsResult = _winrt_windows_media_import.PhotoImportFindItemsResult
+PhotoImportImportItemsResult = _winrt_windows_media_import.PhotoImportImportItemsResult
+PhotoImportItem = _winrt_windows_media_import.PhotoImportItem
+PhotoImportItemImportedEventArgs = _winrt_windows_media_import.PhotoImportItemImportedEventArgs
+PhotoImportManager = _winrt_windows_media_import.PhotoImportManager
+PhotoImportOperation = _winrt_windows_media_import.PhotoImportOperation
+PhotoImportSelectionChangedEventArgs = _winrt_windows_media_import.PhotoImportSelectionChangedEventArgs
+PhotoImportSession = _winrt_windows_media_import.PhotoImportSession
+PhotoImportSidecar = _winrt_windows_media_import.PhotoImportSidecar
+PhotoImportSource = _winrt_windows_media_import.PhotoImportSource
+PhotoImportStorageMedium = _winrt_windows_media_import.PhotoImportStorageMedium
+PhotoImportVideoSegment = _winrt_windows_media_import.PhotoImportVideoSegment

@@ -562,7 +562,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScanner =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScanner",
+        "_winrt_windows_devices_pointofservice.BarcodeScanner",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScannerCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScannerCapabilities",
+        "_winrt_windows_devices_pointofservice.BarcodeScannerCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -852,7 +852,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScannerDataReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScannerDataReceivedEventArgs",
+        "_winrt_windows_devices_pointofservice.BarcodeScannerDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -987,7 +987,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScannerErrorOccurredEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScannerErrorOccurredEventArgs",
+        "_winrt_windows_devices_pointofservice.BarcodeScannerErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1082,7 +1082,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScannerImagePreviewReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScannerImagePreviewReceivedEventArgs",
+        "_winrt_windows_devices_pointofservice.BarcodeScannerImagePreviewReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1244,7 +1244,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScannerReport =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScannerReport",
+        "_winrt_windows_devices_pointofservice.BarcodeScannerReport",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1359,7 +1359,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeScannerStatusUpdatedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeScannerStatusUpdatedEventArgs",
+        "_winrt_windows_devices_pointofservice.BarcodeScannerStatusUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3211,7 +3211,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeSymbologies =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeSymbologies",
+        "_winrt_windows_devices_pointofservice.BarcodeSymbologies",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3325,7 +3325,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeSymbologies_Meta =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeSymbologies_Meta",
+        "_winrt_windows_devices_pointofservice.BarcodeSymbologies_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3700,7 +3700,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_BarcodeSymbologyAttributes =
     {
-        "_winrt_Windows_Devices_PointOfService.BarcodeSymbologyAttributes",
+        "_winrt_windows_devices_pointofservice.BarcodeSymbologyAttributes",
         sizeof(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4179,7 +4179,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawer =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawer",
+        "_winrt_windows_devices_pointofservice.CashDrawer",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4374,7 +4374,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerCapabilities",
+        "_winrt_windows_devices_pointofservice.CashDrawerCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4716,7 +4716,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerCloseAlarm =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerCloseAlarm",
+        "_winrt_windows_devices_pointofservice.CashDrawerCloseAlarm",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4811,7 +4811,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerClosedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerClosedEventArgs",
+        "_winrt_windows_devices_pointofservice.CashDrawerClosedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4976,7 +4976,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerEventSource =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerEventSource",
+        "_winrt_windows_devices_pointofservice.CashDrawerEventSource",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerEventSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5071,7 +5071,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerOpenedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerOpenedEventArgs",
+        "_winrt_windows_devices_pointofservice.CashDrawerOpenedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5186,7 +5186,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerStatus =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerStatus",
+        "_winrt_windows_devices_pointofservice.CashDrawerStatus",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5281,7 +5281,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_CashDrawerStatusUpdatedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.CashDrawerStatusUpdatedEventArgs",
+        "_winrt_windows_devices_pointofservice.CashDrawerStatusUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6313,7 +6313,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedBarcodeScanner =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedBarcodeScanner",
+        "_winrt_windows_devices_pointofservice.ClaimedBarcodeScanner",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6388,7 +6388,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedBarcodeScannerClosedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedBarcodeScannerClosedEventArgs",
+        "_winrt_windows_devices_pointofservice.ClaimedBarcodeScannerClosedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6870,7 +6870,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedCashDrawer =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedCashDrawer",
+        "_winrt_windows_devices_pointofservice.ClaimedCashDrawer",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6945,7 +6945,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedCashDrawerClosedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedCashDrawerClosedEventArgs",
+        "_winrt_windows_devices_pointofservice.ClaimedCashDrawerClosedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7482,7 +7482,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedJournalPrinter =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedJournalPrinter",
+        "_winrt_windows_devices_pointofservice.ClaimedJournalPrinter",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8427,7 +8427,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedLineDisplay =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedLineDisplay",
+        "_winrt_windows_devices_pointofservice.ClaimedLineDisplay",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8502,7 +8502,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedLineDisplayClosedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedLineDisplayClosedEventArgs",
+        "_winrt_windows_devices_pointofservice.ClaimedLineDisplayClosedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9515,7 +9515,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedMagneticStripeReader =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedMagneticStripeReader",
+        "_winrt_windows_devices_pointofservice.ClaimedMagneticStripeReader",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9590,7 +9590,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedMagneticStripeReaderClosedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedMagneticStripeReaderClosedEventArgs",
+        "_winrt_windows_devices_pointofservice.ClaimedMagneticStripeReaderClosedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10226,7 +10226,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedPosPrinter =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedPosPrinter",
+        "_winrt_windows_devices_pointofservice.ClaimedPosPrinter",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10301,7 +10301,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedPosPrinterClosedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedPosPrinterClosedEventArgs",
+        "_winrt_windows_devices_pointofservice.ClaimedPosPrinterClosedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10938,7 +10938,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedReceiptPrinter =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedReceiptPrinter",
+        "_winrt_windows_devices_pointofservice.ClaimedReceiptPrinter",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11774,7 +11774,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ClaimedSlipPrinter =
     {
-        "_winrt_Windows_Devices_PointOfService.ClaimedSlipPrinter",
+        "_winrt_windows_devices_pointofservice.ClaimedSlipPrinter",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12052,7 +12052,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_JournalPrintJob =
     {
-        "_winrt_Windows_Devices_PointOfService.JournalPrintJob",
+        "_winrt_windows_devices_pointofservice.JournalPrintJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12507,7 +12507,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_JournalPrinterCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.JournalPrinterCapabilities",
+        "_winrt_windows_devices_pointofservice.JournalPrinterCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::JournalPrinterCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12966,7 +12966,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplay =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplay",
+        "_winrt_windows_devices_pointofservice.LineDisplay",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12987,7 +12987,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplay_Meta =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplay_Meta",
+        "_winrt_windows_devices_pointofservice.LineDisplay_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -13398,7 +13398,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayAttributes =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayAttributes",
+        "_winrt_windows_devices_pointofservice.LineDisplayAttributes",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13833,7 +13833,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayCapabilities",
+        "_winrt_windows_devices_pointofservice.LineDisplayCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14110,7 +14110,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayCursor =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayCursor",
+        "_winrt_windows_devices_pointofservice.LineDisplayCursor",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14377,7 +14377,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayCursorAttributes =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayCursorAttributes",
+        "_winrt_windows_devices_pointofservice.LineDisplayCursorAttributes",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursorAttributes),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14525,7 +14525,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayCustomGlyphs =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayCustomGlyphs",
+        "_winrt_windows_devices_pointofservice.LineDisplayCustomGlyphs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayCustomGlyphs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14806,7 +14806,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayMarquee =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayMarquee",
+        "_winrt_windows_devices_pointofservice.LineDisplayMarquee",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14941,7 +14941,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayStatisticsCategorySelector =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayStatisticsCategorySelector",
+        "_winrt_windows_devices_pointofservice.LineDisplayStatisticsCategorySelector",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15036,7 +15036,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayStatusUpdatedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayStatusUpdatedEventArgs",
+        "_winrt_windows_devices_pointofservice.LineDisplayStatusUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15161,7 +15161,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayStoredBitmap =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayStoredBitmap",
+        "_winrt_windows_devices_pointofservice.LineDisplayStoredBitmap",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayStoredBitmap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15759,7 +15759,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_LineDisplayWindow =
     {
-        "_winrt_Windows_Devices_PointOfService.LineDisplayWindow",
+        "_winrt_windows_devices_pointofservice.LineDisplayWindow",
         sizeof(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16248,7 +16248,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReader =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReader",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReader",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16703,7 +16703,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderAamvaCardDataReceivedEventArgs",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderAamvaCardDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16958,7 +16958,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderBankCardDataReceivedEventArgs",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderBankCardDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17253,7 +17253,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderCapabilities",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17363,7 +17363,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderCardTypes =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderCardTypes",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17387,7 +17387,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderCardTypes_Meta =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderCardTypes_Meta",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -17478,7 +17478,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderEncryptionAlgorithms",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17501,7 +17501,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderEncryptionAlgorithms_Meta =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderEncryptionAlgorithms_Meta",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -17696,7 +17696,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderErrorOccurredEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderErrorOccurredEventArgs",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderErrorOccurredEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17951,7 +17951,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderReport =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderReport",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderReport",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18066,7 +18066,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderStatusUpdatedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderStatusUpdatedEventArgs",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderStatusUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18201,7 +18201,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderTrackData =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderTrackData",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderTrackData",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderTrackData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18296,7 +18296,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs",
+        "_winrt_windows_devices_pointofservice.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18827,7 +18827,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinter =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinter",
+        "_winrt_windows_devices_pointofservice.PosPrinter",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19102,7 +19102,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterCapabilities",
+        "_winrt_windows_devices_pointofservice.PosPrinterCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinterCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19193,7 +19193,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterCharacterSetIds =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterCharacterSetIds",
+        "_winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19216,7 +19216,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterCharacterSetIds_Meta =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterCharacterSetIds_Meta",
+        "_winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -19351,7 +19351,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterFontProperty =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterFontProperty",
+        "_winrt_windows_devices_pointofservice.PosPrinterFontProperty",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinterFontProperty),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20073,7 +20073,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterPrintOptions =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterPrintOptions",
+        "_winrt_windows_devices_pointofservice.PosPrinterPrintOptions",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20148,7 +20148,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterReleaseDeviceRequestedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterReleaseDeviceRequestedEventArgs",
+        "_winrt_windows_devices_pointofservice.PosPrinterReleaseDeviceRequestedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20263,7 +20263,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterStatus =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterStatus",
+        "_winrt_windows_devices_pointofservice.PosPrinterStatus",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinterStatus),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20358,7 +20358,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_PosPrinterStatusUpdatedEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.PosPrinterStatusUpdatedEventArgs",
+        "_winrt_windows_devices_pointofservice.PosPrinterStatusUpdatedEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21230,7 +21230,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ReceiptPrintJob =
     {
-        "_winrt_Windows_Devices_PointOfService.ReceiptPrintJob",
+        "_winrt_windows_devices_pointofservice.ReceiptPrintJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -21925,7 +21925,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ReceiptPrinterCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.ReceiptPrinterCapabilities",
+        "_winrt_windows_devices_pointofservice.ReceiptPrinterCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ReceiptPrinterCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -22681,7 +22681,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_SlipPrintJob =
     {
-        "_winrt_Windows_Devices_PointOfService.SlipPrintJob",
+        "_winrt_windows_devices_pointofservice.SlipPrintJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23356,7 +23356,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_SlipPrinterCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.SlipPrinterCapabilities",
+        "_winrt_windows_devices_pointofservice.SlipPrinterCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::SlipPrinterCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23539,7 +23539,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_UnifiedPosErrorData =
     {
-        "_winrt_Windows_Devices_PointOfService.UnifiedPosErrorData",
+        "_winrt_windows_devices_pointofservice.UnifiedPosErrorData",
         sizeof(py::wrapper::Windows::Devices::PointOfService::UnifiedPosErrorData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -23634,7 +23634,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ICashDrawerEventSourceEventArgs =
     {
-        "_winrt_Windows_Devices_PointOfService.ICashDrawerEventSourceEventArgs",
+        "_winrt_windows_devices_pointofservice.ICashDrawerEventSourceEventArgs",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24141,7 +24141,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ICommonClaimedPosPrinterStation =
     {
-        "_winrt_Windows_Devices_PointOfService.ICommonClaimedPosPrinterStation",
+        "_winrt_windows_devices_pointofservice.ICommonClaimedPosPrinterStation",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24476,7 +24476,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ICommonPosPrintStationCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.ICommonPosPrintStationCapabilities",
+        "_winrt_windows_devices_pointofservice.ICommonPosPrintStationCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -24991,7 +24991,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_ICommonReceiptSlipCapabilities =
     {
-        "_winrt_Windows_Devices_PointOfService.ICommonReceiptSlipCapabilities",
+        "_winrt_windows_devices_pointofservice.ICommonReceiptSlipCapabilities",
         sizeof(py::wrapper::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25181,7 +25181,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_IPosPrinterJob =
     {
-        "_winrt_Windows_Devices_PointOfService.IPosPrinterJob",
+        "_winrt_windows_devices_pointofservice.IPosPrinterJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25849,7 +25849,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_IReceiptOrSlipJob =
     {
-        "_winrt_Windows_Devices_PointOfService.IReceiptOrSlipJob",
+        "_winrt_windows_devices_pointofservice.IReceiptOrSlipJob",
         sizeof(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25984,7 +25984,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyType_Spec type_spec_SizeUInt32 =
     {
-        "_winrt_Windows_Devices_PointOfService.SizeUInt32",
+        "_winrt_windows_devices_pointofservice.SizeUInt32",
         sizeof(py::wrapper::Windows::Devices::PointOfService::SizeUInt32),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -25997,7 +25997,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_PointOfService",
+           "_winrt_windows_devices_pointofservice",
            module_doc,
            0,
            nullptr,
@@ -26008,7 +26008,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
 } // py::cpp::Windows::Devices::PointOfService
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_PointOfService(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::PointOfService;
 

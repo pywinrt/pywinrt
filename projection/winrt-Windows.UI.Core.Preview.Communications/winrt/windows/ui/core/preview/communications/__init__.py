@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Core.Preview.Communications")
+from . import _winrt_windows_ui_core_preview_communications
 
 try:
     import winrt.windows.foundation
@@ -37,9 +36,9 @@ class PreviewTeamViewCommand(enum.IntEnum):
     TOGGLE_SCREEN_SHARING = 7
     TOGGLE_FULL_SCREEN = 8
 
-PreviewTeamCleanupRequestedEventArgs = _ns_module.PreviewTeamCleanupRequestedEventArgs
-PreviewTeamCommandInvokedEventArgs = _ns_module.PreviewTeamCommandInvokedEventArgs
-PreviewTeamDeviceCredentials = _ns_module.PreviewTeamDeviceCredentials
-PreviewTeamEndMeetingRequestedEventArgs = _ns_module.PreviewTeamEndMeetingRequestedEventArgs
-PreviewTeamJoinMeetingRequestedEventArgs = _ns_module.PreviewTeamJoinMeetingRequestedEventArgs
-PreviewTeamView = _ns_module.PreviewTeamView
+PreviewTeamCleanupRequestedEventArgs = _winrt_windows_ui_core_preview_communications.PreviewTeamCleanupRequestedEventArgs
+PreviewTeamCommandInvokedEventArgs = _winrt_windows_ui_core_preview_communications.PreviewTeamCommandInvokedEventArgs
+PreviewTeamDeviceCredentials = _winrt_windows_ui_core_preview_communications.PreviewTeamDeviceCredentials
+PreviewTeamEndMeetingRequestedEventArgs = _winrt_windows_ui_core_preview_communications.PreviewTeamEndMeetingRequestedEventArgs
+PreviewTeamJoinMeetingRequestedEventArgs = _winrt_windows_ui_core_preview_communications.PreviewTeamJoinMeetingRequestedEventArgs
+PreviewTeamView = _winrt_windows_ui_core_preview_communications.PreviewTeamView

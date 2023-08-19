@@ -345,7 +345,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaActionableInsights =
     {
-        "_winrt_Windows_Services_Cortana.CortanaActionableInsights",
+        "_winrt_windows_services_cortana.CortanaActionableInsights",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaActionableInsightsOptions =
     {
-        "_winrt_Windows_Services_Cortana.CortanaActionableInsightsOptions",
+        "_winrt_windows_services_cortana.CortanaActionableInsightsOptions",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -770,7 +770,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaPermissionsManager =
     {
-        "_winrt_Windows_Services_Cortana.CortanaPermissionsManager",
+        "_winrt_windows_services_cortana.CortanaPermissionsManager",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -973,7 +973,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyType_Spec type_spec_CortanaSettings =
     {
-        "_winrt_Windows_Services_Cortana.CortanaSettings",
+        "_winrt_windows_services_cortana.CortanaSettings",
         sizeof(py::wrapper::Windows::Services::Cortana::CortanaSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -986,7 +986,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Services_Cortana",
+           "_winrt_windows_services_cortana",
            module_doc,
            0,
            nullptr,
@@ -997,7 +997,7 @@ namespace py::cpp::Windows::Services::Cortana
 
 } // py::cpp::Windows::Services::Cortana
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Services_Cortana(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
 {
     using namespace py::cpp::Windows::Services::Cortana;
 

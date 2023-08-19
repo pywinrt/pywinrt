@@ -114,7 +114,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyType_Spec type_spec_CharacterGrouping =
     {
-        "_winrt_Windows_Globalization_Collation.CharacterGrouping",
+        "_winrt_windows_globalization_collation.CharacterGrouping",
         sizeof(py::wrapper::Windows::Globalization::Collation::CharacterGrouping),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyType_Spec type_spec_CharacterGroupings =
     {
-        "_winrt_Windows_Globalization_Collation.CharacterGroupings",
+        "_winrt_windows_globalization_collation.CharacterGroupings",
         sizeof(py::wrapper::Windows::Globalization::Collation::CharacterGroupings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -545,7 +545,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Globalization_Collation",
+           "_winrt_windows_globalization_collation",
            module_doc,
            0,
            nullptr,
@@ -556,7 +556,7 @@ namespace py::cpp::Windows::Globalization::Collation
 
 } // py::cpp::Windows::Globalization::Collation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_Collation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_globalization_collation(void) noexcept
 {
     using namespace py::cpp::Windows::Globalization::Collation;
 

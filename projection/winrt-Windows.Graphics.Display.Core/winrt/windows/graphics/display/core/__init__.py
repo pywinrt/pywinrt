@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Graphics.Display.Core")
+from . import _winrt_windows_graphics_display_core
 
 try:
     import winrt.windows.foundation
@@ -34,6 +33,6 @@ class HdmiDisplayPixelEncoding(enum.IntEnum):
     YCC422 = 2
     YCC420 = 3
 
-HdmiDisplayHdr2086Metadata = _ns_module.HdmiDisplayHdr2086Metadata
-HdmiDisplayInformation = _ns_module.HdmiDisplayInformation
-HdmiDisplayMode = _ns_module.HdmiDisplayMode
+HdmiDisplayHdr2086Metadata = _winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata
+HdmiDisplayInformation = _winrt_windows_graphics_display_core.HdmiDisplayInformation
+HdmiDisplayMode = _winrt_windows_graphics_display_core.HdmiDisplayMode

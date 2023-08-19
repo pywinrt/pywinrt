@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Web")
+from . import _winrt_windows_web
 
 try:
     import winrt.windows.foundation
@@ -73,5 +72,5 @@ class WebErrorStatus(enum.IntEnum):
     GATEWAY_TIMEOUT = 504
     HTTP_VERSION_NOT_SUPPORTED = 505
 
-WebError = _ns_module.WebError
-IUriToStreamResolver = _ns_module.IUriToStreamResolver
+WebError = _winrt_windows_web.WebError
+IUriToStreamResolver = _winrt_windows_web.IUriToStreamResolver

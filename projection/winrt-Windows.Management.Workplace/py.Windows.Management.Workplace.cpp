@@ -183,7 +183,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyType_Spec type_spec_MdmPolicy =
     {
-        "_winrt_Windows_Management_Workplace.MdmPolicy",
+        "_winrt_windows_management_workplace.MdmPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -236,7 +236,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyType_Spec type_spec_WorkplaceSettings =
     {
-        "_winrt_Windows_Management_Workplace.WorkplaceSettings",
+        "_winrt_windows_management_workplace.WorkplaceSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -257,7 +257,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyType_Spec type_spec_WorkplaceSettings_Meta =
     {
-        "_winrt_Windows_Management_Workplace.WorkplaceSettings_Meta",
+        "_winrt_windows_management_workplace.WorkplaceSettings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -270,7 +270,7 @@ namespace py::cpp::Windows::Management::Workplace
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Management_Workplace",
+           "_winrt_windows_management_workplace",
            module_doc,
            0,
            nullptr,
@@ -281,7 +281,7 @@ namespace py::cpp::Windows::Management::Workplace
 
 } // py::cpp::Windows::Management::Workplace
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Management_Workplace(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_management_workplace(void) noexcept
 {
     using namespace py::cpp::Windows::Management::Workplace;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Input")
+from . import _winrt_windows_devices_input
 
 try:
     import winrt.windows.devices.haptics
@@ -26,19 +25,19 @@ class PointerDeviceType(enum.IntEnum):
     PEN = 1
     MOUSE = 2
 
-MouseDelta = _ns_module.MouseDelta
-PointerDeviceUsage = _ns_module.PointerDeviceUsage
-KeyboardCapabilities = _ns_module.KeyboardCapabilities
-MouseCapabilities = _ns_module.MouseCapabilities
-MouseDevice = _ns_module.MouseDevice
-MouseEventArgs = _ns_module.MouseEventArgs
-PenButtonListener = _ns_module.PenButtonListener
-PenDevice = _ns_module.PenDevice
-PenDockListener = _ns_module.PenDockListener
-PenDockedEventArgs = _ns_module.PenDockedEventArgs
-PenTailButtonClickedEventArgs = _ns_module.PenTailButtonClickedEventArgs
-PenTailButtonDoubleClickedEventArgs = _ns_module.PenTailButtonDoubleClickedEventArgs
-PenTailButtonLongPressedEventArgs = _ns_module.PenTailButtonLongPressedEventArgs
-PenUndockedEventArgs = _ns_module.PenUndockedEventArgs
-PointerDevice = _ns_module.PointerDevice
-TouchCapabilities = _ns_module.TouchCapabilities
+MouseDelta = _winrt_windows_devices_input.MouseDelta
+PointerDeviceUsage = _winrt_windows_devices_input.PointerDeviceUsage
+KeyboardCapabilities = _winrt_windows_devices_input.KeyboardCapabilities
+MouseCapabilities = _winrt_windows_devices_input.MouseCapabilities
+MouseDevice = _winrt_windows_devices_input.MouseDevice
+MouseEventArgs = _winrt_windows_devices_input.MouseEventArgs
+PenButtonListener = _winrt_windows_devices_input.PenButtonListener
+PenDevice = _winrt_windows_devices_input.PenDevice
+PenDockListener = _winrt_windows_devices_input.PenDockListener
+PenDockedEventArgs = _winrt_windows_devices_input.PenDockedEventArgs
+PenTailButtonClickedEventArgs = _winrt_windows_devices_input.PenTailButtonClickedEventArgs
+PenTailButtonDoubleClickedEventArgs = _winrt_windows_devices_input.PenTailButtonDoubleClickedEventArgs
+PenTailButtonLongPressedEventArgs = _winrt_windows_devices_input.PenTailButtonLongPressedEventArgs
+PenUndockedEventArgs = _winrt_windows_devices_input.PenUndockedEventArgs
+PointerDevice = _winrt_windows_devices_input.PointerDevice
+TouchCapabilities = _winrt_windows_devices_input.TouchCapabilities

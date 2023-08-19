@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Web
 
     static PyType_Spec type_spec_WebError =
     {
-        "_winrt_Windows_Web.WebError",
+        "_winrt_windows_web.WebError",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::Web
 
     static PyType_Spec type_spec_IUriToStreamResolver =
     {
-        "_winrt_Windows_Web.IUriToStreamResolver",
+        "_winrt_windows_web.IUriToStreamResolver",
         sizeof(py::wrapper::Windows::Web::IUriToStreamResolver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -185,7 +185,7 @@ namespace py::cpp::Windows::Web
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Web",
+           "_winrt_windows_web",
            module_doc,
            0,
            nullptr,
@@ -196,7 +196,7 @@ namespace py::cpp::Windows::Web
 
 } // py::cpp::Windows::Web
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Web(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_web(void) noexcept
 {
     using namespace py::cpp::Windows::Web;
 

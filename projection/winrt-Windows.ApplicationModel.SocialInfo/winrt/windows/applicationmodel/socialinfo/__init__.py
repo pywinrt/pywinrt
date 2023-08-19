@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.SocialInfo")
+from . import _winrt_windows_applicationmodel_socialinfo
 
 try:
     import winrt.windows.foundation
@@ -44,9 +43,9 @@ class SocialItemBadgeStyle(enum.IntEnum):
     VISIBLE = 1
     VISIBLE_WITH_COUNT = 2
 
-SocialFeedChildItem = _ns_module.SocialFeedChildItem
-SocialFeedContent = _ns_module.SocialFeedContent
-SocialFeedItem = _ns_module.SocialFeedItem
-SocialFeedSharedItem = _ns_module.SocialFeedSharedItem
-SocialItemThumbnail = _ns_module.SocialItemThumbnail
-SocialUserInfo = _ns_module.SocialUserInfo
+SocialFeedChildItem = _winrt_windows_applicationmodel_socialinfo.SocialFeedChildItem
+SocialFeedContent = _winrt_windows_applicationmodel_socialinfo.SocialFeedContent
+SocialFeedItem = _winrt_windows_applicationmodel_socialinfo.SocialFeedItem
+SocialFeedSharedItem = _winrt_windows_applicationmodel_socialinfo.SocialFeedSharedItem
+SocialItemThumbnail = _winrt_windows_applicationmodel_socialinfo.SocialItemThumbnail
+SocialUserInfo = _winrt_windows_applicationmodel_socialinfo.SocialUserInfo

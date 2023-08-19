@@ -500,7 +500,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_PrintTicketCapabilities =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.PrintTicketCapabilities",
+        "_winrt_windows_graphics_printing_printticket.PrintTicketCapabilities",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -791,7 +791,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_PrintTicketFeature =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.PrintTicketFeature",
+        "_winrt_windows_graphics_printing_printticket.PrintTicketFeature",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1078,7 +1078,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_PrintTicketOption =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.PrintTicketOption",
+        "_winrt_windows_graphics_printing_printticket.PrintTicketOption",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1293,7 +1293,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_PrintTicketParameterDefinition =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.PrintTicketParameterDefinition",
+        "_winrt_windows_graphics_printing_printticket.PrintTicketParameterDefinition",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1476,7 +1476,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_PrintTicketParameterInitializer =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.PrintTicketParameterInitializer",
+        "_winrt_windows_graphics_printing_printticket.PrintTicketParameterInitializer",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1631,7 +1631,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_PrintTicketValue =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.PrintTicketValue",
+        "_winrt_windows_graphics_printing_printticket.PrintTicketValue",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2322,7 +2322,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_WorkflowPrintTicket =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.WorkflowPrintTicket",
+        "_winrt_windows_graphics_printing_printticket.WorkflowPrintTicket",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyType_Spec type_spec_WorkflowPrintTicketValidationResult =
     {
-        "_winrt_Windows_Graphics_Printing_PrintTicket.WorkflowPrintTicketValidationResult",
+        "_winrt_windows_graphics_printing_printticket.WorkflowPrintTicketValidationResult",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2450,7 +2450,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Graphics_Printing_PrintTicket",
+           "_winrt_windows_graphics_printing_printticket",
            module_doc,
            0,
            nullptr,
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 
 } // py::cpp::Windows::Graphics::Printing::PrintTicket
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintTicket(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printticket(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
 

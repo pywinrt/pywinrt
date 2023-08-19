@@ -114,7 +114,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyType_Spec type_spec_ScreenReaderPositionChangedEventArgs =
     {
-        "_winrt_Windows_UI_Accessibility.ScreenReaderPositionChangedEventArgs",
+        "_winrt_windows_ui_accessibility.ScreenReaderPositionChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -277,7 +277,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyType_Spec type_spec_ScreenReaderService =
     {
-        "_winrt_Windows_UI_Accessibility.ScreenReaderService",
+        "_winrt_windows_ui_accessibility.ScreenReaderService",
         sizeof(py::wrapper::Windows::UI::Accessibility::ScreenReaderService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -290,7 +290,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Accessibility",
+           "_winrt_windows_ui_accessibility",
            module_doc,
            0,
            nullptr,
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::UI::Accessibility
 
 } // py::cpp::Windows::UI::Accessibility
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Accessibility(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_accessibility(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Accessibility;
 

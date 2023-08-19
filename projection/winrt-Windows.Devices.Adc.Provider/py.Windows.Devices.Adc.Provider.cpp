@@ -332,7 +332,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyType_Spec type_spec_IAdcControllerProvider =
     {
-        "_winrt_Windows_Devices_Adc_Provider.IAdcControllerProvider",
+        "_winrt_windows_devices_adc_provider.IAdcControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -437,7 +437,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyType_Spec type_spec_IAdcProvider =
     {
-        "_winrt_Windows_Devices_Adc_Provider.IAdcProvider",
+        "_winrt_windows_devices_adc_provider.IAdcProvider",
         sizeof(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Adc_Provider",
+           "_winrt_windows_devices_adc_provider",
            module_doc,
            0,
            nullptr,
@@ -461,7 +461,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
 } // py::cpp::Windows::Devices::Adc::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Adc_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_adc_provider(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Adc::Provider;
 

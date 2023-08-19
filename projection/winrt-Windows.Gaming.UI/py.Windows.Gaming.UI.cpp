@@ -161,7 +161,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameBar =
     {
-        "_winrt_Windows_Gaming_UI.GameBar",
+        "_winrt_windows_gaming_ui.GameBar",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -183,7 +183,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameBar_Meta =
     {
-        "_winrt_Windows_Gaming_UI.GameBar_Meta",
+        "_winrt_windows_gaming_ui.GameBar_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameChatMessageReceivedEventArgs =
     {
-        "_winrt_Windows_Gaming_UI.GameChatMessageReceivedEventArgs",
+        "_winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -546,7 +546,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameChatOverlay =
     {
-        "_winrt_Windows_Gaming_UI.GameChatOverlay",
+        "_winrt_windows_gaming_ui.GameChatOverlay",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatOverlay),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -722,7 +722,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameChatOverlayMessageSource =
     {
-        "_winrt_Windows_Gaming_UI.GameChatOverlayMessageSource",
+        "_winrt_windows_gaming_ui.GameChatOverlayMessageSource",
         sizeof(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyType_Spec type_spec_GameUIProviderActivatedEventArgs =
     {
-        "_winrt_Windows_Gaming_UI.GameUIProviderActivatedEventArgs",
+        "_winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs",
         sizeof(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -923,7 +923,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Gaming_UI",
+           "_winrt_windows_gaming_ui",
            module_doc,
            0,
            nullptr,
@@ -934,7 +934,7 @@ namespace py::cpp::Windows::Gaming::UI
 
 } // py::cpp::Windows::Gaming::UI
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_UI(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_gaming_ui(void) noexcept
 {
     using namespace py::cpp::Windows::Gaming::UI;
 

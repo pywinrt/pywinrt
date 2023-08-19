@@ -258,7 +258,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrEngine =
     {
-        "_winrt_Windows_Media_Ocr.OcrEngine",
+        "_winrt_windows_media_ocr.OcrEngine",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrEngine),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -280,7 +280,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrEngine_Meta =
     {
-        "_winrt_Windows_Media_Ocr.OcrEngine_Meta",
+        "_winrt_windows_media_ocr.OcrEngine_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -395,7 +395,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrLine =
     {
-        "_winrt_Windows_Media_Ocr.OcrLine",
+        "_winrt_windows_media_ocr.OcrLine",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrLine),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -530,7 +530,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrResult =
     {
-        "_winrt_Windows_Media_Ocr.OcrResult",
+        "_winrt_windows_media_ocr.OcrResult",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -645,7 +645,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyType_Spec type_spec_OcrWord =
     {
-        "_winrt_Windows_Media_Ocr.OcrWord",
+        "_winrt_windows_media_ocr.OcrWord",
         sizeof(py::wrapper::Windows::Media::Ocr::OcrWord),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Ocr",
+           "_winrt_windows_media_ocr",
            module_doc,
            0,
            nullptr,
@@ -669,7 +669,7 @@ namespace py::cpp::Windows::Media::Ocr
 
 } // py::cpp::Windows::Media::Ocr
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Ocr(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_ocr(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Ocr;
 

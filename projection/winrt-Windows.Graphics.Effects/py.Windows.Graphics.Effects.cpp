@@ -122,7 +122,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
     static PyType_Spec type_spec_IGraphicsEffect =
     {
-        "_winrt_Windows_Graphics_Effects.IGraphicsEffect",
+        "_winrt_windows_graphics_effects.IGraphicsEffect",
         sizeof(py::wrapper::Windows::Graphics::Effects::IGraphicsEffect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -197,7 +197,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
     static PyType_Spec type_spec_IGraphicsEffectSource =
     {
-        "_winrt_Windows_Graphics_Effects.IGraphicsEffectSource",
+        "_winrt_windows_graphics_effects.IGraphicsEffectSource",
         sizeof(py::wrapper::Windows::Graphics::Effects::IGraphicsEffectSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -210,7 +210,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Graphics_Effects",
+           "_winrt_windows_graphics_effects",
            module_doc,
            0,
            nullptr,
@@ -221,7 +221,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
 } // py::cpp::Windows::Graphics::Effects
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Effects(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::Effects;
 

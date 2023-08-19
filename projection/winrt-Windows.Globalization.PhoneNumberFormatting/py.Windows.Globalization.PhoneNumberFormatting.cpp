@@ -383,7 +383,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyType_Spec type_spec_PhoneNumberFormatter =
     {
-        "_winrt_Windows_Globalization_PhoneNumberFormatting.PhoneNumberFormatter",
+        "_winrt_windows_globalization_phonenumberformatting.PhoneNumberFormatter",
         sizeof(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -828,7 +828,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyType_Spec type_spec_PhoneNumberInfo =
     {
-        "_winrt_Windows_Globalization_PhoneNumberFormatting.PhoneNumberInfo",
+        "_winrt_windows_globalization_phonenumberformatting.PhoneNumberInfo",
         sizeof(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -841,7 +841,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Globalization_PhoneNumberFormatting",
+           "_winrt_windows_globalization_phonenumberformatting",
            module_doc,
            0,
            nullptr,
@@ -852,7 +852,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
 } // py::cpp::Windows::Globalization::PhoneNumberFormatting
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_PhoneNumberFormatting(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_globalization_phonenumberformatting(void) noexcept
 {
     using namespace py::cpp::Windows::Globalization::PhoneNumberFormatting;
 

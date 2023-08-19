@@ -119,7 +119,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyType_Spec type_spec_GpioPinProviderValueChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Gpio_Provider.GpioPinProviderValueChangedEventArgs",
+        "_winrt_windows_devices_gpio_provider.GpioPinProviderValueChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -247,7 +247,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyType_Spec type_spec_IGpioControllerProvider =
     {
-        "_winrt_Windows_Devices_Gpio_Provider.IGpioControllerProvider",
+        "_winrt_windows_devices_gpio_provider.IGpioControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -613,7 +613,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyType_Spec type_spec_IGpioPinProvider =
     {
-        "_winrt_Windows_Devices_Gpio_Provider.IGpioPinProvider",
+        "_winrt_windows_devices_gpio_provider.IGpioPinProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -718,7 +718,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyType_Spec type_spec_IGpioProvider =
     {
-        "_winrt_Windows_Devices_Gpio_Provider.IGpioProvider",
+        "_winrt_windows_devices_gpio_provider.IGpioProvider",
         sizeof(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -731,7 +731,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Gpio_Provider",
+           "_winrt_windows_devices_gpio_provider",
            module_doc,
            0,
            nullptr,
@@ -742,7 +742,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
 } // py::cpp::Windows::Devices::Gpio::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Gpio_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Gpio::Provider;
 

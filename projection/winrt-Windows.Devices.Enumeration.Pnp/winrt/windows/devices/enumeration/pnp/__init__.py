@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Enumeration.Pnp")
+from . import _winrt_windows_devices_enumeration_pnp
 
 try:
     import winrt.windows.devices.enumeration
@@ -32,8 +31,8 @@ class PnpObjectType(enum.IntEnum):
     ASSOCIATION_ENDPOINT_SERVICE = 7
     DEVICE_PANEL = 8
 
-PnpObject = _ns_module.PnpObject
-PnpObjectCollection = _ns_module.PnpObjectCollection
+PnpObject = _winrt_windows_devices_enumeration_pnp.PnpObject
+PnpObjectCollection = _winrt_windows_devices_enumeration_pnp.PnpObjectCollection
 winrt.system._mixin_sequence(PnpObjectCollection)
-PnpObjectUpdate = _ns_module.PnpObjectUpdate
-PnpObjectWatcher = _ns_module.PnpObjectWatcher
+PnpObjectUpdate = _winrt_windows_devices_enumeration_pnp.PnpObjectUpdate
+PnpObjectWatcher = _winrt_windows_devices_enumeration_pnp.PnpObjectWatcher

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Store")
+from . import _winrt_windows_applicationmodel_store
 
 try:
     import winrt.windows.foundation
@@ -39,12 +38,12 @@ class ProductType(enum.IntEnum):
     DURABLE = 1
     CONSUMABLE = 2
 
-CurrentApp = _ns_module.CurrentApp
-CurrentAppSimulator = _ns_module.CurrentAppSimulator
-LicenseInformation = _ns_module.LicenseInformation
-ListingInformation = _ns_module.ListingInformation
-ProductLicense = _ns_module.ProductLicense
-ProductListing = _ns_module.ProductListing
-ProductPurchaseDisplayProperties = _ns_module.ProductPurchaseDisplayProperties
-PurchaseResults = _ns_module.PurchaseResults
-UnfulfilledConsumable = _ns_module.UnfulfilledConsumable
+CurrentApp = _winrt_windows_applicationmodel_store.CurrentApp
+CurrentAppSimulator = _winrt_windows_applicationmodel_store.CurrentAppSimulator
+LicenseInformation = _winrt_windows_applicationmodel_store.LicenseInformation
+ListingInformation = _winrt_windows_applicationmodel_store.ListingInformation
+ProductLicense = _winrt_windows_applicationmodel_store.ProductLicense
+ProductListing = _winrt_windows_applicationmodel_store.ProductListing
+ProductPurchaseDisplayProperties = _winrt_windows_applicationmodel_store.ProductPurchaseDisplayProperties
+PurchaseResults = _winrt_windows_applicationmodel_store.PurchaseResults
+UnfulfilledConsumable = _winrt_windows_applicationmodel_store.UnfulfilledConsumable

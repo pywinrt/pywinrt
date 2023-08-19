@@ -162,7 +162,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyType_Spec type_spec_PreallocatedWorkItem =
     {
-        "_winrt_Windows_System_Threading_Core.PreallocatedWorkItem",
+        "_winrt_windows_system_threading_core.PreallocatedWorkItem",
         sizeof(py::wrapper::Windows::System::Threading::Core::PreallocatedWorkItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyType_Spec type_spec_SignalNotifier =
     {
-        "_winrt_Windows_System_Threading_Core.SignalNotifier",
+        "_winrt_windows_system_threading_core.SignalNotifier",
         sizeof(py::wrapper::Windows::System::Threading::Core::SignalNotifier),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -422,7 +422,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Threading_Core",
+           "_winrt_windows_system_threading_core",
            module_doc,
            0,
            nullptr,
@@ -433,7 +433,7 @@ namespace py::cpp::Windows::System::Threading::Core
 
 } // py::cpp::Windows::System::Threading::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Threading_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_threading_core(void) noexcept
 {
     using namespace py::cpp::Windows::System::Threading::Core;
 

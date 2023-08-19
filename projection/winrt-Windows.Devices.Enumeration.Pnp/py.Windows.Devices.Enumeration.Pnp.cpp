@@ -311,7 +311,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObject =
     {
-        "_winrt_Windows_Devices_Enumeration_Pnp.PnpObject",
+        "_winrt_windows_devices_enumeration_pnp.PnpObject",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -659,7 +659,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObjectCollection =
     {
-        "_winrt_Windows_Devices_Enumeration_Pnp.PnpObjectCollection",
+        "_winrt_windows_devices_enumeration_pnp.PnpObjectCollection",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObjectUpdate =
     {
-        "_winrt_Windows_Devices_Enumeration_Pnp.PnpObjectUpdate",
+        "_winrt_windows_devices_enumeration_pnp.PnpObjectUpdate",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1176,7 +1176,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyType_Spec type_spec_PnpObjectWatcher =
     {
-        "_winrt_Windows_Devices_Enumeration_Pnp.PnpObjectWatcher",
+        "_winrt_windows_devices_enumeration_pnp.PnpObjectWatcher",
         sizeof(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1189,7 +1189,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Enumeration_Pnp",
+           "_winrt_windows_devices_enumeration_pnp",
            module_doc,
            0,
            nullptr,
@@ -1200,7 +1200,7 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
 
 } // py::cpp::Windows::Devices::Enumeration::Pnp
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Enumeration_Pnp(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration_pnp(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Enumeration::Pnp;
 

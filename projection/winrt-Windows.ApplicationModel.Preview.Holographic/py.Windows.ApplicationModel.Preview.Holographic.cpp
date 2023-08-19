@@ -95,7 +95,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyType_Spec type_spec_HolographicApplicationPreview =
     {
-        "_winrt_Windows_ApplicationModel_Preview_Holographic.HolographicApplicationPreview",
+        "_winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -290,7 +290,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyType_Spec type_spec_HolographicKeyboardPlacementOverridePreview =
     {
-        "_winrt_Windows_ApplicationModel_Preview_Holographic.HolographicKeyboardPlacementOverridePreview",
+        "_winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview",
         sizeof(py::wrapper::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -303,7 +303,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Preview_Holographic",
+           "_winrt_windows_applicationmodel_preview_holographic",
            module_doc,
            0,
            nullptr,
@@ -314,7 +314,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 
 } // py::cpp::Windows::ApplicationModel::Preview::Holographic
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Preview_Holographic(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_holographic(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Preview::Holographic;
 

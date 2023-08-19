@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Shell")
+from . import _winrt_windows_ui_shell
 
 try:
     import winrt.windows.applicationmodel.core
@@ -59,22 +58,22 @@ class ShareWindowCommand(enum.IntEnum):
     START_SHARING = 1
     STOP_SHARING = 2
 
-AdaptiveCardBuilder = _ns_module.AdaptiveCardBuilder
-FocusSession = _ns_module.FocusSession
-FocusSessionManager = _ns_module.FocusSessionManager
-SecurityAppManager = _ns_module.SecurityAppManager
-ShareWindowCommandEventArgs = _ns_module.ShareWindowCommandEventArgs
-ShareWindowCommandSource = _ns_module.ShareWindowCommandSource
-TaskbarManager = _ns_module.TaskbarManager
-WindowTab = _ns_module.WindowTab
-WindowTabCloseRequestedEventArgs = _ns_module.WindowTabCloseRequestedEventArgs
-WindowTabCollection = _ns_module.WindowTabCollection
+AdaptiveCardBuilder = _winrt_windows_ui_shell.AdaptiveCardBuilder
+FocusSession = _winrt_windows_ui_shell.FocusSession
+FocusSessionManager = _winrt_windows_ui_shell.FocusSessionManager
+SecurityAppManager = _winrt_windows_ui_shell.SecurityAppManager
+ShareWindowCommandEventArgs = _winrt_windows_ui_shell.ShareWindowCommandEventArgs
+ShareWindowCommandSource = _winrt_windows_ui_shell.ShareWindowCommandSource
+TaskbarManager = _winrt_windows_ui_shell.TaskbarManager
+WindowTab = _winrt_windows_ui_shell.WindowTab
+WindowTabCloseRequestedEventArgs = _winrt_windows_ui_shell.WindowTabCloseRequestedEventArgs
+WindowTabCollection = _winrt_windows_ui_shell.WindowTabCollection
 winrt.system._mixin_mutable_sequence(WindowTabCollection)
-WindowTabGroup = _ns_module.WindowTabGroup
-WindowTabIcon = _ns_module.WindowTabIcon
-WindowTabManager = _ns_module.WindowTabManager
-WindowTabSwitchRequestedEventArgs = _ns_module.WindowTabSwitchRequestedEventArgs
-WindowTabTearOutRequestedEventArgs = _ns_module.WindowTabTearOutRequestedEventArgs
-WindowTabThumbnailRequestedEventArgs = _ns_module.WindowTabThumbnailRequestedEventArgs
-IAdaptiveCard = _ns_module.IAdaptiveCard
-IAdaptiveCardBuilderStatics = _ns_module.IAdaptiveCardBuilderStatics
+WindowTabGroup = _winrt_windows_ui_shell.WindowTabGroup
+WindowTabIcon = _winrt_windows_ui_shell.WindowTabIcon
+WindowTabManager = _winrt_windows_ui_shell.WindowTabManager
+WindowTabSwitchRequestedEventArgs = _winrt_windows_ui_shell.WindowTabSwitchRequestedEventArgs
+WindowTabTearOutRequestedEventArgs = _winrt_windows_ui_shell.WindowTabTearOutRequestedEventArgs
+WindowTabThumbnailRequestedEventArgs = _winrt_windows_ui_shell.WindowTabThumbnailRequestedEventArgs
+IAdaptiveCard = _winrt_windows_ui_shell.IAdaptiveCard
+IAdaptiveCardBuilderStatics = _winrt_windows_ui_shell.IAdaptiveCardBuilderStatics

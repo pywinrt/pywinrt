@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentAction =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentAction",
+        "_winrt_windows_services_targetedcontent.TargetedContentAction",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentAction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -209,7 +209,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentAvailabilityChangedEventArgs =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentAvailabilityChangedEventArgs",
+        "_winrt_windows_services_targetedcontent.TargetedContentAvailabilityChangedEventArgs",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -334,7 +334,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentChangedEventArgs =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentChangedEventArgs",
+        "_winrt_windows_services_targetedcontent.TargetedContentChangedEventArgs",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -575,7 +575,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentCollection =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentCollection",
+        "_winrt_windows_services_targetedcontent.TargetedContentCollection",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentContainer =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentContainer",
+        "_winrt_windows_services_targetedcontent.TargetedContentContainer",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -899,7 +899,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentFile =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentFile",
+        "_winrt_windows_services_targetedcontent.TargetedContentFile",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentFile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1044,7 +1044,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentImage =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentImage",
+        "_winrt_windows_services_targetedcontent.TargetedContentImage",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentImage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1265,7 +1265,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentItem =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentItem",
+        "_winrt_windows_services_targetedcontent.TargetedContentItem",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1380,7 +1380,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentItemState =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentItemState",
+        "_winrt_windows_services_targetedcontent.TargetedContentItemState",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentItemState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1535,7 +1535,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentObject =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentObject",
+        "_winrt_windows_services_targetedcontent.TargetedContentObject",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1640,7 +1640,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentStateChangedEventArgs =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentStateChangedEventArgs",
+        "_winrt_windows_services_targetedcontent.TargetedContentStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1964,7 +1964,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentSubscription =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentSubscription",
+        "_winrt_windows_services_targetedcontent.TargetedContentSubscription",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2178,7 +2178,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentSubscriptionOptions =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentSubscriptionOptions",
+        "_winrt_windows_services_targetedcontent.TargetedContentSubscriptionOptions",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2573,7 +2573,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyType_Spec type_spec_TargetedContentValue =
     {
-        "_winrt_Windows_Services_TargetedContent.TargetedContentValue",
+        "_winrt_windows_services_targetedcontent.TargetedContentValue",
         sizeof(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2586,7 +2586,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Services_TargetedContent",
+           "_winrt_windows_services_targetedcontent",
            module_doc,
            0,
            nullptr,
@@ -2597,7 +2597,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
 } // py::cpp::Windows::Services::TargetedContent
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Services_TargetedContent(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
 {
     using namespace py::cpp::Windows::Services::TargetedContent;
 

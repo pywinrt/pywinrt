@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Resources.Core")
+from . import _winrt_windows_applicationmodel_resources_core
 
 try:
     import winrt.windows.foundation
@@ -40,25 +39,25 @@ class ResourceQualifierPersistence(enum.IntEnum):
     NONE = 0
     LOCAL_MACHINE = 1
 
-ResourceLayoutInfo = _ns_module.ResourceLayoutInfo
-NamedResource = _ns_module.NamedResource
-ResourceCandidate = _ns_module.ResourceCandidate
-ResourceCandidateVectorView = _ns_module.ResourceCandidateVectorView
+ResourceLayoutInfo = _winrt_windows_applicationmodel_resources_core.ResourceLayoutInfo
+NamedResource = _winrt_windows_applicationmodel_resources_core.NamedResource
+ResourceCandidate = _winrt_windows_applicationmodel_resources_core.ResourceCandidate
+ResourceCandidateVectorView = _winrt_windows_applicationmodel_resources_core.ResourceCandidateVectorView
 winrt.system._mixin_sequence(ResourceCandidateVectorView)
-ResourceContext = _ns_module.ResourceContext
-ResourceContextLanguagesVectorView = _ns_module.ResourceContextLanguagesVectorView
+ResourceContext = _winrt_windows_applicationmodel_resources_core.ResourceContext
+ResourceContextLanguagesVectorView = _winrt_windows_applicationmodel_resources_core.ResourceContextLanguagesVectorView
 winrt.system._mixin_sequence(ResourceContextLanguagesVectorView)
-ResourceManager = _ns_module.ResourceManager
-ResourceMap = _ns_module.ResourceMap
+ResourceManager = _winrt_windows_applicationmodel_resources_core.ResourceManager
+ResourceMap = _winrt_windows_applicationmodel_resources_core.ResourceMap
 winrt.system._mixin_mapping(ResourceMap)
-ResourceMapIterator = _ns_module.ResourceMapIterator
-ResourceMapMapView = _ns_module.ResourceMapMapView
+ResourceMapIterator = _winrt_windows_applicationmodel_resources_core.ResourceMapIterator
+ResourceMapMapView = _winrt_windows_applicationmodel_resources_core.ResourceMapMapView
 winrt.system._mixin_mapping(ResourceMapMapView)
-ResourceMapMapViewIterator = _ns_module.ResourceMapMapViewIterator
-ResourceQualifier = _ns_module.ResourceQualifier
-ResourceQualifierMapView = _ns_module.ResourceQualifierMapView
+ResourceMapMapViewIterator = _winrt_windows_applicationmodel_resources_core.ResourceMapMapViewIterator
+ResourceQualifier = _winrt_windows_applicationmodel_resources_core.ResourceQualifier
+ResourceQualifierMapView = _winrt_windows_applicationmodel_resources_core.ResourceQualifierMapView
 winrt.system._mixin_mapping(ResourceQualifierMapView)
-ResourceQualifierObservableMap = _ns_module.ResourceQualifierObservableMap
+ResourceQualifierObservableMap = _winrt_windows_applicationmodel_resources_core.ResourceQualifierObservableMap
 winrt.system._mixin_mutable_mapping(ResourceQualifierObservableMap)
-ResourceQualifierVectorView = _ns_module.ResourceQualifierVectorView
+ResourceQualifierVectorView = _winrt_windows_applicationmodel_resources_core.ResourceQualifierVectorView
 winrt.system._mixin_sequence(ResourceQualifierVectorView)

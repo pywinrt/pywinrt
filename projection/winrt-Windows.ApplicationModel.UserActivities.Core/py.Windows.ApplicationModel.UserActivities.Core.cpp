@@ -99,7 +99,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
     static PyType_Spec type_spec_CoreUserActivityManager =
     {
-        "_winrt_Windows_ApplicationModel_UserActivities_Core.CoreUserActivityManager",
+        "_winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -112,7 +112,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_UserActivities_Core",
+           "_winrt_windows_applicationmodel_useractivities_core",
            module_doc,
            0,
            nullptr,
@@ -123,7 +123,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 
 } // py::cpp::Windows::ApplicationModel::UserActivities::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserActivities_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities_core(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::UserActivities::Core;
 

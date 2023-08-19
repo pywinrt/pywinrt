@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Adc")
+from . import _winrt_windows_devices_adc
 
 try:
     import winrt.windows.devices.adc.provider
@@ -25,5 +24,5 @@ class AdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
     DIFFERENTIAL = 1
 
-AdcChannel = _ns_module.AdcChannel
-AdcController = _ns_module.AdcController
+AdcChannel = _winrt_windows_devices_adc.AdcChannel
+AdcController = _winrt_windows_devices_adc.AdcController

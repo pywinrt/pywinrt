@@ -74,7 +74,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_CurrentSessionChangedEventArgs =
     {
-        "_winrt_Windows_Media_Control.CurrentSessionChangedEventArgs",
+        "_winrt_windows_media_control.CurrentSessionChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::CurrentSessionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -852,7 +852,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSession =
     {
-        "_winrt_Windows_Media_Control.GlobalSystemMediaTransportControlsSession",
+        "_winrt_windows_media_control.GlobalSystemMediaTransportControlsSession",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1107,7 +1107,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionManager =
     {
-        "_winrt_Windows_Media_Control.GlobalSystemMediaTransportControlsSessionManager",
+        "_winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionManager",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1382,7 +1382,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionMediaProperties =
     {
-        "_winrt_Windows_Media_Control.GlobalSystemMediaTransportControlsSessionMediaProperties",
+        "_winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionMediaProperties",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1757,7 +1757,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionPlaybackControls =
     {
-        "_winrt_Windows_Media_Control.GlobalSystemMediaTransportControlsSessionPlaybackControls",
+        "_winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionPlaybackControls",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1952,7 +1952,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionPlaybackInfo =
     {
-        "_winrt_Windows_Media_Control.GlobalSystemMediaTransportControlsSessionPlaybackInfo",
+        "_winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionPlaybackInfo",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2147,7 +2147,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_GlobalSystemMediaTransportControlsSessionTimelineProperties =
     {
-        "_winrt_Windows_Media_Control.GlobalSystemMediaTransportControlsSessionTimelineProperties",
+        "_winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionTimelineProperties",
         sizeof(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2222,7 +2222,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_MediaPropertiesChangedEventArgs =
     {
-        "_winrt_Windows_Media_Control.MediaPropertiesChangedEventArgs",
+        "_winrt_windows_media_control.MediaPropertiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::MediaPropertiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2297,7 +2297,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_PlaybackInfoChangedEventArgs =
     {
-        "_winrt_Windows_Media_Control.PlaybackInfoChangedEventArgs",
+        "_winrt_windows_media_control.PlaybackInfoChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::PlaybackInfoChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2372,7 +2372,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_SessionsChangedEventArgs =
     {
-        "_winrt_Windows_Media_Control.SessionsChangedEventArgs",
+        "_winrt_windows_media_control.SessionsChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::SessionsChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2447,7 +2447,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyType_Spec type_spec_TimelinePropertiesChangedEventArgs =
     {
-        "_winrt_Windows_Media_Control.TimelinePropertiesChangedEventArgs",
+        "_winrt_windows_media_control.TimelinePropertiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Control::TimelinePropertiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2460,7 +2460,7 @@ namespace py::cpp::Windows::Media::Control
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Control",
+           "_winrt_windows_media_control",
            module_doc,
            0,
            nullptr,
@@ -2471,7 +2471,7 @@ namespace py::cpp::Windows::Media::Control
 
 } // py::cpp::Windows::Media::Control
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Control(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_control(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Control;
 

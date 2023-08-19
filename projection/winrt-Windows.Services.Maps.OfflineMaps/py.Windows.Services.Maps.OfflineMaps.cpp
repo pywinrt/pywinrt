@@ -325,7 +325,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyType_Spec type_spec_OfflineMapPackage =
     {
-        "_winrt_Windows_Services_Maps_OfflineMaps.OfflineMapPackage",
+        "_winrt_windows_services_maps_offlinemaps.OfflineMapPackage",
         sizeof(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -440,7 +440,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyType_Spec type_spec_OfflineMapPackageQueryResult =
     {
-        "_winrt_Windows_Services_Maps_OfflineMaps.OfflineMapPackageQueryResult",
+        "_winrt_windows_services_maps_offlinemaps.OfflineMapPackageQueryResult",
         sizeof(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -535,7 +535,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyType_Spec type_spec_OfflineMapPackageStartDownloadResult =
     {
-        "_winrt_Windows_Services_Maps_OfflineMaps.OfflineMapPackageStartDownloadResult",
+        "_winrt_windows_services_maps_offlinemaps.OfflineMapPackageStartDownloadResult",
         sizeof(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -548,7 +548,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Services_Maps_OfflineMaps",
+           "_winrt_windows_services_maps_offlinemaps",
            module_doc,
            0,
            nullptr,
@@ -559,7 +559,7 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
 
 } // py::cpp::Windows::Services::Maps::OfflineMaps
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps_OfflineMaps(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_services_maps_offlinemaps(void) noexcept
 {
     using namespace py::cpp::Windows::Services::Maps::OfflineMaps;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Foundation.Collections")
+from . import _winrt_windows_foundation_collections
 
 try:
     import winrt.windows.foundation
@@ -17,28 +16,28 @@ class CollectionChange(enum.IntEnum):
     ITEM_REMOVED = 2
     ITEM_CHANGED = 3
 
-PropertySet = _ns_module.PropertySet
+PropertySet = _winrt_windows_foundation_collections.PropertySet
 winrt.system._mixin_mutable_mapping(PropertySet)
-StringMap = _ns_module.StringMap
+StringMap = _winrt_windows_foundation_collections.StringMap
 winrt.system._mixin_mutable_mapping(StringMap)
-ValueSet = _ns_module.ValueSet
+ValueSet = _winrt_windows_foundation_collections.ValueSet
 winrt.system._mixin_mutable_mapping(ValueSet)
-IIterable = _ns_module.IIterable
-IIterator = _ns_module.IIterator
-IKeyValuePair = _ns_module.IKeyValuePair
-IMapChangedEventArgs = _ns_module.IMapChangedEventArgs
-IMapView = _ns_module.IMapView
+IIterable = _winrt_windows_foundation_collections.IIterable
+IIterator = _winrt_windows_foundation_collections.IIterator
+IKeyValuePair = _winrt_windows_foundation_collections.IKeyValuePair
+IMapChangedEventArgs = _winrt_windows_foundation_collections.IMapChangedEventArgs
+IMapView = _winrt_windows_foundation_collections.IMapView
 winrt.system._mixin_mapping(IMapView)
-IMap = _ns_module.IMap
+IMap = _winrt_windows_foundation_collections.IMap
 winrt.system._mixin_mutable_mapping(IMap)
-IObservableMap = _ns_module.IObservableMap
+IObservableMap = _winrt_windows_foundation_collections.IObservableMap
 winrt.system._mixin_mutable_mapping(IObservableMap)
-IObservableVector = _ns_module.IObservableVector
+IObservableVector = _winrt_windows_foundation_collections.IObservableVector
 winrt.system._mixin_mutable_sequence(IObservableVector)
-IPropertySet = _ns_module.IPropertySet
+IPropertySet = _winrt_windows_foundation_collections.IPropertySet
 winrt.system._mixin_mutable_mapping(IPropertySet)
-IVectorChangedEventArgs = _ns_module.IVectorChangedEventArgs
-IVectorView = _ns_module.IVectorView
+IVectorChangedEventArgs = _winrt_windows_foundation_collections.IVectorChangedEventArgs
+IVectorView = _winrt_windows_foundation_collections.IVectorView
 winrt.system._mixin_sequence(IVectorView)
-IVector = _ns_module.IVector
+IVector = _winrt_windows_foundation_collections.IVector
 winrt.system._mixin_mutable_sequence(IVector)

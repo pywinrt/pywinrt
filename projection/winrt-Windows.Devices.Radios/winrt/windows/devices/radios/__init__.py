@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Radios")
+from . import _winrt_windows_devices_radios
 
 try:
     import winrt.windows.foundation
@@ -35,4 +34,4 @@ class RadioState(enum.IntEnum):
     OFF = 2
     DISABLED = 3
 
-Radio = _ns_module.Radio
+Radio = _winrt_windows_devices_radios.Radio

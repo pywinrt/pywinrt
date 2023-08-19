@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.Management.Deployment")
+from . import _winrt_windows_phone_management_deployment
 
 try:
     import winrt.windows.applicationmodel
@@ -37,8 +36,8 @@ class EnterpriseStatus(enum.IntEnum):
     REVOKED = 2
     EXPIRED = 3
 
-Enterprise = _ns_module.Enterprise
-EnterpriseEnrollmentManager = _ns_module.EnterpriseEnrollmentManager
-EnterpriseEnrollmentResult = _ns_module.EnterpriseEnrollmentResult
-InstallationManager = _ns_module.InstallationManager
-PackageInstallResult = _ns_module.PackageInstallResult
+Enterprise = _winrt_windows_phone_management_deployment.Enterprise
+EnterpriseEnrollmentManager = _winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager
+EnterpriseEnrollmentResult = _winrt_windows_phone_management_deployment.EnterpriseEnrollmentResult
+InstallationManager = _winrt_windows_phone_management_deployment.InstallationManager
+PackageInstallResult = _winrt_windows_phone_management_deployment.PackageInstallResult

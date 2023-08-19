@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.MediaProperties")
+from . import _winrt_windows_media_mediaproperties
 
 try:
     import winrt.windows.foundation
@@ -79,16 +78,16 @@ class VideoEncodingQuality(enum.IntEnum):
     UHD2160P = 8
     UHD4320P = 9
 
-AudioEncodingProperties = _ns_module.AudioEncodingProperties
-ContainerEncodingProperties = _ns_module.ContainerEncodingProperties
-H264ProfileIds = _ns_module.H264ProfileIds
-ImageEncodingProperties = _ns_module.ImageEncodingProperties
-MediaEncodingProfile = _ns_module.MediaEncodingProfile
-MediaEncodingSubtypes = _ns_module.MediaEncodingSubtypes
-MediaPropertySet = _ns_module.MediaPropertySet
+AudioEncodingProperties = _winrt_windows_media_mediaproperties.AudioEncodingProperties
+ContainerEncodingProperties = _winrt_windows_media_mediaproperties.ContainerEncodingProperties
+H264ProfileIds = _winrt_windows_media_mediaproperties.H264ProfileIds
+ImageEncodingProperties = _winrt_windows_media_mediaproperties.ImageEncodingProperties
+MediaEncodingProfile = _winrt_windows_media_mediaproperties.MediaEncodingProfile
+MediaEncodingSubtypes = _winrt_windows_media_mediaproperties.MediaEncodingSubtypes
+MediaPropertySet = _winrt_windows_media_mediaproperties.MediaPropertySet
 winrt.system._mixin_mutable_mapping(MediaPropertySet)
-MediaRatio = _ns_module.MediaRatio
-Mpeg2ProfileIds = _ns_module.Mpeg2ProfileIds
-TimedMetadataEncodingProperties = _ns_module.TimedMetadataEncodingProperties
-VideoEncodingProperties = _ns_module.VideoEncodingProperties
-IMediaEncodingProperties = _ns_module.IMediaEncodingProperties
+MediaRatio = _winrt_windows_media_mediaproperties.MediaRatio
+Mpeg2ProfileIds = _winrt_windows_media_mediaproperties.Mpeg2ProfileIds
+TimedMetadataEncodingProperties = _winrt_windows_media_mediaproperties.TimedMetadataEncodingProperties
+VideoEncodingProperties = _winrt_windows_media_mediaproperties.VideoEncodingProperties
+IMediaEncodingProperties = _winrt_windows_media_mediaproperties.IMediaEncodingProperties

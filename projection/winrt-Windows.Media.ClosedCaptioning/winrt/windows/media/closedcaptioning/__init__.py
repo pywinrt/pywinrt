@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.ClosedCaptioning")
+from . import _winrt_windows_media_closedcaptioning
 
 try:
     import winrt.windows.foundation
@@ -59,4 +58,4 @@ class ClosedCaptionStyle(enum.IntEnum):
     CURSIVE = 6
     SMALL_CAPITALS = 7
 
-ClosedCaptionProperties = _ns_module.ClosedCaptionProperties
+ClosedCaptionProperties = _winrt_windows_media_closedcaptioning.ClosedCaptionProperties

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Foundation.Diagnostics")
+from . import _winrt_windows_foundation_diagnostics
 
 try:
     import winrt.windows.foundation
@@ -82,20 +81,20 @@ class LoggingOpcode(enum.IntEnum):
     SUSPEND = 8
     SEND = 9
 
-AsyncCausalityTracer = _ns_module.AsyncCausalityTracer
-ErrorDetails = _ns_module.ErrorDetails
-FileLoggingSession = _ns_module.FileLoggingSession
-LogFileGeneratedEventArgs = _ns_module.LogFileGeneratedEventArgs
-LoggingActivity = _ns_module.LoggingActivity
-LoggingChannel = _ns_module.LoggingChannel
-LoggingChannelOptions = _ns_module.LoggingChannelOptions
-LoggingFields = _ns_module.LoggingFields
-LoggingOptions = _ns_module.LoggingOptions
-LoggingSession = _ns_module.LoggingSession
-RuntimeBrokerErrorSettings = _ns_module.RuntimeBrokerErrorSettings
-TracingStatusChangedEventArgs = _ns_module.TracingStatusChangedEventArgs
-IErrorReportingSettings = _ns_module.IErrorReportingSettings
-IFileLoggingSession = _ns_module.IFileLoggingSession
-ILoggingChannel = _ns_module.ILoggingChannel
-ILoggingSession = _ns_module.ILoggingSession
-ILoggingTarget = _ns_module.ILoggingTarget
+AsyncCausalityTracer = _winrt_windows_foundation_diagnostics.AsyncCausalityTracer
+ErrorDetails = _winrt_windows_foundation_diagnostics.ErrorDetails
+FileLoggingSession = _winrt_windows_foundation_diagnostics.FileLoggingSession
+LogFileGeneratedEventArgs = _winrt_windows_foundation_diagnostics.LogFileGeneratedEventArgs
+LoggingActivity = _winrt_windows_foundation_diagnostics.LoggingActivity
+LoggingChannel = _winrt_windows_foundation_diagnostics.LoggingChannel
+LoggingChannelOptions = _winrt_windows_foundation_diagnostics.LoggingChannelOptions
+LoggingFields = _winrt_windows_foundation_diagnostics.LoggingFields
+LoggingOptions = _winrt_windows_foundation_diagnostics.LoggingOptions
+LoggingSession = _winrt_windows_foundation_diagnostics.LoggingSession
+RuntimeBrokerErrorSettings = _winrt_windows_foundation_diagnostics.RuntimeBrokerErrorSettings
+TracingStatusChangedEventArgs = _winrt_windows_foundation_diagnostics.TracingStatusChangedEventArgs
+IErrorReportingSettings = _winrt_windows_foundation_diagnostics.IErrorReportingSettings
+IFileLoggingSession = _winrt_windows_foundation_diagnostics.IFileLoggingSession
+ILoggingChannel = _winrt_windows_foundation_diagnostics.ILoggingChannel
+ILoggingSession = _winrt_windows_foundation_diagnostics.ILoggingSession
+ILoggingTarget = _winrt_windows_foundation_diagnostics.ILoggingTarget

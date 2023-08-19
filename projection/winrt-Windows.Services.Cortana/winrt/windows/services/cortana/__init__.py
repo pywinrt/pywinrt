@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Services.Cortana")
+from . import _winrt_windows_services_cortana
 
 try:
     import winrt.windows.applicationmodel.datatransfer
@@ -49,7 +48,7 @@ class CortanaPermissionsChangeResult(enum.IntEnum):
     UNAVAILABLE = 1
     DISABLED_BY_POLICY = 2
 
-CortanaActionableInsights = _ns_module.CortanaActionableInsights
-CortanaActionableInsightsOptions = _ns_module.CortanaActionableInsightsOptions
-CortanaPermissionsManager = _ns_module.CortanaPermissionsManager
-CortanaSettings = _ns_module.CortanaSettings
+CortanaActionableInsights = _winrt_windows_services_cortana.CortanaActionableInsights
+CortanaActionableInsightsOptions = _winrt_windows_services_cortana.CortanaActionableInsightsOptions
+CortanaPermissionsManager = _winrt_windows_services_cortana.CortanaPermissionsManager
+CortanaSettings = _winrt_windows_services_cortana.CortanaSettings

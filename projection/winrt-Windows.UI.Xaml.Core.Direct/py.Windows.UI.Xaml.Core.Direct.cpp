@@ -1854,7 +1854,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyType_Spec type_spec_XamlDirect =
     {
-        "_winrt_Windows_UI_Xaml_Core_Direct.XamlDirect",
+        "_winrt_windows_ui_xaml_core_direct.XamlDirect",
         sizeof(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1929,7 +1929,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyType_Spec type_spec_IXamlDirectObject =
     {
-        "_winrt_Windows_UI_Xaml_Core_Direct.IXamlDirectObject",
+        "_winrt_windows_ui_xaml_core_direct.IXamlDirectObject",
         sizeof(py::wrapper::Windows::UI::Xaml::Core::Direct::IXamlDirectObject),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1942,7 +1942,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Core_Direct",
+           "_winrt_windows_ui_xaml_core_direct",
            module_doc,
            0,
            nullptr,
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
 } // py::cpp::Windows::UI::Xaml::Core::Direct
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Core_Direct(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Core::Direct;
 

@@ -518,7 +518,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyType_Spec type_spec_SpeechSynthesisStream =
     {
-        "_winrt_Windows_Media_SpeechSynthesis.SpeechSynthesisStream",
+        "_winrt_windows_media_speechsynthesis.SpeechSynthesisStream",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -871,7 +871,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyType_Spec type_spec_SpeechSynthesizer =
     {
-        "_winrt_Windows_Media_SpeechSynthesis.SpeechSynthesizer",
+        "_winrt_windows_media_speechsynthesis.SpeechSynthesizer",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -893,7 +893,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyType_Spec type_spec_SpeechSynthesizer_Meta =
     {
-        "_winrt_Windows_Media_SpeechSynthesis.SpeechSynthesizer_Meta",
+        "_winrt_windows_media_speechsynthesis.SpeechSynthesizer_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1304,7 +1304,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyType_Spec type_spec_SpeechSynthesizerOptions =
     {
-        "_winrt_Windows_Media_SpeechSynthesis.SpeechSynthesizerOptions",
+        "_winrt_windows_media_speechsynthesis.SpeechSynthesizerOptions",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1479,7 +1479,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyType_Spec type_spec_VoiceInformation =
     {
-        "_winrt_Windows_Media_SpeechSynthesis.VoiceInformation",
+        "_winrt_windows_media_speechsynthesis.VoiceInformation",
         sizeof(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1492,7 +1492,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_SpeechSynthesis",
+           "_winrt_windows_media_speechsynthesis",
            module_doc,
            0,
            nullptr,
@@ -1503,7 +1503,7 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
 
 } // py::cpp::Windows::Media::SpeechSynthesis
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_SpeechSynthesis(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_speechsynthesis(void) noexcept
 {
     using namespace py::cpp::Windows::Media::SpeechSynthesis;
 

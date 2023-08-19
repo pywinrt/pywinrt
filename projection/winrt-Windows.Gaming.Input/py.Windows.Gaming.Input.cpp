@@ -502,7 +502,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_ArcadeStick =
     {
-        "_winrt_Windows_Gaming_Input.ArcadeStick",
+        "_winrt_windows_gaming_input.ArcadeStick",
         sizeof(py::wrapper::Windows::Gaming::Input::ArcadeStick),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -523,7 +523,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_ArcadeStick_Meta =
     {
-        "_winrt_Windows_Gaming_Input.ArcadeStick_Meta",
+        "_winrt_windows_gaming_input.ArcadeStick_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1046,7 +1046,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_FlightStick =
     {
-        "_winrt_Windows_Gaming_Input.FlightStick",
+        "_winrt_windows_gaming_input.FlightStick",
         sizeof(py::wrapper::Windows::Gaming::Input::FlightStick),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1067,7 +1067,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_FlightStick_Meta =
     {
-        "_winrt_Windows_Gaming_Input.FlightStick_Meta",
+        "_winrt_windows_gaming_input.FlightStick_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1618,7 +1618,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_Gamepad =
     {
-        "_winrt_Windows_Gaming_Input.Gamepad",
+        "_winrt_windows_gaming_input.Gamepad",
         sizeof(py::wrapper::Windows::Gaming::Input::Gamepad),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1639,7 +1639,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_Gamepad_Meta =
     {
-        "_winrt_Windows_Gaming_Input.Gamepad_Meta",
+        "_winrt_windows_gaming_input.Gamepad_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1784,7 +1784,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_Headset =
     {
-        "_winrt_Windows_Gaming_Input.Headset",
+        "_winrt_windows_gaming_input.Headset",
         sizeof(py::wrapper::Windows::Gaming::Input::Headset),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2407,7 +2407,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_RacingWheel =
     {
-        "_winrt_Windows_Gaming_Input.RacingWheel",
+        "_winrt_windows_gaming_input.RacingWheel",
         sizeof(py::wrapper::Windows::Gaming::Input::RacingWheel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2428,7 +2428,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_RacingWheel_Meta =
     {
-        "_winrt_Windows_Gaming_Input.RacingWheel_Meta",
+        "_winrt_windows_gaming_input.RacingWheel_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3147,7 +3147,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_RawGameController =
     {
-        "_winrt_Windows_Gaming_Input.RawGameController",
+        "_winrt_windows_gaming_input.RawGameController",
         sizeof(py::wrapper::Windows::Gaming::Input::RawGameController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3168,7 +3168,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_RawGameController_Meta =
     {
-        "_winrt_Windows_Gaming_Input.RawGameController_Meta",
+        "_winrt_windows_gaming_input.RawGameController_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3703,7 +3703,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_UINavigationController =
     {
-        "_winrt_Windows_Gaming_Input.UINavigationController",
+        "_winrt_windows_gaming_input.UINavigationController",
         sizeof(py::wrapper::Windows::Gaming::Input::UINavigationController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3724,7 +3724,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_UINavigationController_Meta =
     {
-        "_winrt_Windows_Gaming_Input.UINavigationController_Meta",
+        "_winrt_windows_gaming_input.UINavigationController_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3994,7 +3994,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_IGameController =
     {
-        "_winrt_Windows_Gaming_Input.IGameController",
+        "_winrt_windows_gaming_input.IGameController",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4099,7 +4099,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_IGameControllerBatteryInfo =
     {
-        "_winrt_Windows_Gaming_Input.IGameControllerBatteryInfo",
+        "_winrt_windows_gaming_input.IGameControllerBatteryInfo",
         sizeof(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4234,7 +4234,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_ArcadeStickReading =
     {
-        "_winrt_Windows_Gaming_Input.ArcadeStickReading",
+        "_winrt_windows_gaming_input.ArcadeStickReading",
         sizeof(py::wrapper::Windows::Gaming::Input::ArcadeStickReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4544,7 +4544,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_FlightStickReading =
     {
-        "_winrt_Windows_Gaming_Input.FlightStickReading",
+        "_winrt_windows_gaming_input.FlightStickReading",
         sizeof(py::wrapper::Windows::Gaming::Input::FlightStickReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4889,7 +4889,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_GamepadReading =
     {
-        "_winrt_Windows_Gaming_Input.GamepadReading",
+        "_winrt_windows_gaming_input.GamepadReading",
         sizeof(py::wrapper::Windows::Gaming::Input::GamepadReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5094,7 +5094,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_GamepadVibration =
     {
-        "_winrt_Windows_Gaming_Input.GamepadVibration",
+        "_winrt_windows_gaming_input.GamepadVibration",
         sizeof(py::wrapper::Windows::Gaming::Input::GamepadVibration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5439,7 +5439,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_RacingWheelReading =
     {
-        "_winrt_Windows_Gaming_Input.RacingWheelReading",
+        "_winrt_windows_gaming_input.RacingWheelReading",
         sizeof(py::wrapper::Windows::Gaming::Input::RacingWheelReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5609,7 +5609,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyType_Spec type_spec_UINavigationReading =
     {
-        "_winrt_Windows_Gaming_Input.UINavigationReading",
+        "_winrt_windows_gaming_input.UINavigationReading",
         sizeof(py::wrapper::Windows::Gaming::Input::UINavigationReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5622,7 +5622,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Gaming_Input",
+           "_winrt_windows_gaming_input",
            module_doc,
            0,
            nullptr,
@@ -5633,7 +5633,7 @@ namespace py::cpp::Windows::Gaming::Input
 
 } // py::cpp::Windows::Gaming::Input
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Gaming_Input(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
 {
     using namespace py::cpp::Windows::Gaming::Input;
 

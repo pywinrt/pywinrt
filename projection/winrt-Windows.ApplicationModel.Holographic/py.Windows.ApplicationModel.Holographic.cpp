@@ -194,7 +194,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyType_Spec type_spec_HolographicKeyboard =
     {
-        "_winrt_Windows_ApplicationModel_Holographic.HolographicKeyboard",
+        "_winrt_windows_applicationmodel_holographic.HolographicKeyboard",
         sizeof(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Holographic",
+           "_winrt_windows_applicationmodel_holographic",
            module_doc,
            0,
            nullptr,
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
 
 } // py::cpp::Windows::ApplicationModel::Holographic
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Holographic(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_holographic(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Holographic;
 

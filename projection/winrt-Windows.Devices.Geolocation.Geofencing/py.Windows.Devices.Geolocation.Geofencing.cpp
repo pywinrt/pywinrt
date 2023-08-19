@@ -298,7 +298,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyType_Spec type_spec_Geofence =
     {
-        "_winrt_Windows_Devices_Geolocation_Geofencing.Geofence",
+        "_winrt_windows_devices_geolocation_geofencing.Geofence",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyType_Spec type_spec_GeofenceMonitor =
     {
-        "_winrt_Windows_Devices_Geolocation_Geofencing.GeofenceMonitor",
+        "_winrt_windows_devices_geolocation_geofencing.GeofenceMonitor",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -593,7 +593,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyType_Spec type_spec_GeofenceMonitor_Meta =
     {
-        "_winrt_Windows_Devices_Geolocation_Geofencing.GeofenceMonitor_Meta",
+        "_winrt_windows_devices_geolocation_geofencing.GeofenceMonitor_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -748,7 +748,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyType_Spec type_spec_GeofenceStateChangeReport =
     {
-        "_winrt_Windows_Devices_Geolocation_Geofencing.GeofenceStateChangeReport",
+        "_winrt_windows_devices_geolocation_geofencing.GeofenceStateChangeReport",
         sizeof(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -761,7 +761,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Geolocation_Geofencing",
+           "_winrt_windows_devices_geolocation_geofencing",
            module_doc,
            0,
            nullptr,
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 
 } // py::cpp::Windows::Devices::Geolocation::Geofencing
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Geolocation_Geofencing(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Geolocation::Geofencing;
 

@@ -339,7 +339,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ProviderSpiConnectionSettings =
     {
-        "_winrt_Windows_Devices_Spi_Provider.ProviderSpiConnectionSettings",
+        "_winrt_windows_devices_spi_provider.ProviderSpiConnectionSettings",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ISpiControllerProvider =
     {
-        "_winrt_Windows_Devices_Spi_Provider.ISpiControllerProvider",
+        "_winrt_windows_devices_spi_provider.ISpiControllerProvider",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ISpiControllerProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -748,7 +748,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ISpiDeviceProvider =
     {
-        "_winrt_Windows_Devices_Spi_Provider.ISpiDeviceProvider",
+        "_winrt_windows_devices_spi_provider.ISpiDeviceProvider",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -853,7 +853,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyType_Spec type_spec_ISpiProvider =
     {
-        "_winrt_Windows_Devices_Spi_Provider.ISpiProvider",
+        "_winrt_windows_devices_spi_provider.ISpiProvider",
         sizeof(py::wrapper::Windows::Devices::Spi::Provider::ISpiProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -866,7 +866,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Spi_Provider",
+           "_winrt_windows_devices_spi_provider",
            module_doc,
            0,
            nullptr,
@@ -877,7 +877,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
 } // py::cpp::Windows::Devices::Spi::Provider
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Spi_Provider(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Spi::Provider;
 

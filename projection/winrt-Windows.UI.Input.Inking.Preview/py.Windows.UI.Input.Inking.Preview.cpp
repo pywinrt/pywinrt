@@ -183,7 +183,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyType_Spec type_spec_PalmRejectionDelayZonePreview =
     {
-        "_winrt_Windows_UI_Input_Inking_Preview.PalmRejectionDelayZonePreview",
+        "_winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview",
         sizeof(py::wrapper::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -196,7 +196,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Input_Inking_Preview",
+           "_winrt_windows_ui_input_inking_preview",
            module_doc,
            0,
            nullptr,
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Preview
 
 } // py::cpp::Windows::UI::Input::Inking::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Inking_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_input_inking_preview(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Input::Inking::Preview;
 

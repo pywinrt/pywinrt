@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Graphics.Imaging")
+from . import _winrt_windows_graphics_imaging
 
 try:
     import winrt.windows.foundation
@@ -97,23 +96,23 @@ class TiffCompressionMode(enum.IntEnum):
     ZIP = 6
     LZWH_DIFFERENCING = 7
 
-BitmapBounds = _ns_module.BitmapBounds
-BitmapPlaneDescription = _ns_module.BitmapPlaneDescription
-BitmapSize = _ns_module.BitmapSize
-BitmapBuffer = _ns_module.BitmapBuffer
-BitmapCodecInformation = _ns_module.BitmapCodecInformation
-BitmapDecoder = _ns_module.BitmapDecoder
-BitmapEncoder = _ns_module.BitmapEncoder
-BitmapFrame = _ns_module.BitmapFrame
-BitmapProperties = _ns_module.BitmapProperties
-BitmapPropertiesView = _ns_module.BitmapPropertiesView
-BitmapPropertySet = _ns_module.BitmapPropertySet
+BitmapBounds = _winrt_windows_graphics_imaging.BitmapBounds
+BitmapPlaneDescription = _winrt_windows_graphics_imaging.BitmapPlaneDescription
+BitmapSize = _winrt_windows_graphics_imaging.BitmapSize
+BitmapBuffer = _winrt_windows_graphics_imaging.BitmapBuffer
+BitmapCodecInformation = _winrt_windows_graphics_imaging.BitmapCodecInformation
+BitmapDecoder = _winrt_windows_graphics_imaging.BitmapDecoder
+BitmapEncoder = _winrt_windows_graphics_imaging.BitmapEncoder
+BitmapFrame = _winrt_windows_graphics_imaging.BitmapFrame
+BitmapProperties = _winrt_windows_graphics_imaging.BitmapProperties
+BitmapPropertiesView = _winrt_windows_graphics_imaging.BitmapPropertiesView
+BitmapPropertySet = _winrt_windows_graphics_imaging.BitmapPropertySet
 winrt.system._mixin_mutable_mapping(BitmapPropertySet)
-BitmapTransform = _ns_module.BitmapTransform
-BitmapTypedValue = _ns_module.BitmapTypedValue
-ImageStream = _ns_module.ImageStream
-PixelDataProvider = _ns_module.PixelDataProvider
-SoftwareBitmap = _ns_module.SoftwareBitmap
-IBitmapFrame = _ns_module.IBitmapFrame
-IBitmapFrameWithSoftwareBitmap = _ns_module.IBitmapFrameWithSoftwareBitmap
-IBitmapPropertiesView = _ns_module.IBitmapPropertiesView
+BitmapTransform = _winrt_windows_graphics_imaging.BitmapTransform
+BitmapTypedValue = _winrt_windows_graphics_imaging.BitmapTypedValue
+ImageStream = _winrt_windows_graphics_imaging.ImageStream
+PixelDataProvider = _winrt_windows_graphics_imaging.PixelDataProvider
+SoftwareBitmap = _winrt_windows_graphics_imaging.SoftwareBitmap
+IBitmapFrame = _winrt_windows_graphics_imaging.IBitmapFrame
+IBitmapFrameWithSoftwareBitmap = _winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap
+IBitmapPropertiesView = _winrt_windows_graphics_imaging.IBitmapPropertiesView

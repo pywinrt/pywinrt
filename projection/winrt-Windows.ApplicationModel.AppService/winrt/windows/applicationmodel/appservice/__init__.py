@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.AppService")
+from . import _winrt_windows_applicationmodel_appservice
 
 try:
     import winrt.windows.applicationmodel
@@ -81,12 +80,12 @@ class StatelessAppServiceResponseStatus(enum.IntEnum):
     DISABLED_BY_POLICY = 13
     WEB_SERVICE_UNAVAILABLE = 14
 
-AppServiceCatalog = _ns_module.AppServiceCatalog
-AppServiceClosedEventArgs = _ns_module.AppServiceClosedEventArgs
-AppServiceConnection = _ns_module.AppServiceConnection
-AppServiceDeferral = _ns_module.AppServiceDeferral
-AppServiceRequest = _ns_module.AppServiceRequest
-AppServiceRequestReceivedEventArgs = _ns_module.AppServiceRequestReceivedEventArgs
-AppServiceResponse = _ns_module.AppServiceResponse
-AppServiceTriggerDetails = _ns_module.AppServiceTriggerDetails
-StatelessAppServiceResponse = _ns_module.StatelessAppServiceResponse
+AppServiceCatalog = _winrt_windows_applicationmodel_appservice.AppServiceCatalog
+AppServiceClosedEventArgs = _winrt_windows_applicationmodel_appservice.AppServiceClosedEventArgs
+AppServiceConnection = _winrt_windows_applicationmodel_appservice.AppServiceConnection
+AppServiceDeferral = _winrt_windows_applicationmodel_appservice.AppServiceDeferral
+AppServiceRequest = _winrt_windows_applicationmodel_appservice.AppServiceRequest
+AppServiceRequestReceivedEventArgs = _winrt_windows_applicationmodel_appservice.AppServiceRequestReceivedEventArgs
+AppServiceResponse = _winrt_windows_applicationmodel_appservice.AppServiceResponse
+AppServiceTriggerDetails = _winrt_windows_applicationmodel_appservice.AppServiceTriggerDetails
+StatelessAppServiceResponse = _winrt_windows_applicationmodel_appservice.StatelessAppServiceResponse

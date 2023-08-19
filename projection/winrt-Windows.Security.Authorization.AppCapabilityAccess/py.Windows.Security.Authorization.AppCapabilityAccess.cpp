@@ -398,7 +398,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyType_Spec type_spec_AppCapability =
     {
-        "_winrt_Windows_Security_Authorization_AppCapabilityAccess.AppCapability",
+        "_winrt_windows_security_authorization_appcapabilityaccess.AppCapability",
         sizeof(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -473,7 +473,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyType_Spec type_spec_AppCapabilityAccessChangedEventArgs =
     {
-        "_winrt_Windows_Security_Authorization_AppCapabilityAccess.AppCapabilityAccessChangedEventArgs",
+        "_winrt_windows_security_authorization_appcapabilityaccess.AppCapabilityAccessChangedEventArgs",
         sizeof(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -486,7 +486,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Authorization_AppCapabilityAccess",
+           "_winrt_windows_security_authorization_appcapabilityaccess",
            module_doc,
            0,
            nullptr,
@@ -497,7 +497,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
 } // py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authorization_AppCapabilityAccess(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_authorization_appcapabilityaccess(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess;
 

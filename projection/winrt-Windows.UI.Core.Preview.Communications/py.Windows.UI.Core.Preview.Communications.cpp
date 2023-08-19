@@ -104,7 +104,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyType_Spec type_spec_PreviewTeamCleanupRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Core_Preview_Communications.PreviewTeamCleanupRequestedEventArgs",
+        "_winrt_windows_ui_core_preview_communications.PreviewTeamCleanupRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -199,7 +199,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyType_Spec type_spec_PreviewTeamCommandInvokedEventArgs =
     {
-        "_winrt_Windows_UI_Core_Preview_Communications.PreviewTeamCommandInvokedEventArgs",
+        "_winrt_windows_ui_core_preview_communications.PreviewTeamCommandInvokedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyType_Spec type_spec_PreviewTeamDeviceCredentials =
     {
-        "_winrt_Windows_UI_Core_Preview_Communications.PreviewTeamDeviceCredentials",
+        "_winrt_windows_ui_core_preview_communications.PreviewTeamDeviceCredentials",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -462,7 +462,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyType_Spec type_spec_PreviewTeamEndMeetingRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Core_Preview_Communications.PreviewTeamEndMeetingRequestedEventArgs",
+        "_winrt_windows_ui_core_preview_communications.PreviewTeamEndMeetingRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -587,7 +587,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyType_Spec type_spec_PreviewTeamJoinMeetingRequestedEventArgs =
     {
-        "_winrt_Windows_UI_Core_Preview_Communications.PreviewTeamJoinMeetingRequestedEventArgs",
+        "_winrt_windows_ui_core_preview_communications.PreviewTeamJoinMeetingRequestedEventArgs",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1459,7 +1459,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyType_Spec type_spec_PreviewTeamView =
     {
-        "_winrt_Windows_UI_Core_Preview_Communications.PreviewTeamView",
+        "_winrt_windows_ui_core_preview_communications.PreviewTeamView",
         sizeof(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1472,7 +1472,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Core_Preview_Communications",
+           "_winrt_windows_ui_core_preview_communications",
            module_doc,
            0,
            nullptr,
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
 
 } // py::cpp::Windows::UI::Core::Preview::Communications
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Core_Preview_Communications(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview_communications(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Core::Preview::Communications;
 

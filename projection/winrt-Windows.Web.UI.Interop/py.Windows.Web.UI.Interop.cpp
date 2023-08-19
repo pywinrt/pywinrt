@@ -1921,7 +1921,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControl =
     {
-        "_winrt_Windows_Web_UI_Interop.WebViewControl",
+        "_winrt_windows_web_ui_interop.WebViewControl",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2124,7 +2124,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlAcceleratorKeyPressedEventArgs =
     {
-        "_winrt_Windows_Web_UI_Interop.WebViewControlAcceleratorKeyPressedEventArgs",
+        "_winrt_windows_web_ui_interop.WebViewControlAcceleratorKeyPressedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2219,7 +2219,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlMoveFocusRequestedEventArgs =
     {
-        "_winrt_Windows_Web_UI_Interop.WebViewControlMoveFocusRequestedEventArgs",
+        "_winrt_windows_web_ui_interop.WebViewControlMoveFocusRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2531,7 +2531,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlProcess =
     {
-        "_winrt_Windows_Web_UI_Interop.WebViewControlProcess",
+        "_winrt_windows_web_ui_interop.WebViewControlProcess",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2725,7 +2725,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyType_Spec type_spec_WebViewControlProcessOptions =
     {
-        "_winrt_Windows_Web_UI_Interop.WebViewControlProcessOptions",
+        "_winrt_windows_web_ui_interop.WebViewControlProcessOptions",
         sizeof(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcessOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2738,7 +2738,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Web_UI_Interop",
+           "_winrt_windows_web_ui_interop",
            module_doc,
            0,
            nullptr,
@@ -2749,7 +2749,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
 } // py::cpp::Windows::Web::UI::Interop
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Web_UI_Interop(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_web_ui_interop(void) noexcept
 {
     using namespace py::cpp::Windows::Web::UI::Interop;
 

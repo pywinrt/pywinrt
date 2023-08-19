@@ -260,7 +260,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportExtensionSession =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportExtensionSession",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportExtensionSession",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -355,7 +355,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportExtensionTriggerDetails =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportExtensionTriggerDetails",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportExtensionTriggerDetails",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -672,7 +672,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesChangedEventArgs =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -811,7 +811,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportPrintDeviceCapabilitiesUpdatePolicy =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1005,7 +1005,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportPrintTicketElement =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportPrintTicketElement",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportPrintTicketElement",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1163,7 +1163,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportPrintTicketValidationRequestedEventArgs =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportPrintTicketValidationRequestedEventArgs",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportPrintTicketValidationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1455,7 +1455,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportPrinterSelectedEventArgs =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportPrinterSelectedEventArgs",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportPrinterSelectedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1570,7 +1570,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportSessionInfo =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportSessionInfo",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportSessionInfo",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1775,7 +1775,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportSettingsActivatedEventArgs =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportSettingsActivatedEventArgs",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportSettingsActivatedEventArgs",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1963,7 +1963,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyType_Spec type_spec_PrintSupportSettingsUISession =
     {
-        "_winrt_Windows_Graphics_Printing_PrintSupport.PrintSupportSettingsUISession",
+        "_winrt_windows_graphics_printing_printsupport.PrintSupportSettingsUISession",
         sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1976,7 +1976,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Graphics_Printing_PrintSupport",
+           "_winrt_windows_graphics_printing_printsupport",
            module_doc,
            0,
            nullptr,
@@ -1987,7 +1987,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
 } // py::cpp::Windows::Graphics::Printing::PrintSupport
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_Printing_PrintSupport(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printsupport(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::Printing::PrintSupport;
 

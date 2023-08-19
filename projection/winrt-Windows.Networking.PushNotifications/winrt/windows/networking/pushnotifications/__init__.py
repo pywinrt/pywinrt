@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Networking.PushNotifications")
+from . import _winrt_windows_networking_pushnotifications
 
 try:
     import winrt.windows.foundation
@@ -38,9 +37,9 @@ class PushNotificationType(enum.IntEnum):
     RAW = 3
     TILE_FLYOUT = 4
 
-PushNotificationChannel = _ns_module.PushNotificationChannel
-PushNotificationChannelManager = _ns_module.PushNotificationChannelManager
-PushNotificationChannelManagerForUser = _ns_module.PushNotificationChannelManagerForUser
-PushNotificationChannelsRevokedEventArgs = _ns_module.PushNotificationChannelsRevokedEventArgs
-PushNotificationReceivedEventArgs = _ns_module.PushNotificationReceivedEventArgs
-RawNotification = _ns_module.RawNotification
+PushNotificationChannel = _winrt_windows_networking_pushnotifications.PushNotificationChannel
+PushNotificationChannelManager = _winrt_windows_networking_pushnotifications.PushNotificationChannelManager
+PushNotificationChannelManagerForUser = _winrt_windows_networking_pushnotifications.PushNotificationChannelManagerForUser
+PushNotificationChannelsRevokedEventArgs = _winrt_windows_networking_pushnotifications.PushNotificationChannelsRevokedEventArgs
+PushNotificationReceivedEventArgs = _winrt_windows_networking_pushnotifications.PushNotificationReceivedEventArgs
+RawNotification = _winrt_windows_networking_pushnotifications.RawNotification

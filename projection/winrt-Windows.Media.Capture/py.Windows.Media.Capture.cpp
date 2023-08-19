@@ -154,7 +154,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AdvancedCapturedPhoto =
     {
-        "_winrt_Windows_Media_Capture.AdvancedCapturedPhoto",
+        "_winrt_windows_media_capture.AdvancedCapturedPhoto",
         sizeof(py::wrapper::Windows::Media::Capture::AdvancedCapturedPhoto),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AdvancedPhotoCapture =
     {
-        "_winrt_Windows_Media_Capture.AdvancedPhotoCapture",
+        "_winrt_windows_media_capture.AdvancedPhotoCapture",
         sizeof(py::wrapper::Windows::Media::Capture::AdvancedPhotoCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1064,7 +1064,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastBackgroundService =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastBackgroundService",
+        "_winrt_windows_media_capture.AppBroadcastBackgroundService",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundService),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1413,7 +1413,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastBackgroundServiceSignInInfo =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastBackgroundServiceSignInInfo",
+        "_winrt_windows_media_capture.AppBroadcastBackgroundServiceSignInInfo",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1838,7 +1838,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastBackgroundServiceStreamInfo =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastBackgroundServiceStreamInfo",
+        "_winrt_windows_media_capture.AppBroadcastBackgroundServiceStreamInfo",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1953,7 +1953,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastCameraCaptureStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastCameraCaptureStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastCameraCaptureStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2588,7 +2588,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastGlobalSettings =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastGlobalSettings",
+        "_winrt_windows_media_capture.AppBroadcastGlobalSettings",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastGlobalSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2711,7 +2711,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastHeartbeatRequestedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastHeartbeatRequestedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastHeartbeatRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2871,7 +2871,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastManager =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastManager",
+        "_winrt_windows_media_capture.AppBroadcastManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2986,7 +2986,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3141,7 +3141,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPlugIn =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPlugIn",
+        "_winrt_windows_media_capture.AppBroadcastPlugIn",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPlugIn),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3366,7 +3366,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPlugInManager =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPlugInManager",
+        "_winrt_windows_media_capture.AppBroadcastPlugInManager",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3461,7 +3461,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPlugInStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPlugInStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastPlugInStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3672,7 +3672,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPreview =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPreview",
+        "_winrt_windows_media_capture.AppBroadcastPreview",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3787,7 +3787,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPreviewStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPreviewStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastPreviewStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4037,7 +4037,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPreviewStreamReader =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPreviewStreamReader",
+        "_winrt_windows_media_capture.AppBroadcastPreviewStreamReader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4152,7 +4152,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPreviewStreamVideoFrame =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPreviewStreamVideoFrame",
+        "_winrt_windows_media_capture.AppBroadcastPreviewStreamVideoFrame",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4307,7 +4307,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastPreviewStreamVideoHeader =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastPreviewStreamVideoHeader",
+        "_winrt_windows_media_capture.AppBroadcastPreviewStreamVideoHeader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4718,7 +4718,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastProviderSettings =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastProviderSettings",
+        "_winrt_windows_media_capture.AppBroadcastProviderSettings",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastProviderSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5187,7 +5187,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastServices =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastServices",
+        "_winrt_windows_media_capture.AppBroadcastServices",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastServices),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5302,7 +5302,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastSignInStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastSignInStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastSignInStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6161,7 +6161,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastState =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastState",
+        "_winrt_windows_media_capture.AppBroadcastState",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6276,7 +6276,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastStreamAudioFrame =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastStreamAudioFrame",
+        "_winrt_windows_media_capture.AppBroadcastStreamAudioFrame",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6451,7 +6451,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastStreamAudioHeader =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastStreamAudioHeader",
+        "_winrt_windows_media_capture.AppBroadcastStreamAudioHeader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamAudioHeader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6816,7 +6816,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastStreamReader =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastStreamReader",
+        "_winrt_windows_media_capture.AppBroadcastStreamReader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6911,7 +6911,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastStreamStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastStreamStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastStreamStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7026,7 +7026,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastStreamVideoFrame =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastStreamVideoFrame",
+        "_winrt_windows_media_capture.AppBroadcastStreamVideoFrame",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7221,7 +7221,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastStreamVideoHeader =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastStreamVideoHeader",
+        "_winrt_windows_media_capture.AppBroadcastStreamVideoHeader",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastStreamVideoHeader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7316,7 +7316,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastTriggerDetails =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastTriggerDetails",
+        "_winrt_windows_media_capture.AppBroadcastTriggerDetails",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7411,7 +7411,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppBroadcastViewerCountChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppBroadcastViewerCountChangedEventArgs",
+        "_winrt_windows_media_capture.AppBroadcastViewerCountChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7633,7 +7633,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCapture =
     {
-        "_winrt_Windows_Media_Capture.AppCapture",
+        "_winrt_windows_media_capture.AppCapture",
         sizeof(py::wrapper::Windows::Media::Capture::AppCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8476,7 +8476,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureAlternateShortcutKeys =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureAlternateShortcutKeys",
+        "_winrt_windows_media_capture.AppCaptureAlternateShortcutKeys",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureAlternateShortcutKeys),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8571,7 +8571,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureDurationGeneratedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureDurationGeneratedEventArgs",
+        "_winrt_windows_media_capture.AppCaptureDurationGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8666,7 +8666,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureFileGeneratedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureFileGeneratedEventArgs",
+        "_winrt_windows_media_capture.AppCaptureFileGeneratedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8763,7 +8763,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureManager =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureManager",
+        "_winrt_windows_media_capture.AppCaptureManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9253,7 +9253,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureMetadataWriter =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureMetadataWriter",
+        "_winrt_windows_media_capture.AppCaptureMetadataWriter",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureMetadataWriter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9368,7 +9368,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureMicrophoneCaptureStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppCaptureMicrophoneCaptureStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9709,7 +9709,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureRecordOperation =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureRecordOperation",
+        "_winrt_windows_media_capture.AppCaptureRecordOperation",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureRecordOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9824,7 +9824,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureRecordingStateChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureRecordingStateChangedEventArgs",
+        "_winrt_windows_media_capture.AppCaptureRecordingStateChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10002,7 +10002,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureServices =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureServices",
+        "_winrt_windows_media_capture.AppCaptureServices",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureServices),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11301,7 +11301,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureSettings =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureSettings",
+        "_winrt_windows_media_capture.AppCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11625,7 +11625,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_AppCaptureState =
     {
-        "_winrt_Windows_Media_Capture.AppCaptureState",
+        "_winrt_windows_media_capture.AppCaptureState",
         sizeof(py::wrapper::Windows::Media::Capture::AppCaptureState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11795,7 +11795,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CameraCaptureUI =
     {
-        "_winrt_Windows_Media_Capture.CameraCaptureUI",
+        "_winrt_windows_media_capture.CameraCaptureUI",
         sizeof(py::wrapper::Windows::Media::Capture::CameraCaptureUI),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12110,7 +12110,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CameraCaptureUIPhotoCaptureSettings =
     {
-        "_winrt_Windows_Media_Capture.CameraCaptureUIPhotoCaptureSettings",
+        "_winrt_windows_media_capture.CameraCaptureUIPhotoCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12377,7 +12377,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CameraCaptureUIVideoCaptureSettings =
     {
-        "_winrt_Windows_Media_Capture.CameraCaptureUIVideoCaptureSettings",
+        "_winrt_windows_media_capture.CameraCaptureUIVideoCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12444,7 +12444,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CameraOptionsUI =
     {
-        "_winrt_Windows_Media_Capture.CameraOptionsUI",
+        "_winrt_windows_media_capture.CameraOptionsUI",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13023,7 +13023,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CapturedFrame =
     {
-        "_winrt_Windows_Media_Capture.CapturedFrame",
+        "_winrt_windows_media_capture.CapturedFrame",
         sizeof(py::wrapper::Windows::Media::Capture::CapturedFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13378,7 +13378,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CapturedFrameControlValues =
     {
-        "_winrt_Windows_Media_Capture.CapturedFrameControlValues",
+        "_winrt_windows_media_capture.CapturedFrameControlValues",
         sizeof(py::wrapper::Windows::Media::Capture::CapturedFrameControlValues),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13493,7 +13493,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_CapturedPhoto =
     {
-        "_winrt_Windows_Media_Capture.CapturedPhoto",
+        "_winrt_windows_media_capture.CapturedPhoto",
         sizeof(py::wrapper::Windows::Media::Capture::CapturedPhoto),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13775,7 +13775,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_GameBarServices =
     {
-        "_winrt_Windows_Media_Capture.GameBarServices",
+        "_winrt_windows_media_capture.GameBarServices",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServices),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13890,7 +13890,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_GameBarServicesCommandEventArgs =
     {
-        "_winrt_Windows_Media_Capture.GameBarServicesCommandEventArgs",
+        "_winrt_windows_media_capture.GameBarServicesCommandEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesCommandEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14040,7 +14040,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_GameBarServicesManager =
     {
-        "_winrt_Windows_Media_Capture.GameBarServicesManager",
+        "_winrt_windows_media_capture.GameBarServicesManager",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14135,7 +14135,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.GameBarServicesManagerGameBarServicesCreatedEventArgs",
+        "_winrt_windows_media_capture.GameBarServicesManagerGameBarServicesCreatedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14290,7 +14290,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_GameBarServicesTargetInfo =
     {
-        "_winrt_Windows_Media_Capture.GameBarServicesTargetInfo",
+        "_winrt_windows_media_capture.GameBarServicesTargetInfo",
         sizeof(py::wrapper::Windows::Media::Capture::GameBarServicesTargetInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14579,7 +14579,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_LowLagMediaRecording =
     {
-        "_winrt_Windows_Media_Capture.LowLagMediaRecording",
+        "_winrt_windows_media_capture.LowLagMediaRecording",
         sizeof(py::wrapper::Windows::Media::Capture::LowLagMediaRecording),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14714,7 +14714,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_LowLagPhotoCapture =
     {
-        "_winrt_Windows_Media_Capture.LowLagPhotoCapture",
+        "_winrt_windows_media_capture.LowLagPhotoCapture",
         sizeof(py::wrapper::Windows::Media::Capture::LowLagPhotoCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14924,7 +14924,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_LowLagPhotoSequenceCapture =
     {
-        "_winrt_Windows_Media_Capture.LowLagPhotoSequenceCapture",
+        "_winrt_windows_media_capture.LowLagPhotoSequenceCapture",
         sizeof(py::wrapper::Windows::Media::Capture::LowLagPhotoSequenceCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17038,7 +17038,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCapture =
     {
-        "_winrt_Windows_Media_Capture.MediaCapture",
+        "_winrt_windows_media_capture.MediaCapture",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17153,7 +17153,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs",
+        "_winrt_windows_media_capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17268,7 +17268,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureFailedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureFailedEventArgs",
+        "_winrt_windows_media_capture.MediaCaptureFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17363,7 +17363,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureFocusChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureFocusChangedEventArgs",
+        "_winrt_windows_media_capture.MediaCaptureFocusChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18325,7 +18325,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureInitializationSettings =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureInitializationSettings",
+        "_winrt_windows_media_capture.MediaCaptureInitializationSettings",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureInitializationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18493,7 +18493,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCapturePauseResult =
     {
-        "_winrt_Windows_Media_Capture.MediaCapturePauseResult",
+        "_winrt_windows_media_capture.MediaCapturePauseResult",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCapturePauseResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -18748,7 +18748,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureRelativePanelWatcher =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureRelativePanelWatcher",
+        "_winrt_windows_media_capture.MediaCaptureRelativePanelWatcher",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureRelativePanelWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19103,7 +19103,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureSettings =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureSettings",
+        "_winrt_windows_media_capture.MediaCaptureSettings",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19271,7 +19271,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureStopResult =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureStopResult",
+        "_winrt_windows_media_capture.MediaCaptureStopResult",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureStopResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19516,7 +19516,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureVideoProfile =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureVideoProfile",
+        "_winrt_windows_media_capture.MediaCaptureVideoProfile",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19731,7 +19731,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_MediaCaptureVideoProfileMediaDescription =
     {
-        "_winrt_Windows_Media_Capture.MediaCaptureVideoProfileMediaDescription",
+        "_winrt_windows_media_capture.MediaCaptureVideoProfileMediaDescription",
         sizeof(py::wrapper::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19846,7 +19846,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_OptionalReferencePhotoCapturedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.OptionalReferencePhotoCapturedEventArgs",
+        "_winrt_windows_media_capture.OptionalReferencePhotoCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -19981,7 +19981,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_PhotoCapturedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.PhotoCapturedEventArgs",
+        "_winrt_windows_media_capture.PhotoCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::PhotoCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20096,7 +20096,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_PhotoConfirmationCapturedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.PhotoConfirmationCapturedEventArgs",
+        "_winrt_windows_media_capture.PhotoConfirmationCapturedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20326,7 +20326,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_ScreenCapture =
     {
-        "_winrt_Windows_Media_Capture.ScreenCapture",
+        "_winrt_windows_media_capture.ScreenCapture",
         sizeof(py::wrapper::Windows::Media::Capture::ScreenCapture),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20441,7 +20441,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_SourceSuspensionChangedEventArgs =
     {
-        "_winrt_Windows_Media_Capture.SourceSuspensionChangedEventArgs",
+        "_winrt_windows_media_capture.SourceSuspensionChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::Capture::SourceSuspensionChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20556,7 +20556,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_VideoStreamConfiguration =
     {
-        "_winrt_Windows_Media_Capture.VideoStreamConfiguration",
+        "_winrt_windows_media_capture.VideoStreamConfiguration",
         sizeof(py::wrapper::Windows::Media::Capture::VideoStreamConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20726,7 +20726,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyType_Spec type_spec_WhiteBalanceGain =
     {
-        "_winrt_Windows_Media_Capture.WhiteBalanceGain",
+        "_winrt_windows_media_capture.WhiteBalanceGain",
         sizeof(py::wrapper::Windows::Media::Capture::WhiteBalanceGain),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -20739,7 +20739,7 @@ namespace py::cpp::Windows::Media::Capture
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Capture",
+           "_winrt_windows_media_capture",
            module_doc,
            0,
            nullptr,
@@ -20750,7 +20750,7 @@ namespace py::cpp::Windows::Media::Capture
 
 } // py::cpp::Windows::Media::Capture
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Capture(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Capture;
 

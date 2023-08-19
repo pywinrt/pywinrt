@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Web.Http")
+from . import _winrt_windows_web_http
 
 try:
     import winrt.windows.foundation
@@ -128,24 +127,24 @@ class HttpVersion(enum.IntEnum):
     HTTP11 = 2
     HTTP20 = 3
 
-HttpProgress = _ns_module.HttpProgress
-HttpBufferContent = _ns_module.HttpBufferContent
-HttpClient = _ns_module.HttpClient
-HttpCookie = _ns_module.HttpCookie
-HttpCookieCollection = _ns_module.HttpCookieCollection
+HttpProgress = _winrt_windows_web_http.HttpProgress
+HttpBufferContent = _winrt_windows_web_http.HttpBufferContent
+HttpClient = _winrt_windows_web_http.HttpClient
+HttpCookie = _winrt_windows_web_http.HttpCookie
+HttpCookieCollection = _winrt_windows_web_http.HttpCookieCollection
 winrt.system._mixin_sequence(HttpCookieCollection)
-HttpCookieManager = _ns_module.HttpCookieManager
-HttpFormUrlEncodedContent = _ns_module.HttpFormUrlEncodedContent
-HttpGetBufferResult = _ns_module.HttpGetBufferResult
-HttpGetInputStreamResult = _ns_module.HttpGetInputStreamResult
-HttpGetStringResult = _ns_module.HttpGetStringResult
-HttpMethod = _ns_module.HttpMethod
-HttpMultipartContent = _ns_module.HttpMultipartContent
-HttpMultipartFormDataContent = _ns_module.HttpMultipartFormDataContent
-HttpRequestMessage = _ns_module.HttpRequestMessage
-HttpRequestResult = _ns_module.HttpRequestResult
-HttpResponseMessage = _ns_module.HttpResponseMessage
-HttpStreamContent = _ns_module.HttpStreamContent
-HttpStringContent = _ns_module.HttpStringContent
-HttpTransportInformation = _ns_module.HttpTransportInformation
-IHttpContent = _ns_module.IHttpContent
+HttpCookieManager = _winrt_windows_web_http.HttpCookieManager
+HttpFormUrlEncodedContent = _winrt_windows_web_http.HttpFormUrlEncodedContent
+HttpGetBufferResult = _winrt_windows_web_http.HttpGetBufferResult
+HttpGetInputStreamResult = _winrt_windows_web_http.HttpGetInputStreamResult
+HttpGetStringResult = _winrt_windows_web_http.HttpGetStringResult
+HttpMethod = _winrt_windows_web_http.HttpMethod
+HttpMultipartContent = _winrt_windows_web_http.HttpMultipartContent
+HttpMultipartFormDataContent = _winrt_windows_web_http.HttpMultipartFormDataContent
+HttpRequestMessage = _winrt_windows_web_http.HttpRequestMessage
+HttpRequestResult = _winrt_windows_web_http.HttpRequestResult
+HttpResponseMessage = _winrt_windows_web_http.HttpResponseMessage
+HttpStreamContent = _winrt_windows_web_http.HttpStreamContent
+HttpStringContent = _winrt_windows_web_http.HttpStringContent
+HttpTransportInformation = _winrt_windows_web_http.HttpTransportInformation
+IHttpContent = _winrt_windows_web_http.IHttpContent

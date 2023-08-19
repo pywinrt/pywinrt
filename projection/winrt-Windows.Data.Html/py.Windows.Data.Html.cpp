@@ -65,7 +65,7 @@ namespace py::cpp::Windows::Data::Html
 
     static PyType_Spec type_spec_HtmlUtilities =
     {
-        "_winrt_Windows_Data_Html.HtmlUtilities",
+        "_winrt_windows_data_html.HtmlUtilities",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -78,7 +78,7 @@ namespace py::cpp::Windows::Data::Html
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Data_Html",
+           "_winrt_windows_data_html",
            module_doc,
            0,
            nullptr,
@@ -89,7 +89,7 @@ namespace py::cpp::Windows::Data::Html
 
 } // py::cpp::Windows::Data::Html
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Data_Html(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_data_html(void) noexcept
 {
     using namespace py::cpp::Windows::Data::Html;
 

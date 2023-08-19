@@ -134,7 +134,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyType_Spec type_spec_PhoneCallBlockedTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Background.PhoneCallBlockedTriggerDetails",
+        "_winrt_windows_applicationmodel_calls_background.PhoneCallBlockedTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -249,7 +249,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyType_Spec type_spec_PhoneCallOriginDataRequestTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Background.PhoneCallOriginDataRequestTriggerDetails",
+        "_winrt_windows_applicationmodel_calls_background.PhoneCallOriginDataRequestTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -444,7 +444,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyType_Spec type_spec_PhoneIncomingCallDismissedTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Background.PhoneIncomingCallDismissedTriggerDetails",
+        "_winrt_windows_applicationmodel_calls_background.PhoneIncomingCallDismissedTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -559,7 +559,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyType_Spec type_spec_PhoneIncomingCallNotificationTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Background.PhoneIncomingCallNotificationTriggerDetails",
+        "_winrt_windows_applicationmodel_calls_background.PhoneIncomingCallNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -706,7 +706,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyType_Spec type_spec_PhoneLineChangedTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Background.PhoneLineChangedTriggerDetails",
+        "_winrt_windows_applicationmodel_calls_background.PhoneLineChangedTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -841,7 +841,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyType_Spec type_spec_PhoneNewVoicemailMessageTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Calls_Background.PhoneNewVoicemailMessageTriggerDetails",
+        "_winrt_windows_applicationmodel_calls_background.PhoneNewVoicemailMessageTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -854,7 +854,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Calls_Background",
+           "_winrt_windows_applicationmodel_calls_background",
            module_doc,
            0,
            nullptr,
@@ -865,7 +865,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
 } // py::cpp::Windows::ApplicationModel::Calls::Background
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Calls_Background(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_background(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
 

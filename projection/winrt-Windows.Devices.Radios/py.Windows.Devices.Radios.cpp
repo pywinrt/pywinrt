@@ -333,7 +333,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyType_Spec type_spec_Radio =
     {
-        "_winrt_Windows_Devices_Radios.Radio",
+        "_winrt_windows_devices_radios.Radio",
         sizeof(py::wrapper::Windows::Devices::Radios::Radio),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -346,7 +346,7 @@ namespace py::cpp::Windows::Devices::Radios
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Radios",
+           "_winrt_windows_devices_radios",
            module_doc,
            0,
            nullptr,
@@ -357,7 +357,7 @@ namespace py::cpp::Windows::Devices::Radios
 
 } // py::cpp::Windows::Devices::Radios
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Radios(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_radios(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Radios;
 

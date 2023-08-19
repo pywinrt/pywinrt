@@ -508,7 +508,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_CameraIntrinsics =
     {
-        "_winrt_Windows_Media_Devices_Core.CameraIntrinsics",
+        "_winrt_windows_media_devices_core.CameraIntrinsics",
         sizeof(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -774,7 +774,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_DepthCorrelatedCoordinateMapper =
     {
-        "_winrt_Windows_Media_Devices_Core.DepthCorrelatedCoordinateMapper",
+        "_winrt_windows_media_devices_core.DepthCorrelatedCoordinateMapper",
         sizeof(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -969,7 +969,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameControlCapabilities =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameControlCapabilities",
+        "_winrt_windows_media_devices_core.FrameControlCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameControlCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1215,7 +1215,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameController =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameController",
+        "_winrt_windows_media_devices_core.FrameController",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1370,7 +1370,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameExposureCapabilities =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameExposureCapabilities",
+        "_winrt_windows_media_devices_core.FrameExposureCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1525,7 +1525,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameExposureCompensationCapabilities =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameExposureCompensationCapabilities",
+        "_winrt_windows_media_devices_core.FrameExposureCompensationCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1648,7 +1648,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameExposureCompensationControl =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameExposureCompensationControl",
+        "_winrt_windows_media_devices_core.FrameExposureCompensationControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1819,7 +1819,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameExposureControl =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameExposureControl",
+        "_winrt_windows_media_devices_core.FrameExposureControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameExposureControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1954,7 +1954,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameFlashCapabilities =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameFlashCapabilities",
+        "_winrt_windows_media_devices_core.FrameFlashCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFlashCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2221,7 +2221,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameFlashControl =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameFlashControl",
+        "_winrt_windows_media_devices_core.FrameFlashControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2376,7 +2376,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameFocusCapabilities =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameFocusCapabilities",
+        "_winrt_windows_media_devices_core.FrameFocusCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFocusCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2499,7 +2499,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameFocusControl =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameFocusControl",
+        "_winrt_windows_media_devices_core.FrameFocusControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameFocusControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2654,7 +2654,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameIsoSpeedCapabilities =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameIsoSpeedCapabilities",
+        "_winrt_windows_media_devices_core.FrameIsoSpeedCapabilities",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2825,7 +2825,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_FrameIsoSpeedControl =
     {
-        "_winrt_Windows_Media_Devices_Core.FrameIsoSpeedControl",
+        "_winrt_windows_media_devices_core.FrameIsoSpeedControl",
         sizeof(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3090,7 +3090,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyType_Spec type_spec_VariablePhotoSequenceController =
     {
-        "_winrt_Windows_Media_Devices_Core.VariablePhotoSequenceController",
+        "_winrt_windows_media_devices_core.VariablePhotoSequenceController",
         sizeof(py::wrapper::Windows::Media::Devices::Core::VariablePhotoSequenceController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3103,7 +3103,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_Devices_Core",
+           "_winrt_windows_media_devices_core",
            module_doc,
            0,
            nullptr,
@@ -3114,7 +3114,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
 } // py::cpp::Windows::Media::Devices::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_Devices_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_devices_core(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Devices::Core;
 

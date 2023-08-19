@@ -179,7 +179,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreview =
     {
-        "_winrt_Windows_System_Preview.TwoPanelHingedDevicePosturePreview",
+        "_winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -374,7 +374,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReading =
     {
-        "_winrt_Windows_System_Preview.TwoPanelHingedDevicePosturePreviewReading",
+        "_winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -469,7 +469,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyType_Spec type_spec_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs =
     {
-        "_winrt_Windows_System_Preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
+        "_winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::System::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Preview",
+           "_winrt_windows_system_preview",
            module_doc,
            0,
            nullptr,
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::System::Preview
 
 } // py::cpp::Windows::System::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_preview(void) noexcept
 {
     using namespace py::cpp::Windows::System::Preview;
 

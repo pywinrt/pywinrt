@@ -140,7 +140,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_EnhancedWaypoint =
     {
-        "_winrt_Windows_Services_Maps.EnhancedWaypoint",
+        "_winrt_windows_services_maps.EnhancedWaypoint",
         sizeof(py::wrapper::Windows::Services::Maps::EnhancedWaypoint),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_ManeuverWarning =
     {
-        "_winrt_Windows_Services_Maps.ManeuverWarning",
+        "_winrt_windows_services_maps.ManeuverWarning",
         sizeof(py::wrapper::Windows::Services::Maps::ManeuverWarning),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -650,7 +650,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapAddress =
     {
-        "_winrt_Windows_Services_Maps.MapAddress",
+        "_winrt_windows_services_maps.MapAddress",
         sizeof(py::wrapper::Windows::Services::Maps::MapAddress),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -805,7 +805,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapLocation =
     {
-        "_winrt_Windows_Services_Maps.MapLocation",
+        "_winrt_windows_services_maps.MapLocation",
         sizeof(py::wrapper::Windows::Services::Maps::MapLocation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -947,7 +947,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapLocationFinder =
     {
-        "_winrt_Windows_Services_Maps.MapLocationFinder",
+        "_winrt_windows_services_maps.MapLocationFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapLocationFinderResult =
     {
-        "_winrt_Windows_Services_Maps.MapLocationFinderResult",
+        "_winrt_windows_services_maps.MapLocationFinderResult",
         sizeof(py::wrapper::Windows::Services::Maps::MapLocationFinderResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1158,7 +1158,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapManager =
     {
-        "_winrt_Windows_Services_Maps.MapManager",
+        "_winrt_windows_services_maps.MapManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1453,7 +1453,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapRoute =
     {
-        "_winrt_Windows_Services_Maps.MapRoute",
+        "_winrt_windows_services_maps.MapRoute",
         sizeof(py::wrapper::Windows::Services::Maps::MapRoute),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1791,7 +1791,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapRouteDrivingOptions =
     {
-        "_winrt_Windows_Services_Maps.MapRouteDrivingOptions",
+        "_winrt_windows_services_maps.MapRouteDrivingOptions",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2143,7 +2143,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapRouteFinder =
     {
-        "_winrt_Windows_Services_Maps.MapRouteFinder",
+        "_winrt_windows_services_maps.MapRouteFinder",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2278,7 +2278,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapRouteFinderResult =
     {
-        "_winrt_Windows_Services_Maps.MapRouteFinderResult",
+        "_winrt_windows_services_maps.MapRouteFinderResult",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteFinderResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2493,7 +2493,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapRouteLeg =
     {
-        "_winrt_Windows_Services_Maps.MapRouteLeg",
+        "_winrt_windows_services_maps.MapRouteLeg",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteLeg),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2768,7 +2768,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapRouteManeuver =
     {
-        "_winrt_Windows_Services_Maps.MapRouteManeuver",
+        "_winrt_windows_services_maps.MapRouteManeuver",
         sizeof(py::wrapper::Windows::Services::Maps::MapRouteManeuver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2922,7 +2922,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapService =
     {
-        "_winrt_Windows_Services_Maps.MapService",
+        "_winrt_windows_services_maps.MapService",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2946,7 +2946,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_MapService_Meta =
     {
-        "_winrt_Windows_Services_Maps.MapService_Meta",
+        "_winrt_windows_services_maps.MapService_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3367,7 +3367,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_PlaceInfo =
     {
-        "_winrt_Windows_Services_Maps.PlaceInfo",
+        "_winrt_windows_services_maps.PlaceInfo",
         sizeof(py::wrapper::Windows::Services::Maps::PlaceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3388,7 +3388,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_PlaceInfo_Meta =
     {
-        "_winrt_Windows_Services_Maps.PlaceInfo_Meta",
+        "_winrt_windows_services_maps.PlaceInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3582,7 +3582,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyType_Spec type_spec_PlaceInfoCreateOptions =
     {
-        "_winrt_Windows_Services_Maps.PlaceInfoCreateOptions",
+        "_winrt_windows_services_maps.PlaceInfoCreateOptions",
         sizeof(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3595,7 +3595,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Services_Maps",
+           "_winrt_windows_services_maps",
            module_doc,
            0,
            nullptr,
@@ -3606,7 +3606,7 @@ namespace py::cpp::Windows::Services::Maps
 
 } // py::cpp::Windows::Services::Maps
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Services_Maps(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_services_maps(void) noexcept
 {
     using namespace py::cpp::Windows::Services::Maps;
 

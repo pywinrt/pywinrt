@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.UserActivities")
+from . import _winrt_windows_applicationmodel_useractivities
 
 try:
     import winrt.windows.foundation
@@ -40,14 +39,14 @@ class UserActivityState(enum.IntEnum):
     NEW = 0
     PUBLISHED = 1
 
-UserActivity = _ns_module.UserActivity
-UserActivityAttribution = _ns_module.UserActivityAttribution
-UserActivityChannel = _ns_module.UserActivityChannel
-UserActivityContentInfo = _ns_module.UserActivityContentInfo
-UserActivityRequest = _ns_module.UserActivityRequest
-UserActivityRequestManager = _ns_module.UserActivityRequestManager
-UserActivityRequestedEventArgs = _ns_module.UserActivityRequestedEventArgs
-UserActivitySession = _ns_module.UserActivitySession
-UserActivitySessionHistoryItem = _ns_module.UserActivitySessionHistoryItem
-UserActivityVisualElements = _ns_module.UserActivityVisualElements
-IUserActivityContentInfo = _ns_module.IUserActivityContentInfo
+UserActivity = _winrt_windows_applicationmodel_useractivities.UserActivity
+UserActivityAttribution = _winrt_windows_applicationmodel_useractivities.UserActivityAttribution
+UserActivityChannel = _winrt_windows_applicationmodel_useractivities.UserActivityChannel
+UserActivityContentInfo = _winrt_windows_applicationmodel_useractivities.UserActivityContentInfo
+UserActivityRequest = _winrt_windows_applicationmodel_useractivities.UserActivityRequest
+UserActivityRequestManager = _winrt_windows_applicationmodel_useractivities.UserActivityRequestManager
+UserActivityRequestedEventArgs = _winrt_windows_applicationmodel_useractivities.UserActivityRequestedEventArgs
+UserActivitySession = _winrt_windows_applicationmodel_useractivities.UserActivitySession
+UserActivitySessionHistoryItem = _winrt_windows_applicationmodel_useractivities.UserActivitySessionHistoryItem
+UserActivityVisualElements = _winrt_windows_applicationmodel_useractivities.UserActivityVisualElements
+IUserActivityContentInfo = _winrt_windows_applicationmodel_useractivities.IUserActivityContentInfo

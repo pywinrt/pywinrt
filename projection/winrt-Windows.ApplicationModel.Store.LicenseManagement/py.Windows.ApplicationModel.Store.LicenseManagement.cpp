@@ -130,7 +130,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyType_Spec type_spec_LicenseManager =
     {
-        "_winrt_Windows_ApplicationModel_Store_LicenseManagement.LicenseManager",
+        "_winrt_windows_applicationmodel_store_licensemanagement.LicenseManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -345,7 +345,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyType_Spec type_spec_LicenseSatisfactionInfo =
     {
-        "_winrt_Windows_ApplicationModel_Store_LicenseManagement.LicenseSatisfactionInfo",
+        "_winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -460,7 +460,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyType_Spec type_spec_LicenseSatisfactionResult =
     {
-        "_winrt_Windows_ApplicationModel_Store_LicenseManagement.LicenseSatisfactionResult",
+        "_winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -473,7 +473,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Store_LicenseManagement",
+           "_winrt_windows_applicationmodel_store_licensemanagement",
            module_doc,
            0,
            nullptr,
@@ -484,7 +484,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
 } // py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Store_LicenseManagement(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_licensemanagement(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement;
 

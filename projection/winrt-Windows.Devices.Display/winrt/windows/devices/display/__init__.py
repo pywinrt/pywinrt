@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Display")
+from . import _winrt_windows_devices_display
 
 try:
     import winrt.windows.foundation
@@ -41,4 +40,4 @@ class DisplayMonitorUsageKind(enum.IntEnum):
     HEAD_MOUNTED = 1
     SPECIAL_PURPOSE = 2
 
-DisplayMonitor = _ns_module.DisplayMonitor
+DisplayMonitor = _winrt_windows_devices_display.DisplayMonitor

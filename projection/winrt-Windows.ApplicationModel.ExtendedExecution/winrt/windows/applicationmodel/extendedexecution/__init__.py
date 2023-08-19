@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.ExtendedExecution")
+from . import _winrt_windows_applicationmodel_extendedexecution
 
 try:
     import winrt.windows.foundation
@@ -24,5 +23,5 @@ class ExtendedExecutionRevokedReason(enum.IntEnum):
     RESUMED = 0
     SYSTEM_POLICY = 1
 
-ExtendedExecutionRevokedEventArgs = _ns_module.ExtendedExecutionRevokedEventArgs
-ExtendedExecutionSession = _ns_module.ExtendedExecutionSession
+ExtendedExecutionRevokedEventArgs = _winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs
+ExtendedExecutionSession = _winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession

@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Devices::Background
 
     static PyType_Spec type_spec_DeviceServicingDetails =
     {
-        "_winrt_Windows_Devices_Background.DeviceServicingDetails",
+        "_winrt_windows_devices_background.DeviceServicingDetails",
         sizeof(py::wrapper::Windows::Devices::Background::DeviceServicingDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -249,7 +249,7 @@ namespace py::cpp::Windows::Devices::Background
 
     static PyType_Spec type_spec_DeviceUseDetails =
     {
-        "_winrt_Windows_Devices_Background.DeviceUseDetails",
+        "_winrt_windows_devices_background.DeviceUseDetails",
         sizeof(py::wrapper::Windows::Devices::Background::DeviceUseDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -262,7 +262,7 @@ namespace py::cpp::Windows::Devices::Background
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Background",
+           "_winrt_windows_devices_background",
            module_doc,
            0,
            nullptr,
@@ -273,7 +273,7 @@ namespace py::cpp::Windows::Devices::Background
 
 } // py::cpp::Windows::Devices::Background
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Background(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_background(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Background;
 

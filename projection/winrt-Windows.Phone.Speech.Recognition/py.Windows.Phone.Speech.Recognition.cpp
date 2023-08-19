@@ -12,7 +12,7 @@ namespace py::cpp::Windows::Phone::Speech::Recognition
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_Speech_Recognition",
+           "_winrt_windows_phone_speech_recognition",
            module_doc,
            0,
            nullptr,
@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Phone::Speech::Recognition
 
 } // py::cpp::Windows::Phone::Speech::Recognition
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_Speech_Recognition(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_speech_recognition(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::Speech::Recognition;
 

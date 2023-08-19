@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Capture.Frames")
+from . import _winrt_windows_media_capture_frames
 
 try:
     import winrt.windows.devices.enumeration
@@ -114,22 +113,22 @@ class MultiSourceMediaFrameReaderStartStatus(enum.IntEnum):
     DEVICE_NOT_AVAILABLE = 3
     UNKNOWN_FAILURE = 4
 
-AudioMediaFrame = _ns_module.AudioMediaFrame
-BufferMediaFrame = _ns_module.BufferMediaFrame
-DepthMediaFrame = _ns_module.DepthMediaFrame
-DepthMediaFrameFormat = _ns_module.DepthMediaFrameFormat
-InfraredMediaFrame = _ns_module.InfraredMediaFrame
-MediaFrameArrivedEventArgs = _ns_module.MediaFrameArrivedEventArgs
-MediaFrameFormat = _ns_module.MediaFrameFormat
-MediaFrameReader = _ns_module.MediaFrameReader
-MediaFrameReference = _ns_module.MediaFrameReference
-MediaFrameSource = _ns_module.MediaFrameSource
-MediaFrameSourceController = _ns_module.MediaFrameSourceController
-MediaFrameSourceGetPropertyResult = _ns_module.MediaFrameSourceGetPropertyResult
-MediaFrameSourceGroup = _ns_module.MediaFrameSourceGroup
-MediaFrameSourceInfo = _ns_module.MediaFrameSourceInfo
-MultiSourceMediaFrameArrivedEventArgs = _ns_module.MultiSourceMediaFrameArrivedEventArgs
-MultiSourceMediaFrameReader = _ns_module.MultiSourceMediaFrameReader
-MultiSourceMediaFrameReference = _ns_module.MultiSourceMediaFrameReference
-VideoMediaFrame = _ns_module.VideoMediaFrame
-VideoMediaFrameFormat = _ns_module.VideoMediaFrameFormat
+AudioMediaFrame = _winrt_windows_media_capture_frames.AudioMediaFrame
+BufferMediaFrame = _winrt_windows_media_capture_frames.BufferMediaFrame
+DepthMediaFrame = _winrt_windows_media_capture_frames.DepthMediaFrame
+DepthMediaFrameFormat = _winrt_windows_media_capture_frames.DepthMediaFrameFormat
+InfraredMediaFrame = _winrt_windows_media_capture_frames.InfraredMediaFrame
+MediaFrameArrivedEventArgs = _winrt_windows_media_capture_frames.MediaFrameArrivedEventArgs
+MediaFrameFormat = _winrt_windows_media_capture_frames.MediaFrameFormat
+MediaFrameReader = _winrt_windows_media_capture_frames.MediaFrameReader
+MediaFrameReference = _winrt_windows_media_capture_frames.MediaFrameReference
+MediaFrameSource = _winrt_windows_media_capture_frames.MediaFrameSource
+MediaFrameSourceController = _winrt_windows_media_capture_frames.MediaFrameSourceController
+MediaFrameSourceGetPropertyResult = _winrt_windows_media_capture_frames.MediaFrameSourceGetPropertyResult
+MediaFrameSourceGroup = _winrt_windows_media_capture_frames.MediaFrameSourceGroup
+MediaFrameSourceInfo = _winrt_windows_media_capture_frames.MediaFrameSourceInfo
+MultiSourceMediaFrameArrivedEventArgs = _winrt_windows_media_capture_frames.MultiSourceMediaFrameArrivedEventArgs
+MultiSourceMediaFrameReader = _winrt_windows_media_capture_frames.MultiSourceMediaFrameReader
+MultiSourceMediaFrameReference = _winrt_windows_media_capture_frames.MultiSourceMediaFrameReference
+VideoMediaFrame = _winrt_windows_media_capture_frames.VideoMediaFrame
+VideoMediaFrameFormat = _winrt_windows_media_capture_frames.VideoMediaFrameFormat

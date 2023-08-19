@@ -405,7 +405,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_MessageDialog =
     {
-        "_winrt_Windows_UI_Popups.MessageDialog",
+        "_winrt_windows_ui_popups.MessageDialog",
         sizeof(py::wrapper::Windows::UI::Popups::MessageDialog),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -608,7 +608,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_PopupMenu =
     {
-        "_winrt_Windows_UI_Popups.PopupMenu",
+        "_winrt_windows_ui_popups.PopupMenu",
         sizeof(py::wrapper::Windows::UI::Popups::PopupMenu),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -898,7 +898,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_UICommand =
     {
-        "_winrt_Windows_UI_Popups.UICommand",
+        "_winrt_windows_ui_popups.UICommand",
         sizeof(py::wrapper::Windows::UI::Popups::UICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1140,7 +1140,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_UICommandSeparator =
     {
-        "_winrt_Windows_UI_Popups.UICommandSeparator",
+        "_winrt_windows_ui_popups.UICommandSeparator",
         sizeof(py::wrapper::Windows::UI::Popups::UICommandSeparator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1359,7 +1359,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyType_Spec type_spec_IUICommand =
     {
-        "_winrt_Windows_UI_Popups.IUICommand",
+        "_winrt_windows_ui_popups.IUICommand",
         sizeof(py::wrapper::Windows::UI::Popups::IUICommand),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1372,7 +1372,7 @@ namespace py::cpp::Windows::UI::Popups
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Popups",
+           "_winrt_windows_ui_popups",
            module_doc,
            0,
            nullptr,
@@ -1383,7 +1383,7 @@ namespace py::cpp::Windows::UI::Popups
 
 } // py::cpp::Windows::UI::Popups
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Popups(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Popups;
 

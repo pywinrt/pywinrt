@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Wallet")
+from . import _winrt_windows_applicationmodel_wallet
 
 try:
     import winrt.windows.devices.geolocation
@@ -83,11 +82,11 @@ class WalletSummaryViewPosition(enum.IntEnum):
     FIELD1 = 1
     FIELD2 = 2
 
-WalletBarcode = _ns_module.WalletBarcode
-WalletItem = _ns_module.WalletItem
-WalletItemCustomProperty = _ns_module.WalletItemCustomProperty
-WalletItemStore = _ns_module.WalletItemStore
-WalletManager = _ns_module.WalletManager
-WalletRelevantLocation = _ns_module.WalletRelevantLocation
-WalletTransaction = _ns_module.WalletTransaction
-WalletVerb = _ns_module.WalletVerb
+WalletBarcode = _winrt_windows_applicationmodel_wallet.WalletBarcode
+WalletItem = _winrt_windows_applicationmodel_wallet.WalletItem
+WalletItemCustomProperty = _winrt_windows_applicationmodel_wallet.WalletItemCustomProperty
+WalletItemStore = _winrt_windows_applicationmodel_wallet.WalletItemStore
+WalletManager = _winrt_windows_applicationmodel_wallet.WalletManager
+WalletRelevantLocation = _winrt_windows_applicationmodel_wallet.WalletRelevantLocation
+WalletTransaction = _winrt_windows_applicationmodel_wallet.WalletTransaction
+WalletVerb = _winrt_windows_applicationmodel_wallet.WalletVerb

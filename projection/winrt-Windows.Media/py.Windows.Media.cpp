@@ -225,7 +225,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_AudioBuffer =
     {
-        "_winrt_Windows_Media.AudioBuffer",
+        "_winrt_windows_media.AudioBuffer",
         sizeof(py::wrapper::Windows::Media::AudioBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -662,7 +662,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_AudioFrame =
     {
-        "_winrt_Windows_Media.AudioFrame",
+        "_winrt_windows_media.AudioFrame",
         sizeof(py::wrapper::Windows::Media::AudioFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_AutoRepeatModeChangeRequestedEventArgs =
     {
-        "_winrt_Windows_Media.AutoRepeatModeChangeRequestedEventArgs",
+        "_winrt_windows_media.AutoRepeatModeChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::AutoRepeatModeChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -928,7 +928,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_ImageDisplayProperties =
     {
-        "_winrt_Windows_Media.ImageDisplayProperties",
+        "_winrt_windows_media.ImageDisplayProperties",
         sizeof(py::wrapper::Windows::Media::ImageDisplayProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1685,7 +1685,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaControl =
     {
-        "_winrt_Windows_Media.MediaControl",
+        "_winrt_windows_media.MediaControl",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1710,7 +1710,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaControl_Meta =
     {
-        "_winrt_Windows_Media.MediaControl_Meta",
+        "_winrt_windows_media.MediaControl_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2194,7 +2194,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaExtensionManager =
     {
-        "_winrt_Windows_Media.MediaExtensionManager",
+        "_winrt_windows_media.MediaExtensionManager",
         sizeof(py::wrapper::Windows::Media::MediaExtensionManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2247,7 +2247,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaMarkerTypes =
     {
-        "_winrt_Windows_Media.MediaMarkerTypes",
+        "_winrt_windows_media.MediaMarkerTypes",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2268,7 +2268,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaMarkerTypes_Meta =
     {
-        "_winrt_Windows_Media.MediaMarkerTypes_Meta",
+        "_winrt_windows_media.MediaMarkerTypes_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2363,7 +2363,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaProcessingTriggerDetails =
     {
-        "_winrt_Windows_Media.MediaProcessingTriggerDetails",
+        "_winrt_windows_media.MediaProcessingTriggerDetails",
         sizeof(py::wrapper::Windows::Media::MediaProcessingTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2946,7 +2946,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaTimelineController =
     {
-        "_winrt_Windows_Media.MediaTimelineController",
+        "_winrt_windows_media.MediaTimelineController",
         sizeof(py::wrapper::Windows::Media::MediaTimelineController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3041,7 +3041,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaTimelineControllerFailedEventArgs =
     {
-        "_winrt_Windows_Media.MediaTimelineControllerFailedEventArgs",
+        "_winrt_windows_media.MediaTimelineControllerFailedEventArgs",
         sizeof(py::wrapper::Windows::Media::MediaTimelineControllerFailedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3424,7 +3424,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MusicDisplayProperties =
     {
-        "_winrt_Windows_Media.MusicDisplayProperties",
+        "_winrt_windows_media.MusicDisplayProperties",
         sizeof(py::wrapper::Windows::Media::MusicDisplayProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3519,7 +3519,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_PlaybackPositionChangeRequestedEventArgs =
     {
-        "_winrt_Windows_Media.PlaybackPositionChangeRequestedEventArgs",
+        "_winrt_windows_media.PlaybackPositionChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlaybackPositionChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3614,7 +3614,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_PlaybackRateChangeRequestedEventArgs =
     {
-        "_winrt_Windows_Media.PlaybackRateChangeRequestedEventArgs",
+        "_winrt_windows_media.PlaybackRateChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::PlaybackRateChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3709,7 +3709,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_ShuffleEnabledChangeRequestedEventArgs =
     {
-        "_winrt_Windows_Media.ShuffleEnabledChangeRequestedEventArgs",
+        "_winrt_windows_media.ShuffleEnabledChangeRequestedEventArgs",
         sizeof(py::wrapper::Windows::Media::ShuffleEnabledChangeRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4877,7 +4877,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_SystemMediaTransportControls =
     {
-        "_winrt_Windows_Media.SystemMediaTransportControls",
+        "_winrt_windows_media.SystemMediaTransportControls",
         sizeof(py::wrapper::Windows::Media::SystemMediaTransportControls),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4972,7 +4972,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_SystemMediaTransportControlsButtonPressedEventArgs =
     {
-        "_winrt_Windows_Media.SystemMediaTransportControlsButtonPressedEventArgs",
+        "_winrt_windows_media.SystemMediaTransportControlsButtonPressedEventArgs",
         sizeof(py::wrapper::Windows::Media::SystemMediaTransportControlsButtonPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5346,7 +5346,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_SystemMediaTransportControlsDisplayUpdater =
     {
-        "_winrt_Windows_Media.SystemMediaTransportControlsDisplayUpdater",
+        "_winrt_windows_media.SystemMediaTransportControlsDisplayUpdater",
         sizeof(py::wrapper::Windows::Media::SystemMediaTransportControlsDisplayUpdater),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5441,7 +5441,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_SystemMediaTransportControlsPropertyChangedEventArgs =
     {
-        "_winrt_Windows_Media.SystemMediaTransportControlsPropertyChangedEventArgs",
+        "_winrt_windows_media.SystemMediaTransportControlsPropertyChangedEventArgs",
         sizeof(py::wrapper::Windows::Media::SystemMediaTransportControlsPropertyChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5779,7 +5779,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_SystemMediaTransportControlsTimelineProperties =
     {
-        "_winrt_Windows_Media.SystemMediaTransportControlsTimelineProperties",
+        "_winrt_windows_media.SystemMediaTransportControlsTimelineProperties",
         sizeof(py::wrapper::Windows::Media::SystemMediaTransportControlsTimelineProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5970,7 +5970,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_VideoDisplayProperties =
     {
-        "_winrt_Windows_Media.VideoDisplayProperties",
+        "_winrt_windows_media.VideoDisplayProperties",
         sizeof(py::wrapper::Windows::Media::VideoDisplayProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6023,7 +6023,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_VideoEffects =
     {
-        "_winrt_Windows_Media.VideoEffects",
+        "_winrt_windows_media.VideoEffects",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6044,7 +6044,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_VideoEffects_Meta =
     {
-        "_winrt_Windows_Media.VideoEffects_Meta",
+        "_winrt_windows_media.VideoEffects_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6684,7 +6684,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_VideoFrame =
     {
-        "_winrt_Windows_Media.VideoFrame",
+        "_winrt_windows_media.VideoFrame",
         sizeof(py::wrapper::Windows::Media::VideoFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6792,7 +6792,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_IMediaExtension =
     {
-        "_winrt_Windows_Media.IMediaExtension",
+        "_winrt_windows_media.IMediaExtension",
         sizeof(py::wrapper::Windows::Media::IMediaExtension),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7172,7 +7172,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_IMediaFrame =
     {
-        "_winrt_Windows_Media.IMediaFrame",
+        "_winrt_windows_media.IMediaFrame",
         sizeof(py::wrapper::Windows::Media::IMediaFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7307,7 +7307,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_IMediaMarker =
     {
-        "_winrt_Windows_Media.IMediaMarker",
+        "_winrt_windows_media.IMediaMarker",
         sizeof(py::wrapper::Windows::Media::IMediaMarker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7402,7 +7402,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_IMediaMarkers =
     {
-        "_winrt_Windows_Media.IMediaMarkers",
+        "_winrt_windows_media.IMediaMarkers",
         sizeof(py::wrapper::Windows::Media::IMediaMarkers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7537,7 +7537,7 @@ namespace py::cpp::Windows::Media
 
     static PyType_Spec type_spec_MediaTimeRange =
     {
-        "_winrt_Windows_Media.MediaTimeRange",
+        "_winrt_windows_media.MediaTimeRange",
         sizeof(py::wrapper::Windows::Media::MediaTimeRange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7550,7 +7550,7 @@ namespace py::cpp::Windows::Media
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media",
+           "_winrt_windows_media",
            module_doc,
            0,
            nullptr,
@@ -7561,7 +7561,7 @@ namespace py::cpp::Windows::Media
 
 } // py::cpp::Windows::Media
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
 {
     using namespace py::cpp::Windows::Media;
 

@@ -733,7 +733,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTask =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTask",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTask",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -828,7 +828,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskBatch =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskBatch",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskBatch",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1383,7 +1383,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskList =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskList",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskList",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1586,7 +1586,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskListLimitedWriteOperations =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskListLimitedWriteOperations",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskListLimitedWriteOperations",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1880,7 +1880,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskListSyncManager =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskListSyncManager",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskListSyncManager",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2069,7 +2069,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskManager =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskManager",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskManager",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskQueryOptions =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskQueryOptions",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskQueryOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2368,7 +2368,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskReader =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskReader",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskReader",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2850,7 +2850,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskRecurrenceProperties =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskRecurrenceProperties",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskRecurrenceProperties",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3140,7 +3140,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskRegenerationProperties =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskRegenerationProperties",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskRegenerationProperties",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3330,7 +3330,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyType_Spec type_spec_UserDataTaskStore =
     {
-        "_winrt_Windows_ApplicationModel_UserDataTasks.UserDataTaskStore",
+        "_winrt_windows_applicationmodel_userdatatasks.UserDataTaskStore",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3343,7 +3343,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_UserDataTasks",
+           "_winrt_windows_applicationmodel_userdatatasks",
            module_doc,
            0,
            nullptr,
@@ -3354,7 +3354,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 
 } // py::cpp::Windows::ApplicationModel::UserDataTasks
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataTasks(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
 

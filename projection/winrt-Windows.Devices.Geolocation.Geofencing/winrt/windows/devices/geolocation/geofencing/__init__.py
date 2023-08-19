@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Geolocation.Geofencing")
+from . import _winrt_windows_devices_geolocation_geofencing
 
 try:
     import winrt.windows.devices.geolocation
@@ -45,6 +44,6 @@ class MonitoredGeofenceStates(enum.IntFlag):
     EXITED = 0x2
     REMOVED = 0x4
 
-Geofence = _ns_module.Geofence
-GeofenceMonitor = _ns_module.GeofenceMonitor
-GeofenceStateChangeReport = _ns_module.GeofenceStateChangeReport
+Geofence = _winrt_windows_devices_geolocation_geofencing.Geofence
+GeofenceMonitor = _winrt_windows_devices_geolocation_geofencing.GeofenceMonitor
+GeofenceStateChangeReport = _winrt_windows_devices_geolocation_geofencing.GeofenceStateChangeReport

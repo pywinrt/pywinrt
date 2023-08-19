@@ -1203,7 +1203,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_FileInformation =
     {
-        "_winrt_Windows_Storage_BulkAccess.FileInformation",
+        "_winrt_windows_storage_bulkaccess.FileInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FileInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1601,7 +1601,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_FileInformationFactory =
     {
-        "_winrt_Windows_Storage_BulkAccess.FileInformationFactory",
+        "_winrt_windows_storage_bulkaccess.FileInformationFactory",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FileInformationFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3149,7 +3149,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_FolderInformation =
     {
-        "_winrt_Windows_Storage_BulkAccess.FolderInformation",
+        "_winrt_windows_storage_bulkaccess.FolderInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::FolderInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3434,7 +3434,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyType_Spec type_spec_IStorageItemInformation =
     {
-        "_winrt_Windows_Storage_BulkAccess.IStorageItemInformation",
+        "_winrt_windows_storage_bulkaccess.IStorageItemInformation",
         sizeof(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3447,7 +3447,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Storage_BulkAccess",
+           "_winrt_windows_storage_bulkaccess",
            module_doc,
            0,
            nullptr,
@@ -3458,7 +3458,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
 } // py::cpp::Windows::Storage::BulkAccess
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Storage_BulkAccess(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_storage_bulkaccess(void) noexcept
 {
     using namespace py::cpp::Windows::Storage::BulkAccess;
 

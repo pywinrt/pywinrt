@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Search.Core")
+from . import _winrt_windows_applicationmodel_search_core
 
 try:
     import winrt.windows.applicationmodel.search
@@ -31,7 +30,7 @@ class SearchSuggestionKind(enum.IntEnum):
     RESULT = 1
     SEPARATOR = 2
 
-RequestingFocusOnKeyboardInputEventArgs = _ns_module.RequestingFocusOnKeyboardInputEventArgs
-SearchSuggestion = _ns_module.SearchSuggestion
-SearchSuggestionManager = _ns_module.SearchSuggestionManager
-SearchSuggestionsRequestedEventArgs = _ns_module.SearchSuggestionsRequestedEventArgs
+RequestingFocusOnKeyboardInputEventArgs = _winrt_windows_applicationmodel_search_core.RequestingFocusOnKeyboardInputEventArgs
+SearchSuggestion = _winrt_windows_applicationmodel_search_core.SearchSuggestion
+SearchSuggestionManager = _winrt_windows_applicationmodel_search_core.SearchSuggestionManager
+SearchSuggestionsRequestedEventArgs = _winrt_windows_applicationmodel_search_core.SearchSuggestionsRequestedEventArgs

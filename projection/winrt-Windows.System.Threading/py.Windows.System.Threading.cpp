@@ -108,7 +108,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyType_Spec type_spec_ThreadPool =
     {
-        "_winrt_Windows_System_Threading.ThreadPool",
+        "_winrt_windows_system_threading.ThreadPool",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyType_Spec type_spec_ThreadPoolTimer =
     {
-        "_winrt_Windows_System_Threading.ThreadPoolTimer",
+        "_winrt_windows_system_threading.ThreadPoolTimer",
         sizeof(py::wrapper::Windows::System::Threading::ThreadPoolTimer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -377,7 +377,7 @@ namespace py::cpp::Windows::System::Threading
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Threading",
+           "_winrt_windows_system_threading",
            module_doc,
            0,
            nullptr,
@@ -388,7 +388,7 @@ namespace py::cpp::Windows::System::Threading
 
 } // py::cpp::Windows::System::Threading
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Threading(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_threading(void) noexcept
 {
     using namespace py::cpp::Windows::System::Threading;
 

@@ -901,7 +901,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_DtdEntity =
     {
-        "_winrt_Windows_Data_Xml_Dom.DtdEntity",
+        "_winrt_windows_data_xml_dom.DtdEntity",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::DtdEntity),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1783,7 +1783,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_DtdNotation =
     {
-        "_winrt_Windows_Data_Xml_Dom.DtdNotation",
+        "_winrt_windows_data_xml_dom.DtdNotation",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::DtdNotation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2713,7 +2713,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlAttribute =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlAttribute",
+        "_winrt_windows_data_xml_dom.XmlAttribute",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3824,7 +3824,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlCDataSection =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlCDataSection",
+        "_winrt_windows_data_xml_dom.XmlCDataSection",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4903,7 +4903,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlComment =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlComment",
+        "_winrt_windows_data_xml_dom.XmlComment",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlComment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6514,7 +6514,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlDocument =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlDocument",
+        "_winrt_windows_data_xml_dom.XmlDocument",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDocument),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7356,7 +7356,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlDocumentFragment =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlDocumentFragment",
+        "_winrt_windows_data_xml_dom.XmlDocumentFragment",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8258,7 +8258,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlDocumentType =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlDocumentType",
+        "_winrt_windows_data_xml_dom.XmlDocumentType",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8366,7 +8366,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlDomImplementation =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlDomImplementation",
+        "_winrt_windows_data_xml_dom.XmlDomImplementation",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlDomImplementation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9622,7 +9622,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlElement =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlElement",
+        "_winrt_windows_data_xml_dom.XmlElement",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10464,7 +10464,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlEntityReference =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlEntityReference",
+        "_winrt_windows_data_xml_dom.XmlEntityReference",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10802,7 +10802,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlLoadSettings =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlLoadSettings",
+        "_winrt_windows_data_xml_dom.XmlLoadSettings",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11396,7 +11396,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlNamedNodeMap =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlNamedNodeMap",
+        "_winrt_windows_data_xml_dom.XmlNamedNodeMap",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11796,7 +11796,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlNodeList =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlNodeList",
+        "_winrt_windows_data_xml_dom.XmlNodeList",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -12706,7 +12706,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlProcessingInstruction =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlProcessingInstruction",
+        "_winrt_windows_data_xml_dom.XmlProcessingInstruction",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -13817,7 +13817,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_XmlText =
     {
-        "_winrt_Windows_Data_Xml_Dom.XmlText",
+        "_winrt_windows_data_xml_dom.XmlText",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::XmlText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -14896,7 +14896,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_IXmlCharacterData =
     {
-        "_winrt_Windows_Data_Xml_Dom.IXmlCharacterData",
+        "_winrt_windows_data_xml_dom.IXmlCharacterData",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15738,7 +15738,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_IXmlNode =
     {
-        "_winrt_Windows_Data_Xml_Dom.IXmlNode",
+        "_winrt_windows_data_xml_dom.IXmlNode",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNode),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -15943,7 +15943,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_IXmlNodeSelector =
     {
-        "_winrt_Windows_Data_Xml_Dom.IXmlNodeSelector",
+        "_winrt_windows_data_xml_dom.IXmlNodeSelector",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -16096,7 +16096,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_IXmlNodeSerializer =
     {
-        "_winrt_Windows_Data_Xml_Dom.IXmlNodeSerializer",
+        "_winrt_windows_data_xml_dom.IXmlNodeSerializer",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17207,7 +17207,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyType_Spec type_spec_IXmlText =
     {
-        "_winrt_Windows_Data_Xml_Dom.IXmlText",
+        "_winrt_windows_data_xml_dom.IXmlText",
         sizeof(py::wrapper::Windows::Data::Xml::Dom::IXmlText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -17220,7 +17220,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Data_Xml_Dom",
+           "_winrt_windows_data_xml_dom",
            module_doc,
            0,
            nullptr,
@@ -17231,7 +17231,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
 } // py::cpp::Windows::Data::Xml::Dom
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Data_Xml_Dom(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
 {
     using namespace py::cpp::Windows::Data::Xml::Dom;
 

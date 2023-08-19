@@ -169,7 +169,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AnnotationPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AnnotationPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.AnnotationPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -194,7 +194,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AnnotationPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AnnotationPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.AnnotationPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -457,7 +457,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationAnnotation =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationAnnotation",
+        "_winrt_windows_ui_xaml_automation.AutomationAnnotation",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::AutomationAnnotation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -479,7 +479,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationAnnotation_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationAnnotation_Meta",
+        "_winrt_windows_ui_xaml_automation.AutomationAnnotation_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationElementIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationElementIdentifiers",
+        "_winrt_windows_ui_xaml_automation.AutomationElementIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::AutomationElementIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1354,7 +1354,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationElementIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationElementIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.AutomationElementIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3724,7 +3724,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationProperties =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationProperties",
+        "_winrt_windows_ui_xaml_automation.AutomationProperties",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::AutomationProperties),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3773,7 +3773,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationProperties_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationProperties_Meta",
+        "_winrt_windows_ui_xaml_automation.AutomationProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -3848,7 +3848,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_AutomationProperty =
     {
-        "_winrt_Windows_UI_Xaml_Automation.AutomationProperty",
+        "_winrt_windows_ui_xaml_automation.AutomationProperty",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::AutomationProperty),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3942,7 +3942,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_DockPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.DockPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.DockPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::DockPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3963,7 +3963,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_DockPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.DockPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.DockPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4114,7 +4114,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_DragPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.DragPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.DragPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::DragPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4138,7 +4138,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_DragPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.DragPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.DragPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4251,7 +4251,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_DropTargetPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.DropTargetPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.DropTargetPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4273,7 +4273,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_DropTargetPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.DropTargetPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.DropTargetPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4367,7 +4367,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_ExpandCollapsePatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.ExpandCollapsePatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.ExpandCollapsePatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4388,7 +4388,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_ExpandCollapsePatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.ExpandCollapsePatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.ExpandCollapsePatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4558,7 +4558,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_GridItemPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.GridItemPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.GridItemPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4583,7 +4583,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_GridItemPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.GridItemPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.GridItemPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4696,7 +4696,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_GridPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.GridPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.GridPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::GridPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4718,7 +4718,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_GridPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.GridPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.GridPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -4831,7 +4831,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_MultipleViewPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.MultipleViewPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.MultipleViewPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4853,7 +4853,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_MultipleViewPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.MultipleViewPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.MultipleViewPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5042,7 +5042,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_RangeValuePatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.RangeValuePatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.RangeValuePatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5068,7 +5068,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_RangeValuePatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.RangeValuePatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.RangeValuePatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5276,7 +5276,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_ScrollPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.ScrollPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.ScrollPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5303,7 +5303,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_ScrollPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.ScrollPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.ScrollPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5416,7 +5416,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_SelectionItemPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.SelectionItemPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.SelectionItemPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5438,7 +5438,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_SelectionItemPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.SelectionItemPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.SelectionItemPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5570,7 +5570,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_SelectionPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.SelectionPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.SelectionPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5593,7 +5593,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_SelectionPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.SelectionPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.SelectionPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5687,7 +5687,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_SpreadsheetItemPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.SpreadsheetItemPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.SpreadsheetItemPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5708,7 +5708,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_SpreadsheetItemPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.SpreadsheetItemPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.SpreadsheetItemPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -5916,7 +5916,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_StylesPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.StylesPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.StylesPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::StylesPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5943,7 +5943,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_StylesPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.StylesPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.StylesPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6056,7 +6056,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TableItemPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TableItemPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.TableItemPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6078,7 +6078,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TableItemPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TableItemPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.TableItemPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6210,7 +6210,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TablePatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TablePatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.TablePatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::TablePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6233,7 +6233,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TablePatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TablePatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.TablePatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6327,7 +6327,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TogglePatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TogglePatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.TogglePatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::TogglePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6348,7 +6348,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TogglePatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TogglePatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.TogglePatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6499,7 +6499,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TransformPattern2Identifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TransformPattern2Identifiers",
+        "_winrt_windows_ui_xaml_automation.TransformPattern2Identifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::TransformPattern2Identifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6523,7 +6523,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TransformPattern2Identifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TransformPattern2Identifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.TransformPattern2Identifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6655,7 +6655,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TransformPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TransformPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.TransformPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::TransformPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6678,7 +6678,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_TransformPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.TransformPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.TransformPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -6791,7 +6791,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_ValuePatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.ValuePatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.ValuePatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::ValuePatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6813,7 +6813,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_ValuePatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.ValuePatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.ValuePatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7002,7 +7002,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_WindowPatternIdentifiers =
     {
-        "_winrt_Windows_UI_Xaml_Automation.WindowPatternIdentifiers",
+        "_winrt_windows_ui_xaml_automation.WindowPatternIdentifiers",
         sizeof(py::wrapper::Windows::UI::Xaml::Automation::WindowPatternIdentifiers),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7028,7 +7028,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyType_Spec type_spec_WindowPatternIdentifiers_Meta =
     {
-        "_winrt_Windows_UI_Xaml_Automation.WindowPatternIdentifiers_Meta",
+        "_winrt_windows_ui_xaml_automation.WindowPatternIdentifiers_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -7041,7 +7041,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Xaml_Automation",
+           "_winrt_windows_ui_xaml_automation",
            module_doc,
            0,
            nullptr,
@@ -7052,7 +7052,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
 } // py::cpp::Windows::UI::Xaml::Automation
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Xaml_Automation(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Automation;
 

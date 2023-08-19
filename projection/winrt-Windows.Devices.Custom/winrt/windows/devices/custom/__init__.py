@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Custom")
+from . import _winrt_windows_devices_custom
 
 try:
     import winrt.windows.foundation
@@ -37,7 +36,7 @@ class IOControlBufferingMethod(enum.IntEnum):
     DIRECT_OUTPUT = 2
     NEITHER = 3
 
-CustomDevice = _ns_module.CustomDevice
-IOControlCode = _ns_module.IOControlCode
-KnownDeviceTypes = _ns_module.KnownDeviceTypes
-IIOControlCode = _ns_module.IIOControlCode
+CustomDevice = _winrt_windows_devices_custom.CustomDevice
+IOControlCode = _winrt_windows_devices_custom.IOControlCode
+KnownDeviceTypes = _winrt_windows_devices_custom.KnownDeviceTypes
+IIOControlCode = _winrt_windows_devices_custom.IIOControlCode

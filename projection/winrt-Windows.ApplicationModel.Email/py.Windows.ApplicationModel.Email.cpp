@@ -554,7 +554,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailAttachment =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailAttachment",
+        "_winrt_windows_applicationmodel_email.EmailAttachment",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -939,7 +939,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailConversation =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailConversation",
+        "_winrt_windows_applicationmodel_email.EmailConversation",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailConversation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1054,7 +1054,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailConversationBatch =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailConversationBatch",
+        "_winrt_windows_applicationmodel_email.EmailConversationBatch",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailConversationBatch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1159,7 +1159,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailConversationReader =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailConversationReader",
+        "_winrt_windows_applicationmodel_email.EmailConversationReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailConversationReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1875,7 +1875,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailFolder =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailFolder",
+        "_winrt_windows_applicationmodel_email.EmailFolder",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailFolder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2565,7 +2565,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailIrmInfo =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailIrmInfo",
+        "_winrt_windows_applicationmodel_email.EmailIrmInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2824,7 +2824,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailIrmTemplate =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailIrmTemplate",
+        "_winrt_windows_applicationmodel_email.EmailIrmTemplate",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailIrmTemplate),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2979,7 +2979,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailItemCounts =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailItemCounts",
+        "_winrt_windows_applicationmodel_email.EmailItemCounts",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailItemCounts),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4703,7 +4703,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailbox =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailbox",
+        "_winrt_windows_applicationmodel_email.EmailMailbox",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4818,7 +4818,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxAction =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxAction",
+        "_winrt_windows_applicationmodel_email.EmailMailboxAction",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAction),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4989,7 +4989,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxAutoReply =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxAutoReply",
+        "_winrt_windows_applicationmodel_email.EmailMailboxAutoReply",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReply),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5339,7 +5339,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxAutoReplySettings =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxAutoReplySettings",
+        "_winrt_windows_applicationmodel_email.EmailMailboxAutoReplySettings",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6086,7 +6086,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxCapabilities =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxCapabilities",
+        "_winrt_windows_applicationmodel_email.EmailMailboxCapabilities",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6241,7 +6241,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxChange =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxChange",
+        "_winrt_windows_applicationmodel_email.EmailMailboxChange",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChange),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6410,7 +6410,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxChangeReader =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxChangeReader",
+        "_winrt_windows_applicationmodel_email.EmailMailboxChangeReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6597,7 +6597,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxChangeTracker =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxChangeTracker",
+        "_winrt_windows_applicationmodel_email.EmailMailboxChangeTracker",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeTracker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6703,7 +6703,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxChangedDeferral =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxChangedDeferral",
+        "_winrt_windows_applicationmodel_email.EmailMailboxChangedDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6808,7 +6808,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxChangedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxChangedEventArgs",
+        "_winrt_windows_applicationmodel_email.EmailMailboxChangedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6923,7 +6923,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxCreateFolderResult =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxCreateFolderResult",
+        "_winrt_windows_applicationmodel_email.EmailMailboxCreateFolderResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7286,7 +7286,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxPolicies =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxPolicies",
+        "_winrt_windows_applicationmodel_email.EmailMailboxPolicies",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7580,7 +7580,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMailboxSyncManager =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMailboxSyncManager",
+        "_winrt_windows_applicationmodel_email.EmailMailboxSyncManager",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxSyncManager),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7710,7 +7710,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailManager =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailManager",
+        "_winrt_windows_applicationmodel_email.EmailManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7869,7 +7869,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailManagerForUser =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailManagerForUser",
+        "_winrt_windows_applicationmodel_email.EmailManagerForUser",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailManagerForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8611,7 +8611,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMeetingInfo =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMeetingInfo",
+        "_winrt_windows_applicationmodel_email.EmailMeetingInfo",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10103,7 +10103,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMessage =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMessage",
+        "_winrt_windows_applicationmodel_email.EmailMessage",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10218,7 +10218,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMessageBatch =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMessageBatch",
+        "_winrt_windows_applicationmodel_email.EmailMessageBatch",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMessageBatch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10323,7 +10323,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailMessageReader =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailMessageReader",
+        "_winrt_windows_applicationmodel_email.EmailMessageReader",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailMessageReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10636,7 +10636,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailQueryOptions =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailQueryOptions",
+        "_winrt_windows_applicationmodel_email.EmailQueryOptions",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailQueryOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10855,7 +10855,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailQueryTextSearch =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailQueryTextSearch",
+        "_winrt_windows_applicationmodel_email.EmailQueryTextSearch",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailQueryTextSearch),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11080,7 +11080,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailRecipient =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailRecipient",
+        "_winrt_windows_applicationmodel_email.EmailRecipient",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailRecipient),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11279,7 +11279,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailRecipientResolutionResult =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailRecipientResolutionResult",
+        "_winrt_windows_applicationmodel_email.EmailRecipientResolutionResult",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailRecipientResolutionResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11667,7 +11667,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailStore =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailStore",
+        "_winrt_windows_applicationmodel_email.EmailStore",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailStore),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11742,7 +11742,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyType_Spec type_spec_EmailStoreNotificationTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_Email.EmailStoreNotificationTriggerDetails",
+        "_winrt_windows_applicationmodel_email.EmailStoreNotificationTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11755,7 +11755,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_Email",
+           "_winrt_windows_applicationmodel_email",
            module_doc,
            0,
            nullptr,
@@ -11766,7 +11766,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
 } // py::cpp::Windows::ApplicationModel::Email
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_Email(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::Email;
 

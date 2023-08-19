@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Composition.Diagnostics")
+from . import _winrt_windows_ui_composition_diagnostics
 
 try:
     import winrt.windows.ui.composition
@@ -22,5 +21,5 @@ class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     SWAP_CHAINS = 0x40
     ALL = 0xffffffff
 
-CompositionDebugHeatMaps = _ns_module.CompositionDebugHeatMaps
-CompositionDebugSettings = _ns_module.CompositionDebugSettings
+CompositionDebugHeatMaps = _winrt_windows_ui_composition_diagnostics.CompositionDebugHeatMaps
+CompositionDebugSettings = _winrt_windows_ui_composition_diagnostics.CompositionDebugSettings

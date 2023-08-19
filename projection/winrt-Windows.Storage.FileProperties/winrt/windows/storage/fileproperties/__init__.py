@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Storage.FileProperties")
+from . import _winrt_windows_storage_fileproperties
 
 try:
     import winrt.windows.devices.geolocation
@@ -74,12 +73,12 @@ class VideoOrientation(enum.IntEnum):
     ROTATE180 = 180
     ROTATE270 = 270
 
-BasicProperties = _ns_module.BasicProperties
-DocumentProperties = _ns_module.DocumentProperties
-GeotagHelper = _ns_module.GeotagHelper
-ImageProperties = _ns_module.ImageProperties
-MusicProperties = _ns_module.MusicProperties
-StorageItemContentProperties = _ns_module.StorageItemContentProperties
-StorageItemThumbnail = _ns_module.StorageItemThumbnail
-VideoProperties = _ns_module.VideoProperties
-IStorageItemExtraProperties = _ns_module.IStorageItemExtraProperties
+BasicProperties = _winrt_windows_storage_fileproperties.BasicProperties
+DocumentProperties = _winrt_windows_storage_fileproperties.DocumentProperties
+GeotagHelper = _winrt_windows_storage_fileproperties.GeotagHelper
+ImageProperties = _winrt_windows_storage_fileproperties.ImageProperties
+MusicProperties = _winrt_windows_storage_fileproperties.MusicProperties
+StorageItemContentProperties = _winrt_windows_storage_fileproperties.StorageItemContentProperties
+StorageItemThumbnail = _winrt_windows_storage_fileproperties.StorageItemThumbnail
+VideoProperties = _winrt_windows_storage_fileproperties.VideoProperties
+IStorageItemExtraProperties = _winrt_windows_storage_fileproperties.IStorageItemExtraProperties

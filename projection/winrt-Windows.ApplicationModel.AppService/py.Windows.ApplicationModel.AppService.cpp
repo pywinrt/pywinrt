@@ -65,7 +65,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceCatalog =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceCatalog",
+        "_winrt_windows_applicationmodel_appservice.AppServiceCatalog",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -160,7 +160,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceClosedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceClosedEventArgs",
+        "_winrt_windows_applicationmodel_appservice.AppServiceClosedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -673,7 +673,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceConnection =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceConnection",
+        "_winrt_windows_applicationmodel_appservice.AppServiceConnection",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -779,7 +779,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceDeferral =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceDeferral",
+        "_winrt_windows_applicationmodel_appservice.AppServiceDeferral",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceDeferral),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -906,7 +906,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceRequest =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceRequest",
+        "_winrt_windows_applicationmodel_appservice.AppServiceRequest",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1031,7 +1031,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceRequestReceivedEventArgs =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceRequestReceivedEventArgs",
+        "_winrt_windows_applicationmodel_appservice.AppServiceRequestReceivedEventArgs",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1146,7 +1146,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceResponse =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceResponse",
+        "_winrt_windows_applicationmodel_appservice.AppServiceResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceResponse),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1353,7 +1353,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_AppServiceTriggerDetails =
     {
-        "_winrt_Windows_ApplicationModel_AppService.AppServiceTriggerDetails",
+        "_winrt_windows_applicationmodel_appservice.AppServiceTriggerDetails",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::AppServiceTriggerDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1468,7 +1468,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyType_Spec type_spec_StatelessAppServiceResponse =
     {
-        "_winrt_Windows_ApplicationModel_AppService.StatelessAppServiceResponse",
+        "_winrt_windows_applicationmodel_appservice.StatelessAppServiceResponse",
         sizeof(py::wrapper::Windows::ApplicationModel::AppService::StatelessAppServiceResponse),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1481,7 +1481,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_AppService",
+           "_winrt_windows_applicationmodel_appservice",
            module_doc,
            0,
            nullptr,
@@ -1492,7 +1492,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
 } // py::cpp::Windows::ApplicationModel::AppService
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_AppService(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appservice(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::AppService;
 

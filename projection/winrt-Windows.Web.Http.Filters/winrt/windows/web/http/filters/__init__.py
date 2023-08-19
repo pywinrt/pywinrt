@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Web.Http.Filters")
+from . import _winrt_windows_web_http_filters
 
 try:
     import winrt.windows.foundation
@@ -55,7 +54,7 @@ class HttpCookieUsageBehavior(enum.IntEnum):
     DEFAULT = 0
     NO_COOKIES = 1
 
-HttpBaseProtocolFilter = _ns_module.HttpBaseProtocolFilter
-HttpCacheControl = _ns_module.HttpCacheControl
-HttpServerCustomValidationRequestedEventArgs = _ns_module.HttpServerCustomValidationRequestedEventArgs
-IHttpFilter = _ns_module.IHttpFilter
+HttpBaseProtocolFilter = _winrt_windows_web_http_filters.HttpBaseProtocolFilter
+HttpCacheControl = _winrt_windows_web_http_filters.HttpCacheControl
+HttpServerCustomValidationRequestedEventArgs = _winrt_windows_web_http_filters.HttpServerCustomValidationRequestedEventArgs
+IHttpFilter = _winrt_windows_web_http_filters.IHttpFilter

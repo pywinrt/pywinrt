@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Perception.People")
+from . import _winrt_windows_perception_people
 
 try:
     import winrt.windows.foundation
@@ -68,10 +67,10 @@ class JointPoseAccuracy(enum.IntEnum):
     HIGH = 0
     APPROXIMATE = 1
 
-HandMeshVertex = _ns_module.HandMeshVertex
-JointPose = _ns_module.JointPose
-EyesPose = _ns_module.EyesPose
-HandMeshObserver = _ns_module.HandMeshObserver
-HandMeshVertexState = _ns_module.HandMeshVertexState
-HandPose = _ns_module.HandPose
-HeadPose = _ns_module.HeadPose
+HandMeshVertex = _winrt_windows_perception_people.HandMeshVertex
+JointPose = _winrt_windows_perception_people.JointPose
+EyesPose = _winrt_windows_perception_people.EyesPose
+HandMeshObserver = _winrt_windows_perception_people.HandMeshObserver
+HandMeshVertexState = _winrt_windows_perception_people.HandMeshVertexState
+HandPose = _winrt_windows_perception_people.HandPose
+HeadPose = _winrt_windows_perception_people.HeadPose

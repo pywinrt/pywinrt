@@ -109,7 +109,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownCameraIntrinsicsProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownCameraIntrinsicsProperties",
+        "_winrt_windows_devices_perception.KnownCameraIntrinsicsProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -133,7 +133,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownCameraIntrinsicsProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownCameraIntrinsicsProperties_Meta",
+        "_winrt_windows_devices_perception.KnownCameraIntrinsicsProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -224,7 +224,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionColorFrameSourceProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionColorFrameSourceProperties",
+        "_winrt_windows_devices_perception.KnownPerceptionColorFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -247,7 +247,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionColorFrameSourceProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionColorFrameSourceProperties_Meta",
+        "_winrt_windows_devices_perception.KnownPerceptionColorFrameSourceProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -319,7 +319,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionDepthFrameSourceProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionDepthFrameSourceProperties",
+        "_winrt_windows_devices_perception.KnownPerceptionDepthFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -341,7 +341,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionDepthFrameSourceProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionDepthFrameSourceProperties_Meta",
+        "_winrt_windows_devices_perception.KnownPerceptionDepthFrameSourceProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -489,7 +489,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionFrameSourceProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionFrameSourceProperties",
+        "_winrt_windows_devices_perception.KnownPerceptionFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -515,7 +515,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionFrameSourceProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionFrameSourceProperties_Meta",
+        "_winrt_windows_devices_perception.KnownPerceptionFrameSourceProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -682,7 +682,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionInfraredFrameSourceProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionInfraredFrameSourceProperties",
+        "_winrt_windows_devices_perception.KnownPerceptionInfraredFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -709,7 +709,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionInfraredFrameSourceProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionInfraredFrameSourceProperties_Meta",
+        "_winrt_windows_devices_perception.KnownPerceptionInfraredFrameSourceProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -838,7 +838,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionVideoFrameSourceProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionVideoFrameSourceProperties",
+        "_winrt_windows_devices_perception.KnownPerceptionVideoFrameSourceProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -863,7 +863,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionVideoFrameSourceProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionVideoFrameSourceProperties_Meta",
+        "_winrt_windows_devices_perception.KnownPerceptionVideoFrameSourceProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -992,7 +992,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionVideoProfileProperties =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionVideoProfileProperties",
+        "_winrt_windows_devices_perception.KnownPerceptionVideoProfileProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1017,7 +1017,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_KnownPerceptionVideoProfileProperties_Meta =
     {
-        "_winrt_Windows_Devices_Perception.KnownPerceptionVideoProfileProperties_Meta",
+        "_winrt_windows_devices_perception.KnownPerceptionVideoProfileProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1165,7 +1165,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrame =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrame",
+        "_winrt_windows_devices_perception.PerceptionColorFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1290,7 +1290,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrameArrivedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrameArrivedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionColorFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1561,7 +1561,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrameReader =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrameReader",
+        "_winrt_windows_devices_perception.PerceptionColorFrameReader",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2490,7 +2490,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrameSource =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrameSource",
+        "_winrt_windows_devices_perception.PerceptionColorFrameSource",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2585,7 +2585,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrameSourceAddedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrameSourceAddedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionColorFrameSourceAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2680,7 +2680,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrameSourceRemovedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrameSourceRemovedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionColorFrameSourceRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3017,7 +3017,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionColorFrameSourceWatcher =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionColorFrameSourceWatcher",
+        "_winrt_windows_devices_perception.PerceptionColorFrameSourceWatcher",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3223,7 +3223,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionControlSession =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionControlSession",
+        "_winrt_windows_devices_perception.PerceptionControlSession",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionControlSession),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthCorrelatedCameraIntrinsics =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthCorrelatedCameraIntrinsics",
+        "_winrt_windows_devices_perception.PerceptionDepthCorrelatedCameraIntrinsics",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3643,7 +3643,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthCorrelatedCoordinateMapper =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthCorrelatedCoordinateMapper",
+        "_winrt_windows_devices_perception.PerceptionDepthCorrelatedCoordinateMapper",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3791,7 +3791,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrame =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrame",
+        "_winrt_windows_devices_perception.PerceptionDepthFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3916,7 +3916,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrameArrivedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrameArrivedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionDepthFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4187,7 +4187,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrameReader =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrameReader",
+        "_winrt_windows_devices_perception.PerceptionDepthFrameReader",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5116,7 +5116,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrameSource =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrameSource",
+        "_winrt_windows_devices_perception.PerceptionDepthFrameSource",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5211,7 +5211,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrameSourceAddedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrameSourceAddedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionDepthFrameSourceAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5306,7 +5306,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrameSourceRemovedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrameSourceRemovedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionDepthFrameSourceRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5643,7 +5643,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionDepthFrameSourceWatcher =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionDepthFrameSourceWatcher",
+        "_winrt_windows_devices_perception.PerceptionDepthFrameSourceWatcher",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5758,7 +5758,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionFrameSourcePropertiesChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionFrameSourcePropertiesChangedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionFrameSourcePropertiesChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5873,7 +5873,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionFrameSourcePropertyChangeResult =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionFrameSourcePropertyChangeResult",
+        "_winrt_windows_devices_perception.PerceptionFrameSourcePropertyChangeResult",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6021,7 +6021,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrame =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrame",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrame",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6146,7 +6146,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrameArrivedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrameArrivedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrameArrivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6417,7 +6417,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrameReader =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrameReader",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrameReader",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7346,7 +7346,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSource =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrameSource",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrameSource",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7441,7 +7441,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSourceAddedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrameSourceAddedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrameSourceAddedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7536,7 +7536,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSourceRemovedEventArgs =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrameSourceRemovedEventArgs",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrameSourceRemovedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7873,7 +7873,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionInfraredFrameSourceWatcher =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionInfraredFrameSourceWatcher",
+        "_winrt_windows_devices_perception.PerceptionInfraredFrameSourceWatcher",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8080,7 +8080,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyType_Spec type_spec_PerceptionVideoProfile =
     {
-        "_winrt_Windows_Devices_Perception.PerceptionVideoProfile",
+        "_winrt_windows_devices_perception.PerceptionVideoProfile",
         sizeof(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8093,7 +8093,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Perception",
+           "_winrt_windows_devices_perception",
            module_doc,
            0,
            nullptr,
@@ -8104,7 +8104,7 @@ namespace py::cpp::Windows::Devices::Perception
 
 } // py::cpp::Windows::Devices::Perception
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Perception(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Perception;
 

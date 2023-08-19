@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Data.Json")
+from . import _winrt_windows_data_json
 
 try:
     import winrt.windows.foundation.collections
@@ -26,10 +25,10 @@ class JsonValueType(enum.IntEnum):
     ARRAY = 4
     OBJECT = 5
 
-JsonArray = _ns_module.JsonArray
+JsonArray = _winrt_windows_data_json.JsonArray
 winrt.system._mixin_mutable_sequence(JsonArray)
-JsonError = _ns_module.JsonError
-JsonObject = _ns_module.JsonObject
+JsonError = _winrt_windows_data_json.JsonError
+JsonObject = _winrt_windows_data_json.JsonObject
 winrt.system._mixin_mutable_mapping(JsonObject)
-JsonValue = _ns_module.JsonValue
-IJsonValue = _ns_module.IJsonValue
+JsonValue = _winrt_windows_data_json.JsonValue
+IJsonValue = _winrt_windows_data_json.IJsonValue

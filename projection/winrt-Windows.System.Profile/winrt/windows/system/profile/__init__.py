@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Profile")
+from . import _winrt_windows_system_profile
 
 try:
     import winrt.windows.foundation
@@ -47,19 +46,19 @@ class UnsupportedAppRequirementReasons(enum.IntFlag):
     UNKNOWN = 0
     DENIED_BY_SYSTEM = 0x1
 
-AnalyticsInfo = _ns_module.AnalyticsInfo
-AnalyticsVersionInfo = _ns_module.AnalyticsVersionInfo
-AppApplicability = _ns_module.AppApplicability
-EducationSettings = _ns_module.EducationSettings
-HardwareIdentification = _ns_module.HardwareIdentification
-HardwareToken = _ns_module.HardwareToken
-KnownRetailInfoProperties = _ns_module.KnownRetailInfoProperties
-PlatformDiagnosticsAndUsageDataSettings = _ns_module.PlatformDiagnosticsAndUsageDataSettings
-RetailInfo = _ns_module.RetailInfo
-SharedModeSettings = _ns_module.SharedModeSettings
-SmartAppControlPolicy = _ns_module.SmartAppControlPolicy
-SystemIdentification = _ns_module.SystemIdentification
-SystemIdentificationInfo = _ns_module.SystemIdentificationInfo
-SystemSetupInfo = _ns_module.SystemSetupInfo
-UnsupportedAppRequirement = _ns_module.UnsupportedAppRequirement
-WindowsIntegrityPolicy = _ns_module.WindowsIntegrityPolicy
+AnalyticsInfo = _winrt_windows_system_profile.AnalyticsInfo
+AnalyticsVersionInfo = _winrt_windows_system_profile.AnalyticsVersionInfo
+AppApplicability = _winrt_windows_system_profile.AppApplicability
+EducationSettings = _winrt_windows_system_profile.EducationSettings
+HardwareIdentification = _winrt_windows_system_profile.HardwareIdentification
+HardwareToken = _winrt_windows_system_profile.HardwareToken
+KnownRetailInfoProperties = _winrt_windows_system_profile.KnownRetailInfoProperties
+PlatformDiagnosticsAndUsageDataSettings = _winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings
+RetailInfo = _winrt_windows_system_profile.RetailInfo
+SharedModeSettings = _winrt_windows_system_profile.SharedModeSettings
+SmartAppControlPolicy = _winrt_windows_system_profile.SmartAppControlPolicy
+SystemIdentification = _winrt_windows_system_profile.SystemIdentification
+SystemIdentificationInfo = _winrt_windows_system_profile.SystemIdentificationInfo
+SystemSetupInfo = _winrt_windows_system_profile.SystemSetupInfo
+UnsupportedAppRequirement = _winrt_windows_system_profile.UnsupportedAppRequirement
+WindowsIntegrityPolicy = _winrt_windows_system_profile.WindowsIntegrityPolicy

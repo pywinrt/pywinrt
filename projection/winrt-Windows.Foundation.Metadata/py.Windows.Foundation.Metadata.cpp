@@ -340,7 +340,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyType_Spec type_spec_ApiInformation =
     {
-        "_winrt_Windows_Foundation_Metadata.ApiInformation",
+        "_winrt_windows_foundation_metadata.ApiInformation",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -353,7 +353,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Foundation_Metadata",
+           "_winrt_windows_foundation_metadata",
            module_doc,
            0,
            nullptr,
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Foundation::Metadata
 
 } // py::cpp::Windows::Foundation::Metadata
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Foundation_Metadata(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_foundation_metadata(void) noexcept
 {
     using namespace py::cpp::Windows::Foundation::Metadata;
 

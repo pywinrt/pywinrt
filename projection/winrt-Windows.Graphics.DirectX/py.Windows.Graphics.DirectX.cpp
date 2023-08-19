@@ -12,7 +12,7 @@ namespace py::cpp::Windows::Graphics::DirectX
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Graphics_DirectX",
+           "_winrt_windows_graphics_directx",
            module_doc,
            0,
            nullptr,
@@ -23,7 +23,7 @@ namespace py::cpp::Windows::Graphics::DirectX
 
 } // py::cpp::Windows::Graphics::DirectX
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Graphics_DirectX(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics_directx(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::DirectX;
 

@@ -103,7 +103,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_AnalyticsInfo =
     {
-        "_winrt_Windows_System_Profile.AnalyticsInfo",
+        "_winrt_windows_system_profile.AnalyticsInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -125,7 +125,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_AnalyticsInfo_Meta =
     {
-        "_winrt_Windows_System_Profile.AnalyticsInfo_Meta",
+        "_winrt_windows_system_profile.AnalyticsInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -260,7 +260,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_AnalyticsVersionInfo =
     {
-        "_winrt_Windows_System_Profile.AnalyticsVersionInfo",
+        "_winrt_windows_system_profile.AnalyticsVersionInfo",
         sizeof(py::wrapper::Windows::System::Profile::AnalyticsVersionInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -326,7 +326,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_AppApplicability =
     {
-        "_winrt_Windows_System_Profile.AppApplicability",
+        "_winrt_windows_system_profile.AppApplicability",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_EducationSettings =
     {
-        "_winrt_Windows_System_Profile.EducationSettings",
+        "_winrt_windows_system_profile.EducationSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -400,7 +400,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_EducationSettings_Meta =
     {
-        "_winrt_Windows_System_Profile.EducationSettings_Meta",
+        "_winrt_windows_system_profile.EducationSettings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -466,7 +466,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_HardwareIdentification =
     {
-        "_winrt_Windows_System_Profile.HardwareIdentification",
+        "_winrt_windows_system_profile.HardwareIdentification",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -601,7 +601,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_HardwareToken =
     {
-        "_winrt_Windows_System_Profile.HardwareToken",
+        "_winrt_windows_system_profile.HardwareToken",
         sizeof(py::wrapper::Windows::System::Profile::HardwareToken),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_KnownRetailInfoProperties =
     {
-        "_winrt_Windows_System_Profile.KnownRetailInfoProperties",
+        "_winrt_windows_system_profile.KnownRetailInfoProperties",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1095,7 +1095,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_KnownRetailInfoProperties_Meta =
     {
-        "_winrt_Windows_System_Profile.KnownRetailInfoProperties_Meta",
+        "_winrt_windows_system_profile.KnownRetailInfoProperties_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1225,7 +1225,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_PlatformDiagnosticsAndUsageDataSettings =
     {
-        "_winrt_Windows_System_Profile.PlatformDiagnosticsAndUsageDataSettings",
+        "_winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1246,7 +1246,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_PlatformDiagnosticsAndUsageDataSettings_Meta =
     {
-        "_winrt_Windows_System_Profile.PlatformDiagnosticsAndUsageDataSettings_Meta",
+        "_winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1318,7 +1318,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_RetailInfo =
     {
-        "_winrt_Windows_System_Profile.RetailInfo",
+        "_winrt_windows_system_profile.RetailInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1340,7 +1340,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_RetailInfo_Meta =
     {
-        "_winrt_Windows_System_Profile.RetailInfo_Meta",
+        "_winrt_windows_system_profile.RetailInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1412,7 +1412,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SharedModeSettings =
     {
-        "_winrt_Windows_System_Profile.SharedModeSettings",
+        "_winrt_windows_system_profile.SharedModeSettings",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1434,7 +1434,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SharedModeSettings_Meta =
     {
-        "_winrt_Windows_System_Profile.SharedModeSettings_Meta",
+        "_winrt_windows_system_profile.SharedModeSettings_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1532,7 +1532,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SmartAppControlPolicy =
     {
-        "_winrt_Windows_System_Profile.SmartAppControlPolicy",
+        "_winrt_windows_system_profile.SmartAppControlPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1553,7 +1553,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SmartAppControlPolicy_Meta =
     {
-        "_winrt_Windows_System_Profile.SmartAppControlPolicy_Meta",
+        "_winrt_windows_system_profile.SmartAppControlPolicy_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1649,7 +1649,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SystemIdentification =
     {
-        "_winrt_Windows_System_Profile.SystemIdentification",
+        "_winrt_windows_system_profile.SystemIdentification",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1764,7 +1764,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SystemIdentificationInfo =
     {
-        "_winrt_Windows_System_Profile.SystemIdentificationInfo",
+        "_winrt_windows_system_profile.SystemIdentificationInfo",
         sizeof(py::wrapper::Windows::System::Profile::SystemIdentificationInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1862,7 +1862,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SystemSetupInfo =
     {
-        "_winrt_Windows_System_Profile.SystemSetupInfo",
+        "_winrt_windows_system_profile.SystemSetupInfo",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1883,7 +1883,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_SystemSetupInfo_Meta =
     {
-        "_winrt_Windows_System_Profile.SystemSetupInfo_Meta",
+        "_winrt_windows_system_profile.SystemSetupInfo_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1998,7 +1998,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_UnsupportedAppRequirement =
     {
-        "_winrt_Windows_System_Profile.UnsupportedAppRequirement",
+        "_winrt_windows_system_profile.UnsupportedAppRequirement",
         sizeof(py::wrapper::Windows::System::Profile::UnsupportedAppRequirement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2153,7 +2153,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_WindowsIntegrityPolicy =
     {
-        "_winrt_Windows_System_Profile.WindowsIntegrityPolicy",
+        "_winrt_windows_system_profile.WindowsIntegrityPolicy",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2177,7 +2177,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyType_Spec type_spec_WindowsIntegrityPolicy_Meta =
     {
-        "_winrt_Windows_System_Profile.WindowsIntegrityPolicy_Meta",
+        "_winrt_windows_system_profile.WindowsIntegrityPolicy_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -2190,7 +2190,7 @@ namespace py::cpp::Windows::System::Profile
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Profile",
+           "_winrt_windows_system_profile",
            module_doc,
            0,
            nullptr,
@@ -2201,7 +2201,7 @@ namespace py::cpp::Windows::System::Profile
 
 } // py::cpp::Windows::System::Profile
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Profile(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_profile(void) noexcept
 {
     using namespace py::cpp::Windows::System::Profile;
 

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Services.Store")
+from . import _winrt_windows_services_store
 
 try:
     import winrt.windows.applicationmodel
@@ -112,35 +111,35 @@ class StoreUninstallStorePackageStatus(enum.IntEnum):
     UNINSTALL_NOT_APPLICABLE = 3
     ERROR = 4
 
-StorePackageUpdateStatus = _ns_module.StorePackageUpdateStatus
-StoreAcquireLicenseResult = _ns_module.StoreAcquireLicenseResult
-StoreAppLicense = _ns_module.StoreAppLicense
-StoreAvailability = _ns_module.StoreAvailability
-StoreCanAcquireLicenseResult = _ns_module.StoreCanAcquireLicenseResult
-StoreCollectionData = _ns_module.StoreCollectionData
-StoreConsumableResult = _ns_module.StoreConsumableResult
-StoreContext = _ns_module.StoreContext
-StoreImage = _ns_module.StoreImage
-StoreLicense = _ns_module.StoreLicense
-StorePackageInstallOptions = _ns_module.StorePackageInstallOptions
-StorePackageLicense = _ns_module.StorePackageLicense
-StorePackageUpdate = _ns_module.StorePackageUpdate
-StorePackageUpdateResult = _ns_module.StorePackageUpdateResult
-StorePrice = _ns_module.StorePrice
-StoreProduct = _ns_module.StoreProduct
-StoreProductOptions = _ns_module.StoreProductOptions
-StoreProductPagedQueryResult = _ns_module.StoreProductPagedQueryResult
-StoreProductQueryResult = _ns_module.StoreProductQueryResult
-StoreProductResult = _ns_module.StoreProductResult
-StorePurchaseProperties = _ns_module.StorePurchaseProperties
-StorePurchaseResult = _ns_module.StorePurchaseResult
-StoreQueueItem = _ns_module.StoreQueueItem
-StoreQueueItemCompletedEventArgs = _ns_module.StoreQueueItemCompletedEventArgs
-StoreQueueItemStatus = _ns_module.StoreQueueItemStatus
-StoreRateAndReviewResult = _ns_module.StoreRateAndReviewResult
-StoreRequestHelper = _ns_module.StoreRequestHelper
-StoreSendRequestResult = _ns_module.StoreSendRequestResult
-StoreSku = _ns_module.StoreSku
-StoreSubscriptionInfo = _ns_module.StoreSubscriptionInfo
-StoreUninstallStorePackageResult = _ns_module.StoreUninstallStorePackageResult
-StoreVideo = _ns_module.StoreVideo
+StorePackageUpdateStatus = _winrt_windows_services_store.StorePackageUpdateStatus
+StoreAcquireLicenseResult = _winrt_windows_services_store.StoreAcquireLicenseResult
+StoreAppLicense = _winrt_windows_services_store.StoreAppLicense
+StoreAvailability = _winrt_windows_services_store.StoreAvailability
+StoreCanAcquireLicenseResult = _winrt_windows_services_store.StoreCanAcquireLicenseResult
+StoreCollectionData = _winrt_windows_services_store.StoreCollectionData
+StoreConsumableResult = _winrt_windows_services_store.StoreConsumableResult
+StoreContext = _winrt_windows_services_store.StoreContext
+StoreImage = _winrt_windows_services_store.StoreImage
+StoreLicense = _winrt_windows_services_store.StoreLicense
+StorePackageInstallOptions = _winrt_windows_services_store.StorePackageInstallOptions
+StorePackageLicense = _winrt_windows_services_store.StorePackageLicense
+StorePackageUpdate = _winrt_windows_services_store.StorePackageUpdate
+StorePackageUpdateResult = _winrt_windows_services_store.StorePackageUpdateResult
+StorePrice = _winrt_windows_services_store.StorePrice
+StoreProduct = _winrt_windows_services_store.StoreProduct
+StoreProductOptions = _winrt_windows_services_store.StoreProductOptions
+StoreProductPagedQueryResult = _winrt_windows_services_store.StoreProductPagedQueryResult
+StoreProductQueryResult = _winrt_windows_services_store.StoreProductQueryResult
+StoreProductResult = _winrt_windows_services_store.StoreProductResult
+StorePurchaseProperties = _winrt_windows_services_store.StorePurchaseProperties
+StorePurchaseResult = _winrt_windows_services_store.StorePurchaseResult
+StoreQueueItem = _winrt_windows_services_store.StoreQueueItem
+StoreQueueItemCompletedEventArgs = _winrt_windows_services_store.StoreQueueItemCompletedEventArgs
+StoreQueueItemStatus = _winrt_windows_services_store.StoreQueueItemStatus
+StoreRateAndReviewResult = _winrt_windows_services_store.StoreRateAndReviewResult
+StoreRequestHelper = _winrt_windows_services_store.StoreRequestHelper
+StoreSendRequestResult = _winrt_windows_services_store.StoreSendRequestResult
+StoreSku = _winrt_windows_services_store.StoreSku
+StoreSubscriptionInfo = _winrt_windows_services_store.StoreSubscriptionInfo
+StoreUninstallStorePackageResult = _winrt_windows_services_store.StoreUninstallStorePackageResult
+StoreVideo = _winrt_windows_services_store.StoreVideo

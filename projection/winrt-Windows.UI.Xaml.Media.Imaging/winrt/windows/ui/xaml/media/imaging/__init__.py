@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Media.Imaging")
+from . import _winrt_windows_ui_xaml_media_imaging
 
 try:
     import winrt.windows.applicationmodel.background
@@ -45,15 +44,15 @@ class SvgImageSourceLoadStatus(enum.IntEnum):
     INVALID_FORMAT = 2
     OTHER = 3
 
-BitmapImage = _ns_module.BitmapImage
-BitmapSource = _ns_module.BitmapSource
-DownloadProgressEventArgs = _ns_module.DownloadProgressEventArgs
-RenderTargetBitmap = _ns_module.RenderTargetBitmap
-SoftwareBitmapSource = _ns_module.SoftwareBitmapSource
-SurfaceImageSource = _ns_module.SurfaceImageSource
-SvgImageSource = _ns_module.SvgImageSource
-SvgImageSourceFailedEventArgs = _ns_module.SvgImageSourceFailedEventArgs
-SvgImageSourceOpenedEventArgs = _ns_module.SvgImageSourceOpenedEventArgs
-VirtualSurfaceImageSource = _ns_module.VirtualSurfaceImageSource
-WriteableBitmap = _ns_module.WriteableBitmap
-XamlRenderingBackgroundTask = _ns_module.XamlRenderingBackgroundTask
+BitmapImage = _winrt_windows_ui_xaml_media_imaging.BitmapImage
+BitmapSource = _winrt_windows_ui_xaml_media_imaging.BitmapSource
+DownloadProgressEventArgs = _winrt_windows_ui_xaml_media_imaging.DownloadProgressEventArgs
+RenderTargetBitmap = _winrt_windows_ui_xaml_media_imaging.RenderTargetBitmap
+SoftwareBitmapSource = _winrt_windows_ui_xaml_media_imaging.SoftwareBitmapSource
+SurfaceImageSource = _winrt_windows_ui_xaml_media_imaging.SurfaceImageSource
+SvgImageSource = _winrt_windows_ui_xaml_media_imaging.SvgImageSource
+SvgImageSourceFailedEventArgs = _winrt_windows_ui_xaml_media_imaging.SvgImageSourceFailedEventArgs
+SvgImageSourceOpenedEventArgs = _winrt_windows_ui_xaml_media_imaging.SvgImageSourceOpenedEventArgs
+VirtualSurfaceImageSource = _winrt_windows_ui_xaml_media_imaging.VirtualSurfaceImageSource
+WriteableBitmap = _winrt_windows_ui_xaml_media_imaging.WriteableBitmap
+XamlRenderingBackgroundTask = _winrt_windows_ui_xaml_media_imaging.XamlRenderingBackgroundTask

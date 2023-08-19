@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.Media.Devices")
+from . import _winrt_windows_phone_media_devices
 
 try:
     import winrt.windows.foundation
@@ -27,4 +26,4 @@ class AvailableAudioRoutingEndpoints(enum.IntFlag):
     SPEAKERPHONE = 0x2
     BLUETOOTH = 0x4
 
-AudioRoutingManager = _ns_module.AudioRoutingManager
+AudioRoutingManager = _winrt_windows_phone_media_devices.AudioRoutingManager

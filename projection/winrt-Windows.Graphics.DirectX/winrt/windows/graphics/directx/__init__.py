@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Graphics.DirectX")
+from . import _winrt_windows_graphics_directx
 
 class DirectXAlphaMode(enum.IntEnum):
     UNSPECIFIED = 0

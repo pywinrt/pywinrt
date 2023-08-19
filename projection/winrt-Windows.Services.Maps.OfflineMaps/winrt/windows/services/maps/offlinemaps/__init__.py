@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Services.Maps.OfflineMaps")
+from . import _winrt_windows_services_maps_offlinemaps
 
 try:
     import winrt.windows.devices.geolocation
@@ -39,6 +38,6 @@ class OfflineMapPackageStatus(enum.IntEnum):
     DOWNLOADED = 2
     DELETING = 3
 
-OfflineMapPackage = _ns_module.OfflineMapPackage
-OfflineMapPackageQueryResult = _ns_module.OfflineMapPackageQueryResult
-OfflineMapPackageStartDownloadResult = _ns_module.OfflineMapPackageStartDownloadResult
+OfflineMapPackage = _winrt_windows_services_maps_offlinemaps.OfflineMapPackage
+OfflineMapPackageQueryResult = _winrt_windows_services_maps_offlinemaps.OfflineMapPackageQueryResult
+OfflineMapPackageStartDownloadResult = _winrt_windows_services_maps_offlinemaps.OfflineMapPackageStartDownloadResult

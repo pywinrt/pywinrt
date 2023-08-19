@@ -369,7 +369,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     static PyType_Spec type_spec_CustomSensor =
     {
-        "_winrt_Windows_Devices_Sensors_Custom.CustomSensor",
+        "_winrt_windows_devices_sensors_custom.CustomSensor",
         sizeof(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -504,7 +504,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     static PyType_Spec type_spec_CustomSensorReading =
     {
-        "_winrt_Windows_Devices_Sensors_Custom.CustomSensorReading",
+        "_winrt_windows_devices_sensors_custom.CustomSensorReading",
         sizeof(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensorReading),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -599,7 +599,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     static PyType_Spec type_spec_CustomSensorReadingChangedEventArgs =
     {
-        "_winrt_Windows_Devices_Sensors_Custom.CustomSensorReadingChangedEventArgs",
+        "_winrt_windows_devices_sensors_custom.CustomSensorReadingChangedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -612,7 +612,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Sensors_Custom",
+           "_winrt_windows_devices_sensors_custom",
            module_doc,
            0,
            nullptr,
@@ -623,7 +623,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
 } // py::cpp::Windows::Devices::Sensors::Custom
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Sensors_Custom(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors_custom(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Sensors::Custom;
 

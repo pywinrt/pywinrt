@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Input.Preview")
+from . import _winrt_windows_devices_input_preview
 
 try:
     import winrt.windows.devices.humaninterfacedevice
@@ -28,13 +27,13 @@ class GazeDeviceConfigurationStatePreview(enum.IntEnum):
     SCREEN_SETUP_NEEDED = 3
     USER_CALIBRATION_NEEDED = 4
 
-GazeDevicePreview = _ns_module.GazeDevicePreview
-GazeDeviceWatcherAddedPreviewEventArgs = _ns_module.GazeDeviceWatcherAddedPreviewEventArgs
-GazeDeviceWatcherPreview = _ns_module.GazeDeviceWatcherPreview
-GazeDeviceWatcherRemovedPreviewEventArgs = _ns_module.GazeDeviceWatcherRemovedPreviewEventArgs
-GazeDeviceWatcherUpdatedPreviewEventArgs = _ns_module.GazeDeviceWatcherUpdatedPreviewEventArgs
-GazeEnteredPreviewEventArgs = _ns_module.GazeEnteredPreviewEventArgs
-GazeExitedPreviewEventArgs = _ns_module.GazeExitedPreviewEventArgs
-GazeInputSourcePreview = _ns_module.GazeInputSourcePreview
-GazeMovedPreviewEventArgs = _ns_module.GazeMovedPreviewEventArgs
-GazePointPreview = _ns_module.GazePointPreview
+GazeDevicePreview = _winrt_windows_devices_input_preview.GazeDevicePreview
+GazeDeviceWatcherAddedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeDeviceWatcherAddedPreviewEventArgs
+GazeDeviceWatcherPreview = _winrt_windows_devices_input_preview.GazeDeviceWatcherPreview
+GazeDeviceWatcherRemovedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeDeviceWatcherRemovedPreviewEventArgs
+GazeDeviceWatcherUpdatedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeDeviceWatcherUpdatedPreviewEventArgs
+GazeEnteredPreviewEventArgs = _winrt_windows_devices_input_preview.GazeEnteredPreviewEventArgs
+GazeExitedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeExitedPreviewEventArgs
+GazeInputSourcePreview = _winrt_windows_devices_input_preview.GazeInputSourcePreview
+GazeMovedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeMovedPreviewEventArgs
+GazePointPreview = _winrt_windows_devices_input_preview.GazePointPreview

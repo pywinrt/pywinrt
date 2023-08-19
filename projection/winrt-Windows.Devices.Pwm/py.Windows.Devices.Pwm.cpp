@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyType_Spec type_spec_PwmController =
     {
-        "_winrt_Windows_Devices_Pwm.PwmController",
+        "_winrt_windows_devices_pwm.PwmController",
         sizeof(py::wrapper::Windows::Devices::Pwm::PwmController),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -703,7 +703,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyType_Spec type_spec_PwmPin =
     {
-        "_winrt_Windows_Devices_Pwm.PwmPin",
+        "_winrt_windows_devices_pwm.PwmPin",
         sizeof(py::wrapper::Windows::Devices::Pwm::PwmPin),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -716,7 +716,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Pwm",
+           "_winrt_windows_devices_pwm",
            module_doc,
            0,
            nullptr,
@@ -727,7 +727,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
 } // py::cpp::Windows::Devices::Pwm
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Pwm(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_pwm(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Pwm;
 

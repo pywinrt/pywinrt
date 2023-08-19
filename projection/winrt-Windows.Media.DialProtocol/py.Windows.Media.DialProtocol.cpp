@@ -186,7 +186,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialApp =
     {
-        "_winrt_Windows_Media_DialProtocol.DialApp",
+        "_winrt_windows_media_dialprotocol.DialApp",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialApp),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -301,7 +301,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialAppStateDetails =
     {
-        "_winrt_Windows_Media_DialProtocol.DialAppStateDetails",
+        "_winrt_windows_media_dialprotocol.DialAppStateDetails",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialAppStateDetails),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -564,7 +564,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialDevice =
     {
-        "_winrt_Windows_Media_DialProtocol.DialDevice",
+        "_winrt_windows_media_dialprotocol.DialDevice",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialDevice),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1010,7 +1010,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialDevicePicker =
     {
-        "_winrt_Windows_Media_DialProtocol.DialDevicePicker",
+        "_winrt_windows_media_dialprotocol.DialDevicePicker",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1105,7 +1105,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialDevicePickerFilter =
     {
-        "_winrt_Windows_Media_DialProtocol.DialDevicePickerFilter",
+        "_winrt_windows_media_dialprotocol.DialDevicePickerFilter",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialDevicePickerFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1200,7 +1200,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialDeviceSelectedEventArgs =
     {
-        "_winrt_Windows_Media_DialProtocol.DialDeviceSelectedEventArgs",
+        "_winrt_windows_media_dialprotocol.DialDeviceSelectedEventArgs",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1295,7 +1295,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialDisconnectButtonClickedEventArgs =
     {
-        "_winrt_Windows_Media_DialProtocol.DialDisconnectButtonClickedEventArgs",
+        "_winrt_windows_media_dialprotocol.DialDisconnectButtonClickedEventArgs",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1481,7 +1481,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialReceiverApp =
     {
-        "_winrt_Windows_Media_DialProtocol.DialReceiverApp",
+        "_winrt_windows_media_dialprotocol.DialReceiverApp",
         sizeof(py::wrapper::Windows::Media::DialProtocol::DialReceiverApp),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1502,7 +1502,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyType_Spec type_spec_DialReceiverApp_Meta =
     {
-        "_winrt_Windows_Media_DialProtocol.DialReceiverApp_Meta",
+        "_winrt_windows_media_dialprotocol.DialReceiverApp_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -1515,7 +1515,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_DialProtocol",
+           "_winrt_windows_media_dialprotocol",
            module_doc,
            0,
            nullptr,
@@ -1526,7 +1526,7 @@ namespace py::cpp::Windows::Media::DialProtocol
 
 } // py::cpp::Windows::Media::DialProtocol
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_DialProtocol(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_dialprotocol(void) noexcept
 {
     using namespace py::cpp::Windows::Media::DialProtocol;
 

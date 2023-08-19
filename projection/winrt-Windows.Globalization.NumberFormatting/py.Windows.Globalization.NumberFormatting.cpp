@@ -933,7 +933,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_CurrencyFormatter =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.CurrencyFormatter",
+        "_winrt_windows_globalization_numberformatting.CurrencyFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_DecimalFormatter =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.DecimalFormatter",
+        "_winrt_windows_globalization_numberformatting.DecimalFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2121,7 +2121,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_IncrementNumberRounder =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.IncrementNumberRounder",
+        "_winrt_windows_globalization_numberformatting.IncrementNumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2354,7 +2354,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_NumeralSystemTranslator =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.NumeralSystemTranslator",
+        "_winrt_windows_globalization_numberformatting.NumeralSystemTranslator",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3156,7 +3156,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_PercentFormatter =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.PercentFormatter",
+        "_winrt_windows_globalization_numberformatting.PercentFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3958,7 +3958,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_PermilleFormatter =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.PermilleFormatter",
+        "_winrt_windows_globalization_numberformatting.PermilleFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4344,7 +4344,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_SignificantDigitsNumberRounder =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.SignificantDigitsNumberRounder",
+        "_winrt_windows_globalization_numberformatting.SignificantDigitsNumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4451,7 +4451,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_INumberFormatter =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.INumberFormatter",
+        "_winrt_windows_globalization_numberformatting.INumberFormatter",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4622,7 +4622,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_INumberFormatter2 =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.INumberFormatter2",
+        "_winrt_windows_globalization_numberformatting.INumberFormatter2",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5017,7 +5017,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_INumberFormatterOptions =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.INumberFormatterOptions",
+        "_winrt_windows_globalization_numberformatting.INumberFormatterOptions",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5188,7 +5188,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_INumberParser =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.INumberParser",
+        "_winrt_windows_globalization_numberformatting.INumberParser",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5455,7 +5455,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_INumberRounder =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.INumberRounder",
+        "_winrt_windows_globalization_numberformatting.INumberRounder",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5578,7 +5578,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_INumberRounderOption =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.INumberRounderOption",
+        "_winrt_windows_globalization_numberformatting.INumberRounderOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5701,7 +5701,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_ISignedZeroOption =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.ISignedZeroOption",
+        "_winrt_windows_globalization_numberformatting.ISignedZeroOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5824,7 +5824,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyType_Spec type_spec_ISignificantDigitsOption =
     {
-        "_winrt_Windows_Globalization_NumberFormatting.ISignificantDigitsOption",
+        "_winrt_windows_globalization_numberformatting.ISignificantDigitsOption",
         sizeof(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5837,7 +5837,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Globalization_NumberFormatting",
+           "_winrt_windows_globalization_numberformatting",
            module_doc,
            0,
            nullptr,
@@ -5848,7 +5848,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
 } // py::cpp::Windows::Globalization::NumberFormatting
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Globalization_NumberFormatting(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_globalization_numberformatting(void) noexcept
 {
     using namespace py::cpp::Windows::Globalization::NumberFormatting;
 

@@ -268,7 +268,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdAuthenticator =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdAuthenticator",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdAuthenticator",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -403,7 +403,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdServiceTicket =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdServiceTicket",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdServiceTicket",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -559,7 +559,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdServiceTicketRequest =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdServiceTicketRequest",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdServiceTicketRequest",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -644,7 +644,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdSystemAuthenticator =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdSystemAuthenticator",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticator",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdSystemAuthenticator_Meta =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdSystemAuthenticator_Meta",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticator_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -840,7 +840,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdSystemAuthenticatorForUser =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdSystemAuthenticatorForUser",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticatorForUser",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdSystemIdentity =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdSystemIdentity",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdSystemIdentity",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1090,7 +1090,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_OnlineIdSystemTicketResult =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.OnlineIdSystemTicketResult",
+        "_winrt_windows_security_authentication_onlineid.OnlineIdSystemTicketResult",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1372,7 +1372,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_SignOutUserOperation =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.SignOutUserOperation",
+        "_winrt_windows_security_authentication_onlineid.SignOutUserOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1653,7 +1653,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_UserAuthenticationOperation =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.UserAuthenticationOperation",
+        "_winrt_windows_security_authentication_onlineid.UserAuthenticationOperation",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1888,7 +1888,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyType_Spec type_spec_UserIdentity =
     {
-        "_winrt_Windows_Security_Authentication_OnlineId.UserIdentity",
+        "_winrt_windows_security_authentication_onlineid.UserIdentity",
         sizeof(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Authentication_OnlineId",
+           "_winrt_windows_security_authentication_onlineid",
            module_doc,
            0,
            nullptr,
@@ -1912,7 +1912,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
 } // py::cpp::Windows::Security::Authentication::OnlineId
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_OnlineId(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Authentication::OnlineId;
 

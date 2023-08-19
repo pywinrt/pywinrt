@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.AI.MachineLearning")
+from . import _winrt_windows_ai_machinelearning
 
 try:
     import winrt.windows.foundation
@@ -82,32 +81,32 @@ class TensorKind(enum.IntEnum):
     COMPLEX64 = 14
     COMPLEX128 = 15
 
-ImageFeatureDescriptor = _ns_module.ImageFeatureDescriptor
-ImageFeatureValue = _ns_module.ImageFeatureValue
-LearningModel = _ns_module.LearningModel
-LearningModelBinding = _ns_module.LearningModelBinding
+ImageFeatureDescriptor = _winrt_windows_ai_machinelearning.ImageFeatureDescriptor
+ImageFeatureValue = _winrt_windows_ai_machinelearning.ImageFeatureValue
+LearningModel = _winrt_windows_ai_machinelearning.LearningModel
+LearningModelBinding = _winrt_windows_ai_machinelearning.LearningModelBinding
 winrt.system._mixin_mapping(LearningModelBinding)
-LearningModelDevice = _ns_module.LearningModelDevice
-LearningModelEvaluationResult = _ns_module.LearningModelEvaluationResult
-LearningModelSession = _ns_module.LearningModelSession
-LearningModelSessionOptions = _ns_module.LearningModelSessionOptions
-MapFeatureDescriptor = _ns_module.MapFeatureDescriptor
-SequenceFeatureDescriptor = _ns_module.SequenceFeatureDescriptor
-TensorBoolean = _ns_module.TensorBoolean
-TensorDouble = _ns_module.TensorDouble
-TensorFeatureDescriptor = _ns_module.TensorFeatureDescriptor
-TensorFloat = _ns_module.TensorFloat
-TensorFloat16Bit = _ns_module.TensorFloat16Bit
-TensorInt16Bit = _ns_module.TensorInt16Bit
-TensorInt32Bit = _ns_module.TensorInt32Bit
-TensorInt64Bit = _ns_module.TensorInt64Bit
-TensorInt8Bit = _ns_module.TensorInt8Bit
-TensorString = _ns_module.TensorString
-TensorUInt16Bit = _ns_module.TensorUInt16Bit
-TensorUInt32Bit = _ns_module.TensorUInt32Bit
-TensorUInt64Bit = _ns_module.TensorUInt64Bit
-TensorUInt8Bit = _ns_module.TensorUInt8Bit
-ILearningModelFeatureDescriptor = _ns_module.ILearningModelFeatureDescriptor
-ILearningModelFeatureValue = _ns_module.ILearningModelFeatureValue
-ILearningModelOperatorProvider = _ns_module.ILearningModelOperatorProvider
-ITensor = _ns_module.ITensor
+LearningModelDevice = _winrt_windows_ai_machinelearning.LearningModelDevice
+LearningModelEvaluationResult = _winrt_windows_ai_machinelearning.LearningModelEvaluationResult
+LearningModelSession = _winrt_windows_ai_machinelearning.LearningModelSession
+LearningModelSessionOptions = _winrt_windows_ai_machinelearning.LearningModelSessionOptions
+MapFeatureDescriptor = _winrt_windows_ai_machinelearning.MapFeatureDescriptor
+SequenceFeatureDescriptor = _winrt_windows_ai_machinelearning.SequenceFeatureDescriptor
+TensorBoolean = _winrt_windows_ai_machinelearning.TensorBoolean
+TensorDouble = _winrt_windows_ai_machinelearning.TensorDouble
+TensorFeatureDescriptor = _winrt_windows_ai_machinelearning.TensorFeatureDescriptor
+TensorFloat = _winrt_windows_ai_machinelearning.TensorFloat
+TensorFloat16Bit = _winrt_windows_ai_machinelearning.TensorFloat16Bit
+TensorInt16Bit = _winrt_windows_ai_machinelearning.TensorInt16Bit
+TensorInt32Bit = _winrt_windows_ai_machinelearning.TensorInt32Bit
+TensorInt64Bit = _winrt_windows_ai_machinelearning.TensorInt64Bit
+TensorInt8Bit = _winrt_windows_ai_machinelearning.TensorInt8Bit
+TensorString = _winrt_windows_ai_machinelearning.TensorString
+TensorUInt16Bit = _winrt_windows_ai_machinelearning.TensorUInt16Bit
+TensorUInt32Bit = _winrt_windows_ai_machinelearning.TensorUInt32Bit
+TensorUInt64Bit = _winrt_windows_ai_machinelearning.TensorUInt64Bit
+TensorUInt8Bit = _winrt_windows_ai_machinelearning.TensorUInt8Bit
+ILearningModelFeatureDescriptor = _winrt_windows_ai_machinelearning.ILearningModelFeatureDescriptor
+ILearningModelFeatureValue = _winrt_windows_ai_machinelearning.ILearningModelFeatureValue
+ILearningModelOperatorProvider = _winrt_windows_ai_machinelearning.ILearningModelOperatorProvider
+ITensor = _winrt_windows_ai_machinelearning.ITensor

@@ -194,7 +194,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_EyesPose =
     {
-        "_winrt_Windows_Perception_People.EyesPose",
+        "_winrt_windows_perception_people.EyesPose",
         sizeof(py::wrapper::Windows::Perception::People::EyesPose),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -454,7 +454,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_HandMeshObserver =
     {
-        "_winrt_Windows_Perception_People.HandMeshObserver",
+        "_winrt_windows_perception_people.HandMeshObserver",
         sizeof(py::wrapper::Windows::Perception::People::HandMeshObserver),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -602,7 +602,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_HandMeshVertexState =
     {
-        "_winrt_Windows_Perception_People.HandMeshVertexState",
+        "_winrt_windows_perception_people.HandMeshVertexState",
         sizeof(py::wrapper::Windows::Perception::People::HandMeshVertexState),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -825,7 +825,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_HandPose =
     {
-        "_winrt_Windows_Perception_People.HandPose",
+        "_winrt_windows_perception_people.HandPose",
         sizeof(py::wrapper::Windows::Perception::People::HandPose),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -960,7 +960,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_HeadPose =
     {
-        "_winrt_Windows_Perception_People.HeadPose",
+        "_winrt_windows_perception_people.HeadPose",
         sizeof(py::wrapper::Windows::Perception::People::HeadPose),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1095,7 +1095,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_HandMeshVertex =
     {
-        "_winrt_Windows_Perception_People.HandMeshVertex",
+        "_winrt_windows_perception_people.HandMeshVertex",
         sizeof(py::wrapper::Windows::Perception::People::HandMeshVertex),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1300,7 +1300,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyType_Spec type_spec_JointPose =
     {
-        "_winrt_Windows_Perception_People.JointPose",
+        "_winrt_windows_perception_people.JointPose",
         sizeof(py::wrapper::Windows::Perception::People::JointPose),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1313,7 +1313,7 @@ namespace py::cpp::Windows::Perception::People
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Perception_People",
+           "_winrt_windows_perception_people",
            module_doc,
            0,
            nullptr,
@@ -1324,7 +1324,7 @@ namespace py::cpp::Windows::Perception::People
 
 } // py::cpp::Windows::Perception::People
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Perception_People(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_perception_people(void) noexcept
 {
     using namespace py::cpp::Windows::Perception::People;
 

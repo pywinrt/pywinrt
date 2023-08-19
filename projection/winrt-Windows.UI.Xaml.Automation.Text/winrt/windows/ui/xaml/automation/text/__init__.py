@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Xaml.Automation.Text")
+from . import _winrt_windows_ui_xaml_automation_text
 
 class TextPatternRangeEndpoint(enum.IntEnum):
     START = 0

@@ -122,7 +122,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyType_Spec type_spec_BackPressedEventArgs =
     {
-        "_winrt_Windows_Phone_UI_Input.BackPressedEventArgs",
+        "_winrt_windows_phone_ui_input.BackPressedEventArgs",
         sizeof(py::wrapper::Windows::Phone::UI::Input::BackPressedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -197,7 +197,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyType_Spec type_spec_CameraEventArgs =
     {
-        "_winrt_Windows_Phone_UI_Input.CameraEventArgs",
+        "_winrt_windows_phone_ui_input.CameraEventArgs",
         sizeof(py::wrapper::Windows::Phone::UI::Input::CameraEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -411,7 +411,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyType_Spec type_spec_HardwareButtons =
     {
-        "_winrt_Windows_Phone_UI_Input.HardwareButtons",
+        "_winrt_windows_phone_ui_input.HardwareButtons",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -424,7 +424,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_UI_Input",
+           "_winrt_windows_phone_ui_input",
            module_doc,
            0,
            nullptr,
@@ -435,7 +435,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
 } // py::cpp::Windows::Phone::UI::Input
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_UI_Input(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_ui_input(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::UI::Input;
 

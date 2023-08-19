@@ -366,7 +366,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScanner =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScanner",
+        "_winrt_windows_devices_scanners.ImageScanner",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScanner),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -541,7 +541,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerAutoConfiguration =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScannerAutoConfiguration",
+        "_winrt_windows_devices_scanners.ImageScannerAutoConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerAutoConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1769,7 +1769,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerFeederConfiguration =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScannerFeederConfiguration",
+        "_winrt_windows_devices_scanners.ImageScannerFeederConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2596,7 +2596,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerFlatbedConfiguration =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScannerFlatbedConfiguration",
+        "_winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2711,7 +2711,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerPreviewResult =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScannerPreviewResult",
+        "_winrt_windows_devices_scanners.ImageScannerPreviewResult",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerPreviewResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2806,7 +2806,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerScanResult =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScannerScanResult",
+        "_winrt_windows_devices_scanners.ImageScannerScanResult",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerScanResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2981,7 +2981,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_IImageScannerFormatConfiguration =
     {
-        "_winrt_Windows_Devices_Scanners.IImageScannerFormatConfiguration",
+        "_winrt_windows_devices_scanners.IImageScannerFormatConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::IImageScannerFormatConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3808,7 +3808,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_IImageScannerSourceConfiguration =
     {
-        "_winrt_Windows_Devices_Scanners.IImageScannerSourceConfiguration",
+        "_winrt_windows_devices_scanners.IImageScannerSourceConfiguration",
         sizeof(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3943,7 +3943,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyType_Spec type_spec_ImageScannerResolution =
     {
-        "_winrt_Windows_Devices_Scanners.ImageScannerResolution",
+        "_winrt_windows_devices_scanners.ImageScannerResolution",
         sizeof(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3956,7 +3956,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Scanners",
+           "_winrt_windows_devices_scanners",
            module_doc,
            0,
            nullptr,
@@ -3967,7 +3967,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
 } // py::cpp::Windows::Devices::Scanners
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Scanners(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Scanners;
 

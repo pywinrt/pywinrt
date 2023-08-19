@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Portable")
+from . import _winrt_windows_devices_portable
 
 try:
     import winrt.windows.storage
@@ -20,5 +19,5 @@ class ServiceDeviceType(enum.IntEnum):
     SMS_SERVICE = 5
     TASKS_SERVICE = 6
 
-ServiceDevice = _ns_module.ServiceDevice
-StorageDevice = _ns_module.StorageDevice
+ServiceDevice = _winrt_windows_devices_portable.ServiceDevice
+StorageDevice = _winrt_windows_devices_portable.StorageDevice

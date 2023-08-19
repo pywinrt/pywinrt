@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.ApplicationModel.Resources.Management")
+from . import _winrt_windows_applicationmodel_resources_management
 
 try:
     import winrt.windows.foundation
@@ -21,6 +20,6 @@ class IndexedResourceType(enum.IntEnum):
     PATH = 1
     EMBEDDED_DATA = 2
 
-IndexedResourceCandidate = _ns_module.IndexedResourceCandidate
-IndexedResourceQualifier = _ns_module.IndexedResourceQualifier
-ResourceIndexer = _ns_module.ResourceIndexer
+IndexedResourceCandidate = _winrt_windows_applicationmodel_resources_management.IndexedResourceCandidate
+IndexedResourceQualifier = _winrt_windows_applicationmodel_resources_management.IndexedResourceQualifier
+ResourceIndexer = _winrt_windows_applicationmodel_resources_management.ResourceIndexer

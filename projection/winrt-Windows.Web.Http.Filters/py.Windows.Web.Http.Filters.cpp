@@ -850,7 +850,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_HttpBaseProtocolFilter =
     {
-        "_winrt_Windows_Web_Http_Filters.HttpBaseProtocolFilter",
+        "_winrt_windows_web_http_filters.HttpBaseProtocolFilter",
         sizeof(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_HttpCacheControl =
     {
-        "_winrt_Windows_Web_Http_Filters.HttpCacheControl",
+        "_winrt_windows_web_http_filters.HttpCacheControl",
         sizeof(py::wrapper::Windows::Web::Http::Filters::HttpCacheControl),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1257,7 +1257,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_HttpServerCustomValidationRequestedEventArgs =
     {
-        "_winrt_Windows_Web_Http_Filters.HttpServerCustomValidationRequestedEventArgs",
+        "_winrt_windows_web_http_filters.HttpServerCustomValidationRequestedEventArgs",
         sizeof(py::wrapper::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1417,7 +1417,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyType_Spec type_spec_IHttpFilter =
     {
-        "_winrt_Windows_Web_Http_Filters.IHttpFilter",
+        "_winrt_windows_web_http_filters.IHttpFilter",
         sizeof(py::wrapper::Windows::Web::Http::Filters::IHttpFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1430,7 +1430,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Web_Http_Filters",
+           "_winrt_windows_web_http_filters",
            module_doc,
            0,
            nullptr,
@@ -1441,7 +1441,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
 } // py::cpp::Windows::Web::Http::Filters
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Web_Http_Filters(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_web_http_filters(void) noexcept
 {
     using namespace py::cpp::Windows::Web::Http::Filters;
 

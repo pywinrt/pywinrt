@@ -86,7 +86,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyType_Spec type_spec_PlatformTelemetryClient =
     {
-        "_winrt_Windows_System_Diagnostics_Telemetry.PlatformTelemetryClient",
+        "_winrt_windows_system_diagnostics_telemetry.PlatformTelemetryClient",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -181,7 +181,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationResult =
     {
-        "_winrt_Windows_System_Diagnostics_Telemetry.PlatformTelemetryRegistrationResult",
+        "_winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationResult",
         sizeof(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -375,7 +375,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyType_Spec type_spec_PlatformTelemetryRegistrationSettings =
     {
-        "_winrt_Windows_System_Diagnostics_Telemetry.PlatformTelemetryRegistrationSettings",
+        "_winrt_windows_system_diagnostics_telemetry.PlatformTelemetryRegistrationSettings",
         sizeof(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -388,7 +388,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_System_Diagnostics_Telemetry",
+           "_winrt_windows_system_diagnostics_telemetry",
            module_doc,
            0,
            nullptr,
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
 } // py::cpp::Windows::System::Diagnostics::Telemetry
 
-PyMODINIT_FUNC PyInit__winrt_Windows_System_Diagnostics_Telemetry(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics_telemetry(void) noexcept
 {
     using namespace py::cpp::Windows::System::Diagnostics::Telemetry;
 

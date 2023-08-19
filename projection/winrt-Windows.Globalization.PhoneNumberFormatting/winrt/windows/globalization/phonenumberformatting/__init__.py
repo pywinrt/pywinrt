@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Globalization.PhoneNumberFormatting")
+from . import _winrt_windows_globalization_phonenumberformatting
 
 class PhoneNumberFormat(enum.IntEnum):
     E164 = 0
@@ -39,5 +38,5 @@ class PredictedPhoneNumberKind(enum.IntEnum):
     VOICEMAIL = 10
     UNKNOWN = 11
 
-PhoneNumberFormatter = _ns_module.PhoneNumberFormatter
-PhoneNumberInfo = _ns_module.PhoneNumberInfo
+PhoneNumberFormatter = _winrt_windows_globalization_phonenumberformatting.PhoneNumberFormatter
+PhoneNumberInfo = _winrt_windows_globalization_phonenumberformatting.PhoneNumberInfo

@@ -210,7 +210,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAccessManager =
     {
-        "_winrt_Windows_ApplicationModel_CommunicationBlocking.CommunicationBlockingAccessManager",
+        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -231,7 +231,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAccessManager_Meta =
     {
-        "_winrt_Windows_ApplicationModel_CommunicationBlocking.CommunicationBlockingAccessManager_Meta",
+        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -345,7 +345,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAppManager =
     {
-        "_winrt_Windows_ApplicationModel_CommunicationBlocking.CommunicationBlockingAppManager",
+        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -366,7 +366,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyType_Spec type_spec_CommunicationBlockingAppManager_Meta =
     {
-        "_winrt_Windows_ApplicationModel_CommunicationBlocking.CommunicationBlockingAppManager_Meta",
+        "_winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -379,7 +379,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_CommunicationBlocking",
+           "_winrt_windows_applicationmodel_communicationblocking",
            module_doc,
            0,
            nullptr,
@@ -390,7 +390,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
 } // py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_CommunicationBlocking(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking;
 

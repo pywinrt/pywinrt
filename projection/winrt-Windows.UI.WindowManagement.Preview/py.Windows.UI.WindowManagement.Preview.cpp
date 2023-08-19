@@ -108,7 +108,7 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
 
     static PyType_Spec type_spec_WindowManagementPreview =
     {
-        "_winrt_Windows_UI_WindowManagement_Preview.WindowManagementPreview",
+        "_winrt_windows_ui_windowmanagement_preview.WindowManagementPreview",
         sizeof(py::wrapper::Windows::UI::WindowManagement::Preview::WindowManagementPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -121,7 +121,7 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_WindowManagement_Preview",
+           "_winrt_windows_ui_windowmanagement_preview",
            module_doc,
            0,
            nullptr,
@@ -132,7 +132,7 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
 
 } // py::cpp::Windows::UI::WindowManagement::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_WindowManagement_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement_preview(void) noexcept
 {
     using namespace py::cpp::Windows::UI::WindowManagement::Preview;
 

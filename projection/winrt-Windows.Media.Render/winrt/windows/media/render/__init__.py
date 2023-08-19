@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Render")
+from . import _winrt_windows_media_render
 
 class AudioRenderCategory(enum.IntEnum):
     OTHER = 0

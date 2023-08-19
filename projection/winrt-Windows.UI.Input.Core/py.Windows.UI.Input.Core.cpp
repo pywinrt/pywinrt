@@ -166,7 +166,7 @@ namespace py::cpp::Windows::UI::Input::Core
 
     static PyType_Spec type_spec_RadialControllerIndependentInputSource =
     {
-        "_winrt_Windows_UI_Input_Core.RadialControllerIndependentInputSource",
+        "_winrt_windows_ui_input_core.RadialControllerIndependentInputSource",
         sizeof(py::wrapper::Windows::UI::Input::Core::RadialControllerIndependentInputSource),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -179,7 +179,7 @@ namespace py::cpp::Windows::UI::Input::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Input_Core",
+           "_winrt_windows_ui_input_core",
            module_doc,
            0,
            nullptr,
@@ -190,7 +190,7 @@ namespace py::cpp::Windows::UI::Input::Core
 
 } // py::cpp::Windows::UI::Input::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_input_core(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Input::Core;
 

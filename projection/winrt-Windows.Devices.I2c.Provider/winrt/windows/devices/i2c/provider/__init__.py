@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.I2c.Provider")
+from . import _winrt_windows_devices_i2c_provider
 
 try:
     import winrt.windows.foundation
@@ -29,8 +28,8 @@ class ProviderI2cTransferStatus(enum.IntEnum):
     PARTIAL_TRANSFER = 1
     SLAVE_ADDRESS_NOT_ACKNOWLEDGED = 2
 
-ProviderI2cTransferResult = _ns_module.ProviderI2cTransferResult
-ProviderI2cConnectionSettings = _ns_module.ProviderI2cConnectionSettings
-II2cControllerProvider = _ns_module.II2cControllerProvider
-II2cDeviceProvider = _ns_module.II2cDeviceProvider
-II2cProvider = _ns_module.II2cProvider
+ProviderI2cTransferResult = _winrt_windows_devices_i2c_provider.ProviderI2cTransferResult
+ProviderI2cConnectionSettings = _winrt_windows_devices_i2c_provider.ProviderI2cConnectionSettings
+II2cControllerProvider = _winrt_windows_devices_i2c_provider.II2cControllerProvider
+II2cDeviceProvider = _winrt_windows_devices_i2c_provider.II2cDeviceProvider
+II2cProvider = _winrt_windows_devices_i2c_provider.II2cProvider

@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Devices.Sms")
+from . import _winrt_windows_devices_sms
 
 try:
     import winrt.windows.foundation
@@ -123,33 +122,33 @@ class SmsModemErrorCode(enum.IntEnum):
     NETWORK_FAILURE = 10
     FIXED_DIALING_NUMBER_RESTRICTED = 11
 
-SmsEncodedLength = _ns_module.SmsEncodedLength
-DeleteSmsMessageOperation = _ns_module.DeleteSmsMessageOperation
-DeleteSmsMessagesOperation = _ns_module.DeleteSmsMessagesOperation
-GetSmsDeviceOperation = _ns_module.GetSmsDeviceOperation
-GetSmsMessageOperation = _ns_module.GetSmsMessageOperation
-GetSmsMessagesOperation = _ns_module.GetSmsMessagesOperation
-SendSmsMessageOperation = _ns_module.SendSmsMessageOperation
-SmsAppMessage = _ns_module.SmsAppMessage
-SmsBinaryMessage = _ns_module.SmsBinaryMessage
-SmsBroadcastMessage = _ns_module.SmsBroadcastMessage
-SmsDevice = _ns_module.SmsDevice
-SmsDevice2 = _ns_module.SmsDevice2
-SmsDeviceMessageStore = _ns_module.SmsDeviceMessageStore
-SmsFilterRule = _ns_module.SmsFilterRule
-SmsFilterRules = _ns_module.SmsFilterRules
-SmsMessageReceivedEventArgs = _ns_module.SmsMessageReceivedEventArgs
-SmsMessageReceivedTriggerDetails = _ns_module.SmsMessageReceivedTriggerDetails
-SmsMessageRegistration = _ns_module.SmsMessageRegistration
-SmsReceivedEventDetails = _ns_module.SmsReceivedEventDetails
-SmsSendMessageResult = _ns_module.SmsSendMessageResult
-SmsStatusMessage = _ns_module.SmsStatusMessage
-SmsTextMessage = _ns_module.SmsTextMessage
-SmsTextMessage2 = _ns_module.SmsTextMessage2
-SmsVoicemailMessage = _ns_module.SmsVoicemailMessage
-SmsWapMessage = _ns_module.SmsWapMessage
-ISmsBinaryMessage = _ns_module.ISmsBinaryMessage
-ISmsDevice = _ns_module.ISmsDevice
-ISmsMessage = _ns_module.ISmsMessage
-ISmsMessageBase = _ns_module.ISmsMessageBase
-ISmsTextMessage = _ns_module.ISmsTextMessage
+SmsEncodedLength = _winrt_windows_devices_sms.SmsEncodedLength
+DeleteSmsMessageOperation = _winrt_windows_devices_sms.DeleteSmsMessageOperation
+DeleteSmsMessagesOperation = _winrt_windows_devices_sms.DeleteSmsMessagesOperation
+GetSmsDeviceOperation = _winrt_windows_devices_sms.GetSmsDeviceOperation
+GetSmsMessageOperation = _winrt_windows_devices_sms.GetSmsMessageOperation
+GetSmsMessagesOperation = _winrt_windows_devices_sms.GetSmsMessagesOperation
+SendSmsMessageOperation = _winrt_windows_devices_sms.SendSmsMessageOperation
+SmsAppMessage = _winrt_windows_devices_sms.SmsAppMessage
+SmsBinaryMessage = _winrt_windows_devices_sms.SmsBinaryMessage
+SmsBroadcastMessage = _winrt_windows_devices_sms.SmsBroadcastMessage
+SmsDevice = _winrt_windows_devices_sms.SmsDevice
+SmsDevice2 = _winrt_windows_devices_sms.SmsDevice2
+SmsDeviceMessageStore = _winrt_windows_devices_sms.SmsDeviceMessageStore
+SmsFilterRule = _winrt_windows_devices_sms.SmsFilterRule
+SmsFilterRules = _winrt_windows_devices_sms.SmsFilterRules
+SmsMessageReceivedEventArgs = _winrt_windows_devices_sms.SmsMessageReceivedEventArgs
+SmsMessageReceivedTriggerDetails = _winrt_windows_devices_sms.SmsMessageReceivedTriggerDetails
+SmsMessageRegistration = _winrt_windows_devices_sms.SmsMessageRegistration
+SmsReceivedEventDetails = _winrt_windows_devices_sms.SmsReceivedEventDetails
+SmsSendMessageResult = _winrt_windows_devices_sms.SmsSendMessageResult
+SmsStatusMessage = _winrt_windows_devices_sms.SmsStatusMessage
+SmsTextMessage = _winrt_windows_devices_sms.SmsTextMessage
+SmsTextMessage2 = _winrt_windows_devices_sms.SmsTextMessage2
+SmsVoicemailMessage = _winrt_windows_devices_sms.SmsVoicemailMessage
+SmsWapMessage = _winrt_windows_devices_sms.SmsWapMessage
+ISmsBinaryMessage = _winrt_windows_devices_sms.ISmsBinaryMessage
+ISmsDevice = _winrt_windows_devices_sms.ISmsDevice
+ISmsMessage = _winrt_windows_devices_sms.ISmsMessage
+ISmsMessageBase = _winrt_windows_devices_sms.ISmsMessageBase
+ISmsTextMessage = _winrt_windows_devices_sms.ISmsTextMessage

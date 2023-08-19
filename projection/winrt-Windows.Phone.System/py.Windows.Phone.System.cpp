@@ -83,7 +83,7 @@ namespace py::cpp::Windows::Phone::System
 
     static PyType_Spec type_spec_SystemProtection =
     {
-        "_winrt_Windows_Phone_System.SystemProtection",
+        "_winrt_windows_phone_system.SystemProtection",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -104,7 +104,7 @@ namespace py::cpp::Windows::Phone::System
 
     static PyType_Spec type_spec_SystemProtection_Meta =
     {
-        "_winrt_Windows_Phone_System.SystemProtection_Meta",
+        "_winrt_windows_phone_system.SystemProtection_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -117,7 +117,7 @@ namespace py::cpp::Windows::Phone::System
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Phone_System",
+           "_winrt_windows_phone_system",
            module_doc,
            0,
            nullptr,
@@ -128,7 +128,7 @@ namespace py::cpp::Windows::Phone::System
 
 } // py::cpp::Windows::Phone::System
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Phone_System(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_phone_system(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::System;
 

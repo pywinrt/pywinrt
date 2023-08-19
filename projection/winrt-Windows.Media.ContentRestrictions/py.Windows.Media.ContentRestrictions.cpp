@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyType_Spec type_spec_ContentRestrictionsBrowsePolicy =
     {
-        "_winrt_Windows_Media_ContentRestrictions.ContentRestrictionsBrowsePolicy",
+        "_winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -476,7 +476,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyType_Spec type_spec_RatedContentDescription =
     {
-        "_winrt_Windows_Media_ContentRestrictions.RatedContentDescription",
+        "_winrt_windows_media_contentrestrictions.RatedContentDescription",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::RatedContentDescription),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -728,7 +728,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyType_Spec type_spec_RatedContentRestrictions =
     {
-        "_winrt_Windows_Media_ContentRestrictions.RatedContentRestrictions",
+        "_winrt_windows_media_contentrestrictions.RatedContentRestrictions",
         sizeof(py::wrapper::Windows::Media::ContentRestrictions::RatedContentRestrictions),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -741,7 +741,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_ContentRestrictions",
+           "_winrt_windows_media_contentrestrictions",
            module_doc,
            0,
            nullptr,
@@ -752,7 +752,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 
 } // py::cpp::Windows::Media::ContentRestrictions
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_ContentRestrictions(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_contentrestrictions(void) noexcept
 {
     using namespace py::cpp::Windows::Media::ContentRestrictions;
 

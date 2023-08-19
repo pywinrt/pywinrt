@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Phone.System.UserProfile.GameServices.Core")
+from . import _winrt_windows_phone_system_userprofile_gameservices_core
 
 try:
     import winrt.windows.foundation
@@ -26,5 +25,5 @@ class GameServiceScoreKind(enum.IntEnum):
     NUMBER = 0
     TIME = 1
 
-GameService = _ns_module.GameService
-GameServicePropertyCollection = _ns_module.GameServicePropertyCollection
+GameService = _winrt_windows_phone_system_userprofile_gameservices_core.GameService
+GameServicePropertyCollection = _winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection

@@ -196,7 +196,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnAppId =
     {
-        "_winrt_Windows_Networking_Vpn.VpnAppId",
+        "_winrt_windows_networking_vpn.VpnAppId",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnAppId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1487,7 +1487,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnChannel =
     {
-        "_winrt_Windows_Networking_Vpn.VpnChannel",
+        "_winrt_windows_networking_vpn.VpnChannel",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnChannel),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1582,7 +1582,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnChannelActivityEventArgs =
     {
-        "_winrt_Windows_Networking_Vpn.VpnChannelActivityEventArgs",
+        "_winrt_windows_networking_vpn.VpnChannelActivityEventArgs",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnChannelActivityEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1677,7 +1677,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnChannelActivityStateChangedArgs =
     {
-        "_winrt_Windows_Networking_Vpn.VpnChannelActivityStateChangedArgs",
+        "_winrt_windows_networking_vpn.VpnChannelActivityStateChangedArgs",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1832,7 +1832,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnChannelConfiguration =
     {
-        "_winrt_Windows_Networking_Vpn.VpnChannelConfiguration",
+        "_winrt_windows_networking_vpn.VpnChannelConfiguration",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnChannelConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1987,7 +1987,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCredential =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCredential",
+        "_winrt_windows_networking_vpn.VpnCredential",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCredential),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2297,7 +2297,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomCheckBox =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomCheckBox",
+        "_winrt_windows_networking_vpn.VpnCustomCheckBox",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2607,7 +2607,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomComboBox =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomComboBox",
+        "_winrt_windows_networking_vpn.VpnCustomComboBox",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2965,7 +2965,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomEditBox =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomEditBox",
+        "_winrt_windows_networking_vpn.VpnCustomEditBox",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3207,7 +3207,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomErrorBox =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomErrorBox",
+        "_winrt_windows_networking_vpn.VpnCustomErrorBox",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3517,7 +3517,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomPromptBooleanInput =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomPromptBooleanInput",
+        "_winrt_windows_networking_vpn.VpnCustomPromptBooleanInput",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3799,7 +3799,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomPromptOptionSelector =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomPromptOptionSelector",
+        "_winrt_windows_networking_vpn.VpnCustomPromptOptionSelector",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4089,7 +4089,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomPromptText =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomPromptText",
+        "_winrt_windows_networking_vpn.VpnCustomPromptText",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4447,7 +4447,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomPromptTextInput =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomPromptTextInput",
+        "_winrt_windows_networking_vpn.VpnCustomPromptTextInput",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4737,7 +4737,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnCustomTextBox =
     {
-        "_winrt_Windows_Networking_Vpn.VpnCustomTextBox",
+        "_winrt_windows_networking_vpn.VpnCustomTextBox",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4903,7 +4903,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnDomainNameAssignment =
     {
-        "_winrt_Windows_Networking_Vpn.VpnDomainNameAssignment",
+        "_winrt_windows_networking_vpn.VpnDomainNameAssignment",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnDomainNameAssignment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5162,7 +5162,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnDomainNameInfo =
     {
-        "_winrt_Windows_Networking_Vpn.VpnDomainNameInfo",
+        "_winrt_windows_networking_vpn.VpnDomainNameInfo",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5377,7 +5377,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnForegroundActivatedEventArgs =
     {
-        "_winrt_Windows_Networking_Vpn.VpnForegroundActivatedEventArgs",
+        "_winrt_windows_networking_vpn.VpnForegroundActivatedEventArgs",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5485,7 +5485,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnForegroundActivationOperation =
     {
-        "_winrt_Windows_Networking_Vpn.VpnForegroundActivationOperation",
+        "_winrt_windows_networking_vpn.VpnForegroundActivationOperation",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivationOperation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -5624,7 +5624,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnInterfaceId =
     {
-        "_winrt_Windows_Networking_Vpn.VpnInterfaceId",
+        "_winrt_windows_networking_vpn.VpnInterfaceId",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnInterfaceId),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6009,7 +6009,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnManagementAgent =
     {
-        "_winrt_Windows_Networking_Vpn.VpnManagementAgent",
+        "_winrt_windows_networking_vpn.VpnManagementAgent",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6203,7 +6203,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnNamespaceAssignment =
     {
-        "_winrt_Windows_Networking_Vpn.VpnNamespaceAssignment",
+        "_winrt_windows_networking_vpn.VpnNamespaceAssignment",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -6449,7 +6449,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnNamespaceInfo =
     {
-        "_winrt_Windows_Networking_Vpn.VpnNamespaceInfo",
+        "_winrt_windows_networking_vpn.VpnNamespaceInfo",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7099,7 +7099,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnNativeProfile =
     {
-        "_winrt_Windows_Networking_Vpn.VpnNativeProfile",
+        "_winrt_windows_networking_vpn.VpnNativeProfile",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7385,7 +7385,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnPacketBuffer =
     {
-        "_winrt_Windows_Networking_Vpn.VpnPacketBuffer",
+        "_winrt_windows_networking_vpn.VpnPacketBuffer",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7729,7 +7729,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnPacketBufferList =
     {
-        "_winrt_Windows_Networking_Vpn.VpnPacketBufferList",
+        "_winrt_windows_networking_vpn.VpnPacketBufferList",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -7864,7 +7864,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnPickedCredential =
     {
-        "_winrt_Windows_Networking_Vpn.VpnPickedCredential",
+        "_winrt_windows_networking_vpn.VpnPickedCredential",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnPickedCredential),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8370,7 +8370,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnPlugInProfile =
     {
-        "_winrt_Windows_Networking_Vpn.VpnPlugInProfile",
+        "_winrt_windows_networking_vpn.VpnPlugInProfile",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8567,7 +8567,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnRoute =
     {
-        "_winrt_Windows_Networking_Vpn.VpnRoute",
+        "_winrt_windows_networking_vpn.VpnRoute",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnRoute),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -8905,7 +8905,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnRouteAssignment =
     {
-        "_winrt_Windows_Networking_Vpn.VpnRouteAssignment",
+        "_winrt_windows_networking_vpn.VpnRouteAssignment",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9000,7 +9000,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnSystemHealth =
     {
-        "_winrt_Windows_Networking_Vpn.VpnSystemHealth",
+        "_winrt_windows_networking_vpn.VpnSystemHealth",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnSystemHealth),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9344,7 +9344,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnTrafficFilter =
     {
-        "_winrt_Windows_Networking_Vpn.VpnTrafficFilter",
+        "_winrt_windows_networking_vpn.VpnTrafficFilter",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9558,7 +9558,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_VpnTrafficFilterAssignment =
     {
-        "_winrt_Windows_Networking_Vpn.VpnTrafficFilterAssignment",
+        "_winrt_windows_networking_vpn.VpnTrafficFilterAssignment",
         sizeof(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9667,7 +9667,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnChannelStatics =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnChannelStatics",
+        "_winrt_windows_networking_vpn.IVpnChannelStatics",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnChannelStatics),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -9822,7 +9822,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnCredential =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnCredential",
+        "_winrt_windows_networking_vpn.IVpnCredential",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnCredential),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10041,7 +10041,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnCustomPrompt =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnCustomPrompt",
+        "_winrt_windows_networking_vpn.IVpnCustomPrompt",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10260,7 +10260,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnCustomPromptElement =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnCustomPromptElement",
+        "_winrt_windows_networking_vpn.IVpnCustomPromptElement",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10370,7 +10370,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnDomainNameInfoFactory =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnDomainNameInfoFactory",
+        "_winrt_windows_networking_vpn.IVpnDomainNameInfoFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnDomainNameInfoFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10477,7 +10477,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnInterfaceIdFactory =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnInterfaceIdFactory",
+        "_winrt_windows_networking_vpn.IVpnInterfaceIdFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnInterfaceIdFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10586,7 +10586,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnNamespaceInfoFactory =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnNamespaceInfoFactory",
+        "_winrt_windows_networking_vpn.IVpnNamespaceInfoFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnNamespaceInfoFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10695,7 +10695,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnPacketBufferFactory =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnPacketBufferFactory",
+        "_winrt_windows_networking_vpn.IVpnPacketBufferFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnPacketBufferFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -10947,7 +10947,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnPlugIn =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnPlugIn",
+        "_winrt_windows_networking_vpn.IVpnPlugIn",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11246,7 +11246,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnProfile =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnProfile",
+        "_winrt_windows_networking_vpn.IVpnProfile",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnProfile),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11354,7 +11354,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyType_Spec type_spec_IVpnRouteFactory =
     {
-        "_winrt_Windows_Networking_Vpn.IVpnRouteFactory",
+        "_winrt_windows_networking_vpn.IVpnRouteFactory",
         sizeof(py::wrapper::Windows::Networking::Vpn::IVpnRouteFactory),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -11367,7 +11367,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Networking_Vpn",
+           "_winrt_windows_networking_vpn",
            module_doc,
            0,
            nullptr,
@@ -11378,7 +11378,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
 } // py::cpp::Windows::Networking::Vpn
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Networking_Vpn(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
 {
     using namespace py::cpp::Windows::Networking::Vpn;
 

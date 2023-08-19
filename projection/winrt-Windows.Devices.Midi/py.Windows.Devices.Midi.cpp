@@ -157,7 +157,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiActiveSensingMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiActiveSensingMessage",
+        "_winrt_windows_devices_midi.MidiActiveSensingMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiActiveSensingMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -358,7 +358,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiChannelPressureMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiChannelPressureMessage",
+        "_winrt_windows_devices_midi.MidiChannelPressureMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -516,7 +516,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiContinueMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiContinueMessage",
+        "_winrt_windows_devices_midi.MidiContinueMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiContinueMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -738,7 +738,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiControlChangeMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiControlChangeMessage",
+        "_winrt_windows_devices_midi.MidiControlChangeMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -993,7 +993,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiInPort =
     {
-        "_winrt_Windows_Devices_Midi.MidiInPort",
+        "_winrt_windows_devices_midi.MidiInPort",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiInPort),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1088,7 +1088,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiMessageReceivedEventArgs =
     {
-        "_winrt_Windows_Devices_Midi.MidiMessageReceivedEventArgs",
+        "_winrt_windows_devices_midi.MidiMessageReceivedEventArgs",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiMessageReceivedEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1310,7 +1310,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiNoteOffMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiNoteOffMessage",
+        "_winrt_windows_devices_midi.MidiNoteOffMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1532,7 +1532,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiNoteOnMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiNoteOnMessage",
+        "_winrt_windows_devices_midi.MidiNoteOnMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1808,7 +1808,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiOutPort =
     {
-        "_winrt_Windows_Devices_Midi.MidiOutPort",
+        "_winrt_windows_devices_midi.MidiOutPort",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiOutPort),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2009,7 +2009,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiPitchBendChangeMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiPitchBendChangeMessage",
+        "_winrt_windows_devices_midi.MidiPitchBendChangeMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2231,7 +2231,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiPolyphonicKeyPressureMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiPolyphonicKeyPressureMessage",
+        "_winrt_windows_devices_midi.MidiPolyphonicKeyPressureMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiProgramChangeMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiProgramChangeMessage",
+        "_winrt_windows_devices_midi.MidiProgramChangeMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2612,7 +2612,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiSongPositionPointerMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiSongPositionPointerMessage",
+        "_winrt_windows_devices_midi.MidiSongPositionPointerMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiSongPositionPointerMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2792,7 +2792,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiSongSelectMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiSongSelectMessage",
+        "_winrt_windows_devices_midi.MidiSongSelectMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiSongSelectMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2950,7 +2950,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiStartMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiStartMessage",
+        "_winrt_windows_devices_midi.MidiStartMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiStartMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3108,7 +3108,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiStopMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiStopMessage",
+        "_winrt_windows_devices_midi.MidiStopMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiStopMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3472,7 +3472,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiSynthesizer =
     {
-        "_winrt_Windows_Devices_Midi.MidiSynthesizer",
+        "_winrt_windows_devices_midi.MidiSynthesizer",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiSynthesizer),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3632,7 +3632,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiSystemExclusiveMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiSystemExclusiveMessage",
+        "_winrt_windows_devices_midi.MidiSystemExclusiveMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiSystemExclusiveMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3790,7 +3790,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiSystemResetMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiSystemResetMessage",
+        "_winrt_windows_devices_midi.MidiSystemResetMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiSystemResetMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -3991,7 +3991,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiTimeCodeMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiTimeCodeMessage",
+        "_winrt_windows_devices_midi.MidiTimeCodeMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4149,7 +4149,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiTimingClockMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiTimingClockMessage",
+        "_winrt_windows_devices_midi.MidiTimingClockMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiTimingClockMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4307,7 +4307,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_MidiTuneRequestMessage =
     {
-        "_winrt_Windows_Devices_Midi.MidiTuneRequestMessage",
+        "_winrt_windows_devices_midi.MidiTuneRequestMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::MidiTuneRequestMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4442,7 +4442,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_IMidiMessage =
     {
-        "_winrt_Windows_Devices_Midi.IMidiMessage",
+        "_winrt_windows_devices_midi.IMidiMessage",
         sizeof(py::wrapper::Windows::Devices::Midi::IMidiMessage),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4656,7 +4656,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyType_Spec type_spec_IMidiOutPort =
     {
-        "_winrt_Windows_Devices_Midi.IMidiOutPort",
+        "_winrt_windows_devices_midi.IMidiOutPort",
         sizeof(py::wrapper::Windows::Devices::Midi::IMidiOutPort),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -4669,7 +4669,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Midi",
+           "_winrt_windows_devices_midi",
            module_doc,
            0,
            nullptr,
@@ -4680,7 +4680,7 @@ namespace py::cpp::Windows::Devices::Midi
 
 } // py::cpp::Windows::Devices::Midi
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Midi(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_midi(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Midi;
 

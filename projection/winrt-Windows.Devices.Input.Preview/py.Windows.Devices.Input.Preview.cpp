@@ -250,7 +250,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeDevicePreview =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeDevicePreview",
+        "_winrt_windows_devices_input_preview.GazeDevicePreview",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -345,7 +345,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeDeviceWatcherAddedPreviewEventArgs =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeDeviceWatcherAddedPreviewEventArgs",
+        "_winrt_windows_devices_input_preview.GazeDeviceWatcherAddedPreviewEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -662,7 +662,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeDeviceWatcherPreview =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeDeviceWatcherPreview",
+        "_winrt_windows_devices_input_preview.GazeDeviceWatcherPreview",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -757,7 +757,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeDeviceWatcherRemovedPreviewEventArgs =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeDeviceWatcherRemovedPreviewEventArgs",
+        "_winrt_windows_devices_input_preview.GazeDeviceWatcherRemovedPreviewEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -852,7 +852,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeDeviceWatcherUpdatedPreviewEventArgs",
+        "_winrt_windows_devices_input_preview.GazeDeviceWatcherUpdatedPreviewEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -995,7 +995,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeEnteredPreviewEventArgs =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeEnteredPreviewEventArgs",
+        "_winrt_windows_devices_input_preview.GazeEnteredPreviewEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1138,7 +1138,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeExitedPreviewEventArgs =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeExitedPreviewEventArgs",
+        "_winrt_windows_devices_input_preview.GazeExitedPreviewEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1408,7 +1408,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeInputSourcePreview =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeInputSourcePreview",
+        "_winrt_windows_devices_input_preview.GazeInputSourcePreview",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1581,7 +1581,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazeMovedPreviewEventArgs =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazeMovedPreviewEventArgs",
+        "_winrt_windows_devices_input_preview.GazeMovedPreviewEventArgs",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1756,7 +1756,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyType_Spec type_spec_GazePointPreview =
     {
-        "_winrt_Windows_Devices_Input_Preview.GazePointPreview",
+        "_winrt_windows_devices_input_preview.GazePointPreview",
         sizeof(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1769,7 +1769,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Devices_Input_Preview",
+           "_winrt_windows_devices_input_preview",
            module_doc,
            0,
            nullptr,
@@ -1780,7 +1780,7 @@ namespace py::cpp::Windows::Devices::Input::Preview
 
 } // py::cpp::Windows::Devices::Input::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Devices_Input_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_devices_input_preview(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Input::Preview;
 

@@ -134,7 +134,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_FindAllAccountsResult =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.FindAllAccountsResult",
+        "_winrt_windows_security_authentication_web_core.FindAllAccountsResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::FindAllAccountsResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebAccountEventArgs =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebAccountEventArgs",
+        "_winrt_windows_security_authentication_web_core.WebAccountEventArgs",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAccountEventArgs),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -484,7 +484,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebAccountMonitor =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebAccountMonitor",
+        "_winrt_windows_security_authentication_web_core.WebAccountMonitor",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAccountMonitor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -892,7 +892,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebAuthenticationCoreManager =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebAuthenticationCoreManager",
+        "_winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebProviderError =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebProviderError",
+        "_winrt_windows_security_authentication_web_core.WebProviderError",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebProviderError),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1372,7 +1372,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebTokenRequest =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebTokenRequest",
+        "_winrt_windows_security_authentication_web_core.WebTokenRequest",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenRequest),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1537,7 +1537,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebTokenRequestResult =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebTokenRequestResult",
+        "_winrt_windows_security_authentication_web_core.WebTokenRequestResult",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenRequestResult),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1763,7 +1763,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyType_Spec type_spec_WebTokenResponse =
     {
-        "_winrt_Windows_Security_Authentication_Web_Core.WebTokenResponse",
+        "_winrt_windows_security_authentication_web_core.WebTokenResponse",
         sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebTokenResponse),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1776,7 +1776,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Authentication_Web_Core",
+           "_winrt_windows_security_authentication_web_core",
            module_doc,
            0,
            nullptr,
@@ -1787,7 +1787,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
 } // py::cpp::Windows::Security::Authentication::Web::Core
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Authentication_Web_Core(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Authentication::Web::Core;
 

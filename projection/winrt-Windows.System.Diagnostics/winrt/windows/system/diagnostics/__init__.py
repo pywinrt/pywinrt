@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.System.Diagnostics")
+from . import _winrt_windows_system_diagnostics
 
 try:
     import winrt.windows.data.json
@@ -35,17 +34,17 @@ class DiagnosticActionState(enum.IntEnum):
     VERIFYING_RESOLUTION = 5
     EXECUTING = 6
 
-DiagnosticActionResult = _ns_module.DiagnosticActionResult
-DiagnosticInvoker = _ns_module.DiagnosticInvoker
-ProcessCpuUsage = _ns_module.ProcessCpuUsage
-ProcessCpuUsageReport = _ns_module.ProcessCpuUsageReport
-ProcessDiagnosticInfo = _ns_module.ProcessDiagnosticInfo
-ProcessDiskUsage = _ns_module.ProcessDiskUsage
-ProcessDiskUsageReport = _ns_module.ProcessDiskUsageReport
-ProcessMemoryUsage = _ns_module.ProcessMemoryUsage
-ProcessMemoryUsageReport = _ns_module.ProcessMemoryUsageReport
-SystemCpuUsage = _ns_module.SystemCpuUsage
-SystemCpuUsageReport = _ns_module.SystemCpuUsageReport
-SystemDiagnosticInfo = _ns_module.SystemDiagnosticInfo
-SystemMemoryUsage = _ns_module.SystemMemoryUsage
-SystemMemoryUsageReport = _ns_module.SystemMemoryUsageReport
+DiagnosticActionResult = _winrt_windows_system_diagnostics.DiagnosticActionResult
+DiagnosticInvoker = _winrt_windows_system_diagnostics.DiagnosticInvoker
+ProcessCpuUsage = _winrt_windows_system_diagnostics.ProcessCpuUsage
+ProcessCpuUsageReport = _winrt_windows_system_diagnostics.ProcessCpuUsageReport
+ProcessDiagnosticInfo = _winrt_windows_system_diagnostics.ProcessDiagnosticInfo
+ProcessDiskUsage = _winrt_windows_system_diagnostics.ProcessDiskUsage
+ProcessDiskUsageReport = _winrt_windows_system_diagnostics.ProcessDiskUsageReport
+ProcessMemoryUsage = _winrt_windows_system_diagnostics.ProcessMemoryUsage
+ProcessMemoryUsageReport = _winrt_windows_system_diagnostics.ProcessMemoryUsageReport
+SystemCpuUsage = _winrt_windows_system_diagnostics.SystemCpuUsage
+SystemCpuUsageReport = _winrt_windows_system_diagnostics.SystemCpuUsageReport
+SystemDiagnosticInfo = _winrt_windows_system_diagnostics.SystemDiagnosticInfo
+SystemMemoryUsage = _winrt_windows_system_diagnostics.SystemMemoryUsage
+SystemMemoryUsageReport = _winrt_windows_system_diagnostics.SystemMemoryUsageReport

@@ -94,7 +94,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_DetectedFace =
     {
-        "_winrt_Windows_Media_FaceAnalysis.DetectedFace",
+        "_winrt_windows_media_faceanalysis.DetectedFace",
         sizeof(py::wrapper::Windows::Media::FaceAnalysis::DetectedFace),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -429,7 +429,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceDetector =
     {
-        "_winrt_Windows_Media_FaceAnalysis.FaceDetector",
+        "_winrt_windows_media_faceanalysis.FaceDetector",
         sizeof(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -450,7 +450,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceDetector_Meta =
     {
-        "_winrt_Windows_Media_FaceAnalysis.FaceDetector_Meta",
+        "_winrt_windows_media_faceanalysis.FaceDetector_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -764,7 +764,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceTracker =
     {
-        "_winrt_Windows_Media_FaceAnalysis.FaceTracker",
+        "_winrt_windows_media_faceanalysis.FaceTracker",
         sizeof(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyType_Spec type_spec_FaceTracker_Meta =
     {
-        "_winrt_Windows_Media_FaceAnalysis.FaceTracker_Meta",
+        "_winrt_windows_media_faceanalysis.FaceTracker_Meta",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
@@ -798,7 +798,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Media_FaceAnalysis",
+           "_winrt_windows_media_faceanalysis",
            module_doc,
            0,
            nullptr,
@@ -809,7 +809,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
 } // py::cpp::Windows::Media::FaceAnalysis
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Media_FaceAnalysis(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
 {
     using namespace py::cpp::Windows::Media::FaceAnalysis;
 

@@ -2201,7 +2201,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyType_Spec type_spec_DeviceAccountConfiguration =
     {
-        "_winrt_Windows_ApplicationModel_UserDataAccounts_SystemAccess.DeviceAccountConfiguration",
+        "_winrt_windows_applicationmodel_userdataaccounts_systemaccess.DeviceAccountConfiguration",
         sizeof(py::wrapper::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2395,7 +2395,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyType_Spec type_spec_UserDataAccountSystemAccessManager =
     {
-        "_winrt_Windows_ApplicationModel_UserDataAccounts_SystemAccess.UserDataAccountSystemAccessManager",
+        "_winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -2408,7 +2408,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_ApplicationModel_UserDataAccounts_SystemAccess",
+           "_winrt_windows_applicationmodel_userdataaccounts_systemaccess",
            module_doc,
            0,
            nullptr,
@@ -2419,7 +2419,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
 } // py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 
-PyMODINIT_FUNC PyInit__winrt_Windows_ApplicationModel_UserDataAccounts_SystemAccess(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemaccess(void) noexcept
 {
     using namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess;
 

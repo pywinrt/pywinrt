@@ -65,7 +65,7 @@ namespace py::cpp::Windows::UI::Input::Preview
 
     static PyType_Spec type_spec_InputActivationListenerPreview =
     {
-        "_winrt_Windows_UI_Input_Preview.InputActivationListenerPreview",
+        "_winrt_windows_ui_input_preview.InputActivationListenerPreview",
         0,
         0,
         Py_TPFLAGS_DEFAULT,
@@ -78,7 +78,7 @@ namespace py::cpp::Windows::UI::Input::Preview
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_UI_Input_Preview",
+           "_winrt_windows_ui_input_preview",
            module_doc,
            0,
            nullptr,
@@ -89,7 +89,7 @@ namespace py::cpp::Windows::UI::Input::Preview
 
 } // py::cpp::Windows::UI::Input::Preview
 
-PyMODINIT_FUNC PyInit__winrt_Windows_UI_Input_Preview(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_ui_input_preview(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Input::Preview;
 

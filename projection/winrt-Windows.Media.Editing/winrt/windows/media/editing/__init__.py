@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Media.Editing")
+from . import _winrt_windows_media_editing
 
 try:
     import winrt.windows.foundation
@@ -64,9 +63,9 @@ class VideoFramePrecision(enum.IntEnum):
     NEAREST_FRAME = 0
     NEAREST_KEY_FRAME = 1
 
-BackgroundAudioTrack = _ns_module.BackgroundAudioTrack
-EmbeddedAudioTrack = _ns_module.EmbeddedAudioTrack
-MediaClip = _ns_module.MediaClip
-MediaComposition = _ns_module.MediaComposition
-MediaOverlay = _ns_module.MediaOverlay
-MediaOverlayLayer = _ns_module.MediaOverlayLayer
+BackgroundAudioTrack = _winrt_windows_media_editing.BackgroundAudioTrack
+EmbeddedAudioTrack = _winrt_windows_media_editing.EmbeddedAudioTrack
+MediaClip = _winrt_windows_media_editing.MediaClip
+MediaComposition = _winrt_windows_media_editing.MediaComposition
+MediaOverlay = _winrt_windows_media_editing.MediaOverlay
+MediaOverlayLayer = _winrt_windows_media_editing.MediaOverlayLayer

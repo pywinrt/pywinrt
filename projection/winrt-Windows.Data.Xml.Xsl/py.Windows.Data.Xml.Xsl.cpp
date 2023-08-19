@@ -163,7 +163,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
     static PyType_Spec type_spec_XsltProcessor =
     {
-        "_winrt_Windows_Data_Xml_Xsl.XsltProcessor",
+        "_winrt_windows_data_xml_xsl.XsltProcessor",
         sizeof(py::wrapper::Windows::Data::Xml::Xsl::XsltProcessor),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -176,7 +176,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Data_Xml_Xsl",
+           "_winrt_windows_data_xml_xsl",
            module_doc,
            0,
            nullptr,
@@ -187,7 +187,7 @@ namespace py::cpp::Windows::Data::Xml::Xsl
 
 } // py::cpp::Windows::Data::Xml::Xsl
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Data_Xml_Xsl(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_data_xml_xsl(void) noexcept
 {
     using namespace py::cpp::Windows::Data::Xml::Xsl;
 

@@ -242,7 +242,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
 
     static PyType_Spec type_spec_DataProtectionProvider =
     {
-        "_winrt_Windows_Security_Cryptography_DataProtection.DataProtectionProvider",
+        "_winrt_windows_security_cryptography_dataprotection.DataProtectionProvider",
         sizeof(py::wrapper::Windows::Security::Cryptography::DataProtection::DataProtectionProvider),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_Cryptography_DataProtection",
+           "_winrt_windows_security_cryptography_dataprotection",
            module_doc,
            0,
            nullptr,
@@ -266,7 +266,7 @@ namespace py::cpp::Windows::Security::Cryptography::DataProtection
 
 } // py::cpp::Windows::Security::Cryptography::DataProtection
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_Cryptography_DataProtection(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_cryptography_dataprotection(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Cryptography::DataProtection;
 

@@ -257,7 +257,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static PyType_Spec type_spec_EasClientDeviceInformation =
     {
-        "_winrt_Windows_Security_ExchangeActiveSyncProvisioning.EasClientDeviceInformation",
+        "_winrt_windows_security_exchangeactivesyncprovisioning.EasClientDeviceInformation",
         sizeof(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -799,7 +799,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static PyType_Spec type_spec_EasClientSecurityPolicy =
     {
-        "_winrt_Windows_Security_ExchangeActiveSyncProvisioning.EasClientSecurityPolicy",
+        "_winrt_windows_security_exchangeactivesyncprovisioning.EasClientSecurityPolicy",
         sizeof(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static PyType_Spec type_spec_EasComplianceResults =
     {
-        "_winrt_Windows_Security_ExchangeActiveSyncProvisioning.EasComplianceResults",
+        "_winrt_windows_security_exchangeactivesyncprovisioning.EasComplianceResults",
         sizeof(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults),
         0,
         Py_TPFLAGS_DEFAULT,
@@ -1087,7 +1087,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_winrt_Windows_Security_ExchangeActiveSyncProvisioning",
+           "_winrt_windows_security_exchangeactivesyncprovisioning",
            module_doc,
            0,
            nullptr,
@@ -1098,7 +1098,7 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
 } // py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
 
-PyMODINIT_FUNC PyInit__winrt_Windows_Security_ExchangeActiveSyncProvisioning(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_security_exchangeactivesyncprovisioning(void) noexcept
 {
     using namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning;
 

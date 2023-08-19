@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.UI.Popups")
+from . import _winrt_windows_ui_popups
 
 try:
     import winrt.windows.foundation
@@ -27,8 +26,8 @@ class Placement(enum.IntEnum):
     LEFT = 3
     RIGHT = 4
 
-MessageDialog = _ns_module.MessageDialog
-PopupMenu = _ns_module.PopupMenu
-UICommand = _ns_module.UICommand
-UICommandSeparator = _ns_module.UICommandSeparator
-IUICommand = _ns_module.IUICommand
+MessageDialog = _winrt_windows_ui_popups.MessageDialog
+PopupMenu = _winrt_windows_ui_popups.PopupMenu
+UICommand = _winrt_windows_ui_popups.UICommand
+UICommandSeparator = _winrt_windows_ui_popups.UICommandSeparator
+IUICommand = _winrt_windows_ui_popups.IUICommand

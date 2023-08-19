@@ -3,8 +3,7 @@
 import enum
 
 import winrt.system
-
-_ns_module = winrt.system._import_ns_module("Windows.Networking.ServiceDiscovery.Dnssd")
+from . import _winrt_windows_networking_servicediscovery_dnssd
 
 try:
     import winrt.windows.foundation
@@ -45,8 +44,8 @@ class DnssdServiceWatcherStatus(enum.IntEnum):
     STOPPED = 4
     ABORTED = 5
 
-DnssdRegistrationResult = _ns_module.DnssdRegistrationResult
-DnssdServiceInstance = _ns_module.DnssdServiceInstance
-DnssdServiceInstanceCollection = _ns_module.DnssdServiceInstanceCollection
+DnssdRegistrationResult = _winrt_windows_networking_servicediscovery_dnssd.DnssdRegistrationResult
+DnssdServiceInstance = _winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstance
+DnssdServiceInstanceCollection = _winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstanceCollection
 winrt.system._mixin_sequence(DnssdServiceInstanceCollection)
-DnssdServiceWatcher = _ns_module.DnssdServiceWatcher
+DnssdServiceWatcher = _winrt_windows_networking_servicediscovery_dnssd.DnssdServiceWatcher
