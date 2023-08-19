@@ -722,23 +722,9 @@ namespace py
     template<typename T, typename = void>
     struct converter
     {
-        static PyObject* convert(T value) noexcept
-        {
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::converter<%s>::convert() is not implemented",
-                typeid(T).name());
-            return nullptr;
-        }
-
-        static T convert_to(PyObject* obj)
-        {
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::converter<%s>::convert_to() is not implemented",
-                typeid(T).name());
-            throw python_exception();
-        }
+        static_assert(
+            std::is_same_v<T, void>,
+            "specialization of py::converter<T> is not implemented");
     };
 
     template<>
