@@ -3,11 +3,6 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_media_media3d
 
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
 Matrix3D = _winrt_windows_ui_xaml_media_media3d.Matrix3D
 CompositeTransform3D = _winrt_windows_ui_xaml_media_media3d.CompositeTransform3D
 Matrix3DHelper = _winrt_windows_ui_xaml_media_media3d.Matrix3DHelper

@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_security_authentication_identity
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 EnterpriseKeyCredentialRegistrationInfo = _winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationInfo
 EnterpriseKeyCredentialRegistrationManager = _winrt_windows_security_authentication_identity.EnterpriseKeyCredentialRegistrationManager

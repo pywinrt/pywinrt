@@ -3,9 +3,4 @@
 import winrt.system
 from . import _winrt_windows_phone_devices_notification
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 VibrationDevice = _winrt_windows_phone_devices_notification.VibrationDevice

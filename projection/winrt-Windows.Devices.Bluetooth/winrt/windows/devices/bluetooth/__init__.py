@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_bluetooth
 
-try:
-    import winrt.windows.devices.bluetooth.genericattributeprofile
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.bluetooth.rfcomm
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.radios
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class BluetoothAddressType(enum.IntEnum):
     PUBLIC = 0
     RANDOM = 1

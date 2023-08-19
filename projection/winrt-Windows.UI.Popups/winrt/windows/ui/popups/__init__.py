@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_popups
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class MessageDialogOptions(enum.IntFlag):
     NONE = 0
     ACCEPT_USER_INPUT_AFTER_DELAY = 0x1

@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_exchangeactivesyncprovisioning
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class EasDisallowConvenienceLogonResult(enum.IntEnum):
     NOT_EVALUATED = 0
     COMPLIANT = 1

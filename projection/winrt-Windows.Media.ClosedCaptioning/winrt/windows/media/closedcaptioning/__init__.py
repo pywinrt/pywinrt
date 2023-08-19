@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_closedcaptioning
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class ClosedCaptionColor(enum.IntEnum):
     DEFAULT = 0
     WHITE = 1

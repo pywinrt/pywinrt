@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel
 
-try:
-    import winrt.windows.applicationmodel.activation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class AddResourcePackageOptions(enum.IntFlag):
     NONE = 0
     FORCE_TARGET_APP_SHUTDOWN = 0x1

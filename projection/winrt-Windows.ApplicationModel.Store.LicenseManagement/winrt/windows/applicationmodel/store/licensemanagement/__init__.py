@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_store_licensemanagement
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class LicenseRefreshOption(enum.IntEnum):
     RUNNING_LICENSES = 0
     ALL_LICENSES = 1

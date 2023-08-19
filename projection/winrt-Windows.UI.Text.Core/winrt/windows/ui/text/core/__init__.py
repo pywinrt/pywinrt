@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_text_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.text
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.viewmanagement
-except ImportError:
-    pass
-
 class CoreTextFormatUpdatingReason(enum.IntEnum):
     NONE = 0
     COMPOSITION_UNCONVERTED = 1

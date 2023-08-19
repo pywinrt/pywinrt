@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_foundation
 
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class AsyncStatus(enum.IntEnum):
     CANCELED = 2
     COMPLETED = 1

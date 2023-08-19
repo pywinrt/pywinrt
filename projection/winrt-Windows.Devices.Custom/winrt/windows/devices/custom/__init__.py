@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_custom
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class DeviceAccessMode(enum.IntEnum):
     READ = 0
     WRITE = 1

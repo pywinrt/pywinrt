@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_perception_spatial
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system.remotesystems
-except ImportError:
-    pass
-
 class SpatialAnchorExportPurpose(enum.IntEnum):
     RELOCALIZATION = 0
     SHARING = 1

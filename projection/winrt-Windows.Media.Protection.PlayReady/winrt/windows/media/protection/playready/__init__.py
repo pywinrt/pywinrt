@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_protection_playready
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.protection
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class NDCertificateFeature(enum.IntEnum):
     TRANSMITTER = 1
     RECEIVER = 2

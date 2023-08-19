@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_navigation
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.interop
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.media.animation
-except ImportError:
-    pass
-
 class NavigationCacheMode(enum.IntEnum):
     DISABLED = 0
     REQUIRED = 1

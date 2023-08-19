@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_syndication
 
-try:
-    import winrt.windows.data.xml.dom
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
 class SyndicationErrorStatus(enum.IntEnum):
     UNKNOWN = 0
     MISSING_REQUIRED_ELEMENT = 1

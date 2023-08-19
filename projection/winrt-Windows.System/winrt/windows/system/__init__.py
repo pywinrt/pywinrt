@@ -5,56 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system
 
-try:
-    import winrt.windows.applicationmodel
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.search
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system.diagnostics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system.remotesystems
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.viewmanagement
-except ImportError:
-    pass
-
 class AppDiagnosticInfoWatcherStatus(enum.IntEnum):
     CREATED = 0
     STARTED = 1

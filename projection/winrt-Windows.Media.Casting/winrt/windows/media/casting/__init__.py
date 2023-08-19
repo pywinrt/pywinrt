@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_casting
 
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
 class CastingConnectionErrorStatus(enum.IntEnum):
     SUCCEEDED = 0
     DEVICE_DID_NOT_RESPOND = 1

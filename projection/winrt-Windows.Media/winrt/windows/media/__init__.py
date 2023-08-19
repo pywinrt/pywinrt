@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media
 
-try:
-    import winrt.windows.applicationmodel.appservice
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx.direct3d11
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class AudioBufferAccessMode(enum.IntEnum):
     READ = 0
     READ_WRITE = 1

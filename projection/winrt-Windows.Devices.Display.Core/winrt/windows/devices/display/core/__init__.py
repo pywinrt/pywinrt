@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_display_core
 
-try:
-    import winrt.windows.devices.display
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx.direct3d11
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class DisplayBitsPerChannel(enum.IntFlag):
     NONE = 0
     BPC6 = 0x1

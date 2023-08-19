@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_email
 
-try:
-    import winrt.windows.applicationmodel.appointments
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class EmailAttachmentDownloadState(enum.IntEnum):
     NOT_DOWNLOADED = 0
     DOWNLOADING = 1

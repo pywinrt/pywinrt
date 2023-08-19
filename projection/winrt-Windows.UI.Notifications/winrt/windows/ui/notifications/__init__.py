@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_notifications
 
-try:
-    import winrt.windows.applicationmodel
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.data.xml.dom
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class AdaptiveNotificationContentKind(enum.IntEnum):
     TEXT = 0
 

@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_control
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
     CLOSED = 0
     OPENED = 1

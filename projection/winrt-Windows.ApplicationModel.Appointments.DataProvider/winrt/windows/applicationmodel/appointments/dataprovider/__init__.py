@@ -3,21 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_appointments_dataprovider
 
-try:
-    import winrt.windows.applicationmodel.appointments
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 AppointmentCalendarCancelMeetingRequest = _winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequest
 AppointmentCalendarCancelMeetingRequestEventArgs = _winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCancelMeetingRequestEventArgs
 AppointmentCalendarCreateOrUpdateAppointmentRequest = _winrt_windows_applicationmodel_appointments_dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequest

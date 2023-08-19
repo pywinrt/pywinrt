@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_streams
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class ByteOrder(enum.IntEnum):
     LITTLE_ENDIAN = 0
     BIG_ENDIAN = 1

@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_playlists
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class PlaylistFormat(enum.IntEnum):
     WINDOWS_MEDIA = 0
     ZUNE = 1

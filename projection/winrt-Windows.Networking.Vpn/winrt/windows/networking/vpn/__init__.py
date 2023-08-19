@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_vpn
 
-try:
-    import winrt.windows.applicationmodel.activation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class VpnAppIdType(enum.IntEnum):
     PACKAGE_FAMILY_NAME = 0
     FULLY_QUALIFIED_BINARY_NAME = 1

@@ -3,36 +3,6 @@
 import winrt.system
 from . import _winrt_windows_web_atompub
 
-try:
-    import winrt.windows.data.xml.dom
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.syndication
-except ImportError:
-    pass
-
 AtomPubClient = _winrt_windows_web_atompub.AtomPubClient
 ResourceCollection = _winrt_windows_web_atompub.ResourceCollection
 ServiceDocument = _winrt_windows_web_atompub.ServiceDocument

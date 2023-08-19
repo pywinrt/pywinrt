@@ -3,31 +3,6 @@
 import winrt.system
 from . import _winrt_windows_devices
 
-try:
-    import winrt.windows.devices.adc.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.gpio.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.i2c.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.pwm.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.spi.provider
-except ImportError:
-    pass
-
 LowLevelDevicesAggregateProvider = _winrt_windows_devices.LowLevelDevicesAggregateProvider
 LowLevelDevicesController = _winrt_windows_devices.LowLevelDevicesController
 ILowLevelDevicesAggregateProvider = _winrt_windows_devices.ILowLevelDevicesAggregateProvider

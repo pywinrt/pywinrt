@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_hosting
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.windowmanagement
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls.primitives
-except ImportError:
-    pass
-
 class DesignerAppViewState(enum.IntEnum):
     VISIBLE = 0
     HIDDEN = 1

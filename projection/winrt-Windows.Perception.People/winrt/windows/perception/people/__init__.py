@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_perception_people
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.spatial
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input.spatial
-except ImportError:
-    pass
-
 class HandJointKind(enum.IntEnum):
     PALM = 0
     WRIST = 1

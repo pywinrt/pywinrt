@@ -3,9 +3,4 @@
 import winrt.system
 from . import _winrt_windows_phone_devices_power
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 Battery = _winrt_windows_phone_devices_power.Battery

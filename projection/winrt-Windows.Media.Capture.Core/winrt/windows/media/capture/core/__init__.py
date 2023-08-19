@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_media_capture_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.capture
-except ImportError:
-    pass
-
 VariablePhotoCapturedEventArgs = _winrt_windows_media_capture_core.VariablePhotoCapturedEventArgs
 VariablePhotoSequenceCapture = _winrt_windows_media_capture_core.VariablePhotoSequenceCapture

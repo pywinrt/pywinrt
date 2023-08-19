@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_display
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics
-except ImportError:
-    pass
-
 class DisplayMonitorConnectionKind(enum.IntEnum):
     INTERNAL = 0
     WIRED = 1

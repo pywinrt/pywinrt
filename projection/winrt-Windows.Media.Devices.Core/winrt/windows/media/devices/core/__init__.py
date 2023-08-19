@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_devices_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.mediaproperties
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.spatial
-except ImportError:
-    pass
-
 class FrameFlashMode(enum.IntEnum):
     DISABLE = 0
     ENABLE = 1

@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_cryptography_certificates
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class CertificateChainPolicy(enum.IntEnum):
     BASE = 0
     SSL = 1

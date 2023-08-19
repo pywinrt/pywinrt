@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_management_deployment
 
-try:
-    import winrt.windows.applicationmodel
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class AddPackageByAppInstallerOptions(enum.IntFlag):
     NONE = 0
     INSTALL_ALL_RESOURCES = 0x20

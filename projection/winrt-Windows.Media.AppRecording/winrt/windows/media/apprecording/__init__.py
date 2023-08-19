@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_apprecording
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class AppRecordingSaveScreenshotOption(enum.IntEnum):
     NONE = 0
     HDR_CONTENT_VISIBLE = 1

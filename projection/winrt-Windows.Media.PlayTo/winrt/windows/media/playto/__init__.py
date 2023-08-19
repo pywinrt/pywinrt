@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_playto
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class PlayToConnectionError(enum.IntEnum):
     NONE = 0
     DEVICE_NOT_RESPONDING = 1

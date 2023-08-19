@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_printing
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.printing
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
 class PreviewPageCountType(enum.IntEnum):
     FINAL = 0
     INTERMEDIATE = 1

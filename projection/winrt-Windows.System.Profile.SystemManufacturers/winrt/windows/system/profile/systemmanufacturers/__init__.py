@@ -3,11 +3,6 @@
 import winrt.system
 from . import _winrt_windows_system_profile_systemmanufacturers
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 OemSupportInfo = _winrt_windows_system_profile_systemmanufacturers.OemSupportInfo
 SmbiosInformation = _winrt_windows_system_profile_systemmanufacturers.SmbiosInformation
 SystemSupportDeviceInfo = _winrt_windows_system_profile_systemmanufacturers.SystemSupportDeviceInfo

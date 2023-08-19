@@ -3,21 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_socialinfo_provider
 
-try:
-    import winrt.windows.applicationmodel.socialinfo
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 SocialDashboardItemUpdater = _winrt_windows_applicationmodel_socialinfo_provider.SocialDashboardItemUpdater
 SocialFeedUpdater = _winrt_windows_applicationmodel_socialinfo_provider.SocialFeedUpdater
 SocialInfoProviderManager = _winrt_windows_applicationmodel_socialinfo_provider.SocialInfoProviderManager

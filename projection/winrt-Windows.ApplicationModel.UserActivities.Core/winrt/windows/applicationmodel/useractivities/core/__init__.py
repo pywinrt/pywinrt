@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_useractivities_core
 
-try:
-    import winrt.windows.applicationmodel.useractivities
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 CoreUserActivityManager = _winrt_windows_applicationmodel_useractivities_core.CoreUserActivityManager

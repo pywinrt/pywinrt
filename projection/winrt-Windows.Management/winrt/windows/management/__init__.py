@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_management
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class MdmAlertDataType(enum.IntEnum):
     STRING = 0
     BASE64 = 1

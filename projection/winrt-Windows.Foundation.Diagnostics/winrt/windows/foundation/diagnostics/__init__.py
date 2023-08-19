@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_foundation_diagnostics
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class CausalityRelation(enum.IntEnum):
     ASSIGN_DELEGATE = 0
     JOIN = 1

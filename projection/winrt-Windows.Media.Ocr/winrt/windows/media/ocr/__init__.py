@@ -3,26 +3,6 @@
 import winrt.system
 from . import _winrt_windows_media_ocr
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
 OcrEngine = _winrt_windows_media_ocr.OcrEngine
 OcrLine = _winrt_windows_media_ocr.OcrLine
 OcrResult = _winrt_windows_media_ocr.OcrResult

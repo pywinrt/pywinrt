@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_extendedexecution_foreground
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class ExtendedExecutionForegroundReason(enum.IntEnum):
     UNSPECIFIED = 0
     SAVING_DATA = 1

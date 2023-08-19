@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_imaging
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx.direct3d11
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class BitmapAlphaMode(enum.IntEnum):
     PREMULTIPLIED = 0
     STRAIGHT = 1

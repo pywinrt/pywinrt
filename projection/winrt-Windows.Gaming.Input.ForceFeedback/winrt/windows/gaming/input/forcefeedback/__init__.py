@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_input_forcefeedback
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
 class ConditionForceEffectKind(enum.IntEnum):
     SPRING = 0
     DAMPER = 1

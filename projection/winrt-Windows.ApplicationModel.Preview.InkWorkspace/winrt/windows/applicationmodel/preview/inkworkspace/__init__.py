@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_preview_inkworkspace
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
 InkWorkspaceHostedAppManager = _winrt_windows_applicationmodel_preview_inkworkspace.InkWorkspaceHostedAppManager

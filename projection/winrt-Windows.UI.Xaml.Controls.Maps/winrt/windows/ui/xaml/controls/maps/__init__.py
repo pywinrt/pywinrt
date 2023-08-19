@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_controls_maps
 
-try:
-    import winrt.windows.devices.geolocation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.services.maps
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.services.maps.localsearch
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
 class MapAnimationKind(enum.IntEnum):
     DEFAULT = 0
     NONE = 1

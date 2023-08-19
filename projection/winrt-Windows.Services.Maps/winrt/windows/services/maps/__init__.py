@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps
 
-try:
-    import winrt.windows.devices.geolocation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
 class ManeuverWarningKind(enum.IntEnum):
     NONE = 0
     ACCIDENT = 1

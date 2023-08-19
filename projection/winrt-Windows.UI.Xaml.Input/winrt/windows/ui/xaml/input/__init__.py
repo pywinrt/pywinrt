@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_input
 
-try:
-    import winrt.windows.devices.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls
-except ImportError:
-    pass
-
 class FocusInputDeviceKind(enum.IntEnum):
     NONE = 0
     MOUSE = 1

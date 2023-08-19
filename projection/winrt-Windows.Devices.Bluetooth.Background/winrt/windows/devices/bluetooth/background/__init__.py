@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_bluetooth_background
 
-try:
-    import winrt.windows.devices.bluetooth
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.bluetooth.advertisement
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.bluetooth.genericattributeprofile
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.bluetooth.rfcomm
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class BluetoothEventTriggeringMode(enum.IntEnum):
     SERIAL = 0
     BATCH = 1

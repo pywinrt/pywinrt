@@ -3,9 +3,4 @@
 import winrt.system
 from . import _winrt_windows_data_xml_xsl
 
-try:
-    import winrt.windows.data.xml.dom
-except ImportError:
-    pass
-
 XsltProcessor = _winrt_windows_data_xml_xsl.XsltProcessor

@@ -171,7 +171,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import %.system\n", module_name);
         w.write("from . import %\n", bind<write_ns_module_name>(ns));
 
-        w.write_each<write_python_try_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
         w.write("\n");
         settings.filter.bind_each<write_python_import_type>(members.structs)(w);

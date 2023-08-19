@@ -3,10 +3,5 @@
 import winrt.system
 from . import _winrt_windows_devices_background
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 DeviceServicingDetails = _winrt_windows_devices_background.DeviceServicingDetails
 DeviceUseDetails = _winrt_windows_devices_background.DeviceUseDetails

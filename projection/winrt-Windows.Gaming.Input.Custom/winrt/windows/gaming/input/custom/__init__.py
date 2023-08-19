@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_input_custom
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.gaming.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class GipFirmwareUpdateStatus(enum.IntEnum):
     COMPLETED = 0
     UP_TO_DATE = 1

@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_provider
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class CachedFileOptions(enum.IntFlag):
     NONE = 0
     REQUIRE_UPDATE_ON_ACCESS = 0x1

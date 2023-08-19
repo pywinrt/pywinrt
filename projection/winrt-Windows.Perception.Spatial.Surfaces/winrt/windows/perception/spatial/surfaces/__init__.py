@@ -3,36 +3,6 @@
 import winrt.system
 from . import _winrt_windows_perception_spatial_surfaces
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.spatial
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 SpatialSurfaceInfo = _winrt_windows_perception_spatial_surfaces.SpatialSurfaceInfo
 SpatialSurfaceMesh = _winrt_windows_perception_spatial_surfaces.SpatialSurfaceMesh
 SpatialSurfaceMeshBuffer = _winrt_windows_perception_spatial_surfaces.SpatialSurfaceMeshBuffer

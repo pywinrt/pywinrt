@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_interop
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class NotifyCollectionChangedAction(enum.IntEnum):
     ADD = 0
     REMOVE = 1

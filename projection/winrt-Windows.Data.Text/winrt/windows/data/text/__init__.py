@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_data_text
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.text.core
-except ImportError:
-    pass
-
 class AlternateNormalizationFormat(enum.IntEnum):
     NOT_NORMALIZED = 0
     NUMBER = 1

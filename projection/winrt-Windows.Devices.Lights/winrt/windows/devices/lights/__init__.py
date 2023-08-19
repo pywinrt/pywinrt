@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_lights
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class LampArrayKind(enum.IntEnum):
     UNDEFINED = 0
     KEYBOARD = 1

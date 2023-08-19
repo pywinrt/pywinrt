@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_smartcards
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class SmartCardActivationPolicyChangeResult(enum.IntEnum):
     DENIED = 0
     ALLOWED = 1

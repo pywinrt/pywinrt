@@ -3,16 +3,6 @@
 import winrt.system
 from . import _winrt_testcomponent
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 Blittable = _winrt_testcomponent.Blittable
 Nested = _winrt_testcomponent.Nested
 NonBlittable = _winrt_testcomponent.NonBlittable

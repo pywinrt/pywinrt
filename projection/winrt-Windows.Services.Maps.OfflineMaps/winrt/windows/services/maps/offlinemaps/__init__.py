@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps_offlinemaps
 
-try:
-    import winrt.windows.devices.geolocation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class OfflineMapPackageQueryStatus(enum.IntEnum):
     SUCCESS = 0
     UNKNOWN_ERROR = 1

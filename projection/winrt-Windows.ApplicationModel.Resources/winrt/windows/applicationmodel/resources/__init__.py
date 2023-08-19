@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_resources
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 ResourceLoader = _winrt_windows_applicationmodel_resources.ResourceLoader

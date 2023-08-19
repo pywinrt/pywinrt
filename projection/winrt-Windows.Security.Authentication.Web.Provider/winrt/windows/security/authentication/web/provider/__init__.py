@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_web_provider
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.authentication.web
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.authentication.web.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 class WebAccountClientViewType(enum.IntEnum):
     ID_ONLY = 0
     ID_AND_PROPERTIES = 1

@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_userprofile
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class AccountPictureKind(enum.IntEnum):
     SMALL_IMAGE = 0
     LARGE_IMAGE = 1

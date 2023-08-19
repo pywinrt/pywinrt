@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_inking_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input.inking
-except ImportError:
-    pass
-
 class CoreWetStrokeDisposition(enum.IntEnum):
     INKING = 0
     COMPLETED = 1

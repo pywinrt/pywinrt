@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_preview
 
-try:
-    import winrt.windows.devices.sensors
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class HingeState(enum.IntEnum):
     UNKNOWN = 0
     CLOSED = 1

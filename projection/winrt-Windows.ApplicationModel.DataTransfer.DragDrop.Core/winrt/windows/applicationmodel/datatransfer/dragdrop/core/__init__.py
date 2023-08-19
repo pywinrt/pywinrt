@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer_dragdrop_core
 
-try:
-    import winrt.windows.applicationmodel.datatransfer
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.datatransfer.dragdrop
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
 class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0
     DEFERRED = 0x1

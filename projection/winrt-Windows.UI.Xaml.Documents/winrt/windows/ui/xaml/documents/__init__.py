@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_documents
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.text
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.media
-except ImportError:
-    pass
-
 class LogicalDirection(enum.IntEnum):
     BACKWARD = 0
     FORWARD = 1

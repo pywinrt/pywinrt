@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_sockets
 
-try:
-    import winrt.windows.applicationmodel.background
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.connectivity
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web
-except ImportError:
-    pass
-
 class ControlChannelTriggerResetReason(enum.IntEnum):
     FAST_USER_SWITCHED = 0
     LOW_POWER_EXIT = 1

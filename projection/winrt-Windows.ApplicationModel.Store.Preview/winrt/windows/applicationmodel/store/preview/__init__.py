@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_store_preview
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.authentication.web.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
 class DeliveryOptimizationDownloadMode(enum.IntEnum):
     SIMPLE = 0
     HTTP_ONLY = 1

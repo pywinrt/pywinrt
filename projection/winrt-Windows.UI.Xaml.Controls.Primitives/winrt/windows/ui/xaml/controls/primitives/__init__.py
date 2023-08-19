@@ -5,56 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_controls_primitives
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.interop
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.media
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.media.animation
-except ImportError:
-    pass
-
 class AnimationDirection(enum.IntEnum):
     LEFT = 0
     TOP = 1

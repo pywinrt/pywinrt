@@ -3,16 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_contacts_dataprovider
 
-try:
-    import winrt.windows.applicationmodel.contacts
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 ContactDataProviderConnection = _winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderConnection
 ContactDataProviderTriggerDetails = _winrt_windows_applicationmodel_contacts_dataprovider.ContactDataProviderTriggerDetails
 ContactListCreateOrUpdateContactRequest = _winrt_windows_applicationmodel_contacts_dataprovider.ContactListCreateOrUpdateContactRequest

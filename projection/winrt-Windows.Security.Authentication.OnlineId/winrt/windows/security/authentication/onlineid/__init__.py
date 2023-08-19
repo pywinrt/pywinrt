@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_onlineid
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class CredentialPromptType(enum.IntEnum):
     PROMPT_IF_NEEDED = 0
     RETYPE_CREDENTIALS = 1

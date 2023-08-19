@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking
 
-try:
-    import winrt.windows.networking.connectivity
-except ImportError:
-    pass
-
 class DomainNameType(enum.IntEnum):
     SUFFIX = 0
     FULLY_QUALIFIED = 1

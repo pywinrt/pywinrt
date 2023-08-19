@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_windowmanagement
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
 class AppWindowClosedReason(enum.IntEnum):
     OTHER = 0
     APP_INITIATED = 1

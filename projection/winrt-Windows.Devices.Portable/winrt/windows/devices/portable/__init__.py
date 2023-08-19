@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_portable
 
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class ServiceDeviceType(enum.IntEnum):
     CALENDAR_SERVICE = 0
     CONTACTS_SERVICE = 1

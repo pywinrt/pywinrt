@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdatatasks
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class UserDataTaskDaysOfWeek(enum.IntFlag):
     NONE = 0
     SUNDAY = 0x1

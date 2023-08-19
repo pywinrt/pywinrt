@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_globalization_numberformatting
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class CurrencyFormatterMode(enum.IntEnum):
     USE_SYMBOL = 0
     USE_CURRENCY_CODE = 1

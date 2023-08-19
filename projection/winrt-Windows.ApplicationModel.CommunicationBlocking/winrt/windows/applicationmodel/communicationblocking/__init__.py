@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_communicationblocking
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 CommunicationBlockingAccessManager = _winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAccessManager
 CommunicationBlockingAppManager = _winrt_windows_applicationmodel_communicationblocking.CommunicationBlockingAppManager

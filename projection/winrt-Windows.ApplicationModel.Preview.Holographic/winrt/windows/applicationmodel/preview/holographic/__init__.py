@@ -3,20 +3,5 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_preview_holographic
 
-try:
-    import winrt.windows.applicationmodel.activation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.spatial
-except ImportError:
-    pass
-
 HolographicApplicationPreview = _winrt_windows_applicationmodel_preview_holographic.HolographicApplicationPreview
 HolographicKeyboardPlacementOverridePreview = _winrt_windows_applicationmodel_preview_holographic.HolographicKeyboardPlacementOverridePreview

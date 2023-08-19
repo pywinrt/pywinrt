@@ -3,31 +3,6 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_automation_provider
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.automation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.automation.peers
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.automation.text
-except ImportError:
-    pass
-
 IRawElementProviderSimple = _winrt_windows_ui_xaml_automation_provider.IRawElementProviderSimple
 IAnnotationProvider = _winrt_windows_ui_xaml_automation_provider.IAnnotationProvider
 ICustomNavigationProvider = _winrt_windows_ui_xaml_automation_provider.ICustomNavigationProvider

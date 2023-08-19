@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_inking_analysis
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input.inking
-except ImportError:
-    pass
-
 class InkAnalysisDrawingKind(enum.IntEnum):
     DRAWING = 0
     CIRCLE = 1

@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_proximity
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class PeerDiscoveryTypes(enum.IntFlag):
     NONE = 0
     BROWSE = 0x1

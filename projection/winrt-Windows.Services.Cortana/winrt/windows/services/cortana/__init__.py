@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_cortana
 
-try:
-    import winrt.windows.applicationmodel.datatransfer
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class CortanaPermission(enum.IntEnum):
     BROWSING_HISTORY = 0
     CALENDAR = 1

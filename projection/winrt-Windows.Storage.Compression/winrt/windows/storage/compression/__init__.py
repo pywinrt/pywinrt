@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_compression
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class CompressAlgorithm(enum.IntEnum):
     INVALID_ALGORITHM = 0
     NULL_ALGORITHM = 1

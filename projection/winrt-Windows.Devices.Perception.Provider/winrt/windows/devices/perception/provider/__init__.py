@@ -3,36 +3,6 @@
 import winrt.system
 from . import _winrt_windows_devices_perception_provider
 
-try:
-    import winrt.windows.devices.perception
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media
-except ImportError:
-    pass
-
 KnownPerceptionFrameKind = _winrt_windows_devices_perception_provider.KnownPerceptionFrameKind
 PerceptionControlGroup = _winrt_windows_devices_perception_provider.PerceptionControlGroup
 PerceptionCorrelation = _winrt_windows_devices_perception_provider.PerceptionCorrelation

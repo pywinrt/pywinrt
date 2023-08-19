@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_i2c
 
-try:
-    import winrt.windows.devices.i2c.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class I2cBusSpeed(enum.IntEnum):
     STANDARD_MODE = 0
     FAST_MODE = 1

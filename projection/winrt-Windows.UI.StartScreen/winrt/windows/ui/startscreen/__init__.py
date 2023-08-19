@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_startscreen
 
-try:
-    import winrt.windows.applicationmodel.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.spatial
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
 class ForegroundText(enum.IntEnum):
     DARK = 0
     LIGHT = 1

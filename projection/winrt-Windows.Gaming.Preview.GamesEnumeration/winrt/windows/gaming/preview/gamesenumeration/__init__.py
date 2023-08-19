@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_preview_gamesenumeration
 
-try:
-    import winrt.windows.applicationmodel
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class GameListCategory(enum.IntEnum):
     CANDIDATE = 0
     CONFIRMED_BY_SYSTEM = 1

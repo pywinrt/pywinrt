@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdataaccounts
 
-try:
-    import winrt.windows.applicationmodel.appointments
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.contacts
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.email
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.userdatatasks
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class UserDataAccountContentKinds(enum.IntFlag):
     EMAIL = 0x1
     CONTACT = 0x2

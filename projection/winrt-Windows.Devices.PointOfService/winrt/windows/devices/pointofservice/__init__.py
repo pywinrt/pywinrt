@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_pointofservice
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class BarcodeScannerStatus(enum.IntEnum):
     ONLINE = 0
     OFF = 1

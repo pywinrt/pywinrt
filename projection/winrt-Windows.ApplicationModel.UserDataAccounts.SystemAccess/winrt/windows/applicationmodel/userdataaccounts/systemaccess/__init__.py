@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdataaccounts_systemaccess
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
 class DeviceAccountAuthenticationType(enum.IntEnum):
     BASIC = 0
     O_AUTH = 1

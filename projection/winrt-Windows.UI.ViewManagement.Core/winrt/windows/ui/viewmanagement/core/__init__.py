@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_viewmanagement_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class CoreInputViewKind(enum.IntEnum):
     DEFAULT = 0
     KEYBOARD = 1

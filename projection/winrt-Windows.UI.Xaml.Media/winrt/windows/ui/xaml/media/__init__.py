@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_media
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.playback
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls.primitives
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.media.media3d
-except ImportError:
-    pass
-
 class AcrylicBackgroundSource(enum.IntEnum):
     HOST_BACKDROP = 0
     BACKDROP = 1

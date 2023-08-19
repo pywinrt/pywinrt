@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_authentication_web_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class FindAllWebAccountsStatus(enum.IntEnum):
     SUCCESS = 0
     NOT_ALLOWED_BY_PROVIDER = 1

@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_automation_peers
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.automation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.automation.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.controls.primitives
-except ImportError:
-    pass
-
 class AccessibilityView(enum.IntEnum):
     RAW = 0
     CONTROL = 1

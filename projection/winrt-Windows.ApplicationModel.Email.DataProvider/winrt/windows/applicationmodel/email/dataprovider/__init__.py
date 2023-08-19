@@ -3,26 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_email_dataprovider
 
-try:
-    import winrt.windows.applicationmodel.email
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
 EmailDataProviderConnection = _winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderConnection
 EmailDataProviderTriggerDetails = _winrt_windows_applicationmodel_email_dataprovider.EmailDataProviderTriggerDetails
 EmailMailboxCreateFolderRequest = _winrt_windows_applicationmodel_email_dataprovider.EmailMailboxCreateFolderRequest

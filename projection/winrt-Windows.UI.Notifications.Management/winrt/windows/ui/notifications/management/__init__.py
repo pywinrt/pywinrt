@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_notifications_management
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.notifications
-except ImportError:
-    pass
-
 class UserNotificationListenerAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

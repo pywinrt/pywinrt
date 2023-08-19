@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input_spatial
 
-try:
-    import winrt.windows.devices.haptics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.power
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.people
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.perception.spatial
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class SpatialGestureSettings(enum.IntFlag):
     NONE = 0
     TAP = 0x1

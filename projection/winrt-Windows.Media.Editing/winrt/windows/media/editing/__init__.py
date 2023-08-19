@@ -5,56 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_editing
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx.direct3d11
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.effects
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.mediaproperties
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.transcoding
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class MediaTrimmingPreference(enum.IntEnum):
     FAST = 0
     PRECISE = 1

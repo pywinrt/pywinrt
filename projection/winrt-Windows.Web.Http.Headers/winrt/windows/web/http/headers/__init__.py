@@ -3,36 +3,6 @@
 import winrt.system
 from . import _winrt_windows_web_http_headers
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 HttpCacheDirectiveHeaderValueCollection = _winrt_windows_web_http_headers.HttpCacheDirectiveHeaderValueCollection
 winrt.system._mixin_mutable_sequence(HttpCacheDirectiveHeaderValueCollection)
 HttpChallengeHeaderValue = _winrt_windows_web_http_headers.HttpChallengeHeaderValue

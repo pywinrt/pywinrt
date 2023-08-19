@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_phone_media_devices
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class AudioRoutingEndpoint(enum.IntEnum):
     DEFAULT = 0
     EARPIECE = 1

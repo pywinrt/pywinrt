@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_viewmanagement
 
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.windowmanagement
-except ImportError:
-    pass
-
 class ApplicationViewBoundsMode(enum.IntEnum):
     USE_VISIBLE = 0
     USE_CORE_WINDOW = 1

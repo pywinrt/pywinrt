@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_diagnostics_tracereporting
 
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class PlatformDiagnosticActionState(enum.IntEnum):
     SUCCESS = 0
     FREE_NETWORK_NOT_AVAILABLE = 1

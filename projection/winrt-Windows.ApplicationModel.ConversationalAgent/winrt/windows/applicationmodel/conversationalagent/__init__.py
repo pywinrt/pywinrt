@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_conversationalagent
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.audio
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class ActivationSignalDetectionConfigurationCreationStatus(enum.IntEnum):
     SUCCESS = 0
     SIGNAL_ID_NOT_AVAILABLE = 1

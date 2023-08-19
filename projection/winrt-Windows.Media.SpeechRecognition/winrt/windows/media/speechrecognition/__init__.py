@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_speechrecognition
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class SpeechContinuousRecognitionMode(enum.IntEnum):
     DEFAULT = 0
     PAUSE_ON_RECOGNITION = 1

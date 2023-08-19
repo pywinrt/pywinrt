@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_extendedexecution
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class ExtendedExecutionReason(enum.IntEnum):
     UNSPECIFIED = 0
     LOCATION_TRACKING = 1

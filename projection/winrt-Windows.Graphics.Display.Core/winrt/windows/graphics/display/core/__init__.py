@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_display_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class HdmiDisplayColorSpace(enum.IntEnum):
     RGB_LIMITED = 0
     RGB_FULL = 1

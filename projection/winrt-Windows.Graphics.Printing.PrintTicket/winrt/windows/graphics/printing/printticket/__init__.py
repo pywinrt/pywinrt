@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_printticket
 
-try:
-    import winrt.windows.data.xml.dom
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class PrintTicketFeatureSelectionType(enum.IntEnum):
     PICK_ONE = 0
     PICK_MANY = 1

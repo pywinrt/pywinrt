@@ -3,9 +3,4 @@
 import winrt.system
 from . import _winrt_windows_gaming_input_preview
 
-try:
-    import winrt.windows.gaming.input.custom
-except ImportError:
-    pass
-
 GameControllerProviderInfo = _winrt_windows_gaming_input_preview.GameControllerProviderInfo

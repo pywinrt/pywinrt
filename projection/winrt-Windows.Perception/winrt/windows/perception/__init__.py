@@ -3,10 +3,5 @@
 import winrt.system
 from . import _winrt_windows_perception
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 PerceptionTimestamp = _winrt_windows_perception.PerceptionTimestamp
 PerceptionTimestampHelper = _winrt_windows_perception.PerceptionTimestampHelper

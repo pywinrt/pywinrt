@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_http_filters
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 class HttpCacheReadBehavior(enum.IntEnum):
     DEFAULT = 0
     MOST_RECENT = 1

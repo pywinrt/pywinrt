@@ -3,10 +3,5 @@
 import winrt.system
 from . import _winrt_windows_globalization_fonts
 
-try:
-    import winrt.windows.ui.text
-except ImportError:
-    pass
-
 LanguageFont = _winrt_windows_globalization_fonts.LanguageFont
 LanguageFontGroup = _winrt_windows_globalization_fonts.LanguageFontGroup

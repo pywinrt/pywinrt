@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_threading
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class WorkItemOptions(enum.IntFlag):
     NONE = 0
     TIME_SLICED = 0x1

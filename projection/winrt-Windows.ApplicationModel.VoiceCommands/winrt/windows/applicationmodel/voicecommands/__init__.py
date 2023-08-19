@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_voicecommands
 
-try:
-    import winrt.windows.applicationmodel.appservice
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.speechrecognition
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class VoiceCommandCompletionReason(enum.IntEnum):
     UNKNOWN = 0
     COMMUNICATION_FAILED = 1

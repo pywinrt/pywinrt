@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_maps_guidance
 
-try:
-    import winrt.windows.devices.geolocation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.services.maps
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class GuidanceAudioMeasurementSystem(enum.IntEnum):
     METERS = 0
     MILES_AND_YARDS = 1

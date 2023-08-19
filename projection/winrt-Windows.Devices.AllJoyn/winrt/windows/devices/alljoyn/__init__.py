@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_alljoyn
 
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.globalization
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
 class AllJoynAuthenticationMechanism(enum.IntEnum):
     NONE = 0
     SRP_ANONYMOUS = 1

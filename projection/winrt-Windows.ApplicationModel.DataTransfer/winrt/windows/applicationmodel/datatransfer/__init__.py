@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.enterprisedata
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class ClipboardHistoryItemsResultStatus(enum.IntEnum):
     SUCCESS = 0
     ACCESS_DENIED = 1

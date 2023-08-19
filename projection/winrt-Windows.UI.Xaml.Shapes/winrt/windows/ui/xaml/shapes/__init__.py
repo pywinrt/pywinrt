@@ -3,21 +3,6 @@
 import winrt.system
 from . import _winrt_windows_ui_xaml_shapes
 
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.media
-except ImportError:
-    pass
-
 Ellipse = _winrt_windows_ui_xaml_shapes.Ellipse
 Line = _winrt_windows_ui_xaml_shapes.Line
 Path = _winrt_windows_ui_xaml_shapes.Path

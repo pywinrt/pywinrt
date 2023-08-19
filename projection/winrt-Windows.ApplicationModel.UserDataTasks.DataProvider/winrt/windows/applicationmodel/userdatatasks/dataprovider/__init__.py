@@ -3,16 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_userdatatasks_dataprovider
 
-try:
-    import winrt.windows.applicationmodel.userdatatasks
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 UserDataTaskDataProviderConnection = _winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderConnection
 UserDataTaskDataProviderTriggerDetails = _winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskDataProviderTriggerDetails
 UserDataTaskListCompleteTaskRequest = _winrt_windows_applicationmodel_userdatatasks_dataprovider.UserDataTaskListCompleteTaskRequest

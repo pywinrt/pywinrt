@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_management_update
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class WindowsUpdateAdministratorOptions(enum.IntFlag):
     NONE = 0
     REQUIRE_ADMINISTRATOR_APPROVAL_FOR_SCANS = 0x1

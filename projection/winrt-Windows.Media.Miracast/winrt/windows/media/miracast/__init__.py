@@ -5,36 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_miracast
 
-try:
-    import winrt.windows.applicationmodel.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class MiracastReceiverApplySettingsStatus(enum.IntEnum):
     SUCCESS = 0
     UNKNOWN_FAILURE = 1

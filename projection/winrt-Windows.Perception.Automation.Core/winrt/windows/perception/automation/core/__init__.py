@@ -3,9 +3,4 @@
 import winrt.system
 from . import _winrt_windows_perception_automation_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 CorePerceptionAutomation = _winrt_windows_perception_automation_core.CorePerceptionAutomation

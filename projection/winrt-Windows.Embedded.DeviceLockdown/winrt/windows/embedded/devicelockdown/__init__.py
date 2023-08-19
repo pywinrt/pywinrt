@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_embedded_devicelockdown
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 DeviceLockdownProfile = _winrt_windows_embedded_devicelockdown.DeviceLockdownProfile
 DeviceLockdownProfileInformation = _winrt_windows_embedded_devicelockdown.DeviceLockdownProfileInformation

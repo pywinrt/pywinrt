@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_spi
 
-try:
-    import winrt.windows.devices.spi.provider
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class SpiMode(enum.IntEnum):
     MODE0 = 0
     MODE1 = 1

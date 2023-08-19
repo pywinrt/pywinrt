@@ -3,26 +3,6 @@
 import winrt.system
 from . import _winrt_windows_media_faceanalysis
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media
-except ImportError:
-    pass
-
 DetectedFace = _winrt_windows_media_faceanalysis.DetectedFace
 FaceDetector = _winrt_windows_media_faceanalysis.FaceDetector
 FaceTracker = _winrt_windows_media_faceanalysis.FaceTracker

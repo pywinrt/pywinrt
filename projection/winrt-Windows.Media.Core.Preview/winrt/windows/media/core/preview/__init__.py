@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_media_core_preview
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media
-except ImportError:
-    pass
-
 SoundLevelBroker = _winrt_windows_media_core_preview.SoundLevelBroker

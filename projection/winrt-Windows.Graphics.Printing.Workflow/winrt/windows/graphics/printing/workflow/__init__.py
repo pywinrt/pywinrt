@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_workflow
 
-try:
-    import winrt.windows.applicationmodel.activation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.printers
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.printing.printticket
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class PdlConversionHostBasedProcessingOperations(enum.IntFlag):
     NONE = 0
     PAGE_ROTATION = 0x1

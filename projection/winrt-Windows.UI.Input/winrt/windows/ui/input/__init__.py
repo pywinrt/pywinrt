@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_input
 
-try:
-    import winrt.windows.devices.haptics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.core
-except ImportError:
-    pass
-
 class CrossSlidingState(enum.IntEnum):
     STARTED = 0
     DRAGGING = 1

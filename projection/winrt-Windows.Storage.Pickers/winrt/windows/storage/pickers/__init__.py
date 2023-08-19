@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_pickers
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
 class PickerLocationId(enum.IntEnum):
     DOCUMENTS_LIBRARY = 0
     COMPUTER_FOLDER = 1

@@ -3,21 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_preview_notes
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 NotePlacementChangedPreviewEventArgs = _winrt_windows_applicationmodel_preview_notes.NotePlacementChangedPreviewEventArgs
 NoteVisibilityChangedPreviewEventArgs = _winrt_windows_applicationmodel_preview_notes.NoteVisibilityChangedPreviewEventArgs
 NotesWindowManagerPreview = _winrt_windows_applicationmodel_preview_notes.NotesWindowManagerPreview

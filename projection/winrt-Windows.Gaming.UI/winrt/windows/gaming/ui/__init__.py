@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_gaming_ui
 
-try:
-    import winrt.windows.applicationmodel.activation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class GameChatMessageOrigin(enum.IntEnum):
     VOICE = 0
     TEXT = 1

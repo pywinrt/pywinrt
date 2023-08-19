@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_pickers_provider
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 class AddFileResult(enum.IntEnum):
     ADDED = 0
     ALREADY_ADDED = 1

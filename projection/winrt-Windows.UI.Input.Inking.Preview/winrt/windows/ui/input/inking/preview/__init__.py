@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_ui_input_inking_preview
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
 PalmRejectionDelayZonePreview = _winrt_windows_ui_input_inking_preview.PalmRejectionDelayZonePreview

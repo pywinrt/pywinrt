@@ -5,46 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_capture
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.directx.direct3d11
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.authorization.appcapabilityaccess
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
 class GraphicsCaptureAccessKind(enum.IntEnum):
     BORDERLESS = 0
     PROGRAMMATIC = 1

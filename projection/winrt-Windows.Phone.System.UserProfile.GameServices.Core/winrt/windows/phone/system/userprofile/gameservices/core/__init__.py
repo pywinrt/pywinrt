@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_phone_system_userprofile_gameservices_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class GameServiceGameOutcome(enum.IntEnum):
     NONE = 0
     WIN = 1

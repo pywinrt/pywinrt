@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_ui_windowmanagement_preview
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.windowmanagement
-except ImportError:
-    pass
-
 WindowManagementPreview = _winrt_windows_ui_windowmanagement_preview.WindowManagementPreview

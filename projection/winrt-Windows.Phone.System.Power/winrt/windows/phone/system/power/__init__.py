@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_phone_system_power
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class PowerSavingMode(enum.IntEnum):
     OFF = 0
     ON = 1

@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_cryptography_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.cryptography.certificates
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class Capi1KdfTargetAlgorithm(enum.IntEnum):
     NOT_AES = 0
     AES = 1

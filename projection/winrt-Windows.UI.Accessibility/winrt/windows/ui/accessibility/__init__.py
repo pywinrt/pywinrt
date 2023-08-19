@@ -3,10 +3,5 @@
 import winrt.system
 from . import _winrt_windows_ui_accessibility
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 ScreenReaderPositionChangedEventArgs = _winrt_windows_ui_accessibility.ScreenReaderPositionChangedEventArgs
 ScreenReaderService = _winrt_windows_ui_accessibility.ScreenReaderService

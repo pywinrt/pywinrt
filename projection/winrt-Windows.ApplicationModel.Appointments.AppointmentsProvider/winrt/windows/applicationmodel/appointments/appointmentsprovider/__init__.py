@@ -3,16 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_appointments_appointmentsprovider
 
-try:
-    import winrt.windows.applicationmodel.appointments
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 AddAppointmentOperation = _winrt_windows_applicationmodel_appointments_appointmentsprovider.AddAppointmentOperation
 AppointmentsProviderLaunchActionVerbs = _winrt_windows_applicationmodel_appointments_appointmentsprovider.AppointmentsProviderLaunchActionVerbs
 RemoveAppointmentOperation = _winrt_windows_applicationmodel_appointments_appointmentsprovider.RemoveAppointmentOperation

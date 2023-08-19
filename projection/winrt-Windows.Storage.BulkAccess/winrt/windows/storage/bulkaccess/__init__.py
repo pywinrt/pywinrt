@@ -3,36 +3,6 @@
 import winrt.system
 from . import _winrt_windows_storage_bulkaccess
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.fileproperties
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.search
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 FileInformation = _winrt_windows_storage_bulkaccess.FileInformation
 FileInformationFactory = _winrt_windows_storage_bulkaccess.FileInformationFactory
 FolderInformation = _winrt_windows_storage_bulkaccess.FolderInformation

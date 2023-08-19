@@ -3,16 +3,6 @@
 import winrt.system
 from . import _winrt_windows_system_implementation_fileexplorer
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 SysStorageProviderEventReceivedEventArgs = _winrt_windows_system_implementation_fileexplorer.SysStorageProviderEventReceivedEventArgs
 ISysStorageProviderEventSource = _winrt_windows_system_implementation_fileexplorer.ISysStorageProviderEventSource
 ISysStorageProviderHandlerFactory = _winrt_windows_system_implementation_fileexplorer.ISysStorageProviderHandlerFactory

@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_diagnostics_deviceportal
 
-try:
-    import winrt.windows.applicationmodel.appservice
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 class DevicePortalConnectionClosedReason(enum.IntEnum):
     UNKNOWN = 0
     RESOURCE_LIMITS_EXCEEDED = 1

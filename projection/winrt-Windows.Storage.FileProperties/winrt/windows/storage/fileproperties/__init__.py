@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_storage_fileproperties
 
-try:
-    import winrt.windows.devices.geolocation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class PhotoOrientation(enum.IntEnum):
     UNSPECIFIED = 0
     NORMAL = 1

@@ -172,17 +172,6 @@ namespace pywinrt
         w.write("import %.%\n", settings.module, bind<write_lower_case>(ns));
     }
 
-    /**
-     * Writes a Python import statement surrounded by try/except.
-     */
-    void write_python_try_import_namespace(writer& w, std::string_view const& ns)
-    {
-        w.write(
-            "\ntry:\n    import %.%\nexcept ImportError:\n    pass\n",
-            settings.module,
-            bind<write_lower_case>(ns));
-    }
-
     void write_python_enum(writer& w, TypeDef const& type)
     {
         w.write(
@@ -552,6 +541,14 @@ static PyModuleDef module_def
 
             auto segments = get_dotted_name_segments(ns);
             w.write("using namespace py::cpp::%;\n\n", bind_list("::", segments));
+
+            w.write("if (py::import_winrt_runtime() == -1)\n{\n");
+            {
+                writer::indent_guard gg{w};
+
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
 
             w.write("py::pyobj_handle module{PyModule_Create(&module_def)};\n\n");
 

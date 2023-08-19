@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_data
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.interop
-except ImportError:
-    pass
-
 class BindingMode(enum.IntEnum):
     ONE_WAY = 1
     ONE_TIME = 2

@@ -3,25 +3,5 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_datatransfer_sharetarget
 
-try:
-    import winrt.windows.applicationmodel.contacts
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.datatransfer
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 QuickLink = _winrt_windows_applicationmodel_datatransfer_sharetarget.QuickLink
 ShareOperation = _winrt_windows_applicationmodel_datatransfer_sharetarget.ShareOperation

@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_uiautomation_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.uiautomation
-except ImportError:
-    pass
-
 class AutomationRemoteOperationStatus(enum.IntEnum):
     SUCCESS = 0
     MALFORMED_BYTECODE = 1

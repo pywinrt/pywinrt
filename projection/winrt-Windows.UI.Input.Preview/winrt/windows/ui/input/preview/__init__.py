@@ -3,14 +3,4 @@
 import winrt.system
 from . import _winrt_windows_ui_input_preview
 
-try:
-    import winrt.windows.ui.input
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.windowmanagement
-except ImportError:
-    pass
-
 InputActivationListenerPreview = _winrt_windows_ui_input_preview.InputActivationListenerPreview

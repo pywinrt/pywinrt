@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_xaml_automation
 
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.xaml.automation.peers
-except ImportError:
-    pass
-
 class AnnotationType(enum.IntEnum):
     UNKNOWN = 60000
     SPELLING_ERROR = 60001

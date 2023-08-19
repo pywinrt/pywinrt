@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_core_preview_communications
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class PreviewMeetingInfoDisplayKind(enum.IntEnum):
     ORGANIZER_AND_TIME = 0
     ORGANIZER_TIME_AND_TITLE = 1

@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_data_json
 
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class JsonErrorStatus(enum.IntEnum):
     UNKNOWN = 0
     INVALID_JSON_STRING = 1

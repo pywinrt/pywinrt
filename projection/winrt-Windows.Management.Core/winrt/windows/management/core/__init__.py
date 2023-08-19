@@ -3,9 +3,4 @@
 import winrt.system
 from . import _winrt_windows_management_core
 
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 ApplicationDataManager = _winrt_windows_management_core.ApplicationDataManager

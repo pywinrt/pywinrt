@@ -5,26 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_http_diagnostics
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system.diagnostics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 class HttpDiagnosticRequestInitiator(enum.IntEnum):
     PARSED_ELEMENT = 0
     SCRIPT = 1

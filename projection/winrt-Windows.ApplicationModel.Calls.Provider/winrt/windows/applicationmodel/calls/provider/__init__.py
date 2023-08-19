@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_calls_provider
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
 PhoneCallOrigin = _winrt_windows_applicationmodel_calls_provider.PhoneCallOrigin
 PhoneCallOriginManager = _winrt_windows_applicationmodel_calls_provider.PhoneCallOriginManager

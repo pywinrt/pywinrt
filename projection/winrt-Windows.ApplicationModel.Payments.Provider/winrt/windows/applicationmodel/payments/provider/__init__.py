@@ -3,21 +3,6 @@
 import winrt.system
 from . import _winrt_windows_applicationmodel_payments_provider
 
-try:
-    import winrt.windows.applicationmodel.payments
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 PaymentAppCanMakePaymentTriggerDetails = _winrt_windows_applicationmodel_payments_provider.PaymentAppCanMakePaymentTriggerDetails
 PaymentAppManager = _winrt_windows_applicationmodel_payments_provider.PaymentAppManager
 PaymentTransaction = _winrt_windows_applicationmodel_payments_provider.PaymentTransaction

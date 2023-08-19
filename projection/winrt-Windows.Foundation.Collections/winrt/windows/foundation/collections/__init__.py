@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_foundation_collections
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
 class CollectionChange(enum.IntEnum):
     RESET = 0
     ITEM_INSERTED = 1

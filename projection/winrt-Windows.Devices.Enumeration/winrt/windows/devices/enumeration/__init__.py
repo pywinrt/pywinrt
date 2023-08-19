@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_enumeration
 
-try:
-    import winrt.windows.applicationmodel.background
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
 class DeviceAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

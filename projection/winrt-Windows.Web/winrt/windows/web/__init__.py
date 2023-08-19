@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_web
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class WebErrorStatus(enum.IntEnum):
     UNKNOWN = 0
     CERTIFICATE_COMMON_NAME_IS_INCORRECT = 1

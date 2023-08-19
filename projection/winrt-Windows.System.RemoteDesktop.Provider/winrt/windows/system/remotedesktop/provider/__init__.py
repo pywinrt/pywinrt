@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_remotedesktop_provider
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
 class RemoteDesktopConnectionStatus(enum.IntEnum):
     CONNECTING = 0
     CONNECTED = 1

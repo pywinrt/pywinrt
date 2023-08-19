@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_haptics
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class VibrationAccessStatus(enum.IntEnum):
     ALLOWED = 0
     DENIED_BY_USER = 1

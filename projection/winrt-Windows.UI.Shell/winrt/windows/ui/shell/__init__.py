@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_shell
 
-try:
-    import winrt.windows.applicationmodel.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.startscreen
-except ImportError:
-    pass
-
 class SecurityAppKind(enum.IntEnum):
     WEB_PROTECTION = 0
 

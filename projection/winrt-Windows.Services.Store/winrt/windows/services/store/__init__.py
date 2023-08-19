@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_services_store
 
-try:
-    import winrt.windows.applicationmodel
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 class StoreCanLicenseStatus(enum.IntEnum):
     NOT_LICENSABLE_TO_USER = 0
     LICENSABLE = 1

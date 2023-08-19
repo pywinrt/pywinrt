@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_media_protection
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.playback
-except ImportError:
-    pass
-
 class GraphicsTrustStatus(enum.IntEnum):
     TRUST_NOT_REQUIRED = 0
     TRUST_ESTABLISHED = 1

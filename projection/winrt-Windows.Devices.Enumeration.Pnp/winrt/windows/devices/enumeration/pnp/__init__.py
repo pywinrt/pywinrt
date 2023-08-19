@@ -5,21 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_enumeration_pnp
 
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class PnpObjectType(enum.IntEnum):
     UNKNOWN = 0
     DEVICE_INTERFACE = 1

@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_applicationsettings
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.security.credentials
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.popups
-except ImportError:
-    pass
-
 class SettingsEdgeLocation(enum.IntEnum):
     RIGHT = 0
     LEFT = 1

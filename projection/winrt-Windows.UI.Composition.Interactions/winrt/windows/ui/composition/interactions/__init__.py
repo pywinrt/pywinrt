@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_composition_interactions
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input
-except ImportError:
-    pass
-
 class InteractionBindingAxisModes(enum.IntFlag):
     NONE = 0
     POSITION_X = 0x1

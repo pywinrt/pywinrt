@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_web_ui
 
-try:
-    import winrt.windows.applicationmodel.datatransfer
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.web.http
-except ImportError:
-    pass
-
 class WebViewControlPermissionState(enum.IntEnum):
     UNKNOWN = 0
     DEFER = 1

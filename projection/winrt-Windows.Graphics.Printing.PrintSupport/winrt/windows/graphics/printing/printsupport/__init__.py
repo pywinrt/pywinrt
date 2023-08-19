@@ -5,51 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_printing_printsupport
 
-try:
-    import winrt.windows.applicationmodel
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.applicationmodel.activation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.data.xml.dom
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.printers
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.printing.printticket
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.shell
-except ImportError:
-    pass
-
 class SettingsLaunchKind(enum.IntEnum):
     JOB_PRINT_TICKET = 0
     USER_DEFAULT_PRINT_TICKET = 1

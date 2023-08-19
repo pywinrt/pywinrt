@@ -5,41 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_perception
 
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.numerics
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.graphics.imaging
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.media.devices.core
-except ImportError:
-    pass
-
 class PerceptionFrameSourceAccessStatus(enum.IntEnum):
     UNSPECIFIED = 0
     ALLOWED = 1

@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_networking_servicediscovery_dnssd
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.connectivity
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking.sockets
-except ImportError:
-    pass
-
 class DnssdRegistrationStatus(enum.IntEnum):
     SUCCESS = 0
     INVALID_SERVICE_NAME = 1

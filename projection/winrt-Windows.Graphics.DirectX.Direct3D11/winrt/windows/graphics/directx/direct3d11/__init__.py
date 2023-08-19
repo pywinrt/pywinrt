@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_graphics_directx_direct3d11
 
-try:
-    import winrt.windows.graphics.directx
-except ImportError:
-    pass
-
 class Direct3DBindings(enum.IntFlag):
     VERTEX_BUFFER = 0x1
     INDEX_BUFFER = 0x2

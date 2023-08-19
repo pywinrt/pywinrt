@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_bluetooth_genericattributeprofile
 
-try:
-    import winrt.windows.devices.bluetooth
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.devices.enumeration
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class GattCharacteristicProperties(enum.IntFlag):
     NONE = 0
     BROADCAST = 0x1

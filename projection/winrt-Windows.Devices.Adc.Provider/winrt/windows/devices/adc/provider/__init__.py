@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_devices_adc_provider
 
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class ProviderAdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
     DIFFERENTIAL = 1

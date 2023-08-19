@@ -3,24 +3,4 @@
 import winrt.system
 from . import _winrt_windows_ui_input_core
 
-try:
-    import winrt.windows.applicationmodel.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.core
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.input
-except ImportError:
-    pass
-
 RadialControllerIndependentInputSource = _winrt_windows_ui_input_core.RadialControllerIndependentInputSource

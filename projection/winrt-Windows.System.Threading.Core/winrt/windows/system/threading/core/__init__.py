@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_system_threading_core
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system.threading
-except ImportError:
-    pass
-
 PreallocatedWorkItem = _winrt_windows_system_threading_core.PreallocatedWorkItem
 SignalNotifier = _winrt_windows_system_threading_core.SignalNotifier

@@ -5,16 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_system_update
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
 class SystemUpdateAttentionRequiredReason(enum.IntEnum):
     NONE = 0
     NETWORK_REQUIRED = 1

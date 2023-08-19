@@ -5,11 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_ui_composition_diagnostics
 
-try:
-    import winrt.windows.ui.composition
-except ImportError:
-    pass
-
 class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     NONE = 0
     OFFSCREEN_RENDERED = 0x1

@@ -3,15 +3,5 @@
 import winrt.system
 from . import _winrt_windows_devices_power
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.system.power
-except ImportError:
-    pass
-
 Battery = _winrt_windows_devices_power.Battery
 BatteryReport = _winrt_windows_devices_power.BatteryReport

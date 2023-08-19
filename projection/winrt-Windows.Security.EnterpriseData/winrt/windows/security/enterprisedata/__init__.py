@@ -5,31 +5,6 @@ import enum
 import winrt.system
 from . import _winrt_windows_security_enterprisedata
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.foundation.collections
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.networking
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.storage.streams
-except ImportError:
-    pass
-
 class DataProtectionStatus(enum.IntEnum):
     PROTECTED_TO_OTHER_IDENTITY = 0
     PROTECTED = 1

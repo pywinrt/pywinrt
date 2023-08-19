@@ -3,16 +3,6 @@
 import winrt.system
 from . import _winrt_windows_ui_core_preview
 
-try:
-    import winrt.windows.foundation
-except ImportError:
-    pass
-
-try:
-    import winrt.windows.ui.windowmanagement
-except ImportError:
-    pass
-
 CoreAppWindowPreview = _winrt_windows_ui_core_preview.CoreAppWindowPreview
 SystemNavigationCloseRequestedPreviewEventArgs = _winrt_windows_ui_core_preview.SystemNavigationCloseRequestedPreviewEventArgs
 SystemNavigationManagerPreview = _winrt_windows_ui_core_preview.SystemNavigationManagerPreview
