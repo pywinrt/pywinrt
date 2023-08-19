@@ -203,20 +203,10 @@ int py::register_python_type(
     type_object->tp_as_buffer = buffer_procs;
 #endif
 
-#if PY_VERSION_HEX >= 0x030A0000
     if (PyModule_AddObjectRef(module, type_name, type_object.get()) == -1)
     {
         return -1;
     }
-#else
-    // steals ref to type_object on success!
-    Py_INCREF(type_object.get());
-    if (PyModule_AddObject(module, type_name, type_object.get()) == -1)
-    {
-        Py_DECREF(type_object.get());
-        return -1;
-    }
-#endif
 
     return 0;
 }

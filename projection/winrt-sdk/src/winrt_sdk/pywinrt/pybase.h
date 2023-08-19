@@ -4,6 +4,7 @@
 #include <Python.h>
 #include <datetime.h>
 #include <structmember.h>
+#include "pythoncapi_compat.h"
 
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Metadata.h>
