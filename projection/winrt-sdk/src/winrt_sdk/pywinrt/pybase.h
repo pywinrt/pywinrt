@@ -335,24 +335,177 @@ namespace py
 
     using pyobj_handle = winrt::handle_type<pyobj_ptr_traits>;
 
-    // BEGIN: methods defined in runtime.cpp
+    // Runtime API shared with other modules
 
-    PyTypeObject* register_python_type(
+    /** Unique identifier for validating runtime API struct pointer. */
+    const winrt::guid runtime_api_guid{"B6C6659B-8458-4D05-AC29-A3886597E7D2"};
+
+    /**
+     * ABI version for runtime verification.
+     *
+     * This must be changed if the runtime API changes in a way that breaks
+     * binary compatibility.
+     */
+    const uint16_t runtime_abi_version_major = 1;
+
+    /**
+     * ABI version for runtime verification.
+     *
+     * This must be changed if the runtime API changes in a way that adds new
+     * APIs but otherwise doesn't break binary compatibility.
+     */
+    const uint16_t runtime_abi_version_minor = 0;
+
+    int register_python_type(
         PyObject* module,
         const char* const type_name,
         PyType_Spec* type_spec,
+#if PY_VERSION_HEX < 0x03090000
+        PyBufferProcs* buffer_procs,
+#endif
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept;
-
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
-
     bool is_buffer_compatible(
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
-
     PyObject* convert_datetime(winrt::Windows::Foundation::DateTime value) noexcept;
     winrt::Windows::Foundation::DateTime convert_to_datetime(PyObject* obj);
+    PyTypeObject* get_object_type() noexcept;
 
-    // END: methods defined in runtime.cpp
+    struct runtime_api
+    {
+        winrt::guid runtime_api_guid;
+        uint16_t abi_version_major;
+        uint16_t abi_version_minor;
+        decltype(register_python_type)* register_python_type;
+        decltype(wrap_mapping_iter)* wrap_mapping_iter;
+        decltype(is_buffer_compatible)* is_buffer_compatible;
+        decltype(convert_datetime)* convert_datetime;
+        decltype(convert_to_datetime)* convert_to_datetime;
+        decltype(get_object_type)* get_object_type;
+        decltype(cpp::_winrt::Array_New)* array_new;
+        decltype(cpp::_winrt::Array_Assign)* array_assign;
+    };
+
+#ifndef PYWINRT_RUNTIME_MODULE
+    // this section is used when compiling other modules that use the
+    // winrt-runtime module
+
+    static const runtime_api* PyWinRT_API;
+
+    /* Return -1 on error, 0 on success.
+     * PyCapsule_Import will set an exception if there's an error.
+     */
+    static int import_winrt_runtime()
+    {
+        PyWinRT_API = reinterpret_cast<runtime_api*>(
+            PyCapsule_Import("winrt._winrt._C_API", 0));
+
+        if (!PyWinRT_API)
+        {
+            return -1;
+        }
+
+        if (PyWinRT_API->runtime_api_guid != runtime_api_guid)
+        {
+            PyErr_SetString(
+                PyExc_RuntimeError, "_winrt._C_API capsule has invalid data");
+            return -1;
+        }
+
+        if (PyWinRT_API->abi_version_major != runtime_abi_version_major)
+        {
+            PyErr_Format(
+                PyExc_RuntimeError,
+                "_winrt._C_API ABI major version mismatch: expected %d, got %d",
+                runtime_abi_version_major,
+                PyWinRT_API->abi_version_major);
+            return -1;
+        }
+
+        if (PyWinRT_API->abi_version_minor < runtime_abi_version_minor)
+        {
+            PyErr_Format(
+                PyExc_RuntimeError,
+                "_winrt._C_API ABI minor version mismatch: expected >= %d, got %d",
+                runtime_abi_version_minor,
+                PyWinRT_API->abi_version_minor);
+            return -1;
+        }
+
+        return 0;
+    }
+
+    inline int register_python_type(
+        PyObject* module,
+        const char* const type_name,
+        PyType_Spec* type_spec,
+#if PY_VERSION_HEX < 0x03090000
+        PyBufferProcs* buffer_procs,
+#endif
+        PyObject* base_type,
+        PyTypeObject* metaclass) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->register_python_type);
+        return (*PyWinRT_API->register_python_type)(
+            module,
+            type_name,
+            type_spec,
+#if PY_VERSION_HEX < 0x03090000
+            buffer_procs,
+#endif
+            base_type,
+            metaclass);
+    }
+
+    inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->wrap_mapping_iter);
+        return (*PyWinRT_API->wrap_mapping_iter)(iter);
+    }
+
+    inline bool is_buffer_compatible(
+        Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->is_buffer_compatible);
+        return (*PyWinRT_API->is_buffer_compatible)(view, itemsize, format);
+    }
+
+    inline PyObject* convert_datetime(
+        winrt::Windows::Foundation::DateTime value) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_datetime);
+        return (*PyWinRT_API->convert_datetime)(value);
+    }
+
+    inline winrt::Windows::Foundation::DateTime convert_to_datetime(PyObject* obj)
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->convert_to_datetime);
+        return (*PyWinRT_API->convert_to_datetime)(obj);
+    }
+
+    inline PyTypeObject* get_object_type() noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_object_type);
+        return (*PyWinRT_API->get_object_type)();
+    }
+
+    namespace cpp::_winrt
+    {
+        inline PyObject* Array_New(std::unique_ptr<py::Array> array) noexcept
+        {
+            WINRT_ASSERT(PyWinRT_API && PyWinRT_API->array_new);
+            return (*PyWinRT_API->array_new)(std::move(array));
+        }
+
+        inline bool Array_Assign(
+            PyObject* obj, std::unique_ptr<py::Array> array) noexcept
+        {
+            WINRT_ASSERT(PyWinRT_API && PyWinRT_API->array_assign);
+            return (*PyWinRT_API->array_assign)(obj, std::move(array));
+        }
+    } // namespace cpp::_winrt
+#endif
 
     /**
      * Thrown when a Python exception is pending (i.e. PyErr_Occurred() returns
@@ -539,7 +692,7 @@ namespace py
     }
 
     template<typename T>
-    PyObject* wrap_pinterface(T instance)
+    PyObject* wrap_pinterface(T instance) noexcept
     {
         if (!instance)
         {

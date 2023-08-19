@@ -13468,6 +13468,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Documents;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

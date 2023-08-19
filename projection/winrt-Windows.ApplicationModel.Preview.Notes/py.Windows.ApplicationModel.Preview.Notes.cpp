@@ -1014,6 +1014,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_notes(void) noexce
 {
     using namespace py::cpp::Windows::ApplicationModel::Preview::Notes;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

@@ -2989,6 +2989,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers(void) noexcept
 {
     using namespace py::cpp::Windows::Storage::Pickers;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

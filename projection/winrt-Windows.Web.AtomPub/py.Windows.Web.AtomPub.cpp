@@ -2106,6 +2106,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_atompub(void) noexcept
 {
     using namespace py::cpp::Windows::Web::AtomPub;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

@@ -929,6 +929,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
 {
     using namespace py::cpp::Windows::Phone::Management::Deployment;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

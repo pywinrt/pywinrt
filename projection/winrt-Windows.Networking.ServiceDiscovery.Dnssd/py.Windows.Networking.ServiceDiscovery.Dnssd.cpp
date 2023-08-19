@@ -1381,6 +1381,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_servicediscovery_dnssd(void) noe
 {
     using namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

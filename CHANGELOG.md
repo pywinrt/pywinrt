@@ -8,6 +8,9 @@
 - Added `-reference` option to `pywinrt.exe`.
 - Added `-header-path` option to `pywinrt.exe`.
 
+### Changed
+- Changed code generator to generate module per namespace instead of monolith.
+
 ### Fixed
 - Fixed mixin of `__eq__` for mappings.
 - Fixed parsing structs with guid field.

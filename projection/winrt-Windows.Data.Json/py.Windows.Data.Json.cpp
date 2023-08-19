@@ -3120,6 +3120,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
 {
     using namespace py::cpp::Windows::Data::Json;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

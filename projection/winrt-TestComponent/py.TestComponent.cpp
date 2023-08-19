@@ -4408,6 +4408,11 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
 {
     using namespace py::cpp::TestComponent;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

@@ -869,6 +869,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_background(void) noe
 {
     using namespace py::cpp::Windows::ApplicationModel::Calls::Background;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

@@ -7244,6 +7244,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_store(void) noexcept
 {
     using namespace py::cpp::Windows::Services::Store;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

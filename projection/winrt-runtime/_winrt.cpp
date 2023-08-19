@@ -1,6 +1,7 @@
 // must be included before winrt to avoid compile errors
 #include <Shobjidl.h>
 
+#define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
 #include <winrt/base.h>
 
@@ -167,6 +168,20 @@ namespace py::cpp::_winrt
 
     // END: class _winrt.MappingIter:
 
+    static const py::runtime_api runtime_api{
+        .runtime_api_guid = py::runtime_api_guid,
+        .abi_version_major = py::runtime_abi_version_major,
+        .abi_version_minor = py::runtime_abi_version_minor,
+        .register_python_type = py::register_python_type,
+        .wrap_mapping_iter = py::wrap_mapping_iter,
+        .is_buffer_compatible = py::is_buffer_compatible,
+        .convert_datetime = py::convert_datetime,
+        .convert_to_datetime = py::convert_to_datetime,
+        .get_object_type = py::get_object_type,
+        .array_new = py::cpp::_winrt::Array_New,
+        .array_assign = &py::cpp::_winrt::Array_Assign,
+    };
+
     static PyObject* init_apartment(PyObject* /*unused*/, PyObject* type_obj) noexcept
     {
         auto type = PyLong_AsLong(type_obj);
@@ -308,6 +323,22 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
+        pyobj_handle runtime_api_capsule{PyCapsule_New(
+            const_cast<py::runtime_api*>(&runtime_api),
+            "winrt._winrt._C_API",
+            nullptr)};
+
+        if (!runtime_api_capsule)
+        {
+            return nullptr;
+        }
+
+        if (PyModule_AddObjectRef(module.get(), "_C_API", runtime_api_capsule.get())
+            == -1)
+        {
+            return nullptr;
+        }
+
         if (PyModule_AddIntConstant(module.get(), "MTA", kMTA) == -1)
         {
             return nullptr;
@@ -327,7 +358,7 @@ PyMODINIT_FUNC PyInit__winrt(void) noexcept
     return py::cpp::_winrt::module_init();
 }
 
-py::get_object_type_t py::get_object_type = []() noexcept -> PyTypeObject*
+PyTypeObject* py::get_object_type() noexcept
 {
     py::pyobj_handle system_module{PyImport_ImportModule("winrt.system")};
 
@@ -343,7 +374,7 @@ py::get_object_type_t py::get_object_type = []() noexcept -> PyTypeObject*
         return nullptr;
     }
 
-    if (PyType_Check(object_type.get()))
+    if (!PyType_Check(object_type.get()))
     {
         PyErr_SetString(PyExc_TypeError, "winrt.system.Object is not a type object!");
         return nullptr;
@@ -358,4 +389,4 @@ py::get_object_type_t py::get_object_type = []() noexcept -> PyTypeObject*
     }
 
     return reinterpret_cast<PyTypeObject*>(object_type.get());
-};
+}

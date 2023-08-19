@@ -3358,6 +3358,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
 {
     using namespace py::cpp::Windows::ApplicationModel::UserDataTasks;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

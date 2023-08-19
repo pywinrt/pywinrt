@@ -3971,6 +3971,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_scanners(void) noexcept
 {
     using namespace py::cpp::Windows::Devices::Scanners;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

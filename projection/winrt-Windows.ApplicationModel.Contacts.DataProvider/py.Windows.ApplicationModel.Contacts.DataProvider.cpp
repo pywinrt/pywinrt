@@ -1664,6 +1664,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts_dataprovider(void
 {
     using namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

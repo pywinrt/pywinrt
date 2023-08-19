@@ -1487,6 +1487,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview_communications(void) noexce
 {
     using namespace py::cpp::Windows::UI::Core::Preview::Communications;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

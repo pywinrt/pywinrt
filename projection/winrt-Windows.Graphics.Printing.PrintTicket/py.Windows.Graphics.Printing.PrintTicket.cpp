@@ -2465,6 +2465,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printticket(void) noexcep
 {
     using namespace py::cpp::Windows::Graphics::Printing::PrintTicket;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

@@ -4096,6 +4096,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_miracast(void) noexcept
 {
     using namespace py::cpp::Windows::Media::Miracast;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

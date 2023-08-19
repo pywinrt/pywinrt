@@ -565,6 +565,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_profile_systemmanufacturers(void) no
 {
     using namespace py::cpp::Windows::System::Profile::SystemManufacturers;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

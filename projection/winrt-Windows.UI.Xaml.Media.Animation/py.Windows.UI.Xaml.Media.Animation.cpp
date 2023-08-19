@@ -22650,6 +22650,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
 {
     using namespace py::cpp::Windows::UI::Xaml::Media::Animation;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

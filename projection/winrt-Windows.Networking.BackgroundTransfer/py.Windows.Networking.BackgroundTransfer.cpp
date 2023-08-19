@@ -5974,6 +5974,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
 {
     using namespace py::cpp::Windows::Networking::BackgroundTransfer;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

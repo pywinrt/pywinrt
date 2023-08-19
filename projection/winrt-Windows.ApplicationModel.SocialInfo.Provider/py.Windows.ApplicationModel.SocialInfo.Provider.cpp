@@ -709,6 +709,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) 
 {
     using namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

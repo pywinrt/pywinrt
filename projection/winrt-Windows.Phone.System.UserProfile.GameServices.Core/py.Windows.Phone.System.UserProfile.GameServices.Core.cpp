@@ -496,6 +496,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(
 {
     using namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

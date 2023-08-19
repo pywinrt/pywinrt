@@ -208,6 +208,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment_preview(void) noexcep
 {
     using namespace py::cpp::Windows::Management::Deployment::Preview;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

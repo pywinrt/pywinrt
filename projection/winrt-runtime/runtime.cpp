@@ -3,6 +3,8 @@
 
 #include <Python.h>
 #include <datetime.h>
+
+#define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
 
 // "backport" of Python 3.12 function.

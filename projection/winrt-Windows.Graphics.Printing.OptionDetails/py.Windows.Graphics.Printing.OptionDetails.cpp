@@ -8350,6 +8350,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_optiondetails(void) noexc
 {
     using namespace py::cpp::Windows::Graphics::Printing::OptionDetails;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

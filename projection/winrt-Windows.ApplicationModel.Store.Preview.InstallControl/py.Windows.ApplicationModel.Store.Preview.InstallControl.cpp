@@ -3722,6 +3722,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontr
 {
     using namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

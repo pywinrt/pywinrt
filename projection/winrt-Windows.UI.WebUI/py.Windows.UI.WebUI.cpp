@@ -14446,6 +14446,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui(void) noexcept
 {
     using namespace py::cpp::Windows::UI::WebUI;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

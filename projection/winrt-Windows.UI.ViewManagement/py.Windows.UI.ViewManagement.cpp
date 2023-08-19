@@ -5936,6 +5936,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
 {
     using namespace py::cpp::Windows::UI::ViewManagement;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

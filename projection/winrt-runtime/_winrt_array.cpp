@@ -1,3 +1,4 @@
+#define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
 #include "py.Windows.Foundation.h"
 #include <winrt/base.h>

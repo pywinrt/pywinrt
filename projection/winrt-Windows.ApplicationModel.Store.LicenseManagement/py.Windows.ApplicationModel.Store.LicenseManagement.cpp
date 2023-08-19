@@ -488,6 +488,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_licensemanagement(vo
 {
     using namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

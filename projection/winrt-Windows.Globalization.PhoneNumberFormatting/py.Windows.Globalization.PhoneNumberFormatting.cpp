@@ -856,6 +856,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_phonenumberformatting(void) n
 {
     using namespace py::cpp::Windows::Globalization::PhoneNumberFormatting;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

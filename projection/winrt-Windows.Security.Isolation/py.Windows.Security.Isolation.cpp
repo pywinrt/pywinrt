@@ -3998,6 +3998,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
 {
     using namespace py::cpp::Windows::Security::Isolation;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)

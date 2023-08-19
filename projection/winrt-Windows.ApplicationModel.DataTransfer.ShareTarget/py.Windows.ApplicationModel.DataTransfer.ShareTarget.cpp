@@ -684,6 +684,11 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_datatransfer_sharetarget(v
 {
     using namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     if (!module)
