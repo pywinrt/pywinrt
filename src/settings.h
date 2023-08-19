@@ -9,7 +9,6 @@ namespace pywinrt
 
         std::optional<std::filesystem::path> header_path;
         std::filesystem::path output_folder;
-        std::string module{"pyrt"};
         bool verbose{};
 
         std::set<std::string> include;

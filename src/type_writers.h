@@ -318,7 +318,7 @@ namespace pywinrt
 
             if (ns == "System" && name == "Guid")
             {
-                write("%.system.Guid", settings.module);
+                write("winrt.system.Guid");
             }
             else
             {
@@ -463,7 +463,7 @@ namespace pywinrt
             }
             else
             {
-                write("%.", settings.module);
+                write("winrt.");
 
                 for (auto c : ns)
                 {
@@ -584,33 +584,33 @@ namespace pywinrt
             switch (type)
             {
             case ElementType::Boolean:
-                return settings.module + ".system.Boolean";
+                return "winrt.system.Boolean";
             case ElementType::Char:
-                return settings.module + ".system.Char16";
+                return "winrt.system.Char16";
             case ElementType::I1:
-                return settings.module + ".system.Int8";
+                return "winrt.system.Int8";
             case ElementType::U1:
-                return settings.module + ".system.UInt8";
+                return "winrt.system.UInt8";
             case ElementType::I2:
-                return settings.module + ".system.Int16";
+                return "winrt.system.Int16";
             case ElementType::U2:
-                return settings.module + ".system.UInt16";
+                return "winrt.system.UInt16";
             case ElementType::I4:
-                return settings.module + ".system.Int32";
+                return "winrt.system.Int32";
             case ElementType::U4:
-                return settings.module + ".system.UInt32";
+                return "winrt.system.UInt32";
             case ElementType::I8:
-                return settings.module + ".system.Int64";
+                return "winrt.system.Int64";
             case ElementType::U8:
-                return settings.module + ".system.UInt64";
+                return "winrt.system.UInt64";
             case ElementType::R4:
-                return settings.module + ".system.Single";
+                return "winrt.system.Single";
             case ElementType::R8:
-                return settings.module + ".system.Double";
+                return "winrt.system.Double";
             case ElementType::String:
                 return "str";
             case ElementType::Object:
-                return settings.module + ".system.Object";
+                return "winrt.system.Object";
             default:
                 throw_invalid("element type not supported");
             }
@@ -664,7 +664,7 @@ namespace pywinrt
 
             if (type == "winrt::Windows::Foundation::IInspectable")
             {
-                write("%.system.Object", settings.module);
+                write("winrt.system.Object");
                 return;
             }
 

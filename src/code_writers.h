@@ -106,20 +106,7 @@ namespace pywinrt
     void write_ns_module_name(writer& w, std::string_view const& ns)
     {
         auto segments = get_dotted_name_segments(ns);
-        w.write("_%_%", settings.module, bind_list<write_lower_case>("_", segments));
-    }
-
-    void write_python_setup_filenames(
-        writer& w, std::vector<std::string> const& namespaces)
-    {
-        assert(namespaces.size() > 0);
-
-        for (auto&& ns : namespaces)
-        {
-            w.write("'%/src/py.%.cpp', ", settings.module, ns);
-        }
-
-        w.write("'%/src/_winrt.cpp'", settings.module);
+        w.write("_winrt_%", bind_list<write_lower_case>("_", segments));
     }
 
     void write_python_import_type(writer& w, TypeDef const& type)
@@ -142,25 +129,19 @@ namespace pywinrt
 
         if (implements_imap(type))
         {
-            w.write(
-                "%.system._mixin_mutable_mapping(@)\n",
-                settings.module,
-                type.TypeName());
+            w.write("winrt.system._mixin_mutable_mapping(@)\n", type.TypeName());
         }
         else if (implements_imapview(type))
         {
-            w.write("%.system._mixin_mapping(@)\n", settings.module, type.TypeName());
+            w.write("winrt.system._mixin_mapping(@)\n", type.TypeName());
         }
         else if (implements_ivector(type))
         {
-            w.write(
-                "%.system._mixin_mutable_sequence(@)\n",
-                settings.module,
-                type.TypeName());
+            w.write("winrt.system._mixin_mutable_sequence(@)\n", type.TypeName());
         }
         else if (implements_ivectorview(type))
         {
-            w.write("%.system._mixin_sequence(@)\n", settings.module, type.TypeName());
+            w.write("winrt.system._mixin_sequence(@)\n", type.TypeName());
         }
     }
 
@@ -169,7 +150,7 @@ namespace pywinrt
      */
     void write_python_import_namespace(writer& w, std::string_view const& ns)
     {
-        w.write("import %.%\n", settings.module, bind<write_lower_case>(ns));
+        w.write("import winrt.%\n", bind<write_lower_case>(ns));
     }
 
     void write_python_enum(writer& w, TypeDef const& type)
@@ -320,14 +301,13 @@ catch (...)
 template<>
 struct py_type<%>
 {
-    static constexpr const char* module_name = "%.%";
+    static constexpr const char* module_name = "winrt.%";
     static constexpr const char* type_name = "%";
 };
 )";
         w.write(
             format,
             bind<write_python_wrapper_template_type>(type),
-            settings.module,
             bind<write_lower_case>(type.TypeNamespace()),
             type.TypeName());
     }
@@ -2971,40 +2951,40 @@ struct pinterface_python_type<%<%>>
                 switch (type)
                 {
                 case fundamental_type::Boolean:
-                    w.write("%.system.Boolean", settings.module);
+                    w.write("winrt.system.Boolean");
                     break;
                 case fundamental_type::Char:
-                    w.write("%.system.Char16", settings.module);
+                    w.write("winrt.system.Char16");
                     break;
                 case fundamental_type::Int8:
-                    w.write("%.system.Int8", settings.module);
+                    w.write("winrt.system.Int8");
                     break;
                 case fundamental_type::UInt8:
-                    w.write("%.system.UInt8", settings.module);
+                    w.write("winrt.system.UInt8");
                     break;
                 case fundamental_type::Int16:
-                    w.write("%.system.Int16", settings.module);
+                    w.write("winrt.system.Int16");
                     break;
                 case fundamental_type::UInt16:
-                    w.write("%.system.UInt16", settings.module);
+                    w.write("winrt.system.UInt16");
                     break;
                 case fundamental_type::Int32:
-                    w.write("%.system.Int32", settings.module);
+                    w.write("winrt.system.Int32");
                     break;
                 case fundamental_type::UInt32:
-                    w.write("%.system.UInt32", settings.module);
+                    w.write("winrt.system.UInt32");
                     break;
                 case fundamental_type::Int64:
-                    w.write("%.system.Int64", settings.module);
+                    w.write("winrt.system.Int64");
                     break;
                 case fundamental_type::UInt64:
-                    w.write("%.system.UInt64", settings.module);
+                    w.write("winrt.system.UInt64");
                     break;
                 case fundamental_type::Float:
-                    w.write("%.system.Single", settings.module);
+                    w.write("winrt.system.Single");
                     break;
                 case fundamental_type::Double:
-                    w.write("%.system.Double", settings.module);
+                    w.write("winrt.system.Double");
                     break;
                 case fundamental_type::String:
                     w.write("str");
@@ -3747,8 +3727,7 @@ if (!return_value)
         case param_category::pass_array:
         case param_category::fill_array:
             w.write(
-                "%.system.Array[%]",
-                settings.module,
+                "winrt.system.Array[%]",
                 bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 
@@ -3786,8 +3765,7 @@ if (!return_value)
         // array parameters return a System.Array
         case param_category::receive_array:
             w.write(
-                "%.system.Array[%]",
-                settings.module,
+                "winrt.system.Array[%]",
                 bind<write_nonnullable_python_type>(param.second->Type()));
             break;
 
@@ -3859,7 +3837,7 @@ if (!return_value)
      */
     void write_python_base_classes(writer& w, TypeDef const& type)
     {
-        w.write("%.system.Object", settings.module);
+        w.write("winrt.system.Object");
 
         if (implements_mapping(type))
         {
@@ -4207,8 +4185,7 @@ if (!return_value)
                                 bind<write_nonnullable_python_type>(value_type));
                             w.write("@typing.overload\n");
                             w.write(
-                                "def __getitem__(self, index: slice) -> %.system.Array[%]: ...\n",
-                                settings.module,
+                                "def __getitem__(self, index: slice) -> winrt.system.Array[%]: ...\n",
                                 bind<write_nonnullable_python_type>(value_type));
                         }
                         else if (method.Name() == "SetAt")
@@ -4325,8 +4302,7 @@ if (!return_value)
             {
                 w.write("@staticmethod\n");
                 w.write(
-                    "def _from(obj: %.system.Object, /) -> @: ...\n",
-                    settings.module,
+                    "def _from(obj: winrt.system.Object, /) -> @: ...\n",
                     type.TypeName());
             }
 

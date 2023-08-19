@@ -42,7 +42,6 @@ namespace pywinrt
          "One or more prefixes to exclude from projection"},
         {"header-path", 0, 1, "<path>", "Install headers in custom path"},
         {"verbose", 0, 0, {}, "Show detailed progress information"},
-        {"module", 0, 1, "<name>", "Name of generated projection. Defaults to winrt."},
         {"help", 0, cmd::option::no_max, {}, "Show detailed help"},
     };
 
@@ -93,7 +92,6 @@ Where <spec> is one or more of:
         }
 
         settings.verbose = args.exists("verbose");
-        settings.module = args.value("module", "winrt");
         settings.input = args.files("input", database::is_database);
         settings.reference = args.files("reference", database::is_database);
 
@@ -221,9 +219,9 @@ Where <spec> is one or more of:
 
                 generated_namespaces.emplace_back(ns);
 
-                auto ns_package_name = w.write_temp("%-%", settings.module, ns);
+                auto ns_package_name = w.write_temp("winrt-%", ns);
                 auto ns_package_dir = settings.output_folder / ns_package_name;
-                auto ns_dir = ns_package_dir / settings.module;
+                auto ns_dir = ns_package_dir / "winrt";
 
                 for (auto&& ns_segment : get_dotted_name_segments(ns))
                 {
@@ -249,8 +247,7 @@ Where <spec> is one or more of:
                         auto namespaces
                             = write_namespace_cpp(ns_package_dir, ns, members);
                         write_namespace_h(header_dir, ns, namespaces, members);
-                        write_namespace_dunder_init_py(
-                            ns_dir, settings.module, namespaces, ns, members);
+                        write_namespace_dunder_init_py(ns_dir, namespaces, ns, members);
                         write_namespace_dunder_init_pyi(
                             ns_dir, namespaces, ns, members);
                     });

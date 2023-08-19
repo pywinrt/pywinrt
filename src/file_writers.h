@@ -152,7 +152,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
     inline void write_namespace_dunder_init_py(
         stdfs::path const& folder,
-        std::string_view const& module_name,
         std::set<std::string> const& needed_namespaces,
         std::string_view const& ns,
         cache::namespace_members const& members)
@@ -168,7 +167,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
             w.write("\n");
         }
 
-        w.write("import %.system\n", module_name);
+        w.write("import winrt.system\n");
         w.write("from . import %\n", bind<write_ns_module_name>(ns));
 
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
@@ -201,7 +200,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import types\n");
         w.write("import typing\n");
         w.write("\n");
-        w.write("import @.system\n", settings.module);
+        w.write("import winrt.system\n");
 
         w.write_each<write_python_import_namespace>(needed_namespaces);
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
