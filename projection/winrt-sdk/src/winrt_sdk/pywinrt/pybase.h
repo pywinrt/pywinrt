@@ -585,11 +585,13 @@ namespace py
      * This is the equivelent of calling `Enum(value)` in Python.
      *
      * @param value The value object.
+     * @tparam T A winrt enum type.
      * @returns A new reference to the Enum object or nullptr on error.
      */
     template<typename T>
     PyObject* wrap_enum(PyObject* value) noexcept
     {
+        static_assert(is_enum_category_v<T>);
         static_assert(py_type<T>::module_name);
         static_assert(py_type<T>::type_name);
 
@@ -613,15 +615,7 @@ namespace py
         }
 
         // new reference
-        pyobj_handle args{PyTuple_Pack(1, value)};
-
-        if (!args)
-        {
-            return nullptr;
-        }
-
-        // new reference
-        pyobj_handle obj{PyObject_Call(type_object.get(), args.get(), nullptr)};
+        pyobj_handle obj{PyObject_CallOneArg(type_object.get(), value)};
 
         if (!obj)
         {
