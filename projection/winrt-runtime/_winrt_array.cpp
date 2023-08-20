@@ -548,7 +548,7 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        if (PyType_Check(array_type.get()))
+        if (!PyType_Check(array_type.get()))
         {
             PyErr_SetString(
                 PyExc_TypeError, "winrt.system.Array is not a type object!");
