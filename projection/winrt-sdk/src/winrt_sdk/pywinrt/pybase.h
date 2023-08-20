@@ -193,22 +193,6 @@ namespace py
     }
 
     /**
-     * Type registration for binary extension types.
-     */
-    template<typename T>
-    struct winrt_type
-    {
-        static PyTypeObject* get_python_type() noexcept
-        {
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::winrt_type<%s>::get_python_type() is not implemented",
-                typeid(T).name());
-            return nullptr;
-        }
-    };
-
-    /**
      * Generic WinRT array type (System.Array) implementation.
      */
     struct Array
@@ -297,26 +281,6 @@ namespace py
         static constexpr const char* module_name = 0;
         static constexpr const char* type_name = 0;
     };
-
-    /**
-     * Gets the registered binary extension type for @p T.
-     *
-     * @returns A borrowed reference to the type or nullptr if the type was not
-     * registered.
-     */
-    template<typename T>
-    PyTypeObject* get_python_type() noexcept
-    {
-        if constexpr (is_pinterface_category_v<T>)
-        {
-            return winrt_type<
-                typename pinterface_python_type<T>::abstract>::get_python_type();
-        }
-        else
-        {
-            return winrt_type<T>::get_python_type();
-        }
-    }
 
     struct pyobj_ptr_traits
     {
@@ -577,6 +541,55 @@ namespace py
         {
             PyErr_SetString(PyExc_RuntimeError, e.what());
         }
+    }
+
+    /**
+     * Gets the Python wrapper type object for @p T.
+     *
+     * @tparam T The winrt type to get the wrapper type for.
+     * @returns A borrowed reference to the type or nullptr if the type was not
+     * registered.
+     */
+    template<typename T>
+    PyTypeObject* get_python_type() noexcept
+    {
+        using winrt_type = std::conditional_t<
+            is_pinterface_category_v<T>,
+            typename pinterface_python_type<T>::abstract,
+            T>;
+
+        static_assert(py_type<winrt_type>::module_name);
+        static_assert(py_type<winrt_type>::type_name);
+
+        pyobj_handle module{PyImport_ImportModule(py_type<winrt_type>::module_name)};
+
+        if (!module)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle type{
+            PyObject_GetAttrString(module.get(), py_type<winrt_type>::type_name)};
+
+        if (!type)
+        {
+            return nullptr;
+        }
+
+        if (!PyType_Check(type.get()))
+        {
+            PyErr_Format(
+                PyExc_TypeError,
+                "'%s.%s' is not a type",
+                py_type<winrt_type>::module_name,
+                py_type<winrt_type>::type_name);
+            return nullptr;
+        }
+
+        // TODO: verify that the Python type is compatible with the winrt
+        // runtime module version and that it actually matches the C++ type
+
+        return reinterpret_cast<PyTypeObject*>(type.get());
     }
 
     /**
