@@ -3718,7 +3718,7 @@ namespace py
     struct py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>
     {
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncActionWithProgress`1";
+        static constexpr const char* type_name = "IAsyncActionWithProgress";
     };
 
     template<>
@@ -3732,14 +3732,14 @@ namespace py
     struct py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>
     {
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncOperationWithProgress`2";
+        static constexpr const char* type_name = "IAsyncOperationWithProgress";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IAsyncOperation>
     {
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IAsyncOperation`1";
+        static constexpr const char* type_name = "IAsyncOperation";
     };
 
     template<>
@@ -3781,14 +3781,14 @@ namespace py
     struct py_type<py::proj::Windows::Foundation::IReferenceArray>
     {
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IReferenceArray`1";
+        static constexpr const char* type_name = "IReferenceArray";
     };
 
     template<>
     struct py_type<py::proj::Windows::Foundation::IReference>
     {
         static constexpr const char* module_name = "winrt.windows.foundation";
-        static constexpr const char* type_name = "IReference`1";
+        static constexpr const char* type_name = "IReference";
     };
 
     template<>

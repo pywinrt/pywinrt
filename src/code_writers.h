@@ -302,7 +302,7 @@ template<>
 struct py_type<%>
 {
     static constexpr const char* module_name = "winrt.%";
-    static constexpr const char* type_name = "%";
+    static constexpr const char* type_name = "@";
 };
 )";
         w.write(
