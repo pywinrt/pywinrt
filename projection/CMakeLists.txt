@@ -33,12 +33,12 @@ endif()
 
 find_package(Python3 REQUIRED COMPONENTS Development.Module)
 
-set(WINRT_SDK_PATH "${CMAKE_CURRENT_SOURCE_DIR}/winrt-sdk/src/winrt_sdk")
+set(WINRT_SDK_PATH "winrt-sdk/src/winrt_sdk")
 
 # main runtime package
 ################################################################################
 
-set(WINRT_RUNTIME_PATH "${CMAKE_CURRENT_SOURCE_DIR}/winrt-runtime")
+set(WINRT_RUNTIME_PATH "winrt-runtime")
 set(WINRT_RUNTIME_SOURCES "${WINRT_RUNTIME_PATH}/_winrt.cpp" "${WINRT_RUNTIME_PATH}/_winrt_array.cpp" "${WINRT_RUNTIME_PATH}/runtime.cpp")
 
 Python3_add_library(_winrt MODULE "${WINRT_RUNTIME_SOURCES}")
@@ -52,26 +52,26 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 ################################################################################
 
 if (PYWINRT_FULL_PROJECTION)
-    file(GLOB packages CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.*")
-    file(GLOB interop_packages CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/interop/winrt-Windows.*")
+    file(GLOB packages CONFIGURE_DEPENDS "winrt-Windows.*")
+    file(GLOB interop_packages CONFIGURE_DEPENDS "interop/winrt-Windows.*")
 else()
     # minimum set of packages required for unit tests
     set(packages
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Data.Json"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Devices"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Devices.Geolocation"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Foundation"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Foundation.Collections"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Foundation.Numerics"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Graphics"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Graphics.Capture"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Graphics.DirectX"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Graphics.DirectX.Direct3D11"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Storage"
-        "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Storage.Streams"
+        "winrt-Windows.Data.Json"
+        "winrt-Windows.Devices"
+        "winrt-Windows.Devices.Geolocation"
+        "winrt-Windows.Foundation"
+        "winrt-Windows.Foundation.Collections"
+        "winrt-Windows.Foundation.Numerics"
+        "winrt-Windows.Graphics"
+        "winrt-Windows.Graphics.Capture"
+        "winrt-Windows.Graphics.DirectX"
+        "winrt-Windows.Graphics.DirectX.Direct3D11"
+        "winrt-Windows.Storage"
+        "winrt-Windows.Storage.Streams"
     )
     set(interop_packages
-        "${CMAKE_CURRENT_SOURCE_DIR}/interop/winrt-Windows.Graphics.Capture.Interop"
+        "interop/winrt-Windows.Graphics.Capture.Interop"
     )
 endif()
 
