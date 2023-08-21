@@ -153,7 +153,7 @@ Requirements:
 
     static PyModuleDef module_def
         = {PyModuleDef_HEAD_INIT,
-           "_%_Windows_Graphics_Capture_Interop",
+           "_winrt_windows_graphics_capture_interop",
            module_doc,
            0,
            module_methods,
@@ -163,7 +163,7 @@ Requirements:
            nullptr};
 } // namespace py::cpp::Windows::Graphics::Capture::Interop
 
-PyMODINIT_FUNC PyInit__%_Windows_Graphics_Capture_Interop(void) noexcept
+PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture_interop(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::Capture::Interop;
     return PyModule_Create(&module_def);

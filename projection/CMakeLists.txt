@@ -53,6 +53,7 @@ install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE
 
 if (PYWINRT_FULL_PROJECTION)
     file(GLOB packages CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.*")
+    file(GLOB interop_packages CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/interop/winrt-Windows.*")
 else()
     # minimum set of packages required for unit tests
     set(packages
@@ -69,9 +70,12 @@ else()
         "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Storage"
         "${CMAKE_CURRENT_SOURCE_DIR}/winrt-Windows.Storage.Streams"
     )
+    set(interop_packages
+        "${CMAKE_CURRENT_SOURCE_DIR}/interop/winrt-Windows.Graphics.Capture.Interop"
+    )
 endif()
 
-foreach(package ${packages})
+foreach(package ${packages} ${interop_packages})
     get_filename_component(package_name "${package}" NAME)
     string(REPLACE "winrt-" "" package_namespace "${package_name}")
     string(TOLOWER "${package_namespace}" package_namespace_lower)
@@ -89,14 +93,16 @@ foreach(package ${packages})
     target_include_directories(${package_target} PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
 
     # speed up builds by precompiling frequently used headers
-    if (NOT first_target)
-        set(first_target ${package_target})
-        target_precompile_headers(${first_target} PRIVATE
-            "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
-            "${WINRT_SDK_PATH}/pywinrt/py.Windows.Storage.Streams.h"
-        )
-    else()
-        target_precompile_headers(${package_target} REUSE_FROM ${first_target})
+    if (package IN_LIST packages)
+        if (NOT first_target)
+            set(first_target ${package_target})
+            target_precompile_headers(${first_target} PRIVATE
+                "${WINRT_SDK_PATH}/pywinrt/py.Windows.Foundation.h"
+                "${WINRT_SDK_PATH}/pywinrt/py.Windows.Storage.Streams.h"
+            )
+        else()
+            target_precompile_headers(${package_target} REUSE_FROM ${first_target})
+        endif()
     endif()
 
     install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/${package_path_suffix}")
