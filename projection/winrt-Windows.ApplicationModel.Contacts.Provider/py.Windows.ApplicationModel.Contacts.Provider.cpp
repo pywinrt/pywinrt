@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 {
     // ----- ContactPickerUI class --------------------
 
-    static PyObject* _new_ContactPickerUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactPickerUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>::type_name);
@@ -306,7 +306,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
 
     // ----- ContactRemovedEventArgs class --------------------
 
-    static PyObject* _new_ContactRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>::type_name);

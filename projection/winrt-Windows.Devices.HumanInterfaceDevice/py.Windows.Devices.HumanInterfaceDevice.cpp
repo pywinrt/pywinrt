@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 {
     // ----- HidBooleanControl class --------------------
 
-    static PyObject* _new_HidBooleanControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidBooleanControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>::type_name);
@@ -211,7 +211,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidBooleanControlDescription class --------------------
 
-    static PyObject* _new_HidBooleanControlDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidBooleanControlDescription(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>::type_name);
@@ -426,7 +426,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidCollection class --------------------
 
-    static PyObject* _new_HidCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>::type_name);
@@ -581,7 +581,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidDevice class --------------------
 
-    static PyObject* _new_HidDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>::type_name);
@@ -1275,7 +1275,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidFeatureReport class --------------------
 
-    static PyObject* _new_HidFeatureReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidFeatureReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>::type_name);
@@ -1548,7 +1548,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidInputReport class --------------------
 
-    static PyObject* _new_HidInputReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidInputReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>::type_name);
@@ -1833,7 +1833,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidInputReportReceivedEventArgs class --------------------
 
-    static PyObject* _new_HidInputReportReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidInputReportReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>::type_name);
@@ -1928,7 +1928,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidNumericControl class --------------------
 
-    static PyObject* _new_HidNumericControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidNumericControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>::type_name);
@@ -2199,7 +2199,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidNumericControlDescription class --------------------
 
-    static PyObject* _new_HidNumericControlDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidNumericControlDescription(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>::type_name);
@@ -2594,7 +2594,7 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 
     // ----- HidOutputReport class --------------------
 
-    static PyObject* _new_HidOutputReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidOutputReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>::type_name);

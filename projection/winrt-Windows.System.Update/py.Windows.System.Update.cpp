@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Update
 {
     // ----- SystemUpdateItem class --------------------
 
-    static PyObject* _new_SystemUpdateItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemUpdateItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Update::SystemUpdateItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Update::SystemUpdateItem>::type_name);
@@ -243,7 +243,7 @@ namespace py::cpp::Windows::System::Update
 
     // ----- SystemUpdateLastErrorInfo class --------------------
 
-    static PyObject* _new_SystemUpdateLastErrorInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemUpdateLastErrorInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>::type_name);
@@ -378,7 +378,7 @@ namespace py::cpp::Windows::System::Update
 
     // ----- SystemUpdateManager class --------------------
 
-    static PyObject* _new_SystemUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemUpdateManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Update::SystemUpdateManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Update::SystemUpdateManager>::type_name);

@@ -743,7 +743,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- MidiInPort class --------------------
 
-    static PyObject* _new_MidiInPort(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MidiInPort(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiInPort>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiInPort>::type_name);
@@ -998,7 +998,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- MidiMessageReceivedEventArgs class --------------------
 
-    static PyObject* _new_MidiMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MidiMessageReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>::type_name);
@@ -1535,7 +1535,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- MidiOutPort class --------------------
 
-    static PyObject* _new_MidiOutPort(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MidiOutPort(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiOutPort>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiOutPort>::type_name);
@@ -3104,7 +3104,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- MidiSynthesizer class --------------------
 
-    static PyObject* _new_MidiSynthesizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MidiSynthesizer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiSynthesizer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiSynthesizer>::type_name);
@@ -4298,7 +4298,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- IMidiMessage interface --------------------
 
-    static PyObject* _new_IMidiMessage(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMidiMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Midi::IMidiMessage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::IMidiMessage>::type_name);
@@ -4433,7 +4433,7 @@ namespace py::cpp::Windows::Devices::Midi
 
     // ----- IMidiOutPort interface --------------------
 
-    static PyObject* _new_IMidiOutPort(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMidiOutPort(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Midi::IMidiOutPort>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::IMidiOutPort>::type_name);

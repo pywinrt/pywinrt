@@ -858,7 +858,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     // ----- HttpCacheControl class --------------------
 
-    static PyObject* _new_HttpCacheControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpCacheControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>::type_name);
@@ -1029,7 +1029,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     // ----- HttpServerCustomValidationRequestedEventArgs class --------------------
 
-    static PyObject* _new_HttpServerCustomValidationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpServerCustomValidationRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>::type_name);
@@ -1265,7 +1265,7 @@ namespace py::cpp::Windows::Web::Http::Filters
 
     // ----- IHttpFilter interface --------------------
 
-    static PyObject* _new_IHttpFilter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IHttpFilter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 {
     // ----- AttributedNetworkUsage class --------------------
 
-    static PyObject* _new_AttributedNetworkUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AttributedNetworkUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>::type_name);
@@ -616,7 +616,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ConnectionCost class --------------------
 
-    static PyObject* _new_ConnectionCost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectionCost(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionCost>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionCost>::type_name);
@@ -791,7 +791,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ConnectionProfile class --------------------
 
-    static PyObject* _new_ConnectionProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectionProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionProfile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionProfile>::type_name);
@@ -2029,7 +2029,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ConnectionSession class --------------------
 
-    static PyObject* _new_ConnectionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectionSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionSession>::type_name);
@@ -2177,7 +2177,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ConnectivityInterval class --------------------
 
-    static PyObject* _new_ConnectivityInterval(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectivityInterval(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityInterval>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityInterval>::type_name);
@@ -2292,7 +2292,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ConnectivityManager class --------------------
 
-    static PyObject* _new_ConnectivityManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectivityManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityManager>::type_name);
@@ -2424,7 +2424,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- DataPlanStatus class --------------------
 
-    static PyObject* _new_DataPlanStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DataPlanStatus(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanStatus>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanStatus>::type_name);
@@ -2619,7 +2619,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- DataPlanUsage class --------------------
 
-    static PyObject* _new_DataPlanUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DataPlanUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanUsage>::type_name);
@@ -2734,7 +2734,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- DataUsage class --------------------
 
-    static PyObject* _new_DataUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DataUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::DataUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::DataUsage>::type_name);
@@ -2849,7 +2849,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- IPInformation class --------------------
 
-    static PyObject* _new_IPInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IPInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::IPInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::IPInformation>::type_name);
@@ -2964,7 +2964,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- LanIdentifier class --------------------
 
-    static PyObject* _new_LanIdentifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LanIdentifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifier>::type_name);
@@ -3099,7 +3099,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- LanIdentifierData class --------------------
 
-    static PyObject* _new_LanIdentifierData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LanIdentifierData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifierData>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifierData>::type_name);
@@ -3214,7 +3214,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkAdapter class --------------------
 
-    static PyObject* _new_NetworkAdapter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkAdapter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkAdapter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkAdapter>::type_name);
@@ -3419,7 +3419,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkInformation class --------------------
 
-    static PyObject* _new_NetworkInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkInformation>::type_name);
@@ -3715,7 +3715,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkItem class --------------------
 
-    static PyObject* _new_NetworkItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkItem>::type_name);
@@ -3840,7 +3840,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkSecuritySettings class --------------------
 
-    static PyObject* _new_NetworkSecuritySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkSecuritySettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>::type_name);
@@ -3955,7 +3955,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkStateChangeEventDetails class --------------------
 
-    static PyObject* _new_NetworkStateChangeEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkStateChangeEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>::type_name);
@@ -4190,7 +4190,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkUsage class --------------------
 
-    static PyObject* _new_NetworkUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkUsage>::type_name);
@@ -4325,7 +4325,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ProviderNetworkUsage class --------------------
 
-    static PyObject* _new_ProviderNetworkUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProviderNetworkUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>::type_name);
@@ -4460,7 +4460,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- ProxyConfiguration class --------------------
 
-    static PyObject* _new_ProxyConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProxyConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ProxyConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ProxyConfiguration>::type_name);
@@ -4736,7 +4736,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- WlanConnectionProfileDetails class --------------------
 
-    static PyObject* _new_WlanConnectionProfileDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WlanConnectionProfileDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>::type_name);
@@ -4841,7 +4841,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- WwanConnectionProfileDetails class --------------------
 
-    static PyObject* _new_WwanConnectionProfileDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WwanConnectionProfileDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>::type_name);
@@ -5056,7 +5056,7 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     // ----- NetworkUsageStates struct --------------------
 
-    PyObject* _new_NetworkUsageStates(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_NetworkUsageStates(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

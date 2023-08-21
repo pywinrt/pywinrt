@@ -251,7 +251,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     // ----- I2cController class --------------------
 
-    static PyObject* _new_I2cController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_I2cController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::I2cController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::I2cController>::type_name);
@@ -420,7 +420,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     // ----- I2cDevice class --------------------
 
-    static PyObject* _new_I2cDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_I2cDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::I2cDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::I2cDevice>::type_name);
@@ -868,7 +868,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     // ----- II2cDeviceStatics interface --------------------
 
-    static PyObject* _new_II2cDeviceStatics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_II2cDeviceStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::type_name);
@@ -1026,7 +1026,7 @@ namespace py::cpp::Windows::Devices::I2c
 
     // ----- I2cTransferResult struct --------------------
 
-    PyObject* _new_I2cTransferResult(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_I2cTransferResult(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

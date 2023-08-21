@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 {
     // ----- KnownRemoteSystemCapabilities class --------------------
 
-    static PyObject* _new_KnownRemoteSystemCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownRemoteSystemCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities>::type_name);
@@ -142,7 +142,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystem class --------------------
 
-    static PyObject* _new_RemoteSystem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystem>::type_name);
@@ -666,7 +666,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemAddedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs>::type_name);
@@ -761,7 +761,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemApp class --------------------
 
-    static PyObject* _new_RemoteSystemApp(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemApp(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemApp>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemApp>::type_name);
@@ -976,7 +976,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemAppRegistration class --------------------
 
-    static PyObject* _new_RemoteSystemAppRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemAppRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration>::type_name);
@@ -1302,7 +1302,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemConnectionInfo class --------------------
 
-    static PyObject* _new_RemoteSystemConnectionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemConnectionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo>::type_name);
@@ -1804,7 +1804,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemEnumerationCompletedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemEnumerationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemEnumerationCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs>::type_name);
@@ -1998,7 +1998,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemKinds class --------------------
 
-    static PyObject* _new_RemoteSystemKinds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemKinds(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemKinds>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemKinds>::type_name);
@@ -2212,7 +2212,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemRemovedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs>::type_name);
@@ -2307,7 +2307,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSession class --------------------
 
-    static PyObject* _new_RemoteSystemSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSession>::type_name);
@@ -2632,7 +2632,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionAddedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs>::type_name);
@@ -2949,7 +2949,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionCreationResult class --------------------
 
-    static PyObject* _new_RemoteSystemSessionCreationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionCreationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>::type_name);
@@ -3064,7 +3064,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionDisconnectedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionDisconnectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionDisconnectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs>::type_name);
@@ -3159,7 +3159,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionInfo class --------------------
 
-    static PyObject* _new_RemoteSystemSessionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>::type_name);
@@ -3304,7 +3304,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionInvitation class --------------------
 
-    static PyObject* _new_RemoteSystemSessionInvitation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionInvitation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation>::type_name);
@@ -3561,7 +3561,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionInvitationReceivedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionInvitationReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionInvitationReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs>::type_name);
@@ -3656,7 +3656,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionJoinRequest class --------------------
 
-    static PyObject* _new_RemoteSystemSessionJoinRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionJoinRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest>::type_name);
@@ -3782,7 +3782,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionJoinRequestedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionJoinRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionJoinRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs>::type_name);
@@ -3907,7 +3907,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionJoinResult class --------------------
 
-    static PyObject* _new_RemoteSystemSessionJoinResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionJoinResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>::type_name);
@@ -4447,7 +4447,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionParticipant class --------------------
 
-    static PyObject* _new_RemoteSystemSessionParticipant(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionParticipant(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>::type_name);
@@ -4572,7 +4572,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionParticipantAddedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionParticipantAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionParticipantAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs>::type_name);
@@ -4667,7 +4667,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionParticipantRemovedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionParticipantRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionParticipantRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs>::type_name);
@@ -4762,7 +4762,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionParticipantWatcher class --------------------
 
-    static PyObject* _new_RemoteSystemSessionParticipantWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionParticipantWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher>::type_name);
@@ -5054,7 +5054,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionRemovedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs>::type_name);
@@ -5149,7 +5149,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionUpdatedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs>::type_name);
@@ -5244,7 +5244,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionValueSetReceivedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemSessionValueSetReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionValueSetReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs>::type_name);
@@ -5359,7 +5359,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemSessionWatcher class --------------------
 
-    static PyObject* _new_RemoteSystemSessionWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemSessionWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher>::type_name);
@@ -5770,7 +5770,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemUpdatedEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs>::type_name);
@@ -5865,7 +5865,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemWatcher class --------------------
 
-    static PyObject* _new_RemoteSystemWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>::type_name);
@@ -6247,7 +6247,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- RemoteSystemWatcherErrorOccurredEventArgs class --------------------
 
-    static PyObject* _new_RemoteSystemWatcherErrorOccurredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteSystemWatcherErrorOccurredEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs>::type_name);
@@ -6461,7 +6461,7 @@ namespace py::cpp::Windows::System::RemoteSystems
 
     // ----- IRemoteSystemFilter interface --------------------
 
-    static PyObject* _new_IRemoteSystemFilter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IRemoteSystemFilter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>::type_name);

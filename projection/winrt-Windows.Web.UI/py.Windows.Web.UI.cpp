@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::UI
 {
     // ----- WebViewControlContentLoadingEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlContentLoadingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlContentLoadingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlDOMContentLoadedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlDOMContentLoadedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlDOMContentLoadedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>::type_name);
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlDeferredPermissionRequest class --------------------
 
-    static PyObject* _new_WebViewControlDeferredPermissionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlDeferredPermissionRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>::type_name);
@@ -395,7 +395,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlLongRunningScriptDetectedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlLongRunningScriptDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlLongRunningScriptDetectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>::type_name);
@@ -538,7 +538,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlNavigationCompletedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlNavigationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlNavigationCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>::type_name);
@@ -673,7 +673,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlNavigationStartingEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlNavigationStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlNavigationStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>::type_name);
@@ -816,7 +816,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlNewWindowRequestedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlNewWindowRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlNewWindowRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>::type_name);
@@ -1057,7 +1057,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlPermissionRequest class --------------------
 
-    static PyObject* _new_WebViewControlPermissionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlPermissionRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>::type_name);
@@ -1305,7 +1305,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlPermissionRequestedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlPermissionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlPermissionRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>::type_name);
@@ -1400,7 +1400,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlScriptNotifyEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlScriptNotifyEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlScriptNotifyEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>::type_name);
@@ -1515,7 +1515,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlSettings class --------------------
 
-    static PyObject* _new_WebViewControlSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlSettings>::type_name);
@@ -1734,7 +1734,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlUnsupportedUriSchemeIdentifiedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>::type_name);
@@ -1877,7 +1877,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlUnviewableContentIdentifiedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlUnviewableContentIdentifiedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlUnviewableContentIdentifiedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>::type_name);
@@ -2012,7 +2012,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- WebViewControlWebResourceRequestedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlWebResourceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlWebResourceRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>::type_name);
@@ -2185,7 +2185,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- IWebViewControl interface --------------------
 
-    static PyObject* _new_IWebViewControl(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebViewControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::IWebViewControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::IWebViewControl>::type_name);
@@ -3666,7 +3666,7 @@ namespace py::cpp::Windows::Web::UI
 
     // ----- IWebViewControl2 interface --------------------
 
-    static PyObject* _new_IWebViewControl2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebViewControl2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::IWebViewControl2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::IWebViewControl2>::type_name);

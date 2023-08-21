@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 {
     // ----- WebViewControl class --------------------
 
-    static PyObject* _new_WebViewControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::Interop::WebViewControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::Interop::WebViewControl>::type_name);
@@ -1930,7 +1930,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     // ----- WebViewControlAcceleratorKeyPressedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlAcceleratorKeyPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlAcceleratorKeyPressedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>::type_name);
@@ -2133,7 +2133,7 @@ namespace py::cpp::Windows::Web::UI::Interop
 
     // ----- WebViewControlMoveFocusRequestedEventArgs class --------------------
 
-    static PyObject* _new_WebViewControlMoveFocusRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebViewControlMoveFocusRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>::type_name);

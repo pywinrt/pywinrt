@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Globalization::Collation
 {
     // ----- CharacterGrouping class --------------------
 
-    static PyObject* _new_CharacterGrouping(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CharacterGrouping(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>::type_name);
@@ -478,9 +478,9 @@ namespace py::cpp::Windows::Globalization::Collation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Globalization::Collation::CharacterGrouping> items(length, empty_instance<winrt::Windows::Globalization::Collation::CharacterGrouping>::get());
+            winrt::com_array<winrt::Windows::Globalization::Collation::CharacterGrouping> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Globalization::Collation::CharacterGrouping>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {

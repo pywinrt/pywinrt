@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 {
     // ----- SpatialSurfaceInfo class --------------------
 
-    static PyObject* _new_SpatialSurfaceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpatialSurfaceInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>::type_name);
@@ -208,7 +208,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     // ----- SpatialSurfaceMesh class --------------------
 
-    static PyObject* _new_SpatialSurfaceMesh(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpatialSurfaceMesh(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>::type_name);
@@ -403,7 +403,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     // ----- SpatialSurfaceMeshBuffer class --------------------
 
-    static PyObject* _new_SpatialSurfaceMeshBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpatialSurfaceMeshBuffer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>::type_name);

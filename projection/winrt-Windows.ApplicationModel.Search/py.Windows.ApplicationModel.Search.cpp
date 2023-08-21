@@ -241,7 +241,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPane class --------------------
 
-    static PyObject* _new_SearchPane(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPane(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPane>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPane>::type_name);
@@ -971,7 +971,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneQueryChangedEventArgs class --------------------
 
-    static PyObject* _new_SearchPaneQueryChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneQueryChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>::type_name);
@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneQueryLinguisticDetails class --------------------
 
-    static PyObject* _new_SearchPaneQueryLinguisticDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneQueryLinguisticDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>::type_name);
@@ -1241,7 +1241,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneQuerySubmittedEventArgs class --------------------
 
-    static PyObject* _new_SearchPaneQuerySubmittedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneQuerySubmittedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>::type_name);
@@ -1376,7 +1376,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneResultSuggestionChosenEventArgs class --------------------
 
-    static PyObject* _new_SearchPaneResultSuggestionChosenEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneResultSuggestionChosenEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>::type_name);
@@ -1471,7 +1471,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneSuggestionsRequest class --------------------
 
-    static PyObject* _new_SearchPaneSuggestionsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneSuggestionsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>::type_name);
@@ -1616,7 +1616,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneSuggestionsRequestDeferral class --------------------
 
-    static PyObject* _new_SearchPaneSuggestionsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneSuggestionsRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>::type_name);
@@ -1722,7 +1722,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneSuggestionsRequestedEventArgs class --------------------
 
-    static PyObject* _new_SearchPaneSuggestionsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneSuggestionsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>::type_name);
@@ -1877,7 +1877,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchPaneVisibilityChangedEventArgs class --------------------
 
-    static PyObject* _new_SearchPaneVisibilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchPaneVisibilityChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>::type_name);
@@ -2133,7 +2133,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchSuggestionCollection class --------------------
 
-    static PyObject* _new_SearchSuggestionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchSuggestionCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>::type_name);
@@ -2364,7 +2364,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchSuggestionsRequest class --------------------
 
-    static PyObject* _new_SearchSuggestionsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchSuggestionsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>::type_name);
@@ -2509,7 +2509,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- SearchSuggestionsRequestDeferral class --------------------
 
-    static PyObject* _new_SearchSuggestionsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchSuggestionsRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>::type_name);
@@ -2615,7 +2615,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     // ----- ISearchPaneQueryChangedEventArgs interface --------------------
 
-    static PyObject* _new_ISearchPaneQueryChangedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISearchPaneQueryChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>::type_name);

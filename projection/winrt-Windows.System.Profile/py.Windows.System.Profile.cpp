@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Profile
 {
     // ----- AnalyticsInfo class --------------------
 
-    static PyObject* _new_AnalyticsInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AnalyticsInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::AnalyticsInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::AnalyticsInfo>::type_name);
@@ -134,7 +134,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- AnalyticsVersionInfo class --------------------
 
-    static PyObject* _new_AnalyticsVersionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AnalyticsVersionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>::type_name);
@@ -269,7 +269,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- AppApplicability class --------------------
 
-    static PyObject* _new_AppApplicability(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppApplicability(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::AppApplicability>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::AppApplicability>::type_name);
@@ -335,7 +335,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- EducationSettings class --------------------
 
-    static PyObject* _new_EducationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EducationSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::EducationSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::EducationSettings>::type_name);
@@ -409,7 +409,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- HardwareIdentification class --------------------
 
-    static PyObject* _new_HardwareIdentification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HardwareIdentification(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::HardwareIdentification>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::HardwareIdentification>::type_name);
@@ -475,7 +475,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- HardwareToken class --------------------
 
-    static PyObject* _new_HardwareToken(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HardwareToken(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::HardwareToken>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::HardwareToken>::type_name);
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- KnownRetailInfoProperties class --------------------
 
-    static PyObject* _new_KnownRetailInfoProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownRetailInfoProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>::type_name);
@@ -1104,7 +1104,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- PlatformDiagnosticsAndUsageDataSettings class --------------------
 
-    static PyObject* _new_PlatformDiagnosticsAndUsageDataSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlatformDiagnosticsAndUsageDataSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>::type_name);
@@ -1255,7 +1255,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- RetailInfo class --------------------
 
-    static PyObject* _new_RetailInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RetailInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::RetailInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::RetailInfo>::type_name);
@@ -1349,7 +1349,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- SharedModeSettings class --------------------
 
-    static PyObject* _new_SharedModeSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SharedModeSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SharedModeSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SharedModeSettings>::type_name);
@@ -1443,7 +1443,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- SmartAppControlPolicy class --------------------
 
-    static PyObject* _new_SmartAppControlPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartAppControlPolicy(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SmartAppControlPolicy>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SmartAppControlPolicy>::type_name);
@@ -1562,7 +1562,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- SystemIdentification class --------------------
 
-    static PyObject* _new_SystemIdentification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemIdentification(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemIdentification>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemIdentification>::type_name);
@@ -1658,7 +1658,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- SystemIdentificationInfo class --------------------
 
-    static PyObject* _new_SystemIdentificationInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemIdentificationInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemIdentificationInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemIdentificationInfo>::type_name);
@@ -1773,7 +1773,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- SystemSetupInfo class --------------------
 
-    static PyObject* _new_SystemSetupInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemSetupInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemSetupInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemSetupInfo>::type_name);
@@ -1892,7 +1892,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- UnsupportedAppRequirement class --------------------
 
-    static PyObject* _new_UnsupportedAppRequirement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UnsupportedAppRequirement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>::type_name);
@@ -2007,7 +2007,7 @@ namespace py::cpp::Windows::System::Profile
 
     // ----- WindowsIntegrityPolicy class --------------------
 
-    static PyObject* _new_WindowsIntegrityPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowsIntegrityPolicy(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>::type_name);

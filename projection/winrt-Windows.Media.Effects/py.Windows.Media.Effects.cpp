@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Effects
 {
     // ----- AudioCaptureEffectsManager class --------------------
 
-    static PyObject* _new_AudioCaptureEffectsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioCaptureEffectsManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>::type_name);
@@ -158,7 +158,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- AudioEffect class --------------------
 
-    static PyObject* _new_AudioEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::AudioEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioEffect>::type_name);
@@ -408,7 +408,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- AudioEffectsManager class --------------------
 
-    static PyObject* _new_AudioEffectsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioEffectsManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::AudioEffectsManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioEffectsManager>::type_name);
@@ -552,7 +552,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- AudioRenderEffectsManager class --------------------
 
-    static PyObject* _new_AudioRenderEffectsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioRenderEffectsManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>::type_name);
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- CompositeVideoFrameContext class --------------------
 
-    static PyObject* _new_CompositeVideoFrameContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositeVideoFrameContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>::type_name);
@@ -940,7 +940,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- ProcessAudioFrameContext class --------------------
 
-    static PyObject* _new_ProcessAudioFrameContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessAudioFrameContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>::type_name);
@@ -1055,7 +1055,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- ProcessVideoFrameContext class --------------------
 
-    static PyObject* _new_ProcessVideoFrameContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessVideoFrameContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>::type_name);
@@ -2110,7 +2110,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- VideoTransformSphericalProjection class --------------------
 
-    static PyObject* _new_VideoTransformSphericalProjection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoTransformSphericalProjection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>::type_name);
@@ -2425,7 +2425,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IAudioEffectDefinition interface --------------------
 
-    static PyObject* _new_IAudioEffectDefinition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAudioEffectDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::type_name);
@@ -2540,7 +2540,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IBasicAudioEffect interface --------------------
 
-    static PyObject* _new_IBasicAudioEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBasicAudioEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::type_name);
@@ -2818,7 +2818,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IBasicVideoEffect interface --------------------
 
-    static PyObject* _new_IBasicVideoEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBasicVideoEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::type_name);
@@ -3137,7 +3137,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IVideoCompositor interface --------------------
 
-    static PyObject* _new_IVideoCompositor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVideoCompositor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoCompositor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoCompositor>::type_name);
@@ -3396,7 +3396,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IVideoCompositorDefinition interface --------------------
 
-    static PyObject* _new_IVideoCompositorDefinition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVideoCompositorDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::type_name);
@@ -3511,7 +3511,7 @@ namespace py::cpp::Windows::Media::Effects
 
     // ----- IVideoEffectDefinition interface --------------------
 
-    static PyObject* _new_IVideoEffectDefinition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVideoEffectDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::type_name);

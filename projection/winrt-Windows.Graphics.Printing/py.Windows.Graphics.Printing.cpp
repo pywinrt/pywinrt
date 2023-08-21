@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Printing
 {
     // ----- PrintManager class --------------------
 
-    static PyObject* _new_PrintManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintManager>::type_name);
@@ -710,7 +710,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintPageRangeOptions class --------------------
 
-    static PyObject* _new_PrintPageRangeOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintPageRangeOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>::type_name);
@@ -929,7 +929,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTask class --------------------
 
-    static PyObject* _new_PrintTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTask>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTask>::type_name);
@@ -1388,7 +1388,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskCompletedEventArgs class --------------------
 
-    static PyObject* _new_PrintTaskCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>::type_name);
@@ -1483,7 +1483,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskOptions class --------------------
 
-    static PyObject* _new_PrintTaskOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskOptions>::type_name);
@@ -2298,7 +2298,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskProgressingEventArgs class --------------------
 
-    static PyObject* _new_PrintTaskProgressingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskProgressingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>::type_name);
@@ -2393,7 +2393,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskRequest class --------------------
 
-    static PyObject* _new_PrintTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequest>::type_name);
@@ -2551,7 +2551,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskRequestedDeferral class --------------------
 
-    static PyObject* _new_PrintTaskRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskRequestedDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>::type_name);
@@ -2657,7 +2657,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskRequestedEventArgs class --------------------
 
-    static PyObject* _new_PrintTaskRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>::type_name);
@@ -2752,7 +2752,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskSourceRequestedArgs class --------------------
 
-    static PyObject* _new_PrintTaskSourceRequestedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskSourceRequestedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>::type_name);
@@ -2910,7 +2910,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintTaskSourceRequestedDeferral class --------------------
 
-    static PyObject* _new_PrintTaskSourceRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskSourceRequestedDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>::type_name);
@@ -3016,7 +3016,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- StandardPrintTaskOptions class --------------------
 
-    static PyObject* _new_StandardPrintTaskOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StandardPrintTaskOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>::type_name);
@@ -3370,7 +3370,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- IPrintDocumentSource interface --------------------
 
-    static PyObject* _new_IPrintDocumentSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPrintDocumentSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>::type_name);
@@ -3445,7 +3445,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- IPrintTaskOptionsCore interface --------------------
 
-    static PyObject* _new_IPrintTaskOptionsCore(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPrintTaskOptionsCore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>::type_name);
@@ -3552,7 +3552,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- IPrintTaskOptionsCoreProperties interface --------------------
 
-    static PyObject* _new_IPrintTaskOptionsCoreProperties(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPrintTaskOptionsCoreProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>::type_name);
@@ -4195,7 +4195,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- IPrintTaskOptionsCoreUIConfiguration interface --------------------
 
-    static PyObject* _new_IPrintTaskOptionsCoreUIConfiguration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPrintTaskOptionsCoreUIConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>::type_name);
@@ -4290,7 +4290,7 @@ namespace py::cpp::Windows::Graphics::Printing
 
     // ----- PrintPageDescription struct --------------------
 
-    PyObject* _new_PrintPageDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_PrintPageDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

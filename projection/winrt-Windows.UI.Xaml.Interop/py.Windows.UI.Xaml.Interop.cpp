@@ -211,7 +211,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- IBindableIterable interface --------------------
 
-    static PyObject* _new_IBindableIterable(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBindableIterable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::type_name);
@@ -316,7 +316,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- IBindableIterator interface --------------------
 
-    static PyObject* _new_IBindableIterator(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBindableIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::type_name);
@@ -461,7 +461,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- IBindableObservableVector interface --------------------
 
-    static PyObject* _new_IBindableObservableVector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBindableObservableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::type_name);
@@ -934,7 +934,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- IBindableVector interface --------------------
 
-    static PyObject* _new_IBindableVector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBindableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::type_name);
@@ -1362,7 +1362,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- IBindableVectorView interface --------------------
 
-    static PyObject* _new_IBindableVectorView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBindableVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::type_name);
@@ -1564,7 +1564,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- INotifyCollectionChanged interface --------------------
 
-    static PyObject* _new_INotifyCollectionChanged(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INotifyCollectionChanged(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::type_name);
@@ -1684,7 +1684,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- TypeName struct --------------------
 
-    PyObject* _new_TypeName(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TypeName(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

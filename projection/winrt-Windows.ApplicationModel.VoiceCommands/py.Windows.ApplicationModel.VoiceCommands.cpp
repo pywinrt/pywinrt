@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 {
     // ----- VoiceCommand class --------------------
 
-    static PyObject* _new_VoiceCommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandCompletedEventArgs class --------------------
 
-    static PyObject* _new_VoiceCommandCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>::type_name);
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandConfirmationResult class --------------------
 
-    static PyObject* _new_VoiceCommandConfirmationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandConfirmationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>::type_name);
@@ -814,7 +814,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandDefinition class --------------------
 
-    static PyObject* _new_VoiceCommandDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandDefinition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>::type_name);
@@ -962,7 +962,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandDefinitionManager class --------------------
 
-    static PyObject* _new_VoiceCommandDefinitionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandDefinitionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>::type_name);
@@ -1068,7 +1068,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandDisambiguationResult class --------------------
 
-    static PyObject* _new_VoiceCommandDisambiguationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandDisambiguationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>::type_name);
@@ -1163,7 +1163,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandResponse class --------------------
 
-    static PyObject* _new_VoiceCommandResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandResponse(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>::type_name);
@@ -1550,7 +1550,7 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 
     // ----- VoiceCommandServiceConnection class --------------------
 
-    static PyObject* _new_VoiceCommandServiceConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandServiceConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 {
     // ----- WiFiDirectAdvertisement class --------------------
 
-    static PyObject* _new_WiFiDirectAdvertisement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WiFiDirectAdvertisement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>::type_name);
@@ -511,7 +511,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     // ----- WiFiDirectAdvertisementPublisherStatusChangedEventArgs class --------------------
 
-    static PyObject* _new_WiFiDirectAdvertisementPublisherStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WiFiDirectAdvertisementPublisherStatusChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>::type_name);
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     // ----- WiFiDirectConnectionRequest class --------------------
 
-    static PyObject* _new_WiFiDirectConnectionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WiFiDirectConnectionRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>::type_name);
@@ -1161,7 +1161,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     // ----- WiFiDirectConnectionRequestedEventArgs class --------------------
 
-    static PyObject* _new_WiFiDirectConnectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WiFiDirectConnectionRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>::type_name);
@@ -1266,7 +1266,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     // ----- WiFiDirectDevice class --------------------
 
-    static PyObject* _new_WiFiDirectDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WiFiDirectDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>::type_name);
@@ -1917,7 +1917,7 @@ namespace py::cpp::Windows::Devices::WiFiDirect
 
     // ----- WiFiDirectLegacySettings class --------------------
 
-    static PyObject* _new_WiFiDirectLegacySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WiFiDirectLegacySettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>::type_name);

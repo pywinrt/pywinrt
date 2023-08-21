@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::ContentRestrictions
 {
     // ----- ContentRestrictionsBrowsePolicy class --------------------
 
-    static PyObject* _new_ContentRestrictionsBrowsePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContentRestrictionsBrowsePolicy(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>::type_name);

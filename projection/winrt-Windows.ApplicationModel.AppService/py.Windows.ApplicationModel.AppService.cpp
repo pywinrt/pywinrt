@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 {
     // ----- AppServiceCatalog class --------------------
 
-    static PyObject* _new_AppServiceCatalog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceCatalog(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>::type_name);
@@ -74,7 +74,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- AppServiceClosedEventArgs class --------------------
 
-    static PyObject* _new_AppServiceClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>::type_name);
@@ -681,7 +681,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- AppServiceDeferral class --------------------
 
-    static PyObject* _new_AppServiceDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>::type_name);
@@ -787,7 +787,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- AppServiceRequest class --------------------
 
-    static PyObject* _new_AppServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>::type_name);
@@ -914,7 +914,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- AppServiceRequestReceivedEventArgs class --------------------
 
-    static PyObject* _new_AppServiceRequestReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceRequestReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>::type_name);
@@ -1039,7 +1039,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- AppServiceResponse class --------------------
 
-    static PyObject* _new_AppServiceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceResponse(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>::type_name);
@@ -1154,7 +1154,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- AppServiceTriggerDetails class --------------------
 
-    static PyObject* _new_AppServiceTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppServiceTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>::type_name);
@@ -1361,7 +1361,7 @@ namespace py::cpp::Windows::ApplicationModel::AppService
 
     // ----- StatelessAppServiceResponse class --------------------
 
-    static PyObject* _new_StatelessAppServiceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StatelessAppServiceResponse(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>::type_name);

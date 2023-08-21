@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 {
     // ----- OemSupportInfo class --------------------
 
-    static PyObject* _new_OemSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OemSupportInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     // ----- SmbiosInformation class --------------------
 
-    static PyObject* _new_SmbiosInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmbiosInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>::type_name);
@@ -217,7 +217,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     // ----- SystemSupportDeviceInfo class --------------------
 
-    static PyObject* _new_SystemSupportDeviceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemSupportDeviceInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>::type_name);
@@ -432,7 +432,7 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
 
     // ----- SystemSupportInfo class --------------------
 
-    static PyObject* _new_SystemSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemSupportInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>::type_name);

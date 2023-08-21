@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 {
     // ----- ErrorReceivedEventArgs class --------------------
 
-    static PyObject* _new_ErrorReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ErrorReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     // ----- PinChangedEventArgs class --------------------
 
-    static PyObject* _new_PinChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PinChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>::type_name);
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::Devices::SerialCommunication
 
     // ----- SerialDevice class --------------------
 
-    static PyObject* _new_SerialDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SerialDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>::type_name);

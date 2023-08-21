@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 {
     // ----- AccessoryManager class --------------------
 
-    static PyObject* _new_AccessoryManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccessoryManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::AccessoryManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::AccessoryManager>::type_name);
@@ -1879,7 +1879,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- AlarmNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_AlarmNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AlarmNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails>::type_name);
@@ -2182,7 +2182,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- AppNotificationInfo class --------------------
 
-    static PyObject* _new_AppNotificationInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppNotificationInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::AppNotificationInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::AppNotificationInfo>::type_name);
@@ -2297,7 +2297,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- BinaryId class --------------------
 
-    static PyObject* _new_BinaryId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BinaryId(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::BinaryId>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::BinaryId>::type_name);
@@ -2412,7 +2412,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- CalendarChangedNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_CalendarChangedNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CalendarChangedNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails>::type_name);
@@ -2655,7 +2655,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- CortanaTileNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_CortanaTileNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CortanaTileNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails>::type_name);
@@ -3058,7 +3058,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- EmailAccountInfo class --------------------
 
-    static PyObject* _new_EmailAccountInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailAccountInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::EmailAccountInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::EmailAccountInfo>::type_name);
@@ -3173,7 +3173,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- EmailFolderInfo class --------------------
 
-    static PyObject* _new_EmailFolderInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailFolderInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::EmailFolderInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::EmailFolderInfo>::type_name);
@@ -3288,7 +3288,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- EmailNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_EmailNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails>::type_name);
@@ -3631,7 +3631,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- EmailReadNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_EmailReadNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailReadNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails>::type_name);
@@ -3914,7 +3914,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- MediaControlsTriggerDetails class --------------------
 
-    static PyObject* _new_MediaControlsTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaControlsTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails>::type_name);
@@ -4157,7 +4157,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- MediaMetadata class --------------------
 
-    static PyObject* _new_MediaMetadata(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaMetadata(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::MediaMetadata>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::MediaMetadata>::type_name);
@@ -4372,7 +4372,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- PhoneCallDetails class --------------------
 
-    static PyObject* _new_PhoneCallDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::PhoneCallDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::PhoneCallDetails>::type_name);
@@ -4687,7 +4687,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- PhoneLineDetails class --------------------
 
-    static PyObject* _new_PhoneLineDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::PhoneLineDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::PhoneLineDetails>::type_name);
@@ -4902,7 +4902,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- PhoneNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails>::type_name);
@@ -5165,7 +5165,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- ReminderNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_ReminderNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ReminderNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails>::type_name);
@@ -5528,7 +5528,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- SpeedDialEntry class --------------------
 
-    static PyObject* _new_SpeedDialEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeedDialEntry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::SpeedDialEntry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::SpeedDialEntry>::type_name);
@@ -5663,7 +5663,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- TextResponse class --------------------
 
-    static PyObject* _new_TextResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TextResponse(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::TextResponse>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::TextResponse>::type_name);
@@ -5778,7 +5778,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- ToastNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_ToastNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails>::type_name);
@@ -6101,7 +6101,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- VolumeInfo class --------------------
 
-    static PyObject* _new_VolumeInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VolumeInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::VolumeInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::VolumeInfo>::type_name);
@@ -6276,7 +6276,7 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     // ----- IAccessoryNotificationTriggerDetails interface --------------------
 
-    static PyObject* _new_IAccessoryNotificationTriggerDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAccessoryNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>::type_name);

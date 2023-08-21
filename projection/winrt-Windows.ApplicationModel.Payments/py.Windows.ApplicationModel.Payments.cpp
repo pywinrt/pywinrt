@@ -2922,7 +2922,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     // ----- PaymentRequestChangedArgs class --------------------
 
-    static PyObject* _new_PaymentRequestChangedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PaymentRequestChangedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>::type_name);
@@ -3349,7 +3349,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     // ----- PaymentRequestSubmitResult class --------------------
 
-    static PyObject* _new_PaymentRequestSubmitResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PaymentRequestSubmitResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>::type_name);
@@ -3464,7 +3464,7 @@ namespace py::cpp::Windows::ApplicationModel::Payments
 
     // ----- PaymentResponse class --------------------
 
-    static PyObject* _new_PaymentResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PaymentResponse(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>::type_name);

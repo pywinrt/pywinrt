@@ -187,7 +187,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- AlarmApplicationManager class --------------------
 
-    static PyObject* _new_AlarmApplicationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AlarmApplicationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>::type_name);
@@ -428,7 +428,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- AppBroadcastTriggerProviderInfo class --------------------
 
-    static PyObject* _new_AppBroadcastTriggerProviderInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBroadcastTriggerProviderInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>::type_name);
@@ -938,7 +938,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- ApplicationTriggerDetails class --------------------
 
-    static PyObject* _new_ApplicationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ApplicationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>::type_name);
@@ -1130,7 +1130,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- BackgroundExecutionManager class --------------------
 
-    static PyObject* _new_BackgroundExecutionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundExecutionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>::type_name);
@@ -1898,7 +1898,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- BackgroundTaskCompletedEventArgs class --------------------
 
-    static PyObject* _new_BackgroundTaskCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTaskCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>::type_name);
@@ -2024,7 +2024,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- BackgroundTaskDeferral class --------------------
 
-    static PyObject* _new_BackgroundTaskDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTaskDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>::type_name);
@@ -2130,7 +2130,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- BackgroundTaskProgressEventArgs class --------------------
 
-    static PyObject* _new_BackgroundTaskProgressEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTaskProgressEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>::type_name);
@@ -2245,7 +2245,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- BackgroundTaskRegistration class --------------------
 
-    static PyObject* _new_BackgroundTaskRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTaskRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>::type_name);
@@ -2835,7 +2835,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- BackgroundWorkCost class --------------------
 
-    static PyObject* _new_BackgroundWorkCost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundWorkCost(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>::type_name);
@@ -3636,7 +3636,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- CachedFileUpdaterTriggerDetails class --------------------
 
-    static PyObject* _new_CachedFileUpdaterTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CachedFileUpdaterTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>::type_name);
@@ -4528,7 +4528,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- DeviceConnectionChangeTrigger class --------------------
 
-    static PyObject* _new_DeviceConnectionChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeviceConnectionChangeTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>::type_name);
@@ -5165,7 +5165,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- DeviceWatcherTrigger class --------------------
 
-    static PyObject* _new_DeviceWatcherTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeviceWatcherTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>::type_name);
@@ -5492,7 +5492,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- GattServiceProviderTrigger class --------------------
 
-    static PyObject* _new_GattServiceProviderTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GattServiceProviderTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>::type_name);
@@ -5688,7 +5688,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- GattServiceProviderTriggerResult class --------------------
 
-    static PyObject* _new_GattServiceProviderTriggerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GattServiceProviderTriggerResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>::type_name);
@@ -8509,7 +8509,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- StorageLibraryContentChangedTrigger class --------------------
 
-    static PyObject* _new_StorageLibraryContentChangedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageLibraryContentChangedTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>::type_name);
@@ -9661,7 +9661,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundCondition interface --------------------
 
-    static PyObject* _new_IBackgroundCondition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundCondition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::type_name);
@@ -9736,7 +9736,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTask interface --------------------
 
-    static PyObject* _new_IBackgroundTask(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::type_name);
@@ -9844,7 +9844,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTaskInstance interface --------------------
 
-    static PyObject* _new_IBackgroundTaskInstance(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTaskInstance(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::type_name);
@@ -10122,7 +10122,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTaskInstance2 interface --------------------
 
-    static PyObject* _new_IBackgroundTaskInstance2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTaskInstance2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::type_name);
@@ -10432,7 +10432,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTaskInstance4 interface --------------------
 
-    static PyObject* _new_IBackgroundTaskInstance4(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTaskInstance4(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::type_name);
@@ -10730,7 +10730,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTaskRegistration interface --------------------
 
-    static PyObject* _new_IBackgroundTaskRegistration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTaskRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::type_name);
@@ -10968,7 +10968,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTaskRegistration2 interface --------------------
 
-    static PyObject* _new_IBackgroundTaskRegistration2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTaskRegistration2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::type_name);
@@ -11226,7 +11226,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTaskRegistration3 interface --------------------
 
-    static PyObject* _new_IBackgroundTaskRegistration3(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTaskRegistration3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::type_name);
@@ -11484,7 +11484,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     // ----- IBackgroundTrigger interface --------------------
 
-    static PyObject* _new_IBackgroundTrigger(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTrigger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::type_name);

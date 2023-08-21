@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::Proximity
 {
     // ----- ConnectionRequestedEventArgs class --------------------
 
-    static PyObject* _new_ConnectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectionRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     // ----- PeerFinder class --------------------
 
-    static PyObject* _new_PeerFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PeerFinder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::PeerFinder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::PeerFinder>::type_name);
@@ -714,7 +714,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     // ----- PeerInformation class --------------------
 
-    static PyObject* _new_PeerInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PeerInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::PeerInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::PeerInformation>::type_name);
@@ -889,7 +889,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     // ----- PeerWatcher class --------------------
 
-    static PyObject* _new_PeerWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PeerWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::PeerWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::PeerWatcher>::type_name);
@@ -1271,7 +1271,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     // ----- ProximityDevice class --------------------
 
-    static PyObject* _new_ProximityDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProximityDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::ProximityDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::ProximityDevice>::type_name);
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     // ----- ProximityMessage class --------------------
 
-    static PyObject* _new_ProximityMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProximityMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::ProximityMessage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::ProximityMessage>::type_name);
@@ -2005,7 +2005,7 @@ namespace py::cpp::Windows::Networking::Proximity
 
     // ----- TriggeredConnectionStateChangedEventArgs class --------------------
 
-    static PyObject* _new_TriggeredConnectionStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TriggeredConnectionStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>::type_name);

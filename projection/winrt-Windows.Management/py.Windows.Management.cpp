@@ -413,7 +413,7 @@ namespace py::cpp::Windows::Management
 
     // ----- MdmSession class --------------------
 
-    static PyObject* _new_MdmSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MdmSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::MdmSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::MdmSession>::type_name);
@@ -679,7 +679,7 @@ namespace py::cpp::Windows::Management
 
     // ----- MdmSessionManager class --------------------
 
-    static PyObject* _new_MdmSessionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MdmSessionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::MdmSessionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::MdmSessionManager>::type_name);

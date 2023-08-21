@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 {
     // ----- PlatformTelemetryClient class --------------------
 
-    static PyObject* _new_PlatformTelemetryClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlatformTelemetryClient(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>::type_name);
@@ -95,7 +95,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     // ----- PlatformTelemetryRegistrationResult class --------------------
 
-    static PyObject* _new_PlatformTelemetryRegistrationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlatformTelemetryRegistrationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>::type_name);

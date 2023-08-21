@@ -276,7 +276,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- OnlineIdServiceTicket class --------------------
 
-    static PyObject* _new_OnlineIdServiceTicket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OnlineIdServiceTicket(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>::type_name);
@@ -566,7 +566,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- OnlineIdSystemAuthenticator class --------------------
 
-    static PyObject* _new_OnlineIdSystemAuthenticator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OnlineIdSystemAuthenticator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>::type_name);
@@ -672,7 +672,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- OnlineIdSystemAuthenticatorForUser class --------------------
 
-    static PyObject* _new_OnlineIdSystemAuthenticatorForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OnlineIdSystemAuthenticatorForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>::type_name);
@@ -847,7 +847,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- OnlineIdSystemIdentity class --------------------
 
-    static PyObject* _new_OnlineIdSystemIdentity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OnlineIdSystemIdentity(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>::type_name);
@@ -962,7 +962,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- OnlineIdSystemTicketResult class --------------------
 
-    static PyObject* _new_OnlineIdSystemTicketResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OnlineIdSystemTicketResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>::type_name);
@@ -1097,7 +1097,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- SignOutUserOperation class --------------------
 
-    static PyObject* _new_SignOutUserOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SignOutUserOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>::type_name);
@@ -1379,7 +1379,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- UserAuthenticationOperation class --------------------
 
-    static PyObject* _new_UserAuthenticationOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserAuthenticationOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>::type_name);
@@ -1660,7 +1660,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     // ----- UserIdentity class --------------------
 
-    static PyObject* _new_UserIdentity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserIdentity(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>::type_name);

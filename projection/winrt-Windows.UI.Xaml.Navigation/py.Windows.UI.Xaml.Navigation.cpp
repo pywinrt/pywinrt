@@ -201,7 +201,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     // ----- NavigatingCancelEventArgs class --------------------
 
-    static PyObject* _new_NavigatingCancelEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NavigatingCancelEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs>::type_name);
@@ -404,7 +404,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     // ----- NavigationEventArgs class --------------------
 
-    static PyObject* _new_NavigationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NavigationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Navigation::NavigationEventArgs>::type_name);
@@ -627,7 +627,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
 
     // ----- NavigationFailedEventArgs class --------------------
 
-    static PyObject* _new_NavigationFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NavigationFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs>::type_name);

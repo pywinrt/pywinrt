@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 {
     // ----- TargetedContentAction class --------------------
 
-    static PyObject* _new_TargetedContentAction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentAction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>::type_name);
@@ -113,7 +113,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentAvailabilityChangedEventArgs class --------------------
 
-    static PyObject* _new_TargetedContentAvailabilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentAvailabilityChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>::type_name);
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentChangedEventArgs class --------------------
 
-    static PyObject* _new_TargetedContentChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>::type_name);
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentCollection class --------------------
 
-    static PyObject* _new_TargetedContentCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>::type_name);
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentContainer class --------------------
 
-    static PyObject* _new_TargetedContentContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentContainer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>::type_name);
@@ -803,7 +803,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentFile class --------------------
 
-    static PyObject* _new_TargetedContentFile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentFile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>::type_name);
@@ -908,7 +908,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentImage class --------------------
 
-    static PyObject* _new_TargetedContentImage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentImage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>::type_name);
@@ -1053,7 +1053,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentItem class --------------------
 
-    static PyObject* _new_TargetedContentItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>::type_name);
@@ -1274,7 +1274,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentItemState class --------------------
 
-    static PyObject* _new_TargetedContentItemState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentItemState(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>::type_name);
@@ -1389,7 +1389,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentObject class --------------------
 
-    static PyObject* _new_TargetedContentObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>::type_name);
@@ -1544,7 +1544,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentStateChangedEventArgs class --------------------
 
-    static PyObject* _new_TargetedContentStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>::type_name);
@@ -1649,7 +1649,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentSubscription class --------------------
 
-    static PyObject* _new_TargetedContentSubscription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentSubscription(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>::type_name);
@@ -1973,7 +1973,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentSubscriptionOptions class --------------------
 
-    static PyObject* _new_TargetedContentSubscriptionOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentSubscriptionOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>::type_name);
@@ -2187,7 +2187,7 @@ namespace py::cpp::Windows::Services::TargetedContent
 
     // ----- TargetedContentValue class --------------------
 
-    static PyObject* _new_TargetedContentValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetedContentValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>::type_name);

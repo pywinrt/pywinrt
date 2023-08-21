@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Control
 {
     // ----- CurrentSessionChangedEventArgs class --------------------
 
-    static PyObject* _new_CurrentSessionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CurrentSessionChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>::type_name);
@@ -83,7 +83,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- GlobalSystemMediaTransportControlsSession class --------------------
 
-    static PyObject* _new_GlobalSystemMediaTransportControlsSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalSystemMediaTransportControlsSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>::type_name);
@@ -861,7 +861,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- GlobalSystemMediaTransportControlsSessionManager class --------------------
 
-    static PyObject* _new_GlobalSystemMediaTransportControlsSessionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalSystemMediaTransportControlsSessionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>::type_name);
@@ -1116,7 +1116,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- GlobalSystemMediaTransportControlsSessionMediaProperties class --------------------
 
-    static PyObject* _new_GlobalSystemMediaTransportControlsSessionMediaProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalSystemMediaTransportControlsSessionMediaProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>::type_name);
@@ -1391,7 +1391,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- GlobalSystemMediaTransportControlsSessionPlaybackControls class --------------------
 
-    static PyObject* _new_GlobalSystemMediaTransportControlsSessionPlaybackControls(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalSystemMediaTransportControlsSessionPlaybackControls(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>::type_name);
@@ -1766,7 +1766,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- GlobalSystemMediaTransportControlsSessionPlaybackInfo class --------------------
 
-    static PyObject* _new_GlobalSystemMediaTransportControlsSessionPlaybackInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalSystemMediaTransportControlsSessionPlaybackInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>::type_name);
@@ -1961,7 +1961,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- GlobalSystemMediaTransportControlsSessionTimelineProperties class --------------------
 
-    static PyObject* _new_GlobalSystemMediaTransportControlsSessionTimelineProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalSystemMediaTransportControlsSessionTimelineProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>::type_name);
@@ -2156,7 +2156,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- MediaPropertiesChangedEventArgs class --------------------
 
-    static PyObject* _new_MediaPropertiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPropertiesChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>::type_name);
@@ -2231,7 +2231,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- PlaybackInfoChangedEventArgs class --------------------
 
-    static PyObject* _new_PlaybackInfoChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlaybackInfoChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>::type_name);
@@ -2306,7 +2306,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- SessionsChangedEventArgs class --------------------
 
-    static PyObject* _new_SessionsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SessionsChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>::type_name);
@@ -2381,7 +2381,7 @@ namespace py::cpp::Windows::Media::Control
 
     // ----- TimelinePropertiesChangedEventArgs class --------------------
 
-    static PyObject* _new_TimelinePropertiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimelinePropertiesChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>::type_name);

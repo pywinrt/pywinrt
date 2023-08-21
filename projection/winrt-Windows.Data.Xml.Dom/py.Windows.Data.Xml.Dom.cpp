@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 {
     // ----- DtdEntity class --------------------
 
-    static PyObject* _new_DtdEntity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DtdEntity(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::DtdEntity>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::DtdEntity>::type_name);
@@ -910,7 +910,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- DtdNotation class --------------------
 
-    static PyObject* _new_DtdNotation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DtdNotation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::DtdNotation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::DtdNotation>::type_name);
@@ -1792,7 +1792,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlAttribute class --------------------
 
-    static PyObject* _new_XmlAttribute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlAttribute(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>::type_name);
@@ -2722,7 +2722,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlCDataSection class --------------------
 
-    static PyObject* _new_XmlCDataSection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlCDataSection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>::type_name);
@@ -3833,7 +3833,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlComment class --------------------
 
-    static PyObject* _new_XmlComment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlComment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlComment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlComment>::type_name);
@@ -6522,7 +6522,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlDocumentFragment class --------------------
 
-    static PyObject* _new_XmlDocumentFragment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlDocumentFragment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>::type_name);
@@ -7364,7 +7364,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlDocumentType class --------------------
 
-    static PyObject* _new_XmlDocumentType(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlDocumentType(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>::type_name);
@@ -8266,7 +8266,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlDomImplementation class --------------------
 
-    static PyObject* _new_XmlDomImplementation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlDomImplementation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>::type_name);
@@ -8374,7 +8374,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlElement class --------------------
 
-    static PyObject* _new_XmlElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlElement>::type_name);
@@ -9630,7 +9630,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlEntityReference class --------------------
 
-    static PyObject* _new_XmlEntityReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlEntityReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>::type_name);
@@ -10809,7 +10809,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlNamedNodeMap class --------------------
 
-    static PyObject* _new_XmlNamedNodeMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlNamedNodeMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>::type_name);
@@ -11334,9 +11334,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Data::Xml::Dom::IXmlNode> items(length, empty_instance<winrt::Windows::Data::Xml::Dom::IXmlNode>::get());
+            winrt::com_array<winrt::Windows::Data::Xml::Dom::IXmlNode> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Data::Xml::Dom::IXmlNode>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -11403,7 +11403,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlNodeList class --------------------
 
-    static PyObject* _new_XmlNodeList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlNodeList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>::type_name);
@@ -11740,9 +11740,9 @@ namespace py::cpp::Windows::Data::Xml::Dom
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Data::Xml::Dom::IXmlNode> items(length, empty_instance<winrt::Windows::Data::Xml::Dom::IXmlNode>::get());
+            winrt::com_array<winrt::Windows::Data::Xml::Dom::IXmlNode> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Data::Xml::Dom::IXmlNode>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -11803,7 +11803,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlProcessingInstruction class --------------------
 
-    static PyObject* _new_XmlProcessingInstruction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlProcessingInstruction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>::type_name);
@@ -12713,7 +12713,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- XmlText class --------------------
 
-    static PyObject* _new_XmlText(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XmlText(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlText>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlText>::type_name);
@@ -13824,7 +13824,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- IXmlCharacterData interface --------------------
 
-    static PyObject* _new_IXmlCharacterData(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXmlCharacterData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::type_name);
@@ -14903,7 +14903,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- IXmlNode interface --------------------
 
-    static PyObject* _new_IXmlNode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXmlNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::type_name);
@@ -15745,7 +15745,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- IXmlNodeSelector interface --------------------
 
-    static PyObject* _new_IXmlNodeSelector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXmlNodeSelector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::type_name);
@@ -15950,7 +15950,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- IXmlNodeSerializer interface --------------------
 
-    static PyObject* _new_IXmlNodeSerializer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXmlNodeSerializer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::type_name);
@@ -16103,7 +16103,7 @@ namespace py::cpp::Windows::Data::Xml::Dom
 
     // ----- IXmlText interface --------------------
 
-    static PyObject* _new_IXmlText(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXmlText(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlText>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlText>::type_name);

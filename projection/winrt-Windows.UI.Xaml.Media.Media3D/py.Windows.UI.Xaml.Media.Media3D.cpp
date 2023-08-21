@@ -941,7 +941,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     // ----- Matrix3DHelper class --------------------
 
-    static PyObject* _new_Matrix3DHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Matrix3DHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>::type_name);
@@ -1553,7 +1553,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     // ----- Transform3D class --------------------
 
-    static PyObject* _new_Transform3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Transform3D(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>::type_name);
@@ -1628,7 +1628,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 
     // ----- Matrix3D struct --------------------
 
-    PyObject* _new_Matrix3D(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Matrix3D(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

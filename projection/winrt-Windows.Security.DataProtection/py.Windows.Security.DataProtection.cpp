@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::DataProtection
 {
     // ----- UserDataAvailabilityStateChangedEventArgs class --------------------
 
-    static PyObject* _new_UserDataAvailabilityStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataAvailabilityStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>::type_name);
@@ -113,7 +113,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     // ----- UserDataBufferUnprotectResult class --------------------
 
-    static PyObject* _new_UserDataBufferUnprotectResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataBufferUnprotectResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>::type_name);
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     // ----- UserDataProtectionManager class --------------------
 
-    static PyObject* _new_UserDataProtectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataProtectionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>::type_name);
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::Security::DataProtection
 
     // ----- UserDataStorageItemProtectionInfo class --------------------
 
-    static PyObject* _new_UserDataStorageItemProtectionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataStorageItemProtectionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>::type_name);

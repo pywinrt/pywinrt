@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::System::Power
 {
     // ----- PowerManager class --------------------
 
-    static PyObject* _new_PowerManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PowerManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::System::Power::PowerManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::System::Power::PowerManager>::type_name);

@@ -230,7 +230,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     // ----- CoreInkIndependentInputSource class --------------------
 
-    static PyObject* _new_CoreInkIndependentInputSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInkIndependentInputSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>::type_name);
@@ -885,7 +885,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     // ----- CoreWetStrokeUpdateEventArgs class --------------------
 
-    static PyObject* _new_CoreWetStrokeUpdateEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreWetStrokeUpdateEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>::type_name);
@@ -1048,7 +1048,7 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
 
     // ----- CoreWetStrokeUpdateSource class --------------------
 
-    static PyObject* _new_CoreWetStrokeUpdateSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreWetStrokeUpdateSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>::type_name);

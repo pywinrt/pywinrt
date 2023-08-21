@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 {
     // ----- IRawElementProviderSimple class --------------------
 
-    static PyObject* _new_IRawElementProviderSimple(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IRawElementProviderSimple(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>::type_name);
@@ -83,7 +83,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IAnnotationProvider interface --------------------
 
-    static PyObject* _new_IAnnotationProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAnnotationProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>::type_name);
@@ -258,7 +258,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ICustomNavigationProvider interface --------------------
 
-    static PyObject* _new_ICustomNavigationProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICustomNavigationProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>::type_name);
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IDockProvider interface --------------------
 
-    static PyObject* _new_IDockProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IDockProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>::type_name);
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IDragProvider interface --------------------
 
-    static PyObject* _new_IDragProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IDragProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>::type_name);
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IDropTargetProvider interface --------------------
 
-    static PyObject* _new_IDropTargetProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IDropTargetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>::type_name);
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IExpandCollapseProvider interface --------------------
 
-    static PyObject* _new_IExpandCollapseProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IExpandCollapseProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>::type_name);
@@ -930,7 +930,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IGridItemProvider interface --------------------
 
-    static PyObject* _new_IGridItemProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGridItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>::type_name);
@@ -1105,7 +1105,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IGridProvider interface --------------------
 
-    static PyObject* _new_IGridProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGridProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>::type_name);
@@ -1253,7 +1253,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IInvokeProvider interface --------------------
 
-    static PyObject* _new_IInvokeProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IInvokeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>::type_name);
@@ -1359,7 +1359,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IItemContainerProvider interface --------------------
 
-    static PyObject* _new_IItemContainerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IItemContainerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>::type_name);
@@ -1468,7 +1468,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IMultipleViewProvider interface --------------------
 
-    static PyObject* _new_IMultipleViewProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMultipleViewProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>::type_name);
@@ -1658,7 +1658,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IObjectModelProvider interface --------------------
 
-    static PyObject* _new_IObjectModelProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IObjectModelProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>::type_name);
@@ -1763,7 +1763,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IRangeValueProvider interface --------------------
 
-    static PyObject* _new_IRangeValueProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IRangeValueProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>::type_name);
@@ -1991,7 +1991,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IScrollItemProvider interface --------------------
 
-    static PyObject* _new_IScrollItemProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IScrollItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>::type_name);
@@ -2097,7 +2097,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IScrollProvider interface --------------------
 
-    static PyObject* _new_IScrollProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IScrollProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>::type_name);
@@ -2360,7 +2360,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ISelectionItemProvider interface --------------------
 
-    static PyObject* _new_ISelectionItemProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISelectionItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>::type_name);
@@ -2568,7 +2568,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ISelectionProvider interface --------------------
 
-    static PyObject* _new_ISelectionProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISelectionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>::type_name);
@@ -2713,7 +2713,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ISpreadsheetItemProvider interface --------------------
 
-    static PyObject* _new_ISpreadsheetItemProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISpreadsheetItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>::type_name);
@@ -2868,7 +2868,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ISpreadsheetProvider interface --------------------
 
-    static PyObject* _new_ISpreadsheetProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISpreadsheetProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>::type_name);
@@ -2975,7 +2975,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IStylesProvider interface --------------------
 
-    static PyObject* _new_IStylesProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStylesProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>::type_name);
@@ -3190,7 +3190,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ISynchronizedInputProvider interface --------------------
 
-    static PyObject* _new_ISynchronizedInputProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISynchronizedInputProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>::type_name);
@@ -3329,7 +3329,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITableItemProvider interface --------------------
 
-    static PyObject* _new_ITableItemProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITableItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>::type_name);
@@ -3464,7 +3464,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITableProvider interface --------------------
 
-    static PyObject* _new_ITableProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITableProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>::type_name);
@@ -3619,7 +3619,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITextChildProvider interface --------------------
 
-    static PyObject* _new_ITextChildProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextChildProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>::type_name);
@@ -3734,7 +3734,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITextEditProvider interface --------------------
 
-    static PyObject* _new_ITextEditProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextEditProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>::type_name);
@@ -4033,7 +4033,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITextProvider interface --------------------
 
-    static PyObject* _new_ITextProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>::type_name);
@@ -4272,7 +4272,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITextProvider2 interface --------------------
 
-    static PyObject* _new_ITextProvider2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>::type_name);
@@ -4587,7 +4587,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITextRangeProvider interface --------------------
 
-    static PyObject* _new_ITextRangeProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextRangeProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>::type_name);
@@ -5250,7 +5250,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITextRangeProvider2 interface --------------------
 
-    static PyObject* _new_ITextRangeProvider2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextRangeProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>::type_name);
@@ -5944,7 +5944,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IToggleProvider interface --------------------
 
-    static PyObject* _new_IToggleProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IToggleProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>::type_name);
@@ -6070,7 +6070,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITransformProvider interface --------------------
 
-    static PyObject* _new_ITransformProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITransformProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>::type_name);
@@ -6306,7 +6306,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- ITransformProvider2 interface --------------------
 
-    static PyObject* _new_ITransformProvider2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITransformProvider2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>::type_name);
@@ -6688,7 +6688,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IValueProvider interface --------------------
 
-    static PyObject* _new_IValueProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IValueProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>::type_name);
@@ -6836,7 +6836,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IVirtualizedItemProvider interface --------------------
 
-    static PyObject* _new_IVirtualizedItemProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVirtualizedItemProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>::type_name);
@@ -6942,7 +6942,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
 
     // ----- IWindowProvider interface --------------------
 
-    static PyObject* _new_IWindowProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWindowProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>::type_name);

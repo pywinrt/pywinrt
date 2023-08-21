@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 {
     // ----- AsymmetricAlgorithmNames class --------------------
 
-    static PyObject* _new_AsymmetricAlgorithmNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AsymmetricAlgorithmNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>::type_name);
@@ -482,7 +482,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- AsymmetricKeyAlgorithmProvider class --------------------
 
-    static PyObject* _new_AsymmetricKeyAlgorithmProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AsymmetricKeyAlgorithmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>::type_name);
@@ -811,7 +811,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- CryptographicEngine class --------------------
 
-    static PyObject* _new_CryptographicEngine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CryptographicEngine(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicEngine>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicEngine>::type_name);
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- CryptographicHash class --------------------
 
-    static PyObject* _new_CryptographicHash(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CryptographicHash(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicHash>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicHash>::type_name);
@@ -1390,7 +1390,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- CryptographicKey class --------------------
 
-    static PyObject* _new_CryptographicKey(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CryptographicKey(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicKey>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::CryptographicKey>::type_name);
@@ -1585,7 +1585,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- EccCurveNames class --------------------
 
-    static PyObject* _new_EccCurveNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EccCurveNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::EccCurveNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::EccCurveNames>::type_name);
@@ -2559,7 +2559,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- EncryptedAndAuthenticatedData class --------------------
 
-    static PyObject* _new_EncryptedAndAuthenticatedData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EncryptedAndAuthenticatedData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>::type_name);
@@ -2674,7 +2674,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- HashAlgorithmNames class --------------------
 
-    static PyObject* _new_HashAlgorithmNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HashAlgorithmNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames>::type_name);
@@ -2828,7 +2828,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- HashAlgorithmProvider class --------------------
 
-    static PyObject* _new_HashAlgorithmProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HashAlgorithmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>::type_name);
@@ -3037,7 +3037,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- KeyDerivationAlgorithmNames class --------------------
 
-    static PyObject* _new_KeyDerivationAlgorithmNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyDerivationAlgorithmNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames>::type_name);
@@ -3491,7 +3491,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- KeyDerivationAlgorithmProvider class --------------------
 
-    static PyObject* _new_KeyDerivationAlgorithmProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyDerivationAlgorithmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>::type_name);
@@ -3650,7 +3650,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- KeyDerivationParameters class --------------------
 
-    static PyObject* _new_KeyDerivationParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyDerivationParameters(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>::type_name);
@@ -3975,7 +3975,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- MacAlgorithmNames class --------------------
 
-    static PyObject* _new_MacAlgorithmNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MacAlgorithmNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames>::type_name);
@@ -4149,7 +4149,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- MacAlgorithmProvider class --------------------
 
-    static PyObject* _new_MacAlgorithmProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MacAlgorithmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>::type_name);
@@ -4360,7 +4360,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- PersistedKeyProvider class --------------------
 
-    static PyObject* _new_PersistedKeyProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PersistedKeyProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider>::type_name);
@@ -4462,7 +4462,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- SymmetricAlgorithmNames class --------------------
 
-    static PyObject* _new_SymmetricAlgorithmNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SymmetricAlgorithmNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames>::type_name);
@@ -4896,7 +4896,7 @@ namespace py::cpp::Windows::Security::Cryptography::Core
 
     // ----- SymmetricKeyAlgorithmProvider class --------------------
 
-    static PyObject* _new_SymmetricKeyAlgorithmProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SymmetricKeyAlgorithmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>::type_name);

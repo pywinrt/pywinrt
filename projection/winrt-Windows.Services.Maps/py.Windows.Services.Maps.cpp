@@ -148,7 +148,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- ManeuverWarning class --------------------
 
-    static PyObject* _new_ManeuverWarning(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ManeuverWarning(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::ManeuverWarning>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::ManeuverWarning>::type_name);
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapAddress class --------------------
 
-    static PyObject* _new_MapAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapAddress(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapAddress>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapAddress>::type_name);
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapLocation class --------------------
 
-    static PyObject* _new_MapLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapLocation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapLocation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapLocation>::type_name);
@@ -813,7 +813,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapLocationFinder class --------------------
 
-    static PyObject* _new_MapLocationFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapLocationFinder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapLocationFinder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapLocationFinder>::type_name);
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapLocationFinderResult class --------------------
 
-    static PyObject* _new_MapLocationFinderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapLocationFinderResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapLocationFinderResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapLocationFinderResult>::type_name);
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapManager class --------------------
 
-    static PyObject* _new_MapManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapManager>::type_name);
@@ -1166,7 +1166,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapRoute class --------------------
 
-    static PyObject* _new_MapRoute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapRoute(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapRoute>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRoute>::type_name);
@@ -1798,7 +1798,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapRouteFinder class --------------------
 
-    static PyObject* _new_MapRouteFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapRouteFinder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteFinder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteFinder>::type_name);
@@ -2150,7 +2150,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapRouteFinderResult class --------------------
 
-    static PyObject* _new_MapRouteFinderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapRouteFinderResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteFinderResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteFinderResult>::type_name);
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapRouteLeg class --------------------
 
-    static PyObject* _new_MapRouteLeg(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapRouteLeg(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteLeg>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteLeg>::type_name);
@@ -2500,7 +2500,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapRouteManeuver class --------------------
 
-    static PyObject* _new_MapRouteManeuver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapRouteManeuver(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteManeuver>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteManeuver>::type_name);
@@ -2775,7 +2775,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- MapService class --------------------
 
-    static PyObject* _new_MapService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::MapService>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapService>::type_name);
@@ -2953,7 +2953,7 @@ namespace py::cpp::Windows::Services::Maps
 
     // ----- PlaceInfo class --------------------
 
-    static PyObject* _new_PlaceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlaceInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::PlaceInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::PlaceInfo>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Casting
 {
     // ----- CastingConnection class --------------------
 
-    static PyObject* _new_CastingConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CastingConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Casting::CastingConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingConnection>::type_name);
@@ -376,7 +376,7 @@ namespace py::cpp::Windows::Media::Casting
 
     // ----- CastingConnectionErrorOccurredEventArgs class --------------------
 
-    static PyObject* _new_CastingConnectionErrorOccurredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CastingConnectionErrorOccurredEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>::type_name);
@@ -491,7 +491,7 @@ namespace py::cpp::Windows::Media::Casting
 
     // ----- CastingDevice class --------------------
 
-    static PyObject* _new_CastingDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CastingDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Casting::CastingDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingDevice>::type_name);
@@ -1127,7 +1127,7 @@ namespace py::cpp::Windows::Media::Casting
 
     // ----- CastingDevicePickerFilter class --------------------
 
-    static PyObject* _new_CastingDevicePickerFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CastingDevicePickerFilter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>::type_name);
@@ -1366,7 +1366,7 @@ namespace py::cpp::Windows::Media::Casting
 
     // ----- CastingDeviceSelectedEventArgs class --------------------
 
-    static PyObject* _new_CastingDeviceSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CastingDeviceSelectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>::type_name);
@@ -1461,7 +1461,7 @@ namespace py::cpp::Windows::Media::Casting
 
     // ----- CastingSource class --------------------
 
-    static PyObject* _new_CastingSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CastingSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Casting::CastingSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingSource>::type_name);

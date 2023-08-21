@@ -8,7 +8,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 {
     // ----- ImageVariableDescriptorPreview class --------------------
 
-    static PyObject* _new_ImageVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageVariableDescriptorPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>::type_name);
@@ -223,7 +223,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- InferencingOptionsPreview class --------------------
 
-    static PyObject* _new_InferencingOptionsPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InferencingOptionsPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>::type_name);
@@ -954,7 +954,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- LearningModelDescriptionPreview class --------------------
 
-    static PyObject* _new_LearningModelDescriptionPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LearningModelDescriptionPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>::type_name);
@@ -1189,7 +1189,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- LearningModelEvaluationResultPreview class --------------------
 
-    static PyObject* _new_LearningModelEvaluationResultPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LearningModelEvaluationResultPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>::type_name);
@@ -1304,7 +1304,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- LearningModelPreview class --------------------
 
-    static PyObject* _new_LearningModelPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LearningModelPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>::type_name);
@@ -1577,7 +1577,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- LearningModelVariableDescriptorPreview class --------------------
 
-    static PyObject* _new_LearningModelVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LearningModelVariableDescriptorPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>::type_name);
@@ -1732,7 +1732,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- MapVariableDescriptorPreview class --------------------
 
-    static PyObject* _new_MapVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapVariableDescriptorPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>::type_name);
@@ -1967,7 +1967,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- SequenceVariableDescriptorPreview class --------------------
 
-    static PyObject* _new_SequenceVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SequenceVariableDescriptorPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>::type_name);
@@ -2142,7 +2142,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- TensorVariableDescriptorPreview class --------------------
 
-    static PyObject* _new_TensorVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorVariableDescriptorPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>::type_name);
@@ -2337,7 +2337,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     // ----- ILearningModelVariableDescriptorPreview interface --------------------
 
-    static PyObject* _new_ILearningModelVariableDescriptorPreview(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILearningModelVariableDescriptorPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>::type_name);

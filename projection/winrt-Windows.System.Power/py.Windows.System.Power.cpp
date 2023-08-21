@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Power
 {
     // ----- BackgroundEnergyManager class --------------------
 
-    static PyObject* _new_BackgroundEnergyManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundEnergyManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Power::BackgroundEnergyManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Power::BackgroundEnergyManager>::type_name);
@@ -312,7 +312,7 @@ namespace py::cpp::Windows::System::Power
 
     // ----- ForegroundEnergyManager class --------------------
 
-    static PyObject* _new_ForegroundEnergyManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ForegroundEnergyManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Power::ForegroundEnergyManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Power::ForegroundEnergyManager>::type_name);
@@ -576,7 +576,7 @@ namespace py::cpp::Windows::System::Power
 
     // ----- PowerManager class --------------------
 
-    static PyObject* _new_PowerManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PowerManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Power::PowerManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Power::PowerManager>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 {
     // ----- PrintWorkflowBackgroundSession class --------------------
 
-    static PyObject* _new_PrintWorkflowBackgroundSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowBackgroundSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>::type_name);
@@ -224,7 +224,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowBackgroundSetupRequestedEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowBackgroundSetupRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowBackgroundSetupRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>::type_name);
@@ -410,7 +410,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowConfiguration class --------------------
 
-    static PyObject* _new_PrintWorkflowConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>::type_name);
@@ -578,7 +578,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowForegroundSession class --------------------
 
-    static PyObject* _new_PrintWorkflowForegroundSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowForegroundSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>::type_name);
@@ -794,7 +794,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowForegroundSetupRequestedEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowForegroundSetupRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowForegroundSetupRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>::type_name);
@@ -949,7 +949,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowJobActivatedEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowJobActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowJobActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>::type_name);
@@ -1124,7 +1124,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowJobBackgroundSession class --------------------
 
-    static PyObject* _new_PrintWorkflowJobBackgroundSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowJobBackgroundSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>::type_name);
@@ -1340,7 +1340,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowJobNotificationEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowJobNotificationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowJobNotificationEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>::type_name);
@@ -1485,7 +1485,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowJobStartingEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowJobStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowJobStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>::type_name);
@@ -1661,7 +1661,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowJobTriggerDetails class --------------------
 
-    static PyObject* _new_PrintWorkflowJobTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowJobTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>::type_name);
@@ -1756,7 +1756,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowJobUISession class --------------------
 
-    static PyObject* _new_PrintWorkflowJobUISession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowJobUISession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>::type_name);
@@ -2071,7 +2071,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowObjectModelTargetPackage class --------------------
 
-    static PyObject* _new_PrintWorkflowObjectModelTargetPackage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowObjectModelTargetPackage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>::type_name);
@@ -2146,7 +2146,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowPdlConverter class --------------------
 
-    static PyObject* _new_PrintWorkflowPdlConverter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowPdlConverter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>::type_name);
@@ -2278,7 +2278,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowPdlDataAvailableEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowPdlDataAvailableEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowPdlDataAvailableEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>::type_name);
@@ -2443,7 +2443,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowPdlModificationRequestedEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowPdlModificationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowPdlModificationRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>::type_name);
@@ -2806,7 +2806,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowPdlSourceContent class --------------------
 
-    static PyObject* _new_PrintWorkflowPdlSourceContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowPdlSourceContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>::type_name);
@@ -2961,7 +2961,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowPdlTargetStream class --------------------
 
-    static PyObject* _new_PrintWorkflowPdlTargetStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowPdlTargetStream(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>::type_name);
@@ -3099,7 +3099,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowPrinterJob class --------------------
 
-    static PyObject* _new_PrintWorkflowPrinterJob(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowPrinterJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>::type_name);
@@ -3402,7 +3402,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowSourceContent class --------------------
 
-    static PyObject* _new_PrintWorkflowSourceContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowSourceContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>::type_name);
@@ -3567,7 +3567,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowSpoolStreamContent class --------------------
 
-    static PyObject* _new_PrintWorkflowSpoolStreamContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowSpoolStreamContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>::type_name);
@@ -3672,7 +3672,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowStreamTarget class --------------------
 
-    static PyObject* _new_PrintWorkflowStreamTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowStreamTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>::type_name);
@@ -3777,7 +3777,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowSubmittedEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowSubmittedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowSubmittedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>::type_name);
@@ -3934,7 +3934,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowSubmittedOperation class --------------------
 
-    static PyObject* _new_PrintWorkflowSubmittedOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowSubmittedOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>::type_name);
@@ -4082,7 +4082,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowTarget class --------------------
 
-    static PyObject* _new_PrintWorkflowTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>::type_name);
@@ -4197,7 +4197,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowTriggerDetails class --------------------
 
-    static PyObject* _new_PrintWorkflowTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>::type_name);
@@ -4292,7 +4292,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowUIActivatedEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowUIActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowUIActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>::type_name);
@@ -4467,7 +4467,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowUILauncher class --------------------
 
-    static PyObject* _new_PrintWorkflowUILauncher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowUILauncher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>::type_name);
@@ -4602,7 +4602,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
 
     // ----- PrintWorkflowXpsDataAvailableEventArgs class --------------------
 
-    static PyObject* _new_PrintWorkflowXpsDataAvailableEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintWorkflowXpsDataAvailableEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>::type_name);

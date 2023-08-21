@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Radios
 {
     // ----- Radio class --------------------
 
-    static PyObject* _new_Radio(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Radio(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Radios::Radio>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Radios::Radio>::type_name);

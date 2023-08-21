@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::StartScreen
 {
     // ----- JumpList class --------------------
 
-    static PyObject* _new_JumpList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JumpList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::JumpList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::JumpList>::type_name);
@@ -241,7 +241,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- JumpListItem class --------------------
 
-    static PyObject* _new_JumpListItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JumpListItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::JumpListItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::JumpListItem>::type_name);
@@ -1888,7 +1888,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- SecondaryTileVisualElements class --------------------
 
-    static PyObject* _new_SecondaryTileVisualElements(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SecondaryTileVisualElements(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>::type_name);
@@ -2559,7 +2559,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- StartScreenManager class --------------------
 
-    static PyObject* _new_StartScreenManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StartScreenManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::StartScreenManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::StartScreenManager>::type_name);
@@ -2876,7 +2876,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- TileMixedRealityModel class --------------------
 
-    static PyObject* _new_TileMixedRealityModel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileMixedRealityModel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>::type_name);
@@ -3095,7 +3095,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- VisualElementsRequest class --------------------
 
-    static PyObject* _new_VisualElementsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualElementsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>::type_name);
@@ -3260,7 +3260,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- VisualElementsRequestDeferral class --------------------
 
-    static PyObject* _new_VisualElementsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualElementsRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>::type_name);
@@ -3366,7 +3366,7 @@ namespace py::cpp::Windows::UI::StartScreen
 
     // ----- VisualElementsRequestedEventArgs class --------------------
 
-    static PyObject* _new_VisualElementsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualElementsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>::type_name);

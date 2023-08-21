@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 {
     // ----- PrintSupportExtensionSession class --------------------
 
-    static PyObject* _new_PrintSupportExtensionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportExtensionSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>::type_name);
@@ -269,7 +269,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportExtensionTriggerDetails class --------------------
 
-    static PyObject* _new_PrintSupportExtensionTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportExtensionTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>::type_name);
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportPrintDeviceCapabilitiesChangedEventArgs class --------------------
 
-    static PyObject* _new_PrintSupportPrintDeviceCapabilitiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportPrintDeviceCapabilitiesChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>::type_name);
@@ -681,7 +681,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportPrintDeviceCapabilitiesUpdatePolicy class --------------------
 
-    static PyObject* _new_PrintSupportPrintDeviceCapabilitiesUpdatePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportPrintDeviceCapabilitiesUpdatePolicy(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>::type_name);
@@ -1013,7 +1013,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportPrintTicketValidationRequestedEventArgs class --------------------
 
-    static PyObject* _new_PrintSupportPrintTicketValidationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportPrintTicketValidationRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>::type_name);
@@ -1171,7 +1171,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportPrinterSelectedEventArgs class --------------------
 
-    static PyObject* _new_PrintSupportPrinterSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportPrinterSelectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>::type_name);
@@ -1463,7 +1463,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportSessionInfo class --------------------
 
-    static PyObject* _new_PrintSupportSessionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportSessionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>::type_name);
@@ -1578,7 +1578,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportSettingsActivatedEventArgs class --------------------
 
-    static PyObject* _new_PrintSupportSettingsActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportSettingsActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>::type_name);
@@ -1783,7 +1783,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     // ----- PrintSupportSettingsUISession class --------------------
 
-    static PyObject* _new_PrintSupportSettingsUISession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSupportSettingsUISession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>::type_name);

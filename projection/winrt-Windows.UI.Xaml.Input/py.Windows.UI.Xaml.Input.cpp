@@ -367,7 +367,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- AccessKeyManager class --------------------
 
-    static PyObject* _new_AccessKeyManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccessKeyManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>::type_name);
@@ -600,7 +600,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- CanExecuteRequestedEventArgs class --------------------
 
-    static PyObject* _new_CanExecuteRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CanExecuteRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>::type_name);
@@ -743,7 +743,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- CharacterReceivedRoutedEventArgs class --------------------
 
-    static PyObject* _new_CharacterReceivedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CharacterReceivedRoutedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>::type_name);
@@ -1293,7 +1293,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- ExecuteRequestedEventArgs class --------------------
 
-    static PyObject* _new_ExecuteRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ExecuteRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>::type_name);
@@ -1677,7 +1677,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- FocusManager class --------------------
 
-    static PyObject* _new_FocusManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FocusManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManager>::type_name);
@@ -2291,7 +2291,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- FocusManagerGotFocusEventArgs class --------------------
 
-    static PyObject* _new_FocusManagerGotFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FocusManagerGotFocusEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>::type_name);
@@ -2406,7 +2406,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- FocusManagerLostFocusEventArgs class --------------------
 
-    static PyObject* _new_FocusManagerLostFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FocusManagerLostFocusEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>::type_name);
@@ -2521,7 +2521,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- FocusMovementResult class --------------------
 
-    static PyObject* _new_FocusMovementResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FocusMovementResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>::type_name);
@@ -2616,7 +2616,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- GettingFocusEventArgs class --------------------
 
-    static PyObject* _new_GettingFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GettingFocusEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>::type_name);
@@ -3214,7 +3214,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- InertiaExpansionBehavior class --------------------
 
-    static PyObject* _new_InertiaExpansionBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InertiaExpansionBehavior(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>::type_name);
@@ -3385,7 +3385,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- InertiaRotationBehavior class --------------------
 
-    static PyObject* _new_InertiaRotationBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InertiaRotationBehavior(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>::type_name);
@@ -3556,7 +3556,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- InertiaTranslationBehavior class --------------------
 
-    static PyObject* _new_InertiaTranslationBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InertiaTranslationBehavior(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>::type_name);
@@ -4004,7 +4004,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- KeyRoutedEventArgs class --------------------
 
-    static PyObject* _new_KeyRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyRoutedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>::type_name);
@@ -4641,7 +4641,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- KeyboardAcceleratorInvokedEventArgs class --------------------
 
-    static PyObject* _new_KeyboardAcceleratorInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyboardAcceleratorInvokedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>::type_name);
@@ -4804,7 +4804,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- LosingFocusEventArgs class --------------------
 
-    static PyObject* _new_LosingFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LosingFocusEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>::type_name);
@@ -6909,7 +6909,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- NoFocusCandidateFoundEventArgs class --------------------
 
-    static PyObject* _new_NoFocusCandidateFoundEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NoFocusCandidateFoundEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>::type_name);
@@ -7072,7 +7072,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- Pointer class --------------------
 
-    static PyObject* _new_Pointer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Pointer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::Pointer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::Pointer>::type_name);
@@ -7227,7 +7227,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- PointerRoutedEventArgs class --------------------
 
-    static PyObject* _new_PointerRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointerRoutedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>::type_name);
@@ -7474,7 +7474,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- ProcessKeyboardAcceleratorEventArgs class --------------------
 
-    static PyObject* _new_ProcessKeyboardAcceleratorEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessKeyboardAcceleratorEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>::type_name);
@@ -8959,7 +8959,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
     // ----- ICommand interface --------------------
 
-    static PyObject* _new_ICommand(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ICommand>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ICommand>::type_name);

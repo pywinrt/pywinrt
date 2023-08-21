@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 {
     // ----- AppCapability class --------------------
 
-    static PyObject* _new_AppCapability(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppCapability(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>::type_name);
@@ -407,7 +407,7 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 
     // ----- AppCapabilityAccessChangedEventArgs class --------------------
 
-    static PyObject* _new_AppCapabilityAccessChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppCapabilityAccessChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>::type_name);

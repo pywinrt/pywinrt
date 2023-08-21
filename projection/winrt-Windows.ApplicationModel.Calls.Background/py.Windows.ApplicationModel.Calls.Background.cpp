@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 {
     // ----- PhoneCallBlockedTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneCallBlockedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallBlockedTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     // ----- PhoneCallOriginDataRequestTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneCallOriginDataRequestTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallOriginDataRequestTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>::type_name);
@@ -258,7 +258,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     // ----- PhoneIncomingCallDismissedTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneIncomingCallDismissedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneIncomingCallDismissedTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>::type_name);
@@ -453,7 +453,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     // ----- PhoneIncomingCallNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneIncomingCallNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneIncomingCallNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>::type_name);
@@ -568,7 +568,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     // ----- PhoneLineChangedTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneLineChangedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineChangedTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>::type_name);
@@ -715,7 +715,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
 
     // ----- PhoneNewVoicemailMessageTriggerDetails class --------------------
 
-    static PyObject* _new_PhoneNewVoicemailMessageTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneNewVoicemailMessageTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>::type_name);

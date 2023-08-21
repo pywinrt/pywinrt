@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Editing
 {
     // ----- BackgroundAudioTrack class --------------------
 
-    static PyObject* _new_BackgroundAudioTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundAudioTrack(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Editing::BackgroundAudioTrack>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Editing::BackgroundAudioTrack>::type_name);
@@ -479,7 +479,7 @@ namespace py::cpp::Windows::Media::Editing
 
     // ----- EmbeddedAudioTrack class --------------------
 
-    static PyObject* _new_EmbeddedAudioTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmbeddedAudioTrack(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Editing::EmbeddedAudioTrack>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Editing::EmbeddedAudioTrack>::type_name);
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::Media::Editing
 
     // ----- MediaClip class --------------------
 
-    static PyObject* _new_MediaClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaClip(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Editing::MediaClip>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Editing::MediaClip>::type_name);

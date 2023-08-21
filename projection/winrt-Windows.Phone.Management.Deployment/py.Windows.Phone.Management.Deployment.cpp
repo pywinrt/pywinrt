@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 {
     // ----- Enterprise class --------------------
 
-    static PyObject* _new_Enterprise(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Enterprise(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::Enterprise>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::Enterprise>::type_name);
@@ -203,7 +203,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     // ----- EnterpriseEnrollmentManager class --------------------
 
-    static PyObject* _new_EnterpriseEnrollmentManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EnterpriseEnrollmentManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>::type_name);
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     // ----- EnterpriseEnrollmentResult class --------------------
 
-    static PyObject* _new_EnterpriseEnrollmentResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EnterpriseEnrollmentResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>::type_name);
@@ -506,7 +506,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     // ----- InstallationManager class --------------------
 
-    static PyObject* _new_InstallationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InstallationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>::type_name);
@@ -775,7 +775,7 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     // ----- PackageInstallResult class --------------------
 
-    static PyObject* _new_PackageInstallResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PackageInstallResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>::type_name);

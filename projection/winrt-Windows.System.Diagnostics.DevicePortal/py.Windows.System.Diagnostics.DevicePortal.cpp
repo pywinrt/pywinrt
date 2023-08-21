@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 {
     // ----- DevicePortalConnection class --------------------
 
-    static PyObject* _new_DevicePortalConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DevicePortalConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>::type_name);
@@ -339,7 +339,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     // ----- DevicePortalConnectionClosedEventArgs class --------------------
 
-    static PyObject* _new_DevicePortalConnectionClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DevicePortalConnectionClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>::type_name);
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     // ----- DevicePortalConnectionRequestReceivedEventArgs class --------------------
 
-    static PyObject* _new_DevicePortalConnectionRequestReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DevicePortalConnectionRequestReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>::type_name);

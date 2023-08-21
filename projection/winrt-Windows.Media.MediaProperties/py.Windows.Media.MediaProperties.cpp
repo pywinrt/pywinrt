@@ -960,7 +960,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     // ----- H264ProfileIds class --------------------
 
-    static PyObject* _new_H264ProfileIds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_H264ProfileIds(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::MediaProperties::H264ProfileIds>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::MediaProperties::H264ProfileIds>::type_name);
@@ -2521,7 +2521,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     // ----- MediaEncodingSubtypes class --------------------
 
-    static PyObject* _new_MediaEncodingSubtypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaEncodingSubtypes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>::type_name);
@@ -4050,7 +4050,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     // ----- MediaRatio class --------------------
 
-    static PyObject* _new_MediaRatio(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaRatio(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::MediaProperties::MediaRatio>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::MediaProperties::MediaRatio>::type_name);
@@ -4221,7 +4221,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     // ----- Mpeg2ProfileIds class --------------------
 
-    static PyObject* _new_Mpeg2ProfileIds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Mpeg2ProfileIds(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>::type_name);
@@ -5469,7 +5469,7 @@ namespace py::cpp::Windows::Media::MediaProperties
 
     // ----- IMediaEncodingProperties interface --------------------
 
-    static PyObject* _new_IMediaEncodingProperties(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaEncodingProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>::type_name);

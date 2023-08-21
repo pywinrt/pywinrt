@@ -170,7 +170,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     // ----- AppBroadcastingStatus class --------------------
 
-    static PyObject* _new_AppBroadcastingStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBroadcastingStatus(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>::type_name);
@@ -285,7 +285,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     // ----- AppBroadcastingStatusDetails class --------------------
 
-    static PyObject* _new_AppBroadcastingStatusDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBroadcastingStatusDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>::type_name);
@@ -520,7 +520,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     // ----- AppBroadcastingUI class --------------------
 
-    static PyObject* _new_AppBroadcastingUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBroadcastingUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>::type_name);

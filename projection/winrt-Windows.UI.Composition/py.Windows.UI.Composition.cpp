@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Composition
 {
     // ----- AmbientLight class --------------------
 
-    static PyObject* _new_AmbientLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AmbientLight(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::AmbientLight>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::AmbientLight>::type_name);
@@ -179,7 +179,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- AnimationController class --------------------
 
-    static PyObject* _new_AnimationController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AnimationController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::AnimationController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::AnimationController>::type_name);
@@ -520,7 +520,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- AnimationPropertyInfo class --------------------
 
-    static PyObject* _new_AnimationPropertyInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AnimationPropertyInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::AnimationPropertyInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::AnimationPropertyInfo>::type_name);
@@ -703,7 +703,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- BackEasingFunction class --------------------
 
-    static PyObject* _new_BackEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::BackEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BackEasingFunction>::type_name);
@@ -818,7 +818,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- BooleanKeyFrameAnimation class --------------------
 
-    static PyObject* _new_BooleanKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BooleanKeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>::type_name);
@@ -927,7 +927,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- BounceEasingFunction class --------------------
 
-    static PyObject* _new_BounceEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BounceEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::BounceEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceEasingFunction>::type_name);
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- BounceScalarNaturalMotionAnimation class --------------------
 
-    static PyObject* _new_BounceScalarNaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BounceScalarNaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>::type_name);
@@ -1233,7 +1233,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- BounceVector2NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_BounceVector2NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BounceVector2NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>::type_name);
@@ -1404,7 +1404,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- BounceVector3NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_BounceVector3NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BounceVector3NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>::type_name);
@@ -1575,7 +1575,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CircleEasingFunction class --------------------
 
-    static PyObject* _new_CircleEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CircleEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CircleEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CircleEasingFunction>::type_name);
@@ -1670,7 +1670,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ColorKeyFrameAnimation class --------------------
 
-    static PyObject* _new_ColorKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ColorKeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>::type_name);
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionAnimation class --------------------
 
-    static PyObject* _new_CompositionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionAnimation>::type_name);
@@ -2431,7 +2431,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionAnimationGroup class --------------------
 
-    static PyObject* _new_CompositionAnimationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionAnimationGroup(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionAnimationGroup>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionAnimationGroup>::type_name);
@@ -2667,7 +2667,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionBackdropBrush class --------------------
 
-    static PyObject* _new_CompositionBackdropBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionBackdropBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionBackdropBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionBackdropBrush>::type_name);
@@ -2742,7 +2742,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionBatchCompletedEventArgs class --------------------
 
-    static PyObject* _new_CompositionBatchCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionBatchCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>::type_name);
@@ -2817,7 +2817,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionBrush class --------------------
 
-    static PyObject* _new_CompositionBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionBrush>::type_name);
@@ -2892,7 +2892,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionCapabilities class --------------------
 
-    static PyObject* _new_CompositionCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionCapabilities>::type_name);
@@ -3102,7 +3102,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionClip class --------------------
 
-    static PyObject* _new_CompositionClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionClip(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionClip>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionClip>::type_name);
@@ -3513,7 +3513,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionColorBrush class --------------------
 
-    static PyObject* _new_CompositionColorBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionColorBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionColorBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionColorBrush>::type_name);
@@ -3636,7 +3636,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionColorGradientStop class --------------------
 
-    static PyObject* _new_CompositionColorGradientStop(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionColorGradientStop(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStop>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStop>::type_name);
@@ -3807,7 +3807,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionColorGradientStopCollection class --------------------
 
-    static PyObject* _new_CompositionColorGradientStopCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionColorGradientStopCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>::type_name);
@@ -4345,9 +4345,9 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Composition::CompositionColorGradientStop> items(length, empty_instance<winrt::Windows::UI::Composition::CompositionColorGradientStop>::get());
+            winrt::com_array<winrt::Windows::UI::Composition::CompositionColorGradientStop> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Composition::CompositionColorGradientStop>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -4430,7 +4430,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionCommitBatch class --------------------
 
-    static PyObject* _new_CompositionCommitBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionCommitBatch(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionCommitBatch>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionCommitBatch>::type_name);
@@ -4590,7 +4590,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionContainerShape class --------------------
 
-    static PyObject* _new_CompositionContainerShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionContainerShape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionContainerShape>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionContainerShape>::type_name);
@@ -4685,7 +4685,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionDrawingSurface class --------------------
 
-    static PyObject* _new_CompositionDrawingSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionDrawingSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionDrawingSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionDrawingSurface>::type_name);
@@ -4985,7 +4985,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionEasingFunction class --------------------
 
-    static PyObject* _new_CompositionEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEasingFunction>::type_name);
@@ -5417,7 +5417,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionEffectBrush class --------------------
 
-    static PyObject* _new_CompositionEffectBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionEffectBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEffectBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEffectBrush>::type_name);
@@ -5558,7 +5558,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionEffectFactory class --------------------
 
-    static PyObject* _new_CompositionEffectFactory(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionEffectFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEffectFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEffectFactory>::type_name);
@@ -5822,7 +5822,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionEllipseGeometry class --------------------
 
-    static PyObject* _new_CompositionEllipseGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionEllipseGeometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEllipseGeometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEllipseGeometry>::type_name);
@@ -5993,7 +5993,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionGeometricClip class --------------------
 
-    static PyObject* _new_CompositionGeometricClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionGeometricClip(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGeometricClip>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGeometricClip>::type_name);
@@ -6164,7 +6164,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionGeometry class --------------------
 
-    static PyObject* _new_CompositionGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionGeometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGeometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGeometry>::type_name);
@@ -6383,7 +6383,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionGradientBrush class --------------------
 
-    static PyObject* _new_CompositionGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionGradientBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGradientBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGradientBrush>::type_name);
@@ -6958,7 +6958,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionGraphicsDevice class --------------------
 
-    static PyObject* _new_CompositionGraphicsDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionGraphicsDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGraphicsDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGraphicsDevice>::type_name);
@@ -7281,7 +7281,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionLight class --------------------
 
-    static PyObject* _new_CompositionLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionLight(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionLight>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionLight>::type_name);
@@ -7444,7 +7444,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionLineGeometry class --------------------
 
-    static PyObject* _new_CompositionLineGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionLineGeometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionLineGeometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionLineGeometry>::type_name);
@@ -7615,7 +7615,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionLinearGradientBrush class --------------------
 
-    static PyObject* _new_CompositionLinearGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionLinearGradientBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>::type_name);
@@ -7786,7 +7786,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionMaskBrush class --------------------
 
-    static PyObject* _new_CompositionMaskBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionMaskBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionMaskBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionMaskBrush>::type_name);
@@ -7957,7 +7957,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionMipmapSurface class --------------------
 
-    static PyObject* _new_CompositionMipmapSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionMipmapSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionMipmapSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionMipmapSurface>::type_name);
@@ -8144,7 +8144,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionNineGridBrush class --------------------
 
-    static PyObject* _new_CompositionNineGridBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionNineGridBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionNineGridBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionNineGridBrush>::type_name);
@@ -8813,7 +8813,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionObject class --------------------
 
-    static PyObject* _new_CompositionObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionObject>::type_name);
@@ -9507,7 +9507,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionPathGeometry class --------------------
 
-    static PyObject* _new_CompositionPathGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionPathGeometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionPathGeometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionPathGeometry>::type_name);
@@ -9630,7 +9630,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionProjectedShadow class --------------------
 
-    static PyObject* _new_CompositionProjectedShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionProjectedShadow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadow>::type_name);
@@ -9937,7 +9937,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionProjectedShadowCaster class --------------------
 
-    static PyObject* _new_CompositionProjectedShadowCaster(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionProjectedShadowCaster(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>::type_name);
@@ -10108,7 +10108,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionProjectedShadowCasterCollection class --------------------
 
-    static PyObject* _new_CompositionProjectedShadowCasterCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionProjectedShadowCasterCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>::type_name);
@@ -10485,7 +10485,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionProjectedShadowReceiver class --------------------
 
-    static PyObject* _new_CompositionProjectedShadowReceiver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionProjectedShadowReceiver(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>::type_name);
@@ -10608,7 +10608,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionProjectedShadowReceiverUnorderedCollection class --------------------
 
-    static PyObject* _new_CompositionProjectedShadowReceiverUnorderedCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionProjectedShadowReceiverUnorderedCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>::type_name);
@@ -10844,7 +10844,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionPropertySet class --------------------
 
-    static PyObject* _new_CompositionPropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionPropertySet(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionPropertySet>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionPropertySet>::type_name);
@@ -11630,7 +11630,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionRadialGradientBrush class --------------------
 
-    static PyObject* _new_CompositionRadialGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionRadialGradientBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>::type_name);
@@ -11849,7 +11849,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionRectangleGeometry class --------------------
 
-    static PyObject* _new_CompositionRectangleGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionRectangleGeometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionRectangleGeometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionRectangleGeometry>::type_name);
@@ -12020,7 +12020,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionRoundedRectangleGeometry class --------------------
 
-    static PyObject* _new_CompositionRoundedRectangleGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionRoundedRectangleGeometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>::type_name);
@@ -12239,7 +12239,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionScopedBatch class --------------------
 
-    static PyObject* _new_CompositionScopedBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionScopedBatch(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionScopedBatch>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionScopedBatch>::type_name);
@@ -12492,7 +12492,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionShadow class --------------------
 
-    static PyObject* _new_CompositionShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionShadow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionShadow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionShadow>::type_name);
@@ -12567,7 +12567,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionShape class --------------------
 
-    static PyObject* _new_CompositionShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionShape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionShape>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionShape>::type_name);
@@ -12930,7 +12930,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionShapeCollection class --------------------
 
-    static PyObject* _new_CompositionShapeCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionShapeCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionShapeCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionShapeCollection>::type_name);
@@ -13468,9 +13468,9 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Composition::CompositionShape> items(length, empty_instance<winrt::Windows::UI::Composition::CompositionShape>::get());
+            winrt::com_array<winrt::Windows::UI::Composition::CompositionShape> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Composition::CompositionShape>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -13553,7 +13553,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionSpriteShape class --------------------
 
-    static PyObject* _new_CompositionSpriteShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionSpriteShape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionSpriteShape>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionSpriteShape>::type_name);
@@ -14176,7 +14176,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionStrokeDashArray class --------------------
 
-    static PyObject* _new_CompositionStrokeDashArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionStrokeDashArray(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionStrokeDashArray>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionStrokeDashArray>::type_name);
@@ -14714,9 +14714,9 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            winrt::com_array<float> items(length, empty_instance<float>::get());
+            winrt::com_array<float> items(static_cast<uint32_t>(length), empty_instance<float>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -14799,7 +14799,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionSurfaceBrush class --------------------
 
-    static PyObject* _new_CompositionSurfaceBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionSurfaceBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionSurfaceBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionSurfaceBrush>::type_name);
@@ -15498,7 +15498,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionTarget class --------------------
 
-    static PyObject* _new_CompositionTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionTarget>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionTarget>::type_name);
@@ -15621,7 +15621,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionTransform class --------------------
 
-    static PyObject* _new_CompositionTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionTransform>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionTransform>::type_name);
@@ -15696,7 +15696,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionViewBox class --------------------
 
-    static PyObject* _new_CompositionViewBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionViewBox(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionViewBox>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionViewBox>::type_name);
@@ -16011,7 +16011,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionVirtualDrawingSurface class --------------------
 
-    static PyObject* _new_CompositionVirtualDrawingSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionVirtualDrawingSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>::type_name);
@@ -16119,7 +16119,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CompositionVisualSurface class --------------------
 
-    static PyObject* _new_CompositionVisualSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionVisualSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionVisualSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionVisualSurface>::type_name);
@@ -18838,7 +18838,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ContainerVisual class --------------------
 
-    static PyObject* _new_ContainerVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContainerVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ContainerVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ContainerVisual>::type_name);
@@ -18933,7 +18933,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- CubicBezierEasingFunction class --------------------
 
-    static PyObject* _new_CubicBezierEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CubicBezierEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::CubicBezierEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CubicBezierEasingFunction>::type_name);
@@ -19048,7 +19048,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- DelegatedInkTrailVisual class --------------------
 
-    static PyObject* _new_DelegatedInkTrailVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DelegatedInkTrailVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>::type_name);
@@ -19319,7 +19319,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- DistantLight class --------------------
 
-    static PyObject* _new_DistantLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DistantLight(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::DistantLight>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::DistantLight>::type_name);
@@ -19586,7 +19586,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- DropShadow class --------------------
 
-    static PyObject* _new_DropShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DropShadow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::DropShadow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::DropShadow>::type_name);
@@ -19949,7 +19949,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ElasticEasingFunction class --------------------
 
-    static PyObject* _new_ElasticEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ElasticEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ElasticEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ElasticEasingFunction>::type_name);
@@ -20084,7 +20084,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ExponentialEasingFunction class --------------------
 
-    static PyObject* _new_ExponentialEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ExponentialEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ExponentialEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ExponentialEasingFunction>::type_name);
@@ -20199,7 +20199,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ExpressionAnimation class --------------------
 
-    static PyObject* _new_ExpressionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ExpressionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ExpressionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ExpressionAnimation>::type_name);
@@ -20322,7 +20322,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ImplicitAnimationCollection class --------------------
 
-    static PyObject* _new_ImplicitAnimationCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImplicitAnimationCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ImplicitAnimationCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ImplicitAnimationCollection>::type_name);
@@ -20735,7 +20735,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- InitialValueExpressionCollection class --------------------
 
-    static PyObject* _new_InitialValueExpressionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InitialValueExpressionCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::InitialValueExpressionCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::InitialValueExpressionCollection>::type_name);
@@ -21148,7 +21148,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- InsetClip class --------------------
 
-    static PyObject* _new_InsetClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InsetClip(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::InsetClip>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::InsetClip>::type_name);
@@ -21415,7 +21415,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- KeyFrameAnimation class --------------------
 
-    static PyObject* _new_KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::KeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::KeyFrameAnimation>::type_name);
@@ -21903,7 +21903,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- LayerVisual class --------------------
 
-    static PyObject* _new_LayerVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LayerVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::LayerVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::LayerVisual>::type_name);
@@ -22074,7 +22074,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- LinearEasingFunction class --------------------
 
-    static PyObject* _new_LinearEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LinearEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::LinearEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::LinearEasingFunction>::type_name);
@@ -22149,7 +22149,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::NaturalMotionAnimation>::type_name);
@@ -22368,7 +22368,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- PathKeyFrameAnimation class --------------------
 
-    static PyObject* _new_PathKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PathKeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::PathKeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::PathKeyFrameAnimation>::type_name);
@@ -22500,7 +22500,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- PointLight class --------------------
 
-    static PyObject* _new_PointLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointLight(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::PointLight>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::PointLight>::type_name);
@@ -23007,7 +23007,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- PowerEasingFunction class --------------------
 
-    static PyObject* _new_PowerEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PowerEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::PowerEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::PowerEasingFunction>::type_name);
@@ -23122,7 +23122,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- QuaternionKeyFrameAnimation class --------------------
 
-    static PyObject* _new_QuaternionKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_QuaternionKeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>::type_name);
@@ -23254,7 +23254,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- RectangleClip class --------------------
 
-    static PyObject* _new_RectangleClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RectangleClip(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::RectangleClip>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::RectangleClip>::type_name);
@@ -23713,7 +23713,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- RedirectVisual class --------------------
 
-    static PyObject* _new_RedirectVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RedirectVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::RedirectVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::RedirectVisual>::type_name);
@@ -23836,7 +23836,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- RenderingDeviceReplacedEventArgs class --------------------
 
-    static PyObject* _new_RenderingDeviceReplacedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RenderingDeviceReplacedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>::type_name);
@@ -23931,7 +23931,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ScalarKeyFrameAnimation class --------------------
 
-    static PyObject* _new_ScalarKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ScalarKeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>::type_name);
@@ -24063,7 +24063,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ScalarNaturalMotionAnimation class --------------------
 
-    static PyObject* _new_ScalarNaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ScalarNaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>::type_name);
@@ -24282,7 +24282,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ShapeVisual class --------------------
 
-    static PyObject* _new_ShapeVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ShapeVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ShapeVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ShapeVisual>::type_name);
@@ -24425,7 +24425,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- SineEasingFunction class --------------------
 
-    static PyObject* _new_SineEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SineEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::SineEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SineEasingFunction>::type_name);
@@ -24520,7 +24520,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- SpotLight class --------------------
 
-    static PyObject* _new_SpotLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpotLight(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::SpotLight>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpotLight>::type_name);
@@ -25363,7 +25363,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- SpringScalarNaturalMotionAnimation class --------------------
 
-    static PyObject* _new_SpringScalarNaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpringScalarNaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>::type_name);
@@ -25534,7 +25534,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- SpringVector2NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_SpringVector2NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpringVector2NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>::type_name);
@@ -25705,7 +25705,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- SpringVector3NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_SpringVector3NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpringVector3NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>::type_name);
@@ -25876,7 +25876,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- SpriteVisual class --------------------
 
-    static PyObject* _new_SpriteVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpriteVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::SpriteVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpriteVisual>::type_name);
@@ -26047,7 +26047,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- StepEasingFunction class --------------------
 
-    static PyObject* _new_StepEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StepEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::StepEasingFunction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::StepEasingFunction>::type_name);
@@ -26362,7 +26362,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- Vector2KeyFrameAnimation class --------------------
 
-    static PyObject* _new_Vector2KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Vector2KeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>::type_name);
@@ -26494,7 +26494,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- Vector2NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_Vector2NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Vector2NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>::type_name);
@@ -26713,7 +26713,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- Vector3KeyFrameAnimation class --------------------
 
-    static PyObject* _new_Vector3KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Vector3KeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>::type_name);
@@ -26845,7 +26845,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- Vector3NaturalMotionAnimation class --------------------
 
-    static PyObject* _new_Vector3NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Vector3NaturalMotionAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>::type_name);
@@ -27064,7 +27064,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- Vector4KeyFrameAnimation class --------------------
 
-    static PyObject* _new_Vector4KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Vector4KeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>::type_name);
@@ -27196,7 +27196,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- Visual class --------------------
 
-    static PyObject* _new_Visual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Visual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Visual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Visual>::type_name);
@@ -28299,7 +28299,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- VisualCollection class --------------------
 
-    static PyObject* _new_VisualCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::VisualCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::VisualCollection>::type_name);
@@ -28636,7 +28636,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- VisualUnorderedCollection class --------------------
 
-    static PyObject* _new_VisualUnorderedCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualUnorderedCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::VisualUnorderedCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::VisualUnorderedCollection>::type_name);
@@ -28872,7 +28872,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- IAnimationObject interface --------------------
 
-    static PyObject* _new_IAnimationObject(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAnimationObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::IAnimationObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IAnimationObject>::type_name);
@@ -28981,7 +28981,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ICompositionAnimationBase interface --------------------
 
-    static PyObject* _new_ICompositionAnimationBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICompositionAnimationBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::type_name);
@@ -29056,7 +29056,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ICompositionSupportsSystemBackdrop interface --------------------
 
-    static PyObject* _new_ICompositionSupportsSystemBackdrop(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICompositionSupportsSystemBackdrop(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::type_name);
@@ -29179,7 +29179,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ICompositionSurface interface --------------------
 
-    static PyObject* _new_ICompositionSurface(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICompositionSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSurface>::type_name);
@@ -29254,7 +29254,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- ICompositionSurfaceFacade interface --------------------
 
-    static PyObject* _new_ICompositionSurfaceFacade(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICompositionSurfaceFacade(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::type_name);
@@ -29359,7 +29359,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- IVisualElement interface --------------------
 
-    static PyObject* _new_IVisualElement(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVisualElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::IVisualElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IVisualElement>::type_name);
@@ -29434,7 +29434,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- IVisualElement2 interface --------------------
 
-    static PyObject* _new_IVisualElement2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVisualElement2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::IVisualElement2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IVisualElement2>::type_name);
@@ -29539,7 +29539,7 @@ namespace py::cpp::Windows::UI::Composition
 
     // ----- InkTrailPoint struct --------------------
 
-    PyObject* _new_InkTrailPoint(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_InkTrailPoint(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

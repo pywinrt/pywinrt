@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Printers
 {
     // ----- IppAttributeError class --------------------
 
-    static PyObject* _new_IppAttributeError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IppAttributeError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::IppAttributeError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppAttributeError>::type_name);
@@ -153,7 +153,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- IppAttributeValue class --------------------
 
-    static PyObject* _new_IppAttributeValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IppAttributeValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::IppAttributeValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppAttributeValue>::type_name);
@@ -2170,7 +2170,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- IppPrintDevice class --------------------
 
-    static PyObject* _new_IppPrintDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IppPrintDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::IppPrintDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppPrintDevice>::type_name);
@@ -2822,7 +2822,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- IppSetAttributesResult class --------------------
 
-    static PyObject* _new_IppSetAttributesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IppSetAttributesResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>::type_name);
@@ -3270,7 +3270,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- PdlPassthroughProvider class --------------------
 
-    static PyObject* _new_PdlPassthroughProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PdlPassthroughProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>::type_name);
@@ -3435,7 +3435,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- PdlPassthroughTarget class --------------------
 
-    static PyObject* _new_PdlPassthroughTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PdlPassthroughTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>::type_name);
@@ -3644,7 +3644,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- Print3DDevice class --------------------
 
-    static PyObject* _new_Print3DDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Print3DDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Print3DDevice>::type_name);
@@ -3801,7 +3801,7 @@ namespace py::cpp::Windows::Devices::Printers
 
     // ----- PrintSchema class --------------------
 
-    static PyObject* _new_PrintSchema(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintSchema(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::PrintSchema>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::PrintSchema>::type_name);

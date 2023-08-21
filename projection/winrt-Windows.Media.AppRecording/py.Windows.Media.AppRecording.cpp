@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::AppRecording
 {
     // ----- AppRecordingManager class --------------------
 
-    static PyObject* _new_AppRecordingManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppRecordingManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>::type_name);
@@ -264,7 +264,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     // ----- AppRecordingResult class --------------------
 
-    static PyObject* _new_AppRecordingResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppRecordingResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>::type_name);
@@ -419,7 +419,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     // ----- AppRecordingSaveScreenshotResult class --------------------
 
-    static PyObject* _new_AppRecordingSaveScreenshotResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppRecordingSaveScreenshotResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>::type_name);
@@ -554,7 +554,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     // ----- AppRecordingSavedScreenshotInfo class --------------------
 
-    static PyObject* _new_AppRecordingSavedScreenshotInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppRecordingSavedScreenshotInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>::type_name);
@@ -669,7 +669,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     // ----- AppRecordingStatus class --------------------
 
-    static PyObject* _new_AppRecordingStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppRecordingStatus(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>::type_name);
@@ -824,7 +824,7 @@ namespace py::cpp::Windows::Media::AppRecording
 
     // ----- AppRecordingStatusDetails class --------------------
 
-    static PyObject* _new_AppRecordingStatusDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppRecordingStatusDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>::type_name);

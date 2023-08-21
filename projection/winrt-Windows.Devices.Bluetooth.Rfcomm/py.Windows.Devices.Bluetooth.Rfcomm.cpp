@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 {
     // ----- RfcommDeviceService class --------------------
 
-    static PyObject* _new_RfcommDeviceService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommDeviceService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>::type_name);
@@ -528,7 +528,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     // ----- RfcommDeviceServicesResult class --------------------
 
-    static PyObject* _new_RfcommDeviceServicesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommDeviceServicesResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>::type_name);
@@ -643,7 +643,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     // ----- RfcommServiceId class --------------------
 
-    static PyObject* _new_RfcommServiceId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommServiceId(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>::type_name);
@@ -1002,7 +1002,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     // ----- RfcommServiceProvider class --------------------
 
-    static PyObject* _new_RfcommServiceProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommServiceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>::type_name);

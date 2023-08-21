@@ -628,7 +628,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- CertificateChain class --------------------
 
-    static PyObject* _new_CertificateChain(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CertificateChain(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChain>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChain>::type_name);
@@ -785,7 +785,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- CertificateEnrollmentManager class --------------------
 
-    static PyObject* _new_CertificateEnrollmentManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CertificateEnrollmentManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager>::type_name);
@@ -3190,7 +3190,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- CertificateStore class --------------------
 
-    static PyObject* _new_CertificateStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CertificateStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStore>::type_name);
@@ -3351,7 +3351,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- CertificateStores class --------------------
 
-    static PyObject* _new_CertificateStores(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CertificateStores(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStores>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStores>::type_name);
@@ -4770,7 +4770,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- CmsTimestampInfo class --------------------
 
-    static PyObject* _new_CmsTimestampInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CmsTimestampInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo>::type_name);
@@ -4905,7 +4905,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- KeyAlgorithmNames class --------------------
 
-    static PyObject* _new_KeyAlgorithmNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyAlgorithmNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames>::type_name);
@@ -5159,7 +5159,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- KeyAttestationHelper class --------------------
 
-    static PyObject* _new_KeyAttestationHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyAttestationHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper>::type_name);
@@ -5278,7 +5278,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- KeyStorageProviderNames class --------------------
 
-    static PyObject* _new_KeyStorageProviderNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyStorageProviderNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames>::type_name);
@@ -5845,7 +5845,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- StandardCertificateStoreNames class --------------------
 
-    static PyObject* _new_StandardCertificateStoreNames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StandardCertificateStoreNames(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames>::type_name);
@@ -6316,7 +6316,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- UserCertificateEnrollmentManager class --------------------
 
-    static PyObject* _new_UserCertificateEnrollmentManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserCertificateEnrollmentManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager>::type_name);
@@ -6541,7 +6541,7 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
 
     // ----- UserCertificateStore class --------------------
 
-    static PyObject* _new_UserCertificateStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserCertificateStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore>::type_name);

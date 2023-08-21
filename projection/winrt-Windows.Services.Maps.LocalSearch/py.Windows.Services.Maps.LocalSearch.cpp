@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 {
     // ----- LocalCategories class --------------------
 
-    static PyObject* _new_LocalCategories(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LocalCategories(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>::type_name);
@@ -222,7 +222,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     // ----- LocalLocation class --------------------
 
-    static PyObject* _new_LocalLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LocalLocation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>::type_name);
@@ -497,7 +497,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     // ----- LocalLocationFinder class --------------------
 
-    static PyObject* _new_LocalLocationFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LocalLocationFinder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>::type_name);
@@ -566,7 +566,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     // ----- LocalLocationFinderResult class --------------------
 
-    static PyObject* _new_LocalLocationFinderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LocalLocationFinderResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>::type_name);
@@ -681,7 +681,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     // ----- LocalLocationHoursOfOperationItem class --------------------
 
-    static PyObject* _new_LocalLocationHoursOfOperationItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LocalLocationHoursOfOperationItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>::type_name);
@@ -816,7 +816,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     // ----- LocalLocationRatingInfo class --------------------
 
-    static PyObject* _new_LocalLocationRatingInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LocalLocationRatingInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>::type_name);
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
 
     // ----- PlaceInfoHelper class --------------------
 
-    static PyObject* _new_PlaceInfoHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlaceInfoHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>::type_name);

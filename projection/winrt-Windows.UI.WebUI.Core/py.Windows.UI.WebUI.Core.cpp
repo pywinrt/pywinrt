@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 {
     // ----- WebUICommandBar class --------------------
 
-    static PyObject* _new_WebUICommandBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebUICommandBar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>::type_name);
@@ -1328,7 +1328,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     // ----- WebUICommandBarItemInvokedEventArgs class --------------------
 
-    static PyObject* _new_WebUICommandBarItemInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebUICommandBarItemInvokedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>::type_name);
@@ -1423,7 +1423,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     // ----- WebUICommandBarSizeChangedEventArgs class --------------------
 
-    static PyObject* _new_WebUICommandBarSizeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebUICommandBarSizeChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>::type_name);
@@ -1678,7 +1678,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     // ----- IWebUICommandBarElement interface --------------------
 
-    static PyObject* _new_IWebUICommandBarElement(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebUICommandBarElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::type_name);
@@ -1753,7 +1753,7 @@ namespace py::cpp::Windows::UI::WebUI::Core
 
     // ----- IWebUICommandBarIcon interface --------------------
 
-    static PyObject* _new_IWebUICommandBarIcon(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebUICommandBarIcon(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::type_name);

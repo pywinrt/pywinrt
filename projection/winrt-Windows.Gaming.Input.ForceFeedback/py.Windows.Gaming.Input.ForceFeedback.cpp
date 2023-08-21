@@ -598,7 +598,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     // ----- ForceFeedbackMotor class --------------------
 
-    static PyObject* _new_ForceFeedbackMotor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ForceFeedbackMotor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor>::type_name);
@@ -1662,7 +1662,7 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
 
     // ----- IForceFeedbackEffect interface --------------------
 
-    static PyObject* _new_IForceFeedbackEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IForceFeedbackEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect>::type_name);

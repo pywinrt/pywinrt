@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 {
     // ----- ActivationSignalDetectionConfiguration class --------------------
 
-    static PyObject* _new_ActivationSignalDetectionConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivationSignalDetectionConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>::type_name);
@@ -931,7 +931,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ActivationSignalDetectionConfigurationCreationResult class --------------------
 
-    static PyObject* _new_ActivationSignalDetectionConfigurationCreationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivationSignalDetectionConfigurationCreationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>::type_name);
@@ -1046,7 +1046,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ActivationSignalDetector class --------------------
 
-    static PyObject* _new_ActivationSignalDetector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivationSignalDetector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>::type_name);
@@ -1785,7 +1785,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ConversationalAgentDetectorManager class --------------------
 
-    static PyObject* _new_ConversationalAgentDetectorManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConversationalAgentDetectorManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>::type_name);
@@ -2088,7 +2088,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ConversationalAgentSession class --------------------
 
-    static PyObject* _new_ConversationalAgentSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConversationalAgentSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>::type_name);
@@ -3376,7 +3376,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ConversationalAgentSessionInterruptedEventArgs class --------------------
 
-    static PyObject* _new_ConversationalAgentSessionInterruptedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConversationalAgentSessionInterruptedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>::type_name);
@@ -3451,7 +3451,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ConversationalAgentSignal class --------------------
 
-    static PyObject* _new_ConversationalAgentSignal(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConversationalAgentSignal(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>::type_name);
@@ -3854,7 +3854,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ConversationalAgentSignalDetectedEventArgs class --------------------
 
-    static PyObject* _new_ConversationalAgentSignalDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConversationalAgentSignalDetectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>::type_name);
@@ -3929,7 +3929,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- ConversationalAgentSystemStateChangedEventArgs class --------------------
 
-    static PyObject* _new_ConversationalAgentSystemStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConversationalAgentSystemStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>::type_name);
@@ -4024,7 +4024,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- DetectionConfigurationAvailabilityChangedEventArgs class --------------------
 
-    static PyObject* _new_DetectionConfigurationAvailabilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DetectionConfigurationAvailabilityChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>::type_name);
@@ -4119,7 +4119,7 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
 
     // ----- DetectionConfigurationAvailabilityInfo class --------------------
 
-    static PyObject* _new_DetectionConfigurationAvailabilityInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DetectionConfigurationAvailabilityInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>::type_name);

@@ -1584,7 +1584,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ColorKeyFrame class --------------------
 
-    static PyObject* _new_ColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ColorKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::type_name);
@@ -2375,9 +2375,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2731,7 +2731,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ConnectedAnimation class --------------------
 
-    static PyObject* _new_ConnectedAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectedAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>::type_name);
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ConnectedAnimationConfiguration class --------------------
 
-    static PyObject* _new_ConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectedAnimationConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>::type_name);
@@ -3140,7 +3140,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ConnectedAnimationService class --------------------
 
-    static PyObject* _new_ConnectedAnimationService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ConnectedAnimationService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>::type_name);
@@ -5346,7 +5346,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- DoubleKeyFrame class --------------------
 
-    static PyObject* _new_DoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DoubleKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::type_name);
@@ -6137,9 +6137,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -8158,7 +8158,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- EasingFunctionBase class --------------------
 
-    static PyObject* _new_EasingFunctionBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EasingFunctionBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>::type_name);
@@ -10393,7 +10393,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- KeyTimeHelper class --------------------
 
-    static PyObject* _new_KeyTimeHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyTimeHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>::type_name);
@@ -10976,7 +10976,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- NavigationTransitionInfo class --------------------
 
-    static PyObject* _new_NavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NavigationTransitionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>::type_name);
@@ -11319,7 +11319,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- ObjectKeyFrame class --------------------
 
-    static PyObject* _new_ObjectKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ObjectKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::type_name);
@@ -12110,9 +12110,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -13042,7 +13042,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- PointKeyFrame class --------------------
 
-    static PyObject* _new_PointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointKeyFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::type_name);
@@ -13833,9 +13833,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -15620,7 +15620,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- RepeatBehaviorHelper class --------------------
 
-    static PyObject* _new_RepeatBehaviorHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RepeatBehaviorHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>::type_name);
@@ -20332,7 +20332,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- Timeline class --------------------
 
-    static PyObject* _new_Timeline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Timeline(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::type_name);
@@ -21482,9 +21482,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::Timeline> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::Timeline> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -21567,7 +21567,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- Transition class --------------------
 
-    static PyObject* _new_Transition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Transition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>::type_name);
@@ -22202,9 +22202,9 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::Transition> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Animation::Transition>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Animation::Transition> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Animation::Transition>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -22287,7 +22287,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- KeyTime struct --------------------
 
-    PyObject* _new_KeyTime(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_KeyTime(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -22396,7 +22396,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
 
     // ----- RepeatBehavior struct --------------------
 
-    PyObject* _new_RepeatBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_RepeatBehavior(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

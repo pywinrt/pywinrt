@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 {
     // ----- BitmapBuffer class --------------------
 
-    static PyObject* _new_BitmapBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapBuffer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>::type_name);
@@ -228,7 +228,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapCodecInformation class --------------------
 
-    static PyObject* _new_BitmapCodecInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapCodecInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>::type_name);
@@ -383,7 +383,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapDecoder class --------------------
 
-    static PyObject* _new_BitmapDecoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapDecoder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>::type_name);
@@ -1202,7 +1202,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapEncoder class --------------------
 
-    static PyObject* _new_BitmapEncoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapEncoder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>::type_name);
@@ -1963,7 +1963,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapFrame class --------------------
 
-    static PyObject* _new_BitmapFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapFrame>::type_name);
@@ -2377,7 +2377,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapProperties class --------------------
 
-    static PyObject* _new_BitmapProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapProperties>::type_name);
@@ -2516,7 +2516,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapPropertiesView class --------------------
 
-    static PyObject* _new_BitmapPropertiesView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapPropertiesView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>::type_name);
@@ -3583,7 +3583,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- ImageStream class --------------------
 
-    static PyObject* _new_ImageStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageStream(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::ImageStream>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::ImageStream>::type_name);
@@ -4062,7 +4062,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- PixelDataProvider class --------------------
 
-    static PyObject* _new_PixelDataProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PixelDataProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>::type_name);
@@ -4895,7 +4895,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- IBitmapFrame interface --------------------
 
-    static PyObject* _new_IBitmapFrame(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBitmapFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::type_name);
@@ -5234,7 +5234,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- IBitmapFrameWithSoftwareBitmap interface --------------------
 
-    static PyObject* _new_IBitmapFrameWithSoftwareBitmap(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBitmapFrameWithSoftwareBitmap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::type_name);
@@ -5648,7 +5648,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- IBitmapPropertiesView interface --------------------
 
-    static PyObject* _new_IBitmapPropertiesView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBitmapPropertiesView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::type_name);
@@ -5755,7 +5755,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapBounds struct --------------------
 
-    PyObject* _new_BitmapBounds(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BitmapBounds(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -5969,7 +5969,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapPlaneDescription struct --------------------
 
-    PyObject* _new_BitmapPlaneDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BitmapPlaneDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -6183,7 +6183,7 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapSize struct --------------------
 
-    PyObject* _new_BitmapSize(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BitmapSize(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

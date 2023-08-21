@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Shell
 {
     // ----- AdaptiveCardBuilder class --------------------
 
-    static PyObject* _new_AdaptiveCardBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveCardBuilder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>::type_name);
@@ -74,7 +74,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- FocusSession class --------------------
 
-    static PyObject* _new_FocusSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FocusSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::FocusSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::FocusSession>::type_name);
@@ -200,7 +200,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- FocusSessionManager class --------------------
 
-    static PyObject* _new_FocusSessionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FocusSessionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::FocusSessionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::FocusSessionManager>::type_name);
@@ -726,7 +726,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- ShareWindowCommandEventArgs class --------------------
 
-    static PyObject* _new_ShareWindowCommandEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ShareWindowCommandEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>::type_name);
@@ -869,7 +869,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- ShareWindowCommandSource class --------------------
 
-    static PyObject* _new_ShareWindowCommandSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ShareWindowCommandSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>::type_name);
@@ -1157,7 +1157,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- TaskbarManager class --------------------
 
-    static PyObject* _new_TaskbarManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TaskbarManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::TaskbarManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::TaskbarManager>::type_name);
@@ -1890,7 +1890,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabCloseRequestedEventArgs class --------------------
 
-    static PyObject* _new_WindowTabCloseRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabCloseRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>::type_name);
@@ -1985,7 +1985,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabCollection class --------------------
 
-    static PyObject* _new_WindowTabCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabCollection>::type_name);
@@ -2556,9 +2556,9 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Shell::WindowTab> items(length, empty_instance<winrt::Windows::UI::Shell::WindowTab>::get());
+            winrt::com_array<winrt::Windows::UI::Shell::WindowTab> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Shell::WindowTab>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2835,7 +2835,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabIcon class --------------------
 
-    static PyObject* _new_WindowTabIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabIcon(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabIcon>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabIcon>::type_name);
@@ -2997,7 +2997,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabManager class --------------------
 
-    static PyObject* _new_WindowTabManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabManager>::type_name);
@@ -3397,7 +3397,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabSwitchRequestedEventArgs class --------------------
 
-    static PyObject* _new_WindowTabSwitchRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabSwitchRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>::type_name);
@@ -3492,7 +3492,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabTearOutRequestedEventArgs class --------------------
 
-    static PyObject* _new_WindowTabTearOutRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabTearOutRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>::type_name);
@@ -3665,7 +3665,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- WindowTabThumbnailRequestedEventArgs class --------------------
 
-    static PyObject* _new_WindowTabThumbnailRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowTabThumbnailRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>::type_name);
@@ -3878,7 +3878,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- IAdaptiveCard interface --------------------
 
-    static PyObject* _new_IAdaptiveCard(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAdaptiveCard(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCard>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCard>::type_name);
@@ -3983,7 +3983,7 @@ namespace py::cpp::Windows::UI::Shell
 
     // ----- IAdaptiveCardBuilderStatics interface --------------------
 
-    static PyObject* _new_IAdaptiveCardBuilderStatics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAdaptiveCardBuilderStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::type_name);

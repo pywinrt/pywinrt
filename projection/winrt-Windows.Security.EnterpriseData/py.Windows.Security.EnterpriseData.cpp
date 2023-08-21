@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 {
     // ----- BufferProtectUnprotectResult class --------------------
 
-    static PyObject* _new_BufferProtectUnprotectResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BufferProtectUnprotectResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>::type_name);
@@ -123,7 +123,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- DataProtectionInfo class --------------------
 
-    static PyObject* _new_DataProtectionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DataProtectionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>::type_name);
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- DataProtectionManager class --------------------
 
-    static PyObject* _new_DataProtectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DataProtectionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::DataProtectionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::DataProtectionManager>::type_name);
@@ -468,7 +468,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- FileProtectionInfo class --------------------
 
-    static PyObject* _new_FileProtectionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileProtectionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>::type_name);
@@ -623,7 +623,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- FileProtectionManager class --------------------
 
-    static PyObject* _new_FileProtectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileProtectionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::FileProtectionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::FileProtectionManager>::type_name);
@@ -1003,7 +1003,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- FileRevocationManager class --------------------
 
-    static PyObject* _new_FileRevocationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileRevocationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::FileRevocationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::FileRevocationManager>::type_name);
@@ -1315,7 +1315,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectedAccessResumedEventArgs class --------------------
 
-    static PyObject* _new_ProtectedAccessResumedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectedAccessResumedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>::type_name);
@@ -1410,7 +1410,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectedAccessSuspendingEventArgs class --------------------
 
-    static PyObject* _new_ProtectedAccessSuspendingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectedAccessSuspendingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>::type_name);
@@ -1555,7 +1555,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectedContainerExportResult class --------------------
 
-    static PyObject* _new_ProtectedContainerExportResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectedContainerExportResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>::type_name);
@@ -1670,7 +1670,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectedContainerImportResult class --------------------
 
-    static PyObject* _new_ProtectedContainerImportResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectedContainerImportResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>::type_name);
@@ -1785,7 +1785,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectedContentRevokedEventArgs class --------------------
 
-    static PyObject* _new_ProtectedContentRevokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectedContentRevokedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>::type_name);
@@ -1880,7 +1880,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectedFileCreateResult class --------------------
 
-    static PyObject* _new_ProtectedFileCreateResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectedFileCreateResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>::type_name);
@@ -2325,7 +2325,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ProtectionPolicyManager class --------------------
 
-    static PyObject* _new_ProtectionPolicyManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtectionPolicyManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>::type_name);
@@ -3639,7 +3639,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
 
     // ----- ThreadNetworkContext class --------------------
 
-    static PyObject* _new_ThreadNetworkContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ThreadNetworkContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>::type_name);

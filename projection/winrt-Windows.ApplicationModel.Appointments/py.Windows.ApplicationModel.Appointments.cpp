@@ -1281,7 +1281,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentCalendar class --------------------
 
-    static PyObject* _new_AppointmentCalendar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentCalendar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendar>::type_name);
@@ -2730,7 +2730,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentCalendarSyncManager class --------------------
 
-    static PyObject* _new_AppointmentCalendarSyncManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentCalendarSyncManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentCalendarSyncManager>::type_name);
@@ -3024,7 +3024,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentConflictResult class --------------------
 
-    static PyObject* _new_AppointmentConflictResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentConflictResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentConflictResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentConflictResult>::type_name);
@@ -3139,7 +3139,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentException class --------------------
 
-    static PyObject* _new_AppointmentException(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentException(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentException>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentException>::type_name);
@@ -3563,7 +3563,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentManager class --------------------
 
-    static PyObject* _new_AppointmentManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentManager>::type_name);
@@ -3993,7 +3993,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentManagerForUser class --------------------
 
-    static PyObject* _new_AppointmentManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentManagerForUser>::type_name);
@@ -4645,7 +4645,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentProperties class --------------------
 
-    static PyObject* _new_AppointmentProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentProperties>::type_name);
@@ -5788,7 +5788,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStore class --------------------
 
-    static PyObject* _new_AppointmentStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStore>::type_name);
@@ -6565,7 +6565,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStoreChange class --------------------
 
-    static PyObject* _new_AppointmentStoreChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStoreChange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChange>::type_name);
@@ -6700,7 +6700,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStoreChangeReader class --------------------
 
-    static PyObject* _new_AppointmentStoreChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStoreChangeReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeReader>::type_name);
@@ -6869,7 +6869,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStoreChangeTracker class --------------------
 
-    static PyObject* _new_AppointmentStoreChangeTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStoreChangeTracker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangeTracker>::type_name);
@@ -7056,7 +7056,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStoreChangedDeferral class --------------------
 
-    static PyObject* _new_AppointmentStoreChangedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStoreChangedDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedDeferral>::type_name);
@@ -7162,7 +7162,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStoreChangedEventArgs class --------------------
 
-    static PyObject* _new_AppointmentStoreChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStoreChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreChangedEventArgs>::type_name);
@@ -7267,7 +7267,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- AppointmentStoreNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_AppointmentStoreNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppointmentStoreNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentStoreNotificationTriggerDetails>::type_name);
@@ -7575,7 +7575,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     // ----- IAppointmentParticipant interface --------------------
 
-    static PyObject* _new_IAppointmentParticipant(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAppointmentParticipant(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::IAppointmentParticipant>::type_name);

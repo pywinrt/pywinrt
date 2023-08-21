@@ -516,7 +516,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- DepthCorrelatedCoordinateMapper class --------------------
 
-    static PyObject* _new_DepthCorrelatedCoordinateMapper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DepthCorrelatedCoordinateMapper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>::type_name);
@@ -782,7 +782,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameControlCapabilities class --------------------
 
-    static PyObject* _new_FrameControlCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameControlCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>::type_name);
@@ -1222,7 +1222,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameExposureCapabilities class --------------------
 
-    static PyObject* _new_FrameExposureCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameExposureCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>::type_name);
@@ -1377,7 +1377,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameExposureCompensationCapabilities class --------------------
 
-    static PyObject* _new_FrameExposureCompensationCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameExposureCompensationCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>::type_name);
@@ -1532,7 +1532,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameExposureCompensationControl class --------------------
 
-    static PyObject* _new_FrameExposureCompensationControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameExposureCompensationControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>::type_name);
@@ -1655,7 +1655,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameExposureControl class --------------------
 
-    static PyObject* _new_FrameExposureControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameExposureControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>::type_name);
@@ -1826,7 +1826,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameFlashCapabilities class --------------------
 
-    static PyObject* _new_FrameFlashCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameFlashCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>::type_name);
@@ -1961,7 +1961,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameFlashControl class --------------------
 
-    static PyObject* _new_FrameFlashControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameFlashControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>::type_name);
@@ -2228,7 +2228,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameFocusCapabilities class --------------------
 
-    static PyObject* _new_FrameFocusCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameFocusCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>::type_name);
@@ -2383,7 +2383,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameFocusControl class --------------------
 
-    static PyObject* _new_FrameFocusControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameFocusControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>::type_name);
@@ -2506,7 +2506,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameIsoSpeedCapabilities class --------------------
 
-    static PyObject* _new_FrameIsoSpeedCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameIsoSpeedCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>::type_name);
@@ -2661,7 +2661,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- FrameIsoSpeedControl class --------------------
 
-    static PyObject* _new_FrameIsoSpeedControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameIsoSpeedControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>::type_name);
@@ -2832,7 +2832,7 @@ namespace py::cpp::Windows::Media::Devices::Core
 
     // ----- VariablePhotoSequenceController class --------------------
 
-    static PyObject* _new_VariablePhotoSequenceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VariablePhotoSequenceController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>::type_name);

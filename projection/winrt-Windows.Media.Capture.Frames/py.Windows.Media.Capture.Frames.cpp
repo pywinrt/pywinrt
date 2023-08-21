@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 {
     // ----- AudioMediaFrame class --------------------
 
-    static PyObject* _new_AudioMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>::type_name);
@@ -153,7 +153,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- BufferMediaFrame class --------------------
 
-    static PyObject* _new_BufferMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BufferMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>::type_name);
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- DepthMediaFrame class --------------------
 
-    static PyObject* _new_DepthMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DepthMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>::type_name);
@@ -476,7 +476,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- DepthMediaFrameFormat class --------------------
 
-    static PyObject* _new_DepthMediaFrameFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DepthMediaFrameFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>::type_name);
@@ -591,7 +591,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- InfraredMediaFrame class --------------------
 
-    static PyObject* _new_InfraredMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InfraredMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>::type_name);
@@ -726,7 +726,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameArrivedEventArgs class --------------------
 
-    static PyObject* _new_MediaFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameArrivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>::type_name);
@@ -801,7 +801,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameFormat class --------------------
 
-    static PyObject* _new_MediaFrameFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>::type_name);
@@ -996,7 +996,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameReader class --------------------
 
-    static PyObject* _new_MediaFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>::type_name);
@@ -1307,7 +1307,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameReference class --------------------
 
-    static PyObject* _new_MediaFrameReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>::type_name);
@@ -1615,7 +1615,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameSource class --------------------
 
-    static PyObject* _new_MediaFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>::type_name);
@@ -1879,7 +1879,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameSourceController class --------------------
 
-    static PyObject* _new_MediaFrameSourceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameSourceController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>::type_name);
@@ -2125,7 +2125,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameSourceGetPropertyResult class --------------------
 
-    static PyObject* _new_MediaFrameSourceGetPropertyResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameSourceGetPropertyResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>::type_name);
@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameSourceGroup class --------------------
 
-    static PyObject* _new_MediaFrameSourceGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameSourceGroup(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>::type_name);
@@ -2467,7 +2467,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MediaFrameSourceInfo class --------------------
 
-    static PyObject* _new_MediaFrameSourceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFrameSourceInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>::type_name);
@@ -2774,7 +2774,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MultiSourceMediaFrameArrivedEventArgs class --------------------
 
-    static PyObject* _new_MultiSourceMediaFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MultiSourceMediaFrameArrivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>::type_name);
@@ -2849,7 +2849,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MultiSourceMediaFrameReader class --------------------
 
-    static PyObject* _new_MultiSourceMediaFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MultiSourceMediaFrameReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>::type_name);
@@ -3160,7 +3160,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- MultiSourceMediaFrameReference class --------------------
 
-    static PyObject* _new_MultiSourceMediaFrameReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MultiSourceMediaFrameReference(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>::type_name);
@@ -3320,7 +3320,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- VideoMediaFrame class --------------------
 
-    static PyObject* _new_VideoMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoMediaFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>::type_name);
@@ -3565,7 +3565,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
 
     // ----- VideoMediaFrameFormat class --------------------
 
-    static PyObject* _new_VideoMediaFrameFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoMediaFrameFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>::type_name);

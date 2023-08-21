@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System
 {
     // ----- AppActivationResult class --------------------
 
-    static PyObject* _new_AppActivationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppActivationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppActivationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppActivationResult>::type_name);
@@ -123,7 +123,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppDiagnosticInfo class --------------------
 
-    static PyObject* _new_AppDiagnosticInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppDiagnosticInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppDiagnosticInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppDiagnosticInfo>::type_name);
@@ -480,7 +480,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppDiagnosticInfoWatcher class --------------------
 
-    static PyObject* _new_AppDiagnosticInfoWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppDiagnosticInfoWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppDiagnosticInfoWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppDiagnosticInfoWatcher>::type_name);
@@ -817,7 +817,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppDiagnosticInfoWatcherEventArgs class --------------------
 
-    static PyObject* _new_AppDiagnosticInfoWatcherEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppDiagnosticInfoWatcherEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>::type_name);
@@ -912,7 +912,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppExecutionStateChangeResult class --------------------
 
-    static PyObject* _new_AppExecutionStateChangeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppExecutionStateChangeResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppExecutionStateChangeResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppExecutionStateChangeResult>::type_name);
@@ -1007,7 +1007,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppMemoryReport class --------------------
 
-    static PyObject* _new_AppMemoryReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppMemoryReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppMemoryReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppMemoryReport>::type_name);
@@ -1182,7 +1182,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppMemoryUsageLimitChangingEventArgs class --------------------
 
-    static PyObject* _new_AppMemoryUsageLimitChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppMemoryUsageLimitChangingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>::type_name);
@@ -1297,7 +1297,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupBackgroundTaskReport class --------------------
 
-    static PyObject* _new_AppResourceGroupBackgroundTaskReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupBackgroundTaskReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>::type_name);
@@ -1452,7 +1452,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupInfo class --------------------
 
-    static PyObject* _new_AppResourceGroupInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupInfo>::type_name);
@@ -1777,7 +1777,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupInfoWatcher class --------------------
 
-    static PyObject* _new_AppResourceGroupInfoWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupInfoWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupInfoWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupInfoWatcher>::type_name);
@@ -2159,7 +2159,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupInfoWatcherEventArgs class --------------------
 
-    static PyObject* _new_AppResourceGroupInfoWatcherEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupInfoWatcherEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>::type_name);
@@ -2274,7 +2274,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupInfoWatcherExecutionStateChangedEventArgs class --------------------
 
-    static PyObject* _new_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>::type_name);
@@ -2389,7 +2389,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupMemoryReport class --------------------
 
-    static PyObject* _new_AppResourceGroupMemoryReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupMemoryReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupMemoryReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupMemoryReport>::type_name);
@@ -2544,7 +2544,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppResourceGroupStateReport class --------------------
 
-    static PyObject* _new_AppResourceGroupStateReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppResourceGroupStateReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppResourceGroupStateReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppResourceGroupStateReport>::type_name);
@@ -2867,7 +2867,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppUriHandlerRegistration class --------------------
 
-    static PyObject* _new_AppUriHandlerRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppUriHandlerRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppUriHandlerRegistration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppUriHandlerRegistration>::type_name);
@@ -3127,7 +3127,7 @@ namespace py::cpp::Windows::System
 
     // ----- AppUriHandlerRegistrationManager class --------------------
 
-    static PyObject* _new_AppUriHandlerRegistrationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppUriHandlerRegistrationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::AppUriHandlerRegistrationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::AppUriHandlerRegistrationManager>::type_name);
@@ -3401,7 +3401,7 @@ namespace py::cpp::Windows::System
 
     // ----- DateTimeSettings class --------------------
 
-    static PyObject* _new_DateTimeSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DateTimeSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::DateTimeSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::DateTimeSettings>::type_name);
@@ -3468,7 +3468,7 @@ namespace py::cpp::Windows::System
 
     // ----- DispatcherQueue class --------------------
 
-    static PyObject* _new_DispatcherQueue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DispatcherQueue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::DispatcherQueue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::DispatcherQueue>::type_name);
@@ -3766,7 +3766,7 @@ namespace py::cpp::Windows::System
 
     // ----- DispatcherQueueController class --------------------
 
-    static PyObject* _new_DispatcherQueueController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DispatcherQueueController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::DispatcherQueueController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::DispatcherQueueController>::type_name);
@@ -3921,7 +3921,7 @@ namespace py::cpp::Windows::System
 
     // ----- DispatcherQueueShutdownStartingEventArgs class --------------------
 
-    static PyObject* _new_DispatcherQueueShutdownStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DispatcherQueueShutdownStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>::type_name);
@@ -4026,7 +4026,7 @@ namespace py::cpp::Windows::System
 
     // ----- DispatcherQueueTimer class --------------------
 
-    static PyObject* _new_DispatcherQueueTimer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DispatcherQueueTimer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::DispatcherQueueTimer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::DispatcherQueueTimer>::type_name);
@@ -4489,7 +4489,7 @@ namespace py::cpp::Windows::System
 
     // ----- KnownUserProperties class --------------------
 
-    static PyObject* _new_KnownUserProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownUserProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::KnownUserProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::KnownUserProperties>::type_name);
@@ -4743,7 +4743,7 @@ namespace py::cpp::Windows::System
 
     // ----- LaunchUriResult class --------------------
 
-    static PyObject* _new_LaunchUriResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LaunchUriResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::LaunchUriResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::LaunchUriResult>::type_name);
@@ -4858,7 +4858,7 @@ namespace py::cpp::Windows::System
 
     // ----- Launcher class --------------------
 
-    static PyObject* _new_Launcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Launcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Launcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Launcher>::type_name);
@@ -6294,7 +6294,7 @@ namespace py::cpp::Windows::System
 
     // ----- LauncherUIOptions class --------------------
 
-    static PyObject* _new_LauncherUIOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LauncherUIOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::LauncherUIOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::LauncherUIOptions>::type_name);
@@ -6513,7 +6513,7 @@ namespace py::cpp::Windows::System
 
     // ----- MemoryManager class --------------------
 
-    static PyObject* _new_MemoryManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MemoryManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::MemoryManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::MemoryManager>::type_name);
@@ -6874,7 +6874,7 @@ namespace py::cpp::Windows::System
 
     // ----- ProcessLauncher class --------------------
 
-    static PyObject* _new_ProcessLauncher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessLauncher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ProcessLauncher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ProcessLauncher>::type_name);
@@ -7252,7 +7252,7 @@ namespace py::cpp::Windows::System
 
     // ----- ProcessLauncherResult class --------------------
 
-    static PyObject* _new_ProcessLauncherResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessLauncherResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ProcessLauncherResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ProcessLauncherResult>::type_name);
@@ -7347,7 +7347,7 @@ namespace py::cpp::Windows::System
 
     // ----- ProcessMemoryReport class --------------------
 
-    static PyObject* _new_ProcessMemoryReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessMemoryReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ProcessMemoryReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ProcessMemoryReport>::type_name);
@@ -7462,7 +7462,7 @@ namespace py::cpp::Windows::System
 
     // ----- ProtocolForResultsOperation class --------------------
 
-    static PyObject* _new_ProtocolForResultsOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProtocolForResultsOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ProtocolForResultsOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ProtocolForResultsOperation>::type_name);
@@ -7570,7 +7570,7 @@ namespace py::cpp::Windows::System
 
     // ----- RemoteLauncher class --------------------
 
-    static PyObject* _new_RemoteLauncher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteLauncher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::RemoteLauncher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteLauncher>::type_name);
@@ -7847,7 +7847,7 @@ namespace py::cpp::Windows::System
 
     // ----- ShutdownManager class --------------------
 
-    static PyObject* _new_ShutdownManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ShutdownManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ShutdownManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ShutdownManager>::type_name);
@@ -8033,7 +8033,7 @@ namespace py::cpp::Windows::System
 
     // ----- TimeZoneSettings class --------------------
 
-    static PyObject* _new_TimeZoneSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimeZoneSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::TimeZoneSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::TimeZoneSettings>::type_name);
@@ -8212,7 +8212,7 @@ namespace py::cpp::Windows::System
 
     // ----- User class --------------------
 
-    static PyObject* _new_User(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_User(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::User>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::User>::type_name);
@@ -8638,7 +8638,7 @@ namespace py::cpp::Windows::System
 
     // ----- UserAuthenticationStatusChangeDeferral class --------------------
 
-    static PyObject* _new_UserAuthenticationStatusChangeDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserAuthenticationStatusChangeDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>::type_name);
@@ -8744,7 +8744,7 @@ namespace py::cpp::Windows::System
 
     // ----- UserAuthenticationStatusChangingEventArgs class --------------------
 
-    static PyObject* _new_UserAuthenticationStatusChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserAuthenticationStatusChangingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>::type_name);
@@ -8909,7 +8909,7 @@ namespace py::cpp::Windows::System
 
     // ----- UserChangedEventArgs class --------------------
 
-    static PyObject* _new_UserChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserChangedEventArgs>::type_name);
@@ -9024,7 +9024,7 @@ namespace py::cpp::Windows::System
 
     // ----- UserDeviceAssociation class --------------------
 
-    static PyObject* _new_UserDeviceAssociation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDeviceAssociation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserDeviceAssociation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserDeviceAssociation>::type_name);
@@ -9135,7 +9135,7 @@ namespace py::cpp::Windows::System
 
     // ----- UserDeviceAssociationChangedEventArgs class --------------------
 
-    static PyObject* _new_UserDeviceAssociationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDeviceAssociationChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>::type_name);
@@ -9523,7 +9523,7 @@ namespace py::cpp::Windows::System
 
     // ----- UserWatcher class --------------------
 
-    static PyObject* _new_UserWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserWatcher>::type_name);
@@ -9995,7 +9995,7 @@ namespace py::cpp::Windows::System
 
     // ----- ILauncherViewOptions interface --------------------
 
-    static PyObject* _new_ILauncherViewOptions(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILauncherViewOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::ILauncherViewOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::ILauncherViewOptions>::type_name);

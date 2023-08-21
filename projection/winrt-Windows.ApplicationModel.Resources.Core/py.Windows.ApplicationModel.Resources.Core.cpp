@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 {
     // ----- NamedResource class --------------------
 
-    static PyObject* _new_NamedResource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NamedResource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>::type_name);
@@ -223,7 +223,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceCandidate class --------------------
 
-    static PyObject* _new_ResourceCandidate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceCandidate(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::type_name);
@@ -510,7 +510,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceCandidateVectorView class --------------------
 
-    static PyObject* _new_ResourceCandidateVectorView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceCandidateVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>::type_name);
@@ -797,9 +797,9 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate> items(length, empty_instance<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::get());
+            winrt::com_array<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -1371,7 +1371,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceContextLanguagesVectorView class --------------------
 
-    static PyObject* _new_ResourceContextLanguagesVectorView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceContextLanguagesVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>::type_name);
@@ -1658,9 +1658,9 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            winrt::com_array<winrt::hstring> items(length, empty_instance<winrt::hstring>::get());
+            winrt::com_array<winrt::hstring> items(static_cast<uint32_t>(length), empty_instance<winrt::hstring>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -1719,7 +1719,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceManager class --------------------
 
-    static PyObject* _new_ResourceManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>::type_name);
@@ -2058,7 +2058,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceMap class --------------------
 
-    static PyObject* _new_ResourceMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>::type_name);
@@ -2467,7 +2467,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceMapIterator class --------------------
 
-    static PyObject* _new_ResourceMapIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceMapIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>::type_name);
@@ -2672,7 +2672,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceMapMapView class --------------------
 
-    static PyObject* _new_ResourceMapMapView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceMapMapView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>::type_name);
@@ -2976,7 +2976,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceMapMapViewIterator class --------------------
 
-    static PyObject* _new_ResourceMapMapViewIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceMapMapViewIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>::type_name);
@@ -3181,7 +3181,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceQualifier class --------------------
 
-    static PyObject* _new_ResourceQualifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceQualifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::type_name);
@@ -3356,7 +3356,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceQualifierMapView class --------------------
 
-    static PyObject* _new_ResourceQualifierMapView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceQualifierMapView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>::type_name);
@@ -3660,7 +3660,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceQualifierObservableMap class --------------------
 
-    static PyObject* _new_ResourceQualifierObservableMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceQualifierObservableMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>::type_name);
@@ -4118,7 +4118,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceQualifierVectorView class --------------------
 
-    static PyObject* _new_ResourceQualifierVectorView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceQualifierVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>::type_name);
@@ -4405,9 +4405,9 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> items(length, empty_instance<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::get());
+            winrt::com_array<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -4466,7 +4466,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceLayoutInfo struct --------------------
 
-    PyObject* _new_ResourceLayoutInfo(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ResourceLayoutInfo(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

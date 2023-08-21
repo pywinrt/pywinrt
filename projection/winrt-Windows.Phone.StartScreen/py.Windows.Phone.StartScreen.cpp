@@ -505,7 +505,7 @@ namespace py::cpp::Windows::Phone::StartScreen
 
     // ----- IToastNotificationManagerStatics3 interface --------------------
 
-    static PyObject* _new_IToastNotificationManagerStatics3(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IToastNotificationManagerStatics3(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>::type_name);

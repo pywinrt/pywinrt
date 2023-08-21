@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Globalization
 {
     // ----- ApplicationLanguages class --------------------
 
-    static PyObject* _new_ApplicationLanguages(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ApplicationLanguages(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::ApplicationLanguages>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::ApplicationLanguages>::type_name);
@@ -2981,7 +2981,7 @@ namespace py::cpp::Windows::Globalization
 
     // ----- CalendarIdentifiers class --------------------
 
-    static PyObject* _new_CalendarIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CalendarIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::CalendarIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::CalendarIdentifiers>::type_name);
@@ -3335,7 +3335,7 @@ namespace py::cpp::Windows::Globalization
 
     // ----- ClockIdentifiers class --------------------
 
-    static PyObject* _new_ClockIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClockIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::ClockIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::ClockIdentifiers>::type_name);
@@ -3569,7 +3569,7 @@ namespace py::cpp::Windows::Globalization
 
     // ----- CurrencyIdentifiers class --------------------
 
-    static PyObject* _new_CurrencyIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CurrencyIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::CurrencyIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::CurrencyIdentifiers>::type_name);
@@ -7147,7 +7147,7 @@ namespace py::cpp::Windows::Globalization
 
     // ----- JapanesePhoneme class --------------------
 
-    static PyObject* _new_JapanesePhoneme(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JapanesePhoneme(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::JapanesePhoneme>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::JapanesePhoneme>::type_name);
@@ -7282,7 +7282,7 @@ namespace py::cpp::Windows::Globalization
 
     // ----- JapanesePhoneticAnalyzer class --------------------
 
-    static PyObject* _new_JapanesePhoneticAnalyzer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JapanesePhoneticAnalyzer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>::type_name);
@@ -7756,7 +7756,7 @@ namespace py::cpp::Windows::Globalization
 
     // ----- NumeralSystemIdentifiers class --------------------
 
-    static PyObject* _new_NumeralSystemIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NumeralSystemIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>::type_name);

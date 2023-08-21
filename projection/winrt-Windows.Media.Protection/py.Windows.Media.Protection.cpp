@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Protection
 {
     // ----- ComponentLoadFailedEventArgs class --------------------
 
-    static PyObject* _new_ComponentLoadFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ComponentLoadFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>::type_name);
@@ -123,7 +123,7 @@ namespace py::cpp::Windows::Media::Protection
 
     // ----- ComponentRenewal class --------------------
 
-    static PyObject* _new_ComponentRenewal(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ComponentRenewal(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::ComponentRenewal>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::ComponentRenewal>::type_name);
@@ -849,7 +849,7 @@ namespace py::cpp::Windows::Media::Protection
 
     // ----- MediaProtectionServiceCompletion class --------------------
 
-    static PyObject* _new_MediaProtectionServiceCompletion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaProtectionServiceCompletion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>::type_name);
@@ -1087,7 +1087,7 @@ namespace py::cpp::Windows::Media::Protection
 
     // ----- RevocationAndRenewalInformation class --------------------
 
-    static PyObject* _new_RevocationAndRenewalInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RevocationAndRenewalInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>::type_name);
@@ -1182,7 +1182,7 @@ namespace py::cpp::Windows::Media::Protection
 
     // ----- RevocationAndRenewalItem class --------------------
 
-    static PyObject* _new_RevocationAndRenewalItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RevocationAndRenewalItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>::type_name);
@@ -1357,7 +1357,7 @@ namespace py::cpp::Windows::Media::Protection
 
     // ----- ServiceRequestedEventArgs class --------------------
 
-    static PyObject* _new_ServiceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServiceRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>::type_name);
@@ -1492,7 +1492,7 @@ namespace py::cpp::Windows::Media::Protection
 
     // ----- IMediaProtectionServiceRequest interface --------------------
 
-    static PyObject* _new_IMediaProtectionServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaProtectionServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>::type_name);

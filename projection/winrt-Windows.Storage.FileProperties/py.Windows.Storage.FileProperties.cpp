@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 {
     // ----- BasicProperties class --------------------
 
-    static PyObject* _new_BasicProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BasicProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::BasicProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::BasicProperties>::type_name);
@@ -225,7 +225,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- DocumentProperties class --------------------
 
-    static PyObject* _new_DocumentProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DocumentProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::DocumentProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::DocumentProperties>::type_name);
@@ -518,7 +518,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- GeotagHelper class --------------------
 
-    static PyObject* _new_GeotagHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GeotagHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::GeotagHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::GeotagHelper>::type_name);
@@ -650,7 +650,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- ImageProperties class --------------------
 
-    static PyObject* _new_ImageProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::ImageProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::ImageProperties>::type_name);
@@ -1187,7 +1187,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- MusicProperties class --------------------
 
-    static PyObject* _new_MusicProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MusicProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::MusicProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::MusicProperties>::type_name);
@@ -1916,7 +1916,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- StorageItemContentProperties class --------------------
 
-    static PyObject* _new_StorageItemContentProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageItemContentProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::StorageItemContentProperties>::type_name);
@@ -2193,7 +2193,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- StorageItemThumbnail class --------------------
 
-    static PyObject* _new_StorageItemThumbnail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageItemThumbnail(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::StorageItemThumbnail>::type_name);
@@ -2752,7 +2752,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- VideoProperties class --------------------
 
-    static PyObject* _new_VideoProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::VideoProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::VideoProperties>::type_name);
@@ -3369,7 +3369,7 @@ namespace py::cpp::Windows::Storage::FileProperties
 
     // ----- IStorageItemExtraProperties interface --------------------
 
-    static PyObject* _new_IStorageItemExtraProperties(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageItemExtraProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::FileProperties::IStorageItemExtraProperties>::type_name);

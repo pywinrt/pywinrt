@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::UserProfile
 {
     // ----- AdvertisingManager class --------------------
 
-    static PyObject* _new_AdvertisingManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdvertisingManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManager>::type_name);
@@ -114,7 +114,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- AdvertisingManagerForUser class --------------------
 
-    static PyObject* _new_AdvertisingManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdvertisingManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>::type_name);
@@ -229,7 +229,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- AssignedAccessSettings class --------------------
 
-    static PyObject* _new_AssignedAccessSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AssignedAccessSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>::type_name);
@@ -426,7 +426,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- DiagnosticsSettings class --------------------
 
-    static PyObject* _new_DiagnosticsSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DiagnosticsSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>::type_name);
@@ -603,7 +603,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- FirstSignInSettings class --------------------
 
-    static PyObject* _new_FirstSignInSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FirstSignInSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>::type_name);
@@ -937,7 +937,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- GlobalizationPreferences class --------------------
 
-    static PyObject* _new_GlobalizationPreferences(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalizationPreferences(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>::type_name);
@@ -1207,7 +1207,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- GlobalizationPreferencesForUser class --------------------
 
-    static PyObject* _new_GlobalizationPreferencesForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GlobalizationPreferencesForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>::type_name);
@@ -1422,7 +1422,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- LockScreen class --------------------
 
-    static PyObject* _new_LockScreen(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LockScreen(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::LockScreen>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::LockScreen>::type_name);
@@ -1652,7 +1652,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- UserInformation class --------------------
 
-    static PyObject* _new_UserInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::UserInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::UserInformation>::type_name);
@@ -2135,7 +2135,7 @@ namespace py::cpp::Windows::System::UserProfile
 
     // ----- UserProfilePersonalizationSettings class --------------------
 
-    static PyObject* _new_UserProfilePersonalizationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserProfilePersonalizationSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>::type_name);

@@ -1408,7 +1408,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Brush class --------------------
 
-    static PyObject* _new_Brush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Brush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Brush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Brush>::type_name);
@@ -2335,9 +2335,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Brush> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Brush>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Brush> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Brush>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2420,7 +2420,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- CacheMode class --------------------
 
-    static PyObject* _new_CacheMode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CacheMode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::CacheMode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::CacheMode>::type_name);
@@ -3224,7 +3224,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- CompositionTarget class --------------------
 
-    static PyObject* _new_CompositionTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>::type_name);
@@ -3994,9 +3994,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<double> items(length, empty_instance<double>::get());
+            winrt::com_array<double> items(static_cast<uint32_t>(length), empty_instance<double>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -4559,7 +4559,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- GeneralTransform class --------------------
 
-    static PyObject* _new_GeneralTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GeneralTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>::type_name);
@@ -4860,7 +4860,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Geometry class --------------------
 
-    static PyObject* _new_Geometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Geometry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Geometry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Geometry>::type_name);
@@ -5643,9 +5643,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Geometry> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Geometry>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Geometry> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Geometry>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -5981,7 +5981,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- GradientBrush class --------------------
 
-    static PyObject* _new_GradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GradientBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::GradientBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::GradientBrush>::type_name);
@@ -7161,9 +7161,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::GradientStop> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::GradientStop>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::GradientStop> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::GradientStop>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -7521,7 +7521,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- ImageSource class --------------------
 
-    static PyObject* _new_ImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::ImageSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::ImageSource>::type_name);
@@ -8303,7 +8303,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- LoadedImageSourceLoadCompletedEventArgs class --------------------
 
-    static PyObject* _new_LoadedImageSourceLoadCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoadedImageSourceLoadCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>::type_name);
@@ -8398,7 +8398,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- LoadedImageSurface class --------------------
 
-    static PyObject* _new_LoadedImageSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoadedImageSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>::type_name);
@@ -8922,7 +8922,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- MatrixHelper class --------------------
 
-    static PyObject* _new_MatrixHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MatrixHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>::type_name);
@@ -9324,7 +9324,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- MediaTransportControlsThumbnailRequestedEventArgs class --------------------
 
-    static PyObject* _new_MediaTransportControlsThumbnailRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaTransportControlsThumbnailRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>::type_name);
@@ -10548,9 +10548,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::PathFigure> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::PathFigure>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::PathFigure> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::PathFigure>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -10886,7 +10886,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- PathSegment class --------------------
 
-    static PyObject* _new_PathSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PathSegment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::PathSegment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::PathSegment>::type_name);
@@ -11521,9 +11521,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::PathSegment> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::PathSegment>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::PathSegment> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::PathSegment>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -13139,9 +13139,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Foundation::Point> items(length, empty_instance<winrt::Windows::Foundation::Point>::get());
+            winrt::com_array<winrt::Windows::Foundation::Point> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Foundation::Point>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -13779,7 +13779,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Projection class --------------------
 
-    static PyObject* _new_Projection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Projection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Projection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Projection>::type_name);
@@ -14389,7 +14389,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- RenderedEventArgs class --------------------
 
-    static PyObject* _new_RenderedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RenderedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>::type_name);
@@ -14484,7 +14484,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- RenderingEventArgs class --------------------
 
-    static PyObject* _new_RenderingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RenderingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>::type_name);
@@ -14773,7 +14773,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- RevealBrush class --------------------
 
-    static PyObject* _new_RevealBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RevealBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::RevealBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::RevealBrush>::type_name);
@@ -15868,7 +15868,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Shadow class --------------------
 
-    static PyObject* _new_Shadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Shadow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Shadow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Shadow>::type_name);
@@ -16649,7 +16649,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- TileBrush class --------------------
 
-    static PyObject* _new_TileBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::TileBrush>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::TileBrush>::type_name);
@@ -17829,9 +17829,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::TimelineMarker> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::TimelineMarker>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::TimelineMarker> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::TimelineMarker>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -18059,7 +18059,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Transform class --------------------
 
-    static PyObject* _new_Transform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Transform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Transform>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Transform>::type_name);
@@ -18694,9 +18694,9 @@ namespace py::cpp::Windows::UI::Xaml::Media
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Media::Transform> items(length, empty_instance<winrt::Windows::UI::Xaml::Media::Transform>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Media::Transform> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Media::Transform>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -19237,7 +19237,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- VisualTreeHelper class --------------------
 
-    static PyObject* _new_VisualTreeHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualTreeHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>::type_name);
@@ -19561,7 +19561,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- XamlCompositionBrushBase class --------------------
 
-    static PyObject* _new_XamlCompositionBrushBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XamlCompositionBrushBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>::type_name);
@@ -20211,7 +20211,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Matrix struct --------------------
 
-    PyObject* _new_Matrix(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Matrix(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- SyndicationError class --------------------
 
-    static PyObject* _new_SyndicationError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SyndicationError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::SyndicationError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::SyndicationError>::type_name);
@@ -7021,7 +7021,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- ISyndicationClient interface --------------------
 
-    static PyObject* _new_ISyndicationClient(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISyndicationClient(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::ISyndicationClient>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::ISyndicationClient>::type_name);
@@ -7402,7 +7402,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- ISyndicationNode interface --------------------
 
-    static PyObject* _new_ISyndicationNode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISyndicationNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::ISyndicationNode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::ISyndicationNode>::type_name);
@@ -7789,7 +7789,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- ISyndicationText interface --------------------
 
-    static PyObject* _new_ISyndicationText(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISyndicationText(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Syndication::ISyndicationText>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Syndication::ISyndicationText>::type_name);
@@ -8320,7 +8320,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- RetrievalProgress struct --------------------
 
-    PyObject* _new_RetrievalProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_RetrievalProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -8464,7 +8464,7 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- TransferProgress struct --------------------
 
-    PyObject* _new_TransferProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TransferProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

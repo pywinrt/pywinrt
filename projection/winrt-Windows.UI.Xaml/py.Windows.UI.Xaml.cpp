@@ -1334,7 +1334,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ApplicationInitializationCallbackParams class --------------------
 
-    static PyObject* _new_ApplicationInitializationCallbackParams(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ApplicationInitializationCallbackParams(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>::type_name);
@@ -1409,7 +1409,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- BindingFailedEventArgs class --------------------
 
-    static PyObject* _new_BindingFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BindingFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::BindingFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::BindingFailedEventArgs>::type_name);
@@ -1889,7 +1889,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- BringIntoViewRequestedEventArgs class --------------------
 
-    static PyObject* _new_BringIntoViewRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BringIntoViewRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>::type_name);
@@ -3830,7 +3830,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- CornerRadiusHelper class --------------------
 
-    static PyObject* _new_CornerRadiusHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CornerRadiusHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::CornerRadiusHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::CornerRadiusHelper>::type_name);
@@ -3972,7 +3972,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DataContextChangedEventArgs class --------------------
 
-    static PyObject* _new_DataContextChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DataContextChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>::type_name);
@@ -4573,7 +4573,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DebugSettings class --------------------
 
-    static PyObject* _new_DebugSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DebugSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DebugSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DebugSettings>::type_name);
@@ -4981,7 +4981,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DependencyObject class --------------------
 
-    static PyObject* _new_DependencyObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DependencyObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DependencyObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DependencyObject>::type_name);
@@ -5909,9 +5909,9 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::DependencyObject> items(length, empty_instance<winrt::Windows::UI::Xaml::DependencyObject>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::DependencyObject> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::DependencyObject>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -5996,7 +5996,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DependencyProperty class --------------------
 
-    static PyObject* _new_DependencyProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DependencyProperty(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DependencyProperty>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DependencyProperty>::type_name);
@@ -6213,7 +6213,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DependencyPropertyChangedEventArgs class --------------------
 
-    static PyObject* _new_DependencyPropertyChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DependencyPropertyChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>::type_name);
@@ -6620,7 +6620,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DragEventArgs class --------------------
 
-    static PyObject* _new_DragEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DragEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DragEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragEventArgs>::type_name);
@@ -6981,7 +6981,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DragOperationDeferral class --------------------
 
-    static PyObject* _new_DragOperationDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DragOperationDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DragOperationDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragOperationDeferral>::type_name);
@@ -7087,7 +7087,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DragStartingEventArgs class --------------------
 
-    static PyObject* _new_DragStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DragStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DragStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragStartingEventArgs>::type_name);
@@ -7360,7 +7360,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DragUI class --------------------
 
-    static PyObject* _new_DragUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DragUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DragUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragUI>::type_name);
@@ -7576,7 +7576,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DragUIOverride class --------------------
 
-    static PyObject* _new_DragUIOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DragUIOverride(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DragUIOverride>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragUIOverride>::type_name);
@@ -7984,7 +7984,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DropCompletedEventArgs class --------------------
 
-    static PyObject* _new_DropCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DropCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DropCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DropCompletedEventArgs>::type_name);
@@ -8079,7 +8079,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- DurationHelper class --------------------
 
-    static PyObject* _new_DurationHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DurationHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::DurationHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DurationHelper>::type_name);
@@ -8410,7 +8410,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- EffectiveViewportChangedEventArgs class --------------------
 
-    static PyObject* _new_EffectiveViewportChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EffectiveViewportChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>::type_name);
@@ -8951,7 +8951,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ElementSoundPlayer class --------------------
 
-    static PyObject* _new_ElementSoundPlayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ElementSoundPlayer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::ElementSoundPlayer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ElementSoundPlayer>::type_name);
@@ -9370,7 +9370,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ExceptionRoutedEventArgs class --------------------
 
-    static PyObject* _new_ExceptionRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ExceptionRoutedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>::type_name);
@@ -9465,7 +9465,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- FrameworkElement class --------------------
 
-    static PyObject* _new_FrameworkElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameworkElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::FrameworkElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::FrameworkElement>::type_name);
@@ -12022,7 +12022,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- FrameworkTemplate class --------------------
 
-    static PyObject* _new_FrameworkTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FrameworkTemplate(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::FrameworkTemplate>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::FrameworkTemplate>::type_name);
@@ -12482,7 +12482,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- GridLengthHelper class --------------------
 
-    static PyObject* _new_GridLengthHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GridLengthHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::GridLengthHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::GridLengthHelper>::type_name);
@@ -12791,7 +12791,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- MediaFailedRoutedEventArgs class --------------------
 
-    static PyObject* _new_MediaFailedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaFailedRoutedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>::type_name);
@@ -12886,7 +12886,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- PointHelper class --------------------
 
-    static PyObject* _new_PointHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::PointHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::PointHelper>::type_name);
@@ -13321,7 +13321,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- RectHelper class --------------------
 
-    static PyObject* _new_RectHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RectHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::RectHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::RectHelper>::type_name);
@@ -14352,7 +14352,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- RoutedEvent class --------------------
 
-    static PyObject* _new_RoutedEvent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RoutedEvent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::RoutedEvent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::RoutedEvent>::type_name);
@@ -14946,7 +14946,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- SetterBase class --------------------
 
-    static PyObject* _new_SetterBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SetterBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::SetterBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::SetterBase>::type_name);
@@ -15620,9 +15620,9 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::SetterBase> items(length, empty_instance<winrt::Windows::UI::Xaml::SetterBase>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::SetterBase> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::SetterBase>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -15706,7 +15706,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- SizeChangedEventArgs class --------------------
 
-    static PyObject* _new_SizeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SizeChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::SizeChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::SizeChangedEventArgs>::type_name);
@@ -15821,7 +15821,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- SizeHelper class --------------------
 
-    static PyObject* _new_SizeHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SizeHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::SizeHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::SizeHelper>::type_name);
@@ -16219,7 +16219,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- StateTriggerBase class --------------------
 
-    static PyObject* _new_StateTriggerBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StateTriggerBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::StateTriggerBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::StateTriggerBase>::type_name);
@@ -16814,7 +16814,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- ThicknessHelper class --------------------
 
-    static PyObject* _new_ThicknessHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ThicknessHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::ThicknessHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ThicknessHelper>::type_name);
@@ -16956,7 +16956,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- TriggerAction class --------------------
 
-    static PyObject* _new_TriggerAction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TriggerAction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::TriggerAction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::TriggerAction>::type_name);
@@ -17591,9 +17591,9 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::TriggerAction> items(length, empty_instance<winrt::Windows::UI::Xaml::TriggerAction>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::TriggerAction> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::TriggerAction>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -17676,7 +17676,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- TriggerBase class --------------------
 
-    static PyObject* _new_TriggerBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TriggerBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::TriggerBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::TriggerBase>::type_name);
@@ -17751,7 +17751,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- TriggerCollection class --------------------
 
-    static PyObject* _new_TriggerCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TriggerCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::TriggerCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::TriggerCollection>::type_name);
@@ -18289,9 +18289,9 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::TriggerBase> items(length, empty_instance<winrt::Windows::UI::Xaml::TriggerBase>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::TriggerBase> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::TriggerBase>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -18374,7 +18374,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- UIElement class --------------------
 
-    static PyObject* _new_UIElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UIElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::UIElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::UIElement>::type_name);
@@ -25754,9 +25754,9 @@ namespace py::cpp::Windows::UI::Xaml
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::UIElement> items(length, empty_instance<winrt::Windows::UI::Xaml::UIElement>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::UIElement> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::UIElement>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -25839,7 +25839,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- UnhandledExceptionEventArgs class --------------------
 
-    static PyObject* _new_UnhandledExceptionEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UnhandledExceptionEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>::type_name);
@@ -27623,7 +27623,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- Window class --------------------
 
-    static PyObject* _new_Window(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Window(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Window>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Window>::type_name);
@@ -28181,7 +28181,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- WindowCreatedEventArgs class --------------------
 
-    static PyObject* _new_WindowCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowCreatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>::type_name);
@@ -28276,7 +28276,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- XamlRoot class --------------------
 
-    static PyObject* _new_XamlRoot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XamlRoot(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::XamlRoot>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::XamlRoot>::type_name);
@@ -28496,7 +28496,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- XamlRootChangedEventArgs class --------------------
 
-    static PyObject* _new_XamlRootChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XamlRootChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>::type_name);
@@ -28571,7 +28571,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- IDataTemplateExtension interface --------------------
 
-    static PyObject* _new_IDataTemplateExtension(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IDataTemplateExtension(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::IDataTemplateExtension>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::IDataTemplateExtension>::type_name);
@@ -28741,7 +28741,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- IElementFactory interface --------------------
 
-    static PyObject* _new_IElementFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IElementFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::IElementFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::IElementFactory>::type_name);
@@ -28881,7 +28881,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- CornerRadius struct --------------------
 
-    PyObject* _new_CornerRadius(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_CornerRadius(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -29095,7 +29095,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- Duration struct --------------------
 
-    PyObject* _new_Duration(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Duration(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -29239,7 +29239,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- GridLength struct --------------------
 
-    PyObject* _new_GridLength(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GridLength(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -29383,7 +29383,7 @@ namespace py::cpp::Windows::UI::Xaml
 
     // ----- Thickness struct --------------------
 
-    PyObject* _new_Thickness(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Thickness(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

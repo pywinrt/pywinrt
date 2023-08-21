@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 {
     // ----- GameList class --------------------
 
-    static PyObject* _new_GameList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameList>::type_name);
@@ -292,7 +292,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     // ----- GameListEntry class --------------------
 
-    static PyObject* _new_GameListEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameListEntry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameListEntry>::type_name);
@@ -674,7 +674,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     // ----- GameModeConfiguration class --------------------
 
-    static PyObject* _new_GameModeConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameModeConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration>::type_name);
@@ -1183,7 +1183,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     // ----- GameModeUserConfiguration class --------------------
 
-    static PyObject* _new_GameModeUserConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameModeUserConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration>::type_name);
@@ -1338,7 +1338,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     // ----- IGameListEntry interface --------------------
 
-    static PyObject* _new_IGameListEntry(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGameListEntry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry>::type_name);

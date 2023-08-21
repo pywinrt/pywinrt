@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 {
     // ----- AccountsSettingsPane class --------------------
 
-    static PyObject* _new_AccountsSettingsPane(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccountsSettingsPane(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>::type_name);
@@ -313,7 +313,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     // ----- AccountsSettingsPaneCommandsRequestedEventArgs class --------------------
 
-    static PyObject* _new_AccountsSettingsPaneCommandsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccountsSettingsPaneCommandsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>::type_name);
@@ -566,7 +566,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     // ----- AccountsSettingsPaneEventDeferral class --------------------
 
-    static PyObject* _new_AccountsSettingsPaneEventDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccountsSettingsPaneEventDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral>::type_name);
@@ -1112,7 +1112,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     // ----- SettingsPane class --------------------
 
-    static PyObject* _new_SettingsPane(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SettingsPane(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsPane>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsPane>::type_name);
@@ -1333,7 +1333,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     // ----- SettingsPaneCommandsRequest class --------------------
 
-    static PyObject* _new_SettingsPaneCommandsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SettingsPaneCommandsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest>::type_name);
@@ -1428,7 +1428,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     // ----- SettingsPaneCommandsRequestedEventArgs class --------------------
 
-    static PyObject* _new_SettingsPaneCommandsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SettingsPaneCommandsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>::type_name);
@@ -1684,7 +1684,7 @@ namespace py::cpp::Windows::UI::ApplicationSettings
 
     // ----- WebAccountInvokedArgs class --------------------
 
-    static PyObject* _new_WebAccountInvokedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAccountInvokedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs>::type_name);

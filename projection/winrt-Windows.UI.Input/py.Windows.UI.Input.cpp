@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Input
 {
     // ----- AttachableInputObject class --------------------
 
-    static PyObject* _new_AttachableInputObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AttachableInputObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::AttachableInputObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::AttachableInputObject>::type_name);
@@ -136,7 +136,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- CrossSlidingEventArgs class --------------------
 
-    static PyObject* _new_CrossSlidingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CrossSlidingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::CrossSlidingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::CrossSlidingEventArgs>::type_name);
@@ -291,7 +291,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- DraggingEventArgs class --------------------
 
-    static PyObject* _new_DraggingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DraggingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::DraggingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::DraggingEventArgs>::type_name);
@@ -446,7 +446,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- EdgeGesture class --------------------
 
-    static PyObject* _new_EdgeGesture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EdgeGesture(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::EdgeGesture>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::EdgeGesture>::type_name);
@@ -686,7 +686,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- EdgeGestureEventArgs class --------------------
 
-    static PyObject* _new_EdgeGestureEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EdgeGestureEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::EdgeGestureEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::EdgeGestureEventArgs>::type_name);
@@ -2675,7 +2675,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- HoldingEventArgs class --------------------
 
-    static PyObject* _new_HoldingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HoldingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::HoldingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::HoldingEventArgs>::type_name);
@@ -2850,7 +2850,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- InputActivationListener class --------------------
 
-    static PyObject* _new_InputActivationListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InputActivationListener(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::InputActivationListener>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::InputActivationListener>::type_name);
@@ -2990,7 +2990,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- InputActivationListenerActivationChangedEventArgs class --------------------
 
-    static PyObject* _new_InputActivationListenerActivationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InputActivationListenerActivationChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>::type_name);
@@ -3085,7 +3085,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- KeyboardDeliveryInterceptor class --------------------
 
-    static PyObject* _new_KeyboardDeliveryInterceptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyboardDeliveryInterceptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>::type_name);
@@ -3328,7 +3328,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationCompletedEventArgs class --------------------
 
-    static PyObject* _new_ManipulationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ManipulationCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>::type_name);
@@ -3523,7 +3523,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationInertiaStartingEventArgs class --------------------
 
-    static PyObject* _new_ManipulationInertiaStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ManipulationInertiaStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>::type_name);
@@ -3718,7 +3718,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationStartedEventArgs class --------------------
 
-    static PyObject* _new_ManipulationStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ManipulationStartedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationStartedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationStartedEventArgs>::type_name);
@@ -3873,7 +3873,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationUpdatedEventArgs class --------------------
 
-    static PyObject* _new_ManipulationUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ManipulationUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>::type_name);
@@ -4088,7 +4088,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- MouseWheelParameters class --------------------
 
-    static PyObject* _new_MouseWheelParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MouseWheelParameters(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::MouseWheelParameters>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::MouseWheelParameters>::type_name);
@@ -4355,7 +4355,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- PointerPoint class --------------------
 
-    static PyObject* _new_PointerPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointerPoint(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::PointerPoint>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::PointerPoint>::type_name);
@@ -4696,7 +4696,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- PointerPointProperties class --------------------
 
-    static PyObject* _new_PointerPointProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointerPointProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::PointerPointProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::PointerPointProperties>::type_name);
@@ -5297,7 +5297,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- PointerVisualizationSettings class --------------------
 
-    static PyObject* _new_PointerVisualizationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointerVisualizationSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::PointerVisualizationSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::PointerVisualizationSettings>::type_name);
@@ -5498,7 +5498,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialController class --------------------
 
-    static PyObject* _new_RadialController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialController>::type_name);
@@ -6199,7 +6199,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerButtonClickedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerButtonClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerButtonClickedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>::type_name);
@@ -6314,7 +6314,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerButtonHoldingEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerButtonHoldingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerButtonHoldingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>::type_name);
@@ -6429,7 +6429,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerButtonPressedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerButtonPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerButtonPressedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>::type_name);
@@ -6544,7 +6544,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerButtonReleasedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerButtonReleasedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerButtonReleasedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>::type_name);
@@ -6659,7 +6659,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerConfiguration class --------------------
 
-    static PyObject* _new_RadialControllerConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerConfiguration>::type_name);
@@ -7060,7 +7060,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerControlAcquiredEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerControlAcquiredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerControlAcquiredEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>::type_name);
@@ -7195,7 +7195,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerMenu class --------------------
 
-    static PyObject* _new_RadialControllerMenu(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerMenu(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerMenu>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerMenu>::type_name);
@@ -7431,7 +7431,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerMenuItem class --------------------
 
-    static PyObject* _new_RadialControllerMenuItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerMenuItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerMenuItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerMenuItem>::type_name);
@@ -7742,7 +7742,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerRotationChangedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerRotationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerRotationChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>::type_name);
@@ -7897,7 +7897,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerScreenContact class --------------------
 
-    static PyObject* _new_RadialControllerScreenContact(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerScreenContact(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContact>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContact>::type_name);
@@ -8012,7 +8012,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerScreenContactContinuedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerScreenContactContinuedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerScreenContactContinuedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>::type_name);
@@ -8147,7 +8147,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerScreenContactEndedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerScreenContactEndedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerScreenContactEndedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>::type_name);
@@ -8262,7 +8262,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RadialControllerScreenContactStartedEventArgs class --------------------
 
-    static PyObject* _new_RadialControllerScreenContactStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RadialControllerScreenContactStartedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>::type_name);
@@ -8397,7 +8397,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- RightTappedEventArgs class --------------------
 
-    static PyObject* _new_RightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RightTappedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::RightTappedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RightTappedEventArgs>::type_name);
@@ -8532,7 +8532,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- SystemButtonEventController class --------------------
 
-    static PyObject* _new_SystemButtonEventController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemButtonEventController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::SystemButtonEventController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemButtonEventController>::type_name);
@@ -8819,7 +8819,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- SystemFunctionButtonEventArgs class --------------------
 
-    static PyObject* _new_SystemFunctionButtonEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemFunctionButtonEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>::type_name);
@@ -8962,7 +8962,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- SystemFunctionLockChangedEventArgs class --------------------
 
-    static PyObject* _new_SystemFunctionLockChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemFunctionLockChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>::type_name);
@@ -9125,7 +9125,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- SystemFunctionLockIndicatorChangedEventArgs class --------------------
 
-    static PyObject* _new_SystemFunctionLockIndicatorChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemFunctionLockIndicatorChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>::type_name);
@@ -9288,7 +9288,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- TappedEventArgs class --------------------
 
-    static PyObject* _new_TappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TappedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::TappedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::TappedEventArgs>::type_name);
@@ -9443,7 +9443,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- IPointerPointTransform interface --------------------
 
-    static PyObject* _new_IPointerPointTransform(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPointerPointTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::IPointerPointTransform>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::IPointerPointTransform>::type_name);
@@ -9615,7 +9615,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- CrossSlideThresholds struct --------------------
 
-    PyObject* _new_CrossSlideThresholds(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_CrossSlideThresholds(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -9829,7 +9829,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationDelta struct --------------------
 
-    PyObject* _new_ManipulationDelta(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ManipulationDelta(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -10043,7 +10043,7 @@ namespace py::cpp::Windows::UI::Input
 
     // ----- ManipulationVelocities struct --------------------
 
-    PyObject* _new_ManipulationVelocities(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ManipulationVelocities(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

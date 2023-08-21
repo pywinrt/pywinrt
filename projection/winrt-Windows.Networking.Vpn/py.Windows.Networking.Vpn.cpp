@@ -204,7 +204,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnChannel class --------------------
 
-    static PyObject* _new_VpnChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnChannel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnChannel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnChannel>::type_name);
@@ -1495,7 +1495,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnChannelActivityEventArgs class --------------------
 
-    static PyObject* _new_VpnChannelActivityEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnChannelActivityEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityEventArgs>::type_name);
@@ -1590,7 +1590,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnChannelActivityStateChangedArgs class --------------------
 
-    static PyObject* _new_VpnChannelActivityStateChangedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnChannelActivityStateChangedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs>::type_name);
@@ -1685,7 +1685,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnChannelConfiguration class --------------------
 
-    static PyObject* _new_VpnChannelConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnChannelConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnChannelConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnChannelConfiguration>::type_name);
@@ -1840,7 +1840,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnCredential class --------------------
 
-    static PyObject* _new_VpnCredential(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnCredential(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnCredential>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnCredential>::type_name);
@@ -5159,7 +5159,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnForegroundActivatedEventArgs class --------------------
 
-    static PyObject* _new_VpnForegroundActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnForegroundActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs>::type_name);
@@ -5374,7 +5374,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnForegroundActivationOperation class --------------------
 
-    static PyObject* _new_VpnForegroundActivationOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnForegroundActivationOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnForegroundActivationOperation>::type_name);
@@ -7376,7 +7376,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnPacketBufferList class --------------------
 
-    static PyObject* _new_VpnPacketBufferList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnPacketBufferList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnPacketBufferList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnPacketBufferList>::type_name);
@@ -7720,7 +7720,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnPickedCredential class --------------------
 
-    static PyObject* _new_VpnPickedCredential(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnPickedCredential(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnPickedCredential>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnPickedCredential>::type_name);
@@ -8893,7 +8893,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- VpnSystemHealth class --------------------
 
-    static PyObject* _new_VpnSystemHealth(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VpnSystemHealth(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::VpnSystemHealth>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::VpnSystemHealth>::type_name);
@@ -9544,7 +9544,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnChannelStatics interface --------------------
 
-    static PyObject* _new_IVpnChannelStatics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnChannelStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnChannelStatics>::type_name);
@@ -9653,7 +9653,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnCredential interface --------------------
 
-    static PyObject* _new_IVpnCredential(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnCredential(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnCredential>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnCredential>::type_name);
@@ -9808,7 +9808,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnCustomPrompt interface --------------------
 
-    static PyObject* _new_IVpnCustomPrompt(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnCustomPrompt(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPrompt>::type_name);
@@ -10027,7 +10027,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnCustomPromptElement interface --------------------
 
-    static PyObject* _new_IVpnCustomPromptElement(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnCustomPromptElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnCustomPromptElement>::type_name);
@@ -10246,7 +10246,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnDomainNameInfoFactory interface --------------------
 
-    static PyObject* _new_IVpnDomainNameInfoFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnDomainNameInfoFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnDomainNameInfoFactory>::type_name);
@@ -10356,7 +10356,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnInterfaceIdFactory interface --------------------
 
-    static PyObject* _new_IVpnInterfaceIdFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnInterfaceIdFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnInterfaceIdFactory>::type_name);
@@ -10463,7 +10463,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnNamespaceInfoFactory interface --------------------
 
-    static PyObject* _new_IVpnNamespaceInfoFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnNamespaceInfoFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>::type_name);
@@ -10572,7 +10572,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnPacketBufferFactory interface --------------------
 
-    static PyObject* _new_IVpnPacketBufferFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnPacketBufferFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>::type_name);
@@ -10681,7 +10681,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnPlugIn interface --------------------
 
-    static PyObject* _new_IVpnPlugIn(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnPlugIn(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugIn>::type_name);
@@ -10933,7 +10933,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnProfile interface --------------------
 
-    static PyObject* _new_IVpnProfile(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnProfile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnProfile>::type_name);
@@ -11232,7 +11232,7 @@ namespace py::cpp::Windows::Networking::Vpn
 
     // ----- IVpnRouteFactory interface --------------------
 
-    static PyObject* _new_IVpnRouteFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVpnRouteFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnRouteFactory>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 {
     // ----- GameService class --------------------
 
-    static PyObject* _new_GameService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>::type_name);
@@ -370,7 +370,7 @@ namespace py::cpp::Windows::Phone::System::UserProfile::GameServices::Core
 
     // ----- GameServicePropertyCollection class --------------------
 
-    static PyObject* _new_GameServicePropertyCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameServicePropertyCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>::type_name);

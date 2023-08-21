@@ -825,7 +825,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- BitmapSource class --------------------
 
-    static PyObject* _new_BitmapSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BitmapSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>::type_name);
@@ -1065,7 +1065,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- DownloadProgressEventArgs class --------------------
 
-    static PyObject* _new_DownloadProgressEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DownloadProgressEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>::type_name);
@@ -2226,7 +2226,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SvgImageSourceFailedEventArgs class --------------------
 
-    static PyObject* _new_SvgImageSourceFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SvgImageSourceFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>::type_name);
@@ -2321,7 +2321,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- SvgImageSourceOpenedEventArgs class --------------------
 
-    static PyObject* _new_SvgImageSourceOpenedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SvgImageSourceOpenedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>::type_name);
@@ -2664,7 +2664,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 
     // ----- XamlRenderingBackgroundTask class --------------------
 
-    static PyObject* _new_XamlRenderingBackgroundTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XamlRenderingBackgroundTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>::type_name);

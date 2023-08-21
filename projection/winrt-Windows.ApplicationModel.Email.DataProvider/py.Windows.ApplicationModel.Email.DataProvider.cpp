@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 {
     // ----- EmailDataProviderConnection class --------------------
 
-    static PyObject* _new_EmailDataProviderConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailDataProviderConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>::type_name);
@@ -789,7 +789,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailDataProviderTriggerDetails class --------------------
 
-    static PyObject* _new_EmailDataProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailDataProviderTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>::type_name);
@@ -884,7 +884,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxCreateFolderRequest class --------------------
 
-    static PyObject* _new_EmailMailboxCreateFolderRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxCreateFolderRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>::type_name);
@@ -1083,7 +1083,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxCreateFolderRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxCreateFolderRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxCreateFolderRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>::type_name);
@@ -1208,7 +1208,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxDeleteFolderRequest class --------------------
 
-    static PyObject* _new_EmailMailboxDeleteFolderRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxDeleteFolderRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>::type_name);
@@ -1385,7 +1385,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxDeleteFolderRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxDeleteFolderRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxDeleteFolderRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>::type_name);
@@ -1510,7 +1510,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxDownloadAttachmentRequest class --------------------
 
-    static PyObject* _new_EmailMailboxDownloadAttachmentRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxDownloadAttachmentRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>::type_name);
@@ -1705,7 +1705,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxDownloadAttachmentRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxDownloadAttachmentRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxDownloadAttachmentRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>::type_name);
@@ -1830,7 +1830,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxDownloadMessageRequest class --------------------
 
-    static PyObject* _new_EmailMailboxDownloadMessageRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxDownloadMessageRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>::type_name);
@@ -2005,7 +2005,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxDownloadMessageRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxDownloadMessageRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxDownloadMessageRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>::type_name);
@@ -2130,7 +2130,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxEmptyFolderRequest class --------------------
 
-    static PyObject* _new_EmailMailboxEmptyFolderRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxEmptyFolderRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>::type_name);
@@ -2307,7 +2307,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxEmptyFolderRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxEmptyFolderRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxEmptyFolderRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>::type_name);
@@ -2432,7 +2432,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxForwardMeetingRequest class --------------------
 
-    static PyObject* _new_EmailMailboxForwardMeetingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxForwardMeetingRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>::type_name);
@@ -2707,7 +2707,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxForwardMeetingRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxForwardMeetingRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxForwardMeetingRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>::type_name);
@@ -2832,7 +2832,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxGetAutoReplySettingsRequest class --------------------
 
-    static PyObject* _new_EmailMailboxGetAutoReplySettingsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxGetAutoReplySettingsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>::type_name);
@@ -3009,7 +3009,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxGetAutoReplySettingsRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxGetAutoReplySettingsRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxGetAutoReplySettingsRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>::type_name);
@@ -3134,7 +3134,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxMoveFolderRequest class --------------------
 
-    static PyObject* _new_EmailMailboxMoveFolderRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxMoveFolderRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>::type_name);
@@ -3349,7 +3349,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxMoveFolderRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxMoveFolderRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxMoveFolderRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>::type_name);
@@ -3474,7 +3474,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxProposeNewTimeForMeetingRequest class --------------------
 
-    static PyObject* _new_EmailMailboxProposeNewTimeForMeetingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxProposeNewTimeForMeetingRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>::type_name);
@@ -3729,7 +3729,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxProposeNewTimeForMeetingRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxProposeNewTimeForMeetingRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxProposeNewTimeForMeetingRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>::type_name);
@@ -3854,7 +3854,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxResolveRecipientsRequest class --------------------
 
-    static PyObject* _new_EmailMailboxResolveRecipientsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxResolveRecipientsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>::type_name);
@@ -4031,7 +4031,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxResolveRecipientsRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxResolveRecipientsRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxResolveRecipientsRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>::type_name);
@@ -4156,7 +4156,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxServerSearchReadBatchRequest class --------------------
 
-    static PyObject* _new_EmailMailboxServerSearchReadBatchRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxServerSearchReadBatchRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>::type_name);
@@ -4425,7 +4425,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxServerSearchReadBatchRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxServerSearchReadBatchRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxServerSearchReadBatchRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>::type_name);
@@ -4550,7 +4550,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxSetAutoReplySettingsRequest class --------------------
 
-    static PyObject* _new_EmailMailboxSetAutoReplySettingsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxSetAutoReplySettingsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>::type_name);
@@ -4725,7 +4725,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxSetAutoReplySettingsRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxSetAutoReplySettingsRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxSetAutoReplySettingsRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>::type_name);
@@ -4850,7 +4850,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxSyncManagerSyncRequest class --------------------
 
-    static PyObject* _new_EmailMailboxSyncManagerSyncRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxSyncManagerSyncRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>::type_name);
@@ -5005,7 +5005,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxSyncManagerSyncRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxSyncManagerSyncRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxSyncManagerSyncRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>::type_name);
@@ -5130,7 +5130,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxUpdateMeetingResponseRequest class --------------------
 
-    static PyObject* _new_EmailMailboxUpdateMeetingResponseRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxUpdateMeetingResponseRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>::type_name);
@@ -5385,7 +5385,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxUpdateMeetingResponseRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxUpdateMeetingResponseRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxUpdateMeetingResponseRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>::type_name);
@@ -5510,7 +5510,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxValidateCertificatesRequest class --------------------
 
-    static PyObject* _new_EmailMailboxValidateCertificatesRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxValidateCertificatesRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>::type_name);
@@ -5687,7 +5687,7 @@ namespace py::cpp::Windows::ApplicationModel::Email::DataProvider
 
     // ----- EmailMailboxValidateCertificatesRequestEventArgs class --------------------
 
-    static PyObject* _new_EmailMailboxValidateCertificatesRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EmailMailboxValidateCertificatesRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>::type_name);

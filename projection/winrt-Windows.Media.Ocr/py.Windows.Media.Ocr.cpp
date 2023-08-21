@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Ocr
 {
     // ----- OcrEngine class --------------------
 
-    static PyObject* _new_OcrEngine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OcrEngine(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrEngine>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrEngine>::type_name);
@@ -289,7 +289,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     // ----- OcrLine class --------------------
 
-    static PyObject* _new_OcrLine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OcrLine(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrLine>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrLine>::type_name);
@@ -404,7 +404,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     // ----- OcrResult class --------------------
 
-    static PyObject* _new_OcrResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OcrResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrResult>::type_name);
@@ -539,7 +539,7 @@ namespace py::cpp::Windows::Media::Ocr
 
     // ----- OcrWord class --------------------
 
-    static PyObject* _new_OcrWord(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OcrWord(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrWord>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrWord>::type_name);

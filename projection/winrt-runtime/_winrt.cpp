@@ -14,9 +14,7 @@ namespace py::cpp::_winrt
     PyDoc_STRVAR(Object_doc, "base class for wrapped WinRT object instances.");
 
     static PyObject* Object_new(
-        PyTypeObject* /* unused */,
-        PyObject* /* unused */,
-        PyObject* /* unused */) noexcept
+        PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         py::set_invalid_activation_error(type_name_Object);
         return nullptr;
@@ -97,6 +95,12 @@ namespace py::cpp::_winrt
 
     static int MappingIter_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept
     {
+        if (kwds)
+        {
+            PyErr_SetString(PyExc_TypeError, "keyword arguments are not supported");
+            return -1;
+        }
+
         // borrowed ref
         auto base_iter = PyTuple_GetItem(args, 0);
 

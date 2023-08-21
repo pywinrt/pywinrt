@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Data::Text
 {
     // ----- AlternateWordForm class --------------------
 
-    static PyObject* _new_AlternateWordForm(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AlternateWordForm(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Text::AlternateWordForm>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::AlternateWordForm>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- SelectableWordSegment class --------------------
 
-    static PyObject* _new_SelectableWordSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SelectableWordSegment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Text::SelectableWordSegment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::SelectableWordSegment>::type_name);
@@ -849,7 +849,7 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- TextPhoneme class --------------------
 
-    static PyObject* _new_TextPhoneme(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TextPhoneme(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Text::TextPhoneme>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::TextPhoneme>::type_name);
@@ -1463,7 +1463,7 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- UnicodeCharacters class --------------------
 
-    static PyObject* _new_UnicodeCharacters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UnicodeCharacters(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Text::UnicodeCharacters>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::UnicodeCharacters>::type_name);
@@ -2056,7 +2056,7 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- WordSegment class --------------------
 
-    static PyObject* _new_WordSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WordSegment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Text::WordSegment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::WordSegment>::type_name);
@@ -2410,7 +2410,7 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- TextSegment struct --------------------
 
-    PyObject* _new_TextSegment(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TextSegment(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

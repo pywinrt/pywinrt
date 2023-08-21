@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 {
     // ----- LicenseManager class --------------------
 
-    static PyObject* _new_LicenseManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LicenseManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>::type_name);
@@ -139,7 +139,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     // ----- LicenseSatisfactionInfo class --------------------
 
-    static PyObject* _new_LicenseSatisfactionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LicenseSatisfactionInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>::type_name);
@@ -354,7 +354,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 
     // ----- LicenseSatisfactionResult class --------------------
 
-    static PyObject* _new_LicenseSatisfactionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LicenseSatisfactionResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>::type_name);

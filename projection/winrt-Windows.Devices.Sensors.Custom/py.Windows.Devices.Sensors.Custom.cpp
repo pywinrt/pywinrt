@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 {
     // ----- CustomSensor class --------------------
 
-    static PyObject* _new_CustomSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CustomSensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>::type_name);
@@ -378,7 +378,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     // ----- CustomSensorReading class --------------------
 
-    static PyObject* _new_CustomSensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CustomSensorReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>::type_name);
@@ -513,7 +513,7 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
 
     // ----- CustomSensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_CustomSensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CustomSensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>::type_name);

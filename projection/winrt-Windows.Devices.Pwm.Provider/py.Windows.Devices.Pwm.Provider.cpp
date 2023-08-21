@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 {
     // ----- IPwmControllerProvider interface --------------------
 
-    static PyObject* _new_IPwmControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPwmControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>::type_name);
@@ -362,7 +362,7 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
 
     // ----- IPwmProvider interface --------------------
 
-    static PyObject* _new_IPwmProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPwmProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>::type_name);

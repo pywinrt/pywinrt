@@ -417,7 +417,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- AudioTrack class --------------------
 
-    static PyObject* _new_AudioTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioTrack(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::AudioTrack>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::AudioTrack>::type_name);
@@ -735,7 +735,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- AudioTrackOpenFailedEventArgs class --------------------
 
-    static PyObject* _new_AudioTrackOpenFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioTrackOpenFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>::type_name);
@@ -830,7 +830,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- AudioTrackSupportInfo class --------------------
 
-    static PyObject* _new_AudioTrackSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AudioTrackSupportInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::AudioTrackSupportInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::AudioTrackSupportInfo>::type_name);
@@ -1274,7 +1274,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- CodecInfo class --------------------
 
-    static PyObject* _new_CodecInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CodecInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::CodecInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::CodecInfo>::type_name);
@@ -1580,7 +1580,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- CodecSubtypes class --------------------
 
-    static PyObject* _new_CodecSubtypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CodecSubtypes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::CodecSubtypes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::CodecSubtypes>::type_name);
@@ -2963,7 +2963,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- FaceDetectedEventArgs class --------------------
 
-    static PyObject* _new_FaceDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FaceDetectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::FaceDetectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::FaceDetectedEventArgs>::type_name);
@@ -3058,7 +3058,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- FaceDetectionEffect class --------------------
 
-    static PyObject* _new_FaceDetectionEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FaceDetectionEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffect>::type_name);
@@ -3540,7 +3540,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- FaceDetectionEffectFrame class --------------------
 
-    static PyObject* _new_FaceDetectionEffectFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FaceDetectionEffectFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffectFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffectFrame>::type_name);
@@ -3940,7 +3940,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- HighDynamicRangeControl class --------------------
 
-    static PyObject* _new_HighDynamicRangeControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HighDynamicRangeControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeControl>::type_name);
@@ -4063,7 +4063,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- HighDynamicRangeOutput class --------------------
 
-    static PyObject* _new_HighDynamicRangeOutput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HighDynamicRangeOutput(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeOutput>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeOutput>::type_name);
@@ -4563,7 +4563,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- InitializeMediaStreamSourceRequestedEventArgs class --------------------
 
-    static PyObject* _new_InitializeMediaStreamSourceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InitializeMediaStreamSourceRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>::type_name);
@@ -4708,7 +4708,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- LowLightFusion class --------------------
 
-    static PyObject* _new_LowLightFusion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LowLightFusion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::LowLightFusion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::LowLightFusion>::type_name);
@@ -4834,7 +4834,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- LowLightFusionResult class --------------------
 
-    static PyObject* _new_LowLightFusionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LowLightFusionResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::LowLightFusionResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::LowLightFusionResult>::type_name);
@@ -5192,7 +5192,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaBindingEventArgs class --------------------
 
-    static PyObject* _new_MediaBindingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBindingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaBindingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaBindingEventArgs>::type_name);
@@ -5562,7 +5562,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaCueEventArgs class --------------------
 
-    static PyObject* _new_MediaCueEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaCueEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaCueEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaCueEventArgs>::type_name);
@@ -5657,7 +5657,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaSource class --------------------
 
-    static PyObject* _new_MediaSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSource>::type_name);
@@ -6685,7 +6685,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaSourceError class --------------------
 
-    static PyObject* _new_MediaSourceError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaSourceError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaSourceError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSourceError>::type_name);
@@ -6780,7 +6780,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaSourceOpenOperationCompletedEventArgs class --------------------
 
-    static PyObject* _new_MediaSourceOpenOperationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaSourceOpenOperationCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>::type_name);
@@ -6875,7 +6875,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaSourceStateChangedEventArgs class --------------------
 
-    static PyObject* _new_MediaSourceStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaSourceStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>::type_name);
@@ -6990,7 +6990,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSample class --------------------
 
-    static PyObject* _new_MediaStreamSample(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSample(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSample>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSample>::type_name);
@@ -7502,7 +7502,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSamplePropertySet class --------------------
 
-    static PyObject* _new_MediaStreamSamplePropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSamplePropertySet(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>::type_name);
@@ -7915,7 +7915,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSampleProtectionProperties class --------------------
 
-    static PyObject* _new_MediaStreamSampleProtectionProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSampleProtectionProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>::type_name);
@@ -9102,7 +9102,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceClosedEventArgs class --------------------
 
-    static PyObject* _new_MediaStreamSourceClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>::type_name);
@@ -9197,7 +9197,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceClosedRequest class --------------------
 
-    static PyObject* _new_MediaStreamSourceClosedRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceClosedRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>::type_name);
@@ -9292,7 +9292,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSampleRenderedEventArgs class --------------------
 
-    static PyObject* _new_MediaStreamSourceSampleRenderedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSampleRenderedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>::type_name);
@@ -9387,7 +9387,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSampleRequest class --------------------
 
-    static PyObject* _new_MediaStreamSourceSampleRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSampleRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>::type_name);
@@ -9593,7 +9593,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSampleRequestDeferral class --------------------
 
-    static PyObject* _new_MediaStreamSourceSampleRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSampleRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>::type_name);
@@ -9699,7 +9699,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSampleRequestedEventArgs class --------------------
 
-    static PyObject* _new_MediaStreamSourceSampleRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSampleRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>::type_name);
@@ -9794,7 +9794,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceStartingEventArgs class --------------------
 
-    static PyObject* _new_MediaStreamSourceStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>::type_name);
@@ -9889,7 +9889,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceStartingRequest class --------------------
 
-    static PyObject* _new_MediaStreamSourceStartingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceStartingRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>::type_name);
@@ -10047,7 +10047,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceStartingRequestDeferral class --------------------
 
-    static PyObject* _new_MediaStreamSourceStartingRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceStartingRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>::type_name);
@@ -10153,7 +10153,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSwitchStreamsRequest class --------------------
 
-    static PyObject* _new_MediaStreamSourceSwitchStreamsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSwitchStreamsRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>::type_name);
@@ -10298,7 +10298,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSwitchStreamsRequestDeferral class --------------------
 
-    static PyObject* _new_MediaStreamSourceSwitchStreamsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSwitchStreamsRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>::type_name);
@@ -10404,7 +10404,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MediaStreamSourceSwitchStreamsRequestedEventArgs class --------------------
 
-    static PyObject* _new_MediaStreamSourceSwitchStreamsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaStreamSourceSwitchStreamsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>::type_name);
@@ -10499,7 +10499,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MseSourceBuffer class --------------------
 
-    static PyObject* _new_MseSourceBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MseSourceBuffer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MseSourceBuffer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MseSourceBuffer>::type_name);
@@ -11184,7 +11184,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MseSourceBufferList class --------------------
 
-    static PyObject* _new_MseSourceBufferList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MseSourceBufferList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::MseSourceBufferList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MseSourceBufferList>::type_name);
@@ -11887,7 +11887,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- SceneAnalysisEffect class --------------------
 
-    static PyObject* _new_SceneAnalysisEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SceneAnalysisEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffect>::type_name);
@@ -12245,7 +12245,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- SceneAnalysisEffectFrame class --------------------
 
-    static PyObject* _new_SceneAnalysisEffectFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SceneAnalysisEffectFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>::type_name);
@@ -12685,7 +12685,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- SceneAnalyzedEventArgs class --------------------
 
-    static PyObject* _new_SceneAnalyzedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SceneAnalyzedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::SceneAnalyzedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::SceneAnalyzedEventArgs>::type_name);
@@ -14008,7 +14008,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedMetadataTrackError class --------------------
 
-    static PyObject* _new_TimedMetadataTrackError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedMetadataTrackError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackError>::type_name);
@@ -14123,7 +14123,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedMetadataTrackFailedEventArgs class --------------------
 
-    static PyObject* _new_TimedMetadataTrackFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedMetadataTrackFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>::type_name);
@@ -14218,7 +14218,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextBouten class --------------------
 
-    static PyObject* _new_TimedTextBouten(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedTextBouten(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextBouten>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextBouten>::type_name);
@@ -15632,7 +15632,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextRuby class --------------------
 
-    static PyObject* _new_TimedTextRuby(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedTextRuby(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextRuby>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextRuby>::type_name);
@@ -15899,7 +15899,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextSource class --------------------
 
-    static PyObject* _new_TimedTextSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedTextSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextSource>::type_name);
@@ -16235,7 +16235,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextSourceResolveResultEventArgs class --------------------
 
-    static PyObject* _new_TimedTextSourceResolveResultEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedTextSourceResolveResultEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>::type_name);
@@ -17592,7 +17592,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- VideoStabilizationEffect class --------------------
 
-    static PyObject* _new_VideoStabilizationEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoStabilizationEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffect>::type_name);
@@ -17963,7 +17963,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- VideoStabilizationEffectEnabledChangedEventArgs class --------------------
 
-    static PyObject* _new_VideoStabilizationEffectEnabledChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoStabilizationEffectEnabledChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>::type_name);
@@ -18371,7 +18371,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- VideoTrack class --------------------
 
-    static PyObject* _new_VideoTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoTrack(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::VideoTrack>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoTrack>::type_name);
@@ -18689,7 +18689,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- VideoTrackOpenFailedEventArgs class --------------------
 
-    static PyObject* _new_VideoTrackOpenFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoTrackOpenFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>::type_name);
@@ -18784,7 +18784,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- VideoTrackSupportInfo class --------------------
 
-    static PyObject* _new_VideoTrackSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VideoTrackSupportInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::VideoTrackSupportInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoTrackSupportInfo>::type_name);
@@ -18899,7 +18899,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- IMediaCue interface --------------------
 
-    static PyObject* _new_IMediaCue(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaCue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::IMediaCue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaCue>::type_name);
@@ -19118,7 +19118,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- IMediaSource interface --------------------
 
-    static PyObject* _new_IMediaSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::IMediaSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaSource>::type_name);
@@ -19193,7 +19193,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- IMediaStreamDescriptor interface --------------------
 
-    static PyObject* _new_IMediaStreamDescriptor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaStreamDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>::type_name);
@@ -19384,7 +19384,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- IMediaStreamDescriptor2 interface --------------------
 
-    static PyObject* _new_IMediaStreamDescriptor2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaStreamDescriptor2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>::type_name);
@@ -19623,7 +19623,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- IMediaTrack interface --------------------
 
-    static PyObject* _new_IMediaTrack(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaTrack(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::IMediaTrack>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaTrack>::type_name);
@@ -19806,7 +19806,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- ISingleSelectMediaTrackList interface --------------------
 
-    static PyObject* _new_ISingleSelectMediaTrackList(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISingleSelectMediaTrackList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>::type_name);
@@ -19974,7 +19974,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- ITimedMetadataTrackProvider interface --------------------
 
-    static PyObject* _new_ITimedMetadataTrackProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITimedMetadataTrackProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>::type_name);
@@ -20069,7 +20069,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- MseTimeRange struct --------------------
 
-    PyObject* _new_MseTimeRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_MseTimeRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -20213,7 +20213,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextDouble struct --------------------
 
-    PyObject* _new_TimedTextDouble(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TimedTextDouble(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -20357,7 +20357,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextPadding struct --------------------
 
-    PyObject* _new_TimedTextPadding(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TimedTextPadding(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -20606,7 +20606,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextPoint struct --------------------
 
-    PyObject* _new_TimedTextPoint(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TimedTextPoint(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -20785,7 +20785,7 @@ namespace py::cpp::Windows::Media::Core
 
     // ----- TimedTextSize struct --------------------
 
-    PyObject* _new_TimedTextSize(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TimedTextSize(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

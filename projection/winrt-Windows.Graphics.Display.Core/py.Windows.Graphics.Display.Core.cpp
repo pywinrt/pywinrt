@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 {
     // ----- HdmiDisplayInformation class --------------------
 
-    static PyObject* _new_HdmiDisplayInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HdmiDisplayInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>::type_name);
@@ -323,7 +323,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     // ----- HdmiDisplayMode class --------------------
 
-    static PyObject* _new_HdmiDisplayMode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HdmiDisplayMode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>::type_name);
@@ -650,7 +650,7 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     // ----- HdmiDisplayHdr2086Metadata struct --------------------
 
-    PyObject* _new_HdmiDisplayHdr2086Metadata(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_HdmiDisplayHdr2086Metadata(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

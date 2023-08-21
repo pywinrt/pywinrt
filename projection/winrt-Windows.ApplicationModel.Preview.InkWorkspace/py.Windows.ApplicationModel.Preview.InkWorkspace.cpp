@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::InkWorkspace
 {
     // ----- InkWorkspaceHostedAppManager class --------------------
 
-    static PyObject* _new_InkWorkspaceHostedAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InkWorkspaceHostedAppManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>::type_name);

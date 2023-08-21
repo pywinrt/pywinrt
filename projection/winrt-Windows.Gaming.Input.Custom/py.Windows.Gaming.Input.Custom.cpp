@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 {
     // ----- GameControllerFactoryManager class --------------------
 
-    static PyObject* _new_GameControllerFactoryManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameControllerFactoryManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>::type_name);
@@ -179,7 +179,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GipFirmwareUpdateResult class --------------------
 
-    static PyObject* _new_GipFirmwareUpdateResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GipFirmwareUpdateResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>::type_name);
@@ -314,7 +314,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GipGameControllerProvider class --------------------
 
-    static PyObject* _new_GipGameControllerProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GipGameControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>::type_name);
@@ -592,7 +592,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- HidGameControllerProvider class --------------------
 
-    static PyObject* _new_HidGameControllerProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HidGameControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>::type_name);
@@ -909,7 +909,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- XusbGameControllerProvider class --------------------
 
-    static PyObject* _new_XusbGameControllerProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XusbGameControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>::type_name);
@@ -1118,7 +1118,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- ICustomGameControllerFactory interface --------------------
 
-    static PyObject* _new_ICustomGameControllerFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICustomGameControllerFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::type_name);
@@ -1291,7 +1291,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- IGameControllerInputSink interface --------------------
 
-    static PyObject* _new_IGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::type_name);
@@ -1432,7 +1432,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- IGameControllerProvider interface --------------------
 
-    static PyObject* _new_IGameControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGameControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::type_name);
@@ -1607,7 +1607,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- IGipGameControllerInputSink interface --------------------
 
-    static PyObject* _new_IGipGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGipGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::type_name);
@@ -1820,7 +1820,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- IHidGameControllerInputSink interface --------------------
 
-    static PyObject* _new_IHidGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IHidGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::type_name);
@@ -1996,7 +1996,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- IXusbGameControllerInputSink interface --------------------
 
-    static PyObject* _new_IXusbGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXusbGameControllerInputSink(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::type_name);
@@ -2172,7 +2172,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GameControllerVersionInfo struct --------------------
 
-    PyObject* _new_GameControllerVersionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GameControllerVersionInfo(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -2386,7 +2386,7 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     // ----- GipFirmwareUpdateProgress struct --------------------
 
-    PyObject* _new_GipFirmwareUpdateProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GipFirmwareUpdateProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

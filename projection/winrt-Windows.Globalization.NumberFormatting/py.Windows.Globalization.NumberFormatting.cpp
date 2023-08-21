@@ -4346,7 +4346,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberFormatter interface --------------------
 
-    static PyObject* _new_INumberFormatter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INumberFormatter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::type_name);
@@ -4453,7 +4453,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberFormatter2 interface --------------------
 
-    static PyObject* _new_INumberFormatter2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INumberFormatter2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::type_name);
@@ -4624,7 +4624,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberFormatterOptions interface --------------------
 
-    static PyObject* _new_INumberFormatterOptions(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INumberFormatterOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::type_name);
@@ -5019,7 +5019,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberParser interface --------------------
 
-    static PyObject* _new_INumberParser(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INumberParser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::type_name);
@@ -5190,7 +5190,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberRounder interface --------------------
 
-    static PyObject* _new_INumberRounder(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INumberRounder(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::type_name);
@@ -5457,7 +5457,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- INumberRounderOption interface --------------------
 
-    static PyObject* _new_INumberRounderOption(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INumberRounderOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::type_name);
@@ -5580,7 +5580,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- ISignedZeroOption interface --------------------
 
-    static PyObject* _new_ISignedZeroOption(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISignedZeroOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::type_name);
@@ -5703,7 +5703,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     // ----- ISignificantDigitsOption interface --------------------
 
-    static PyObject* _new_ISignificantDigitsOption(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISignificantDigitsOption(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics
 {
     // ----- IGeometrySource2D interface --------------------
 
-    static PyObject* _new_IGeometrySource2D(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGeometrySource2D(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::IGeometrySource2D>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::IGeometrySource2D>::type_name);
@@ -83,7 +83,7 @@ namespace py::cpp::Windows::Graphics
 
     // ----- DisplayAdapterId struct --------------------
 
-    PyObject* _new_DisplayAdapterId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_DisplayAdapterId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -227,7 +227,7 @@ namespace py::cpp::Windows::Graphics
 
     // ----- DisplayId struct --------------------
 
-    PyObject* _new_DisplayId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_DisplayId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -336,7 +336,7 @@ namespace py::cpp::Windows::Graphics
 
     // ----- PointInt32 struct --------------------
 
-    PyObject* _new_PointInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_PointInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -480,7 +480,7 @@ namespace py::cpp::Windows::Graphics
 
     // ----- RectInt32 struct --------------------
 
-    PyObject* _new_RectInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_RectInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -694,7 +694,7 @@ namespace py::cpp::Windows::Graphics
 
     // ----- SizeInt32 struct --------------------
 
-    PyObject* _new_SizeInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_SizeInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 {
     // ----- DeliveryOptimizationSettings class --------------------
 
-    static PyObject* _new_DeliveryOptimizationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeliveryOptimizationSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>::type_name);
@@ -153,7 +153,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- StoreConfiguration class --------------------
 
-    static PyObject* _new_StoreConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StoreConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>::type_name);
@@ -1074,7 +1074,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- StoreHardwareManufacturerInfo class --------------------
 
-    static PyObject* _new_StoreHardwareManufacturerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StoreHardwareManufacturerInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>::type_name);
@@ -1229,7 +1229,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- StorePreview class --------------------
 
-    static PyObject* _new_StorePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorePreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>::type_name);
@@ -1326,7 +1326,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- StorePreviewProductInfo class --------------------
 
-    static PyObject* _new_StorePreviewProductInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorePreviewProductInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>::type_name);
@@ -1501,7 +1501,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- StorePreviewPurchaseResults class --------------------
 
-    static PyObject* _new_StorePreviewPurchaseResults(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorePreviewPurchaseResults(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>::type_name);
@@ -1596,7 +1596,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- StorePreviewSkuInfo class --------------------
 
-    static PyObject* _new_StorePreviewSkuInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorePreviewSkuInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>::type_name);
@@ -1851,7 +1851,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
 
     // ----- WebAuthenticationCoreManagerHelper class --------------------
 
-    static PyObject* _new_WebAuthenticationCoreManagerHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAuthenticationCoreManagerHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 {
     // ----- BarcodeScanner class --------------------
 
-    static PyObject* _new_BarcodeScanner(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScanner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScanner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScanner>::type_name);
@@ -571,7 +571,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeScannerCapabilities class --------------------
 
-    static PyObject* _new_BarcodeScannerCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerCapabilities>::type_name);
@@ -766,7 +766,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeScannerDataReceivedEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs>::type_name);
@@ -861,7 +861,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeScannerErrorOccurredEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerErrorOccurredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerErrorOccurredEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs>::type_name);
@@ -996,7 +996,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeScannerImagePreviewReceivedEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerImagePreviewReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerImagePreviewReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs>::type_name);
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeScannerStatusUpdatedEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerStatusUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerStatusUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs>::type_name);
@@ -1367,7 +1367,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeSymbologies class --------------------
 
-    static PyObject* _new_BarcodeSymbologies(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeSymbologies(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologies>::type_name);
@@ -3333,7 +3333,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- BarcodeSymbologyAttributes class --------------------
 
-    static PyObject* _new_BarcodeSymbologyAttributes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeSymbologyAttributes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::BarcodeSymbologyAttributes>::type_name);
@@ -3708,7 +3708,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawer class --------------------
 
-    static PyObject* _new_CashDrawer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawer>::type_name);
@@ -4187,7 +4187,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerCapabilities class --------------------
 
-    static PyObject* _new_CashDrawerCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerCapabilities>::type_name);
@@ -4382,7 +4382,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerCloseAlarm class --------------------
 
-    static PyObject* _new_CashDrawerCloseAlarm(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerCloseAlarm(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerCloseAlarm>::type_name);
@@ -4724,7 +4724,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerClosedEventArgs class --------------------
 
-    static PyObject* _new_CashDrawerClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerClosedEventArgs>::type_name);
@@ -4819,7 +4819,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerEventSource class --------------------
 
-    static PyObject* _new_CashDrawerEventSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerEventSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerEventSource>::type_name);
@@ -4984,7 +4984,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerOpenedEventArgs class --------------------
 
-    static PyObject* _new_CashDrawerOpenedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerOpenedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs>::type_name);
@@ -5079,7 +5079,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerStatus class --------------------
 
-    static PyObject* _new_CashDrawerStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerStatus(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerStatus>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerStatus>::type_name);
@@ -5194,7 +5194,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- CashDrawerStatusUpdatedEventArgs class --------------------
 
-    static PyObject* _new_CashDrawerStatusUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CashDrawerStatusUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs>::type_name);
@@ -5289,7 +5289,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedBarcodeScanner class --------------------
 
-    static PyObject* _new_ClaimedBarcodeScanner(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedBarcodeScanner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScanner>::type_name);
@@ -6321,7 +6321,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedBarcodeScannerClosedEventArgs class --------------------
 
-    static PyObject* _new_ClaimedBarcodeScannerClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedBarcodeScannerClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs>::type_name);
@@ -6396,7 +6396,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedCashDrawer class --------------------
 
-    static PyObject* _new_ClaimedCashDrawer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedCashDrawer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawer>::type_name);
@@ -6878,7 +6878,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedCashDrawerClosedEventArgs class --------------------
 
-    static PyObject* _new_ClaimedCashDrawerClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedCashDrawerClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs>::type_name);
@@ -6953,7 +6953,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedJournalPrinter class --------------------
 
-    static PyObject* _new_ClaimedJournalPrinter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedJournalPrinter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedJournalPrinter>::type_name);
@@ -7490,7 +7490,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedLineDisplay class --------------------
 
-    static PyObject* _new_ClaimedLineDisplay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedLineDisplay(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplay>::type_name);
@@ -8435,7 +8435,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedLineDisplayClosedEventArgs class --------------------
 
-    static PyObject* _new_ClaimedLineDisplayClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedLineDisplayClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs>::type_name);
@@ -8510,7 +8510,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedMagneticStripeReader class --------------------
 
-    static PyObject* _new_ClaimedMagneticStripeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedMagneticStripeReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReader>::type_name);
@@ -9523,7 +9523,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedMagneticStripeReaderClosedEventArgs class --------------------
 
-    static PyObject* _new_ClaimedMagneticStripeReaderClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedMagneticStripeReaderClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs>::type_name);
@@ -9598,7 +9598,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedPosPrinter class --------------------
 
-    static PyObject* _new_ClaimedPosPrinter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedPosPrinter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinter>::type_name);
@@ -10234,7 +10234,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedPosPrinterClosedEventArgs class --------------------
 
-    static PyObject* _new_ClaimedPosPrinterClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedPosPrinterClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs>::type_name);
@@ -10309,7 +10309,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedReceiptPrinter class --------------------
 
-    static PyObject* _new_ClaimedReceiptPrinter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedReceiptPrinter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedReceiptPrinter>::type_name);
@@ -10946,7 +10946,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ClaimedSlipPrinter class --------------------
 
-    static PyObject* _new_ClaimedSlipPrinter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClaimedSlipPrinter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ClaimedSlipPrinter>::type_name);
@@ -11782,7 +11782,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- JournalPrintJob class --------------------
 
-    static PyObject* _new_JournalPrintJob(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JournalPrintJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::JournalPrintJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::JournalPrintJob>::type_name);
@@ -12060,7 +12060,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- JournalPrinterCapabilities class --------------------
 
-    static PyObject* _new_JournalPrinterCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JournalPrinterCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::JournalPrinterCapabilities>::type_name);
@@ -12515,7 +12515,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplay class --------------------
 
-    static PyObject* _new_LineDisplay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplay(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplay>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplay>::type_name);
@@ -12995,7 +12995,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayAttributes class --------------------
 
-    static PyObject* _new_LineDisplayAttributes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayAttributes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayAttributes>::type_name);
@@ -13406,7 +13406,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayCapabilities class --------------------
 
-    static PyObject* _new_LineDisplayCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCapabilities>::type_name);
@@ -13841,7 +13841,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayCursor class --------------------
 
-    static PyObject* _new_LineDisplayCursor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayCursor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCursor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCursor>::type_name);
@@ -14118,7 +14118,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayCursorAttributes class --------------------
 
-    static PyObject* _new_LineDisplayCursorAttributes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayCursorAttributes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCursorAttributes>::type_name);
@@ -14385,7 +14385,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayCustomGlyphs class --------------------
 
-    static PyObject* _new_LineDisplayCustomGlyphs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayCustomGlyphs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayCustomGlyphs>::type_name);
@@ -14533,7 +14533,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayMarquee class --------------------
 
-    static PyObject* _new_LineDisplayMarquee(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayMarquee(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayMarquee>::type_name);
@@ -14814,7 +14814,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayStatisticsCategorySelector class --------------------
 
-    static PyObject* _new_LineDisplayStatisticsCategorySelector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayStatisticsCategorySelector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector>::type_name);
@@ -14949,7 +14949,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayStatusUpdatedEventArgs class --------------------
 
-    static PyObject* _new_LineDisplayStatusUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayStatusUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs>::type_name);
@@ -15044,7 +15044,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayStoredBitmap class --------------------
 
-    static PyObject* _new_LineDisplayStoredBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayStoredBitmap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayStoredBitmap>::type_name);
@@ -15169,7 +15169,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- LineDisplayWindow class --------------------
 
-    static PyObject* _new_LineDisplayWindow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LineDisplayWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::LineDisplayWindow>::type_name);
@@ -15767,7 +15767,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReader class --------------------
 
-    static PyObject* _new_MagneticStripeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReader>::type_name);
@@ -16256,7 +16256,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderAamvaCardDataReceivedEventArgs class --------------------
 
-    static PyObject* _new_MagneticStripeReaderAamvaCardDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderAamvaCardDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs>::type_name);
@@ -16711,7 +16711,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderBankCardDataReceivedEventArgs class --------------------
 
-    static PyObject* _new_MagneticStripeReaderBankCardDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderBankCardDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs>::type_name);
@@ -16966,7 +16966,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderCapabilities class --------------------
 
-    static PyObject* _new_MagneticStripeReaderCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities>::type_name);
@@ -17261,7 +17261,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderCardTypes class --------------------
 
-    static PyObject* _new_MagneticStripeReaderCardTypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderCardTypes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderCardTypes>::type_name);
@@ -17395,7 +17395,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderEncryptionAlgorithms class --------------------
 
-    static PyObject* _new_MagneticStripeReaderEncryptionAlgorithms(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderEncryptionAlgorithms(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderEncryptionAlgorithms>::type_name);
@@ -17509,7 +17509,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderErrorOccurredEventArgs class --------------------
 
-    static PyObject* _new_MagneticStripeReaderErrorOccurredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderErrorOccurredEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs>::type_name);
@@ -17704,7 +17704,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderReport class --------------------
 
-    static PyObject* _new_MagneticStripeReaderReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderReport>::type_name);
@@ -17959,7 +17959,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderStatusUpdatedEventArgs class --------------------
 
-    static PyObject* _new_MagneticStripeReaderStatusUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderStatusUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs>::type_name);
@@ -18074,7 +18074,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderTrackData class --------------------
 
-    static PyObject* _new_MagneticStripeReaderTrackData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderTrackData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderTrackData>::type_name);
@@ -18209,7 +18209,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs class --------------------
 
-    static PyObject* _new_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs>::type_name);
@@ -18304,7 +18304,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinter class --------------------
 
-    static PyObject* _new_PosPrinter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinter>::type_name);
@@ -18835,7 +18835,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinterCapabilities class --------------------
 
-    static PyObject* _new_PosPrinterCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinterCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterCapabilities>::type_name);
@@ -19110,7 +19110,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinterCharacterSetIds class --------------------
 
-    static PyObject* _new_PosPrinterCharacterSetIds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinterCharacterSetIds(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterCharacterSetIds>::type_name);
@@ -19224,7 +19224,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinterFontProperty class --------------------
 
-    static PyObject* _new_PosPrinterFontProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinterFontProperty(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterFontProperty>::type_name);
@@ -20080,7 +20080,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinterReleaseDeviceRequestedEventArgs class --------------------
 
-    static PyObject* _new_PosPrinterReleaseDeviceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinterReleaseDeviceRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs>::type_name);
@@ -20155,7 +20155,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinterStatus class --------------------
 
-    static PyObject* _new_PosPrinterStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinterStatus(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterStatus>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterStatus>::type_name);
@@ -20270,7 +20270,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- PosPrinterStatusUpdatedEventArgs class --------------------
 
-    static PyObject* _new_PosPrinterStatusUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PosPrinterStatusUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs>::type_name);
@@ -20365,7 +20365,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ReceiptPrintJob class --------------------
 
-    static PyObject* _new_ReceiptPrintJob(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ReceiptPrintJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ReceiptPrintJob>::type_name);
@@ -21237,7 +21237,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ReceiptPrinterCapabilities class --------------------
 
-    static PyObject* _new_ReceiptPrinterCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ReceiptPrinterCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ReceiptPrinterCapabilities>::type_name);
@@ -21932,7 +21932,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- SlipPrintJob class --------------------
 
-    static PyObject* _new_SlipPrintJob(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SlipPrintJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::SlipPrintJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::SlipPrintJob>::type_name);
@@ -22688,7 +22688,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- SlipPrinterCapabilities class --------------------
 
-    static PyObject* _new_SlipPrinterCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SlipPrinterCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::SlipPrinterCapabilities>::type_name);
@@ -23545,7 +23545,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ICashDrawerEventSourceEventArgs interface --------------------
 
-    static PyObject* _new_ICashDrawerEventSourceEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICashDrawerEventSourceEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs>::type_name);
@@ -23640,7 +23640,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ICommonClaimedPosPrinterStation interface --------------------
 
-    static PyObject* _new_ICommonClaimedPosPrinterStation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICommonClaimedPosPrinterStation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation>::type_name);
@@ -24147,7 +24147,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ICommonPosPrintStationCapabilities interface --------------------
 
-    static PyObject* _new_ICommonPosPrintStationCapabilities(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICommonPosPrintStationCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities>::type_name);
@@ -24482,7 +24482,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- ICommonReceiptSlipCapabilities interface --------------------
 
-    static PyObject* _new_ICommonReceiptSlipCapabilities(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICommonReceiptSlipCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities>::type_name);
@@ -24997,7 +24997,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- IPosPrinterJob interface --------------------
 
-    static PyObject* _new_IPosPrinterJob(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPosPrinterJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::IPosPrinterJob>::type_name);
@@ -25187,7 +25187,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- IReceiptOrSlipJob interface --------------------
 
-    static PyObject* _new_IReceiptOrSlipJob(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IReceiptOrSlipJob(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::IReceiptOrSlipJob>::type_name);
@@ -25855,7 +25855,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     // ----- SizeUInt32 struct --------------------
 
-    PyObject* _new_SizeUInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_SizeUInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Credentials
 {
     // ----- KeyCredential class --------------------
 
-    static PyObject* _new_KeyCredential(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyCredential(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Credentials::KeyCredential>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::KeyCredential>::type_name);
@@ -215,7 +215,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     // ----- KeyCredentialAttestationResult class --------------------
 
-    static PyObject* _new_KeyCredentialAttestationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyCredentialAttestationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>::type_name);
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     // ----- KeyCredentialManager class --------------------
 
-    static PyObject* _new_KeyCredentialManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyCredentialManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialManager>::type_name);
@@ -541,7 +541,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     // ----- KeyCredentialOperationResult class --------------------
 
-    static PyObject* _new_KeyCredentialOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyCredentialOperationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>::type_name);
@@ -656,7 +656,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     // ----- KeyCredentialRetrievalResult class --------------------
 
-    static PyObject* _new_KeyCredentialRetrievalResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyCredentialRetrievalResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>::type_name);
@@ -2374,7 +2374,7 @@ namespace py::cpp::Windows::Security::Credentials
 
     // ----- IWebAccount interface --------------------
 
-    static PyObject* _new_IWebAccount(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebAccount(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Credentials::IWebAccount>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::IWebAccount>::type_name);

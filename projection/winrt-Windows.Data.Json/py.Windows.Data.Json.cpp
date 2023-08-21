@@ -1033,9 +1033,9 @@ namespace py::cpp::Windows::Data::Json
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Data::Json::IJsonValue> items(length, empty_instance<winrt::Windows::Data::Json::IJsonValue>::get());
+            winrt::com_array<winrt::Windows::Data::Json::IJsonValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Data::Json::IJsonValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -1134,7 +1134,7 @@ namespace py::cpp::Windows::Data::Json
 
     // ----- JsonError class --------------------
 
-    static PyObject* _new_JsonError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JsonError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Json::JsonError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Json::JsonError>::type_name);
@@ -2308,7 +2308,7 @@ namespace py::cpp::Windows::Data::Json
 
     // ----- JsonValue class --------------------
 
-    static PyObject* _new_JsonValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_JsonValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Json::JsonValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Json::JsonValue>::type_name);
@@ -2830,7 +2830,7 @@ namespace py::cpp::Windows::Data::Json
 
     // ----- IJsonValue interface --------------------
 
-    static PyObject* _new_IJsonValue(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IJsonValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Json::IJsonValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Json::IJsonValue>::type_name);

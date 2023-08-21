@@ -8,7 +8,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 {
     // ----- ImageFeatureDescriptor class --------------------
 
-    static PyObject* _new_ImageFeatureDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageFeatureDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>::type_name);
@@ -263,7 +263,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- ImageFeatureValue class --------------------
 
-    static PyObject* _new_ImageFeatureValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageFeatureValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ImageFeatureValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ImageFeatureValue>::type_name);
@@ -410,7 +410,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- LearningModel class --------------------
 
-    static PyObject* _new_LearningModel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LearningModel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::LearningModel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::LearningModel>::type_name);
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- LearningModelEvaluationResult class --------------------
 
-    static PyObject* _new_LearningModelEvaluationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LearningModelEvaluationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>::type_name);
@@ -2256,7 +2256,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- MapFeatureDescriptor class --------------------
 
-    static PyObject* _new_MapFeatureDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapFeatureDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>::type_name);
@@ -2451,7 +2451,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- SequenceFeatureDescriptor class --------------------
 
-    static PyObject* _new_SequenceFeatureDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SequenceFeatureDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>::type_name);
@@ -2626,7 +2626,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorBoolean class --------------------
 
-    static PyObject* _new_TensorBoolean(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorBoolean(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorBoolean>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorBoolean>::type_name);
@@ -3056,7 +3056,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorDouble class --------------------
 
-    static PyObject* _new_TensorDouble(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorDouble(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorDouble>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorDouble>::type_name);
@@ -3486,7 +3486,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorFeatureDescriptor class --------------------
 
-    static PyObject* _new_TensorFeatureDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorFeatureDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>::type_name);
@@ -3681,7 +3681,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorFloat class --------------------
 
-    static PyObject* _new_TensorFloat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorFloat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorFloat>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorFloat>::type_name);
@@ -4111,7 +4111,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorFloat16Bit class --------------------
 
-    static PyObject* _new_TensorFloat16Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorFloat16Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>::type_name);
@@ -4541,7 +4541,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorInt16Bit class --------------------
 
-    static PyObject* _new_TensorInt16Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorInt16Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt16Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt16Bit>::type_name);
@@ -4971,7 +4971,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorInt32Bit class --------------------
 
-    static PyObject* _new_TensorInt32Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorInt32Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt32Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt32Bit>::type_name);
@@ -5401,7 +5401,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorInt64Bit class --------------------
 
-    static PyObject* _new_TensorInt64Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorInt64Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt64Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt64Bit>::type_name);
@@ -5831,7 +5831,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorInt8Bit class --------------------
 
-    static PyObject* _new_TensorInt8Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorInt8Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt8Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorInt8Bit>::type_name);
@@ -6261,7 +6261,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorString class --------------------
 
-    static PyObject* _new_TensorString(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorString(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorString>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorString>::type_name);
@@ -6658,7 +6658,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorUInt16Bit class --------------------
 
-    static PyObject* _new_TensorUInt16Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorUInt16Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>::type_name);
@@ -7088,7 +7088,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorUInt32Bit class --------------------
 
-    static PyObject* _new_TensorUInt32Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorUInt32Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>::type_name);
@@ -7518,7 +7518,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorUInt64Bit class --------------------
 
-    static PyObject* _new_TensorUInt64Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorUInt64Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>::type_name);
@@ -7948,7 +7948,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- TensorUInt8Bit class --------------------
 
-    static PyObject* _new_TensorUInt8Bit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TensorUInt8Bit(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>::type_name);
@@ -8378,7 +8378,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- ILearningModelFeatureDescriptor interface --------------------
 
-    static PyObject* _new_ILearningModelFeatureDescriptor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILearningModelFeatureDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>::type_name);
@@ -8533,7 +8533,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- ILearningModelFeatureValue interface --------------------
 
-    static PyObject* _new_ILearningModelFeatureValue(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILearningModelFeatureValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>::type_name);
@@ -8628,7 +8628,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- ILearningModelOperatorProvider interface --------------------
 
-    static PyObject* _new_ILearningModelOperatorProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILearningModelOperatorProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>::type_name);
@@ -8703,7 +8703,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     // ----- ITensor interface --------------------
 
-    static PyObject* _new_ITensor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::AI::MachineLearning::ITensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::ITensor>::type_name);

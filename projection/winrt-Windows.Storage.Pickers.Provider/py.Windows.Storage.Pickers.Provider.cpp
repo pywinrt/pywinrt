@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 {
     // ----- FileOpenPickerUI class --------------------
 
-    static PyObject* _new_FileOpenPickerUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileOpenPickerUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>::type_name);
@@ -411,7 +411,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- FileRemovedEventArgs class --------------------
 
-    static PyObject* _new_FileRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>::type_name);
@@ -506,7 +506,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- FileSavePickerUI class --------------------
 
-    static PyObject* _new_FileSavePickerUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileSavePickerUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>::type_name);
@@ -811,7 +811,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- PickerClosingDeferral class --------------------
 
-    static PyObject* _new_PickerClosingDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PickerClosingDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>::type_name);
@@ -917,7 +917,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- PickerClosingEventArgs class --------------------
 
-    static PyObject* _new_PickerClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PickerClosingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>::type_name);
@@ -1032,7 +1032,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- PickerClosingOperation class --------------------
 
-    static PyObject* _new_PickerClosingOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PickerClosingOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>::type_name);
@@ -1157,7 +1157,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- TargetFileRequest class --------------------
 
-    static PyObject* _new_TargetFileRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetFileRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>::type_name);
@@ -1310,7 +1310,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- TargetFileRequestDeferral class --------------------
 
-    static PyObject* _new_TargetFileRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetFileRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>::type_name);
@@ -1416,7 +1416,7 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
 
     // ----- TargetFileRequestedEventArgs class --------------------
 
-    static PyObject* _new_TargetFileRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TargetFileRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>::type_name);

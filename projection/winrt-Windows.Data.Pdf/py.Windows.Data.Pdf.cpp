@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Data::Pdf
 {
     // ----- PdfDocument class --------------------
 
-    static PyObject* _new_PdfDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PdfDocument(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Pdf::PdfDocument>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Pdf::PdfDocument>::type_name);
@@ -261,7 +261,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     // ----- PdfPage class --------------------
 
-    static PyObject* _new_PdfPage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PdfPage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Pdf::PdfPage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Pdf::PdfPage>::type_name);
@@ -572,7 +572,7 @@ namespace py::cpp::Windows::Data::Pdf
 
     // ----- PdfPageDimensions class --------------------
 
-    static PyObject* _new_PdfPageDimensions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PdfPageDimensions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>::type_name);

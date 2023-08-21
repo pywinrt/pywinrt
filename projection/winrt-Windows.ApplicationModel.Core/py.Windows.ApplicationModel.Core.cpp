@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 {
     // ----- AppListEntry class --------------------
 
-    static PyObject* _new_AppListEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppListEntry(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>::type_name);
@@ -205,7 +205,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- CoreApplication class --------------------
 
-    static PyObject* _new_CoreApplication(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreApplication(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>::type_name);
@@ -1012,7 +1012,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- CoreApplicationView class --------------------
 
-    static PyObject* _new_CoreApplicationView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreApplicationView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>::type_name);
@@ -1337,7 +1337,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- CoreApplicationViewTitleBar class --------------------
 
-    static PyObject* _new_CoreApplicationViewTitleBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreApplicationViewTitleBar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>::type_name);
@@ -1630,7 +1630,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- HostedViewClosingEventArgs class --------------------
 
-    static PyObject* _new_HostedViewClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HostedViewClosingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>::type_name);
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- UnhandledError class --------------------
 
-    static PyObject* _new_UnhandledError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UnhandledError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>::type_name);
@@ -1861,7 +1861,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- UnhandledErrorDetectedEventArgs class --------------------
 
-    static PyObject* _new_UnhandledErrorDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UnhandledErrorDetectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>::type_name);
@@ -1956,7 +1956,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- ICoreApplicationUnhandledError interface --------------------
 
-    static PyObject* _new_ICoreApplicationUnhandledError(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreApplicationUnhandledError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::type_name);
@@ -2076,7 +2076,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- IFrameworkView interface --------------------
 
-    static PyObject* _new_IFrameworkView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IFrameworkView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::type_name);
@@ -2312,7 +2312,7 @@ namespace py::cpp::Windows::ApplicationModel::Core
 
     // ----- IFrameworkViewSource interface --------------------
 
-    static PyObject* _new_IFrameworkViewSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IFrameworkViewSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::type_name);

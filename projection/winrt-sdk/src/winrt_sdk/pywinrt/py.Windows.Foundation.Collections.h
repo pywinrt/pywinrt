@@ -1867,9 +1867,9 @@ namespace py::impl::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                winrt::com_array<T> items(length, empty_instance<T>::get());
+                winrt::com_array<T> items(static_cast<uint32_t>(length), empty_instance<T>::get());
 
-                auto count = _obj.GetMany(start, items);
+                auto count = _obj.GetMany(static_cast<uint32_t>(start), items);
 
                 if (count != length)
                 {
@@ -2139,9 +2139,9 @@ namespace py::impl::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                winrt::com_array<T> items(length, empty_instance<T>::get());
+                winrt::com_array<T> items(static_cast<uint32_t>(length), empty_instance<T>::get());
 
-                auto count = _obj.GetMany(start, items);
+                auto count = _obj.GetMany(static_cast<uint32_t>(start), items);
 
                 if (count != length)
                 {
@@ -2640,9 +2640,9 @@ namespace py::impl::Windows::Foundation::Collections
                     return nullptr;
                 }
 
-                winrt::com_array<T> items(length, empty_instance<T>::get());
+                winrt::com_array<T> items(static_cast<uint32_t>(length), empty_instance<T>::get());
 
-                auto count = _obj.GetMany(start, items);
+                auto count = _obj.GetMany(static_cast<uint32_t>(start), items);
 
                 if (count != length)
                 {

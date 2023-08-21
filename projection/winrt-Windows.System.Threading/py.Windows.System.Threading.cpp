@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Threading
 {
     // ----- ThreadPool class --------------------
 
-    static PyObject* _new_ThreadPool(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ThreadPool(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Threading::ThreadPool>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Threading::ThreadPool>::type_name);
@@ -117,7 +117,7 @@ namespace py::cpp::Windows::System::Threading
 
     // ----- ThreadPoolTimer class --------------------
 
-    static PyObject* _new_ThreadPoolTimer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ThreadPoolTimer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Threading::ThreadPoolTimer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Threading::ThreadPoolTimer>::type_name);

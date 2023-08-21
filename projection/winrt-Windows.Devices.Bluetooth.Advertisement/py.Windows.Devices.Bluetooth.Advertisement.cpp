@@ -792,7 +792,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     // ----- BluetoothLEAdvertisementDataTypes class --------------------
 
-    static PyObject* _new_BluetoothLEAdvertisementDataTypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BluetoothLEAdvertisementDataTypes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataTypes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataTypes>::type_name);
@@ -1902,7 +1902,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     // ----- BluetoothLEAdvertisementPublisherStatusChangedEventArgs class --------------------
 
-    static PyObject* _new_BluetoothLEAdvertisementPublisherStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BluetoothLEAdvertisementPublisherStatusChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>::type_name);
@@ -2037,7 +2037,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     // ----- BluetoothLEAdvertisementReceivedEventArgs class --------------------
 
-    static PyObject* _new_BluetoothLEAdvertisementReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BluetoothLEAdvertisementReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>::type_name);
@@ -2908,7 +2908,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 
     // ----- BluetoothLEAdvertisementWatcherStoppedEventArgs class --------------------
 
-    static PyObject* _new_BluetoothLEAdvertisementWatcherStoppedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BluetoothLEAdvertisementWatcherStoppedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>::type_name);

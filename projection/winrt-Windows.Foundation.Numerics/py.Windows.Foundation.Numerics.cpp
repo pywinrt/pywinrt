@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 {
     // ----- Matrix3x2 struct --------------------
 
-    PyObject* _new_Matrix3x2(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Matrix3x2(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -292,7 +292,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Matrix4x4 struct --------------------
 
-    PyObject* _new_Matrix4x4(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Matrix4x4(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -926,7 +926,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Plane struct --------------------
 
-    PyObject* _new_Plane(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Plane(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Quaternion struct --------------------
 
-    PyObject* _new_Quaternion(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Quaternion(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1284,7 +1284,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Rational struct --------------------
 
-    PyObject* _new_Rational(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Rational(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1428,7 +1428,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector2 struct --------------------
 
-    PyObject* _new_Vector2(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Vector2(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1572,7 +1572,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector3 struct --------------------
 
-    PyObject* _new_Vector3(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Vector3(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1751,7 +1751,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     // ----- Vector4 struct --------------------
 
-    PyObject* _new_Vector4(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Vector4(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

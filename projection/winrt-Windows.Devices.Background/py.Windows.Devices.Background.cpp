@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Background
 {
     // ----- DeviceServicingDetails class --------------------
 
-    static PyObject* _new_DeviceServicingDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeviceServicingDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Devices::Background
 
     // ----- DeviceUseDetails class --------------------
 
-    static PyObject* _new_DeviceUseDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeviceUseDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Background::DeviceUseDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Background::DeviceUseDetails>::type_name);

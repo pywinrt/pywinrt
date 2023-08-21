@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 {
     // ----- FindAllAccountsResult class --------------------
 
-    static PyObject* _new_FindAllAccountsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FindAllAccountsResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     // ----- WebAccountEventArgs class --------------------
 
-    static PyObject* _new_WebAccountEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAccountEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>::type_name);
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     // ----- WebAccountMonitor class --------------------
 
-    static PyObject* _new_WebAccountMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAccountMonitor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor>::type_name);
@@ -493,7 +493,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     // ----- WebAuthenticationCoreManager class --------------------
 
-    static PyObject* _new_WebAuthenticationCoreManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAuthenticationCoreManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>::type_name);
@@ -1379,7 +1379,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
 
     // ----- WebTokenRequestResult class --------------------
 
-    static PyObject* _new_WebTokenRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebTokenRequestResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult>::type_name);

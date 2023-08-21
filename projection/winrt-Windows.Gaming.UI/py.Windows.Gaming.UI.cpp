@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Gaming::UI
 {
     // ----- GameBar class --------------------
 
-    static PyObject* _new_GameBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameBar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::UI::GameBar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameBar>::type_name);
@@ -192,7 +192,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     // ----- GameChatMessageReceivedEventArgs class --------------------
 
-    static PyObject* _new_GameChatMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameChatMessageReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>::type_name);
@@ -367,7 +367,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     // ----- GameChatOverlay class --------------------
 
-    static PyObject* _new_GameChatOverlay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameChatOverlay(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::UI::GameChatOverlay>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameChatOverlay>::type_name);
@@ -730,7 +730,7 @@ namespace py::cpp::Windows::Gaming::UI
 
     // ----- GameUIProviderActivatedEventArgs class --------------------
 
-    static PyObject* _new_GameUIProviderActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GameUIProviderActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>::type_name);

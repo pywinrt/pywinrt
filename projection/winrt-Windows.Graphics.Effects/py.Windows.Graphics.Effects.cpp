@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Effects
 {
     // ----- IGraphicsEffect interface --------------------
 
-    static PyObject* _new_IGraphicsEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGraphicsEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>::type_name);
@@ -131,7 +131,7 @@ namespace py::cpp::Windows::Graphics::Effects
 
     // ----- IGraphicsEffectSource interface --------------------
 
-    static PyObject* _new_IGraphicsEffectSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGraphicsEffectSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>::type_name);

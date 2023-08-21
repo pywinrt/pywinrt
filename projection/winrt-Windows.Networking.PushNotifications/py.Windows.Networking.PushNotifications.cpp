@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 {
     // ----- PushNotificationChannel class --------------------
 
-    static PyObject* _new_PushNotificationChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PushNotificationChannel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>::type_name);
@@ -199,7 +199,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     // ----- PushNotificationChannelManager class --------------------
 
-    static PyObject* _new_PushNotificationChannelManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PushNotificationChannelManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>::type_name);
@@ -422,7 +422,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     // ----- PushNotificationChannelManagerForUser class --------------------
 
-    static PyObject* _new_PushNotificationChannelManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PushNotificationChannelManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>::type_name);
@@ -654,7 +654,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     // ----- PushNotificationChannelsRevokedEventArgs class --------------------
 
-    static PyObject* _new_PushNotificationChannelsRevokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PushNotificationChannelsRevokedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>::type_name);
@@ -729,7 +729,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     // ----- PushNotificationReceivedEventArgs class --------------------
 
-    static PyObject* _new_PushNotificationReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PushNotificationReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>::type_name);
@@ -952,7 +952,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     // ----- RawNotification class --------------------
 
-    static PyObject* _new_RawNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RawNotification(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::RawNotification>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::RawNotification>::type_name);

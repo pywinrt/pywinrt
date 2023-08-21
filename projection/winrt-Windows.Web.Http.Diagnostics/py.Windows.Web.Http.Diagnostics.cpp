@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 {
     // ----- HttpDiagnosticProvider class --------------------
 
-    static PyObject* _new_HttpDiagnosticProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDiagnosticProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>::type_name);
@@ -312,7 +312,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     // ----- HttpDiagnosticProviderRequestResponseCompletedEventArgs class --------------------
 
-    static PyObject* _new_HttpDiagnosticProviderRequestResponseCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDiagnosticProviderRequestResponseCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>::type_name);
@@ -527,7 +527,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     // ----- HttpDiagnosticProviderRequestResponseTimestamps class --------------------
 
-    static PyObject* _new_HttpDiagnosticProviderRequestResponseTimestamps(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDiagnosticProviderRequestResponseTimestamps(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>::type_name);
@@ -782,7 +782,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     // ----- HttpDiagnosticProviderRequestSentEventArgs class --------------------
 
-    static PyObject* _new_HttpDiagnosticProviderRequestSentEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDiagnosticProviderRequestSentEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>::type_name);
@@ -997,7 +997,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     // ----- HttpDiagnosticProviderResponseReceivedEventArgs class --------------------
 
-    static PyObject* _new_HttpDiagnosticProviderResponseReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDiagnosticProviderResponseReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>::type_name);
@@ -1132,7 +1132,7 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
 
     // ----- HttpDiagnosticSourceLocation class --------------------
 
-    static PyObject* _new_HttpDiagnosticSourceLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDiagnosticSourceLocation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>::type_name);

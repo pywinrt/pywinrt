@@ -866,7 +866,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- AutomationPeer class --------------------
 
-    static PyObject* _new_AutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>::type_name);
@@ -4545,7 +4545,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ButtonBaseAutomationPeer class --------------------
 
-    static PyObject* _new_ButtonBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ButtonBaseAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>::type_name);
@@ -6018,7 +6018,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- DatePickerFlyoutPresenterAutomationPeer class --------------------
 
-    static PyObject* _new_DatePickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DatePickerFlyoutPresenterAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>::type_name);
@@ -7689,7 +7689,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- InkToolbarAutomationPeer class --------------------
 
-    static PyObject* _new_InkToolbarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InkToolbarAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>::type_name);
@@ -8461,7 +8461,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListPickerFlyoutPresenterAutomationPeer class --------------------
 
-    static PyObject* _new_ListPickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ListPickerFlyoutPresenterAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>::type_name);
@@ -8774,7 +8774,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- ListViewBaseHeaderItemAutomationPeer class --------------------
 
-    static PyObject* _new_ListViewBaseHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ListViewBaseHeaderItemAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>::type_name);
@@ -9178,7 +9178,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- LoopingSelectorAutomationPeer class --------------------
 
-    static PyObject* _new_LoopingSelectorAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoopingSelectorAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>::type_name);
@@ -9627,7 +9627,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- LoopingSelectorItemAutomationPeer class --------------------
 
-    static PyObject* _new_LoopingSelectorItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoopingSelectorItemAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>::type_name);
@@ -9866,7 +9866,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- LoopingSelectorItemDataAutomationPeer class --------------------
 
-    static PyObject* _new_LoopingSelectorItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoopingSelectorItemDataAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>::type_name);
@@ -9972,7 +9972,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- MapControlAutomationPeer class --------------------
 
-    static PyObject* _new_MapControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapControlAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>::type_name);
@@ -11676,7 +11676,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- PickerFlyoutPresenterAutomationPeer class --------------------
 
-    static PyObject* _new_PickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PickerFlyoutPresenterAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>::type_name);
@@ -15341,7 +15341,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- TimePickerFlyoutPresenterAutomationPeer class --------------------
 
-    static PyObject* _new_TimePickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimePickerFlyoutPresenterAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>::type_name);
@@ -16146,7 +16146,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     // ----- RawElementProviderRuntimeId struct --------------------
 
-    PyObject* _new_RawElementProviderRuntimeId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_RawElementProviderRuntimeId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

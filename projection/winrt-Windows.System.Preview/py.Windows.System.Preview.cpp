@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Preview
 {
     // ----- TwoPanelHingedDevicePosturePreview class --------------------
 
-    static PyObject* _new_TwoPanelHingedDevicePosturePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TwoPanelHingedDevicePosturePreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>::type_name);
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::System::Preview
 
     // ----- TwoPanelHingedDevicePosturePreviewReading class --------------------
 
-    static PyObject* _new_TwoPanelHingedDevicePosturePreviewReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TwoPanelHingedDevicePosturePreviewReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>::type_name);
@@ -383,7 +383,7 @@ namespace py::cpp::Windows::System::Preview
 
     // ----- TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 {
     // ----- HolographicCamera class --------------------
 
-    static PyObject* _new_HolographicCamera(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicCamera(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCamera>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCamera>::type_name);
@@ -513,7 +513,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicCameraPose class --------------------
 
-    static PyObject* _new_HolographicCameraPose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicCameraPose(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>::type_name);
@@ -885,7 +885,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicCameraRenderingParameters class --------------------
 
-    static PyObject* _new_HolographicCameraRenderingParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicCameraRenderingParameters(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>::type_name);
@@ -1258,7 +1258,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicCameraViewportParameters class --------------------
 
-    static PyObject* _new_HolographicCameraViewportParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicCameraViewportParameters(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>::type_name);
@@ -1373,7 +1373,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicDisplay class --------------------
 
-    static PyObject* _new_HolographicDisplay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicDisplay(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>::type_name);
@@ -1650,7 +1650,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrame class --------------------
 
-    static PyObject* _new_HolographicFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrame>::type_name);
@@ -2001,7 +2001,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFramePrediction class --------------------
 
-    static PyObject* _new_HolographicFramePrediction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFramePrediction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>::type_name);
@@ -2116,7 +2116,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFramePresentationMonitor class --------------------
 
-    static PyObject* _new_HolographicFramePresentationMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFramePresentationMonitor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>::type_name);
@@ -2274,7 +2274,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFramePresentationReport class --------------------
 
-    static PyObject* _new_HolographicFramePresentationReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFramePresentationReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>::type_name);
@@ -2449,7 +2449,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrameRenderingReport class --------------------
 
-    static PyObject* _new_HolographicFrameRenderingReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFrameRenderingReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>::type_name);
@@ -2624,7 +2624,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrameScanoutMonitor class --------------------
 
-    static PyObject* _new_HolographicFrameScanoutMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFrameScanoutMonitor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>::type_name);
@@ -2782,7 +2782,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrameScanoutReport class --------------------
 
-    static PyObject* _new_HolographicFrameScanoutReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicFrameScanoutReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>::type_name);
@@ -3165,7 +3165,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicQuadLayerUpdateParameters class --------------------
 
-    static PyObject* _new_HolographicQuadLayerUpdateParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicQuadLayerUpdateParameters(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>::type_name);
@@ -3488,7 +3488,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicSpace class --------------------
 
-    static PyObject* _new_HolographicSpace(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicSpace(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpace>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpace>::type_name);
@@ -4086,7 +4086,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicSpaceCameraAddedEventArgs class --------------------
 
-    static PyObject* _new_HolographicSpaceCameraAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicSpaceCameraAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>::type_name);
@@ -4211,7 +4211,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicSpaceCameraRemovedEventArgs class --------------------
 
-    static PyObject* _new_HolographicSpaceCameraRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicSpaceCameraRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>::type_name);
@@ -4306,7 +4306,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicViewConfiguration class --------------------
 
-    static PyObject* _new_HolographicViewConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HolographicViewConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>::type_name);
@@ -4669,7 +4669,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicAdapterId struct --------------------
 
-    PyObject* _new_HolographicAdapterId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_HolographicAdapterId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4813,7 +4813,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrameId struct --------------------
 
-    PyObject* _new_HolographicFrameId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_HolographicFrameId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4922,7 +4922,7 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicStereoTransform struct --------------------
 
-    PyObject* _new_HolographicStereoTransform(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_HolographicStereoTransform(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

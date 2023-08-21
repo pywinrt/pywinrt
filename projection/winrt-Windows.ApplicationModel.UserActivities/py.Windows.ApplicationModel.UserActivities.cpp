@@ -897,7 +897,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivityChannel class --------------------
 
-    static PyObject* _new_UserActivityChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivityChannel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>::type_name);
@@ -1256,7 +1256,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivityContentInfo class --------------------
 
-    static PyObject* _new_UserActivityContentInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivityContentInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>::type_name);
@@ -1393,7 +1393,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivityRequest class --------------------
 
-    static PyObject* _new_UserActivityRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivityRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>::type_name);
@@ -1501,7 +1501,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivityRequestManager class --------------------
 
-    static PyObject* _new_UserActivityRequestManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivityRequestManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>::type_name);
@@ -1651,7 +1651,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivityRequestedEventArgs class --------------------
 
-    static PyObject* _new_UserActivityRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivityRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>::type_name);
@@ -1776,7 +1776,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivitySession class --------------------
 
-    static PyObject* _new_UserActivitySession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivitySession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>::type_name);
@@ -1924,7 +1924,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivitySessionHistoryItem class --------------------
 
-    static PyObject* _new_UserActivitySessionHistoryItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivitySessionHistoryItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>::type_name);
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- UserActivityVisualElements class --------------------
 
-    static PyObject* _new_UserActivityVisualElements(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserActivityVisualElements(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>::type_name);
@@ -2422,7 +2422,7 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
 
     // ----- IUserActivityContentInfo interface --------------------
 
-    static PyObject* _new_IUserActivityContentInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IUserActivityContentInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>::type_name);

@@ -12,9 +12,9 @@ set(PYWINRT_SITE_PACKAGES_DIR "." CACHE STRING "Python site-packages install pre
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 if (MSVC)
-    add_compile_options(/bigobj /permissive- /EHsc)
+    add_compile_options(/bigobj /permissive- /EHsc /W4 /WX)
 else()
-    add_compile_options(-Werror)
+    add_compile_options(-Werror -Wall -Wextra)
 
     if (MINGW)
         add_definitions(-D_WIN32_WINNT=_WIN32_WINNT_WIN10)

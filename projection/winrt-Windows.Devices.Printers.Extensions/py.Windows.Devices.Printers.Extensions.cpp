@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 {
     // ----- Print3DWorkflow class --------------------
 
-    static PyObject* _new_Print3DWorkflow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DWorkflow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>::type_name);
@@ -271,7 +271,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- Print3DWorkflowPrintRequestedEventArgs class --------------------
 
-    static PyObject* _new_Print3DWorkflowPrintRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DWorkflowPrintRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>::type_name);
@@ -465,7 +465,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- Print3DWorkflowPrinterChangedEventArgs class --------------------
 
-    static PyObject* _new_Print3DWorkflowPrinterChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DWorkflowPrinterChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>::type_name);
@@ -560,7 +560,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- PrintExtensionContext class --------------------
 
-    static PyObject* _new_PrintExtensionContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintExtensionContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>::type_name);
@@ -626,7 +626,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- PrintNotificationEventDetails class --------------------
 
-    static PyObject* _new_PrintNotificationEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintNotificationEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>::type_name);
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- PrintTaskConfiguration class --------------------
 
-    static PyObject* _new_PrintTaskConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>::type_name);
@@ -909,7 +909,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- PrintTaskConfigurationSaveRequest class --------------------
 
-    static PyObject* _new_PrintTaskConfigurationSaveRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskConfigurationSaveRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>::type_name);
@@ -1098,7 +1098,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- PrintTaskConfigurationSaveRequestedDeferral class --------------------
 
-    static PyObject* _new_PrintTaskConfigurationSaveRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskConfigurationSaveRequestedDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>::type_name);
@@ -1204,7 +1204,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     // ----- PrintTaskConfigurationSaveRequestedEventArgs class --------------------
 
-    static PyObject* _new_PrintTaskConfigurationSaveRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PrintTaskConfigurationSaveRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>::type_name);

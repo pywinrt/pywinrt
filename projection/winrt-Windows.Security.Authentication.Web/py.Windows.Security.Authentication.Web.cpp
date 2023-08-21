@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 {
     // ----- WebAuthenticationBroker class --------------------
 
-    static PyObject* _new_WebAuthenticationBroker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAuthenticationBroker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>::type_name);
@@ -259,7 +259,7 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     // ----- WebAuthenticationResult class --------------------
 
-    static PyObject* _new_WebAuthenticationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebAuthenticationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>::type_name);

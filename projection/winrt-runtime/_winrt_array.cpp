@@ -88,6 +88,12 @@ namespace py::cpp::_winrt
     static PyObject* Array_tp_new(
         PyTypeObject* subtype, PyObject* args, PyObject* kwds) noexcept
     {
+        if (kwds)
+        {
+            PyErr_SetString(PyExc_TypeError, "keyword arguments are not supported");
+            return nullptr;
+        }
+
         auto self = Array_Alloc(subtype);
 
         if (!self)
@@ -269,7 +275,7 @@ namespace py::cpp::_winrt
                     return nullptr;
                 }
 
-                uint32_t size = count;
+                auto size = static_cast<uint32_t>(count);
 
                 if (size != count)
                 {
@@ -299,7 +305,7 @@ namespace py::cpp::_winrt
                 = std::unique_ptr<Py_buffer, decltype(&PyBuffer_Release)>;
             py_buffer_ptr{&view, &PyBuffer_Release};
 
-            if (view.itemsize != self->array->ValueSize())
+            if (view.itemsize != static_cast<Py_ssize_t>(self->array->ValueSize()))
             {
                 PyErr_SetString(PyExc_TypeError, "itemsize is incorrect");
                 return nullptr;
@@ -314,7 +320,7 @@ namespace py::cpp::_winrt
                 return nullptr;
             }
 
-            uint32_t const size = view.len / view.itemsize;
+            auto const size = static_cast<uint32_t>(view.len / view.itemsize);
 
             if (size != view.len / view.itemsize)
             {
@@ -356,9 +362,9 @@ namespace py::cpp::_winrt
 
         if (PyList_CheckExact(arg1) || PyTuple_CheckExact(arg1))
         {
-            Py_ssize_t count = PySequence_Fast_GET_SIZE(arg1);
+            auto count = PySequence_Fast_GET_SIZE(arg1);
 
-            uint32_t size = count;
+            auto size = static_cast<uint32_t>(count);
 
             if (size != count)
             {
@@ -421,7 +427,7 @@ namespace py::cpp::_winrt
            {}};
 
     // needed for collections.abc.MutableSequence
-    static PyObject* Array_insert(PyObject* self, PyObject* args)
+    static PyObject* Array_insert(PyObject* /*unused*/, PyObject* /*unused*/)
     {
         PyErr_SetString(PyExc_TypeError, "'Array' type does not support inserting");
         return nullptr;
@@ -444,7 +450,8 @@ namespace py::cpp::_winrt
 
     PyObject* Array_sq_item(Array* self, Py_ssize_t index) noexcept
     {
-        return self->array->At(index);
+        WINRT_ASSERT(index >= 0);
+        return self->array->At(static_cast<uint32_t>(index));
     }
 
     int Array_sq_ass_item(Array* self, Py_ssize_t index, PyObject* value) noexcept

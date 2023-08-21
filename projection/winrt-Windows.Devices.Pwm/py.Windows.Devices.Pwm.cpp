@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Pwm
 {
     // ----- PwmController class --------------------
 
-    static PyObject* _new_PwmController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PwmController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Pwm::PwmController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Pwm::PwmController>::type_name);
@@ -371,7 +371,7 @@ namespace py::cpp::Windows::Devices::Pwm
 
     // ----- PwmPin class --------------------
 
-    static PyObject* _new_PwmPin(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PwmPin(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Pwm::PwmPin>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Pwm::PwmPin>::type_name);

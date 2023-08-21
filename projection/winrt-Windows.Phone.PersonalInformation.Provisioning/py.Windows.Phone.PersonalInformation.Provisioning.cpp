@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 {
     // ----- ContactPartnerProvisioningManager class --------------------
 
-    static PyObject* _new_ContactPartnerProvisioningManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactPartnerProvisioningManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>::type_name);
@@ -142,7 +142,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation::Provisioning
 
     // ----- MessagePartnerProvisioningManager class --------------------
 
-    static PyObject* _new_MessagePartnerProvisioningManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MessagePartnerProvisioningManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>::type_name);

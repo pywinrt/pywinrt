@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 {
     // ----- UserDataAccountPartnerAccountInfo class --------------------
 
-    static PyObject* _new_UserDataAccountPartnerAccountInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataAccountPartnerAccountInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     // ----- UserDataAccountProviderAddAccountOperation class --------------------
 
-    static PyObject* _new_UserDataAccountProviderAddAccountOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataAccountProviderAddAccountOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation>::type_name);
@@ -311,7 +311,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     // ----- UserDataAccountProviderResolveErrorsOperation class --------------------
 
-    static PyObject* _new_UserDataAccountProviderResolveErrorsOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataAccountProviderResolveErrorsOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation>::type_name);
@@ -457,7 +457,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     // ----- UserDataAccountProviderSettingsOperation class --------------------
 
-    static PyObject* _new_UserDataAccountProviderSettingsOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataAccountProviderSettingsOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation>::type_name);
@@ -603,7 +603,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
 
     // ----- IUserDataAccountProviderOperation interface --------------------
 
-    static PyObject* _new_IUserDataAccountProviderOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IUserDataAccountProviderOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation>::type_name);

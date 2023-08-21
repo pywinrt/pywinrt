@@ -1145,7 +1145,7 @@ namespace py::cpp::Windows::UI::Popups
 
     // ----- IUICommand interface --------------------
 
-    static PyObject* _new_IUICommand(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IUICommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Popups::IUICommand>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Popups::IUICommand>::type_name);

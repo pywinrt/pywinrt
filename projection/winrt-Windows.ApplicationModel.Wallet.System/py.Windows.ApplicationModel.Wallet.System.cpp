@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 {
     // ----- WalletItemSystemStore class --------------------
 
-    static PyObject* _new_WalletItemSystemStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WalletItemSystemStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore>::type_name);
@@ -286,7 +286,7 @@ namespace py::cpp::Windows::ApplicationModel::Wallet::System
 
     // ----- WalletManagerSystem class --------------------
 
-    static PyObject* _new_WalletManagerSystem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WalletManagerSystem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem>::type_name);

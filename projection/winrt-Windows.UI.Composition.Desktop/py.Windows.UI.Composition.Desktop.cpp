@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
 {
     // ----- DesktopWindowTarget class --------------------
 
-    static PyObject* _new_DesktopWindowTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DesktopWindowTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget>::type_name);

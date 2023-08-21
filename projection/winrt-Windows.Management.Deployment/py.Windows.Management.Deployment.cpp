@@ -877,7 +877,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- AppInstallerManager class --------------------
 
-    static PyObject* _new_AppInstallerManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppInstallerManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::AppInstallerManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::AppInstallerManager>::type_name);
@@ -1967,7 +1967,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- CreateSharedPackageContainerResult class --------------------
 
-    static PyObject* _new_CreateSharedPackageContainerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CreateSharedPackageContainerResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>::type_name);
@@ -2295,7 +2295,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- DeleteSharedPackageContainerResult class --------------------
 
-    static PyObject* _new_DeleteSharedPackageContainerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeleteSharedPackageContainerResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>::type_name);
@@ -2410,7 +2410,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- DeploymentResult class --------------------
 
-    static PyObject* _new_DeploymentResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DeploymentResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::DeploymentResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::DeploymentResult>::type_name);
@@ -4808,7 +4808,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- PackageManagerDebugSettings class --------------------
 
-    static PyObject* _new_PackageManagerDebugSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PackageManagerDebugSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>::type_name);
@@ -4940,7 +4940,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- PackageUserInformation class --------------------
 
-    static PyObject* _new_PackageUserInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PackageUserInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::PackageUserInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::PackageUserInformation>::type_name);
@@ -5055,7 +5055,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- PackageVolume class --------------------
 
-    static PyObject* _new_PackageVolume(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PackageVolume(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::PackageVolume>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::PackageVolume>::type_name);
@@ -6321,7 +6321,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- SharedPackageContainer class --------------------
 
-    static PyObject* _new_SharedPackageContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SharedPackageContainer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainer>::type_name);
@@ -6529,7 +6529,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- SharedPackageContainerManager class --------------------
 
-    static PyObject* _new_SharedPackageContainerManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SharedPackageContainerManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>::type_name);
@@ -7785,7 +7785,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- UpdateSharedPackageContainerResult class --------------------
 
-    static PyObject* _new_UpdateSharedPackageContainerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UpdateSharedPackageContainerResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>::type_name);
@@ -7900,7 +7900,7 @@ namespace py::cpp::Windows::Management::Deployment
 
     // ----- DeploymentProgress struct --------------------
 
-    PyObject* _new_DeploymentProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_DeploymentProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

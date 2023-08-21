@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 {
     // ----- XamlDirect class --------------------
 
-    static PyObject* _new_XamlDirect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_XamlDirect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>::type_name);
@@ -1863,7 +1863,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     // ----- IXamlDirectObject interface --------------------
 
-    static PyObject* _new_IXamlDirectObject(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IXamlDirectObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>::type_name);

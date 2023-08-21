@@ -315,11 +315,11 @@ PyObject* py::convert_datetime(winrt::Windows::Foundation::DateTime value) noexc
             winrt::throw_last_error();
         }
 
-        auto microseconds
-            = std::chrono::time_point_cast<std::chrono::microseconds>(value)
-                  .time_since_epoch()
-                  .count()
-              % 1000;
+        auto microseconds = static_cast<int>(
+            std::chrono::time_point_cast<std::chrono::microseconds>(value)
+                .time_since_epoch()
+                .count()
+            % 1000);
 
         if (!PyDateTimeAPI)
         {

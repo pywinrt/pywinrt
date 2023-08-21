@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::PlayTo
 {
     // ----- CurrentTimeChangeRequestedEventArgs class --------------------
 
-    static PyObject* _new_CurrentTimeChangeRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CurrentTimeChangeRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- MuteChangeRequestedEventArgs class --------------------
 
-    static PyObject* _new_MuteChangeRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MuteChangeRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::MuteChangeRequestedEventArgs>::type_name);
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToConnection class --------------------
 
-    static PyObject* _new_PlayToConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnection>::type_name);
@@ -428,7 +428,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToConnectionErrorEventArgs class --------------------
 
-    static PyObject* _new_PlayToConnectionErrorEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToConnectionErrorEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs>::type_name);
@@ -543,7 +543,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToConnectionStateChangedEventArgs class --------------------
 
-    static PyObject* _new_PlayToConnectionStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToConnectionStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs>::type_name);
@@ -658,7 +658,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToConnectionTransferredEventArgs class --------------------
 
-    static PyObject* _new_PlayToConnectionTransferredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToConnectionTransferredEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs>::type_name);
@@ -773,7 +773,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToManager class --------------------
 
-    static PyObject* _new_PlayToManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToManager>::type_name);
@@ -2202,7 +2202,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToSource class --------------------
 
-    static PyObject* _new_PlayToSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToSource>::type_name);
@@ -2424,7 +2424,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToSourceDeferral class --------------------
 
-    static PyObject* _new_PlayToSourceDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToSourceDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceDeferral>::type_name);
@@ -2530,7 +2530,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToSourceRequest class --------------------
 
-    static PyObject* _new_PlayToSourceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToSourceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceRequest>::type_name);
@@ -2721,7 +2721,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToSourceRequestedEventArgs class --------------------
 
-    static PyObject* _new_PlayToSourceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToSourceRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs>::type_name);
@@ -2816,7 +2816,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlayToSourceSelectedEventArgs class --------------------
 
-    static PyObject* _new_PlayToSourceSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayToSourceSelectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs>::type_name);
@@ -2991,7 +2991,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- PlaybackRateChangeRequestedEventArgs class --------------------
 
-    static PyObject* _new_PlaybackRateChangeRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlaybackRateChangeRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs>::type_name);
@@ -3086,7 +3086,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- SourceChangeRequestedEventArgs class --------------------
 
-    static PyObject* _new_SourceChangeRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SourceChangeRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::SourceChangeRequestedEventArgs>::type_name);
@@ -3361,7 +3361,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     // ----- VolumeChangeRequestedEventArgs class --------------------
 
-    static PyObject* _new_VolumeChangeRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VolumeChangeRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs>::type_name);

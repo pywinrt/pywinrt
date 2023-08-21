@@ -889,14 +889,24 @@ if (!%)
 
     void write_class_new_function(writer& w, TypeDef const& type)
     {
-        w.write(
-            "\nstatic PyObject* _new_%(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept\n{\n",
-            type.TypeName());
+        auto constructors = get_public_constructors(type);
+
+        if (is_static_class(type) || constructors.size() == 0)
+        {
+            w.write(
+                "\nstatic PyObject* _new_%(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept\n{\n",
+                type.TypeName());
+        }
+        else
+        {
+            w.write(
+                "\nstatic PyObject* _new_%(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept\n{\n",
+                type.TypeName());
+        }
 
         {
             writer::indent_guard g{w};
 
-            auto constructors = get_public_constructors(type);
             if (is_static_class(type) || constructors.size() == 0)
             {
                 w.write(
@@ -971,7 +981,7 @@ auto arg_count = PyTuple_Size(args);
         if (category == category::interface_type)
         {
             auto format = R"(
-static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
 {
     static_assert(py::py_type<%>::type_name);
     py::set_invalid_activation_error(py::py_type<%>::type_name);
@@ -1392,9 +1402,9 @@ if (step != 1)
     return nullptr;
 }
 
-winrt::com_array<%> items(length, empty_instance<%>::get());
+winrt::com_array<%> items(static_cast<uint32_t>(length), empty_instance<%>::get());
 
-auto count = %GetMany(start, items);
+auto count = %GetMany(static_cast<uint32_t>(start), items);
 
 if (count != length)
 {
@@ -3161,7 +3171,7 @@ struct pinterface_python_type<%<%>>
     void write_struct_constructor(writer& w, TypeDef const& type)
     {
         w.write(
-            "\nPyObject* _new_@(PyTypeObject* type, PyObject* args, PyObject* kwds)\n{",
+            "\nPyObject* _new_@(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept\n{",
             type.TypeName());
         {
             writer::indent_guard g{w};

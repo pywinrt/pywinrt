@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Playback
 {
     // ----- BackgroundMediaPlayer class --------------------
 
-    static PyObject* _new_BackgroundMediaPlayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundMediaPlayer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>::type_name);
@@ -299,7 +299,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- CurrentMediaPlaybackItemChangedEventArgs class --------------------
 
-    static PyObject* _new_CurrentMediaPlaybackItemChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CurrentMediaPlaybackItemChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>::type_name);
@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaBreakEndedEventArgs class --------------------
 
-    static PyObject* _new_MediaBreakEndedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBreakEndedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>::type_name);
@@ -772,7 +772,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaBreakManager class --------------------
 
-    static PyObject* _new_MediaBreakManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBreakManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakManager>::type_name);
@@ -1131,7 +1131,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaBreakSchedule class --------------------
 
-    static PyObject* _new_MediaBreakSchedule(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBreakSchedule(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakSchedule>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakSchedule>::type_name);
@@ -1453,7 +1453,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaBreakSeekedOverEventArgs class --------------------
 
-    static PyObject* _new_MediaBreakSeekedOverEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBreakSeekedOverEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>::type_name);
@@ -1588,7 +1588,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaBreakSkippedEventArgs class --------------------
 
-    static PyObject* _new_MediaBreakSkippedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBreakSkippedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>::type_name);
@@ -1683,7 +1683,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaBreakStartedEventArgs class --------------------
 
-    static PyObject* _new_MediaBreakStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaBreakStartedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>::type_name);
@@ -1778,7 +1778,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaItemDisplayProperties class --------------------
 
-    static PyObject* _new_MediaItemDisplayProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaItemDisplayProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>::type_name);
@@ -2020,7 +2020,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackAudioTrackList class --------------------
 
-    static PyObject* _new_MediaPlaybackAudioTrackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackAudioTrackList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>::type_name);
@@ -2397,9 +2397,9 @@ namespace py::cpp::Windows::Media::Playback
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Media::Core::AudioTrack> items(length, empty_instance<winrt::Windows::Media::Core::AudioTrack>::get());
+            winrt::com_array<winrt::Windows::Media::Core::AudioTrack> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Media::Core::AudioTrack>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2461,7 +2461,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManager class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>::type_name);
@@ -3254,7 +3254,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>::type_name);
@@ -3427,7 +3427,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerCommandBehavior class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerCommandBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerCommandBehavior(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>::type_name);
@@ -3635,7 +3635,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerFastForwardReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerFastForwardReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerFastForwardReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>::type_name);
@@ -3788,7 +3788,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerNextReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerNextReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerNextReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>::type_name);
@@ -3941,7 +3941,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerPauseReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerPauseReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerPauseReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>::type_name);
@@ -4094,7 +4094,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerPlayReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerPlayReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerPlayReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>::type_name);
@@ -4247,7 +4247,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerPositionReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerPositionReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerPositionReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>::type_name);
@@ -4420,7 +4420,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerPreviousReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerPreviousReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerPreviousReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>::type_name);
@@ -4573,7 +4573,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerRateReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerRateReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerRateReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>::type_name);
@@ -4746,7 +4746,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerRewindReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerRewindReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerRewindReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>::type_name);
@@ -4899,7 +4899,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackCommandManagerShuffleReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackCommandManagerShuffleReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackCommandManagerShuffleReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>::type_name);
@@ -5738,7 +5738,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackItemError class --------------------
 
-    static PyObject* _new_MediaPlaybackItemError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackItemError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>::type_name);
@@ -5853,7 +5853,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackItemFailedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackItemFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackItemFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>::type_name);
@@ -5968,7 +5968,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackItemOpenedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackItemOpenedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackItemOpenedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>::type_name);
@@ -6740,7 +6740,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackSession class --------------------
 
-    static PyObject* _new_MediaPlaybackSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSession>::type_name);
@@ -8106,7 +8106,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackSessionBufferingStartedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlaybackSessionBufferingStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackSessionBufferingStartedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>::type_name);
@@ -8201,7 +8201,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackSessionOutputDegradationPolicyState class --------------------
 
-    static PyObject* _new_MediaPlaybackSessionOutputDegradationPolicyState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackSessionOutputDegradationPolicyState(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>::type_name);
@@ -8296,7 +8296,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackSphericalVideoProjection class --------------------
 
-    static PyObject* _new_MediaPlaybackSphericalVideoProjection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackSphericalVideoProjection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>::type_name);
@@ -8611,7 +8611,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackTimedMetadataTrackList class --------------------
 
-    static PyObject* _new_MediaPlaybackTimedMetadataTrackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackTimedMetadataTrackList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>::type_name);
@@ -9005,9 +9005,9 @@ namespace py::cpp::Windows::Media::Playback
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Media::Core::TimedMetadataTrack> items(length, empty_instance<winrt::Windows::Media::Core::TimedMetadataTrack>::get());
+            winrt::com_array<winrt::Windows::Media::Core::TimedMetadataTrack> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Media::Core::TimedMetadataTrack>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -9070,7 +9070,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlaybackVideoTrackList class --------------------
 
-    static PyObject* _new_MediaPlaybackVideoTrackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlaybackVideoTrackList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>::type_name);
@@ -9447,9 +9447,9 @@ namespace py::cpp::Windows::Media::Playback
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Media::Core::VideoTrack> items(length, empty_instance<winrt::Windows::Media::Core::VideoTrack>::get());
+            winrt::com_array<winrt::Windows::Media::Core::VideoTrack> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Media::Core::VideoTrack>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -11941,7 +11941,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlayerDataReceivedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlayerDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlayerDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>::type_name);
@@ -12036,7 +12036,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlayerFailedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlayerFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlayerFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>::type_name);
@@ -12171,7 +12171,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlayerRateChangedEventArgs class --------------------
 
-    static PyObject* _new_MediaPlayerRateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlayerRateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>::type_name);
@@ -12266,7 +12266,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- MediaPlayerSurface class --------------------
 
-    static PyObject* _new_MediaPlayerSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MediaPlayerSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerSurface>::type_name);
@@ -12630,7 +12630,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- PlaybackMediaMarkerReachedEventArgs class --------------------
 
-    static PyObject* _new_PlaybackMediaMarkerReachedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlaybackMediaMarkerReachedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>::type_name);
@@ -12725,7 +12725,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- PlaybackMediaMarkerSequence class --------------------
 
-    static PyObject* _new_PlaybackMediaMarkerSequence(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlaybackMediaMarkerSequence(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>::type_name);
@@ -12928,7 +12928,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- TimedMetadataPresentationModeChangedEventArgs class --------------------
 
-    static PyObject* _new_TimedMetadataPresentationModeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TimedMetadataPresentationModeChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>::type_name);
@@ -13063,7 +13063,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- IMediaEnginePlaybackSource interface --------------------
 
-    static PyObject* _new_IMediaEnginePlaybackSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaEnginePlaybackSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>::type_name);
@@ -13191,7 +13191,7 @@ namespace py::cpp::Windows::Media::Playback
 
     // ----- IMediaPlaybackSource interface --------------------
 
-    static PyObject* _new_IMediaPlaybackSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMediaPlaybackSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>::type_name);

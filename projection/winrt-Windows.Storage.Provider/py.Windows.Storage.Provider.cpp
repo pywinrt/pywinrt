@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::Provider
 {
     // ----- CachedFileUpdater class --------------------
 
-    static PyObject* _new_CachedFileUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CachedFileUpdater(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdater>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdater>::type_name);
@@ -79,7 +79,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- CachedFileUpdaterUI class --------------------
 
-    static PyObject* _new_CachedFileUpdaterUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CachedFileUpdaterUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>::type_name);
@@ -382,7 +382,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- FileUpdateRequest class --------------------
 
-    static PyObject* _new_FileUpdateRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileUpdateRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequest>::type_name);
@@ -656,7 +656,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- FileUpdateRequestDeferral class --------------------
 
-    static PyObject* _new_FileUpdateRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileUpdateRequestDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>::type_name);
@@ -762,7 +762,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- FileUpdateRequestedEventArgs class --------------------
 
-    static PyObject* _new_FileUpdateRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileUpdateRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>::type_name);
@@ -1431,7 +1431,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- StorageProviderItemProperties class --------------------
 
-    static PyObject* _new_StorageProviderItemProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageProviderItemProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>::type_name);
@@ -3800,7 +3800,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- StorageProviderSyncRootManager class --------------------
 
-    static PyObject* _new_StorageProviderSyncRootManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageProviderSyncRootManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>::type_name);
@@ -4024,7 +4024,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderItemPropertySource interface --------------------
 
-    static PyObject* _new_IStorageProviderItemPropertySource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageProviderItemPropertySource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::type_name);
@@ -4131,7 +4131,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderPropertyCapabilities interface --------------------
 
-    static PyObject* _new_IStorageProviderPropertyCapabilities(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageProviderPropertyCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::type_name);
@@ -4238,7 +4238,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderStatusUISource interface --------------------
 
-    static PyObject* _new_IStorageProviderStatusUISource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageProviderStatusUISource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::type_name);
@@ -4388,7 +4388,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderStatusUISourceFactory interface --------------------
 
-    static PyObject* _new_IStorageProviderStatusUISourceFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageProviderStatusUISourceFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::type_name);
@@ -4495,7 +4495,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderUICommand interface --------------------
 
-    static PyObject* _new_IStorageProviderUICommand(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageProviderUICommand(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::type_name);
@@ -4681,7 +4681,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     // ----- IStorageProviderUriSource interface --------------------
 
-    static PyObject* _new_IStorageProviderUriSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageProviderUriSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::type_name);

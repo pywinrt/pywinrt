@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 {
     // ----- BackPressedEventArgs class --------------------
 
-    static PyObject* _new_BackPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackPressedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>::type_name);
@@ -131,7 +131,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     // ----- CameraEventArgs class --------------------
 
-    static PyObject* _new_CameraEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CameraEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::UI::Input::CameraEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::UI::Input::CameraEventArgs>::type_name);
@@ -206,7 +206,7 @@ namespace py::cpp::Windows::Phone::UI::Input
 
     // ----- HardwareButtons class --------------------
 
-    static PyObject* _new_HardwareButtons(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HardwareButtons(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::UI::Input::HardwareButtons>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::UI::Input::HardwareButtons>::type_name);

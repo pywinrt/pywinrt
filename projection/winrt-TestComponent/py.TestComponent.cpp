@@ -8,7 +8,7 @@ namespace py::cpp::TestComponent
 {
     // ----- TestRunner class --------------------
 
-    static PyObject* _new_TestRunner(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TestRunner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::TestComponent::TestRunner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::TestComponent::TestRunner>::type_name);
@@ -258,7 +258,7 @@ namespace py::cpp::TestComponent
 
     // ----- ITests interface --------------------
 
-    static PyObject* _new_ITests(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITests(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::TestComponent::ITests>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::TestComponent::ITests>::type_name);
@@ -3634,7 +3634,7 @@ namespace py::cpp::TestComponent
 
     // ----- Blittable struct --------------------
 
-    PyObject* _new_Blittable(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Blittable(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4058,7 +4058,7 @@ namespace py::cpp::TestComponent
 
     // ----- Nested struct --------------------
 
-    PyObject* _new_Nested(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Nested(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4202,7 +4202,7 @@ namespace py::cpp::TestComponent
 
     // ----- NonBlittable struct --------------------
 
-    PyObject* _new_NonBlittable(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_NonBlittable(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

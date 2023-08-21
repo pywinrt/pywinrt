@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 {
     // ----- CoreAppWindowPreview class --------------------
 
-    static PyObject* _new_CoreAppWindowPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreAppWindowPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>::type_name);
@@ -115,7 +115,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     // ----- SystemNavigationCloseRequestedPreviewEventArgs class --------------------
 
-    static PyObject* _new_SystemNavigationCloseRequestedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemNavigationCloseRequestedPreviewEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>::type_name);
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::Core::Preview
 
     // ----- SystemNavigationManagerPreview class --------------------
 
-    static PyObject* _new_SystemNavigationManagerPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemNavigationManagerPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>::type_name);

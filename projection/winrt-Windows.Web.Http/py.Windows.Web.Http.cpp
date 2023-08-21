@@ -1711,7 +1711,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpCookieCollection class --------------------
 
-    static PyObject* _new_HttpCookieCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpCookieCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpCookieCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpCookieCollection>::type_name);
@@ -1998,9 +1998,9 @@ namespace py::cpp::Windows::Web::Http
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::HttpCookie> items(length, empty_instance<winrt::Windows::Web::Http::HttpCookie>::get());
+            winrt::com_array<winrt::Windows::Web::Http::HttpCookie> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::HttpCookie>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpCookieManager class --------------------
 
-    static PyObject* _new_HttpCookieManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpCookieManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpCookieManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpCookieManager>::type_name);
@@ -2664,7 +2664,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpGetBufferResult class --------------------
 
-    static PyObject* _new_HttpGetBufferResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpGetBufferResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpGetBufferResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpGetBufferResult>::type_name);
@@ -2936,7 +2936,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpGetInputStreamResult class --------------------
 
-    static PyObject* _new_HttpGetInputStreamResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpGetInputStreamResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>::type_name);
@@ -3208,7 +3208,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpGetStringResult class --------------------
 
-    static PyObject* _new_HttpGetStringResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpGetStringResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpGetStringResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpGetStringResult>::type_name);
@@ -5330,7 +5330,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpRequestResult class --------------------
 
-    static PyObject* _new_HttpRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpRequestResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpRequestResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpRequestResult>::type_name);
@@ -7006,7 +7006,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpTransportInformation class --------------------
 
-    static PyObject* _new_HttpTransportInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpTransportInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::HttpTransportInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpTransportInformation>::type_name);
@@ -7205,7 +7205,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- IHttpContent interface --------------------
 
-    static PyObject* _new_IHttpContent(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IHttpContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::IHttpContent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::IHttpContent>::type_name);
@@ -7549,7 +7549,7 @@ namespace py::cpp::Windows::Web::Http
 
     // ----- HttpProgress struct --------------------
 
-    PyObject* _new_HttpProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_HttpProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

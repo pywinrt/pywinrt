@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 {
     // ----- RequestingFocusOnKeyboardInputEventArgs class --------------------
 
-    static PyObject* _new_RequestingFocusOnKeyboardInputEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RequestingFocusOnKeyboardInputEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>::type_name);
@@ -83,7 +83,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     // ----- SearchSuggestion class --------------------
 
-    static PyObject* _new_SearchSuggestion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchSuggestion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>::type_name);
@@ -778,7 +778,7 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     // ----- SearchSuggestionsRequestedEventArgs class --------------------
 
-    static PyObject* _new_SearchSuggestionsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SearchSuggestionsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>::type_name);

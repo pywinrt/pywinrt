@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Display
 {
     // ----- AdvancedColorInfo class --------------------
 
-    static PyObject* _new_AdvancedColorInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdvancedColorInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>::type_name);
@@ -327,7 +327,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- BrightnessOverride class --------------------
 
-    static PyObject* _new_BrightnessOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BrightnessOverride(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverride>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverride>::type_name);
@@ -851,7 +851,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- BrightnessOverrideSettings class --------------------
 
-    static PyObject* _new_BrightnessOverrideSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BrightnessOverrideSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>::type_name);
@@ -1062,7 +1062,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- ColorOverrideSettings class --------------------
 
-    static PyObject* _new_ColorOverrideSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ColorOverrideSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>::type_name);
@@ -1189,7 +1189,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- DisplayEnhancementOverride class --------------------
 
-    static PyObject* _new_DisplayEnhancementOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayEnhancementOverride(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>::type_name);
@@ -1657,7 +1657,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- DisplayEnhancementOverrideCapabilities class --------------------
 
-    static PyObject* _new_DisplayEnhancementOverrideCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayEnhancementOverrideCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>::type_name);
@@ -1802,7 +1802,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- DisplayEnhancementOverrideCapabilitiesChangedEventArgs class --------------------
 
-    static PyObject* _new_DisplayEnhancementOverrideCapabilitiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayEnhancementOverrideCapabilitiesChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>::type_name);
@@ -1897,7 +1897,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- DisplayInformation class --------------------
 
-    static PyObject* _new_DisplayInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayInformation>::type_name);
@@ -2614,7 +2614,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- DisplayProperties class --------------------
 
-    static PyObject* _new_DisplayProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayProperties>::type_name);
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- DisplayServices class --------------------
 
-    static PyObject* _new_DisplayServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayServices(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayServices>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayServices>::type_name);
@@ -3170,7 +3170,7 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- NitRange struct --------------------
 
-    PyObject* _new_NitRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_NitRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

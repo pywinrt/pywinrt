@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Perception
 {
     // ----- KnownCameraIntrinsicsProperties class --------------------
 
-    static PyObject* _new_KnownCameraIntrinsicsProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownCameraIntrinsicsProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>::type_name);
@@ -142,7 +142,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- KnownPerceptionColorFrameSourceProperties class --------------------
 
-    static PyObject* _new_KnownPerceptionColorFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionColorFrameSourceProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>::type_name);
@@ -256,7 +256,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- KnownPerceptionDepthFrameSourceProperties class --------------------
 
-    static PyObject* _new_KnownPerceptionDepthFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionDepthFrameSourceProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>::type_name);
@@ -350,7 +350,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- KnownPerceptionFrameSourceProperties class --------------------
 
-    static PyObject* _new_KnownPerceptionFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionFrameSourceProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>::type_name);
@@ -524,7 +524,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- KnownPerceptionInfraredFrameSourceProperties class --------------------
 
-    static PyObject* _new_KnownPerceptionInfraredFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionInfraredFrameSourceProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>::type_name);
@@ -718,7 +718,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- KnownPerceptionVideoFrameSourceProperties class --------------------
 
-    static PyObject* _new_KnownPerceptionVideoFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionVideoFrameSourceProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>::type_name);
@@ -872,7 +872,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- KnownPerceptionVideoProfileProperties class --------------------
 
-    static PyObject* _new_KnownPerceptionVideoProfileProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionVideoProfileProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>::type_name);
@@ -1026,7 +1026,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrame class --------------------
 
-    static PyObject* _new_PerceptionColorFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>::type_name);
@@ -1174,7 +1174,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrameArrivedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionColorFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrameArrivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>::type_name);
@@ -1299,7 +1299,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrameReader class --------------------
 
-    static PyObject* _new_PerceptionColorFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrameReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>::type_name);
@@ -1570,7 +1570,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrameSource class --------------------
 
-    static PyObject* _new_PerceptionColorFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrameSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>::type_name);
@@ -2499,7 +2499,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrameSourceAddedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionColorFrameSourceAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrameSourceAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>::type_name);
@@ -2594,7 +2594,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrameSourceRemovedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionColorFrameSourceRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrameSourceRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>::type_name);
@@ -2689,7 +2689,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionColorFrameSourceWatcher class --------------------
 
-    static PyObject* _new_PerceptionColorFrameSourceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionColorFrameSourceWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>::type_name);
@@ -3026,7 +3026,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionControlSession class --------------------
 
-    static PyObject* _new_PerceptionControlSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionControlSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionControlSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionControlSession>::type_name);
@@ -3232,7 +3232,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthCorrelatedCameraIntrinsics class --------------------
 
-    static PyObject* _new_PerceptionDepthCorrelatedCameraIntrinsics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthCorrelatedCameraIntrinsics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>::type_name);
@@ -3442,7 +3442,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthCorrelatedCoordinateMapper class --------------------
 
-    static PyObject* _new_PerceptionDepthCorrelatedCoordinateMapper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthCorrelatedCoordinateMapper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>::type_name);
@@ -3652,7 +3652,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrame class --------------------
 
-    static PyObject* _new_PerceptionDepthFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>::type_name);
@@ -3800,7 +3800,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrameArrivedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionDepthFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrameArrivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>::type_name);
@@ -3925,7 +3925,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrameReader class --------------------
 
-    static PyObject* _new_PerceptionDepthFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrameReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>::type_name);
@@ -4196,7 +4196,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrameSource class --------------------
 
-    static PyObject* _new_PerceptionDepthFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrameSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>::type_name);
@@ -5125,7 +5125,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrameSourceAddedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionDepthFrameSourceAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrameSourceAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>::type_name);
@@ -5220,7 +5220,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrameSourceRemovedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionDepthFrameSourceRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrameSourceRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>::type_name);
@@ -5315,7 +5315,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionDepthFrameSourceWatcher class --------------------
 
-    static PyObject* _new_PerceptionDepthFrameSourceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionDepthFrameSourceWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>::type_name);
@@ -5652,7 +5652,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionFrameSourcePropertiesChangedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionFrameSourcePropertiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionFrameSourcePropertiesChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>::type_name);
@@ -5767,7 +5767,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionFrameSourcePropertyChangeResult class --------------------
 
-    static PyObject* _new_PerceptionFrameSourcePropertyChangeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionFrameSourcePropertyChangeResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>::type_name);
@@ -5882,7 +5882,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrame class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>::type_name);
@@ -6030,7 +6030,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrameArrivedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrameArrivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>::type_name);
@@ -6155,7 +6155,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrameReader class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrameReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>::type_name);
@@ -6426,7 +6426,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrameSource class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrameSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>::type_name);
@@ -7355,7 +7355,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrameSourceAddedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrameSourceAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrameSourceAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>::type_name);
@@ -7450,7 +7450,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrameSourceRemovedEventArgs class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrameSourceRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrameSourceRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>::type_name);
@@ -7545,7 +7545,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionInfraredFrameSourceWatcher class --------------------
 
-    static PyObject* _new_PerceptionInfraredFrameSourceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionInfraredFrameSourceWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>::type_name);
@@ -7882,7 +7882,7 @@ namespace py::cpp::Windows::Devices::Perception
 
     // ----- PerceptionVideoProfile class --------------------
 
-    static PyObject* _new_PerceptionVideoProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionVideoProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>::type_name);

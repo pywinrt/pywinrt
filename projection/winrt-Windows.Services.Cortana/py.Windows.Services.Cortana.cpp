@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Services::Cortana
 {
     // ----- CortanaActionableInsights class --------------------
 
-    static PyObject* _new_CortanaActionableInsights(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CortanaActionableInsights(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>::type_name);
@@ -547,7 +547,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     // ----- CortanaPermissionsManager class --------------------
 
-    static PyObject* _new_CortanaPermissionsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CortanaPermissionsManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>::type_name);
@@ -778,7 +778,7 @@ namespace py::cpp::Windows::Services::Cortana
 
     // ----- CortanaSettings class --------------------
 
-    static PyObject* _new_CortanaSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CortanaSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Services::Cortana::CortanaSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Cortana::CortanaSettings>::type_name);

@@ -365,7 +365,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     // ----- LampArrayBitmapRequestedEventArgs class --------------------
 
-    static PyObject* _new_LampArrayBitmapRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LampArrayBitmapRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>::type_name);
@@ -2354,9 +2354,9 @@ namespace py::cpp::Windows::Devices::Lights::Effects
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect> items(length, empty_instance<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::get());
+            winrt::com_array<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2766,7 +2766,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     // ----- LampArrayUpdateRequestedEventArgs class --------------------
 
-    static PyObject* _new_LampArrayUpdateRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LampArrayUpdateRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>::type_name);
@@ -2996,7 +2996,7 @@ namespace py::cpp::Windows::Devices::Lights::Effects
 
     // ----- ILampArrayEffect interface --------------------
 
-    static PyObject* _new_ILampArrayEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILampArrayEffect(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::type_name);

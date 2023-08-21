@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Core::Preview
 {
     // ----- SoundLevelBroker class --------------------
 
-    static PyObject* _new_SoundLevelBroker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SoundLevelBroker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Core::Preview::SoundLevelBroker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::Preview::SoundLevelBroker>::type_name);

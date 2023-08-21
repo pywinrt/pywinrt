@@ -347,7 +347,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     // ----- ISpiControllerProvider interface --------------------
 
-    static PyObject* _new_ISpiControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISpiControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>::type_name);
@@ -454,7 +454,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     // ----- ISpiDeviceProvider interface --------------------
 
-    static PyObject* _new_ISpiDeviceProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISpiDeviceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>::type_name);
@@ -756,7 +756,7 @@ namespace py::cpp::Windows::Devices::Spi::Provider
 
     // ----- ISpiProvider interface --------------------
 
-    static PyObject* _new_ISpiProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISpiProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>::type_name);

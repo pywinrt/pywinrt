@@ -127,7 +127,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     // ----- IGpioControllerProvider interface --------------------
 
-    static PyObject* _new_IGpioControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGpioControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::type_name);
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     // ----- IGpioPinProvider interface --------------------
 
-    static PyObject* _new_IGpioPinProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGpioPinProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::type_name);
@@ -621,7 +621,7 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
 
     // ----- IGpioProvider interface --------------------
 
-    static PyObject* _new_IGpioProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGpioProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::type_name);

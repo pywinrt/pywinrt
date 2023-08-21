@@ -1448,7 +1448,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IIterable interface --------------------
 
-    static PyObject* _new_IIterable(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IIterable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IIterable>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IIterable>::type_name);
@@ -1512,7 +1512,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IIterator interface --------------------
 
-    static PyObject* _new_IIterator(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IIterator>::type_name);
@@ -1612,7 +1612,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IKeyValuePair interface --------------------
 
-    static PyObject* _new_IKeyValuePair(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IKeyValuePair(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>::type_name);
@@ -1688,7 +1688,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IMapChangedEventArgs interface --------------------
 
-    static PyObject* _new_IMapChangedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMapChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>::type_name);
@@ -1764,7 +1764,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IMapView interface --------------------
 
-    static PyObject* _new_IMapView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMapView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IMapView>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IMapView>::type_name);
@@ -1876,7 +1876,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IMap interface --------------------
 
-    static PyObject* _new_IMap(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IMap>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IMap>::type_name);
@@ -2012,7 +2012,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IObservableMap interface --------------------
 
-    static PyObject* _new_IObservableMap(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IObservableMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IObservableMap>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IObservableMap>::type_name);
@@ -2172,7 +2172,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IObservableVector interface --------------------
 
-    static PyObject* _new_IObservableVector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IObservableVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IObservableVector>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IObservableVector>::type_name);
@@ -2362,7 +2362,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IPropertySet interface --------------------
 
-    static PyObject* _new_IPropertySet(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPropertySet(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Foundation::Collections::IPropertySet>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Collections::IPropertySet>::type_name);
@@ -2820,7 +2820,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IVectorChangedEventArgs interface --------------------
 
-    static PyObject* _new_IVectorChangedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVectorChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>::type_name);
@@ -2935,7 +2935,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IVectorView interface --------------------
 
-    static PyObject* _new_IVectorView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVectorView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IVectorView>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IVectorView>::type_name);
@@ -3047,7 +3047,7 @@ namespace py::cpp::Windows::Foundation::Collections
 
     // ----- IVector interface --------------------
 
-    static PyObject* _new_IVector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<py::proj::Windows::Foundation::Collections::IVector>::type_name);
         py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::Collections::IVector>::type_name);

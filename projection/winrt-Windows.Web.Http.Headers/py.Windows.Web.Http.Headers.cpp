@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 {
     // ----- HttpCacheDirectiveHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpCacheDirectiveHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpCacheDirectiveHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>::type_name);
@@ -839,9 +839,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpNameValueHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -1228,7 +1228,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpChallengeHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpChallengeHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpChallengeHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>::type_name);
@@ -1871,9 +1871,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2200,7 +2200,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpConnectionOptionHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpConnectionOptionHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpConnectionOptionHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>::type_name);
@@ -2843,9 +2843,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -3172,7 +3172,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpContentCodingHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpContentCodingHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpContentCodingHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>::type_name);
@@ -3815,9 +3815,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -4180,7 +4180,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpContentCodingWithQualityHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpContentCodingWithQualityHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpContentCodingWithQualityHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>::type_name);
@@ -4823,9 +4823,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -7027,7 +7027,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpCookiePairHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpCookiePairHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpCookiePairHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>::type_name);
@@ -7670,9 +7670,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -8055,7 +8055,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpDateOrDeltaHeaderValue class --------------------
 
-    static PyObject* _new_HttpDateOrDeltaHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpDateOrDeltaHeaderValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>::type_name);
@@ -8615,7 +8615,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpExpectationHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpExpectationHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpExpectationHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>::type_name);
@@ -9258,9 +9258,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -9347,7 +9347,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpLanguageHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpLanguageHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpLanguageHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>::type_name);
@@ -9990,9 +9990,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Globalization::Language> items(length, empty_instance<winrt::Windows::Globalization::Language>::get());
+            winrt::com_array<winrt::Windows::Globalization::Language> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Globalization::Language>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -10355,7 +10355,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpLanguageRangeWithQualityHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpLanguageRangeWithQualityHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpLanguageRangeWithQualityHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>::type_name);
@@ -10998,9 +10998,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -11823,7 +11823,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpMediaTypeWithQualityHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpMediaTypeWithQualityHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpMediaTypeWithQualityHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>::type_name);
@@ -12466,9 +12466,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -12555,7 +12555,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpMethodHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpMethodHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpMethodHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>::type_name);
@@ -13198,9 +13198,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::HttpMethod> items(length, empty_instance<winrt::Windows::Web::Http::HttpMethod>::get());
+            winrt::com_array<winrt::Windows::Web::Http::HttpMethod> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::HttpMethod>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -14143,7 +14143,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpProductInfoHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpProductInfoHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpProductInfoHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>::type_name);
@@ -14786,9 +14786,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -14875,7 +14875,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpRequestHeaderCollection class --------------------
 
-    static PyObject* _new_HttpRequestHeaderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpRequestHeaderCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>::type_name);
@@ -16011,7 +16011,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpResponseHeaderCollection class --------------------
 
-    static PyObject* _new_HttpResponseHeaderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpResponseHeaderCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>::type_name);
@@ -17107,7 +17107,7 @@ namespace py::cpp::Windows::Web::Http::Headers
 
     // ----- HttpTransferCodingHeaderValueCollection class --------------------
 
-    static PyObject* _new_HttpTransferCodingHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HttpTransferCodingHeaderValueCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>::type_name);
@@ -17750,9 +17750,9 @@ namespace py::cpp::Windows::Web::Http::Headers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue> items(length, empty_instance<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>::get());
+            winrt::com_array<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValue>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {

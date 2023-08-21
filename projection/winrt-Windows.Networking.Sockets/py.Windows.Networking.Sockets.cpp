@@ -1169,7 +1169,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- DatagramSocketControl class --------------------
 
-    static PyObject* _new_DatagramSocketControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DatagramSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::DatagramSocketControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::DatagramSocketControl>::type_name);
@@ -1484,7 +1484,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- DatagramSocketInformation class --------------------
 
-    static PyObject* _new_DatagramSocketInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DatagramSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::DatagramSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::DatagramSocketInformation>::type_name);
@@ -1639,7 +1639,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- DatagramSocketMessageReceivedEventArgs class --------------------
 
-    static PyObject* _new_DatagramSocketMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DatagramSocketMessageReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>::type_name);
@@ -2331,7 +2331,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- MessageWebSocketControl class --------------------
 
-    static PyObject* _new_MessageWebSocketControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MessageWebSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::MessageWebSocketControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::MessageWebSocketControl>::type_name);
@@ -2850,7 +2850,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- MessageWebSocketInformation class --------------------
 
-    static PyObject* _new_MessageWebSocketInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MessageWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>::type_name);
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- MessageWebSocketMessageReceivedEventArgs class --------------------
 
-    static PyObject* _new_MessageWebSocketMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MessageWebSocketMessageReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>::type_name);
@@ -3240,7 +3240,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- ServerMessageWebSocket class --------------------
 
-    static PyObject* _new_ServerMessageWebSocket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServerMessageWebSocket(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>::type_name);
@@ -3540,7 +3540,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- ServerMessageWebSocketControl class --------------------
 
-    static PyObject* _new_ServerMessageWebSocketControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServerMessageWebSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>::type_name);
@@ -3663,7 +3663,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- ServerMessageWebSocketInformation class --------------------
 
-    static PyObject* _new_ServerMessageWebSocketInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServerMessageWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>::type_name);
@@ -3798,7 +3798,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- ServerStreamWebSocket class --------------------
 
-    static PyObject* _new_ServerStreamWebSocket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServerStreamWebSocket(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>::type_name);
@@ -4053,7 +4053,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- ServerStreamWebSocketInformation class --------------------
 
-    static PyObject* _new_ServerStreamWebSocketInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServerStreamWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>::type_name);
@@ -4307,7 +4307,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- SocketActivityInformation class --------------------
 
-    static PyObject* _new_SocketActivityInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SocketActivityInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::SocketActivityInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::SocketActivityInformation>::type_name);
@@ -4562,7 +4562,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- SocketActivityTriggerDetails class --------------------
 
-    static PyObject* _new_SocketActivityTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SocketActivityTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>::type_name);
@@ -4677,7 +4677,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- SocketError class --------------------
 
-    static PyObject* _new_SocketError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SocketError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::SocketError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::SocketError>::type_name);
@@ -5322,7 +5322,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamSocketControl class --------------------
 
-    static PyObject* _new_StreamSocketControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketControl>::type_name);
@@ -5801,7 +5801,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamSocketInformation class --------------------
 
-    static PyObject* _new_StreamSocketInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketInformation>::type_name);
@@ -6639,7 +6639,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamSocketListenerConnectionReceivedEventArgs class --------------------
 
-    static PyObject* _new_StreamSocketListenerConnectionReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamSocketListenerConnectionReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>::type_name);
@@ -6734,7 +6734,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamSocketListenerControl class --------------------
 
-    static PyObject* _new_StreamSocketListenerControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamSocketListenerControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>::type_name);
@@ -7049,7 +7049,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamSocketListenerInformation class --------------------
 
-    static PyObject* _new_StreamSocketListenerInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamSocketListenerInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>::type_name);
@@ -7552,7 +7552,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamWebSocketControl class --------------------
 
-    static PyObject* _new_StreamWebSocketControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamWebSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamWebSocketControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamWebSocketControl>::type_name);
@@ -7975,7 +7975,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- StreamWebSocketInformation class --------------------
 
-    static PyObject* _new_StreamWebSocketInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreamWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>::type_name);
@@ -8190,7 +8190,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- WebSocketClosedEventArgs class --------------------
 
-    static PyObject* _new_WebSocketClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebSocketClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>::type_name);
@@ -8305,7 +8305,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- WebSocketError class --------------------
 
-    static PyObject* _new_WebSocketError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebSocketError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::WebSocketError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::WebSocketError>::type_name);
@@ -8501,7 +8501,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- WebSocketServerCustomValidationRequestedEventArgs class --------------------
 
-    static PyObject* _new_WebSocketServerCustomValidationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WebSocketServerCustomValidationRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>::type_name);
@@ -8717,7 +8717,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IControlChannelTriggerEventDetails interface --------------------
 
-    static PyObject* _new_IControlChannelTriggerEventDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IControlChannelTriggerEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>::type_name);
@@ -8812,7 +8812,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IControlChannelTriggerResetEventDetails interface --------------------
 
-    static PyObject* _new_IControlChannelTriggerResetEventDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IControlChannelTriggerResetEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>::type_name);
@@ -8947,7 +8947,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IWebSocket interface --------------------
 
-    static PyObject* _new_IWebSocket(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebSocket(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocket>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocket>::type_name);
@@ -9228,7 +9228,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IWebSocketControl interface --------------------
 
-    static PyObject* _new_IWebSocketControl(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebSocketControl(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>::type_name);
@@ -9467,7 +9467,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IWebSocketControl2 interface --------------------
 
-    static PyObject* _new_IWebSocketControl2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebSocketControl2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>::type_name);
@@ -9726,7 +9726,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IWebSocketInformation interface --------------------
 
-    static PyObject* _new_IWebSocketInformation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebSocketInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>::type_name);
@@ -9861,7 +9861,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- IWebSocketInformation2 interface --------------------
 
-    static PyObject* _new_IWebSocketInformation2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IWebSocketInformation2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>::type_name);
@@ -10076,7 +10076,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- BandwidthStatistics struct --------------------
 
-    PyObject* _new_BandwidthStatistics(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BandwidthStatistics(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -10360,7 +10360,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     // ----- RoundTripTimeStatistics struct --------------------
 
-    PyObject* _new_RoundTripTimeStatistics(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_RoundTripTimeStatistics(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

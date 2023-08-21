@@ -785,7 +785,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     // ----- ResourceCollection class --------------------
 
-    static PyObject* _new_ResourceCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResourceCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::AtomPub::ResourceCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::AtomPub::ResourceCollection>::type_name);
@@ -1252,7 +1252,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     // ----- ServiceDocument class --------------------
 
-    static PyObject* _new_ServiceDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ServiceDocument(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::AtomPub::ServiceDocument>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::AtomPub::ServiceDocument>::type_name);
@@ -1659,7 +1659,7 @@ namespace py::cpp::Windows::Web::AtomPub
 
     // ----- Workspace class --------------------
 
-    static PyObject* _new_Workspace(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Workspace(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Web::AtomPub::Workspace>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::AtomPub::Workspace>::type_name);

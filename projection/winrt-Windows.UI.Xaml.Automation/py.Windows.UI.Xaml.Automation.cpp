@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 {
     // ----- AnnotationPatternIdentifiers class --------------------
 
-    static PyObject* _new_AnnotationPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AnnotationPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers>::type_name);
@@ -487,7 +487,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- AutomationElementIdentifiers class --------------------
 
-    static PyObject* _new_AutomationElementIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationElementIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::AutomationElementIdentifiers>::type_name);
@@ -1362,7 +1362,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- AutomationProperties class --------------------
 
-    static PyObject* _new_AutomationProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::AutomationProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::AutomationProperties>::type_name);
@@ -3781,7 +3781,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- AutomationProperty class --------------------
 
-    static PyObject* _new_AutomationProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationProperty(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::AutomationProperty>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::AutomationProperty>::type_name);
@@ -3856,7 +3856,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- DockPatternIdentifiers class --------------------
 
-    static PyObject* _new_DockPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DockPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::DockPatternIdentifiers>::type_name);
@@ -3971,7 +3971,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- DragPatternIdentifiers class --------------------
 
-    static PyObject* _new_DragPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DragPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::DragPatternIdentifiers>::type_name);
@@ -4146,7 +4146,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- DropTargetPatternIdentifiers class --------------------
 
-    static PyObject* _new_DropTargetPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DropTargetPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers>::type_name);
@@ -4281,7 +4281,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- ExpandCollapsePatternIdentifiers class --------------------
 
-    static PyObject* _new_ExpandCollapsePatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ExpandCollapsePatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>::type_name);
@@ -4396,7 +4396,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- GridItemPatternIdentifiers class --------------------
 
-    static PyObject* _new_GridItemPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GridItemPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers>::type_name);
@@ -4591,7 +4591,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- GridPatternIdentifiers class --------------------
 
-    static PyObject* _new_GridPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GridPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::GridPatternIdentifiers>::type_name);
@@ -4726,7 +4726,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- MultipleViewPatternIdentifiers class --------------------
 
-    static PyObject* _new_MultipleViewPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MultipleViewPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers>::type_name);
@@ -4861,7 +4861,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- RangeValuePatternIdentifiers class --------------------
 
-    static PyObject* _new_RangeValuePatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RangeValuePatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers>::type_name);
@@ -5076,7 +5076,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- ScrollPatternIdentifiers class --------------------
 
-    static PyObject* _new_ScrollPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ScrollPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers>::type_name);
@@ -5311,7 +5311,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- SelectionItemPatternIdentifiers class --------------------
 
-    static PyObject* _new_SelectionItemPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SelectionItemPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers>::type_name);
@@ -5446,7 +5446,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- SelectionPatternIdentifiers class --------------------
 
-    static PyObject* _new_SelectionPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SelectionPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers>::type_name);
@@ -5601,7 +5601,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- SpreadsheetItemPatternIdentifiers class --------------------
 
-    static PyObject* _new_SpreadsheetItemPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpreadsheetItemPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>::type_name);
@@ -5716,7 +5716,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- StylesPatternIdentifiers class --------------------
 
-    static PyObject* _new_StylesPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StylesPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::StylesPatternIdentifiers>::type_name);
@@ -5951,7 +5951,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- TableItemPatternIdentifiers class --------------------
 
-    static PyObject* _new_TableItemPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TableItemPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers>::type_name);
@@ -6086,7 +6086,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- TablePatternIdentifiers class --------------------
 
-    static PyObject* _new_TablePatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TablePatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::TablePatternIdentifiers>::type_name);
@@ -6241,7 +6241,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- TogglePatternIdentifiers class --------------------
 
-    static PyObject* _new_TogglePatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TogglePatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::TogglePatternIdentifiers>::type_name);
@@ -6356,7 +6356,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- TransformPattern2Identifiers class --------------------
 
-    static PyObject* _new_TransformPattern2Identifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TransformPattern2Identifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::TransformPattern2Identifiers>::type_name);
@@ -6531,7 +6531,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- TransformPatternIdentifiers class --------------------
 
-    static PyObject* _new_TransformPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TransformPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::TransformPatternIdentifiers>::type_name);
@@ -6686,7 +6686,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- ValuePatternIdentifiers class --------------------
 
-    static PyObject* _new_ValuePatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ValuePatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::ValuePatternIdentifiers>::type_name);
@@ -6821,7 +6821,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation
 
     // ----- WindowPatternIdentifiers class --------------------
 
-    static PyObject* _new_WindowPatternIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowPatternIdentifiers(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::WindowPatternIdentifiers>::type_name);

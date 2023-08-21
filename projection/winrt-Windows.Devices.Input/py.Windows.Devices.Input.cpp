@@ -322,7 +322,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- MouseDevice class --------------------
 
-    static PyObject* _new_MouseDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MouseDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::MouseDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::MouseDevice>::type_name);
@@ -472,7 +472,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- MouseEventArgs class --------------------
 
-    static PyObject* _new_MouseEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MouseEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::MouseEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::MouseEventArgs>::type_name);
@@ -567,7 +567,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenButtonListener class --------------------
 
-    static PyObject* _new_PenButtonListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenButtonListener(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenButtonListener>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenButtonListener>::type_name);
@@ -882,7 +882,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenDevice class --------------------
 
-    static PyObject* _new_PenDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenDevice>::type_name);
@@ -1029,7 +1029,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenDockListener class --------------------
 
-    static PyObject* _new_PenDockListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenDockListener(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenDockListener>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenDockListener>::type_name);
@@ -1299,7 +1299,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenDockedEventArgs class --------------------
 
-    static PyObject* _new_PenDockedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenDockedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenDockedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenDockedEventArgs>::type_name);
@@ -1374,7 +1374,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenTailButtonClickedEventArgs class --------------------
 
-    static PyObject* _new_PenTailButtonClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenTailButtonClickedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>::type_name);
@@ -1449,7 +1449,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenTailButtonDoubleClickedEventArgs class --------------------
 
-    static PyObject* _new_PenTailButtonDoubleClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenTailButtonDoubleClickedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>::type_name);
@@ -1524,7 +1524,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenTailButtonLongPressedEventArgs class --------------------
 
-    static PyObject* _new_PenTailButtonLongPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenTailButtonLongPressedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>::type_name);
@@ -1599,7 +1599,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PenUndockedEventArgs class --------------------
 
-    static PyObject* _new_PenUndockedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PenUndockedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>::type_name);
@@ -1674,7 +1674,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PointerDevice class --------------------
 
-    static PyObject* _new_PointerDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointerDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Input::PointerDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PointerDevice>::type_name);
@@ -2088,7 +2088,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- MouseDelta struct --------------------
 
-    PyObject* _new_MouseDelta(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_MouseDelta(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -2232,7 +2232,7 @@ namespace py::cpp::Windows::Devices::Input
 
     // ----- PointerDeviceUsage struct --------------------
 
-    PyObject* _new_PointerDeviceUsage(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_PointerDeviceUsage(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

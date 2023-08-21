@@ -1025,7 +1025,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferCompletionGroupTriggerDetails class --------------------
 
-    static PyObject* _new_BackgroundTransferCompletionGroupTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTransferCompletionGroupTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>::type_name);
@@ -1368,7 +1368,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferError class --------------------
 
-    static PyObject* _new_BackgroundTransferError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTransferError(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>::type_name);
@@ -1434,7 +1434,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferGroup class --------------------
 
-    static PyObject* _new_BackgroundTransferGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTransferGroup(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>::type_name);
@@ -1609,7 +1609,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferRangesDownloadedEventArgs class --------------------
 
-    static PyObject* _new_BackgroundTransferRangesDownloadedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackgroundTransferRangesDownloadedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>::type_name);
@@ -2658,7 +2658,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- ContentPrefetcher class --------------------
 
-    static PyObject* _new_ContentPrefetcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContentPrefetcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>::type_name);
@@ -2794,7 +2794,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- DownloadOperation class --------------------
 
-    static PyObject* _new_DownloadOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DownloadOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>::type_name);
@@ -3608,7 +3608,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- ResponseInformation class --------------------
 
-    static PyObject* _new_ResponseInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ResponseInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>::type_name);
@@ -3763,7 +3763,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- UnconstrainedTransferRequestResult class --------------------
 
-    static PyObject* _new_UnconstrainedTransferRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UnconstrainedTransferRequestResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>::type_name);
@@ -3858,7 +3858,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- UploadOperation class --------------------
 
-    static PyObject* _new_UploadOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UploadOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>::type_name);
@@ -4389,7 +4389,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- IBackgroundTransferBase interface --------------------
 
-    static PyObject* _new_IBackgroundTransferBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTransferBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::type_name);
@@ -4738,7 +4738,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- IBackgroundTransferContentPartFactory interface --------------------
 
-    static PyObject* _new_IBackgroundTransferContentPartFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTransferContentPartFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::type_name);
@@ -4878,7 +4878,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- IBackgroundTransferOperation interface --------------------
 
-    static PyObject* _new_IBackgroundTransferOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTransferOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::type_name);
@@ -5143,7 +5143,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- IBackgroundTransferOperationPriority interface --------------------
 
-    static PyObject* _new_IBackgroundTransferOperationPriority(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IBackgroundTransferOperationPriority(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::type_name);
@@ -5266,7 +5266,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundDownloadProgress struct --------------------
 
-    PyObject* _new_BackgroundDownloadProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BackgroundDownloadProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -5515,7 +5515,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundTransferFileRange struct --------------------
 
-    PyObject* _new_BackgroundTransferFileRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BackgroundTransferFileRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -5659,7 +5659,7 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     // ----- BackgroundUploadProgress struct --------------------
 
-    PyObject* _new_BackgroundUploadProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_BackgroundUploadProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

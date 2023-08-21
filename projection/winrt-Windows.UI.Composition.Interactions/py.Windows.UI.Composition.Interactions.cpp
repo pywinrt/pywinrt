@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 {
     // ----- CompositionConditionalValue class --------------------
 
-    static PyObject* _new_CompositionConditionalValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionConditionalValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::CompositionConditionalValue>::type_name);
@@ -211,7 +211,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- CompositionInteractionSourceCollection class --------------------
 
-    static PyObject* _new_CompositionInteractionSourceCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompositionInteractionSourceCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection>::type_name);
@@ -447,7 +447,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionSourceConfiguration class --------------------
 
-    static PyObject* _new_InteractionSourceConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionSourceConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionSourceConfiguration>::type_name);
@@ -666,7 +666,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTracker class --------------------
 
-    static PyObject* _new_InteractionTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTracker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTracker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTracker>::type_name);
@@ -1919,7 +1919,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerCustomAnimationStateEnteredArgs class --------------------
 
-    static PyObject* _new_InteractionTrackerCustomAnimationStateEnteredArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerCustomAnimationStateEnteredArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>::type_name);
@@ -2034,7 +2034,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerIdleStateEnteredArgs class --------------------
 
-    static PyObject* _new_InteractionTrackerIdleStateEnteredArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerIdleStateEnteredArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>::type_name);
@@ -2149,7 +2149,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerInertiaModifier class --------------------
 
-    static PyObject* _new_InteractionTrackerInertiaModifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerInertiaModifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier>::type_name);
@@ -2224,7 +2224,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerInertiaMotion class --------------------
 
-    static PyObject* _new_InteractionTrackerInertiaMotion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerInertiaMotion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion>::type_name);
@@ -2427,7 +2427,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerInertiaNaturalMotion class --------------------
 
-    static PyObject* _new_InteractionTrackerInertiaNaturalMotion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerInertiaNaturalMotion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>::type_name);
@@ -2630,7 +2630,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerInertiaRestingValue class --------------------
 
-    static PyObject* _new_InteractionTrackerInertiaRestingValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerInertiaRestingValue(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>::type_name);
@@ -2833,7 +2833,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerInertiaStateEnteredArgs class --------------------
 
-    static PyObject* _new_InteractionTrackerInertiaStateEnteredArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerInertiaStateEnteredArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>::type_name);
@@ -3088,7 +3088,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerInteractingStateEnteredArgs class --------------------
 
-    static PyObject* _new_InteractionTrackerInteractingStateEnteredArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerInteractingStateEnteredArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>::type_name);
@@ -3203,7 +3203,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerRequestIgnoredArgs class --------------------
 
-    static PyObject* _new_InteractionTrackerRequestIgnoredArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerRequestIgnoredArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>::type_name);
@@ -3298,7 +3298,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerValuesChangedArgs class --------------------
 
-    static PyObject* _new_InteractionTrackerValuesChangedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerValuesChangedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>::type_name);
@@ -3433,7 +3433,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerVector2InertiaModifier class --------------------
 
-    static PyObject* _new_InteractionTrackerVector2InertiaModifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerVector2InertiaModifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>::type_name);
@@ -3508,7 +3508,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- InteractionTrackerVector2InertiaNaturalMotion class --------------------
 
-    static PyObject* _new_InteractionTrackerVector2InertiaNaturalMotion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InteractionTrackerVector2InertiaNaturalMotion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>::type_name);
@@ -3711,7 +3711,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- VisualInteractionSource class --------------------
 
-    static PyObject* _new_VisualInteractionSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisualInteractionSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::VisualInteractionSource>::type_name);
@@ -4640,7 +4640,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- ICompositionInteractionSource interface --------------------
 
-    static PyObject* _new_ICompositionInteractionSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICompositionInteractionSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::ICompositionInteractionSource>::type_name);
@@ -4715,7 +4715,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
 
     // ----- IInteractionTrackerOwner interface --------------------
 
-    static PyObject* _new_IInteractionTrackerOwner(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IInteractionTrackerOwner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Interactions::IInteractionTrackerOwner>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Scanners
 {
     // ----- ImageScanner class --------------------
 
-    static PyObject* _new_ImageScanner(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageScanner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScanner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScanner>::type_name);
@@ -375,7 +375,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerAutoConfiguration class --------------------
 
-    static PyObject* _new_ImageScannerAutoConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageScannerAutoConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>::type_name);
@@ -550,7 +550,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerFeederConfiguration class --------------------
 
-    static PyObject* _new_ImageScannerFeederConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageScannerFeederConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>::type_name);
@@ -1778,7 +1778,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerFlatbedConfiguration class --------------------
 
-    static PyObject* _new_ImageScannerFlatbedConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageScannerFlatbedConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>::type_name);
@@ -2605,7 +2605,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerPreviewResult class --------------------
 
-    static PyObject* _new_ImageScannerPreviewResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageScannerPreviewResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>::type_name);
@@ -2720,7 +2720,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerScanResult class --------------------
 
-    static PyObject* _new_ImageScannerScanResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ImageScannerScanResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>::type_name);
@@ -2815,7 +2815,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- IImageScannerFormatConfiguration interface --------------------
 
-    static PyObject* _new_IImageScannerFormatConfiguration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IImageScannerFormatConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>::type_name);
@@ -2990,7 +2990,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- IImageScannerSourceConfiguration interface --------------------
 
-    static PyObject* _new_IImageScannerSourceConfiguration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IImageScannerSourceConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>::type_name);
@@ -3817,7 +3817,7 @@ namespace py::cpp::Windows::Devices::Scanners
 
     // ----- ImageScannerResolution struct --------------------
 
-    PyObject* _new_ImageScannerResolution(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ImageScannerResolution(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

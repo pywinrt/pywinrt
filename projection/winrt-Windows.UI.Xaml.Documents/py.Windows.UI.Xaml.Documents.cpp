@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 {
     // ----- Block class --------------------
 
-    static PyObject* _new_Block(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Block(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Block>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::Block>::type_name);
@@ -443,7 +443,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- BlockCollection class --------------------
 
-    static PyObject* _new_BlockCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BlockCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>::type_name);
@@ -981,9 +981,9 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Documents::Block> items(length, empty_instance<winrt::Windows::UI::Xaml::Documents::Block>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Documents::Block> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Documents::Block>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -2516,7 +2516,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- ContentLinkInvokedEventArgs class --------------------
 
-    static PyObject* _new_ContentLinkInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContentLinkInvokedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>::type_name);
@@ -2659,7 +2659,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- ContentLinkProvider class --------------------
 
-    static PyObject* _new_ContentLinkProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContentLinkProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::type_name);
@@ -3294,9 +3294,9 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider> items(length, empty_instance<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -5384,7 +5384,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- HyperlinkClickEventArgs class --------------------
 
-    static PyObject* _new_HyperlinkClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HyperlinkClickEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>::type_name);
@@ -5459,7 +5459,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- Inline class --------------------
 
-    static PyObject* _new_Inline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Inline(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Inline>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::Inline>::type_name);
@@ -5534,7 +5534,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- InlineCollection class --------------------
 
-    static PyObject* _new_InlineCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InlineCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>::type_name);
@@ -6072,9 +6072,9 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::UI::Xaml::Documents::Inline> items(length, empty_instance<winrt::Windows::UI::Xaml::Documents::Inline>::get());
+            winrt::com_array<winrt::Windows::UI::Xaml::Documents::Inline> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::UI::Xaml::Documents::Inline>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -7176,7 +7176,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- TextElement class --------------------
 
-    static PyObject* _new_TextElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TextElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::TextElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::TextElement>::type_name);
@@ -9114,7 +9114,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- TextHighlighterBase class --------------------
 
-    static PyObject* _new_TextHighlighterBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TextHighlighterBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>::type_name);
@@ -9189,7 +9189,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- TextPointer class --------------------
 
-    static PyObject* _new_TextPointer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TextPointer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::TextPointer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::TextPointer>::type_name);
@@ -9409,7 +9409,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- Typography class --------------------
 
-    static PyObject* _new_Typography(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Typography(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Typography>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::Typography>::type_name);
@@ -13299,7 +13299,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     // ----- TextRange struct --------------------
 
-    PyObject* _new_TextRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_TextRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

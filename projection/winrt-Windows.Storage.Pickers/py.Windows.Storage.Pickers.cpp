@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::Pickers
 {
     // ----- FileExtensionVector class --------------------
 
-    static PyObject* _new_FileExtensionVector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileExtensionVector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>::type_name);
@@ -546,9 +546,9 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::hstring> items(length, empty_instance<winrt::hstring>::get());
+            winrt::com_array<winrt::hstring> items(static_cast<uint32_t>(length), empty_instance<winrt::hstring>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -1184,7 +1184,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     // ----- FilePickerFileTypesOrderedMap class --------------------
 
-    static PyObject* _new_FilePickerFileTypesOrderedMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FilePickerFileTypesOrderedMap(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>::type_name);
@@ -1597,7 +1597,7 @@ namespace py::cpp::Windows::Storage::Pickers
 
     // ----- FilePickerSelectedFilesArray class --------------------
 
-    static PyObject* _new_FilePickerSelectedFilesArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FilePickerSelectedFilesArray(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>::type_name);
@@ -1884,9 +1884,9 @@ namespace py::cpp::Windows::Storage::Pickers
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Storage::StorageFile> items(length, empty_instance<winrt::Windows::Storage::StorageFile>::get());
+            winrt::com_array<winrt::Windows::Storage::StorageFile> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Storage::StorageFile>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {

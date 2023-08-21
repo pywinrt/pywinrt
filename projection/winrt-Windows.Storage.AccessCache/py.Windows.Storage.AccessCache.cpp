@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 {
     // ----- AccessListEntryView class --------------------
 
-    static PyObject* _new_AccessListEntryView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccessListEntryView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>::type_name);
@@ -295,9 +295,9 @@ namespace py::cpp::Windows::Storage::AccessCache
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Storage::AccessCache::AccessListEntry> items(length, empty_instance<winrt::Windows::Storage::AccessCache::AccessListEntry>::get());
+            winrt::com_array<winrt::Windows::Storage::AccessCache::AccessListEntry> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Storage::AccessCache::AccessListEntry>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -356,7 +356,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- ItemRemovedEventArgs class --------------------
 
-    static PyObject* _new_ItemRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ItemRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>::type_name);
@@ -451,7 +451,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- StorageApplicationPermissions class --------------------
 
-    static PyObject* _new_StorageApplicationPermissions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageApplicationPermissions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>::type_name);
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- StorageItemAccessList class --------------------
 
-    static PyObject* _new_StorageItemAccessList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageItemAccessList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>::type_name);
@@ -1121,7 +1121,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- StorageItemMostRecentlyUsedList class --------------------
 
-    static PyObject* _new_StorageItemMostRecentlyUsedList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StorageItemMostRecentlyUsedList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>::type_name);
@@ -1724,7 +1724,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- IStorageItemAccessList interface --------------------
 
-    static PyObject* _new_IStorageItemAccessList(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageItemAccessList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::type_name);
@@ -2236,7 +2236,7 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     // ----- AccessListEntry struct --------------------
 
-    PyObject* _new_AccessListEntry(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_AccessListEntry(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

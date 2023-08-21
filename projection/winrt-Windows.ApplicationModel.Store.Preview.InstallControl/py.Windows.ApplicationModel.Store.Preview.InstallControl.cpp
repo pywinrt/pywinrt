@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 {
     // ----- AppInstallItem class --------------------
 
-    static PyObject* _new_AppInstallItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppInstallItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>::type_name);
@@ -2217,7 +2217,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     // ----- AppInstallManagerItemEventArgs class --------------------
 
-    static PyObject* _new_AppInstallManagerItemEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppInstallManagerItemEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>::type_name);
@@ -3129,7 +3129,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     // ----- AppInstallStatus class --------------------
 
-    static PyObject* _new_AppInstallStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppInstallStatus(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>::type_name);
@@ -3605,7 +3605,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     // ----- GetEntitlementResult class --------------------
 
-    static PyObject* _new_GetEntitlementResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GetEntitlementResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>::type_name);

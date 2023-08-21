@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 {
     // ----- EnterpriseKeyCredentialRegistrationInfo class --------------------
 
-    static PyObject* _new_EnterpriseKeyCredentialRegistrationInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EnterpriseKeyCredentialRegistrationInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>::type_name);
@@ -183,7 +183,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity
 
     // ----- EnterpriseKeyCredentialRegistrationManager class --------------------
 
-    static PyObject* _new_EnterpriseKeyCredentialRegistrationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_EnterpriseKeyCredentialRegistrationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>::type_name);

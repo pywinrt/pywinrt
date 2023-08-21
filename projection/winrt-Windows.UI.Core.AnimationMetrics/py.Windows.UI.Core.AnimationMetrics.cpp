@@ -208,7 +208,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     // ----- OpacityAnimation class --------------------
 
-    static PyObject* _new_OpacityAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OpacityAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>::type_name);
@@ -423,7 +423,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     // ----- PropertyAnimation class --------------------
 
-    static PyObject* _new_PropertyAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PropertyAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>::type_name);
@@ -598,7 +598,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     // ----- ScaleAnimation class --------------------
 
-    static PyObject* _new_ScaleAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ScaleAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>::type_name);
@@ -873,7 +873,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     // ----- TranslationAnimation class --------------------
 
-    static PyObject* _new_TranslationAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TranslationAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>::type_name);
@@ -1048,7 +1048,7 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
 
     // ----- IPropertyAnimation interface --------------------
 
-    static PyObject* _new_IPropertyAnimation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPropertyAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::type_name);

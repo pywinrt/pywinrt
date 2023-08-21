@@ -345,7 +345,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- FontWeights class --------------------
 
-    static PyObject* _new_FontWeights(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FontWeights(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::FontWeights>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::FontWeights>::type_name);
@@ -660,7 +660,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- RichEditTextDocument class --------------------
 
-    static PyObject* _new_RichEditTextDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RichEditTextDocument(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::RichEditTextDocument>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::RichEditTextDocument>::type_name);
@@ -1769,7 +1769,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- RichEditTextRange class --------------------
 
-    static PyObject* _new_RichEditTextRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RichEditTextRange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::RichEditTextRange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::RichEditTextRange>::type_name);
@@ -3455,7 +3455,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- TextConstants class --------------------
 
-    static PyObject* _new_TextConstants(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TextConstants(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::TextConstants>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::TextConstants>::type_name);
@@ -3669,7 +3669,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- ITextCharacterFormat interface --------------------
 
-    static PyObject* _new_ITextCharacterFormat(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextCharacterFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::ITextCharacterFormat>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextCharacterFormat>::type_name);
@@ -4963,7 +4963,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- ITextDocument interface --------------------
 
-    static PyObject* _new_ITextDocument(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextDocument(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::ITextDocument>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextDocument>::type_name);
@@ -5840,7 +5840,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- ITextParagraphFormat interface --------------------
 
-    static PyObject* _new_ITextParagraphFormat(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextParagraphFormat(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::ITextParagraphFormat>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextParagraphFormat>::type_name);
@@ -7146,7 +7146,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- ITextRange interface --------------------
 
-    static PyObject* _new_ITextRange(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextRange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::ITextRange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextRange>::type_name);
@@ -8784,7 +8784,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- ITextSelection interface --------------------
 
-    static PyObject* _new_ITextSelection(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ITextSelection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::ITextSelection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextSelection>::type_name);
@@ -10725,7 +10725,7 @@ namespace py::cpp::Windows::UI::Text
 
     // ----- FontWeight struct --------------------
 
-    PyObject* _new_FontWeight(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_FontWeight(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

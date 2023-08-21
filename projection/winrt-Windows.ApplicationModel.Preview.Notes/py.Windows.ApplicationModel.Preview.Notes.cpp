@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 {
     // ----- NotePlacementChangedPreviewEventArgs class --------------------
 
-    static PyObject* _new_NotePlacementChangedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NotePlacementChangedPreviewEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     // ----- NoteVisibilityChangedPreviewEventArgs class --------------------
 
-    static PyObject* _new_NoteVisibilityChangedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NoteVisibilityChangedPreviewEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>::type_name);
@@ -218,7 +218,7 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 
     // ----- NotesWindowManagerPreview class --------------------
 
-    static PyObject* _new_NotesWindowManagerPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NotesWindowManagerPreview(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>::type_name);

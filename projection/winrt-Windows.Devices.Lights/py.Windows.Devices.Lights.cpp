@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Lights
 {
     // ----- Lamp class --------------------
 
-    static PyObject* _new_Lamp(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Lamp(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::Lamp>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Lamp>::type_name);
@@ -457,7 +457,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     // ----- LampArray class --------------------
 
-    static PyObject* _new_LampArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LampArray(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::LampArray>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::LampArray>::type_name);
@@ -1288,7 +1288,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     // ----- LampAvailabilityChangedEventArgs class --------------------
 
-    static PyObject* _new_LampAvailabilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LampAvailabilityChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>::type_name);
@@ -1383,7 +1383,7 @@ namespace py::cpp::Windows::Devices::Lights
 
     // ----- LampInfo class --------------------
 
-    static PyObject* _new_LampInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LampInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Lights::LampInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::LampInfo>::type_name);

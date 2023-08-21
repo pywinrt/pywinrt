@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI
 {
     // ----- ColorHelper class --------------------
 
-    static PyObject* _new_ColorHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ColorHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ColorHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ColorHelper>::type_name);
@@ -150,7 +150,7 @@ namespace py::cpp::Windows::UI
 
     // ----- Colors class --------------------
 
-    static PyObject* _new_Colors(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Colors(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Colors>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Colors>::type_name);
@@ -3065,7 +3065,7 @@ namespace py::cpp::Windows::UI
 
     // ----- UIContentRoot class --------------------
 
-    static PyObject* _new_UIContentRoot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UIContentRoot(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIContentRoot>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIContentRoot>::type_name);
@@ -3160,7 +3160,7 @@ namespace py::cpp::Windows::UI
 
     // ----- UIContext class --------------------
 
-    static PyObject* _new_UIContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UIContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIContext>::type_name);
@@ -3235,7 +3235,7 @@ namespace py::cpp::Windows::UI
 
     // ----- Color struct --------------------
 
-    PyObject* _new_Color(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Color(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -3449,7 +3449,7 @@ namespace py::cpp::Windows::UI
 
     // ----- WindowId struct --------------------
 
-    PyObject* _new_WindowId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_WindowId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

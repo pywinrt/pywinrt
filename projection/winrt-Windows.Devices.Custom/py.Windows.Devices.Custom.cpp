@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Custom
 {
     // ----- CustomDevice class --------------------
 
-    static PyObject* _new_CustomDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CustomDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Custom::CustomDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Custom::CustomDevice>::type_name);
@@ -459,7 +459,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     // ----- KnownDeviceTypes class --------------------
 
-    static PyObject* _new_KnownDeviceTypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownDeviceTypes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>::type_name);
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::Devices::Custom
 
     // ----- IIOControlCode interface --------------------
 
-    static PyObject* _new_IIOControlCode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IIOControlCode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Custom::IIOControlCode>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Custom::IIOControlCode>::type_name);

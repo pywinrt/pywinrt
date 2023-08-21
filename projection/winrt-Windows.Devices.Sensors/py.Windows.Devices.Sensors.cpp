@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Sensors
 {
     // ----- Accelerometer class --------------------
 
-    static PyObject* _new_Accelerometer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Accelerometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Accelerometer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Accelerometer>::type_name);
@@ -561,7 +561,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AccelerometerDataThreshold class --------------------
 
-    static PyObject* _new_AccelerometerDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccelerometerDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold>::type_name);
@@ -780,7 +780,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AccelerometerReading class --------------------
 
-    static PyObject* _new_AccelerometerReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccelerometerReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerReading>::type_name);
@@ -975,7 +975,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AccelerometerReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_AccelerometerReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccelerometerReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>::type_name);
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AccelerometerShakenEventArgs class --------------------
 
-    static PyObject* _new_AccelerometerShakenEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AccelerometerShakenEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>::type_name);
@@ -1165,7 +1165,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ActivitySensor class --------------------
 
-    static PyObject* _new_ActivitySensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivitySensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensor>::type_name);
@@ -1560,7 +1560,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ActivitySensorReading class --------------------
 
-    static PyObject* _new_ActivitySensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivitySensorReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorReading>::type_name);
@@ -1695,7 +1695,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ActivitySensorReadingChangeReport class --------------------
 
-    static PyObject* _new_ActivitySensorReadingChangeReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivitySensorReadingChangeReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>::type_name);
@@ -1790,7 +1790,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ActivitySensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_ActivitySensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivitySensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>::type_name);
@@ -1885,7 +1885,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ActivitySensorTriggerDetails class --------------------
 
-    static PyObject* _new_ActivitySensorTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ActivitySensorTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails>::type_name);
@@ -1990,7 +1990,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AdaptiveDimmingOptions class --------------------
 
-    static PyObject* _new_AdaptiveDimmingOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveDimmingOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>::type_name);
@@ -2113,7 +2113,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Altimeter class --------------------
 
-    static PyObject* _new_Altimeter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Altimeter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Altimeter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Altimeter>::type_name);
@@ -2449,7 +2449,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AltimeterReading class --------------------
 
-    static PyObject* _new_AltimeterReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AltimeterReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AltimeterReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AltimeterReading>::type_name);
@@ -2604,7 +2604,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- AltimeterReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_AltimeterReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AltimeterReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>::type_name);
@@ -2699,7 +2699,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Barometer class --------------------
 
-    static PyObject* _new_Barometer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Barometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Barometer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Barometer>::type_name);
@@ -3117,7 +3117,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- BarometerDataThreshold class --------------------
 
-    static PyObject* _new_BarometerDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarometerDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::BarometerDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::BarometerDataThreshold>::type_name);
@@ -3240,7 +3240,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- BarometerReading class --------------------
 
-    static PyObject* _new_BarometerReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarometerReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::BarometerReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::BarometerReading>::type_name);
@@ -3395,7 +3395,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- BarometerReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_BarometerReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarometerReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>::type_name);
@@ -3490,7 +3490,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Compass class --------------------
 
-    static PyObject* _new_Compass(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Compass(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Compass>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Compass>::type_name);
@@ -3956,7 +3956,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- CompassDataThreshold class --------------------
 
-    static PyObject* _new_CompassDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompassDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::CompassDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::CompassDataThreshold>::type_name);
@@ -4079,7 +4079,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- CompassReading class --------------------
 
-    static PyObject* _new_CompassReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompassReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::CompassReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::CompassReading>::type_name);
@@ -4274,7 +4274,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- CompassReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_CompassReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CompassReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>::type_name);
@@ -4369,7 +4369,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Gyrometer class --------------------
 
-    static PyObject* _new_Gyrometer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Gyrometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Gyrometer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Gyrometer>::type_name);
@@ -4835,7 +4835,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- GyrometerDataThreshold class --------------------
 
-    static PyObject* _new_GyrometerDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GyrometerDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>::type_name);
@@ -5054,7 +5054,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- GyrometerReading class --------------------
 
-    static PyObject* _new_GyrometerReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GyrometerReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::GyrometerReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::GyrometerReading>::type_name);
@@ -5249,7 +5249,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- GyrometerReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_GyrometerReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GyrometerReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>::type_name);
@@ -5344,7 +5344,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HingeAngleReading class --------------------
 
-    static PyObject* _new_HingeAngleReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HingeAngleReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HingeAngleReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HingeAngleReading>::type_name);
@@ -5479,7 +5479,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HingeAngleSensor class --------------------
 
-    static PyObject* _new_HingeAngleSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HingeAngleSensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HingeAngleSensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HingeAngleSensor>::type_name);
@@ -5842,7 +5842,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HingeAngleSensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_HingeAngleSensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HingeAngleSensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>::type_name);
@@ -5937,7 +5937,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HumanPresenceFeatures class --------------------
 
-    static PyObject* _new_HumanPresenceFeatures(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HumanPresenceFeatures(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>::type_name);
@@ -6132,7 +6132,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HumanPresenceSensor class --------------------
 
-    static PyObject* _new_HumanPresenceSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HumanPresenceSensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensor>::type_name);
@@ -6536,7 +6536,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HumanPresenceSensorReading class --------------------
 
-    static PyObject* _new_HumanPresenceSensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HumanPresenceSensorReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>::type_name);
@@ -6691,7 +6691,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HumanPresenceSensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_HumanPresenceSensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HumanPresenceSensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>::type_name);
@@ -6786,7 +6786,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- HumanPresenceSettings class --------------------
 
-    static PyObject* _new_HumanPresenceSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HumanPresenceSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>::type_name);
@@ -7569,7 +7569,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Inclinometer class --------------------
 
-    static PyObject* _new_Inclinometer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Inclinometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Inclinometer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Inclinometer>::type_name);
@@ -8107,7 +8107,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- InclinometerDataThreshold class --------------------
 
-    static PyObject* _new_InclinometerDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InclinometerDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>::type_name);
@@ -8326,7 +8326,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- InclinometerReading class --------------------
 
-    static PyObject* _new_InclinometerReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InclinometerReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::InclinometerReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::InclinometerReading>::type_name);
@@ -8541,7 +8541,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- InclinometerReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_InclinometerReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InclinometerReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>::type_name);
@@ -8636,7 +8636,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- LightSensor class --------------------
 
-    static PyObject* _new_LightSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LightSensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::LightSensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::LightSensor>::type_name);
@@ -9054,7 +9054,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- LightSensorDataThreshold class --------------------
 
-    static PyObject* _new_LightSensorDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LightSensorDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>::type_name);
@@ -9225,7 +9225,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- LightSensorReading class --------------------
 
-    static PyObject* _new_LightSensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LightSensorReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::LightSensorReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::LightSensorReading>::type_name);
@@ -9380,7 +9380,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- LightSensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_LightSensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LightSensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>::type_name);
@@ -9475,7 +9475,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- LockOnLeaveOptions class --------------------
 
-    static PyObject* _new_LockOnLeaveOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LockOnLeaveOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>::type_name);
@@ -9598,7 +9598,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Magnetometer class --------------------
 
-    static PyObject* _new_Magnetometer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Magnetometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Magnetometer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Magnetometer>::type_name);
@@ -10064,7 +10064,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- MagnetometerDataThreshold class --------------------
 
-    static PyObject* _new_MagnetometerDataThreshold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagnetometerDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>::type_name);
@@ -10283,7 +10283,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- MagnetometerReading class --------------------
 
-    static PyObject* _new_MagnetometerReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagnetometerReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::MagnetometerReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::MagnetometerReading>::type_name);
@@ -10498,7 +10498,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- MagnetometerReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_MagnetometerReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MagnetometerReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>::type_name);
@@ -10593,7 +10593,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- OrientationSensor class --------------------
 
-    static PyObject* _new_OrientationSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OrientationSensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::OrientationSensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::OrientationSensor>::type_name);
@@ -11153,7 +11153,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- OrientationSensorReading class --------------------
 
-    static PyObject* _new_OrientationSensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OrientationSensorReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::OrientationSensorReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::OrientationSensorReading>::type_name);
@@ -11348,7 +11348,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- OrientationSensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_OrientationSensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OrientationSensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>::type_name);
@@ -11443,7 +11443,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- Pedometer class --------------------
 
-    static PyObject* _new_Pedometer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Pedometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::Pedometer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Pedometer>::type_name);
@@ -11978,7 +11978,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- PedometerReading class --------------------
 
-    static PyObject* _new_PedometerReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PedometerReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::PedometerReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::PedometerReading>::type_name);
@@ -12133,7 +12133,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- PedometerReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_PedometerReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PedometerReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>::type_name);
@@ -12228,7 +12228,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ProximitySensor class --------------------
 
-    static PyObject* _new_ProximitySensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProximitySensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensor>::type_name);
@@ -12661,7 +12661,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ProximitySensorDisplayOnOffController class --------------------
 
-    static PyObject* _new_ProximitySensorDisplayOnOffController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProximitySensorDisplayOnOffController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController>::type_name);
@@ -12789,7 +12789,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ProximitySensorReading class --------------------
 
-    static PyObject* _new_ProximitySensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProximitySensorReading(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensorReading>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensorReading>::type_name);
@@ -12924,7 +12924,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ProximitySensorReadingChangedEventArgs class --------------------
 
-    static PyObject* _new_ProximitySensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProximitySensorReadingChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>::type_name);
@@ -13019,7 +13019,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- SensorDataThresholdTriggerDetails class --------------------
 
-    static PyObject* _new_SensorDataThresholdTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SensorDataThresholdTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>::type_name);
@@ -13134,7 +13134,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- SensorQuaternion class --------------------
 
-    static PyObject* _new_SensorQuaternion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SensorQuaternion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::SensorQuaternion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::SensorQuaternion>::type_name);
@@ -13289,7 +13289,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- SensorRotationMatrix class --------------------
 
-    static PyObject* _new_SensorRotationMatrix(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SensorRotationMatrix(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::SensorRotationMatrix>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::SensorRotationMatrix>::type_name);
@@ -13544,7 +13544,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- SimpleOrientationSensor class --------------------
 
-    static PyObject* _new_SimpleOrientationSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SimpleOrientationSensor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>::type_name);
@@ -13854,7 +13854,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- SimpleOrientationSensorOrientationChangedEventArgs class --------------------
 
-    static PyObject* _new_SimpleOrientationSensorOrientationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SimpleOrientationSensorOrientationChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>::type_name);
@@ -13969,7 +13969,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- WakeOnApproachOptions class --------------------
 
-    static PyObject* _new_WakeOnApproachOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WakeOnApproachOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>::type_name);
@@ -14140,7 +14140,7 @@ namespace py::cpp::Windows::Devices::Sensors
 
     // ----- ISensorDataThreshold interface --------------------
 
-    static PyObject* _new_ISensorDataThreshold(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISensorDataThreshold(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>::type_name);

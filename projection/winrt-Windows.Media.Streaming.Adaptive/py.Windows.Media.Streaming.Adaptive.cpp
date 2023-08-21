@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 {
     // ----- AdaptiveMediaSource class --------------------
 
-    static PyObject* _new_AdaptiveMediaSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>::type_name);
@@ -1021,7 +1021,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceAdvancedSettings class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceAdvancedSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceAdvancedSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>::type_name);
@@ -1240,7 +1240,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceCorrelatedTimes class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceCorrelatedTimes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceCorrelatedTimes(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>::type_name);
@@ -1375,7 +1375,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceCreationResult class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceCreationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceCreationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>::type_name);
@@ -1530,7 +1530,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDiagnosticAvailableEventArgs class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDiagnosticAvailableEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDiagnosticAvailableEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>::type_name);
@@ -1845,7 +1845,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDiagnostics class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDiagnostics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDiagnostics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>::type_name);
@@ -1965,7 +1965,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadBitrateChangedEventArgs class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadBitrateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadBitrateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>::type_name);
@@ -2100,7 +2100,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadCompletedEventArgs class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>::type_name);
@@ -2375,7 +2375,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadFailedEventArgs class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>::type_name);
@@ -2670,7 +2670,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadRequestedDeferral class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadRequestedDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>::type_name);
@@ -2776,7 +2776,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadRequestedEventArgs class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>::type_name);
@@ -3061,7 +3061,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadResult class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>::type_name);
@@ -3472,7 +3472,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourceDownloadStatistics class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourceDownloadStatistics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourceDownloadStatistics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>::type_name);
@@ -3627,7 +3627,7 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     // ----- AdaptiveMediaSourcePlaybackBitrateChangedEventArgs class --------------------
 
-    static PyObject* _new_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>::type_name);

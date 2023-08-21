@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Usb
 {
     // ----- UsbBulkInEndpointDescriptor class --------------------
 
-    static PyObject* _new_UsbBulkInEndpointDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbBulkInEndpointDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbBulkInPipe class --------------------
 
-    static PyObject* _new_UsbBulkInPipe(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbBulkInPipe(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbBulkInPipe>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbBulkInPipe>::type_name);
@@ -387,7 +387,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbBulkOutEndpointDescriptor class --------------------
 
-    static PyObject* _new_UsbBulkOutEndpointDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbBulkOutEndpointDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>::type_name);
@@ -522,7 +522,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbBulkOutPipe class --------------------
 
-    static PyObject* _new_UsbBulkOutPipe(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbBulkOutPipe(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbBulkOutPipe>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbBulkOutPipe>::type_name);
@@ -715,7 +715,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbConfiguration class --------------------
 
-    static PyObject* _new_UsbConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbConfiguration>::type_name);
@@ -850,7 +850,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbConfigurationDescriptor class --------------------
 
-    static PyObject* _new_UsbConfigurationDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbConfigurationDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>::type_name);
@@ -1371,7 +1371,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbDescriptor class --------------------
 
-    static PyObject* _new_UsbDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbDescriptor>::type_name);
@@ -1519,7 +1519,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbDevice class --------------------
 
-    static PyObject* _new_UsbDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbDevice>::type_name);
@@ -2193,7 +2193,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbDeviceClasses class --------------------
 
-    static PyObject* _new_UsbDeviceClasses(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbDeviceClasses(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbDeviceClasses>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbDeviceClasses>::type_name);
@@ -2468,7 +2468,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbDeviceDescriptor class --------------------
 
-    static PyObject* _new_UsbDeviceDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbDeviceDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>::type_name);
@@ -2663,7 +2663,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbEndpointDescriptor class --------------------
 
-    static PyObject* _new_UsbEndpointDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbEndpointDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>::type_name);
@@ -2955,7 +2955,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterface class --------------------
 
-    static PyObject* _new_UsbInterface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterface>::type_name);
@@ -3170,7 +3170,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterfaceDescriptor class --------------------
 
-    static PyObject* _new_UsbInterfaceDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterfaceDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>::type_name);
@@ -3422,7 +3422,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterfaceSetting class --------------------
 
-    static PyObject* _new_UsbInterfaceSetting(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterfaceSetting(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterfaceSetting>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterfaceSetting>::type_name);
@@ -3667,7 +3667,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterruptInEndpointDescriptor class --------------------
 
-    static PyObject* _new_UsbInterruptInEndpointDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterruptInEndpointDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>::type_name);
@@ -3822,7 +3822,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterruptInEventArgs class --------------------
 
-    static PyObject* _new_UsbInterruptInEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterruptInEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>::type_name);
@@ -3917,7 +3917,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterruptInPipe class --------------------
 
-    static PyObject* _new_UsbInterruptInPipe(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterruptInPipe(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptInPipe>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptInPipe>::type_name);
@@ -4087,7 +4087,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterruptOutEndpointDescriptor class --------------------
 
-    static PyObject* _new_UsbInterruptOutEndpointDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterruptOutEndpointDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>::type_name);
@@ -4242,7 +4242,7 @@ namespace py::cpp::Windows::Devices::Usb
 
     // ----- UsbInterruptOutPipe class --------------------
 
-    static PyObject* _new_UsbInterruptOutPipe(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UsbInterruptOutPipe(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>::type_name);

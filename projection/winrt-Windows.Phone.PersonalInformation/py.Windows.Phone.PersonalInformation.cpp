@@ -345,7 +345,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- ContactChangeRecord class --------------------
 
-    static PyObject* _new_ContactChangeRecord(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactChangeRecord(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>::type_name);
@@ -1196,7 +1196,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- ContactQueryResult class --------------------
 
-    static PyObject* _new_ContactQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactQueryResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>::type_name);
@@ -1382,7 +1382,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- ContactStore class --------------------
 
-    static PyObject* _new_ContactStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::ContactStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::ContactStore>::type_name);
@@ -1830,7 +1830,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- KnownContactProperties class --------------------
 
-    static PyObject* _new_KnownContactProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownContactProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>::type_name);
@@ -3329,7 +3329,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- IContactInformation interface --------------------
 
-    static PyObject* _new_IContactInformation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IContactInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>::type_name);
@@ -3806,7 +3806,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     // ----- IContactInformation2 interface --------------------
 
-    static PyObject* _new_IContactInformation2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IContactInformation2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>::type_name);

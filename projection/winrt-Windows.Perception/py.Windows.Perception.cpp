@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Perception
 {
     // ----- PerceptionTimestamp class --------------------
 
-    static PyObject* _new_PerceptionTimestamp(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionTimestamp(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Perception::PerceptionTimestamp>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::PerceptionTimestamp>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Perception
 
     // ----- PerceptionTimestampHelper class --------------------
 
-    static PyObject* _new_PerceptionTimestampHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionTimestampHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Perception::PerceptionTimestampHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::PerceptionTimestampHelper>::type_name);

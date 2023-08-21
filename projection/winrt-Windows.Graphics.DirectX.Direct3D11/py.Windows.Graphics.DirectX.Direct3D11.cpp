@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 {
     // ----- IDirect3DDevice interface --------------------
 
-    static PyObject* _new_IDirect3DDevice(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IDirect3DDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::type_name);
@@ -167,7 +167,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     // ----- IDirect3DSurface interface --------------------
 
-    static PyObject* _new_IDirect3DSurface(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IDirect3DSurface(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::type_name);
@@ -315,7 +315,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     // ----- Direct3DMultisampleDescription struct --------------------
 
-    PyObject* _new_Direct3DMultisampleDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Direct3DMultisampleDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -459,7 +459,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     // ----- Direct3DSurfaceDescription struct --------------------
 
-    PyObject* _new_Direct3DSurfaceDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Direct3DSurfaceDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

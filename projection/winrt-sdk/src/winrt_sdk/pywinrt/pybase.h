@@ -354,12 +354,12 @@ namespace py
     // this section is used when compiling other modules that use the
     // winrt-runtime module
 
-    static const runtime_api* PyWinRT_API;
+    [[maybe_unused]] static const runtime_api* PyWinRT_API;
 
     /* Return -1 on error, 0 on success.
      * PyCapsule_Import will set an exception if there's an error.
      */
-    static int import_winrt_runtime()
+    [[maybe_unused]] static int import_winrt_runtime()
     {
         PyWinRT_API = reinterpret_cast<runtime_api*>(
             PyCapsule_Import("winrt._winrt._C_API", 0));
@@ -783,7 +783,7 @@ namespace py
     template<typename T, typename = void>
     struct buffer
     {
-        static bool is_compatible(Py_buffer const& view) noexcept
+        static bool is_compatible(Py_buffer const& /*unused*/) noexcept
         {
             PyErr_Format(
                 PyExc_NotImplementedError,
@@ -1061,7 +1061,7 @@ namespace py
 
             auto result = PyLong_AsUnsignedLong(obj);
 
-            if (result == -1 && PyErr_Occurred())
+            if (result == static_cast<unsigned long>(-1) && PyErr_Occurred())
             {
                 throw python_exception();
             }
@@ -1107,7 +1107,7 @@ namespace py
 
             auto result = PyLong_AsUnsignedLongLong(obj);
 
-            if (result == -1 && PyErr_Occurred())
+            if (result == static_cast<unsigned long long>(-1) && PyErr_Occurred())
             {
                 throw python_exception();
             }
@@ -1607,7 +1607,7 @@ namespace py
                 return _current_value.has_value();
             }
 
-            uint32_t GetMany(winrt::array_view<T> values)
+            uint32_t GetMany(winrt::array_view<T> /*unused*/)
             {
                 // TODO: implement GetMany
                 PyErr_Format(
@@ -1748,7 +1748,7 @@ namespace py
         typename std::enable_if_t<
             is_delegate_category_v<T> || is_pdelegate_category_v<T>>>
     {
-        static PyObject* convert(T const& instance) noexcept
+        static PyObject* convert(T const& /*unused*/) noexcept
         {
             // TODO: support converting delegates
             PyErr_Format(
@@ -1773,6 +1773,7 @@ namespace py
     {
         using typename winrt::array_view<T>::value_type;
         using typename winrt::array_view<T>::pointer;
+        using typename winrt::array_view<T>::size_type;
 
         pybuf_view(pybuf_view const&) = delete;
         pybuf_view& operator=(pybuf_view const&) = delete;
@@ -1804,7 +1805,7 @@ namespace py
             }
 
             this->m_data = reinterpret_cast<pointer>(view.buf);
-            this->m_size = view.shape[0];
+            this->m_size = static_cast<size_type>(view.shape[0]);
         }
 
         ~pybuf_view()
@@ -1819,7 +1820,7 @@ namespace py
     template<typename T, bool writeable>
     struct converter<pybuf_view<T, writeable>>
     {
-        static PyObject* convert(pybuf_view<T, writeable> const& instance) noexcept
+        static PyObject* convert(pybuf_view<T, writeable> const& /*unused*/) noexcept
         {
             PyErr_Format(
                 PyExc_NotImplementedError,

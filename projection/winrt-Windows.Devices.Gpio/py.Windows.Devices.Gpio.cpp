@@ -881,7 +881,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioController class --------------------
 
-    static PyObject* _new_GpioController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GpioController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Gpio::GpioController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::GpioController>::type_name);
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioPin class --------------------
 
-    static PyObject* _new_GpioPin(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GpioPin(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Gpio::GpioPin>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::GpioPin>::type_name);
@@ -1592,7 +1592,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioPinValueChangedEventArgs class --------------------
 
-    static PyObject* _new_GpioPinValueChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GpioPinValueChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>::type_name);
@@ -1687,7 +1687,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioChangeCount struct --------------------
 
-    PyObject* _new_GpioChangeCount(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GpioChangeCount(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1831,7 +1831,7 @@ namespace py::cpp::Windows::Devices::Gpio
 
     // ----- GpioChangeRecord struct --------------------
 
-    PyObject* _new_GpioChangeRecord(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GpioChangeRecord(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

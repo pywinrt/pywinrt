@@ -4,7 +4,7 @@ import unittest
 import uuid
 
 from winrt.system import Array, Object
-from winrt.windows.foundation import Rect, Size, Point, Uri, IPropertyValue
+from winrt.windows.foundation import IPropertyValue, Point, Rect, Size, Uri
 
 is_64bits = sys.maxsize > 2**32
 pointer_size = 8 if is_64bits else 4
@@ -330,7 +330,9 @@ class TestWinRTArray(unittest.TestCase):
     def test_interface(self):
         a = Array(IPropertyValue, 2)
 
-        self.assertEqual(a._winrt_element_type_name_, "Windows.Foundation.IPropertyValue")
+        self.assertEqual(
+            a._winrt_element_type_name_, "Windows.Foundation.IPropertyValue"
+        )
         self.assertEqual(len(a), 2)
         self.assertEqual(list(a), [None, None])
 
@@ -346,7 +348,11 @@ class TestWinRTArray(unittest.TestCase):
         a = Array("B", list(range(10)))
 
         for i, v in enumerate(a):
+            # positive index
             self.assertEqual(a[i], v)
+            # negative index
+            self.assertEqual(a[i - len(a)], v)
+            # __contains__
             self.assertIn(v, a)
 
         self.assertEqual(a.count(5), 1)

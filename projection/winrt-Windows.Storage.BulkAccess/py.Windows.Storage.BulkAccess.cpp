@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 {
     // ----- FileInformation class --------------------
 
-    static PyObject* _new_FileInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FileInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::BulkAccess::FileInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::BulkAccess::FileInformation>::type_name);
@@ -1609,7 +1609,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     // ----- FolderInformation class --------------------
 
-    static PyObject* _new_FolderInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FolderInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::BulkAccess::FolderInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::BulkAccess::FolderInformation>::type_name);
@@ -3157,7 +3157,7 @@ namespace py::cpp::Windows::Storage::BulkAccess
 
     // ----- IStorageItemInformation interface --------------------
 
-    static PyObject* _new_IStorageItemInformation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IStorageItemInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>::type_name);

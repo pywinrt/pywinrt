@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 {
     // ----- BarcodeScannerDisableScannerRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerDisableScannerRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerDisableScannerRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest>::type_name);
@@ -184,7 +184,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerDisableScannerRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerDisableScannerRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerDisableScannerRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs>::type_name);
@@ -309,7 +309,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerEnableScannerRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerEnableScannerRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerEnableScannerRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest>::type_name);
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerEnableScannerRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerEnableScannerRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerEnableScannerRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs>::type_name);
@@ -610,7 +610,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerFrameReader class --------------------
 
-    static PyObject* _new_BarcodeScannerFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerFrameReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader>::type_name);
@@ -893,7 +893,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerFrameReaderFrameArrivedEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerFrameReaderFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerFrameReaderFrameArrivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs>::type_name);
@@ -998,7 +998,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerGetSymbologyAttributesRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerGetSymbologyAttributesRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerGetSymbologyAttributesRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest>::type_name);
@@ -1196,7 +1196,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerGetSymbologyAttributesRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerGetSymbologyAttributesRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerGetSymbologyAttributesRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs>::type_name);
@@ -1321,7 +1321,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerHideVideoPreviewRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerHideVideoPreviewRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerHideVideoPreviewRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest>::type_name);
@@ -1497,7 +1497,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerHideVideoPreviewRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerHideVideoPreviewRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerHideVideoPreviewRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs>::type_name);
@@ -1622,7 +1622,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerProviderConnection class --------------------
 
-    static PyObject* _new_BarcodeScannerProviderConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerProviderConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection>::type_name);
@@ -2534,7 +2534,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerProviderTriggerDetails class --------------------
 
-    static PyObject* _new_BarcodeScannerProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerProviderTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails>::type_name);
@@ -2629,7 +2629,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerSetActiveSymbologiesRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerSetActiveSymbologiesRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerSetActiveSymbologiesRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest>::type_name);
@@ -2825,7 +2825,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerSetActiveSymbologiesRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerSetActiveSymbologiesRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerSetActiveSymbologiesRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs>::type_name);
@@ -2950,7 +2950,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerSetSymbologyAttributesRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerSetSymbologyAttributesRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerSetSymbologyAttributesRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest>::type_name);
@@ -3166,7 +3166,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerSetSymbologyAttributesRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerSetSymbologyAttributesRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerSetSymbologyAttributesRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs>::type_name);
@@ -3291,7 +3291,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerStartSoftwareTriggerRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerStartSoftwareTriggerRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerStartSoftwareTriggerRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest>::type_name);
@@ -3467,7 +3467,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerStartSoftwareTriggerRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerStartSoftwareTriggerRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerStartSoftwareTriggerRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs>::type_name);
@@ -3592,7 +3592,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerStopSoftwareTriggerRequest class --------------------
 
-    static PyObject* _new_BarcodeScannerStopSoftwareTriggerRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerStopSoftwareTriggerRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest>::type_name);
@@ -3768,7 +3768,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerStopSoftwareTriggerRequestEventArgs class --------------------
 
-    static PyObject* _new_BarcodeScannerStopSoftwareTriggerRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerStopSoftwareTriggerRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs>::type_name);
@@ -3893,7 +3893,7 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
 
     // ----- BarcodeScannerVideoFrame class --------------------
 
-    static PyObject* _new_BarcodeScannerVideoFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BarcodeScannerVideoFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame>::type_name);

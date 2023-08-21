@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Text::Core
 {
     // ----- CoreTextCompositionCompletedEventArgs class --------------------
 
-    static PyObject* _new_CoreTextCompositionCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextCompositionCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>::type_name);
@@ -153,7 +153,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextCompositionSegment class --------------------
 
-    static PyObject* _new_CoreTextCompositionSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextCompositionSegment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>::type_name);
@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextCompositionStartedEventArgs class --------------------
 
-    static PyObject* _new_CoreTextCompositionStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextCompositionStartedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>::type_name);
@@ -393,7 +393,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextEditContext class --------------------
 
-    static PyObject* _new_CoreTextEditContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextEditContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>::type_name);
@@ -1271,7 +1271,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextFormatUpdatingEventArgs class --------------------
 
-    static PyObject* _new_CoreTextFormatUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextFormatUpdatingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>::type_name);
@@ -1564,7 +1564,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextLayoutBounds class --------------------
 
-    static PyObject* _new_CoreTextLayoutBounds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextLayoutBounds(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>::type_name);
@@ -1735,7 +1735,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextLayoutRequest class --------------------
 
-    static PyObject* _new_CoreTextLayoutRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextLayoutRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>::type_name);
@@ -1920,7 +1920,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextLayoutRequestedEventArgs class --------------------
 
-    static PyObject* _new_CoreTextLayoutRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextLayoutRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>::type_name);
@@ -2015,7 +2015,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextSelectionRequest class --------------------
 
-    static PyObject* _new_CoreTextSelectionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextSelectionRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>::type_name);
@@ -2188,7 +2188,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextSelectionRequestedEventArgs class --------------------
 
-    static PyObject* _new_CoreTextSelectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextSelectionRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>::type_name);
@@ -2283,7 +2283,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextSelectionUpdatingEventArgs class --------------------
 
-    static PyObject* _new_CoreTextSelectionUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextSelectionUpdatingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>::type_name);
@@ -2476,7 +2476,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextServicesConstants class --------------------
 
-    static PyObject* _new_CoreTextServicesConstants(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextServicesConstants(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>::type_name);
@@ -2550,7 +2550,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextServicesManager class --------------------
 
-    static PyObject* _new_CoreTextServicesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextServicesManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>::type_name);
@@ -2750,7 +2750,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextTextRequest class --------------------
 
-    static PyObject* _new_CoreTextTextRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextTextRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>::type_name);
@@ -2943,7 +2943,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextTextRequestedEventArgs class --------------------
 
-    static PyObject* _new_CoreTextTextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextTextRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>::type_name);
@@ -3038,7 +3038,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextTextUpdatingEventArgs class --------------------
 
-    static PyObject* _new_CoreTextTextUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreTextTextUpdatingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>::type_name);
@@ -3291,7 +3291,7 @@ namespace py::cpp::Windows::UI::Text::Core
 
     // ----- CoreTextRange struct --------------------
 
-    PyObject* _new_CoreTextRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_CoreTextRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

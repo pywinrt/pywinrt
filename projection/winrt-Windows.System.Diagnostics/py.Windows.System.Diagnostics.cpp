@@ -8,7 +8,7 @@ namespace py::cpp::Windows::System::Diagnostics
 {
     // ----- DiagnosticActionResult class --------------------
 
-    static PyObject* _new_DiagnosticActionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DiagnosticActionResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::DiagnosticActionResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DiagnosticActionResult>::type_name);
@@ -123,7 +123,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- DiagnosticInvoker class --------------------
 
-    static PyObject* _new_DiagnosticInvoker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DiagnosticInvoker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::DiagnosticInvoker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DiagnosticInvoker>::type_name);
@@ -364,7 +364,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessCpuUsage class --------------------
 
-    static PyObject* _new_ProcessCpuUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessCpuUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsage>::type_name);
@@ -469,7 +469,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessCpuUsageReport class --------------------
 
-    static PyObject* _new_ProcessCpuUsageReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessCpuUsageReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessCpuUsageReport>::type_name);
@@ -584,7 +584,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessDiagnosticInfo class --------------------
 
-    static PyObject* _new_ProcessDiagnosticInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessDiagnosticInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessDiagnosticInfo>::type_name);
@@ -941,7 +941,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessDiskUsage class --------------------
 
-    static PyObject* _new_ProcessDiskUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessDiskUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsage>::type_name);
@@ -1046,7 +1046,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessDiskUsageReport class --------------------
 
-    static PyObject* _new_ProcessDiskUsageReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessDiskUsageReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessDiskUsageReport>::type_name);
@@ -1241,7 +1241,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessMemoryUsage class --------------------
 
-    static PyObject* _new_ProcessMemoryUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessMemoryUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsage>::type_name);
@@ -1346,7 +1346,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- ProcessMemoryUsageReport class --------------------
 
-    static PyObject* _new_ProcessMemoryUsageReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProcessMemoryUsageReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::ProcessMemoryUsageReport>::type_name);
@@ -1661,7 +1661,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- SystemCpuUsage class --------------------
 
-    static PyObject* _new_SystemCpuUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemCpuUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::SystemCpuUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::SystemCpuUsage>::type_name);
@@ -1766,7 +1766,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- SystemCpuUsageReport class --------------------
 
-    static PyObject* _new_SystemCpuUsageReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemCpuUsageReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::SystemCpuUsageReport>::type_name);
@@ -1901,7 +1901,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- SystemDiagnosticInfo class --------------------
 
-    static PyObject* _new_SystemDiagnosticInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemDiagnosticInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::SystemDiagnosticInfo>::type_name);
@@ -2118,7 +2118,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- SystemMemoryUsage class --------------------
 
-    static PyObject* _new_SystemMemoryUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemMemoryUsage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsage>::type_name);
@@ -2223,7 +2223,7 @@ namespace py::cpp::Windows::System::Diagnostics
 
     // ----- SystemMemoryUsageReport class --------------------
 
-    static PyObject* _new_SystemMemoryUsageReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemMemoryUsageReport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::SystemMemoryUsageReport>::type_name);

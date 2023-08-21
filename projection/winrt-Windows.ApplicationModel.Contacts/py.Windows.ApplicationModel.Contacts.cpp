@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 {
     // ----- AggregateContactManager class --------------------
 
-    static PyObject* _new_AggregateContactManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AggregateContactManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>::type_name);
@@ -2450,7 +2450,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactAnnotationList class --------------------
 
-    static PyObject* _new_ContactAnnotationList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactAnnotationList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>::type_name);
@@ -2773,7 +2773,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactAnnotationStore class --------------------
 
-    static PyObject* _new_ContactAnnotationStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactAnnotationStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>::type_name);
@@ -3120,7 +3120,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactBatch class --------------------
 
-    static PyObject* _new_ContactBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactBatch(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>::type_name);
@@ -3235,7 +3235,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactCardDelayedDataLoader class --------------------
 
-    static PyObject* _new_ContactCardDelayedDataLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactCardDelayedDataLoader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>::type_name);
@@ -3609,7 +3609,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactChange class --------------------
 
-    static PyObject* _new_ContactChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactChange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>::type_name);
@@ -3724,7 +3724,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactChangeReader class --------------------
 
-    static PyObject* _new_ContactChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactChangeReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>::type_name);
@@ -3893,7 +3893,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactChangeTracker class --------------------
 
-    static PyObject* _new_ContactChangeTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactChangeTracker(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>::type_name);
@@ -4080,7 +4080,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactChangedDeferral class --------------------
 
-    static PyObject* _new_ContactChangedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactChangedDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>::type_name);
@@ -4186,7 +4186,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactChangedEventArgs class --------------------
 
-    static PyObject* _new_ContactChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>::type_name);
@@ -5608,7 +5608,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactGroup class --------------------
 
-    static PyObject* _new_ContactGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactGroup(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>::type_name);
@@ -5683,7 +5683,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactInformation class --------------------
 
-    static PyObject* _new_ContactInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>::type_name);
@@ -6715,7 +6715,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactLaunchActionVerbs class --------------------
 
-    static PyObject* _new_ContactLaunchActionVerbs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactLaunchActionVerbs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>::type_name);
@@ -6869,7 +6869,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactList class --------------------
 
-    static PyObject* _new_ContactList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactList(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactList>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactList>::type_name);
@@ -7699,7 +7699,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactListLimitedWriteOperations class --------------------
 
-    static PyObject* _new_ContactListLimitedWriteOperations(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactListLimitedWriteOperations(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>::type_name);
@@ -7838,7 +7838,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactListSyncConstraints class --------------------
 
-    static PyObject* _new_ContactListSyncConstraints(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactListSyncConstraints(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>::type_name);
@@ -9257,7 +9257,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactListSyncManager class --------------------
 
-    static PyObject* _new_ContactListSyncManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactListSyncManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>::type_name);
@@ -9887,7 +9887,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactManager class --------------------
 
-    static PyObject* _new_ContactManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>::type_name);
@@ -10528,7 +10528,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactManagerForUser class --------------------
 
-    static PyObject* _new_ContactManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>::type_name);
@@ -10902,7 +10902,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactMatchReason class --------------------
 
-    static PyObject* _new_ContactMatchReason(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactMatchReason(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>::type_name);
@@ -11037,7 +11037,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactPanel class --------------------
 
-    static PyObject* _new_ContactPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactPanel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>::type_name);
@@ -11281,7 +11281,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactPanelClosingEventArgs class --------------------
 
-    static PyObject* _new_ContactPanelClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactPanelClosingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>::type_name);
@@ -11386,7 +11386,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactPanelLaunchFullAppRequestedEventArgs class --------------------
 
-    static PyObject* _new_ContactPanelLaunchFullAppRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactPanelLaunchFullAppRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>::type_name);
@@ -12517,7 +12517,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactQueryTextSearch class --------------------
 
-    static PyObject* _new_ContactQueryTextSearch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactQueryTextSearch(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>::type_name);
@@ -12736,7 +12736,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactReader class --------------------
 
-    static PyObject* _new_ContactReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>::type_name);
@@ -13114,7 +13114,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactStore class --------------------
 
-    static PyObject* _new_ContactStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>::type_name);
@@ -13583,7 +13583,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- ContactStoreNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_ContactStoreNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ContactStoreNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>::type_name);
@@ -14044,7 +14044,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- KnownContactField class --------------------
 
-    static PyObject* _new_KnownContactField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownContactField(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>::type_name);
@@ -14242,7 +14242,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- PinnedContactIdsQueryResult class --------------------
 
-    static PyObject* _new_PinnedContactIdsQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PinnedContactIdsQueryResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>::type_name);
@@ -14337,7 +14337,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- PinnedContactManager class --------------------
 
-    static PyObject* _new_PinnedContactManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PinnedContactManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>::type_name);
@@ -14751,7 +14751,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- IContactField interface --------------------
 
-    static PyObject* _new_IContactField(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IContactField(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::type_name);
@@ -14906,7 +14906,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- IContactFieldFactory interface --------------------
 
-    static PyObject* _new_IContactFieldFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IContactFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::type_name);
@@ -15059,7 +15059,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- IContactInstantMessageFieldFactory interface --------------------
 
-    static PyObject* _new_IContactInstantMessageFieldFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IContactInstantMessageFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::type_name);
@@ -15211,7 +15211,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     // ----- IContactLocationFieldFactory interface --------------------
 
-    static PyObject* _new_IContactLocationFieldFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IContactLocationFieldFactory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::type_name);

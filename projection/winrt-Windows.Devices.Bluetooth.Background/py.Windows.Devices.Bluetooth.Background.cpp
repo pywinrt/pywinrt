@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 {
     // ----- BluetoothLEAdvertisementPublisherTriggerDetails class --------------------
 
-    static PyObject* _new_BluetoothLEAdvertisementPublisherTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BluetoothLEAdvertisementPublisherTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- BluetoothLEAdvertisementWatcherTriggerDetails class --------------------
 
-    static PyObject* _new_BluetoothLEAdvertisementWatcherTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BluetoothLEAdvertisementWatcherTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>::type_name);
@@ -278,7 +278,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- GattCharacteristicNotificationTriggerDetails class --------------------
 
-    static PyObject* _new_GattCharacteristicNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GattCharacteristicNotificationTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>::type_name);
@@ -453,7 +453,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- GattServiceProviderConnection class --------------------
 
-    static PyObject* _new_GattServiceProviderConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GattServiceProviderConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>::type_name);
@@ -639,7 +639,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- GattServiceProviderTriggerDetails class --------------------
 
-    static PyObject* _new_GattServiceProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GattServiceProviderTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>::type_name);
@@ -734,7 +734,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- RfcommConnectionTriggerDetails class --------------------
 
-    static PyObject* _new_RfcommConnectionTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommConnectionTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>::type_name);
@@ -869,7 +869,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- RfcommInboundConnectionInformation class --------------------
 
-    static PyObject* _new_RfcommInboundConnectionInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommInboundConnectionInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>::type_name);
@@ -1088,7 +1088,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
 
     // ----- RfcommOutboundConnectionInformation class --------------------
 
-    static PyObject* _new_RfcommOutboundConnectionInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RfcommOutboundConnectionInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 {
     // ----- CallAnswerEventArgs class --------------------
 
-    static PyObject* _new_CallAnswerEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CallAnswerEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- CallRejectEventArgs class --------------------
 
-    static PyObject* _new_CallRejectEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CallRejectEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>::type_name);
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- CallStateChangeEventArgs class --------------------
 
-    static PyObject* _new_CallStateChangeEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CallStateChangeEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>::type_name);
@@ -293,7 +293,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- LockScreenCallEndCallDeferral class --------------------
 
-    static PyObject* _new_LockScreenCallEndCallDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LockScreenCallEndCallDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>::type_name);
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- LockScreenCallEndRequestedEventArgs class --------------------
 
-    static PyObject* _new_LockScreenCallEndRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LockScreenCallEndRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>::type_name);
@@ -524,7 +524,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- LockScreenCallUI class --------------------
 
-    static PyObject* _new_LockScreenCallUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LockScreenCallUI(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>::type_name);
@@ -768,7 +768,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- MuteChangeEventArgs class --------------------
 
-    static PyObject* _new_MuteChangeEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MuteChangeEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>::type_name);
@@ -863,7 +863,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCall class --------------------
 
-    static PyObject* _new_PhoneCall(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCall(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCall>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCall>::type_name);
@@ -1795,7 +1795,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallBlocking class --------------------
 
-    static PyObject* _new_PhoneCallBlocking(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallBlocking(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>::type_name);
@@ -3340,7 +3340,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallHistoryEntryReader class --------------------
 
-    static PyObject* _new_PhoneCallHistoryEntryReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallHistoryEntryReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>::type_name);
@@ -3445,7 +3445,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallHistoryManager class --------------------
 
-    static PyObject* _new_PhoneCallHistoryManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallHistoryManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>::type_name);
@@ -3543,7 +3543,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallHistoryManagerForUser class --------------------
 
-    static PyObject* _new_PhoneCallHistoryManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallHistoryManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>::type_name);
@@ -3670,7 +3670,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallHistoryStore class --------------------
 
-    static PyObject* _new_PhoneCallHistoryStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallHistoryStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>::type_name);
@@ -4111,7 +4111,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallInfo class --------------------
 
-    static PyObject* _new_PhoneCallInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>::type_name);
@@ -4306,7 +4306,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallManager class --------------------
 
-    static PyObject* _new_PhoneCallManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>::type_name);
@@ -4540,7 +4540,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallStore class --------------------
 
-    static PyObject* _new_PhoneCallStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallStore(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>::type_name);
@@ -4707,7 +4707,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallVideoCapabilities class --------------------
 
-    static PyObject* _new_PhoneCallVideoCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallVideoCapabilities(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>::type_name);
@@ -4802,7 +4802,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallVideoCapabilitiesManager class --------------------
 
-    static PyObject* _new_PhoneCallVideoCapabilitiesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallVideoCapabilitiesManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>::type_name);
@@ -4868,7 +4868,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneCallsResult class --------------------
 
-    static PyObject* _new_PhoneCallsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneCallsResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>::type_name);
@@ -5368,7 +5368,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLine class --------------------
 
-    static PyObject* _new_PhoneLine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLine(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLine>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLine>::type_name);
@@ -6038,7 +6038,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLineCellularDetails class --------------------
 
-    static PyObject* _new_PhoneLineCellularDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineCellularDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>::type_name);
@@ -6225,7 +6225,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLineConfiguration class --------------------
 
-    static PyObject* _new_PhoneLineConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>::type_name);
@@ -6340,7 +6340,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLineDialResult class --------------------
 
-    static PyObject* _new_PhoneLineDialResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineDialResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>::type_name);
@@ -6455,7 +6455,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLineTransportDevice class --------------------
 
-    static PyObject* _new_PhoneLineTransportDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineTransportDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>::type_name);
@@ -7030,7 +7030,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLineWatcher class --------------------
 
-    static PyObject* _new_PhoneLineWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>::type_name);
@@ -7412,7 +7412,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneLineWatcherEventArgs class --------------------
 
-    static PyObject* _new_PhoneLineWatcherEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneLineWatcherEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>::type_name);
@@ -7507,7 +7507,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- PhoneVoicemail class --------------------
 
-    static PyObject* _new_PhoneVoicemail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhoneVoicemail(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>::type_name);
@@ -7672,7 +7672,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- VoipCallCoordinator class --------------------
 
-    static PyObject* _new_VoipCallCoordinator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoipCallCoordinator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>::type_name);
@@ -8253,7 +8253,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     // ----- VoipPhoneCall class --------------------
 
-    static PyObject* _new_VoipPhoneCall(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoipPhoneCall(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>::type_name);

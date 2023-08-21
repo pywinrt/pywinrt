@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Core
 {
     // ----- AcceleratorKeyEventArgs class --------------------
 
-    static PyObject* _new_AcceleratorKeyEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AcceleratorKeyEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>::type_name);
@@ -211,7 +211,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- AutomationProviderRequestedEventArgs class --------------------
 
-    static PyObject* _new_AutomationProviderRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationProviderRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>::type_name);
@@ -382,7 +382,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- BackRequestedEventArgs class --------------------
 
-    static PyObject* _new_BackRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BackRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::BackRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::BackRequestedEventArgs>::type_name);
@@ -505,7 +505,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CharacterReceivedEventArgs class --------------------
 
-    static PyObject* _new_CharacterReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CharacterReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CharacterReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CharacterReceivedEventArgs>::type_name);
@@ -668,7 +668,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ClosestInteractiveBoundsRequestedEventArgs class --------------------
 
-    static PyObject* _new_ClosestInteractiveBoundsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ClosestInteractiveBoundsRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>::type_name);
@@ -831,7 +831,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreAcceleratorKeys class --------------------
 
-    static PyObject* _new_CoreAcceleratorKeys(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreAcceleratorKeys(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreAcceleratorKeys>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreAcceleratorKeys>::type_name);
@@ -951,7 +951,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreComponentInputSource class --------------------
 
-    static PyObject* _new_CoreComponentInputSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreComponentInputSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreComponentInputSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreComponentInputSource>::type_name);
@@ -2161,7 +2161,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreDispatcher class --------------------
 
-    static PyObject* _new_CoreDispatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreDispatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreDispatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreDispatcher>::type_name);
@@ -2593,7 +2593,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreIndependentInputSource class --------------------
 
-    static PyObject* _new_CoreIndependentInputSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreIndependentInputSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreIndependentInputSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreIndependentInputSource>::type_name);
@@ -3401,7 +3401,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreIndependentInputSourceController class --------------------
 
-    static PyObject* _new_CoreIndependentInputSourceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreIndependentInputSourceController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreIndependentInputSourceController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreIndependentInputSourceController>::type_name);
@@ -3765,7 +3765,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreWindow class --------------------
 
-    static PyObject* _new_CoreWindow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreWindow>::type_name);
@@ -5962,7 +5962,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreWindowEventArgs class --------------------
 
-    static PyObject* _new_CoreWindowEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreWindowEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreWindowEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreWindowEventArgs>::type_name);
@@ -6527,7 +6527,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreWindowPopupShowingEventArgs class --------------------
 
-    static PyObject* _new_CoreWindowPopupShowingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreWindowPopupShowingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>::type_name);
@@ -6635,7 +6635,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreWindowResizeManager class --------------------
 
-    static PyObject* _new_CoreWindowResizeManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreWindowResizeManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::CoreWindowResizeManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::CoreWindowResizeManager>::type_name);
@@ -6819,7 +6819,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- IdleDispatchedHandlerArgs class --------------------
 
-    static PyObject* _new_IdleDispatchedHandlerArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_IdleDispatchedHandlerArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>::type_name);
@@ -6914,7 +6914,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- InputEnabledEventArgs class --------------------
 
-    static PyObject* _new_InputEnabledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InputEnabledEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::InputEnabledEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::InputEnabledEventArgs>::type_name);
@@ -7057,7 +7057,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- KeyEventArgs class --------------------
 
-    static PyObject* _new_KeyEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KeyEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::KeyEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::KeyEventArgs>::type_name);
@@ -7240,7 +7240,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- PointerEventArgs class --------------------
 
-    static PyObject* _new_PointerEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PointerEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::PointerEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::PointerEventArgs>::type_name);
@@ -7433,7 +7433,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- SystemNavigationManager class --------------------
 
-    static PyObject* _new_SystemNavigationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SystemNavigationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::SystemNavigationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::SystemNavigationManager>::type_name);
@@ -7631,7 +7631,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- TouchHitTestingEventArgs class --------------------
 
-    static PyObject* _new_TouchHitTestingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TouchHitTestingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::TouchHitTestingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::TouchHitTestingEventArgs>::type_name);
@@ -7874,7 +7874,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- VisibilityChangedEventArgs class --------------------
 
-    static PyObject* _new_VisibilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VisibilityChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::VisibilityChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::VisibilityChangedEventArgs>::type_name);
@@ -8017,7 +8017,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- WindowActivatedEventArgs class --------------------
 
-    static PyObject* _new_WindowActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::WindowActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::WindowActivatedEventArgs>::type_name);
@@ -8160,7 +8160,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- WindowSizeChangedEventArgs class --------------------
 
-    static PyObject* _new_WindowSizeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowSizeChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>::type_name);
@@ -8303,7 +8303,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICoreAcceleratorKeys interface --------------------
 
-    static PyObject* _new_ICoreAcceleratorKeys(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreAcceleratorKeys(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>::type_name);
@@ -8423,7 +8423,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICoreInputSourceBase interface --------------------
 
-    static PyObject* _new_ICoreInputSourceBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreInputSourceBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>::type_name);
@@ -8611,7 +8611,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICorePointerInputSource interface --------------------
 
-    static PyObject* _new_ICorePointerInputSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICorePointerInputSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource>::type_name);
@@ -9151,7 +9151,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICorePointerInputSource2 interface --------------------
 
-    static PyObject* _new_ICorePointerInputSource2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICorePointerInputSource2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>::type_name);
@@ -9711,7 +9711,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICorePointerRedirector interface --------------------
 
-    static PyObject* _new_ICorePointerRedirector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICorePointerRedirector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICorePointerRedirector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICorePointerRedirector>::type_name);
@@ -9921,7 +9921,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICoreWindow interface --------------------
 
-    static PyObject* _new_ICoreWindow(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreWindow>::type_name);
@@ -11213,7 +11213,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- ICoreWindowEventArgs interface --------------------
 
-    static PyObject* _new_ICoreWindowEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreWindowEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>::type_name);
@@ -11336,7 +11336,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- IInitializeWithCoreWindow interface --------------------
 
-    static PyObject* _new_IInitializeWithCoreWindow(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IInitializeWithCoreWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>::type_name);
@@ -11444,7 +11444,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CorePhysicalKeyStatus struct --------------------
 
-    PyObject* _new_CorePhysicalKeyStatus(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_CorePhysicalKeyStatus(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -11728,7 +11728,7 @@ namespace py::cpp::Windows::UI::Core
 
     // ----- CoreProximityEvaluation struct --------------------
 
-    PyObject* _new_CoreProximityEvaluation(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_CoreProximityEvaluation(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

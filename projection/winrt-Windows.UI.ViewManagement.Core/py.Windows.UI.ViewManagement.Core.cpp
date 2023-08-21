@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 {
     // ----- CoreFrameworkInputView class --------------------
 
-    static PyObject* _new_CoreFrameworkInputView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreFrameworkInputView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>::type_name);
@@ -235,7 +235,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreFrameworkInputViewAnimationStartingEventArgs class --------------------
 
-    static PyObject* _new_CoreFrameworkInputViewAnimationStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreFrameworkInputViewAnimationStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>::type_name);
@@ -370,7 +370,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreFrameworkInputViewOcclusionsChangedEventArgs class --------------------
 
-    static PyObject* _new_CoreFrameworkInputViewOcclusionsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreFrameworkInputViewOcclusionsChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>::type_name);
@@ -485,7 +485,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputView class --------------------
 
-    static PyObject* _new_CoreInputView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>::type_name);
@@ -1172,7 +1172,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputViewAnimationStartingEventArgs class --------------------
 
-    static PyObject* _new_CoreInputViewAnimationStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputViewAnimationStartingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>::type_name);
@@ -1335,7 +1335,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputViewHidingEventArgs class --------------------
 
-    static PyObject* _new_CoreInputViewHidingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputViewHidingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>::type_name);
@@ -1440,7 +1440,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputViewOcclusion class --------------------
 
-    static PyObject* _new_CoreInputViewOcclusion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputViewOcclusion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>::type_name);
@@ -1555,7 +1555,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputViewOcclusionsChangedEventArgs class --------------------
 
-    static PyObject* _new_CoreInputViewOcclusionsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputViewOcclusionsChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>::type_name);
@@ -1698,7 +1698,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputViewShowingEventArgs class --------------------
 
-    static PyObject* _new_CoreInputViewShowingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputViewShowingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>::type_name);
@@ -1803,7 +1803,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- CoreInputViewTransferringXYFocusEventArgs class --------------------
 
-    static PyObject* _new_CoreInputViewTransferringXYFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreInputViewTransferringXYFocusEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>::type_name);
@@ -2014,7 +2014,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     // ----- UISettingsController class --------------------
 
-    static PyObject* _new_UISettingsController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UISettingsController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>::type_name);

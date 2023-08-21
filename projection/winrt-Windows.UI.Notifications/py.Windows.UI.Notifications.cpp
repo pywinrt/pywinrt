@@ -408,7 +408,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- BadgeUpdateManager class --------------------
 
-    static PyObject* _new_BadgeUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BadgeUpdateManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::BadgeUpdateManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::BadgeUpdateManager>::type_name);
@@ -588,7 +588,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- BadgeUpdateManagerForUser class --------------------
 
-    static PyObject* _new_BadgeUpdateManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BadgeUpdateManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>::type_name);
@@ -765,7 +765,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- BadgeUpdater class --------------------
 
-    static PyObject* _new_BadgeUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_BadgeUpdater(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::BadgeUpdater>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::BadgeUpdater>::type_name);
@@ -992,7 +992,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- KnownAdaptiveNotificationHints class --------------------
 
-    static PyObject* _new_KnownAdaptiveNotificationHints(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownAdaptiveNotificationHints(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>::type_name);
@@ -1166,7 +1166,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- KnownAdaptiveNotificationTextStyles class --------------------
 
-    static PyObject* _new_KnownAdaptiveNotificationTextStyles(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownAdaptiveNotificationTextStyles(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>::type_name);
@@ -1600,7 +1600,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- KnownNotificationBindings class --------------------
 
-    static PyObject* _new_KnownNotificationBindings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownNotificationBindings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::KnownNotificationBindings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::KnownNotificationBindings>::type_name);
@@ -1867,7 +1867,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- NotificationBinding class --------------------
 
-    static PyObject* _new_NotificationBinding(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NotificationBinding(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::NotificationBinding>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::NotificationBinding>::type_name);
@@ -2284,7 +2284,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- NotificationVisual class --------------------
 
-    static PyObject* _new_NotificationVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NotificationVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::NotificationVisual>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::NotificationVisual>::type_name);
@@ -3277,7 +3277,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ScheduledToastNotificationShowingEventArgs class --------------------
 
-    static PyObject* _new_ScheduledToastNotificationShowingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ScheduledToastNotificationShowingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>::type_name);
@@ -3450,7 +3450,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ShownTileNotification class --------------------
 
-    static PyObject* _new_ShownTileNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ShownTileNotification(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ShownTileNotification>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ShownTileNotification>::type_name);
@@ -3712,7 +3712,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- TileFlyoutUpdateManager class --------------------
 
-    static PyObject* _new_TileFlyoutUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileFlyoutUpdateManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>::type_name);
@@ -3860,7 +3860,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- TileFlyoutUpdater class --------------------
 
-    static PyObject* _new_TileFlyoutUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileFlyoutUpdater(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdater>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdater>::type_name);
@@ -4322,7 +4322,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- TileUpdateManager class --------------------
 
-    static PyObject* _new_TileUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileUpdateManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::TileUpdateManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::TileUpdateManager>::type_name);
@@ -4502,7 +4502,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- TileUpdateManagerForUser class --------------------
 
-    static PyObject* _new_TileUpdateManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileUpdateManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>::type_name);
@@ -4691,7 +4691,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- TileUpdater class --------------------
 
-    static PyObject* _new_TileUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TileUpdater(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::TileUpdater>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::TileUpdater>::type_name);
@@ -5223,7 +5223,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastActivatedEventArgs class --------------------
 
-    static PyObject* _new_ToastActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastActivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>::type_name);
@@ -5604,7 +5604,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastCollectionManager class --------------------
 
-    static PyObject* _new_ToastCollectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastCollectionManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastCollectionManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastCollectionManager>::type_name);
@@ -5875,7 +5875,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastDismissedEventArgs class --------------------
 
-    static PyObject* _new_ToastDismissedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastDismissedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>::type_name);
@@ -5970,7 +5970,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastFailedEventArgs class --------------------
 
-    static PyObject* _new_ToastFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastFailedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastFailedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastFailedEventArgs>::type_name);
@@ -6751,7 +6751,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastNotificationActionTriggerDetail class --------------------
 
-    static PyObject* _new_ToastNotificationActionTriggerDetail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotificationActionTriggerDetail(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>::type_name);
@@ -6866,7 +6866,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastNotificationHistory class --------------------
 
-    static PyObject* _new_ToastNotificationHistory(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotificationHistory(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationHistory>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationHistory>::type_name);
@@ -7176,7 +7176,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastNotificationHistoryChangedTriggerDetail class --------------------
 
-    static PyObject* _new_ToastNotificationHistoryChangedTriggerDetail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotificationHistoryChangedTriggerDetail(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>::type_name);
@@ -7291,7 +7291,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastNotificationManager class --------------------
 
-    static PyObject* _new_ToastNotificationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotificationManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationManager>::type_name);
@@ -7542,7 +7542,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastNotificationManagerForUser class --------------------
 
-    static PyObject* _new_ToastNotificationManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotificationManagerForUser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>::type_name);
@@ -7886,7 +7886,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- ToastNotifier class --------------------
 
-    static PyObject* _new_ToastNotifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToastNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::ToastNotifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::ToastNotifier>::type_name);
@@ -8243,7 +8243,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- UserNotification class --------------------
 
-    static PyObject* _new_UserNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserNotification(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::UserNotification>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::UserNotification>::type_name);
@@ -8398,7 +8398,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- UserNotificationChangedEventArgs class --------------------
 
-    static PyObject* _new_UserNotificationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserNotificationChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>::type_name);
@@ -8513,7 +8513,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     // ----- IAdaptiveNotificationContent interface --------------------
 
-    static PyObject* _new_IAdaptiveNotificationContent(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAdaptiveNotificationContent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::Import
 {
     // ----- PhotoImportDeleteImportedItemsFromSourceResult class --------------------
 
-    static PyObject* _new_PhotoImportDeleteImportedItemsFromSourceResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportDeleteImportedItemsFromSourceResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>::type_name);
@@ -343,7 +343,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportFindItemsResult class --------------------
 
-    static PyObject* _new_PhotoImportFindItemsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportFindItemsResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>::type_name);
@@ -1177,7 +1177,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportImportItemsResult class --------------------
 
-    static PyObject* _new_PhotoImportImportItemsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportImportItemsResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>::type_name);
@@ -1542,7 +1542,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportItem class --------------------
 
-    static PyObject* _new_PhotoImportItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportItem>::type_name);
@@ -1905,7 +1905,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportItemImportedEventArgs class --------------------
 
-    static PyObject* _new_PhotoImportItemImportedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportItemImportedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>::type_name);
@@ -2000,7 +2000,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportManager class --------------------
 
-    static PyObject* _new_PhotoImportManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportManager>::type_name);
@@ -2124,7 +2124,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportOperation class --------------------
 
-    static PyObject* _new_PhotoImportOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportOperation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportOperation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportOperation>::type_name);
@@ -2299,7 +2299,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportSelectionChangedEventArgs class --------------------
 
-    static PyObject* _new_PhotoImportSelectionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportSelectionChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>::type_name);
@@ -2394,7 +2394,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportSession class --------------------
 
-    static PyObject* _new_PhotoImportSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSession>::type_name);
@@ -2883,7 +2883,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportSidecar class --------------------
 
-    static PyObject* _new_PhotoImportSidecar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportSidecar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSidecar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSidecar>::type_name);
@@ -3018,7 +3018,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportSource class --------------------
 
-    static PyObject* _new_PhotoImportSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSource>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSource>::type_name);
@@ -3507,7 +3507,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportStorageMedium class --------------------
 
-    static PyObject* _new_PhotoImportStorageMedium(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportStorageMedium(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>::type_name);
@@ -3753,7 +3753,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportVideoSegment class --------------------
 
-    static PyObject* _new_PhotoImportVideoSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PhotoImportVideoSegment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>::type_name);
@@ -3928,7 +3928,7 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportProgress struct --------------------
 
-    PyObject* _new_PhotoImportProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_PhotoImportProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

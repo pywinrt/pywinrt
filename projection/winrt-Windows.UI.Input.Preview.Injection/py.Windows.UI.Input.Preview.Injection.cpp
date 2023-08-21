@@ -1804,7 +1804,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InputInjector class --------------------
 
-    static PyObject* _new_InputInjector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_InputInjector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>::type_name);
@@ -2327,7 +2327,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputPoint struct --------------------
 
-    PyObject* _new_InjectedInputPoint(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_InjectedInputPoint(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -2471,7 +2471,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputPointerInfo struct --------------------
 
-    PyObject* _new_InjectedInputPointerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_InjectedInputPointerInfo(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -2720,7 +2720,7 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     // ----- InjectedInputRectangle struct --------------------
 
-    PyObject* _new_InjectedInputRectangle(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_InjectedInputRectangle(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

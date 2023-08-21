@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 {
     // ----- AppWindow class --------------------
 
-    static PyObject* _new_AppWindow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindow>::type_name);
@@ -919,7 +919,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowChangedEventArgs class --------------------
 
-    static PyObject* _new_AppWindowChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>::type_name);
@@ -1154,7 +1154,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowCloseRequestedEventArgs class --------------------
 
-    static PyObject* _new_AppWindowCloseRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowCloseRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>::type_name);
@@ -1307,7 +1307,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowClosedEventArgs class --------------------
 
-    static PyObject* _new_AppWindowClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowClosedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>::type_name);
@@ -1402,7 +1402,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowFrame class --------------------
 
-    static PyObject* _new_AppWindowFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>::type_name);
@@ -1560,7 +1560,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowPlacement class --------------------
 
-    static PyObject* _new_AppWindowPlacement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowPlacement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>::type_name);
@@ -1695,7 +1695,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowPresentationConfiguration class --------------------
 
-    static PyObject* _new_AppWindowPresentationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowPresentationConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>::type_name);
@@ -1790,7 +1790,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowPresenter class --------------------
 
-    static PyObject* _new_AppWindowPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowPresenter(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>::type_name);
@@ -1959,7 +1959,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowTitleBar class --------------------
 
-    static PyObject* _new_AppWindowTitleBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowTitleBar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>::type_name);
@@ -2771,7 +2771,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- AppWindowTitleBarOcclusion class --------------------
 
-    static PyObject* _new_AppWindowTitleBarOcclusion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppWindowTitleBarOcclusion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>::type_name);
@@ -3060,7 +3060,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- DisplayRegion class --------------------
 
-    static PyObject* _new_DisplayRegion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DisplayRegion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::DisplayRegion>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::DisplayRegion>::type_name);
@@ -3425,7 +3425,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- WindowServices class --------------------
 
-    static PyObject* _new_WindowServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowServices(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowServices>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowServices>::type_name);
@@ -3489,7 +3489,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- WindowingEnvironment class --------------------
 
-    static PyObject* _new_WindowingEnvironment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowingEnvironment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>::type_name);
@@ -3729,7 +3729,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- WindowingEnvironmentAddedEventArgs class --------------------
 
-    static PyObject* _new_WindowingEnvironmentAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowingEnvironmentAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>::type_name);
@@ -3824,7 +3824,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- WindowingEnvironmentChangedEventArgs class --------------------
 
-    static PyObject* _new_WindowingEnvironmentChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowingEnvironmentChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>::type_name);
@@ -3899,7 +3899,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     // ----- WindowingEnvironmentRemovedEventArgs class --------------------
 
-    static PyObject* _new_WindowingEnvironmentRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_WindowingEnvironmentRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>::type_name);

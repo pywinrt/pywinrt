@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 {
     // ----- KnownPerceptionFrameKind class --------------------
 
-    static PyObject* _new_KnownPerceptionFrameKind(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownPerceptionFrameKind(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>::type_name);
@@ -642,7 +642,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     // ----- PerceptionFrame class --------------------
 
-    static PyObject* _new_PerceptionFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionFrame(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>::type_name);
@@ -1142,7 +1142,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     // ----- PerceptionFrameProviderManagerService class --------------------
 
-    static PyObject* _new_PerceptionFrameProviderManagerService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionFrameProviderManagerService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>::type_name);
@@ -1516,7 +1516,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     // ----- PerceptionPropertyChangeRequest class --------------------
 
-    static PyObject* _new_PerceptionPropertyChangeRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PerceptionPropertyChangeRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>::type_name);
@@ -1926,7 +1926,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     // ----- IPerceptionFrameProvider interface --------------------
 
-    static PyObject* _new_IPerceptionFrameProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPerceptionFrameProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::type_name);
@@ -2209,7 +2209,7 @@ namespace py::cpp::Windows::Devices::Perception::Provider
 
     // ----- IPerceptionFrameProviderManager interface --------------------
 
-    static PyObject* _new_IPerceptionFrameProviderManager(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPerceptionFrameProviderManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::type_name);

@@ -1438,7 +1438,7 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
 
     // ----- Shape class --------------------
 
-    static PyObject* _new_Shape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Shape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Shapes::Shape>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Shapes::Shape>::type_name);

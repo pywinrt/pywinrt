@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 {
     // ----- Print3DManager class --------------------
 
-    static PyObject* _new_Print3DManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DManager>::type_name);
@@ -188,7 +188,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Print3DTask class --------------------
 
-    static PyObject* _new_Print3DTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DTask(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTask>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTask>::type_name);
@@ -418,7 +418,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Print3DTaskCompletedEventArgs class --------------------
 
-    static PyObject* _new_Print3DTaskCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DTaskCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>::type_name);
@@ -533,7 +533,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Print3DTaskRequest class --------------------
 
-    static PyObject* _new_Print3DTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DTaskRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>::type_name);
@@ -642,7 +642,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Print3DTaskRequestedEventArgs class --------------------
 
-    static PyObject* _new_Print3DTaskRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DTaskRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>::type_name);
@@ -737,7 +737,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Print3DTaskSourceChangedEventArgs class --------------------
 
-    static PyObject* _new_Print3DTaskSourceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DTaskSourceChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>::type_name);
@@ -832,7 +832,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Print3DTaskSourceRequestedArgs class --------------------
 
-    static PyObject* _new_Print3DTaskSourceRequestedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Print3DTaskSourceRequestedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>::type_name);
@@ -4120,7 +4120,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Printing3DMeshVerificationResult class --------------------
 
-    static PyObject* _new_Printing3DMeshVerificationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Printing3DMeshVerificationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>::type_name);
@@ -5993,7 +5993,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     // ----- Printing3DBufferDescription struct --------------------
 
-    PyObject* _new_Printing3DBufferDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_Printing3DBufferDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

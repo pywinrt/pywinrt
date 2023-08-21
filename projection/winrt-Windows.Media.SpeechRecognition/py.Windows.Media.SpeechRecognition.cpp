@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 {
     // ----- SpeechContinuousRecognitionCompletedEventArgs class --------------------
 
-    static PyObject* _new_SpeechContinuousRecognitionCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechContinuousRecognitionCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechContinuousRecognitionResultGeneratedEventArgs class --------------------
 
-    static PyObject* _new_SpeechContinuousRecognitionResultGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechContinuousRecognitionResultGeneratedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>::type_name);
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechContinuousRecognitionSession class --------------------
 
-    static PyObject* _new_SpeechContinuousRecognitionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechContinuousRecognitionSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>::type_name);
@@ -582,7 +582,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionCompilationResult class --------------------
 
-    static PyObject* _new_SpeechRecognitionCompilationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionCompilationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>::type_name);
@@ -976,7 +976,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionHypothesis class --------------------
 
-    static PyObject* _new_SpeechRecognitionHypothesis(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionHypothesis(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>::type_name);
@@ -1071,7 +1071,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionHypothesisGeneratedEventArgs class --------------------
 
-    static PyObject* _new_SpeechRecognitionHypothesisGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionHypothesisGeneratedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>::type_name);
@@ -1465,7 +1465,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionQualityDegradingEventArgs class --------------------
 
-    static PyObject* _new_SpeechRecognitionQualityDegradingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionQualityDegradingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>::type_name);
@@ -1560,7 +1560,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionResult class --------------------
 
-    static PyObject* _new_SpeechRecognitionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>::type_name);
@@ -1847,7 +1847,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionSemanticInterpretation class --------------------
 
-    static PyObject* _new_SpeechRecognitionSemanticInterpretation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionSemanticInterpretation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>::type_name);
@@ -2263,7 +2263,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognitionVoiceCommandDefinitionConstraint class --------------------
 
-    static PyObject* _new_SpeechRecognitionVoiceCommandDefinitionConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognitionVoiceCommandDefinitionConstraint(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>::type_name);
@@ -3154,7 +3154,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognizerStateChangedEventArgs class --------------------
 
-    static PyObject* _new_SpeechRecognizerStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognizerStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>::type_name);
@@ -3249,7 +3249,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognizerTimeouts class --------------------
 
-    static PyObject* _new_SpeechRecognizerTimeouts(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognizerTimeouts(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>::type_name);
@@ -3468,7 +3468,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- SpeechRecognizerUIOptions class --------------------
 
-    static PyObject* _new_SpeechRecognizerUIOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SpeechRecognizerUIOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>::type_name);
@@ -3735,7 +3735,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- VoiceCommandManager class --------------------
 
-    static PyObject* _new_VoiceCommandManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>::type_name);
@@ -3841,7 +3841,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- VoiceCommandSet class --------------------
 
-    static PyObject* _new_VoiceCommandSet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_VoiceCommandSet(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>::type_name);
@@ -3989,7 +3989,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
 
     // ----- ISpeechRecognitionConstraint interface --------------------
 
-    static PyObject* _new_ISpeechRecognitionConstraint(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ISpeechRecognitionConstraint(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>::type_name);

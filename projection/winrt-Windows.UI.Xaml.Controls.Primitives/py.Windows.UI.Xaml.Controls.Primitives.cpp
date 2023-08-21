@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 {
     // ----- AppBarButtonTemplateSettings class --------------------
 
-    static PyObject* _new_AppBarButtonTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBarButtonTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- AppBarTemplateSettings class --------------------
 
-    static PyObject* _new_AppBarTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBarTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings>::type_name);
@@ -378,7 +378,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- AppBarToggleButtonTemplateSettings class --------------------
 
-    static PyObject* _new_AppBarToggleButtonTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AppBarToggleButtonTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings>::type_name);
@@ -473,7 +473,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ButtonBase class --------------------
 
-    static PyObject* _new_ButtonBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ButtonBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>::type_name);
@@ -994,7 +994,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- CalendarViewTemplateSettings class --------------------
 
-    static PyObject* _new_CalendarViewTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CalendarViewTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings>::type_name);
@@ -3437,7 +3437,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ComboBoxTemplateSettings class --------------------
 
-    static PyObject* _new_ComboBoxTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ComboBoxTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings>::type_name);
@@ -3729,7 +3729,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- CommandBarFlyoutCommandBarTemplateSettings class --------------------
 
-    static PyObject* _new_CommandBarFlyoutCommandBarTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CommandBarFlyoutCommandBarTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings>::type_name);
@@ -4204,7 +4204,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- CommandBarTemplateSettings class --------------------
 
-    static PyObject* _new_CommandBarTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CommandBarTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings>::type_name);
@@ -4960,7 +4960,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- FlyoutBase class --------------------
 
-    static PyObject* _new_FlyoutBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>::type_name);
@@ -6336,7 +6336,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- FlyoutBaseClosingEventArgs class --------------------
 
-    static PyObject* _new_FlyoutBaseClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FlyoutBaseClosingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>::type_name);
@@ -6748,7 +6748,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- GeneratorPositionHelper class --------------------
 
-    static PyObject* _new_GeneratorPositionHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GeneratorPositionHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper>::type_name);
@@ -8469,7 +8469,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- GridViewItemTemplateSettings class --------------------
 
-    static PyObject* _new_GridViewItemTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_GridViewItemTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings>::type_name);
@@ -8564,7 +8564,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ItemsChangedEventArgs class --------------------
 
-    static PyObject* _new_ItemsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ItemsChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs>::type_name);
@@ -9385,7 +9385,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- LayoutInformation class --------------------
 
-    static PyObject* _new_LayoutInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LayoutInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation>::type_name);
@@ -13685,7 +13685,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ListViewItemTemplateSettings class --------------------
 
-    static PyObject* _new_ListViewItemTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ListViewItemTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings>::type_name);
@@ -13780,7 +13780,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- LoopingSelector class --------------------
 
-    static PyObject* _new_LoopingSelector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoopingSelector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector>::type_name);
@@ -14396,7 +14396,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- LoopingSelectorItem class --------------------
 
-    static PyObject* _new_LoopingSelectorItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoopingSelectorItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem>::type_name);
@@ -14471,7 +14471,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- LoopingSelectorPanel class --------------------
 
-    static PyObject* _new_LoopingSelectorPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LoopingSelectorPanel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel>::type_name);
@@ -14755,7 +14755,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- MenuFlyoutItemTemplateSettings class --------------------
 
-    static PyObject* _new_MenuFlyoutItemTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MenuFlyoutItemTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings>::type_name);
@@ -14850,7 +14850,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- MenuFlyoutPresenterTemplateSettings class --------------------
 
-    static PyObject* _new_MenuFlyoutPresenterTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MenuFlyoutPresenterTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings>::type_name);
@@ -15130,7 +15130,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- OrientedVirtualizingPanel class --------------------
 
-    static PyObject* _new_OrientedVirtualizingPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_OrientedVirtualizingPanel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>::type_name);
@@ -16195,7 +16195,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- PickerFlyoutBase class --------------------
 
-    static PyObject* _new_PickerFlyoutBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PickerFlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase>::type_name);
@@ -17909,7 +17909,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ProgressBarTemplateSettings class --------------------
 
-    static PyObject* _new_ProgressBarTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProgressBarTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings>::type_name);
@@ -18124,7 +18124,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ProgressRingTemplateSettings class --------------------
 
-    static PyObject* _new_ProgressRingTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProgressRingTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings>::type_name);
@@ -18259,7 +18259,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- RangeBase class --------------------
 
-    static PyObject* _new_RangeBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RangeBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>::type_name);
@@ -18841,7 +18841,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- RangeBaseValueChangedEventArgs class --------------------
 
-    static PyObject* _new_RangeBaseValueChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RangeBaseValueChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs>::type_name);
@@ -19712,7 +19712,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- Selector class --------------------
 
-    static PyObject* _new_Selector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Selector(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>::type_name);
@@ -20224,7 +20224,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- SelectorItem class --------------------
 
-    static PyObject* _new_SelectorItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SelectorItem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem>::type_name);
@@ -20387,7 +20387,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- SettingsFlyoutTemplateSettings class --------------------
 
-    static PyObject* _new_SettingsFlyoutTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SettingsFlyoutTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings>::type_name);
@@ -20582,7 +20582,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- SplitViewTemplateSettings class --------------------
 
-    static PyObject* _new_SplitViewTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SplitViewTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings>::type_name);
@@ -21704,7 +21704,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ToggleSwitchTemplateSettings class --------------------
 
-    static PyObject* _new_ToggleSwitchTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToggleSwitchTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings>::type_name);
@@ -21939,7 +21939,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- ToolTipTemplateSettings class --------------------
 
-    static PyObject* _new_ToolTipTemplateSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ToolTipTemplateSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings>::type_name);
@@ -22054,7 +22054,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- IScrollSnapPointsInfo interface --------------------
 
-    static PyObject* _new_IScrollSnapPointsInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IScrollSnapPointsInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>::type_name);
@@ -22338,7 +22338,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- GeneratorPosition struct --------------------
 
-    PyObject* _new_GeneratorPosition(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GeneratorPosition(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

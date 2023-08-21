@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 {
     // ----- AutomationRemoteOperationResult class --------------------
 
-    static PyObject* _new_AutomationRemoteOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationRemoteOperationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>::type_name);
@@ -207,7 +207,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- CoreAutomationRegistrar class --------------------
 
-    static PyObject* _new_CoreAutomationRegistrar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreAutomationRegistrar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>::type_name);
@@ -602,7 +602,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- CoreAutomationRemoteOperationContext class --------------------
 
-    static PyObject* _new_CoreAutomationRemoteOperationContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CoreAutomationRemoteOperationContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>::type_name);
@@ -1087,7 +1087,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- RemoteAutomationConnectionRequestedEventArgs class --------------------
 
-    static PyObject* _new_RemoteAutomationConnectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteAutomationConnectionRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>::type_name);
@@ -1202,7 +1202,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- RemoteAutomationDisconnectedEventArgs class --------------------
 
-    static PyObject* _new_RemoteAutomationDisconnectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteAutomationDisconnectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>::type_name);
@@ -1297,7 +1297,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- RemoteAutomationServer class --------------------
 
-    static PyObject* _new_RemoteAutomationServer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteAutomationServer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>::type_name);
@@ -1364,7 +1364,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- RemoteAutomationWindow class --------------------
 
-    static PyObject* _new_RemoteAutomationWindow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RemoteAutomationWindow(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>::type_name);
@@ -1489,7 +1489,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- ICoreAutomationConnectionBoundObjectProvider interface --------------------
 
-    static PyObject* _new_ICoreAutomationConnectionBoundObjectProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreAutomationConnectionBoundObjectProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::type_name);
@@ -1584,7 +1584,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- ICoreAutomationRemoteOperationExtensionProvider interface --------------------
 
-    static PyObject* _new_ICoreAutomationRemoteOperationExtensionProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ICoreAutomationRemoteOperationExtensionProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::type_name);
@@ -1726,7 +1726,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------
 
-    PyObject* _new_AutomationAnnotationTypeRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_AutomationAnnotationTypeRegistration(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -1835,7 +1835,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- AutomationRemoteOperationOperandId struct --------------------
 
-    PyObject* _new_AutomationRemoteOperationOperandId(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_AutomationRemoteOperationOperandId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

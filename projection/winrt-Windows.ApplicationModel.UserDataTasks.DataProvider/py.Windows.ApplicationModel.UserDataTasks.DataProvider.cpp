@@ -8,7 +8,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 {
     // ----- UserDataTaskDataProviderConnection class --------------------
 
-    static PyObject* _new_UserDataTaskDataProviderConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskDataProviderConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection>::type_name);
@@ -339,7 +339,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskDataProviderTriggerDetails class --------------------
 
-    static PyObject* _new_UserDataTaskDataProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskDataProviderTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails>::type_name);
@@ -434,7 +434,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListCompleteTaskRequest class --------------------
 
-    static PyObject* _new_UserDataTaskListCompleteTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListCompleteTaskRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest>::type_name);
@@ -611,7 +611,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListCompleteTaskRequestEventArgs class --------------------
 
-    static PyObject* _new_UserDataTaskListCompleteTaskRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListCompleteTaskRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs>::type_name);
@@ -736,7 +736,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListCreateOrUpdateTaskRequest class --------------------
 
-    static PyObject* _new_UserDataTaskListCreateOrUpdateTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListCreateOrUpdateTaskRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest>::type_name);
@@ -913,7 +913,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListCreateOrUpdateTaskRequestEventArgs class --------------------
 
-    static PyObject* _new_UserDataTaskListCreateOrUpdateTaskRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListCreateOrUpdateTaskRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs>::type_name);
@@ -1038,7 +1038,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListDeleteTaskRequest class --------------------
 
-    static PyObject* _new_UserDataTaskListDeleteTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListDeleteTaskRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest>::type_name);
@@ -1213,7 +1213,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListDeleteTaskRequestEventArgs class --------------------
 
-    static PyObject* _new_UserDataTaskListDeleteTaskRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListDeleteTaskRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs>::type_name);
@@ -1338,7 +1338,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListSkipOccurrenceRequest class --------------------
 
-    static PyObject* _new_UserDataTaskListSkipOccurrenceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListSkipOccurrenceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest>::type_name);
@@ -1513,7 +1513,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListSkipOccurrenceRequestEventArgs class --------------------
 
-    static PyObject* _new_UserDataTaskListSkipOccurrenceRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListSkipOccurrenceRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs>::type_name);
@@ -1638,7 +1638,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListSyncManagerSyncRequest class --------------------
 
-    static PyObject* _new_UserDataTaskListSyncManagerSyncRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListSyncManagerSyncRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest>::type_name);
@@ -1793,7 +1793,7 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
 
     // ----- UserDataTaskListSyncManagerSyncRequestEventArgs class --------------------
 
-    static PyObject* _new_UserDataTaskListSyncManagerSyncRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UserDataTaskListSyncManagerSyncRequestEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs>::type_name);

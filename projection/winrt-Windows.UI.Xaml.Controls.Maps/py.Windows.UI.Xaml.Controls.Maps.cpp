@@ -13177,7 +13177,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapScene class --------------------
 
-    static PyObject* _new_MapScene(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapScene(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>::type_name);
@@ -13567,7 +13567,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapStyleSheet class --------------------
 
-    static PyObject* _new_MapStyleSheet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapStyleSheet(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>::type_name);
@@ -13931,7 +13931,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapStyleSheetEntries class --------------------
 
-    static PyObject* _new_MapStyleSheetEntries(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapStyleSheetEntries(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>::type_name);
@@ -15265,7 +15265,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapStyleSheetEntryStates class --------------------
 
-    static PyObject* _new_MapStyleSheetEntryStates(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MapStyleSheetEntryStates(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>::type_name);
@@ -18286,7 +18286,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- StreetsidePanorama class --------------------
 
-    static PyObject* _new_StreetsidePanorama(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_StreetsidePanorama(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>::type_name);
@@ -18434,7 +18434,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     // ----- MapZoomLevelRange struct --------------------
 
-    PyObject* _new_MapZoomLevelRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_MapZoomLevelRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

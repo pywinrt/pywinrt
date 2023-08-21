@@ -8,7 +8,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 {
     // ----- AutomationConnection class --------------------
 
-    static PyObject* _new_AutomationConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::AutomationConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::AutomationConnection>::type_name);
@@ -143,7 +143,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     // ----- AutomationConnectionBoundObject class --------------------
 
-    static PyObject* _new_AutomationConnectionBoundObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationConnectionBoundObject(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::AutomationConnectionBoundObject>::type_name);
@@ -238,7 +238,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     // ----- AutomationElement class --------------------
 
-    static PyObject* _new_AutomationElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationElement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::AutomationElement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::AutomationElement>::type_name);
@@ -373,7 +373,7 @@ namespace py::cpp::Windows::UI::UIAutomation
 
     // ----- AutomationTextRange class --------------------
 
-    static PyObject* _new_AutomationTextRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_AutomationTextRange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::UI::UIAutomation::AutomationTextRange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::AutomationTextRange>::type_name);

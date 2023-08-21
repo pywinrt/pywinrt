@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 {
     // ----- ESim class --------------------
 
-    static PyObject* _new_ESim(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESim(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESim>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESim>::type_name);
@@ -494,7 +494,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimAddedEventArgs class --------------------
 
-    static PyObject* _new_ESimAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>::type_name);
@@ -589,7 +589,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimDiscoverEvent class --------------------
 
-    static PyObject* _new_ESimDiscoverEvent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimDiscoverEvent(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>::type_name);
@@ -704,7 +704,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimDiscoverResult class --------------------
 
-    static PyObject* _new_ESimDiscoverResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimDiscoverResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>::type_name);
@@ -859,7 +859,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimDownloadProfileMetadataResult class --------------------
 
-    static PyObject* _new_ESimDownloadProfileMetadataResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimDownloadProfileMetadataResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>::type_name);
@@ -974,7 +974,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimManager class --------------------
 
-    static PyObject* _new_ESimManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimManager>::type_name);
@@ -1123,7 +1123,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimOperationResult class --------------------
 
-    static PyObject* _new_ESimOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimOperationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>::type_name);
@@ -1218,7 +1218,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimPolicy class --------------------
 
-    static PyObject* _new_ESimPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimPolicy(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimPolicy>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimPolicy>::type_name);
@@ -1313,7 +1313,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimProfile class --------------------
 
-    static PyObject* _new_ESimProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimProfile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimProfile>::type_name);
@@ -1640,7 +1640,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimProfileMetadata class --------------------
 
-    static PyObject* _new_ESimProfileMetadata(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimProfileMetadata(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>::type_name);
@@ -2010,7 +2010,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimProfilePolicy class --------------------
 
-    static PyObject* _new_ESimProfilePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimProfilePolicy(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>::type_name);
@@ -2145,7 +2145,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimRemovedEventArgs class --------------------
 
-    static PyObject* _new_ESimRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>::type_name);
@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimServiceInfo class --------------------
 
-    static PyObject* _new_ESimServiceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimServiceInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>::type_name);
@@ -2355,7 +2355,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimUpdatedEventArgs class --------------------
 
-    static PyObject* _new_ESimUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>::type_name);
@@ -2450,7 +2450,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimWatcher class --------------------
 
-    static PyObject* _new_ESimWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ESimWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ESimWatcher>::type_name);
@@ -2832,7 +2832,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- FdnAccessManager class --------------------
 
-    static PyObject* _new_FdnAccessManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FdnAccessManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>::type_name);
@@ -2898,7 +2898,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- HotspotAuthenticationContext class --------------------
 
-    static PyObject* _new_HotspotAuthenticationContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HotspotAuthenticationContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>::type_name);
@@ -3287,7 +3287,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- HotspotAuthenticationEventDetails class --------------------
 
-    static PyObject* _new_HotspotAuthenticationEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HotspotAuthenticationEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>::type_name);
@@ -3382,7 +3382,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- HotspotCredentialsAuthenticationResult class --------------------
 
-    static PyObject* _new_HotspotCredentialsAuthenticationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_HotspotCredentialsAuthenticationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>::type_name);
@@ -3537,7 +3537,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- KnownCSimFilePaths class --------------------
 
-    static PyObject* _new_KnownCSimFilePaths(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownCSimFilePaths(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>::type_name);
@@ -3651,7 +3651,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- KnownRuimFilePaths class --------------------
 
-    static PyObject* _new_KnownRuimFilePaths(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownRuimFilePaths(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>::type_name);
@@ -3765,7 +3765,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- KnownSimFilePaths class --------------------
 
-    static PyObject* _new_KnownSimFilePaths(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownSimFilePaths(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>::type_name);
@@ -3899,7 +3899,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- KnownUSimFilePaths class --------------------
 
-    static PyObject* _new_KnownUSimFilePaths(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownUSimFilePaths(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>::type_name);
@@ -4053,7 +4053,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandAccount class --------------------
 
-    static PyObject* _new_MobileBroadbandAccount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandAccount(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>::type_name);
@@ -4350,7 +4350,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandAccountEventArgs class --------------------
 
-    static PyObject* _new_MobileBroadbandAccountEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandAccountEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>::type_name);
@@ -4445,7 +4445,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandAccountUpdatedEventArgs class --------------------
 
-    static PyObject* _new_MobileBroadbandAccountUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandAccountUpdatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>::type_name);
@@ -5124,7 +5124,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellCdma class --------------------
 
-    static PyObject* _new_MobileBroadbandCellCdma(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellCdma(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>::type_name);
@@ -5359,7 +5359,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellGsm class --------------------
 
-    static PyObject* _new_MobileBroadbandCellGsm(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellGsm(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>::type_name);
@@ -5574,7 +5574,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellLte class --------------------
 
-    static PyObject* _new_MobileBroadbandCellLte(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellLte(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>::type_name);
@@ -5809,7 +5809,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellNR class --------------------
 
-    static PyObject* _new_MobileBroadbandCellNR(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellNR(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>::type_name);
@@ -6064,7 +6064,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellTdscdma class --------------------
 
-    static PyObject* _new_MobileBroadbandCellTdscdma(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellTdscdma(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>::type_name);
@@ -6299,7 +6299,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellUmts class --------------------
 
-    static PyObject* _new_MobileBroadbandCellUmts(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellUmts(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>::type_name);
@@ -6534,7 +6534,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCellsInfo class --------------------
 
-    static PyObject* _new_MobileBroadbandCellsInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCellsInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>::type_name);
@@ -6849,7 +6849,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandCurrentSlotIndexChangedEventArgs class --------------------
 
-    static PyObject* _new_MobileBroadbandCurrentSlotIndexChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandCurrentSlotIndexChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>::type_name);
@@ -6944,7 +6944,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceInformation class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>::type_name);
@@ -7439,7 +7439,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceService class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>::type_name);
@@ -7614,7 +7614,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceServiceCommandResult class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceServiceCommandResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceServiceCommandResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>::type_name);
@@ -7729,7 +7729,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceServiceCommandSession class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceServiceCommandSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceServiceCommandSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>::type_name);
@@ -7901,7 +7901,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceServiceDataReceivedEventArgs class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceServiceDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceServiceDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>::type_name);
@@ -7996,7 +7996,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceServiceDataSession class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceServiceDataSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceServiceDataSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>::type_name);
@@ -8179,7 +8179,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceServiceInformation class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceServiceInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceServiceInformation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>::type_name);
@@ -8314,7 +8314,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandDeviceServiceTriggerDetails class --------------------
 
-    static PyObject* _new_MobileBroadbandDeviceServiceTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandDeviceServiceTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>::type_name);
@@ -8469,7 +8469,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandModem class --------------------
 
-    static PyObject* _new_MobileBroadbandModem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandModem(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>::type_name);
@@ -9131,7 +9131,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandModemConfiguration class --------------------
 
-    static PyObject* _new_MobileBroadbandModemConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandModemConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>::type_name);
@@ -9513,7 +9513,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandNetwork class --------------------
 
-    static PyObject* _new_MobileBroadbandNetwork(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandNetwork(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>::type_name);
@@ -9879,7 +9879,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandNetworkRegistrationStateChange class --------------------
 
-    static PyObject* _new_MobileBroadbandNetworkRegistrationStateChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandNetworkRegistrationStateChange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>::type_name);
@@ -9994,7 +9994,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandNetworkRegistrationStateChangeTriggerDetails class --------------------
 
-    static PyObject* _new_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>::type_name);
@@ -10089,7 +10089,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPco class --------------------
 
-    static PyObject* _new_MobileBroadbandPco(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPco(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>::type_name);
@@ -10224,7 +10224,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPcoDataChangeTriggerDetails class --------------------
 
-    static PyObject* _new_MobileBroadbandPcoDataChangeTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPcoDataChangeTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>::type_name);
@@ -10319,7 +10319,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPin class --------------------
 
-    static PyObject* _new_MobileBroadbandPin(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPin(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>::type_name);
@@ -10696,7 +10696,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPinLockStateChange class --------------------
 
-    static PyObject* _new_MobileBroadbandPinLockStateChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPinLockStateChange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>::type_name);
@@ -10831,7 +10831,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPinLockStateChangeTriggerDetails class --------------------
 
-    static PyObject* _new_MobileBroadbandPinLockStateChangeTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPinLockStateChangeTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>::type_name);
@@ -10926,7 +10926,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPinManager class --------------------
 
-    static PyObject* _new_MobileBroadbandPinManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPinManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>::type_name);
@@ -11053,7 +11053,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandPinOperationResult class --------------------
 
-    static PyObject* _new_MobileBroadbandPinOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandPinOperationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>::type_name);
@@ -11168,7 +11168,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandRadioStateChange class --------------------
 
-    static PyObject* _new_MobileBroadbandRadioStateChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandRadioStateChange(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>::type_name);
@@ -11283,7 +11283,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandRadioStateChangeTriggerDetails class --------------------
 
-    static PyObject* _new_MobileBroadbandRadioStateChangeTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandRadioStateChangeTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>::type_name);
@@ -11378,7 +11378,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandSarManager class --------------------
 
-    static PyObject* _new_MobileBroadbandSarManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandSarManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>::type_name);
@@ -11844,7 +11844,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandSlotInfo class --------------------
 
-    static PyObject* _new_MobileBroadbandSlotInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandSlotInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>::type_name);
@@ -11979,7 +11979,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandSlotInfoChangedEventArgs class --------------------
 
-    static PyObject* _new_MobileBroadbandSlotInfoChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandSlotInfoChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>::type_name);
@@ -12074,7 +12074,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandSlotManager class --------------------
 
-    static PyObject* _new_MobileBroadbandSlotManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandSlotManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>::type_name);
@@ -12343,7 +12343,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandTransmissionStateChangedEventArgs class --------------------
 
-    static PyObject* _new_MobileBroadbandTransmissionStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandTransmissionStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>::type_name);
@@ -12438,7 +12438,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandUicc class --------------------
 
-    static PyObject* _new_MobileBroadbandUicc(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandUicc(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>::type_name);
@@ -12563,7 +12563,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandUiccApp class --------------------
 
-    static PyObject* _new_MobileBroadbandUiccApp(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandUiccApp(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>::type_name);
@@ -12743,7 +12743,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandUiccAppReadRecordResult class --------------------
 
-    static PyObject* _new_MobileBroadbandUiccAppReadRecordResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandUiccAppReadRecordResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>::type_name);
@@ -12858,7 +12858,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandUiccAppRecordDetailsResult class --------------------
 
-    static PyObject* _new_MobileBroadbandUiccAppRecordDetailsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandUiccAppRecordDetailsResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>::type_name);
@@ -13053,7 +13053,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- MobileBroadbandUiccAppsResult class --------------------
 
-    static PyObject* _new_MobileBroadbandUiccAppsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_MobileBroadbandUiccAppsResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>::type_name);
@@ -13168,7 +13168,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- NetworkOperatorDataUsageTriggerDetails class --------------------
 
-    static PyObject* _new_NetworkOperatorDataUsageTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkOperatorDataUsageTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>::type_name);
@@ -13263,7 +13263,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- NetworkOperatorNotificationEventDetails class --------------------
 
-    static PyObject* _new_NetworkOperatorNotificationEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkOperatorNotificationEventDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>::type_name);
@@ -13797,7 +13797,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- NetworkOperatorTetheringClient class --------------------
 
-    static PyObject* _new_NetworkOperatorTetheringClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkOperatorTetheringClient(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>::type_name);
@@ -13912,7 +13912,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- NetworkOperatorTetheringManager class --------------------
 
-    static PyObject* _new_NetworkOperatorTetheringManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkOperatorTetheringManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>::type_name);
@@ -14500,7 +14500,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- NetworkOperatorTetheringOperationResult class --------------------
 
-    static PyObject* _new_NetworkOperatorTetheringOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_NetworkOperatorTetheringOperationResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>::type_name);
@@ -14615,7 +14615,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ProvisionFromXmlDocumentResults class --------------------
 
-    static PyObject* _new_ProvisionFromXmlDocumentResults(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProvisionFromXmlDocumentResults(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>::type_name);
@@ -14730,7 +14730,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ProvisionedProfile class --------------------
 
-    static PyObject* _new_ProvisionedProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProvisionedProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>::type_name);
@@ -15065,7 +15065,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- TetheringEntitlementCheckTriggerDetails class --------------------
 
-    static PyObject* _new_TetheringEntitlementCheckTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_TetheringEntitlementCheckTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>::type_name);
@@ -15482,7 +15482,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- UssdReply class --------------------
 
-    static PyObject* _new_UssdReply(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UssdReply(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::UssdReply>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::UssdReply>::type_name);
@@ -15597,7 +15597,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- UssdSession class --------------------
 
-    static PyObject* _new_UssdSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UssdSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::UssdSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::UssdSession>::type_name);
@@ -15799,7 +15799,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimProfileInstallProgress struct --------------------
 
-    PyObject* _new_ESimProfileInstallProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ESimProfileInstallProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -15943,7 +15943,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ProfileUsage struct --------------------
 
-    PyObject* _new_ProfileUsage(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ProfileUsage(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

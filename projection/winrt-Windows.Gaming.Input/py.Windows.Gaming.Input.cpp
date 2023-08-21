@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Gaming::Input
 {
     // ----- ArcadeStick class --------------------
 
-    static PyObject* _new_ArcadeStick(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ArcadeStick(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::ArcadeStick>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::ArcadeStick>::type_name);
@@ -532,7 +532,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- FlightStick class --------------------
 
-    static PyObject* _new_FlightStick(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_FlightStick(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::FlightStick>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::FlightStick>::type_name);
@@ -1076,7 +1076,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- Gamepad class --------------------
 
-    static PyObject* _new_Gamepad(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Gamepad(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Gamepad>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Gamepad>::type_name);
@@ -1648,7 +1648,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- Headset class --------------------
 
-    static PyObject* _new_Headset(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_Headset(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::Headset>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Headset>::type_name);
@@ -1793,7 +1793,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- RacingWheel class --------------------
 
-    static PyObject* _new_RacingWheel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RacingWheel(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::RacingWheel>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::RacingWheel>::type_name);
@@ -2437,7 +2437,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- RawGameController class --------------------
 
-    static PyObject* _new_RawGameController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_RawGameController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::RawGameController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::RawGameController>::type_name);
@@ -3177,7 +3177,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- UINavigationController class --------------------
 
-    static PyObject* _new_UINavigationController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_UINavigationController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::UINavigationController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::UINavigationController>::type_name);
@@ -3733,7 +3733,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- IGameController interface --------------------
 
-    static PyObject* _new_IGameController(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGameController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::IGameController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::IGameController>::type_name);
@@ -4003,7 +4003,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- IGameControllerBatteryInfo interface --------------------
 
-    static PyObject* _new_IGameControllerBatteryInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IGameControllerBatteryInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::type_name);
@@ -4108,7 +4108,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- ArcadeStickReading struct --------------------
 
-    PyObject* _new_ArcadeStickReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ArcadeStickReading(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4252,7 +4252,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- FlightStickReading struct --------------------
 
-    PyObject* _new_FlightStickReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_FlightStickReading(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4571,7 +4571,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- GamepadReading struct --------------------
 
-    PyObject* _new_GamepadReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GamepadReading(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -4925,7 +4925,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- GamepadVibration struct --------------------
 
-    PyObject* _new_GamepadVibration(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_GamepadVibration(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -5139,7 +5139,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- RacingWheelReading struct --------------------
 
-    PyObject* _new_RacingWheelReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_RacingWheelReading(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
@@ -5493,7 +5493,7 @@ namespace py::cpp::Windows::Gaming::Input
 
     // ----- UINavigationReading struct --------------------
 
-    PyObject* _new_UINavigationReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_UINavigationReading(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 

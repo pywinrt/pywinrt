@@ -211,7 +211,7 @@ namespace py::cpp::Windows::Devices
 
     // ----- LowLevelDevicesController class --------------------
 
-    static PyObject* _new_LowLevelDevicesController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_LowLevelDevicesController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::LowLevelDevicesController>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::LowLevelDevicesController>::type_name);
@@ -348,7 +348,7 @@ namespace py::cpp::Windows::Devices
 
     // ----- ILowLevelDevicesAggregateProvider interface --------------------
 
-    static PyObject* _new_ILowLevelDevicesAggregateProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_ILowLevelDevicesAggregateProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>::type_name);

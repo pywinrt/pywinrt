@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 {
     // ----- IAdcControllerProvider interface --------------------
 
-    static PyObject* _new_IAdcControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAdcControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>::type_name);
@@ -341,7 +341,7 @@ namespace py::cpp::Windows::Devices::Adc::Provider
 
     // ----- IAdcProvider interface --------------------
 
-    static PyObject* _new_IAdcProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IAdcProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>::type_name);

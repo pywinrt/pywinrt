@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 {
     // ----- CardAddedEventArgs class --------------------
 
-    static PyObject* _new_CardAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CardAddedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::CardAddedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::CardAddedEventArgs>::type_name);
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- CardRemovedEventArgs class --------------------
 
-    static PyObject* _new_CardRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_CardRemovedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>::type_name);
@@ -198,7 +198,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- KnownSmartCardAppletIds class --------------------
 
-    static PyObject* _new_KnownSmartCardAppletIds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_KnownSmartCardAppletIds(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds>::type_name);
@@ -292,7 +292,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCard class --------------------
 
-    static PyObject* _new_SmartCard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCard(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCard>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCard>::type_name);
@@ -1008,7 +1008,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardAppletIdGroupRegistration class --------------------
 
-    static PyObject* _new_SmartCardAppletIdGroupRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardAppletIdGroupRegistration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>::type_name);
@@ -1743,7 +1743,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardChallengeContext class --------------------
 
-    static PyObject* _new_SmartCardChallengeContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardChallengeContext(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardChallengeContext>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardChallengeContext>::type_name);
@@ -2011,7 +2011,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardConnection class --------------------
 
-    static PyObject* _new_SmartCardConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardConnection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardConnection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardConnection>::type_name);
@@ -2171,7 +2171,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardCryptogramGenerator class --------------------
 
-    static PyObject* _new_SmartCardCryptogramGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardCryptogramGenerator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator>::type_name);
@@ -3634,7 +3634,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardCryptogramMaterialPossessionProof class --------------------
 
-    static PyObject* _new_SmartCardCryptogramMaterialPossessionProof(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardCryptogramMaterialPossessionProof(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>::type_name);
@@ -4455,7 +4455,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardCryptogramStorageKeyInfo class --------------------
 
-    static PyObject* _new_SmartCardCryptogramStorageKeyInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardCryptogramStorageKeyInfo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>::type_name);
@@ -4690,7 +4690,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardEmulator class --------------------
 
-    static PyObject* _new_SmartCardEmulator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardEmulator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulator>::type_name);
@@ -5130,7 +5130,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardEmulatorApduReceivedEventArgs class --------------------
 
-    static PyObject* _new_SmartCardEmulatorApduReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardEmulatorApduReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>::type_name);
@@ -5393,7 +5393,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardEmulatorConnectionDeactivatedEventArgs class --------------------
 
-    static PyObject* _new_SmartCardEmulatorConnectionDeactivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardEmulatorConnectionDeactivatedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>::type_name);
@@ -5508,7 +5508,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardEmulatorConnectionProperties class --------------------
 
-    static PyObject* _new_SmartCardEmulatorConnectionProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardEmulatorConnectionProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>::type_name);
@@ -6008,7 +6008,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardPinResetDeferral class --------------------
 
-    static PyObject* _new_SmartCardPinResetDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardPinResetDeferral(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral>::type_name);
@@ -6114,7 +6114,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardPinResetRequest class --------------------
 
-    static PyObject* _new_SmartCardPinResetRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardPinResetRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest>::type_name);
@@ -6292,7 +6292,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardProvisioning class --------------------
 
-    static PyObject* _new_SmartCardProvisioning(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardProvisioning(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardProvisioning>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardProvisioning>::type_name);
@@ -6747,7 +6747,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardReader class --------------------
 
-    static PyObject* _new_SmartCardReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardReader(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardReader>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardReader>::type_name);
@@ -7114,7 +7114,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     // ----- SmartCardTriggerDetails class --------------------
 
-    static PyObject* _new_SmartCardTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_SmartCardTriggerDetails(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails>::type_name);

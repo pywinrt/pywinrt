@@ -720,7 +720,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     // ----- DnssdServiceInstanceCollection class --------------------
 
-    static PyObject* _new_DnssdServiceInstanceCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DnssdServiceInstanceCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>::type_name);
@@ -1007,9 +1007,9 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
                 return nullptr;
             }
 
-            winrt::com_array<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance> items(length, empty_instance<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>::get());
+            winrt::com_array<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance> items(static_cast<uint32_t>(length), empty_instance<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>::get());
 
-            auto count = self->obj.GetMany(start, items);
+            auto count = self->obj.GetMany(static_cast<uint32_t>(start), items);
 
             if (count != length)
             {
@@ -1068,7 +1068,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 
     // ----- DnssdServiceWatcher class --------------------
 
-    static PyObject* _new_DnssdServiceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_DnssdServiceWatcher(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>::type_name);

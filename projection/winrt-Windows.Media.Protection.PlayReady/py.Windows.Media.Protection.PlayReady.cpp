@@ -2096,7 +2096,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyContentResolver class --------------------
 
-    static PyObject* _new_PlayReadyContentResolver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyContentResolver(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>::type_name);
@@ -2162,7 +2162,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyDomain class --------------------
 
-    static PyObject* _new_PlayReadyDomain(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyDomain(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>::type_name);
@@ -2480,7 +2480,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyDomainIterator class --------------------
 
-    static PyObject* _new_PlayReadyDomainIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyDomainIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>::type_name);
@@ -4182,7 +4182,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyLicense class --------------------
 
-    static PyObject* _new_PlayReadyLicense(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyLicense(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>::type_name);
@@ -5170,7 +5170,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyLicenseIterator class --------------------
 
-    static PyObject* _new_PlayReadyLicenseIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyLicenseIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>::type_name);
@@ -5375,7 +5375,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyLicenseManagement class --------------------
 
-    static PyObject* _new_PlayReadyLicenseManagement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyLicenseManagement(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>::type_name);
@@ -6577,7 +6577,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadySecureStopIterator class --------------------
 
-    static PyObject* _new_PlayReadySecureStopIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadySecureStopIterator(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>::type_name);
@@ -7275,7 +7275,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadySoapMessage class --------------------
 
-    static PyObject* _new_PlayReadySoapMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadySoapMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>::type_name);
@@ -7420,7 +7420,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- PlayReadyStatics class --------------------
 
-    static PyObject* _new_PlayReadyStatics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_PlayReadyStatics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>::type_name);
@@ -7817,7 +7817,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDClosedCaptionDataReceivedEventArgs interface --------------------
 
-    static PyObject* _new_INDClosedCaptionDataReceivedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDClosedCaptionDataReceivedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::type_name);
@@ -7952,7 +7952,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDCustomData interface --------------------
 
-    static PyObject* _new_INDCustomData(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDCustomData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::type_name);
@@ -8067,7 +8067,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDDownloadEngine interface --------------------
 
-    static PyObject* _new_INDDownloadEngine(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDDownloadEngine(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::type_name);
@@ -8382,7 +8382,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDDownloadEngineNotifier interface --------------------
 
-    static PyObject* _new_INDDownloadEngineNotifier(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDDownloadEngineNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::type_name);
@@ -8650,7 +8650,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDLicenseFetchCompletedEventArgs interface --------------------
 
-    static PyObject* _new_INDLicenseFetchCompletedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDLicenseFetchCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::type_name);
@@ -8745,7 +8745,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDLicenseFetchDescriptor interface --------------------
 
-    static PyObject* _new_INDLicenseFetchDescriptor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDLicenseFetchDescriptor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::type_name);
@@ -8908,7 +8908,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDLicenseFetchResult interface --------------------
 
-    static PyObject* _new_INDLicenseFetchResult(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDLicenseFetchResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::type_name);
@@ -9003,7 +9003,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDMessenger interface --------------------
 
-    static PyObject* _new_INDMessenger(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDMessenger(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::type_name);
@@ -9214,7 +9214,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDProximityDetectionCompletedEventArgs interface --------------------
 
-    static PyObject* _new_INDProximityDetectionCompletedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDProximityDetectionCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::type_name);
@@ -9309,7 +9309,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDRegistrationCompletedEventArgs interface --------------------
 
-    static PyObject* _new_INDRegistrationCompletedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDRegistrationCompletedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::type_name);
@@ -9472,7 +9472,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDSendResult interface --------------------
 
-    static PyObject* _new_INDSendResult(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDSendResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::type_name);
@@ -9567,7 +9567,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDStartResult interface --------------------
 
-    static PyObject* _new_INDStartResult(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDStartResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::type_name);
@@ -9662,7 +9662,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDStorageFileHelper interface --------------------
 
-    static PyObject* _new_INDStorageFileHelper(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDStorageFileHelper(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::type_name);
@@ -9769,7 +9769,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDStreamParser interface --------------------
 
-    static PyObject* _new_INDStreamParser(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDStreamParser(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::type_name);
@@ -10004,7 +10004,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDStreamParserNotifier interface --------------------
 
-    static PyObject* _new_INDStreamParserNotifier(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDStreamParserNotifier(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::type_name);
@@ -10219,7 +10219,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- INDTransmitterProperties interface --------------------
 
-    static PyObject* _new_INDTransmitterProperties(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_INDTransmitterProperties(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::type_name);
@@ -10514,7 +10514,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadyDomain interface --------------------
 
-    static PyObject* _new_IPlayReadyDomain(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadyDomain(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::type_name);
@@ -10689,7 +10689,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadyLicense interface --------------------
 
-    static PyObject* _new_IPlayReadyLicense(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadyLicense(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::type_name);
@@ -10916,7 +10916,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadyLicenseAcquisitionServiceRequest interface --------------------
 
-    static PyObject* _new_IPlayReadyLicenseAcquisitionServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadyLicenseAcquisitionServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::type_name);
@@ -11365,7 +11365,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadyLicenseSession interface --------------------
 
-    static PyObject* _new_IPlayReadyLicenseSession(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadyLicenseSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::type_name);
@@ -11503,7 +11503,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadyLicenseSession2 interface --------------------
 
-    static PyObject* _new_IPlayReadyLicenseSession2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadyLicenseSession2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::type_name);
@@ -11674,7 +11674,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadySecureStopServiceRequest interface --------------------
 
-    static PyObject* _new_IPlayReadySecureStopServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadySecureStopServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::type_name);
@@ -12127,7 +12127,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     // ----- IPlayReadyServiceRequest interface --------------------
 
-    static PyObject* _new_IPlayReadyServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_IPlayReadyServiceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::type_name);

@@ -8,7 +8,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 {
     // ----- ProviderI2cConnectionSettings class --------------------
 
-    static PyObject* _new_ProviderI2cConnectionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    static PyObject* _new_ProviderI2cConnectionSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>::type_name);
@@ -227,7 +227,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     // ----- II2cControllerProvider interface --------------------
 
-    static PyObject* _new_II2cControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_II2cControllerProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>::type_name);
@@ -334,7 +334,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     // ----- II2cDeviceProvider interface --------------------
 
-    static PyObject* _new_II2cDeviceProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_II2cDeviceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>::type_name);
@@ -679,7 +679,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     // ----- II2cProvider interface --------------------
 
-    static PyObject* _new_II2cProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
+    static PyObject* _new_II2cProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
     {
         static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>::type_name);
@@ -784,7 +784,7 @@ namespace py::cpp::Windows::Devices::I2c::Provider
 
     // ----- ProviderI2cTransferResult struct --------------------
 
-    PyObject* _new_ProviderI2cTransferResult(PyTypeObject* type, PyObject* args, PyObject* kwds)
+    PyObject* _new_ProviderI2cTransferResult(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
