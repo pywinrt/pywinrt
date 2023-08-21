@@ -6,7 +6,7 @@ REM https://stackoverflow.com/a/45070967
 goto :init
 
 :usage
-    echo xlang windows build
+    echo build pywinrt
     echo.
     echo USAGE:
     echo   build.cmd [flags] "build target" 
@@ -58,6 +58,7 @@ goto :init
 
 :main
 
+    set SRC_PATH=%REPO_ROOT_PATH%\src
     set BUILD_PATH=%REPO_ROOT_PATH%\_build\Windows\%VSCMD_ARG_TGT_ARCH%\%BUILD_TYPE%
 
     set "RUN_CMAKE="
@@ -65,7 +66,7 @@ goto :init
     if not exist "%BUILD_PATH%/CMakeCache.txt"  set "RUN_CMAKE=yes"
 
     if defined RUN_CMAKE (
-        cmake "%REPO_ROOT_PATH%" "-B%BUILD_PATH%" %OPT_VERBOSE_CMAKE% -GNinja -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DPYWINRT_BUILD_VERSION=%BUILD_VERSION% "-DCMAKE_INSTALL_PREFIX=%BUILD_PATH%/Install"
+        cmake "-S%SRC_PATH%" "-B%BUILD_PATH%" %OPT_VERBOSE_CMAKE% -GNinja -DCMAKE_BUILD_TYPE=%BUILD_TYPE% -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DPYWINRT_BUILD_VERSION=%BUILD_VERSION% "-DCMAKE_INSTALL_PREFIX=%BUILD_PATH%/Install"
     )
 
     ninja -C "%BUILD_PATH%" %OPT_VERBOSE_NINJA% %BUILD_TARGET% 2>&1
