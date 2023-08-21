@@ -165,8 +165,15 @@ namespace py::cpp::_winrt
         }
         else if (PyType_Check(arg0))
         {
-            // FIXME: where can we put this so it only imports once?
-            PyDateTime_IMPORT;
+            if (!PyDateTimeAPI)
+            {
+                PyDateTime_IMPORT;
+
+                if (!PyDateTimeAPI)
+                {
+                    return nullptr;
+                }
+            }
 
             auto type = reinterpret_cast<PyTypeObject*>(arg0);
 

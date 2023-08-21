@@ -321,8 +321,15 @@ PyObject* py::convert_datetime(winrt::Windows::Foundation::DateTime value) noexc
                   .count()
               % 1000;
 
-        // FIXME: where can we put this so it only imports once?
-        PyDateTime_IMPORT;
+        if (!PyDateTimeAPI)
+        {
+            PyDateTime_IMPORT;
+
+            if (!PyDateTimeAPI)
+            {
+                return nullptr;
+            }
+        }
 
         // new reference
         return PyDateTimeAPI->DateTime_FromDateAndTime(
@@ -352,8 +359,15 @@ winrt::Windows::Foundation::DateTime py::convert_to_datetime(PyObject* obj)
 {
     throw_if_pyobj_null(obj);
 
-    // FIXME: where can we put this so it only imports once?
-    PyDateTime_IMPORT;
+    if (!PyDateTimeAPI)
+    {
+        PyDateTime_IMPORT;
+
+        if (!PyDateTimeAPI)
+        {
+            throw python_exception();
+        }
+    }
 
     if (!PyDateTime_Check(obj))
     {

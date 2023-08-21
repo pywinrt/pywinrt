@@ -1265,8 +1265,15 @@ namespace py
         {
             try
             {
-                // FIXME: where can we put this so it only imports once?
-                PyDateTime_IMPORT;
+                if (!PyDateTimeAPI)
+                {
+                    PyDateTime_IMPORT;
+
+                    if (!PyDateTimeAPI)
+                    {
+                        return nullptr;
+                    }
+                }
 
                 auto days = std::chrono::duration_cast<std::chrono::days>(value);
                 auto seconds
@@ -1291,8 +1298,15 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            // FIXME: where can we put this so it only imports once?
-            PyDateTime_IMPORT;
+            if (!PyDateTimeAPI)
+            {
+                PyDateTime_IMPORT;
+
+                if (!PyDateTimeAPI)
+                {
+                    throw python_exception();
+                }
+            }
 
             if (!PyDelta_Check(obj))
             {
