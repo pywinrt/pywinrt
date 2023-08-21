@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Calls
 {
     // ----- CallAnswerEventArgs class --------------------
-    static constexpr const char* const type_name_CallAnswerEventArgs = "CallAnswerEventArgs";
 
     static PyObject* _new_CallAnswerEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CallAnswerEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- CallRejectEventArgs class --------------------
-    static constexpr const char* const type_name_CallRejectEventArgs = "CallRejectEventArgs";
 
     static PyObject* _new_CallRejectEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CallRejectEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>::type_name);
         return nullptr;
     }
 
@@ -197,11 +197,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- CallStateChangeEventArgs class --------------------
-    static constexpr const char* const type_name_CallStateChangeEventArgs = "CallStateChangeEventArgs";
 
     static PyObject* _new_CallStateChangeEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CallStateChangeEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>::type_name);
         return nullptr;
     }
 
@@ -292,11 +292,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- LockScreenCallEndCallDeferral class --------------------
-    static constexpr const char* const type_name_LockScreenCallEndCallDeferral = "LockScreenCallEndCallDeferral";
 
     static PyObject* _new_LockScreenCallEndCallDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenCallEndCallDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>::type_name);
         return nullptr;
     }
 
@@ -398,11 +398,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- LockScreenCallEndRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_LockScreenCallEndRequestedEventArgs = "LockScreenCallEndRequestedEventArgs";
 
     static PyObject* _new_LockScreenCallEndRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenCallEndRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -523,11 +523,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- LockScreenCallUI class --------------------
-    static constexpr const char* const type_name_LockScreenCallUI = "LockScreenCallUI";
 
     static PyObject* _new_LockScreenCallUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenCallUI);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>::type_name);
         return nullptr;
     }
 
@@ -767,11 +767,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- MuteChangeEventArgs class --------------------
-    static constexpr const char* const type_name_MuteChangeEventArgs = "MuteChangeEventArgs";
 
     static PyObject* _new_MuteChangeEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MuteChangeEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>::type_name);
         return nullptr;
     }
 
@@ -862,11 +862,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCall class --------------------
-    static constexpr const char* const type_name_PhoneCall = "PhoneCall";
 
     static PyObject* _new_PhoneCall(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCall);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCall>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCall>::type_name);
         return nullptr;
     }
 
@@ -1794,11 +1794,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallBlocking class --------------------
-    static constexpr const char* const type_name_PhoneCallBlocking = "PhoneCallBlocking";
 
     static PyObject* _new_PhoneCallBlocking(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallBlocking);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>::type_name);
         return nullptr;
     }
 
@@ -1964,7 +1964,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryEntry class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryEntry = "PhoneCallHistoryEntry";
 
     static PyObject* _new_PhoneCallHistoryEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2870,7 +2869,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryEntryAddress class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryEntryAddress = "PhoneCallHistoryEntryAddress";
 
     static PyObject* _new_PhoneCallHistoryEntryAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3176,7 +3174,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryEntryQueryOptions class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryEntryQueryOptions = "PhoneCallHistoryEntryQueryOptions";
 
     static PyObject* _new_PhoneCallHistoryEntryQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3342,11 +3339,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryEntryReader class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryEntryReader = "PhoneCallHistoryEntryReader";
 
     static PyObject* _new_PhoneCallHistoryEntryReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallHistoryEntryReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>::type_name);
         return nullptr;
     }
 
@@ -3447,11 +3444,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryManager class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryManager = "PhoneCallHistoryManager";
 
     static PyObject* _new_PhoneCallHistoryManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallHistoryManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>::type_name);
         return nullptr;
     }
 
@@ -3545,11 +3542,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryManagerForUser class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryManagerForUser = "PhoneCallHistoryManagerForUser";
 
     static PyObject* _new_PhoneCallHistoryManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallHistoryManagerForUser);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>::type_name);
         return nullptr;
     }
 
@@ -3672,11 +3669,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallHistoryStore class --------------------
-    static constexpr const char* const type_name_PhoneCallHistoryStore = "PhoneCallHistoryStore";
 
     static PyObject* _new_PhoneCallHistoryStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallHistoryStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>::type_name);
         return nullptr;
     }
 
@@ -4113,11 +4110,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallInfo class --------------------
-    static constexpr const char* const type_name_PhoneCallInfo = "PhoneCallInfo";
 
     static PyObject* _new_PhoneCallInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>::type_name);
         return nullptr;
     }
 
@@ -4308,11 +4305,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallManager class --------------------
-    static constexpr const char* const type_name_PhoneCallManager = "PhoneCallManager";
 
     static PyObject* _new_PhoneCallManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>::type_name);
         return nullptr;
     }
 
@@ -4542,11 +4539,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallStore class --------------------
-    static constexpr const char* const type_name_PhoneCallStore = "PhoneCallStore";
 
     static PyObject* _new_PhoneCallStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>::type_name);
         return nullptr;
     }
 
@@ -4709,11 +4706,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallVideoCapabilities class --------------------
-    static constexpr const char* const type_name_PhoneCallVideoCapabilities = "PhoneCallVideoCapabilities";
 
     static PyObject* _new_PhoneCallVideoCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallVideoCapabilities);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>::type_name);
         return nullptr;
     }
 
@@ -4804,11 +4801,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallVideoCapabilitiesManager class --------------------
-    static constexpr const char* const type_name_PhoneCallVideoCapabilitiesManager = "PhoneCallVideoCapabilitiesManager";
 
     static PyObject* _new_PhoneCallVideoCapabilitiesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallVideoCapabilitiesManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>::type_name);
         return nullptr;
     }
 
@@ -4870,11 +4867,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneCallsResult class --------------------
-    static constexpr const char* const type_name_PhoneCallsResult = "PhoneCallsResult";
 
     static PyObject* _new_PhoneCallsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallsResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>::type_name);
         return nullptr;
     }
 
@@ -4985,7 +4982,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneDialOptions class --------------------
-    static constexpr const char* const type_name_PhoneDialOptions = "PhoneDialOptions";
 
     static PyObject* _new_PhoneDialOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5371,11 +5367,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLine class --------------------
-    static constexpr const char* const type_name_PhoneLine = "PhoneLine";
 
     static PyObject* _new_PhoneLine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLine);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLine>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLine>::type_name);
         return nullptr;
     }
 
@@ -6041,11 +6037,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLineCellularDetails class --------------------
-    static constexpr const char* const type_name_PhoneLineCellularDetails = "PhoneLineCellularDetails";
 
     static PyObject* _new_PhoneLineCellularDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineCellularDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>::type_name);
         return nullptr;
     }
 
@@ -6228,11 +6224,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLineConfiguration class --------------------
-    static constexpr const char* const type_name_PhoneLineConfiguration = "PhoneLineConfiguration";
 
     static PyObject* _new_PhoneLineConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineConfiguration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>::type_name);
         return nullptr;
     }
 
@@ -6343,11 +6339,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLineDialResult class --------------------
-    static constexpr const char* const type_name_PhoneLineDialResult = "PhoneLineDialResult";
 
     static PyObject* _new_PhoneLineDialResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineDialResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>::type_name);
         return nullptr;
     }
 
@@ -6458,11 +6454,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLineTransportDevice class --------------------
-    static constexpr const char* const type_name_PhoneLineTransportDevice = "PhoneLineTransportDevice";
 
     static PyObject* _new_PhoneLineTransportDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineTransportDevice);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>::type_name);
         return nullptr;
     }
 
@@ -7033,11 +7029,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLineWatcher class --------------------
-    static constexpr const char* const type_name_PhoneLineWatcher = "PhoneLineWatcher";
 
     static PyObject* _new_PhoneLineWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineWatcher);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>::type_name);
         return nullptr;
     }
 
@@ -7415,11 +7411,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneLineWatcherEventArgs class --------------------
-    static constexpr const char* const type_name_PhoneLineWatcherEventArgs = "PhoneLineWatcherEventArgs";
 
     static PyObject* _new_PhoneLineWatcherEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineWatcherEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7510,11 +7506,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- PhoneVoicemail class --------------------
-    static constexpr const char* const type_name_PhoneVoicemail = "PhoneVoicemail";
 
     static PyObject* _new_PhoneVoicemail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneVoicemail);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>::type_name);
         return nullptr;
     }
 
@@ -7675,11 +7671,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- VoipCallCoordinator class --------------------
-    static constexpr const char* const type_name_VoipCallCoordinator = "VoipCallCoordinator";
 
     static PyObject* _new_VoipCallCoordinator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoipCallCoordinator);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>::type_name);
         return nullptr;
     }
 
@@ -8256,11 +8252,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     };
 
     // ----- VoipPhoneCall class --------------------
-    static constexpr const char* const type_name_VoipPhoneCall = "VoipPhoneCall";
 
     static PyObject* _new_VoipPhoneCall(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoipPhoneCall);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>::type_name);
         return nullptr;
     }
 

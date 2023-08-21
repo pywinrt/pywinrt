@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Adc
 {
     // ----- AdcChannel class --------------------
-    static constexpr const char* const type_name_AdcChannel = "AdcChannel";
 
     static PyObject* _new_AdcChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdcChannel);
+        static_assert(py::py_type<winrt::Windows::Devices::Adc::AdcChannel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::AdcChannel>::type_name);
         return nullptr;
     }
 
@@ -215,11 +215,11 @@ namespace py::cpp::Windows::Devices::Adc
     };
 
     // ----- AdcController class --------------------
-    static constexpr const char* const type_name_AdcController = "AdcController";
 
     static PyObject* _new_AdcController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdcController);
+        static_assert(py::py_type<winrt::Windows::Devices::Adc::AdcController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::AdcController>::type_name);
         return nullptr;
     }
 

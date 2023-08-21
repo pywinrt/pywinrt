@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Shell
 {
     // ----- AdaptiveCardBuilder class --------------------
-    static constexpr const char* const type_name_AdaptiveCardBuilder = "AdaptiveCardBuilder";
 
     static PyObject* _new_AdaptiveCardBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveCardBuilder);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>::type_name);
         return nullptr;
     }
 
@@ -73,11 +73,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- FocusSession class --------------------
-    static constexpr const char* const type_name_FocusSession = "FocusSession";
 
     static PyObject* _new_FocusSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusSession);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::FocusSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::FocusSession>::type_name);
         return nullptr;
     }
 
@@ -199,11 +199,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- FocusSessionManager class --------------------
-    static constexpr const char* const type_name_FocusSessionManager = "FocusSessionManager";
 
     static PyObject* _new_FocusSessionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusSessionManager);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::FocusSessionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::FocusSessionManager>::type_name);
         return nullptr;
     }
 
@@ -522,7 +522,6 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- SecurityAppManager class --------------------
-    static constexpr const char* const type_name_SecurityAppManager = "SecurityAppManager";
 
     static PyObject* _new_SecurityAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -726,11 +725,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- ShareWindowCommandEventArgs class --------------------
-    static constexpr const char* const type_name_ShareWindowCommandEventArgs = "ShareWindowCommandEventArgs";
 
     static PyObject* _new_ShareWindowCommandEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareWindowCommandEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>::type_name);
         return nullptr;
     }
 
@@ -869,11 +868,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- ShareWindowCommandSource class --------------------
-    static constexpr const char* const type_name_ShareWindowCommandSource = "ShareWindowCommandSource";
 
     static PyObject* _new_ShareWindowCommandSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareWindowCommandSource);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>::type_name);
         return nullptr;
     }
 
@@ -1157,11 +1156,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- TaskbarManager class --------------------
-    static constexpr const char* const type_name_TaskbarManager = "TaskbarManager";
 
     static PyObject* _new_TaskbarManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TaskbarManager);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::TaskbarManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::TaskbarManager>::type_name);
         return nullptr;
     }
 
@@ -1522,7 +1521,6 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTab class --------------------
-    static constexpr const char* const type_name_WindowTab = "WindowTab";
 
     static PyObject* _new_WindowTab(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1891,11 +1889,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabCloseRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowTabCloseRequestedEventArgs = "WindowTabCloseRequestedEventArgs";
 
     static PyObject* _new_WindowTabCloseRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabCloseRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1986,11 +1984,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabCollection class --------------------
-    static constexpr const char* const type_name_WindowTabCollection = "WindowTabCollection";
 
     static PyObject* _new_WindowTabCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabCollection>::type_name);
         return nullptr;
     }
 
@@ -2643,7 +2641,6 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabGroup class --------------------
-    static constexpr const char* const type_name_WindowTabGroup = "WindowTabGroup";
 
     static PyObject* _new_WindowTabGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2837,11 +2834,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabIcon class --------------------
-    static constexpr const char* const type_name_WindowTabIcon = "WindowTabIcon";
 
     static PyObject* _new_WindowTabIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabIcon);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabIcon>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabIcon>::type_name);
         return nullptr;
     }
 
@@ -2999,11 +2996,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabManager class --------------------
-    static constexpr const char* const type_name_WindowTabManager = "WindowTabManager";
 
     static PyObject* _new_WindowTabManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabManager);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabManager>::type_name);
         return nullptr;
     }
 
@@ -3399,11 +3396,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabSwitchRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowTabSwitchRequestedEventArgs = "WindowTabSwitchRequestedEventArgs";
 
     static PyObject* _new_WindowTabSwitchRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabSwitchRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3494,11 +3491,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabTearOutRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowTabTearOutRequestedEventArgs = "WindowTabTearOutRequestedEventArgs";
 
     static PyObject* _new_WindowTabTearOutRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabTearOutRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3667,11 +3664,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- WindowTabThumbnailRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowTabThumbnailRequestedEventArgs = "WindowTabThumbnailRequestedEventArgs";
 
     static PyObject* _new_WindowTabThumbnailRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowTabThumbnailRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3880,11 +3877,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- IAdaptiveCard interface --------------------
-    static constexpr const char* const type_name_IAdaptiveCard = "IAdaptiveCard";
 
     static PyObject* _new_IAdaptiveCard(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAdaptiveCard);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCard>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCard>::type_name);
         return nullptr;
     }
 
@@ -3985,11 +3982,11 @@ namespace py::cpp::Windows::UI::Shell
     };
 
     // ----- IAdaptiveCardBuilderStatics interface --------------------
-    static constexpr const char* const type_name_IAdaptiveCardBuilderStatics = "IAdaptiveCardBuilderStatics";
 
     static PyObject* _new_IAdaptiveCardBuilderStatics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAdaptiveCardBuilderStatics);
+        static_assert(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>::type_name);
         return nullptr;
     }
 

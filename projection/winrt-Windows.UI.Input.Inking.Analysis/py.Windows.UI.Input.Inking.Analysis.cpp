@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Input::Inking::Analysis
 {
     // ----- InkAnalysisInkBullet class --------------------
-    static constexpr const char* const type_name_InkAnalysisInkBullet = "InkAnalysisInkBullet";
 
     static PyObject* _new_InkAnalysisInkBullet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisInkBullet);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet>::type_name);
         return nullptr;
     }
 
@@ -252,11 +252,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisInkDrawing class --------------------
-    static constexpr const char* const type_name_InkAnalysisInkDrawing = "InkAnalysisInkDrawing";
 
     static PyObject* _new_InkAnalysisInkDrawing(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisInkDrawing);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing>::type_name);
         return nullptr;
     }
 
@@ -537,11 +537,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisInkWord class --------------------
-    static constexpr const char* const type_name_InkAnalysisInkWord = "InkAnalysisInkWord";
 
     static PyObject* _new_InkAnalysisInkWord(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisInkWord);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord>::type_name);
         return nullptr;
     }
 
@@ -802,11 +802,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisLine class --------------------
-    static constexpr const char* const type_name_InkAnalysisLine = "InkAnalysisLine";
 
     static PyObject* _new_InkAnalysisLine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisLine);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisLine>::type_name);
         return nullptr;
     }
 
@@ -1067,11 +1067,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisListItem class --------------------
-    static constexpr const char* const type_name_InkAnalysisListItem = "InkAnalysisListItem";
 
     static PyObject* _new_InkAnalysisListItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisListItem);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem>::type_name);
         return nullptr;
     }
 
@@ -1312,11 +1312,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisNode class --------------------
-    static constexpr const char* const type_name_InkAnalysisNode = "InkAnalysisNode";
 
     static PyObject* _new_InkAnalysisNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisNode);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisNode>::type_name);
         return nullptr;
     }
 
@@ -1537,11 +1537,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisParagraph class --------------------
-    static constexpr const char* const type_name_InkAnalysisParagraph = "InkAnalysisParagraph";
 
     static PyObject* _new_InkAnalysisParagraph(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisParagraph);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph>::type_name);
         return nullptr;
     }
 
@@ -1782,11 +1782,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisResult class --------------------
-    static constexpr const char* const type_name_InkAnalysisResult = "InkAnalysisResult";
 
     static PyObject* _new_InkAnalysisResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisResult);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisResult>::type_name);
         return nullptr;
     }
 
@@ -1877,11 +1877,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisRoot class --------------------
-    static constexpr const char* const type_name_InkAnalysisRoot = "InkAnalysisRoot";
 
     static PyObject* _new_InkAnalysisRoot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisRoot);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot>::type_name);
         return nullptr;
     }
 
@@ -2154,11 +2154,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalysisWritingRegion class --------------------
-    static constexpr const char* const type_name_InkAnalysisWritingRegion = "InkAnalysisWritingRegion";
 
     static PyObject* _new_InkAnalysisWritingRegion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkAnalysisWritingRegion);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion>::type_name);
         return nullptr;
     }
 
@@ -2399,7 +2399,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- InkAnalyzer class --------------------
-    static constexpr const char* const type_name_InkAnalyzer = "InkAnalyzer";
 
     static PyObject* _new_InkAnalyzer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2797,11 +2796,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- IInkAnalysisNode interface --------------------
-    static constexpr const char* const type_name_IInkAnalysisNode = "IInkAnalysisNode";
 
     static PyObject* _new_IInkAnalysisNode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkAnalysisNode);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode>::type_name);
         return nullptr;
     }
 
@@ -3022,11 +3021,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     };
 
     // ----- IInkAnalyzerFactory interface --------------------
-    static constexpr const char* const type_name_IInkAnalyzerFactory = "IInkAnalyzerFactory";
 
     static PyObject* _new_IInkAnalyzerFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkAnalyzerFactory);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory>::type_name);
         return nullptr;
     }
 

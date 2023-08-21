@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Printers
 {
     // ----- IppAttributeError class --------------------
-    static constexpr const char* const type_name_IppAttributeError = "IppAttributeError";
 
     static PyObject* _new_IppAttributeError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IppAttributeError);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::IppAttributeError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppAttributeError>::type_name);
         return nullptr;
     }
 
@@ -152,11 +152,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- IppAttributeValue class --------------------
-    static constexpr const char* const type_name_IppAttributeValue = "IppAttributeValue";
 
     static PyObject* _new_IppAttributeValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IppAttributeValue);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::IppAttributeValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppAttributeValue>::type_name);
         return nullptr;
     }
 
@@ -2029,7 +2029,6 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- IppIntegerRange class --------------------
-    static constexpr const char* const type_name_IppIntegerRange = "IppIntegerRange";
 
     static PyObject* _new_IppIntegerRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2170,11 +2169,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- IppPrintDevice class --------------------
-    static constexpr const char* const type_name_IppPrintDevice = "IppPrintDevice";
 
     static PyObject* _new_IppPrintDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IppPrintDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::IppPrintDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppPrintDevice>::type_name);
         return nullptr;
     }
 
@@ -2661,7 +2660,6 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- IppResolution class --------------------
-    static constexpr const char* const type_name_IppResolution = "IppResolution";
 
     static PyObject* _new_IppResolution(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2823,11 +2821,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- IppSetAttributesResult class --------------------
-    static constexpr const char* const type_name_IppSetAttributesResult = "IppSetAttributesResult";
 
     static PyObject* _new_IppSetAttributesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IppSetAttributesResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>::type_name);
         return nullptr;
     }
 
@@ -2938,7 +2936,6 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- IppTextWithLanguage class --------------------
-    static constexpr const char* const type_name_IppTextWithLanguage = "IppTextWithLanguage";
 
     static PyObject* _new_IppTextWithLanguage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3079,7 +3076,6 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- PageConfigurationSettings class --------------------
-    static constexpr const char* const type_name_PageConfigurationSettings = "PageConfigurationSettings";
 
     static PyObject* _new_PageConfigurationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3273,11 +3269,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- PdlPassthroughProvider class --------------------
-    static constexpr const char* const type_name_PdlPassthroughProvider = "PdlPassthroughProvider";
 
     static PyObject* _new_PdlPassthroughProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PdlPassthroughProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>::type_name);
         return nullptr;
     }
 
@@ -3438,11 +3434,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- PdlPassthroughTarget class --------------------
-    static constexpr const char* const type_name_PdlPassthroughTarget = "PdlPassthroughTarget";
 
     static PyObject* _new_PdlPassthroughTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PdlPassthroughTarget);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>::type_name);
         return nullptr;
     }
 
@@ -3647,11 +3643,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- Print3DDevice class --------------------
-    static constexpr const char* const type_name_Print3DDevice = "Print3DDevice";
 
     static PyObject* _new_Print3DDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Print3DDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Print3DDevice>::type_name);
         return nullptr;
     }
 
@@ -3804,11 +3800,11 @@ namespace py::cpp::Windows::Devices::Printers
     };
 
     // ----- PrintSchema class --------------------
-    static constexpr const char* const type_name_PrintSchema = "PrintSchema";
 
     static PyObject* _new_PrintSchema(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSchema);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::PrintSchema>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::PrintSchema>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
 {
     // ----- LicenseManager class --------------------
-    static constexpr const char* const type_name_LicenseManager = "LicenseManager";
 
     static PyObject* _new_LicenseManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LicenseManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>::type_name);
         return nullptr;
     }
 
@@ -138,11 +138,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     };
 
     // ----- LicenseSatisfactionInfo class --------------------
-    static constexpr const char* const type_name_LicenseSatisfactionInfo = "LicenseSatisfactionInfo";
 
     static PyObject* _new_LicenseSatisfactionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LicenseSatisfactionInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>::type_name);
         return nullptr;
     }
 
@@ -353,11 +353,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     };
 
     // ----- LicenseSatisfactionResult class --------------------
-    static constexpr const char* const type_name_LicenseSatisfactionResult = "LicenseSatisfactionResult";
 
     static PyObject* _new_LicenseSatisfactionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LicenseSatisfactionResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>::type_name);
         return nullptr;
     }
 

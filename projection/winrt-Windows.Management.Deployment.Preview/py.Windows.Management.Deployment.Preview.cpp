@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Management::Deployment::Preview
 {
     // ----- ClassicAppManager class --------------------
-    static constexpr const char* const type_name_ClassicAppManager = "ClassicAppManager";
 
     static PyObject* _new_ClassicAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ClassicAppManager);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>::type_name);
         return nullptr;
     }
 
@@ -73,11 +73,11 @@ namespace py::cpp::Windows::Management::Deployment::Preview
     };
 
     // ----- InstalledClassicAppInfo class --------------------
-    static constexpr const char* const type_name_InstalledClassicAppInfo = "InstalledClassicAppInfo";
 
     static PyObject* _new_InstalledClassicAppInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InstalledClassicAppInfo);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>::type_name);
         return nullptr;
     }
 

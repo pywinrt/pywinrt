@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::AppBroadcasting
 {
     // ----- AppBroadcastingMonitor class --------------------
-    static constexpr const char* const type_name_AppBroadcastingMonitor = "AppBroadcastingMonitor";
 
     static PyObject* _new_AppBroadcastingMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -170,11 +169,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     };
 
     // ----- AppBroadcastingStatus class --------------------
-    static constexpr const char* const type_name_AppBroadcastingStatus = "AppBroadcastingStatus";
 
     static PyObject* _new_AppBroadcastingStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastingStatus);
+        static_assert(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>::type_name);
         return nullptr;
     }
 
@@ -285,11 +284,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     };
 
     // ----- AppBroadcastingStatusDetails class --------------------
-    static constexpr const char* const type_name_AppBroadcastingStatusDetails = "AppBroadcastingStatusDetails";
 
     static PyObject* _new_AppBroadcastingStatusDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastingStatusDetails);
+        static_assert(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>::type_name);
         return nullptr;
     }
 
@@ -520,11 +519,11 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     };
 
     // ----- AppBroadcastingUI class --------------------
-    static constexpr const char* const type_name_AppBroadcastingUI = "AppBroadcastingUI";
 
     static PyObject* _new_AppBroadcastingUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastingUI);
+        static_assert(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>::type_name);
         return nullptr;
     }
 

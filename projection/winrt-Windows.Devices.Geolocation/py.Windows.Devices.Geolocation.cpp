@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Geolocation
 {
     // ----- CivicAddress class --------------------
-    static constexpr const char* const type_name_CivicAddress = "CivicAddress";
 
     static PyObject* _new_CivicAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CivicAddress);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::CivicAddress>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::CivicAddress>::type_name);
         return nullptr;
     }
 
@@ -182,7 +182,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- GeoboundingBox class --------------------
-    static constexpr const char* const type_name_GeoboundingBox = "GeoboundingBox";
 
     static PyObject* _new_GeoboundingBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -553,7 +552,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geocircle class --------------------
-    static constexpr const char* const type_name_Geocircle = "Geocircle";
 
     static PyObject* _new_Geocircle(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -789,11 +787,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geocoordinate class --------------------
-    static constexpr const char* const type_name_Geocoordinate = "Geocoordinate";
 
     static PyObject* _new_Geocoordinate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Geocoordinate);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::Geocoordinate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::Geocoordinate>::type_name);
         return nullptr;
     }
 
@@ -1124,11 +1122,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- GeocoordinateSatelliteData class --------------------
-    static constexpr const char* const type_name_GeocoordinateSatelliteData = "GeocoordinateSatelliteData";
 
     static PyObject* _new_GeocoordinateSatelliteData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GeocoordinateSatelliteData);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData>::type_name);
         return nullptr;
     }
 
@@ -1299,7 +1297,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geolocator class --------------------
-    static constexpr const char* const type_name_Geolocator = "Geolocator";
 
     static PyObject* _new_Geolocator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1946,7 +1943,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geopath class --------------------
-    static constexpr const char* const type_name_Geopath = "Geopath";
 
     static PyObject* _new_Geopath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2159,7 +2155,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geopoint class --------------------
-    static constexpr const char* const type_name_Geopoint = "Geopoint";
 
     static PyObject* _new_Geopoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2372,11 +2367,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geoposition class --------------------
-    static constexpr const char* const type_name_Geoposition = "Geoposition";
 
     static PyObject* _new_Geoposition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Geoposition);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::Geoposition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::Geoposition>::type_name);
         return nullptr;
     }
 
@@ -2507,11 +2502,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- Geovisit class --------------------
-    static constexpr const char* const type_name_Geovisit = "Geovisit";
 
     static PyObject* _new_Geovisit(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Geovisit);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::Geovisit>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::Geovisit>::type_name);
         return nullptr;
     }
 
@@ -2642,7 +2637,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- GeovisitMonitor class --------------------
-    static constexpr const char* const type_name_GeovisitMonitor = "GeovisitMonitor";
 
     static PyObject* _new_GeovisitMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2899,11 +2893,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- GeovisitStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GeovisitStateChangedEventArgs = "GeovisitStateChangedEventArgs";
 
     static PyObject* _new_GeovisitStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GeovisitStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2994,11 +2988,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- GeovisitTriggerDetails class --------------------
-    static constexpr const char* const type_name_GeovisitTriggerDetails = "GeovisitTriggerDetails";
 
     static PyObject* _new_GeovisitTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GeovisitTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -3099,11 +3093,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- PositionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PositionChangedEventArgs = "PositionChangedEventArgs";
 
     static PyObject* _new_PositionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PositionChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3194,11 +3188,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- StatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_StatusChangedEventArgs = "StatusChangedEventArgs";
 
     static PyObject* _new_StatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3289,11 +3283,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- VenueData class --------------------
-    static constexpr const char* const type_name_VenueData = "VenueData";
 
     static PyObject* _new_VenueData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VenueData);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::VenueData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::VenueData>::type_name);
         return nullptr;
     }
 
@@ -3404,11 +3398,11 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- IGeoshape interface --------------------
-    static constexpr const char* const type_name_IGeoshape = "IGeoshape";
 
     static PyObject* _new_IGeoshape(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGeoshape);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::IGeoshape>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::IGeoshape>::type_name);
         return nullptr;
     }
 
@@ -3539,7 +3533,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     };
 
     // ----- BasicGeoposition struct --------------------
-    static constexpr const char* const type_name_BasicGeoposition = "BasicGeoposition";
 
     PyObject* _new_BasicGeoposition(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

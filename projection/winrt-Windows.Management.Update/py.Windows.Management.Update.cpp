@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Management::Update
 {
     // ----- PreviewBuildsManager class --------------------
-    static constexpr const char* const type_name_PreviewBuildsManager = "PreviewBuildsManager";
 
     static PyObject* _new_PreviewBuildsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewBuildsManager);
+        static_assert(py::py_type<winrt::Windows::Management::Update::PreviewBuildsManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::PreviewBuildsManager>::type_name);
         return nullptr;
     }
 
@@ -250,11 +250,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- PreviewBuildsState class --------------------
-    static constexpr const char* const type_name_PreviewBuildsState = "PreviewBuildsState";
 
     static PyObject* _new_PreviewBuildsState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewBuildsState);
+        static_assert(py::py_type<winrt::Windows::Management::Update::PreviewBuildsState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::PreviewBuildsState>::type_name);
         return nullptr;
     }
 
@@ -345,11 +345,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdate class --------------------
-    static constexpr const char* const type_name_WindowsUpdate = "WindowsUpdate";
 
     static PyObject* _new_WindowsUpdate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdate);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdate>::type_name);
         return nullptr;
     }
 
@@ -923,11 +923,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateActionCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowsUpdateActionCompletedEventArgs = "WindowsUpdateActionCompletedEventArgs";
 
     static PyObject* _new_WindowsUpdateActionCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateActionCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1078,11 +1078,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateActionProgress class --------------------
-    static constexpr const char* const type_name_WindowsUpdateActionProgress = "WindowsUpdateActionProgress";
 
     static PyObject* _new_WindowsUpdateActionProgress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateActionProgress);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateActionProgress>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateActionProgress>::type_name);
         return nullptr;
     }
 
@@ -1193,11 +1193,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateActionResult class --------------------
-    static constexpr const char* const type_name_WindowsUpdateActionResult = "WindowsUpdateActionResult";
 
     static PyObject* _new_WindowsUpdateActionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateActionResult);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateActionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateActionResult>::type_name);
         return nullptr;
     }
 
@@ -1348,11 +1348,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateAdministrator class --------------------
-    static constexpr const char* const type_name_WindowsUpdateAdministrator = "WindowsUpdateAdministrator";
 
     static PyObject* _new_WindowsUpdateAdministrator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateAdministrator);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateAdministrator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateAdministrator>::type_name);
         return nullptr;
     }
 
@@ -1811,7 +1811,6 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateApprovalData class --------------------
-    static constexpr const char* const type_name_WindowsUpdateApprovalData = "WindowsUpdateApprovalData";
 
     static PyObject* _new_WindowsUpdateApprovalData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2149,11 +2148,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateAttentionRequiredInfo class --------------------
-    static constexpr const char* const type_name_WindowsUpdateAttentionRequiredInfo = "WindowsUpdateAttentionRequiredInfo";
 
     static PyObject* _new_WindowsUpdateAttentionRequiredInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateAttentionRequiredInfo);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>::type_name);
         return nullptr;
     }
 
@@ -2264,11 +2263,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateAttentionRequiredReasonChangedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs = "WindowsUpdateAttentionRequiredReasonChangedEventArgs";
 
     static PyObject* _new_WindowsUpdateAttentionRequiredReasonChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2379,11 +2378,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateGetAdministratorResult class --------------------
-    static constexpr const char* const type_name_WindowsUpdateGetAdministratorResult = "WindowsUpdateGetAdministratorResult";
 
     static PyObject* _new_WindowsUpdateGetAdministratorResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateGetAdministratorResult);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>::type_name);
         return nullptr;
     }
 
@@ -2494,11 +2493,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateItem class --------------------
-    static constexpr const char* const type_name_WindowsUpdateItem = "WindowsUpdateItem";
 
     static PyObject* _new_WindowsUpdateItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateItem);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateItem>::type_name);
         return nullptr;
     }
 
@@ -2729,7 +2728,6 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateManager class --------------------
-    static constexpr const char* const type_name_WindowsUpdateManager = "WindowsUpdateManager";
 
     static PyObject* _new_WindowsUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3286,11 +3284,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateProgressChangedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowsUpdateProgressChangedEventArgs = "WindowsUpdateProgressChangedEventArgs";
 
     static PyObject* _new_WindowsUpdateProgressChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateProgressChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3401,7 +3399,6 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateRestartRequestOptions class --------------------
-    static constexpr const char* const type_name_WindowsUpdateRestartRequestOptions = "WindowsUpdateRestartRequestOptions";
 
     static PyObject* _new_WindowsUpdateRestartRequestOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3854,11 +3851,11 @@ namespace py::cpp::Windows::Management::Update
     };
 
     // ----- WindowsUpdateScanCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowsUpdateScanCompletedEventArgs = "WindowsUpdateScanCompletedEventArgs";
 
     static PyObject* _new_WindowsUpdateScanCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsUpdateScanCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>::type_name);
         return nullptr;
     }
 

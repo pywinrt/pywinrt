@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Gaming::Input
 {
     // ----- ArcadeStick class --------------------
-    static constexpr const char* const type_name_ArcadeStick = "ArcadeStick";
 
     static PyObject* _new_ArcadeStick(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ArcadeStick);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::ArcadeStick>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::ArcadeStick>::type_name);
         return nullptr;
     }
 
@@ -531,11 +531,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- FlightStick class --------------------
-    static constexpr const char* const type_name_FlightStick = "FlightStick";
 
     static PyObject* _new_FlightStick(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FlightStick);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::FlightStick>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::FlightStick>::type_name);
         return nullptr;
     }
 
@@ -1075,11 +1075,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- Gamepad class --------------------
-    static constexpr const char* const type_name_Gamepad = "Gamepad";
 
     static PyObject* _new_Gamepad(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Gamepad);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Gamepad>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Gamepad>::type_name);
         return nullptr;
     }
 
@@ -1647,11 +1647,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- Headset class --------------------
-    static constexpr const char* const type_name_Headset = "Headset";
 
     static PyObject* _new_Headset(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Headset);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Headset>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Headset>::type_name);
         return nullptr;
     }
 
@@ -1792,11 +1792,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- RacingWheel class --------------------
-    static constexpr const char* const type_name_RacingWheel = "RacingWheel";
 
     static PyObject* _new_RacingWheel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RacingWheel);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::RacingWheel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::RacingWheel>::type_name);
         return nullptr;
     }
 
@@ -2436,11 +2436,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- RawGameController class --------------------
-    static constexpr const char* const type_name_RawGameController = "RawGameController";
 
     static PyObject* _new_RawGameController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RawGameController);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::RawGameController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::RawGameController>::type_name);
         return nullptr;
     }
 
@@ -3176,11 +3176,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- UINavigationController class --------------------
-    static constexpr const char* const type_name_UINavigationController = "UINavigationController";
 
     static PyObject* _new_UINavigationController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UINavigationController);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::UINavigationController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::UINavigationController>::type_name);
         return nullptr;
     }
 
@@ -3732,11 +3732,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- IGameController interface --------------------
-    static constexpr const char* const type_name_IGameController = "IGameController";
 
     static PyObject* _new_IGameController(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGameController);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::IGameController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::IGameController>::type_name);
         return nullptr;
     }
 
@@ -4002,11 +4002,11 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- IGameControllerBatteryInfo interface --------------------
-    static constexpr const char* const type_name_IGameControllerBatteryInfo = "IGameControllerBatteryInfo";
 
     static PyObject* _new_IGameControllerBatteryInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGameControllerBatteryInfo);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>::type_name);
         return nullptr;
     }
 
@@ -4107,7 +4107,6 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- ArcadeStickReading struct --------------------
-    static constexpr const char* const type_name_ArcadeStickReading = "ArcadeStickReading";
 
     PyObject* _new_ArcadeStickReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4242,7 +4241,6 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- FlightStickReading struct --------------------
-    static constexpr const char* const type_name_FlightStickReading = "FlightStickReading";
 
     PyObject* _new_FlightStickReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4552,7 +4550,6 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- GamepadReading struct --------------------
-    static constexpr const char* const type_name_GamepadReading = "GamepadReading";
 
     PyObject* _new_GamepadReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4897,7 +4894,6 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- GamepadVibration struct --------------------
-    static constexpr const char* const type_name_GamepadVibration = "GamepadVibration";
 
     PyObject* _new_GamepadVibration(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -5102,7 +5098,6 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- RacingWheelReading struct --------------------
-    static constexpr const char* const type_name_RacingWheelReading = "RacingWheelReading";
 
     PyObject* _new_RacingWheelReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -5447,7 +5442,6 @@ namespace py::cpp::Windows::Gaming::Input
     };
 
     // ----- UINavigationReading struct --------------------
-    static constexpr const char* const type_name_UINavigationReading = "UINavigationReading";
 
     PyObject* _new_UINavigationReading(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

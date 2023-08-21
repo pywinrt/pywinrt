@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::UIAutomation::Core
 {
     // ----- AutomationRemoteOperationResult class --------------------
-    static constexpr const char* const type_name_AutomationRemoteOperationResult = "AutomationRemoteOperationResult";
 
     static PyObject* _new_AutomationRemoteOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AutomationRemoteOperationResult);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>::type_name);
         return nullptr;
     }
 
@@ -206,11 +206,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- CoreAutomationRegistrar class --------------------
-    static constexpr const char* const type_name_CoreAutomationRegistrar = "CoreAutomationRegistrar";
 
     static PyObject* _new_CoreAutomationRegistrar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreAutomationRegistrar);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>::type_name);
         return nullptr;
     }
 
@@ -305,7 +305,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- CoreAutomationRemoteOperation class --------------------
-    static constexpr const char* const type_name_CoreAutomationRemoteOperation = "CoreAutomationRemoteOperation";
 
     static PyObject* _new_CoreAutomationRemoteOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -602,11 +601,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- CoreAutomationRemoteOperationContext class --------------------
-    static constexpr const char* const type_name_CoreAutomationRemoteOperationContext = "CoreAutomationRemoteOperationContext";
 
     static PyObject* _new_CoreAutomationRemoteOperationContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreAutomationRemoteOperationContext);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>::type_name);
         return nullptr;
     }
 
@@ -766,7 +765,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- RemoteAutomationClientSession class --------------------
-    static constexpr const char* const type_name_RemoteAutomationClientSession = "RemoteAutomationClientSession";
 
     static PyObject* _new_RemoteAutomationClientSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1088,11 +1086,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- RemoteAutomationConnectionRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_RemoteAutomationConnectionRequestedEventArgs = "RemoteAutomationConnectionRequestedEventArgs";
 
     static PyObject* _new_RemoteAutomationConnectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RemoteAutomationConnectionRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1203,11 +1201,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- RemoteAutomationDisconnectedEventArgs class --------------------
-    static constexpr const char* const type_name_RemoteAutomationDisconnectedEventArgs = "RemoteAutomationDisconnectedEventArgs";
 
     static PyObject* _new_RemoteAutomationDisconnectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RemoteAutomationDisconnectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1298,11 +1296,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- RemoteAutomationServer class --------------------
-    static constexpr const char* const type_name_RemoteAutomationServer = "RemoteAutomationServer";
 
     static PyObject* _new_RemoteAutomationServer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RemoteAutomationServer);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>::type_name);
         return nullptr;
     }
 
@@ -1365,11 +1363,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- RemoteAutomationWindow class --------------------
-    static constexpr const char* const type_name_RemoteAutomationWindow = "RemoteAutomationWindow";
 
     static PyObject* _new_RemoteAutomationWindow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RemoteAutomationWindow);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>::type_name);
         return nullptr;
     }
 
@@ -1490,11 +1488,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- ICoreAutomationConnectionBoundObjectProvider interface --------------------
-    static constexpr const char* const type_name_ICoreAutomationConnectionBoundObjectProvider = "ICoreAutomationConnectionBoundObjectProvider";
 
     static PyObject* _new_ICoreAutomationConnectionBoundObjectProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICoreAutomationConnectionBoundObjectProvider);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>::type_name);
         return nullptr;
     }
 
@@ -1585,11 +1583,11 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- ICoreAutomationRemoteOperationExtensionProvider interface --------------------
-    static constexpr const char* const type_name_ICoreAutomationRemoteOperationExtensionProvider = "ICoreAutomationRemoteOperationExtensionProvider";
 
     static PyObject* _new_ICoreAutomationRemoteOperationExtensionProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICoreAutomationRemoteOperationExtensionProvider);
+        static_assert(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>::type_name);
         return nullptr;
     }
 
@@ -1727,7 +1725,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------
-    static constexpr const char* const type_name_AutomationAnnotationTypeRegistration = "AutomationAnnotationTypeRegistration";
 
     PyObject* _new_AutomationAnnotationTypeRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1827,7 +1824,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     };
 
     // ----- AutomationRemoteOperationOperandId struct --------------------
-    static constexpr const char* const type_name_AutomationRemoteOperationOperandId = "AutomationRemoteOperationOperandId";
 
     PyObject* _new_AutomationRemoteOperationOperandId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

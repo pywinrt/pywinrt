@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Resources
 {
     // ----- CustomXamlResourceLoader class --------------------
-    static constexpr const char* const type_name_CustomXamlResourceLoader = "CustomXamlResourceLoader";
 
     static PyObject* _new_CustomXamlResourceLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

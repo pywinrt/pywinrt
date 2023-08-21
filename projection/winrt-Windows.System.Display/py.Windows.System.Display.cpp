@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::System::Display
 {
     // ----- DisplayRequest class --------------------
-    static constexpr const char* const type_name_DisplayRequest = "DisplayRequest";
 
     static PyObject* _new_DisplayRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

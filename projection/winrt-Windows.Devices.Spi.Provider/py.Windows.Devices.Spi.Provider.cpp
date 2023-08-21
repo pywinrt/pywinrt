@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Spi::Provider
 {
     // ----- ProviderSpiConnectionSettings class --------------------
-    static constexpr const char* const type_name_ProviderSpiConnectionSettings = "ProviderSpiConnectionSettings";
 
     static PyObject* _new_ProviderSpiConnectionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -347,11 +346,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     };
 
     // ----- ISpiControllerProvider interface --------------------
-    static constexpr const char* const type_name_ISpiControllerProvider = "ISpiControllerProvider";
 
     static PyObject* _new_ISpiControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISpiControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -454,11 +453,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     };
 
     // ----- ISpiDeviceProvider interface --------------------
-    static constexpr const char* const type_name_ISpiDeviceProvider = "ISpiDeviceProvider";
 
     static PyObject* _new_ISpiDeviceProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISpiDeviceProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>::type_name);
         return nullptr;
     }
 
@@ -756,11 +755,11 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     };
 
     // ----- ISpiProvider interface --------------------
-    static constexpr const char* const type_name_ISpiProvider = "ISpiProvider";
 
     static PyObject* _new_ISpiProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISpiProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>::type_name);
         return nullptr;
     }
 

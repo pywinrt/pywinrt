@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::Payments
 {
     // ----- PaymentAddress class --------------------
-    static constexpr const char* const type_name_PaymentAddress = "PaymentAddress";
 
     static PyObject* _new_PaymentAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -653,7 +652,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentCanMakePaymentResult class --------------------
-    static constexpr const char* const type_name_PaymentCanMakePaymentResult = "PaymentCanMakePaymentResult";
 
     static PyObject* _new_PaymentCanMakePaymentResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -773,7 +771,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentCurrencyAmount class --------------------
-    static constexpr const char* const type_name_PaymentCurrencyAmount = "PaymentCurrencyAmount";
 
     static PyObject* _new_PaymentCurrencyAmount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1035,7 +1032,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentDetails class --------------------
-    static constexpr const char* const type_name_PaymentDetails = "PaymentDetails";
 
     static PyObject* _new_PaymentDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1356,7 +1352,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentDetailsModifier class --------------------
-    static constexpr const char* const type_name_PaymentDetailsModifier = "PaymentDetailsModifier";
 
     static PyObject* _new_PaymentDetailsModifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1572,7 +1567,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentItem class --------------------
-    static constexpr const char* const type_name_PaymentItem = "PaymentItem";
 
     static PyObject* _new_PaymentItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1817,7 +1811,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentMediator class --------------------
-    static constexpr const char* const type_name_PaymentMediator = "PaymentMediator";
 
     static PyObject* _new_PaymentMediator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2030,7 +2023,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentMerchantInfo class --------------------
-    static constexpr const char* const type_name_PaymentMerchantInfo = "PaymentMerchantInfo";
 
     static PyObject* _new_PaymentMerchantInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2183,7 +2175,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentMethodData class --------------------
-    static constexpr const char* const type_name_PaymentMethodData = "PaymentMethodData";
 
     static PyObject* _new_PaymentMethodData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2339,7 +2330,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentOptions class --------------------
-    static constexpr const char* const type_name_PaymentOptions = "PaymentOptions";
 
     static PyObject* _new_PaymentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2677,7 +2667,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentRequest class --------------------
-    static constexpr const char* const type_name_PaymentRequest = "PaymentRequest";
 
     static PyObject* _new_PaymentRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2932,11 +2921,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentRequestChangedArgs class --------------------
-    static constexpr const char* const type_name_PaymentRequestChangedArgs = "PaymentRequestChangedArgs";
 
     static PyObject* _new_PaymentRequestChangedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentRequestChangedArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>::type_name);
         return nullptr;
     }
 
@@ -3100,7 +3089,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentRequestChangedResult class --------------------
-    static constexpr const char* const type_name_PaymentRequestChangedResult = "PaymentRequestChangedResult";
 
     static PyObject* _new_PaymentRequestChangedResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3360,11 +3348,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentRequestSubmitResult class --------------------
-    static constexpr const char* const type_name_PaymentRequestSubmitResult = "PaymentRequestSubmitResult";
 
     static PyObject* _new_PaymentRequestSubmitResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentRequestSubmitResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>::type_name);
         return nullptr;
     }
 
@@ -3475,11 +3463,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentResponse class --------------------
-    static constexpr const char* const type_name_PaymentResponse = "PaymentResponse";
 
     static PyObject* _new_PaymentResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentResponse);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>::type_name);
         return nullptr;
     }
 
@@ -3702,7 +3690,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentShippingOption class --------------------
-    static constexpr const char* const type_name_PaymentShippingOption = "PaymentShippingOption";
 
     static PyObject* _new_PaymentShippingOption(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4030,7 +4017,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     };
 
     // ----- PaymentToken class --------------------
-    static constexpr const char* const type_name_PaymentToken = "PaymentToken";
 
     static PyObject* _new_PaymentToken(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

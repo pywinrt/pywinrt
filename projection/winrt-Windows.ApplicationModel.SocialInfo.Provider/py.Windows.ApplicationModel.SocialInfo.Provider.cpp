@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
 {
     // ----- SocialDashboardItemUpdater class --------------------
-    static constexpr const char* const type_name_SocialDashboardItemUpdater = "SocialDashboardItemUpdater";
 
     static PyObject* _new_SocialDashboardItemUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SocialDashboardItemUpdater);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater>::type_name);
         return nullptr;
     }
 
@@ -296,11 +296,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
     };
 
     // ----- SocialFeedUpdater class --------------------
-    static constexpr const char* const type_name_SocialFeedUpdater = "SocialFeedUpdater";
 
     static PyObject* _new_SocialFeedUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SocialFeedUpdater);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater>::type_name);
         return nullptr;
     }
 
@@ -461,11 +461,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
     };
 
     // ----- SocialInfoProviderManager class --------------------
-    static constexpr const char* const type_name_SocialInfoProviderManager = "SocialInfoProviderManager";
 
     static PyObject* _new_SocialInfoProviderManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SocialInfoProviderManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager>::type_name);
         return nullptr;
     }
 

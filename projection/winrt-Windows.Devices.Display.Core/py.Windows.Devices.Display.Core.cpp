@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Display::Core
 {
     // ----- DisplayAdapter class --------------------
-    static constexpr const char* const type_name_DisplayAdapter = "DisplayAdapter";
 
     static PyObject* _new_DisplayAdapter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayAdapter);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayAdapter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayAdapter>::type_name);
         return nullptr;
     }
 
@@ -274,11 +274,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayDevice class --------------------
-    static constexpr const char* const type_name_DisplayDevice = "DisplayDevice";
 
     static PyObject* _new_DisplayDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayDevice>::type_name);
         return nullptr;
     }
 
@@ -614,11 +614,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayFence class --------------------
-    static constexpr const char* const type_name_DisplayFence = "DisplayFence";
 
     static PyObject* _new_DisplayFence(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayFence);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayFence>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayFence>::type_name);
         return nullptr;
     }
 
@@ -689,11 +689,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayManager class --------------------
-    static constexpr const char* const type_name_DisplayManager = "DisplayManager";
 
     static PyObject* _new_DisplayManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayManager);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManager>::type_name);
         return nullptr;
     }
 
@@ -1375,11 +1375,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayManagerChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DisplayManagerChangedEventArgs = "DisplayManagerChangedEventArgs";
 
     static PyObject* _new_DisplayManagerChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayManagerChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1528,11 +1528,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayManagerDisabledEventArgs class --------------------
-    static constexpr const char* const type_name_DisplayManagerDisabledEventArgs = "DisplayManagerDisabledEventArgs";
 
     static PyObject* _new_DisplayManagerDisabledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayManagerDisabledEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1681,11 +1681,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayManagerEnabledEventArgs class --------------------
-    static constexpr const char* const type_name_DisplayManagerEnabledEventArgs = "DisplayManagerEnabledEventArgs";
 
     static PyObject* _new_DisplayManagerEnabledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayManagerEnabledEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1834,11 +1834,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayManagerPathsFailedOrInvalidatedEventArgs class --------------------
-    static constexpr const char* const type_name_DisplayManagerPathsFailedOrInvalidatedEventArgs = "DisplayManagerPathsFailedOrInvalidatedEventArgs";
 
     static PyObject* _new_DisplayManagerPathsFailedOrInvalidatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayManagerPathsFailedOrInvalidatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1987,11 +1987,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayManagerResultWithState class --------------------
-    static constexpr const char* const type_name_DisplayManagerResultWithState = "DisplayManagerResultWithState";
 
     static PyObject* _new_DisplayManagerResultWithState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayManagerResultWithState);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>::type_name);
         return nullptr;
     }
 
@@ -2122,11 +2122,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayModeInfo class --------------------
-    static constexpr const char* const type_name_DisplayModeInfo = "DisplayModeInfo";
 
     static PyObject* _new_DisplayModeInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayModeInfo);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayModeInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayModeInfo>::type_name);
         return nullptr;
     }
 
@@ -2421,11 +2421,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayPath class --------------------
-    static constexpr const char* const type_name_DisplayPath = "DisplayPath";
 
     static PyObject* _new_DisplayPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayPath);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayPath>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayPath>::type_name);
         return nullptr;
     }
 
@@ -3121,7 +3121,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayPrimaryDescription class --------------------
-    static constexpr const char* const type_name_DisplayPrimaryDescription = "DisplayPrimaryDescription";
 
     static PyObject* _new_DisplayPrimaryDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3404,11 +3403,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayScanout class --------------------
-    static constexpr const char* const type_name_DisplayScanout = "DisplayScanout";
 
     static PyObject* _new_DisplayScanout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayScanout);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayScanout>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayScanout>::type_name);
         return nullptr;
     }
 
@@ -3479,11 +3478,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplaySource class --------------------
-    static constexpr const char* const type_name_DisplaySource = "DisplaySource";
 
     static PyObject* _new_DisplaySource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplaySource);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplaySource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplaySource>::type_name);
         return nullptr;
     }
 
@@ -3691,11 +3690,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayState class --------------------
-    static constexpr const char* const type_name_DisplayState = "DisplayState";
 
     static PyObject* _new_DisplayState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayState);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayState>::type_name);
         return nullptr;
     }
 
@@ -4143,11 +4142,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayStateOperationResult class --------------------
-    static constexpr const char* const type_name_DisplayStateOperationResult = "DisplayStateOperationResult";
 
     static PyObject* _new_DisplayStateOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayStateOperationResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>::type_name);
         return nullptr;
     }
 
@@ -4258,11 +4257,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplaySurface class --------------------
-    static constexpr const char* const type_name_DisplaySurface = "DisplaySurface";
 
     static PyObject* _new_DisplaySurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplaySurface);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplaySurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplaySurface>::type_name);
         return nullptr;
     }
 
@@ -4333,11 +4332,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayTarget class --------------------
-    static constexpr const char* const type_name_DisplayTarget = "DisplayTarget";
 
     static PyObject* _new_DisplayTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayTarget);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTarget>::type_name);
         return nullptr;
     }
 
@@ -4722,11 +4721,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayTask class --------------------
-    static constexpr const char* const type_name_DisplayTask = "DisplayTask";
 
     static PyObject* _new_DisplayTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayTask);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTask>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTask>::type_name);
         return nullptr;
     }
 
@@ -4898,11 +4897,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayTaskPool class --------------------
-    static constexpr const char* const type_name_DisplayTaskPool = "DisplayTaskPool";
 
     static PyObject* _new_DisplayTaskPool(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayTaskPool);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTaskPool>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTaskPool>::type_name);
         return nullptr;
     }
 
@@ -5068,11 +5067,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayTaskResult class --------------------
-    static constexpr const char* const type_name_DisplayTaskResult = "DisplayTaskResult";
 
     static PyObject* _new_DisplayTaskResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayTaskResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTaskResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayTaskResult>::type_name);
         return nullptr;
     }
 
@@ -5203,11 +5202,11 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayView class --------------------
-    static constexpr const char* const type_name_DisplayView = "DisplayView";
 
     static PyObject* _new_DisplayView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayView);
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayView>::type_name);
         return nullptr;
     }
 
@@ -5399,7 +5398,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayWireFormat class --------------------
-    static constexpr const char* const type_name_DisplayWireFormat = "DisplayWireFormat";
 
     static PyObject* _new_DisplayWireFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5660,7 +5658,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     // ----- DisplayPresentationRate struct --------------------
-    static constexpr const char* const type_name_DisplayPresentationRate = "DisplayPresentationRate";
 
     PyObject* _new_DisplayPresentationRate(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Markup
 {
     // ----- MarkupExtension class --------------------
-    static constexpr const char* const type_name_MarkupExtension = "MarkupExtension";
 
     static PyObject* _new_MarkupExtension(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -135,11 +134,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- XamlBinaryWriter class --------------------
-    static constexpr const char* const type_name_XamlBinaryWriter = "XamlBinaryWriter";
 
     static PyObject* _new_XamlBinaryWriter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlBinaryWriter);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlBinaryWriter>::type_name);
         return nullptr;
     }
 
@@ -244,11 +243,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- XamlBindingHelper class --------------------
-    static constexpr const char* const type_name_XamlBindingHelper = "XamlBindingHelper";
 
     static PyObject* _new_XamlBindingHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlBindingHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlBindingHelper>::type_name);
         return nullptr;
     }
 
@@ -1119,11 +1118,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- XamlMarkupHelper class --------------------
-    static constexpr const char* const type_name_XamlMarkupHelper = "XamlMarkupHelper";
 
     static PyObject* _new_XamlMarkupHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlMarkupHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlMarkupHelper>::type_name);
         return nullptr;
     }
 
@@ -1227,11 +1226,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- XamlReader class --------------------
-    static constexpr const char* const type_name_XamlReader = "XamlReader";
 
     static PyObject* _new_XamlReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlReader);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::XamlReader>::type_name);
         return nullptr;
     }
 
@@ -1366,11 +1365,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IComponentConnector interface --------------------
-    static constexpr const char* const type_name_IComponentConnector = "IComponentConnector";
 
     static PyObject* _new_IComponentConnector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IComponentConnector);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector>::type_name);
         return nullptr;
     }
 
@@ -1475,11 +1474,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IComponentConnector2 interface --------------------
-    static constexpr const char* const type_name_IComponentConnector2 = "IComponentConnector2";
 
     static PyObject* _new_IComponentConnector2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IComponentConnector2);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IComponentConnector2>::type_name);
         return nullptr;
     }
 
@@ -1583,11 +1582,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IDataTemplateComponent interface --------------------
-    static constexpr const char* const type_name_IDataTemplateComponent = "IDataTemplateComponent";
 
     static PyObject* _new_IDataTemplateComponent(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDataTemplateComponent);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IDataTemplateComponent>::type_name);
         return nullptr;
     }
 
@@ -1731,11 +1730,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IXamlBindScopeDiagnostics interface --------------------
-    static constexpr const char* const type_name_IXamlBindScopeDiagnostics = "IXamlBindScopeDiagnostics";
 
     static PyObject* _new_IXamlBindScopeDiagnostics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlBindScopeDiagnostics);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics>::type_name);
         return nullptr;
     }
 
@@ -1840,11 +1839,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IXamlMember interface --------------------
-    static constexpr const char* const type_name_IXamlMember = "IXamlMember";
 
     static PyObject* _new_IXamlMember(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlMember);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMember>::type_name);
         return nullptr;
     }
 
@@ -2101,11 +2100,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IXamlMetadataProvider interface --------------------
-    static constexpr const char* const type_name_IXamlMetadataProvider = "IXamlMetadataProvider";
 
     static PyObject* _new_IXamlMetadataProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlMetadataProvider);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlMetadataProvider>::type_name);
         return nullptr;
     }
 
@@ -2238,11 +2237,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IXamlType interface --------------------
-    static constexpr const char* const type_name_IXamlType = "IXamlType";
 
     static PyObject* _new_IXamlType(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlType);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType>::type_name);
         return nullptr;
     }
 
@@ -2747,11 +2746,11 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- IXamlType2 interface --------------------
-    static constexpr const char* const type_name_IXamlType2 = "IXamlType2";
 
     static PyObject* _new_IXamlType2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlType2);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Markup::IXamlType2>::type_name);
         return nullptr;
     }
 
@@ -3276,7 +3275,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- XamlBinaryWriterErrorInformation struct --------------------
-    static constexpr const char* const type_name_XamlBinaryWriterErrorInformation = "XamlBinaryWriterErrorInformation";
 
     PyObject* _new_XamlBinaryWriterErrorInformation(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -3446,7 +3444,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     };
 
     // ----- XmlnsDefinition struct --------------------
-    static constexpr const char* const type_name_XmlnsDefinition = "XmlnsDefinition";
 
     PyObject* _new_XmlnsDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

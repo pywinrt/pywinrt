@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Authentication::Identity::Core
 {
     // ----- MicrosoftAccountMultiFactorAuthenticationManager class --------------------
-    static constexpr const char* const type_name_MicrosoftAccountMultiFactorAuthenticationManager = "MicrosoftAccountMultiFactorAuthenticationManager";
 
     static PyObject* _new_MicrosoftAccountMultiFactorAuthenticationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MicrosoftAccountMultiFactorAuthenticationManager);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager>::type_name);
         return nullptr;
     }
 
@@ -428,11 +428,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     };
 
     // ----- MicrosoftAccountMultiFactorGetSessionsResult class --------------------
-    static constexpr const char* const type_name_MicrosoftAccountMultiFactorGetSessionsResult = "MicrosoftAccountMultiFactorGetSessionsResult";
 
     static PyObject* _new_MicrosoftAccountMultiFactorGetSessionsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MicrosoftAccountMultiFactorGetSessionsResult);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult>::type_name);
         return nullptr;
     }
 
@@ -543,11 +543,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     };
 
     // ----- MicrosoftAccountMultiFactorOneTimeCodedInfo class --------------------
-    static constexpr const char* const type_name_MicrosoftAccountMultiFactorOneTimeCodedInfo = "MicrosoftAccountMultiFactorOneTimeCodedInfo";
 
     static PyObject* _new_MicrosoftAccountMultiFactorOneTimeCodedInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MicrosoftAccountMultiFactorOneTimeCodedInfo);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo>::type_name);
         return nullptr;
     }
 
@@ -698,11 +698,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     };
 
     // ----- MicrosoftAccountMultiFactorSessionInfo class --------------------
-    static constexpr const char* const type_name_MicrosoftAccountMultiFactorSessionInfo = "MicrosoftAccountMultiFactorSessionInfo";
 
     static PyObject* _new_MicrosoftAccountMultiFactorSessionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MicrosoftAccountMultiFactorSessionInfo);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>::type_name);
         return nullptr;
     }
 
@@ -913,11 +913,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     };
 
     // ----- MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo class --------------------
-    static constexpr const char* const type_name_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo = "MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo";
 
     static PyObject* _new_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo>::type_name);
         return nullptr;
     }
 

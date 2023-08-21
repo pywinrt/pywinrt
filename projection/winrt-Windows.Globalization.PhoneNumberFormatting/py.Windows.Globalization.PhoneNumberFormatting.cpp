@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 {
     // ----- PhoneNumberFormatter class --------------------
-    static constexpr const char* const type_name_PhoneNumberFormatter = "PhoneNumberFormatter";
 
     static PyObject* _new_PhoneNumberFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -391,7 +390,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
     };
 
     // ----- PhoneNumberInfo class --------------------
-    static constexpr const char* const type_name_PhoneNumberInfo = "PhoneNumberInfo";
 
     static PyObject* _new_PhoneNumberInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

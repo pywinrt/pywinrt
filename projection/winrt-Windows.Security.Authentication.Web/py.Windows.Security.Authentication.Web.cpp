@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Authentication::Web
 {
     // ----- WebAuthenticationBroker class --------------------
-    static constexpr const char* const type_name_WebAuthenticationBroker = "WebAuthenticationBroker";
 
     static PyObject* _new_WebAuthenticationBroker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAuthenticationBroker);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>::type_name);
         return nullptr;
     }
 
@@ -258,11 +258,11 @@ namespace py::cpp::Windows::Security::Authentication::Web
     };
 
     // ----- WebAuthenticationResult class --------------------
-    static constexpr const char* const type_name_WebAuthenticationResult = "WebAuthenticationResult";
 
     static PyObject* _new_WebAuthenticationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAuthenticationResult);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>::type_name);
         return nullptr;
     }
 

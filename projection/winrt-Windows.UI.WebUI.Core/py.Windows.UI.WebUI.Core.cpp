@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::WebUI::Core
 {
     // ----- WebUICommandBar class --------------------
-    static constexpr const char* const type_name_WebUICommandBar = "WebUICommandBar";
 
     static PyObject* _new_WebUICommandBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUICommandBar);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBar>::type_name);
         return nullptr;
     }
 
@@ -595,7 +595,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- WebUICommandBarBitmapIcon class --------------------
-    static constexpr const char* const type_name_WebUICommandBarBitmapIcon = "WebUICommandBarBitmapIcon";
 
     static PyObject* _new_WebUICommandBarBitmapIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -756,7 +755,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- WebUICommandBarConfirmationButton class --------------------
-    static constexpr const char* const type_name_WebUICommandBarConfirmationButton = "WebUICommandBarConfirmationButton";
 
     static PyObject* _new_WebUICommandBarConfirmationButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -947,7 +945,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- WebUICommandBarIconButton class --------------------
-    static constexpr const char* const type_name_WebUICommandBarIconButton = "WebUICommandBarIconButton";
 
     static PyObject* _new_WebUICommandBarIconButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1330,11 +1327,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- WebUICommandBarItemInvokedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUICommandBarItemInvokedEventArgs = "WebUICommandBarItemInvokedEventArgs";
 
     static PyObject* _new_WebUICommandBarItemInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUICommandBarItemInvokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1425,11 +1422,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- WebUICommandBarSizeChangedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUICommandBarSizeChangedEventArgs = "WebUICommandBarSizeChangedEventArgs";
 
     static PyObject* _new_WebUICommandBarSizeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUICommandBarSizeChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1520,7 +1517,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- WebUICommandBarSymbolIcon class --------------------
-    static constexpr const char* const type_name_WebUICommandBarSymbolIcon = "WebUICommandBarSymbolIcon";
 
     static PyObject* _new_WebUICommandBarSymbolIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1681,11 +1677,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- IWebUICommandBarElement interface --------------------
-    static constexpr const char* const type_name_IWebUICommandBarElement = "IWebUICommandBarElement";
 
     static PyObject* _new_IWebUICommandBarElement(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebUICommandBarElement);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarElement>::type_name);
         return nullptr;
     }
 
@@ -1756,11 +1752,11 @@ namespace py::cpp::Windows::UI::WebUI::Core
     };
 
     // ----- IWebUICommandBarIcon interface --------------------
-    static constexpr const char* const type_name_IWebUICommandBarIcon = "IWebUICommandBarIcon";
 
     static PyObject* _new_IWebUICommandBarIcon(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebUICommandBarIcon);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::Core::IWebUICommandBarIcon>::type_name);
         return nullptr;
     }
 

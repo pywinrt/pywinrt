@@ -7,11 +7,11 @@
 namespace py::cpp::TestComponent
 {
     // ----- TestRunner class --------------------
-    static constexpr const char* const type_name_TestRunner = "TestRunner";
 
     static PyObject* _new_TestRunner(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TestRunner);
+        static_assert(py::py_type<winrt::TestComponent::TestRunner>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::TestRunner>::type_name);
         return nullptr;
     }
 
@@ -257,11 +257,11 @@ namespace py::cpp::TestComponent
     };
 
     // ----- ITests interface --------------------
-    static constexpr const char* const type_name_ITests = "ITests";
 
     static PyObject* _new_ITests(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITests);
+        static_assert(py::py_type<winrt::TestComponent::ITests>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::ITests>::type_name);
         return nullptr;
     }
 
@@ -3633,7 +3633,6 @@ namespace py::cpp::TestComponent
     };
 
     // ----- Blittable struct --------------------
-    static constexpr const char* const type_name_Blittable = "Blittable";
 
     PyObject* _new_Blittable(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4048,7 +4047,6 @@ namespace py::cpp::TestComponent
     };
 
     // ----- Nested struct --------------------
-    static constexpr const char* const type_name_Nested = "Nested";
 
     PyObject* _new_Nested(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4183,7 +4181,6 @@ namespace py::cpp::TestComponent
     };
 
     // ----- NonBlittable struct --------------------
-    static constexpr const char* const type_name_NonBlittable = "NonBlittable";
 
     PyObject* _new_NonBlittable(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

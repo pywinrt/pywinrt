@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::I2c::Provider
 {
     // ----- ProviderI2cConnectionSettings class --------------------
-    static constexpr const char* const type_name_ProviderI2cConnectionSettings = "ProviderI2cConnectionSettings";
 
     static PyObject* _new_ProviderI2cConnectionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProviderI2cConnectionSettings);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings>::type_name);
         return nullptr;
     }
 
@@ -226,11 +226,11 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     };
 
     // ----- II2cControllerProvider interface --------------------
-    static constexpr const char* const type_name_II2cControllerProvider = "II2cControllerProvider";
 
     static PyObject* _new_II2cControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_II2cControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -333,11 +333,11 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     };
 
     // ----- II2cDeviceProvider interface --------------------
-    static constexpr const char* const type_name_II2cDeviceProvider = "II2cDeviceProvider";
 
     static PyObject* _new_II2cDeviceProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_II2cDeviceProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cDeviceProvider>::type_name);
         return nullptr;
     }
 
@@ -678,11 +678,11 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     };
 
     // ----- II2cProvider interface --------------------
-    static constexpr const char* const type_name_II2cProvider = "II2cProvider";
 
     static PyObject* _new_II2cProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_II2cProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::Provider::II2cProvider>::type_name);
         return nullptr;
     }
 
@@ -783,7 +783,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     };
 
     // ----- ProviderI2cTransferResult struct --------------------
-    static constexpr const char* const type_name_ProviderI2cTransferResult = "ProviderI2cTransferResult";
 
     PyObject* _new_ProviderI2cTransferResult(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

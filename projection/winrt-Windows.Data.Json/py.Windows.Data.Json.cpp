@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Data::Json
 {
     // ----- JsonArray class --------------------
-    static constexpr const char* const type_name_JsonArray = "JsonArray";
 
     static PyObject* _new_JsonArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1134,11 +1133,11 @@ namespace py::cpp::Windows::Data::Json
     };
 
     // ----- JsonError class --------------------
-    static constexpr const char* const type_name_JsonError = "JsonError";
 
     static PyObject* _new_JsonError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_JsonError);
+        static_assert(py::py_type<winrt::Windows::Data::Json::JsonError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Json::JsonError>::type_name);
         return nullptr;
     }
 
@@ -1200,7 +1199,6 @@ namespace py::cpp::Windows::Data::Json
     };
 
     // ----- JsonObject class --------------------
-    static constexpr const char* const type_name_JsonObject = "JsonObject";
 
     static PyObject* _new_JsonObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2309,11 +2307,11 @@ namespace py::cpp::Windows::Data::Json
     };
 
     // ----- JsonValue class --------------------
-    static constexpr const char* const type_name_JsonValue = "JsonValue";
 
     static PyObject* _new_JsonValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_JsonValue);
+        static_assert(py::py_type<winrt::Windows::Data::Json::JsonValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Json::JsonValue>::type_name);
         return nullptr;
     }
 
@@ -2831,11 +2829,11 @@ namespace py::cpp::Windows::Data::Json
     };
 
     // ----- IJsonValue interface --------------------
-    static constexpr const char* const type_name_IJsonValue = "IJsonValue";
 
     static PyObject* _new_IJsonValue(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IJsonValue);
+        static_assert(py::py_type<winrt::Windows::Data::Json::IJsonValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Json::IJsonValue>::type_name);
         return nullptr;
     }
 

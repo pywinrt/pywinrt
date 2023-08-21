@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Credentials::UI
 {
     // ----- CredentialPicker class --------------------
-    static constexpr const char* const type_name_CredentialPicker = "CredentialPicker";
 
     static PyObject* _new_CredentialPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CredentialPicker);
+        static_assert(py::py_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>::type_name);
         return nullptr;
     }
 
@@ -116,7 +116,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
     };
 
     // ----- CredentialPickerOptions class --------------------
-    static constexpr const char* const type_name_CredentialPickerOptions = "CredentialPickerOptions";
 
     static PyObject* _new_CredentialPickerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -694,11 +693,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
     };
 
     // ----- CredentialPickerResults class --------------------
-    static constexpr const char* const type_name_CredentialPickerResults = "CredentialPickerResults";
 
     static PyObject* _new_CredentialPickerResults(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CredentialPickerResults);
+        static_assert(py::py_type<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>::type_name);
         return nullptr;
     }
 
@@ -909,11 +908,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
     };
 
     // ----- UserConsentVerifier class --------------------
-    static constexpr const char* const type_name_UserConsentVerifier = "UserConsentVerifier";
 
     static PyObject* _new_UserConsentVerifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserConsentVerifier);
+        static_assert(py::py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>::type_name);
         return nullptr;
     }
 

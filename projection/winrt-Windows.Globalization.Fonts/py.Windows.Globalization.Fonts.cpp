@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Globalization::Fonts
 {
     // ----- LanguageFont class --------------------
-    static constexpr const char* const type_name_LanguageFont = "LanguageFont";
 
     static PyObject* _new_LanguageFont(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LanguageFont);
+        static_assert(py::py_type<winrt::Windows::Globalization::Fonts::LanguageFont>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::Fonts::LanguageFont>::type_name);
         return nullptr;
     }
 
@@ -182,7 +182,6 @@ namespace py::cpp::Windows::Globalization::Fonts
     };
 
     // ----- LanguageFontGroup class --------------------
-    static constexpr const char* const type_name_LanguageFontGroup = "LanguageFontGroup";
 
     static PyObject* _new_LanguageFontGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::System::RemoteDesktop::Input
 {
     // ----- RemoteTextConnection class --------------------
-    static constexpr const char* const type_name_RemoteTextConnection = "RemoteTextConnection";
 
     static PyObject* _new_RemoteTextConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

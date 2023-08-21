@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::Email
 {
     // ----- EmailAttachment class --------------------
-    static constexpr const char* const type_name_EmailAttachment = "EmailAttachment";
 
     static PyObject* _new_EmailAttachment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -562,11 +561,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailConversation class --------------------
-    static constexpr const char* const type_name_EmailConversation = "EmailConversation";
 
     static PyObject* _new_EmailConversation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailConversation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailConversation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailConversation>::type_name);
         return nullptr;
     }
 
@@ -947,11 +946,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailConversationBatch class --------------------
-    static constexpr const char* const type_name_EmailConversationBatch = "EmailConversationBatch";
 
     static PyObject* _new_EmailConversationBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailConversationBatch);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>::type_name);
         return nullptr;
     }
 
@@ -1062,11 +1061,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailConversationReader class --------------------
-    static constexpr const char* const type_name_EmailConversationReader = "EmailConversationReader";
 
     static PyObject* _new_EmailConversationReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailConversationReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailConversationReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailConversationReader>::type_name);
         return nullptr;
     }
 
@@ -1167,11 +1166,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailFolder class --------------------
-    static constexpr const char* const type_name_EmailFolder = "EmailFolder";
 
     static PyObject* _new_EmailFolder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailFolder);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailFolder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailFolder>::type_name);
         return nullptr;
     }
 
@@ -1883,7 +1882,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailIrmInfo class --------------------
-    static constexpr const char* const type_name_EmailIrmInfo = "EmailIrmInfo";
 
     static PyObject* _new_EmailIrmInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2573,7 +2571,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailIrmTemplate class --------------------
-    static constexpr const char* const type_name_EmailIrmTemplate = "EmailIrmTemplate";
 
     static PyObject* _new_EmailIrmTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2832,11 +2829,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailItemCounts class --------------------
-    static constexpr const char* const type_name_EmailItemCounts = "EmailItemCounts";
 
     static PyObject* _new_EmailItemCounts(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailItemCounts);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailItemCounts>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailItemCounts>::type_name);
         return nullptr;
     }
 
@@ -2987,11 +2984,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailbox class --------------------
-    static constexpr const char* const type_name_EmailMailbox = "EmailMailbox";
 
     static PyObject* _new_EmailMailbox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailbox);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailbox>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailbox>::type_name);
         return nullptr;
     }
 
@@ -4711,11 +4708,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxAction class --------------------
-    static constexpr const char* const type_name_EmailMailboxAction = "EmailMailboxAction";
 
     static PyObject* _new_EmailMailboxAction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxAction);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>::type_name);
         return nullptr;
     }
 
@@ -4826,11 +4823,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxAutoReply class --------------------
-    static constexpr const char* const type_name_EmailMailboxAutoReply = "EmailMailboxAutoReply";
 
     static PyObject* _new_EmailMailboxAutoReply(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxAutoReply);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>::type_name);
         return nullptr;
     }
 
@@ -4997,7 +4994,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxAutoReplySettings class --------------------
-    static constexpr const char* const type_name_EmailMailboxAutoReplySettings = "EmailMailboxAutoReplySettings";
 
     static PyObject* _new_EmailMailboxAutoReplySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5347,11 +5343,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxCapabilities class --------------------
-    static constexpr const char* const type_name_EmailMailboxCapabilities = "EmailMailboxCapabilities";
 
     static PyObject* _new_EmailMailboxCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxCapabilities);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>::type_name);
         return nullptr;
     }
 
@@ -6094,11 +6090,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxChange class --------------------
-    static constexpr const char* const type_name_EmailMailboxChange = "EmailMailboxChange";
 
     static PyObject* _new_EmailMailboxChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxChange);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>::type_name);
         return nullptr;
     }
 
@@ -6249,11 +6245,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxChangeReader class --------------------
-    static constexpr const char* const type_name_EmailMailboxChangeReader = "EmailMailboxChangeReader";
 
     static PyObject* _new_EmailMailboxChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxChangeReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>::type_name);
         return nullptr;
     }
 
@@ -6418,11 +6414,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxChangeTracker class --------------------
-    static constexpr const char* const type_name_EmailMailboxChangeTracker = "EmailMailboxChangeTracker";
 
     static PyObject* _new_EmailMailboxChangeTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxChangeTracker);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>::type_name);
         return nullptr;
     }
 
@@ -6605,11 +6601,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxChangedDeferral class --------------------
-    static constexpr const char* const type_name_EmailMailboxChangedDeferral = "EmailMailboxChangedDeferral";
 
     static PyObject* _new_EmailMailboxChangedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxChangedDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>::type_name);
         return nullptr;
     }
 
@@ -6711,11 +6707,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxChangedEventArgs class --------------------
-    static constexpr const char* const type_name_EmailMailboxChangedEventArgs = "EmailMailboxChangedEventArgs";
 
     static PyObject* _new_EmailMailboxChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6816,11 +6812,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxCreateFolderResult class --------------------
-    static constexpr const char* const type_name_EmailMailboxCreateFolderResult = "EmailMailboxCreateFolderResult";
 
     static PyObject* _new_EmailMailboxCreateFolderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxCreateFolderResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>::type_name);
         return nullptr;
     }
 
@@ -6931,11 +6927,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxPolicies class --------------------
-    static constexpr const char* const type_name_EmailMailboxPolicies = "EmailMailboxPolicies";
 
     static PyObject* _new_EmailMailboxPolicies(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxPolicies);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>::type_name);
         return nullptr;
     }
 
@@ -7294,11 +7290,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMailboxSyncManager class --------------------
-    static constexpr const char* const type_name_EmailMailboxSyncManager = "EmailMailboxSyncManager";
 
     static PyObject* _new_EmailMailboxSyncManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMailboxSyncManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>::type_name);
         return nullptr;
     }
 
@@ -7588,11 +7584,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailManager class --------------------
-    static constexpr const char* const type_name_EmailManager = "EmailManager";
 
     static PyObject* _new_EmailManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailManager>::type_name);
         return nullptr;
     }
 
@@ -7718,11 +7714,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailManagerForUser class --------------------
-    static constexpr const char* const type_name_EmailManagerForUser = "EmailManagerForUser";
 
     static PyObject* _new_EmailManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailManagerForUser);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>::type_name);
         return nullptr;
     }
 
@@ -7877,7 +7873,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMeetingInfo class --------------------
-    static constexpr const char* const type_name_EmailMeetingInfo = "EmailMeetingInfo";
 
     static PyObject* _new_EmailMeetingInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8619,7 +8614,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMessage class --------------------
-    static constexpr const char* const type_name_EmailMessage = "EmailMessage";
 
     static PyObject* _new_EmailMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10111,11 +10105,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMessageBatch class --------------------
-    static constexpr const char* const type_name_EmailMessageBatch = "EmailMessageBatch";
 
     static PyObject* _new_EmailMessageBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMessageBatch);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>::type_name);
         return nullptr;
     }
 
@@ -10226,11 +10220,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailMessageReader class --------------------
-    static constexpr const char* const type_name_EmailMessageReader = "EmailMessageReader";
 
     static PyObject* _new_EmailMessageReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailMessageReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMessageReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailMessageReader>::type_name);
         return nullptr;
     }
 
@@ -10331,7 +10325,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailQueryOptions class --------------------
-    static constexpr const char* const type_name_EmailQueryOptions = "EmailQueryOptions";
 
     static PyObject* _new_EmailQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10644,11 +10637,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailQueryTextSearch class --------------------
-    static constexpr const char* const type_name_EmailQueryTextSearch = "EmailQueryTextSearch";
 
     static PyObject* _new_EmailQueryTextSearch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailQueryTextSearch);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>::type_name);
         return nullptr;
     }
 
@@ -10863,7 +10856,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailRecipient class --------------------
-    static constexpr const char* const type_name_EmailRecipient = "EmailRecipient";
 
     static PyObject* _new_EmailRecipient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11088,7 +11080,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailRecipientResolutionResult class --------------------
-    static constexpr const char* const type_name_EmailRecipientResolutionResult = "EmailRecipientResolutionResult";
 
     static PyObject* _new_EmailRecipientResolutionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11287,11 +11278,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailStore class --------------------
-    static constexpr const char* const type_name_EmailStore = "EmailStore";
 
     static PyObject* _new_EmailStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailStore>::type_name);
         return nullptr;
     }
 
@@ -11675,11 +11666,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
     };
 
     // ----- EmailStoreNotificationTriggerDetails class --------------------
-    static constexpr const char* const type_name_EmailStoreNotificationTriggerDetails = "EmailStoreNotificationTriggerDetails";
 
     static PyObject* _new_EmailStoreNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EmailStoreNotificationTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>::type_name);
         return nullptr;
     }
 

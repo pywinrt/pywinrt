@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Audio
 {
     // ----- AudioDeviceInputNode class --------------------
-    static constexpr const char* const type_name_AudioDeviceInputNode = "AudioDeviceInputNode";
 
     static PyObject* _new_AudioDeviceInputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioDeviceInputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioDeviceInputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioDeviceInputNode>::type_name);
         return nullptr;
     }
 
@@ -578,11 +578,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioDeviceOutputNode class --------------------
-    static constexpr const char* const type_name_AudioDeviceOutputNode = "AudioDeviceOutputNode";
 
     static PyObject* _new_AudioDeviceOutputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioDeviceOutputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioDeviceOutputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioDeviceOutputNode>::type_name);
         return nullptr;
     }
 
@@ -1069,11 +1069,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioFileInputNode class --------------------
-    static constexpr const char* const type_name_AudioFileInputNode = "AudioFileInputNode";
 
     static PyObject* _new_AudioFileInputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioFileInputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioFileInputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioFileInputNode>::type_name);
         return nullptr;
     }
 
@@ -1950,11 +1950,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioFileOutputNode class --------------------
-    static constexpr const char* const type_name_AudioFileOutputNode = "AudioFileOutputNode";
 
     static PyObject* _new_AudioFileOutputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioFileOutputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioFileOutputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioFileOutputNode>::type_name);
         return nullptr;
     }
 
@@ -2443,11 +2443,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioFrameCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_AudioFrameCompletedEventArgs = "AudioFrameCompletedEventArgs";
 
     static PyObject* _new_AudioFrameCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioFrameCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2538,11 +2538,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioFrameInputNode class --------------------
-    static constexpr const char* const type_name_AudioFrameInputNode = "AudioFrameInputNode";
 
     static PyObject* _new_AudioFrameInputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioFrameInputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioFrameInputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioFrameInputNode>::type_name);
         return nullptr;
     }
 
@@ -3311,11 +3311,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioFrameOutputNode class --------------------
-    static constexpr const char* const type_name_AudioFrameOutputNode = "AudioFrameOutputNode";
 
     static PyObject* _new_AudioFrameOutputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioFrameOutputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioFrameOutputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioFrameOutputNode>::type_name);
         return nullptr;
     }
 
@@ -3764,11 +3764,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioGraph class --------------------
-    static constexpr const char* const type_name_AudioGraph = "AudioGraph";
 
     static PyObject* _new_AudioGraph(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioGraph);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioGraph>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioGraph>::type_name);
         return nullptr;
     }
 
@@ -4781,11 +4781,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioGraphBatchUpdater class --------------------
-    static constexpr const char* const type_name_AudioGraphBatchUpdater = "AudioGraphBatchUpdater";
 
     static PyObject* _new_AudioGraphBatchUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioGraphBatchUpdater);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioGraphBatchUpdater>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioGraphBatchUpdater>::type_name);
         return nullptr;
     }
 
@@ -4909,11 +4909,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioGraphConnection class --------------------
-    static constexpr const char* const type_name_AudioGraphConnection = "AudioGraphConnection";
 
     static PyObject* _new_AudioGraphConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioGraphConnection);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioGraphConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioGraphConnection>::type_name);
         return nullptr;
     }
 
@@ -5052,7 +5052,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioGraphSettings class --------------------
-    static constexpr const char* const type_name_AudioGraphSettings = "AudioGraphSettings";
 
     static PyObject* _new_AudioGraphSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5488,11 +5487,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioGraphUnrecoverableErrorOccurredEventArgs class --------------------
-    static constexpr const char* const type_name_AudioGraphUnrecoverableErrorOccurredEventArgs = "AudioGraphUnrecoverableErrorOccurredEventArgs";
 
     static PyObject* _new_AudioGraphUnrecoverableErrorOccurredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioGraphUnrecoverableErrorOccurredEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5583,7 +5582,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioNodeEmitter class --------------------
-    static constexpr const char* const type_name_AudioNodeEmitter = "AudioNodeEmitter";
 
     static PyObject* _new_AudioNodeEmitter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6094,11 +6092,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioNodeEmitterConeProperties class --------------------
-    static constexpr const char* const type_name_AudioNodeEmitterConeProperties = "AudioNodeEmitterConeProperties";
 
     static PyObject* _new_AudioNodeEmitterConeProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioNodeEmitterConeProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterConeProperties>::type_name);
         return nullptr;
     }
 
@@ -6229,11 +6227,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioNodeEmitterDecayModel class --------------------
-    static constexpr const char* const type_name_AudioNodeEmitterDecayModel = "AudioNodeEmitterDecayModel";
 
     static PyObject* _new_AudioNodeEmitterDecayModel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioNodeEmitterDecayModel);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterDecayModel>::type_name);
         return nullptr;
     }
 
@@ -6452,11 +6450,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioNodeEmitterNaturalDecayModelProperties class --------------------
-    static constexpr const char* const type_name_AudioNodeEmitterNaturalDecayModelProperties = "AudioNodeEmitterNaturalDecayModelProperties";
 
     static PyObject* _new_AudioNodeEmitterNaturalDecayModelProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioNodeEmitterNaturalDecayModelProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties>::type_name);
         return nullptr;
     }
 
@@ -6567,11 +6565,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioNodeEmitterShape class --------------------
-    static constexpr const char* const type_name_AudioNodeEmitterShape = "AudioNodeEmitterShape";
 
     static PyObject* _new_AudioNodeEmitterShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioNodeEmitterShape);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterShape>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioNodeEmitterShape>::type_name);
         return nullptr;
     }
 
@@ -6746,7 +6744,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioNodeListener class --------------------
-    static constexpr const char* const type_name_AudioNodeListener = "AudioNodeListener";
 
     static PyObject* _new_AudioNodeListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7036,11 +7033,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioPlaybackConnection class --------------------
-    static constexpr const char* const type_name_AudioPlaybackConnection = "AudioPlaybackConnection";
 
     static PyObject* _new_AudioPlaybackConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioPlaybackConnection);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioPlaybackConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioPlaybackConnection>::type_name);
         return nullptr;
     }
 
@@ -7432,11 +7429,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioPlaybackConnectionOpenResult class --------------------
-    static constexpr const char* const type_name_AudioPlaybackConnectionOpenResult = "AudioPlaybackConnectionOpenResult";
 
     static PyObject* _new_AudioPlaybackConnectionOpenResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioPlaybackConnectionOpenResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioPlaybackConnectionOpenResult>::type_name);
         return nullptr;
     }
 
@@ -7547,11 +7544,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioStateMonitor class --------------------
-    static constexpr const char* const type_name_AudioStateMonitor = "AudioStateMonitor";
 
     static PyObject* _new_AudioStateMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioStateMonitor);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioStateMonitor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioStateMonitor>::type_name);
         return nullptr;
     }
 
@@ -7895,11 +7892,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- AudioSubmixNode class --------------------
-    static constexpr const char* const type_name_AudioSubmixNode = "AudioSubmixNode";
 
     static PyObject* _new_AudioSubmixNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioSubmixNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioSubmixNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioSubmixNode>::type_name);
         return nullptr;
     }
 
@@ -8446,11 +8443,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- CreateAudioDeviceInputNodeResult class --------------------
-    static constexpr const char* const type_name_CreateAudioDeviceInputNodeResult = "CreateAudioDeviceInputNodeResult";
 
     static PyObject* _new_CreateAudioDeviceInputNodeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateAudioDeviceInputNodeResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::CreateAudioDeviceInputNodeResult>::type_name);
         return nullptr;
     }
 
@@ -8581,11 +8578,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- CreateAudioDeviceOutputNodeResult class --------------------
-    static constexpr const char* const type_name_CreateAudioDeviceOutputNodeResult = "CreateAudioDeviceOutputNodeResult";
 
     static PyObject* _new_CreateAudioDeviceOutputNodeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateAudioDeviceOutputNodeResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult>::type_name);
         return nullptr;
     }
 
@@ -8716,11 +8713,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- CreateAudioFileInputNodeResult class --------------------
-    static constexpr const char* const type_name_CreateAudioFileInputNodeResult = "CreateAudioFileInputNodeResult";
 
     static PyObject* _new_CreateAudioFileInputNodeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateAudioFileInputNodeResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::CreateAudioFileInputNodeResult>::type_name);
         return nullptr;
     }
 
@@ -8851,11 +8848,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- CreateAudioFileOutputNodeResult class --------------------
-    static constexpr const char* const type_name_CreateAudioFileOutputNodeResult = "CreateAudioFileOutputNodeResult";
 
     static PyObject* _new_CreateAudioFileOutputNodeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateAudioFileOutputNodeResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::CreateAudioFileOutputNodeResult>::type_name);
         return nullptr;
     }
 
@@ -8986,11 +8983,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- CreateAudioGraphResult class --------------------
-    static constexpr const char* const type_name_CreateAudioGraphResult = "CreateAudioGraphResult";
 
     static PyObject* _new_CreateAudioGraphResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateAudioGraphResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::CreateAudioGraphResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::CreateAudioGraphResult>::type_name);
         return nullptr;
     }
 
@@ -9121,11 +9118,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- CreateMediaSourceAudioInputNodeResult class --------------------
-    static constexpr const char* const type_name_CreateMediaSourceAudioInputNodeResult = "CreateMediaSourceAudioInputNodeResult";
 
     static PyObject* _new_CreateMediaSourceAudioInputNodeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateMediaSourceAudioInputNodeResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult>::type_name);
         return nullptr;
     }
 
@@ -9256,7 +9253,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- EchoEffectDefinition class --------------------
-    static constexpr const char* const type_name_EchoEffectDefinition = "EchoEffectDefinition";
 
     static PyObject* _new_EchoEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9540,11 +9536,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- EqualizerBand class --------------------
-    static constexpr const char* const type_name_EqualizerBand = "EqualizerBand";
 
     static PyObject* _new_EqualizerBand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EqualizerBand);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::EqualizerBand>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::EqualizerBand>::type_name);
         return nullptr;
     }
 
@@ -9759,7 +9755,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- EqualizerEffectDefinition class --------------------
-    static constexpr const char* const type_name_EqualizerEffectDefinition = "EqualizerEffectDefinition";
 
     static PyObject* _new_EqualizerEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9919,11 +9914,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- FrameInputNodeQuantumStartedEventArgs class --------------------
-    static constexpr const char* const type_name_FrameInputNodeQuantumStartedEventArgs = "FrameInputNodeQuantumStartedEventArgs";
 
     static PyObject* _new_FrameInputNodeQuantumStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameInputNodeQuantumStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10014,7 +10009,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- LimiterEffectDefinition class --------------------
-    static constexpr const char* const type_name_LimiterEffectDefinition = "LimiterEffectDefinition";
 
     static PyObject* _new_LimiterEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10250,11 +10244,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- MediaSourceAudioInputNode class --------------------
-    static constexpr const char* const type_name_MediaSourceAudioInputNode = "MediaSourceAudioInputNode";
 
     static PyObject* _new_MediaSourceAudioInputNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaSourceAudioInputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::MediaSourceAudioInputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::MediaSourceAudioInputNode>::type_name);
         return nullptr;
     }
 
@@ -11131,7 +11125,6 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- ReverbEffectDefinition class --------------------
-    static constexpr const char* const type_name_ReverbEffectDefinition = "ReverbEffectDefinition";
 
     static PyObject* _new_ReverbEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12375,11 +12368,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- SetDefaultSpatialAudioFormatResult class --------------------
-    static constexpr const char* const type_name_SetDefaultSpatialAudioFormatResult = "SetDefaultSpatialAudioFormatResult";
 
     static PyObject* _new_SetDefaultSpatialAudioFormatResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SetDefaultSpatialAudioFormatResult);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult>::type_name);
         return nullptr;
     }
 
@@ -12470,11 +12463,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- SpatialAudioDeviceConfiguration class --------------------
-    static constexpr const char* const type_name_SpatialAudioDeviceConfiguration = "SpatialAudioDeviceConfiguration";
 
     static PyObject* _new_SpatialAudioDeviceConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAudioDeviceConfiguration);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::SpatialAudioDeviceConfiguration>::type_name);
         return nullptr;
     }
 
@@ -12766,11 +12759,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- SpatialAudioFormatConfiguration class --------------------
-    static constexpr const char* const type_name_SpatialAudioFormatConfiguration = "SpatialAudioFormatConfiguration";
 
     static PyObject* _new_SpatialAudioFormatConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAudioFormatConfiguration);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::SpatialAudioFormatConfiguration>::type_name);
         return nullptr;
     }
 
@@ -12983,11 +12976,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- SpatialAudioFormatSubtype class --------------------
-    static constexpr const char* const type_name_SpatialAudioFormatSubtype = "SpatialAudioFormatSubtype";
 
     static PyObject* _new_SpatialAudioFormatSubtype(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAudioFormatSubtype);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::SpatialAudioFormatSubtype>::type_name);
         return nullptr;
     }
 
@@ -13177,11 +13170,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- IAudioInputNode interface --------------------
-    static constexpr const char* const type_name_IAudioInputNode = "IAudioInputNode";
 
     static PyObject* _new_IAudioInputNode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAudioInputNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode>::type_name);
         return nullptr;
     }
 
@@ -13708,11 +13701,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- IAudioInputNode2 interface --------------------
-    static constexpr const char* const type_name_IAudioInputNode2 = "IAudioInputNode2";
 
     static PyObject* _new_IAudioInputNode2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAudioInputNode2);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioInputNode2>::type_name);
         return nullptr;
     }
 
@@ -14259,11 +14252,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- IAudioNode interface --------------------
-    static constexpr const char* const type_name_IAudioNode = "IAudioNode";
 
     static PyObject* _new_IAudioNode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAudioNode);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioNode>::type_name);
         return nullptr;
     }
 
@@ -14682,11 +14675,11 @@ namespace py::cpp::Windows::Media::Audio
     };
 
     // ----- IAudioNodeWithListener interface --------------------
-    static constexpr const char* const type_name_IAudioNodeWithListener = "IAudioNodeWithListener";
 
     static PyObject* _new_IAudioNodeWithListener(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAudioNodeWithListener);
+        static_assert(py::py_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::IAudioNodeWithListener>::type_name);
         return nullptr;
     }
 

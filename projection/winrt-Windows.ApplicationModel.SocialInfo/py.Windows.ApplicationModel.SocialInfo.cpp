@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::SocialInfo
 {
     // ----- SocialFeedChildItem class --------------------
-    static constexpr const char* const type_name_SocialFeedChildItem = "SocialFeedChildItem";
 
     static PyObject* _new_SocialFeedChildItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -329,11 +328,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     };
 
     // ----- SocialFeedContent class --------------------
-    static constexpr const char* const type_name_SocialFeedContent = "SocialFeedContent";
 
     static PyObject* _new_SocialFeedContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SocialFeedContent);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>::type_name);
         return nullptr;
     }
 
@@ -548,7 +547,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     };
 
     // ----- SocialFeedItem class --------------------
-    static constexpr const char* const type_name_SocialFeedItem = "SocialFeedItem";
 
     static PyObject* _new_SocialFeedItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1110,7 +1108,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     };
 
     // ----- SocialFeedSharedItem class --------------------
-    static constexpr const char* const type_name_SocialFeedSharedItem = "SocialFeedSharedItem";
 
     static PyObject* _new_SocialFeedSharedItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1420,7 +1417,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     };
 
     // ----- SocialItemThumbnail class --------------------
-    static constexpr const char* const type_name_SocialItemThumbnail = "SocialItemThumbnail";
 
     static PyObject* _new_SocialItemThumbnail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1694,11 +1690,11 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     };
 
     // ----- SocialUserInfo class --------------------
-    static constexpr const char* const type_name_SocialUserInfo = "SocialUserInfo";
 
     static PyObject* _new_SocialUserInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SocialUserInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>::type_name);
         return nullptr;
     }
 

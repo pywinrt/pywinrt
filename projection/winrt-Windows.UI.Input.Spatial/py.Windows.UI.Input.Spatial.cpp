@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Input::Spatial
 {
     // ----- SpatialGestureRecognizer class --------------------
-    static constexpr const char* const type_name_SpatialGestureRecognizer = "SpatialGestureRecognizer";
 
     static PyObject* _new_SpatialGestureRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -853,11 +852,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialHoldCanceledEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialHoldCanceledEventArgs = "SpatialHoldCanceledEventArgs";
 
     static PyObject* _new_SpatialHoldCanceledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialHoldCanceledEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs>::type_name);
         return nullptr;
     }
 
@@ -948,11 +947,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialHoldCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialHoldCompletedEventArgs = "SpatialHoldCompletedEventArgs";
 
     static PyObject* _new_SpatialHoldCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialHoldCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1043,11 +1042,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialHoldStartedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialHoldStartedEventArgs = "SpatialHoldStartedEventArgs";
 
     static PyObject* _new_SpatialHoldStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialHoldStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1170,11 +1169,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteraction class --------------------
-    static constexpr const char* const type_name_SpatialInteraction = "SpatialInteraction";
 
     static PyObject* _new_SpatialInteraction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteraction);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteraction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteraction>::type_name);
         return nullptr;
     }
 
@@ -1265,11 +1264,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionController class --------------------
-    static constexpr const char* const type_name_SpatialInteractionController = "SpatialInteractionController";
 
     static PyObject* _new_SpatialInteractionController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionController);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionController>::type_name);
         return nullptr;
     }
 
@@ -1520,11 +1519,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionControllerProperties class --------------------
-    static constexpr const char* const type_name_SpatialInteractionControllerProperties = "SpatialInteractionControllerProperties";
 
     static PyObject* _new_SpatialInteractionControllerProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionControllerProperties);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties>::type_name);
         return nullptr;
     }
 
@@ -1735,11 +1734,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionDetectedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialInteractionDetectedEventArgs = "SpatialInteractionDetectedEventArgs";
 
     static PyObject* _new_SpatialInteractionDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionDetectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1902,11 +1901,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionManager class --------------------
-    static constexpr const char* const type_name_SpatialInteractionManager = "SpatialInteractionManager";
 
     static PyObject* _new_SpatialInteractionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionManager);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionManager>::type_name);
         return nullptr;
     }
 
@@ -2341,11 +2340,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionSource class --------------------
-    static constexpr const char* const type_name_SpatialInteractionSource = "SpatialInteractionSource";
 
     static PyObject* _new_SpatialInteractionSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionSource);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSource>::type_name);
         return nullptr;
     }
 
@@ -2648,11 +2647,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionSourceEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialInteractionSourceEventArgs = "SpatialInteractionSourceEventArgs";
 
     static PyObject* _new_SpatialInteractionSourceEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionSourceEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2763,11 +2762,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionSourceLocation class --------------------
-    static constexpr const char* const type_name_SpatialInteractionSourceLocation = "SpatialInteractionSourceLocation";
 
     static PyObject* _new_SpatialInteractionSourceLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionSourceLocation);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation>::type_name);
         return nullptr;
     }
 
@@ -2958,11 +2957,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionSourceProperties class --------------------
-    static constexpr const char* const type_name_SpatialInteractionSourceProperties = "SpatialInteractionSourceProperties";
 
     static PyObject* _new_SpatialInteractionSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionSourceProperties);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties>::type_name);
         return nullptr;
     }
 
@@ -3117,11 +3116,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialInteractionSourceState class --------------------
-    static constexpr const char* const type_name_SpatialInteractionSourceState = "SpatialInteractionSourceState";
 
     static PyObject* _new_SpatialInteractionSourceState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialInteractionSourceState);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialInteractionSourceState>::type_name);
         return nullptr;
     }
 
@@ -3434,11 +3433,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialManipulationCanceledEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialManipulationCanceledEventArgs = "SpatialManipulationCanceledEventArgs";
 
     static PyObject* _new_SpatialManipulationCanceledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialManipulationCanceledEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3529,11 +3528,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialManipulationCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialManipulationCompletedEventArgs = "SpatialManipulationCompletedEventArgs";
 
     static PyObject* _new_SpatialManipulationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialManipulationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3656,11 +3655,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialManipulationDelta class --------------------
-    static constexpr const char* const type_name_SpatialManipulationDelta = "SpatialManipulationDelta";
 
     static PyObject* _new_SpatialManipulationDelta(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialManipulationDelta);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationDelta>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationDelta>::type_name);
         return nullptr;
     }
 
@@ -3751,11 +3750,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialManipulationStartedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialManipulationStartedEventArgs = "SpatialManipulationStartedEventArgs";
 
     static PyObject* _new_SpatialManipulationStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialManipulationStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3878,11 +3877,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialManipulationUpdatedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialManipulationUpdatedEventArgs = "SpatialManipulationUpdatedEventArgs";
 
     static PyObject* _new_SpatialManipulationUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialManipulationUpdatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4005,11 +4004,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialNavigationCanceledEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialNavigationCanceledEventArgs = "SpatialNavigationCanceledEventArgs";
 
     static PyObject* _new_SpatialNavigationCanceledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialNavigationCanceledEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4100,11 +4099,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialNavigationCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialNavigationCompletedEventArgs = "SpatialNavigationCompletedEventArgs";
 
     static PyObject* _new_SpatialNavigationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialNavigationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4215,11 +4214,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialNavigationStartedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialNavigationStartedEventArgs = "SpatialNavigationStartedEventArgs";
 
     static PyObject* _new_SpatialNavigationStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialNavigationStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4402,11 +4401,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialNavigationUpdatedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialNavigationUpdatedEventArgs = "SpatialNavigationUpdatedEventArgs";
 
     static PyObject* _new_SpatialNavigationUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialNavigationUpdatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4517,11 +4516,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialPointerInteractionSourcePose class --------------------
-    static constexpr const char* const type_name_SpatialPointerInteractionSourcePose = "SpatialPointerInteractionSourcePose";
 
     static PyObject* _new_SpatialPointerInteractionSourcePose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialPointerInteractionSourcePose);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose>::type_name);
         return nullptr;
     }
 
@@ -4692,11 +4691,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialPointerPose class --------------------
-    static constexpr const char* const type_name_SpatialPointerPose = "SpatialPointerPose";
 
     static PyObject* _new_SpatialPointerPose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialPointerPose);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialPointerPose>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialPointerPose>::type_name);
         return nullptr;
     }
 
@@ -4912,11 +4911,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialRecognitionEndedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialRecognitionEndedEventArgs = "SpatialRecognitionEndedEventArgs";
 
     static PyObject* _new_SpatialRecognitionEndedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialRecognitionEndedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5007,11 +5006,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialRecognitionStartedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialRecognitionStartedEventArgs = "SpatialRecognitionStartedEventArgs";
 
     static PyObject* _new_SpatialRecognitionStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialRecognitionStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5166,11 +5165,11 @@ namespace py::cpp::Windows::UI::Input::Spatial
     };
 
     // ----- SpatialTappedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialTappedEventArgs = "SpatialTappedEventArgs";
 
     static PyObject* _new_SpatialTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialTappedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Spatial::SpatialTappedEventArgs>::type_name);
         return nullptr;
     }
 

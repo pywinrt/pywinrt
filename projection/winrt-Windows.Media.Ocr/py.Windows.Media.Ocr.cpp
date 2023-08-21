@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Ocr
 {
     // ----- OcrEngine class --------------------
-    static constexpr const char* const type_name_OcrEngine = "OcrEngine";
 
     static PyObject* _new_OcrEngine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OcrEngine);
+        static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrEngine>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrEngine>::type_name);
         return nullptr;
     }
 
@@ -288,11 +288,11 @@ namespace py::cpp::Windows::Media::Ocr
     };
 
     // ----- OcrLine class --------------------
-    static constexpr const char* const type_name_OcrLine = "OcrLine";
 
     static PyObject* _new_OcrLine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OcrLine);
+        static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrLine>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrLine>::type_name);
         return nullptr;
     }
 
@@ -403,11 +403,11 @@ namespace py::cpp::Windows::Media::Ocr
     };
 
     // ----- OcrResult class --------------------
-    static constexpr const char* const type_name_OcrResult = "OcrResult";
 
     static PyObject* _new_OcrResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OcrResult);
+        static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrResult>::type_name);
         return nullptr;
     }
 
@@ -538,11 +538,11 @@ namespace py::cpp::Windows::Media::Ocr
     };
 
     // ----- OcrWord class --------------------
-    static constexpr const char* const type_name_OcrWord = "OcrWord";
 
     static PyObject* _new_OcrWord(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OcrWord);
+        static_assert(py::py_type<winrt::Windows::Media::Ocr::OcrWord>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Ocr::OcrWord>::type_name);
         return nullptr;
     }
 

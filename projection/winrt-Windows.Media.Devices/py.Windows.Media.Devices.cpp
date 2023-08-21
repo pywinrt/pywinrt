@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Devices
 {
     // ----- AdvancedPhotoCaptureSettings class --------------------
-    static constexpr const char* const type_name_AdvancedPhotoCaptureSettings = "AdvancedPhotoCaptureSettings";
 
     static PyObject* _new_AdvancedPhotoCaptureSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -153,11 +152,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- AdvancedPhotoControl class --------------------
-    static constexpr const char* const type_name_AdvancedPhotoControl = "AdvancedPhotoControl";
 
     static PyObject* _new_AdvancedPhotoControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdvancedPhotoControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::AdvancedPhotoControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::AdvancedPhotoControl>::type_name);
         return nullptr;
     }
 
@@ -321,11 +320,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- AudioDeviceController class --------------------
-    static constexpr const char* const type_name_AudioDeviceController = "AudioDeviceController";
 
     static PyObject* _new_AudioDeviceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioDeviceController);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::AudioDeviceController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::AudioDeviceController>::type_name);
         return nullptr;
     }
 
@@ -589,11 +588,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- AudioDeviceModule class --------------------
-    static constexpr const char* const type_name_AudioDeviceModule = "AudioDeviceModule";
 
     static PyObject* _new_AudioDeviceModule(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioDeviceModule);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::AudioDeviceModule>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::AudioDeviceModule>::type_name);
         return nullptr;
     }
 
@@ -796,11 +795,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- AudioDeviceModuleNotificationEventArgs class --------------------
-    static constexpr const char* const type_name_AudioDeviceModuleNotificationEventArgs = "AudioDeviceModuleNotificationEventArgs";
 
     static PyObject* _new_AudioDeviceModuleNotificationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioDeviceModuleNotificationEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>::type_name);
         return nullptr;
     }
 
@@ -911,7 +910,6 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- AudioDeviceModulesManager class --------------------
-    static constexpr const char* const type_name_AudioDeviceModulesManager = "AudioDeviceModulesManager";
 
     static PyObject* _new_AudioDeviceModulesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1118,11 +1116,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- CallControl class --------------------
-    static constexpr const char* const type_name_CallControl = "CallControl";
 
     static PyObject* _new_CallControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CallControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::CallControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::CallControl>::type_name);
         return nullptr;
     }
 
@@ -1674,11 +1672,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- CameraOcclusionInfo class --------------------
-    static constexpr const char* const type_name_CameraOcclusionInfo = "CameraOcclusionInfo";
 
     static PyObject* _new_CameraOcclusionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraOcclusionInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::CameraOcclusionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::CameraOcclusionInfo>::type_name);
         return nullptr;
     }
 
@@ -1856,11 +1854,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- CameraOcclusionState class --------------------
-    static constexpr const char* const type_name_CameraOcclusionState = "CameraOcclusionState";
 
     static PyObject* _new_CameraOcclusionState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraOcclusionState);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::CameraOcclusionState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::CameraOcclusionState>::type_name);
         return nullptr;
     }
 
@@ -1983,11 +1981,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- CameraOcclusionStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_CameraOcclusionStateChangedEventArgs = "CameraOcclusionStateChangedEventArgs";
 
     static PyObject* _new_CameraOcclusionStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraOcclusionStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2078,11 +2076,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- DefaultAudioCaptureDeviceChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DefaultAudioCaptureDeviceChangedEventArgs = "DefaultAudioCaptureDeviceChangedEventArgs";
 
     static PyObject* _new_DefaultAudioCaptureDeviceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DefaultAudioCaptureDeviceChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2193,11 +2191,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- DefaultAudioRenderDeviceChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DefaultAudioRenderDeviceChangedEventArgs = "DefaultAudioRenderDeviceChangedEventArgs";
 
     static PyObject* _new_DefaultAudioRenderDeviceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DefaultAudioRenderDeviceChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2308,11 +2306,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- DialRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_DialRequestedEventArgs = "DialRequestedEventArgs";
 
     static PyObject* _new_DialRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::DialRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::DialRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2434,7 +2432,6 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- DigitalWindowBounds class --------------------
-    static constexpr const char* const type_name_DigitalWindowBounds = "DigitalWindowBounds";
 
     static PyObject* _new_DigitalWindowBounds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2676,11 +2673,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- DigitalWindowCapability class --------------------
-    static constexpr const char* const type_name_DigitalWindowCapability = "DigitalWindowCapability";
 
     static PyObject* _new_DigitalWindowCapability(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DigitalWindowCapability);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::DigitalWindowCapability>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::DigitalWindowCapability>::type_name);
         return nullptr;
     }
 
@@ -2871,11 +2868,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- DigitalWindowControl class --------------------
-    static constexpr const char* const type_name_DigitalWindowControl = "DigitalWindowControl";
 
     static PyObject* _new_DigitalWindowControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DigitalWindowControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::DigitalWindowControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::DigitalWindowControl>::type_name);
         return nullptr;
     }
 
@@ -3144,11 +3141,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- ExposureCompensationControl class --------------------
-    static constexpr const char* const type_name_ExposureCompensationControl = "ExposureCompensationControl";
 
     static PyObject* _new_ExposureCompensationControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExposureCompensationControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::ExposureCompensationControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::ExposureCompensationControl>::type_name);
         return nullptr;
     }
 
@@ -3351,11 +3348,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- ExposureControl class --------------------
-    static constexpr const char* const type_name_ExposureControl = "ExposureControl";
 
     static PyObject* _new_ExposureControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExposureControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::ExposureControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::ExposureControl>::type_name);
         return nullptr;
     }
 
@@ -3610,11 +3607,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- ExposurePriorityVideoControl class --------------------
-    static constexpr const char* const type_name_ExposurePriorityVideoControl = "ExposurePriorityVideoControl";
 
     static PyObject* _new_ExposurePriorityVideoControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExposurePriorityVideoControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>::type_name);
         return nullptr;
     }
 
@@ -3753,11 +3750,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- FlashControl class --------------------
-    static constexpr const char* const type_name_FlashControl = "FlashControl";
 
     static PyObject* _new_FlashControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FlashControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::FlashControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::FlashControl>::type_name);
         return nullptr;
     }
 
@@ -4148,11 +4145,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- FocusControl class --------------------
-    static constexpr const char* const type_name_FocusControl = "FocusControl";
 
     static PyObject* _new_FocusControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::FocusControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::FocusControl>::type_name);
         return nullptr;
     }
 
@@ -4711,7 +4708,6 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- FocusSettings class --------------------
-    static constexpr const char* const type_name_FocusSettings = "FocusSettings";
 
     static PyObject* _new_FocusSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5097,11 +5093,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- HdrVideoControl class --------------------
-    static constexpr const char* const type_name_HdrVideoControl = "HdrVideoControl";
 
     static PyObject* _new_HdrVideoControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HdrVideoControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::HdrVideoControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::HdrVideoControl>::type_name);
         return nullptr;
     }
 
@@ -5260,11 +5256,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- InfraredTorchControl class --------------------
-    static constexpr const char* const type_name_InfraredTorchControl = "InfraredTorchControl";
 
     static PyObject* _new_InfraredTorchControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InfraredTorchControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::InfraredTorchControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::InfraredTorchControl>::type_name);
         return nullptr;
     }
 
@@ -5531,11 +5527,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- IsoSpeedControl class --------------------
-    static constexpr const char* const type_name_IsoSpeedControl = "IsoSpeedControl";
 
     static PyObject* _new_IsoSpeedControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsoSpeedControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::IsoSpeedControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::IsoSpeedControl>::type_name);
         return nullptr;
     }
 
@@ -5860,11 +5856,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- KeypadPressedEventArgs class --------------------
-    static constexpr const char* const type_name_KeypadPressedEventArgs = "KeypadPressedEventArgs";
 
     static PyObject* _new_KeypadPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KeypadPressedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::KeypadPressedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::KeypadPressedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5955,11 +5951,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- LowLagPhotoControl class --------------------
-    static constexpr const char* const type_name_LowLagPhotoControl = "LowLagPhotoControl";
 
     static PyObject* _new_LowLagPhotoControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLagPhotoControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::LowLagPhotoControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::LowLagPhotoControl>::type_name);
         return nullptr;
     }
 
@@ -6256,11 +6252,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- LowLagPhotoSequenceControl class --------------------
-    static constexpr const char* const type_name_LowLagPhotoSequenceControl = "LowLagPhotoSequenceControl";
 
     static PyObject* _new_LowLagPhotoSequenceControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLagPhotoSequenceControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>::type_name);
         return nullptr;
     }
 
@@ -6713,11 +6709,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- MediaDevice class --------------------
-    static constexpr const char* const type_name_MediaDevice = "MediaDevice";
 
     static PyObject* _new_MediaDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaDevice);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::MediaDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::MediaDevice>::type_name);
         return nullptr;
     }
 
@@ -6991,11 +6987,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- MediaDeviceControl class --------------------
-    static constexpr const char* const type_name_MediaDeviceControl = "MediaDeviceControl";
 
     static PyObject* _new_MediaDeviceControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaDeviceControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::MediaDeviceControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::MediaDeviceControl>::type_name);
         return nullptr;
     }
 
@@ -7238,11 +7234,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- MediaDeviceControlCapabilities class --------------------
-    static constexpr const char* const type_name_MediaDeviceControlCapabilities = "MediaDeviceControlCapabilities";
 
     static PyObject* _new_MediaDeviceControlCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaDeviceControlCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>::type_name);
         return nullptr;
     }
 
@@ -7433,11 +7429,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- ModuleCommandResult class --------------------
-    static constexpr const char* const type_name_ModuleCommandResult = "ModuleCommandResult";
 
     static PyObject* _new_ModuleCommandResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ModuleCommandResult);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::ModuleCommandResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::ModuleCommandResult>::type_name);
         return nullptr;
     }
 
@@ -7548,11 +7544,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- OpticalImageStabilizationControl class --------------------
-    static constexpr const char* const type_name_OpticalImageStabilizationControl = "OpticalImageStabilizationControl";
 
     static PyObject* _new_OpticalImageStabilizationControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OpticalImageStabilizationControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>::type_name);
         return nullptr;
     }
 
@@ -7711,11 +7707,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- PanelBasedOptimizationControl class --------------------
-    static constexpr const char* const type_name_PanelBasedOptimizationControl = "PanelBasedOptimizationControl";
 
     static PyObject* _new_PanelBasedOptimizationControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PanelBasedOptimizationControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>::type_name);
         return nullptr;
     }
 
@@ -7854,11 +7850,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- PhotoConfirmationControl class --------------------
-    static constexpr const char* const type_name_PhotoConfirmationControl = "PhotoConfirmationControl";
 
     static PyObject* _new_PhotoConfirmationControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoConfirmationControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::PhotoConfirmationControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::PhotoConfirmationControl>::type_name);
         return nullptr;
     }
 
@@ -8045,11 +8041,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- RedialRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_RedialRequestedEventArgs = "RedialRequestedEventArgs";
 
     static PyObject* _new_RedialRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RedialRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::RedialRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::RedialRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8151,7 +8147,6 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- RegionOfInterest class --------------------
-    static constexpr const char* const type_name_RegionOfInterest = "RegionOfInterest";
 
     static PyObject* _new_RegionOfInterest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8585,11 +8580,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- RegionsOfInterestControl class --------------------
-    static constexpr const char* const type_name_RegionsOfInterestControl = "RegionsOfInterestControl";
 
     static PyObject* _new_RegionsOfInterestControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RegionsOfInterestControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::RegionsOfInterestControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::RegionsOfInterestControl>::type_name);
         return nullptr;
     }
 
@@ -8823,11 +8818,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- SceneModeControl class --------------------
-    static constexpr const char* const type_name_SceneModeControl = "SceneModeControl";
 
     static PyObject* _new_SceneModeControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneModeControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::SceneModeControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::SceneModeControl>::type_name);
         return nullptr;
     }
 
@@ -8970,11 +8965,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- TorchControl class --------------------
-    static constexpr const char* const type_name_TorchControl = "TorchControl";
 
     static PyObject* _new_TorchControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TorchControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::TorchControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::TorchControl>::type_name);
         return nullptr;
     }
 
@@ -9181,11 +9176,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- VideoDeviceController class --------------------
-    static constexpr const char* const type_name_VideoDeviceController = "VideoDeviceController";
 
     static PyObject* _new_VideoDeviceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoDeviceController);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::VideoDeviceController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::VideoDeviceController>::type_name);
         return nullptr;
     }
 
@@ -10456,11 +10451,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- VideoDeviceControllerGetDevicePropertyResult class --------------------
-    static constexpr const char* const type_name_VideoDeviceControllerGetDevicePropertyResult = "VideoDeviceControllerGetDevicePropertyResult";
 
     static PyObject* _new_VideoDeviceControllerGetDevicePropertyResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoDeviceControllerGetDevicePropertyResult);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>::type_name);
         return nullptr;
     }
 
@@ -10571,11 +10566,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- VideoTemporalDenoisingControl class --------------------
-    static constexpr const char* const type_name_VideoTemporalDenoisingControl = "VideoTemporalDenoisingControl";
 
     static PyObject* _new_VideoTemporalDenoisingControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoTemporalDenoisingControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>::type_name);
         return nullptr;
     }
 
@@ -10734,11 +10729,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- WhiteBalanceControl class --------------------
-    static constexpr const char* const type_name_WhiteBalanceControl = "WhiteBalanceControl";
 
     static PyObject* _new_WhiteBalanceControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WhiteBalanceControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::WhiteBalanceControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::WhiteBalanceControl>::type_name);
         return nullptr;
     }
 
@@ -10993,11 +10988,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- ZoomControl class --------------------
-    static constexpr const char* const type_name_ZoomControl = "ZoomControl";
 
     static PyObject* _new_ZoomControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ZoomControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::ZoomControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::ZoomControl>::type_name);
         return nullptr;
     }
 
@@ -11269,7 +11264,6 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- ZoomSettings class --------------------
-    static constexpr const char* const type_name_ZoomSettings = "ZoomSettings";
 
     static PyObject* _new_ZoomSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11463,11 +11457,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- IDefaultAudioDeviceChangedEventArgs interface --------------------
-    static constexpr const char* const type_name_IDefaultAudioDeviceChangedEventArgs = "IDefaultAudioDeviceChangedEventArgs";
 
     static PyObject* _new_IDefaultAudioDeviceChangedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDefaultAudioDeviceChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11578,11 +11572,11 @@ namespace py::cpp::Windows::Media::Devices
     };
 
     // ----- IMediaDeviceController interface --------------------
-    static constexpr const char* const type_name_IMediaDeviceController = "IMediaDeviceController";
 
     static PyObject* _new_IMediaDeviceController(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaDeviceController);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::IMediaDeviceController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::IMediaDeviceController>::type_name);
         return nullptr;
     }
 

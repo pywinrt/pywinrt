@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Data::Xml::Dom
 {
     // ----- DtdEntity class --------------------
-    static constexpr const char* const type_name_DtdEntity = "DtdEntity";
 
     static PyObject* _new_DtdEntity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DtdEntity);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::DtdEntity>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::DtdEntity>::type_name);
         return nullptr;
     }
 
@@ -909,11 +909,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- DtdNotation class --------------------
-    static constexpr const char* const type_name_DtdNotation = "DtdNotation";
 
     static PyObject* _new_DtdNotation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DtdNotation);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::DtdNotation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::DtdNotation>::type_name);
         return nullptr;
     }
 
@@ -1791,11 +1791,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlAttribute class --------------------
-    static constexpr const char* const type_name_XmlAttribute = "XmlAttribute";
 
     static PyObject* _new_XmlAttribute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlAttribute);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlAttribute>::type_name);
         return nullptr;
     }
 
@@ -2721,11 +2721,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlCDataSection class --------------------
-    static constexpr const char* const type_name_XmlCDataSection = "XmlCDataSection";
 
     static PyObject* _new_XmlCDataSection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlCDataSection);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlCDataSection>::type_name);
         return nullptr;
     }
 
@@ -3832,11 +3832,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlComment class --------------------
-    static constexpr const char* const type_name_XmlComment = "XmlComment";
 
     static PyObject* _new_XmlComment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlComment);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlComment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlComment>::type_name);
         return nullptr;
     }
 
@@ -4911,7 +4911,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlDocument class --------------------
-    static constexpr const char* const type_name_XmlDocument = "XmlDocument";
 
     static PyObject* _new_XmlDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6522,11 +6521,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlDocumentFragment class --------------------
-    static constexpr const char* const type_name_XmlDocumentFragment = "XmlDocumentFragment";
 
     static PyObject* _new_XmlDocumentFragment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlDocumentFragment);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentFragment>::type_name);
         return nullptr;
     }
 
@@ -7364,11 +7363,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlDocumentType class --------------------
-    static constexpr const char* const type_name_XmlDocumentType = "XmlDocumentType";
 
     static PyObject* _new_XmlDocumentType(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlDocumentType);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDocumentType>::type_name);
         return nullptr;
     }
 
@@ -8266,11 +8265,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlDomImplementation class --------------------
-    static constexpr const char* const type_name_XmlDomImplementation = "XmlDomImplementation";
 
     static PyObject* _new_XmlDomImplementation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlDomImplementation);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlDomImplementation>::type_name);
         return nullptr;
     }
 
@@ -8374,11 +8373,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlElement class --------------------
-    static constexpr const char* const type_name_XmlElement = "XmlElement";
 
     static PyObject* _new_XmlElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlElement);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlElement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlElement>::type_name);
         return nullptr;
     }
 
@@ -9630,11 +9629,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlEntityReference class --------------------
-    static constexpr const char* const type_name_XmlEntityReference = "XmlEntityReference";
 
     static PyObject* _new_XmlEntityReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlEntityReference);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlEntityReference>::type_name);
         return nullptr;
     }
 
@@ -10472,7 +10471,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlLoadSettings class --------------------
-    static constexpr const char* const type_name_XmlLoadSettings = "XmlLoadSettings";
 
     static PyObject* _new_XmlLoadSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10810,11 +10808,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlNamedNodeMap class --------------------
-    static constexpr const char* const type_name_XmlNamedNodeMap = "XmlNamedNodeMap";
 
     static PyObject* _new_XmlNamedNodeMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlNamedNodeMap);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNamedNodeMap>::type_name);
         return nullptr;
     }
 
@@ -11404,11 +11402,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlNodeList class --------------------
-    static constexpr const char* const type_name_XmlNodeList = "XmlNodeList";
 
     static PyObject* _new_XmlNodeList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlNodeList);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlNodeList>::type_name);
         return nullptr;
     }
 
@@ -11804,11 +11802,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlProcessingInstruction class --------------------
-    static constexpr const char* const type_name_XmlProcessingInstruction = "XmlProcessingInstruction";
 
     static PyObject* _new_XmlProcessingInstruction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlProcessingInstruction);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlProcessingInstruction>::type_name);
         return nullptr;
     }
 
@@ -12714,11 +12712,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- XmlText class --------------------
-    static constexpr const char* const type_name_XmlText = "XmlText";
 
     static PyObject* _new_XmlText(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XmlText);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::XmlText>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::XmlText>::type_name);
         return nullptr;
     }
 
@@ -13825,11 +13823,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- IXmlCharacterData interface --------------------
-    static constexpr const char* const type_name_IXmlCharacterData = "IXmlCharacterData";
 
     static PyObject* _new_IXmlCharacterData(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXmlCharacterData);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlCharacterData>::type_name);
         return nullptr;
     }
 
@@ -14904,11 +14902,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- IXmlNode interface --------------------
-    static constexpr const char* const type_name_IXmlNode = "IXmlNode";
 
     static PyObject* _new_IXmlNode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXmlNode);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNode>::type_name);
         return nullptr;
     }
 
@@ -15746,11 +15744,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- IXmlNodeSelector interface --------------------
-    static constexpr const char* const type_name_IXmlNodeSelector = "IXmlNodeSelector";
 
     static PyObject* _new_IXmlNodeSelector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXmlNodeSelector);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSelector>::type_name);
         return nullptr;
     }
 
@@ -15951,11 +15949,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- IXmlNodeSerializer interface --------------------
-    static constexpr const char* const type_name_IXmlNodeSerializer = "IXmlNodeSerializer";
 
     static PyObject* _new_IXmlNodeSerializer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXmlNodeSerializer);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlNodeSerializer>::type_name);
         return nullptr;
     }
 
@@ -16104,11 +16102,11 @@ namespace py::cpp::Windows::Data::Xml::Dom
     };
 
     // ----- IXmlText interface --------------------
-    static constexpr const char* const type_name_IXmlText = "IXmlText";
 
     static PyObject* _new_IXmlText(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXmlText);
+        static_assert(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlText>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Xml::Dom::IXmlText>::type_name);
         return nullptr;
     }
 

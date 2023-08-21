@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Foundation::Numerics
 {
     // ----- Matrix3x2 struct --------------------
-    static constexpr const char* const type_name_Matrix3x2 = "Matrix3x2";
 
     PyObject* _new_Matrix3x2(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -282,7 +281,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Matrix4x4 struct --------------------
-    static constexpr const char* const type_name_Matrix4x4 = "Matrix4x4";
 
     PyObject* _new_Matrix4x4(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -907,7 +905,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Plane struct --------------------
-    static constexpr const char* const type_name_Plane = "Plane";
 
     PyObject* _new_Plane(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1042,7 +1039,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Quaternion struct --------------------
-    static constexpr const char* const type_name_Quaternion = "Quaternion";
 
     PyObject* _new_Quaternion(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1247,7 +1243,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Rational struct --------------------
-    static constexpr const char* const type_name_Rational = "Rational";
 
     PyObject* _new_Rational(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1382,7 +1377,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Vector2 struct --------------------
-    static constexpr const char* const type_name_Vector2 = "Vector2";
 
     PyObject* _new_Vector2(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1517,7 +1511,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Vector3 struct --------------------
-    static constexpr const char* const type_name_Vector3 = "Vector3";
 
     PyObject* _new_Vector3(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1687,7 +1680,6 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     // ----- Vector4 struct --------------------
-    static constexpr const char* const type_name_Vector4 = "Vector4";
 
     PyObject* _new_Vector4(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

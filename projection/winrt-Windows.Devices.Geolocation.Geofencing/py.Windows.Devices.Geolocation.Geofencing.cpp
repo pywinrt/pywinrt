@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Geolocation::Geofencing
 {
     // ----- Geofence class --------------------
-    static constexpr const char* const type_name_Geofence = "Geofence";
 
     static PyObject* _new_Geofence(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -306,11 +305,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     };
 
     // ----- GeofenceMonitor class --------------------
-    static constexpr const char* const type_name_GeofenceMonitor = "GeofenceMonitor";
 
     static PyObject* _new_GeofenceMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GeofenceMonitor);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>::type_name);
         return nullptr;
     }
 
@@ -601,11 +600,11 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     };
 
     // ----- GeofenceStateChangeReport class --------------------
-    static constexpr const char* const type_name_GeofenceStateChangeReport = "GeofenceStateChangeReport";
 
     static PyObject* _new_GeofenceStateChangeReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GeofenceStateChangeReport);
+        static_assert(py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>::type_name);
         return nullptr;
     }
 

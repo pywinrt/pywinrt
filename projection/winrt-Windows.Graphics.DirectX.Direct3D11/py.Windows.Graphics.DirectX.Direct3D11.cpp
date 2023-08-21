@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 {
     // ----- IDirect3DDevice interface --------------------
-    static constexpr const char* const type_name_IDirect3DDevice = "IDirect3DDevice";
 
     static PyObject* _new_IDirect3DDevice(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDirect3DDevice);
+        static_assert(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>::type_name);
         return nullptr;
     }
 
@@ -166,11 +166,11 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     };
 
     // ----- IDirect3DSurface interface --------------------
-    static constexpr const char* const type_name_IDirect3DSurface = "IDirect3DSurface";
 
     static PyObject* _new_IDirect3DSurface(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDirect3DSurface);
+        static_assert(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>::type_name);
         return nullptr;
     }
 
@@ -314,7 +314,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     };
 
     // ----- Direct3DMultisampleDescription struct --------------------
-    static constexpr const char* const type_name_Direct3DMultisampleDescription = "Direct3DMultisampleDescription";
 
     PyObject* _new_Direct3DMultisampleDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -449,7 +448,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     };
 
     // ----- Direct3DSurfaceDescription struct --------------------
-    static constexpr const char* const type_name_Direct3DSurfaceDescription = "Direct3DSurfaceDescription";
 
     PyObject* _new_Direct3DSurfaceDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

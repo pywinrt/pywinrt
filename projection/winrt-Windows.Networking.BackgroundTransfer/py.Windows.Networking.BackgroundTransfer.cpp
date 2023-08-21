@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Networking::BackgroundTransfer
 {
     // ----- BackgroundDownloader class --------------------
-    static constexpr const char* const type_name_BackgroundDownloader = "BackgroundDownloader";
 
     static PyObject* _new_BackgroundDownloader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -857,7 +856,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferCompletionGroup class --------------------
-    static constexpr const char* const type_name_BackgroundTransferCompletionGroup = "BackgroundTransferCompletionGroup";
 
     static PyObject* _new_BackgroundTransferCompletionGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1026,11 +1024,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferCompletionGroupTriggerDetails class --------------------
-    static constexpr const char* const type_name_BackgroundTransferCompletionGroupTriggerDetails = "BackgroundTransferCompletionGroupTriggerDetails";
 
     static PyObject* _new_BackgroundTransferCompletionGroupTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTransferCompletionGroupTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -1141,7 +1139,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferContentPart class --------------------
-    static constexpr const char* const type_name_BackgroundTransferContentPart = "BackgroundTransferContentPart";
 
     static PyObject* _new_BackgroundTransferContentPart(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1370,11 +1367,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferError class --------------------
-    static constexpr const char* const type_name_BackgroundTransferError = "BackgroundTransferError";
 
     static PyObject* _new_BackgroundTransferError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTransferError);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferError>::type_name);
         return nullptr;
     }
 
@@ -1436,11 +1433,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferGroup class --------------------
-    static constexpr const char* const type_name_BackgroundTransferGroup = "BackgroundTransferGroup";
 
     static PyObject* _new_BackgroundTransferGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTransferGroup);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup>::type_name);
         return nullptr;
     }
 
@@ -1611,11 +1608,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferRangesDownloadedEventArgs class --------------------
-    static constexpr const char* const type_name_BackgroundTransferRangesDownloadedEventArgs = "BackgroundTransferRangesDownloadedEventArgs";
 
     static PyObject* _new_BackgroundTransferRangesDownloadedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTransferRangesDownloadedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1756,7 +1753,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundUploader class --------------------
-    static constexpr const char* const type_name_BackgroundUploader = "BackgroundUploader";
 
     static PyObject* _new_BackgroundUploader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2661,11 +2657,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- ContentPrefetcher class --------------------
-    static constexpr const char* const type_name_ContentPrefetcher = "ContentPrefetcher";
 
     static PyObject* _new_ContentPrefetcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContentPrefetcher);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ContentPrefetcher>::type_name);
         return nullptr;
     }
 
@@ -2797,11 +2793,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- DownloadOperation class --------------------
-    static constexpr const char* const type_name_DownloadOperation = "DownloadOperation";
 
     static PyObject* _new_DownloadOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DownloadOperation);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::DownloadOperation>::type_name);
         return nullptr;
     }
 
@@ -3611,11 +3607,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- ResponseInformation class --------------------
-    static constexpr const char* const type_name_ResponseInformation = "ResponseInformation";
 
     static PyObject* _new_ResponseInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResponseInformation);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::ResponseInformation>::type_name);
         return nullptr;
     }
 
@@ -3766,11 +3762,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- UnconstrainedTransferRequestResult class --------------------
-    static constexpr const char* const type_name_UnconstrainedTransferRequestResult = "UnconstrainedTransferRequestResult";
 
     static PyObject* _new_UnconstrainedTransferRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UnconstrainedTransferRequestResult);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult>::type_name);
         return nullptr;
     }
 
@@ -3861,11 +3857,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- UploadOperation class --------------------
-    static constexpr const char* const type_name_UploadOperation = "UploadOperation";
 
     static PyObject* _new_UploadOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UploadOperation);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::UploadOperation>::type_name);
         return nullptr;
     }
 
@@ -4392,11 +4388,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- IBackgroundTransferBase interface --------------------
-    static constexpr const char* const type_name_IBackgroundTransferBase = "IBackgroundTransferBase";
 
     static PyObject* _new_IBackgroundTransferBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTransferBase);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase>::type_name);
         return nullptr;
     }
 
@@ -4741,11 +4737,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- IBackgroundTransferContentPartFactory interface --------------------
-    static constexpr const char* const type_name_IBackgroundTransferContentPartFactory = "IBackgroundTransferContentPartFactory";
 
     static PyObject* _new_IBackgroundTransferContentPartFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTransferContentPartFactory);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory>::type_name);
         return nullptr;
     }
 
@@ -4881,11 +4877,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- IBackgroundTransferOperation interface --------------------
-    static constexpr const char* const type_name_IBackgroundTransferOperation = "IBackgroundTransferOperation";
 
     static PyObject* _new_IBackgroundTransferOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTransferOperation);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation>::type_name);
         return nullptr;
     }
 
@@ -5146,11 +5142,11 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- IBackgroundTransferOperationPriority interface --------------------
-    static constexpr const char* const type_name_IBackgroundTransferOperationPriority = "IBackgroundTransferOperationPriority";
 
     static PyObject* _new_IBackgroundTransferOperationPriority(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTransferOperationPriority);
+        static_assert(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority>::type_name);
         return nullptr;
     }
 
@@ -5269,7 +5265,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundDownloadProgress struct --------------------
-    static constexpr const char* const type_name_BackgroundDownloadProgress = "BackgroundDownloadProgress";
 
     PyObject* _new_BackgroundDownloadProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -5509,7 +5504,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundTransferFileRange struct --------------------
-    static constexpr const char* const type_name_BackgroundTransferFileRange = "BackgroundTransferFileRange";
 
     PyObject* _new_BackgroundTransferFileRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -5644,7 +5638,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     };
 
     // ----- BackgroundUploadProgress struct --------------------
-    static constexpr const char* const type_name_BackgroundUploadProgress = "BackgroundUploadProgress";
 
     PyObject* _new_BackgroundUploadProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

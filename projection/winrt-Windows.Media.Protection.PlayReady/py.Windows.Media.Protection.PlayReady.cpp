@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Protection::PlayReady
 {
     // ----- NDClient class --------------------
-    static constexpr const char* const type_name_NDClient = "NDClient";
 
     static PyObject* _new_NDClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -464,7 +463,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- NDCustomData class --------------------
-    static constexpr const char* const type_name_NDCustomData = "NDCustomData";
 
     static PyObject* _new_NDCustomData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -605,7 +603,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- NDDownloadEngineNotifier class --------------------
-    static constexpr const char* const type_name_NDDownloadEngineNotifier = "NDDownloadEngineNotifier";
 
     static PyObject* _new_NDDownloadEngineNotifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -896,7 +893,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- NDLicenseFetchDescriptor class --------------------
-    static constexpr const char* const type_name_NDLicenseFetchDescriptor = "NDLicenseFetchDescriptor";
 
     static PyObject* _new_NDLicenseFetchDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1086,7 +1082,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- NDStorageFileHelper class --------------------
-    static constexpr const char* const type_name_NDStorageFileHelper = "NDStorageFileHelper";
 
     static PyObject* _new_NDStorageFileHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1216,7 +1211,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- NDStreamParserNotifier class --------------------
-    static constexpr const char* const type_name_NDStreamParserNotifier = "NDStreamParserNotifier";
 
     static PyObject* _new_NDStreamParserNotifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1454,7 +1448,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- NDTCPMessenger class --------------------
-    static constexpr const char* const type_name_NDTCPMessenger = "NDTCPMessenger";
 
     static PyObject* _new_NDTCPMessenger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1691,7 +1684,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyContentHeader class --------------------
-    static constexpr const char* const type_name_PlayReadyContentHeader = "PlayReadyContentHeader";
 
     static PyObject* _new_PlayReadyContentHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2103,11 +2095,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyContentResolver class --------------------
-    static constexpr const char* const type_name_PlayReadyContentResolver = "PlayReadyContentResolver";
 
     static PyObject* _new_PlayReadyContentResolver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyContentResolver);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyContentResolver>::type_name);
         return nullptr;
     }
 
@@ -2169,11 +2161,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyDomain class --------------------
-    static constexpr const char* const type_name_PlayReadyDomain = "PlayReadyDomain";
 
     static PyObject* _new_PlayReadyDomain(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyDomain);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomain>::type_name);
         return nullptr;
     }
 
@@ -2344,7 +2336,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyDomainIterable class --------------------
-    static constexpr const char* const type_name_PlayReadyDomainIterable = "PlayReadyDomainIterable";
 
     static PyObject* _new_PlayReadyDomainIterable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2488,11 +2479,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyDomainIterator class --------------------
-    static constexpr const char* const type_name_PlayReadyDomainIterator = "PlayReadyDomainIterator";
 
     static PyObject* _new_PlayReadyDomainIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyDomainIterator);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator>::type_name);
         return nullptr;
     }
 
@@ -2693,7 +2684,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyDomainJoinServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadyDomainJoinServiceRequest = "PlayReadyDomainJoinServiceRequest";
 
     static PyObject* _new_PlayReadyDomainJoinServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3213,7 +3203,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyDomainLeaveServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadyDomainLeaveServiceRequest = "PlayReadyDomainLeaveServiceRequest";
 
     static PyObject* _new_PlayReadyDomainLeaveServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3685,7 +3674,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyITADataGenerator class --------------------
-    static constexpr const char* const type_name_PlayReadyITADataGenerator = "PlayReadyITADataGenerator";
 
     static PyObject* _new_PlayReadyITADataGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3818,7 +3806,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyIndividualizationServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadyIndividualizationServiceRequest = "PlayReadyIndividualizationServiceRequest";
 
     static PyObject* _new_PlayReadyIndividualizationServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4194,11 +4181,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyLicense class --------------------
-    static constexpr const char* const type_name_PlayReadyLicense = "PlayReadyLicense";
 
     static PyObject* _new_PlayReadyLicense(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyLicense);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicense>::type_name);
         return nullptr;
     }
 
@@ -4501,7 +4488,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyLicenseAcquisitionServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadyLicenseAcquisitionServiceRequest = "PlayReadyLicenseAcquisitionServiceRequest";
 
     static PyObject* _new_PlayReadyLicenseAcquisitionServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5026,7 +5012,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyLicenseIterable class --------------------
-    static constexpr const char* const type_name_PlayReadyLicenseIterable = "PlayReadyLicenseIterable";
 
     static PyObject* _new_PlayReadyLicenseIterable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5184,11 +5169,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyLicenseIterator class --------------------
-    static constexpr const char* const type_name_PlayReadyLicenseIterator = "PlayReadyLicenseIterator";
 
     static PyObject* _new_PlayReadyLicenseIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyLicenseIterator);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator>::type_name);
         return nullptr;
     }
 
@@ -5389,11 +5374,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyLicenseManagement class --------------------
-    static constexpr const char* const type_name_PlayReadyLicenseManagement = "PlayReadyLicenseManagement";
 
     static PyObject* _new_PlayReadyLicenseManagement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyLicenseManagement);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyLicenseManagement>::type_name);
         return nullptr;
     }
 
@@ -5455,7 +5440,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyLicenseSession class --------------------
-    static constexpr const char* const type_name_PlayReadyLicenseSession = "PlayReadyLicenseSession";
 
     static PyObject* _new_PlayReadyLicenseSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5651,7 +5635,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyMeteringReportServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadyMeteringReportServiceRequest = "PlayReadyMeteringReportServiceRequest";
 
     static PyObject* _new_PlayReadyMeteringReportServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6075,7 +6058,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyRevocationServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadyRevocationServiceRequest = "PlayReadyRevocationServiceRequest";
 
     static PyObject* _new_PlayReadyRevocationServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6451,7 +6433,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadySecureStopIterable class --------------------
-    static constexpr const char* const type_name_PlayReadySecureStopIterable = "PlayReadySecureStopIterable";
 
     static PyObject* _new_PlayReadySecureStopIterable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6595,11 +6576,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadySecureStopIterator class --------------------
-    static constexpr const char* const type_name_PlayReadySecureStopIterator = "PlayReadySecureStopIterator";
 
     static PyObject* _new_PlayReadySecureStopIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadySecureStopIterator);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator>::type_name);
         return nullptr;
     }
 
@@ -6800,7 +6781,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadySecureStopServiceRequest class --------------------
-    static constexpr const char* const type_name_PlayReadySecureStopServiceRequest = "PlayReadySecureStopServiceRequest";
 
     static PyObject* _new_PlayReadySecureStopServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7294,11 +7274,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadySoapMessage class --------------------
-    static constexpr const char* const type_name_PlayReadySoapMessage = "PlayReadySoapMessage";
 
     static PyObject* _new_PlayReadySoapMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadySoapMessage);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadySoapMessage>::type_name);
         return nullptr;
     }
 
@@ -7439,11 +7419,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- PlayReadyStatics class --------------------
-    static constexpr const char* const type_name_PlayReadyStatics = "PlayReadyStatics";
 
     static PyObject* _new_PlayReadyStatics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlayReadyStatics);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::PlayReadyStatics>::type_name);
         return nullptr;
     }
 
@@ -7836,11 +7816,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDClosedCaptionDataReceivedEventArgs interface --------------------
-    static constexpr const char* const type_name_INDClosedCaptionDataReceivedEventArgs = "INDClosedCaptionDataReceivedEventArgs";
 
     static PyObject* _new_INDClosedCaptionDataReceivedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDClosedCaptionDataReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7971,11 +7951,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDCustomData interface --------------------
-    static constexpr const char* const type_name_INDCustomData = "INDCustomData";
 
     static PyObject* _new_INDCustomData(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDCustomData);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDCustomData>::type_name);
         return nullptr;
     }
 
@@ -8086,11 +8066,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDDownloadEngine interface --------------------
-    static constexpr const char* const type_name_INDDownloadEngine = "INDDownloadEngine";
 
     static PyObject* _new_INDDownloadEngine(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDDownloadEngine);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngine>::type_name);
         return nullptr;
     }
 
@@ -8401,11 +8381,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDDownloadEngineNotifier interface --------------------
-    static constexpr const char* const type_name_INDDownloadEngineNotifier = "INDDownloadEngineNotifier";
 
     static PyObject* _new_INDDownloadEngineNotifier(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDDownloadEngineNotifier);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier>::type_name);
         return nullptr;
     }
 
@@ -8669,11 +8649,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDLicenseFetchCompletedEventArgs interface --------------------
-    static constexpr const char* const type_name_INDLicenseFetchCompletedEventArgs = "INDLicenseFetchCompletedEventArgs";
 
     static PyObject* _new_INDLicenseFetchCompletedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDLicenseFetchCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8764,11 +8744,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDLicenseFetchDescriptor interface --------------------
-    static constexpr const char* const type_name_INDLicenseFetchDescriptor = "INDLicenseFetchDescriptor";
 
     static PyObject* _new_INDLicenseFetchDescriptor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDLicenseFetchDescriptor);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor>::type_name);
         return nullptr;
     }
 
@@ -8927,11 +8907,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDLicenseFetchResult interface --------------------
-    static constexpr const char* const type_name_INDLicenseFetchResult = "INDLicenseFetchResult";
 
     static PyObject* _new_INDLicenseFetchResult(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDLicenseFetchResult);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDLicenseFetchResult>::type_name);
         return nullptr;
     }
 
@@ -9022,11 +9002,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDMessenger interface --------------------
-    static constexpr const char* const type_name_INDMessenger = "INDMessenger";
 
     static PyObject* _new_INDMessenger(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDMessenger);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDMessenger>::type_name);
         return nullptr;
     }
 
@@ -9233,11 +9213,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDProximityDetectionCompletedEventArgs interface --------------------
-    static constexpr const char* const type_name_INDProximityDetectionCompletedEventArgs = "INDProximityDetectionCompletedEventArgs";
 
     static PyObject* _new_INDProximityDetectionCompletedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDProximityDetectionCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9328,11 +9308,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDRegistrationCompletedEventArgs interface --------------------
-    static constexpr const char* const type_name_INDRegistrationCompletedEventArgs = "INDRegistrationCompletedEventArgs";
 
     static PyObject* _new_INDRegistrationCompletedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDRegistrationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9491,11 +9471,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDSendResult interface --------------------
-    static constexpr const char* const type_name_INDSendResult = "INDSendResult";
 
     static PyObject* _new_INDSendResult(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDSendResult);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDSendResult>::type_name);
         return nullptr;
     }
 
@@ -9586,11 +9566,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDStartResult interface --------------------
-    static constexpr const char* const type_name_INDStartResult = "INDStartResult";
 
     static PyObject* _new_INDStartResult(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDStartResult);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStartResult>::type_name);
         return nullptr;
     }
 
@@ -9681,11 +9661,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDStorageFileHelper interface --------------------
-    static constexpr const char* const type_name_INDStorageFileHelper = "INDStorageFileHelper";
 
     static PyObject* _new_INDStorageFileHelper(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDStorageFileHelper);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStorageFileHelper>::type_name);
         return nullptr;
     }
 
@@ -9788,11 +9768,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDStreamParser interface --------------------
-    static constexpr const char* const type_name_INDStreamParser = "INDStreamParser";
 
     static PyObject* _new_INDStreamParser(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDStreamParser);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParser>::type_name);
         return nullptr;
     }
 
@@ -10023,11 +10003,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDStreamParserNotifier interface --------------------
-    static constexpr const char* const type_name_INDStreamParserNotifier = "INDStreamParserNotifier";
 
     static PyObject* _new_INDStreamParserNotifier(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDStreamParserNotifier);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDStreamParserNotifier>::type_name);
         return nullptr;
     }
 
@@ -10238,11 +10218,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- INDTransmitterProperties interface --------------------
-    static constexpr const char* const type_name_INDTransmitterProperties = "INDTransmitterProperties";
 
     static PyObject* _new_INDTransmitterProperties(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INDTransmitterProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::INDTransmitterProperties>::type_name);
         return nullptr;
     }
 
@@ -10533,11 +10513,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadyDomain interface --------------------
-    static constexpr const char* const type_name_IPlayReadyDomain = "IPlayReadyDomain";
 
     static PyObject* _new_IPlayReadyDomain(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadyDomain);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyDomain>::type_name);
         return nullptr;
     }
 
@@ -10708,11 +10688,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadyLicense interface --------------------
-    static constexpr const char* const type_name_IPlayReadyLicense = "IPlayReadyLicense";
 
     static PyObject* _new_IPlayReadyLicense(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadyLicense);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicense>::type_name);
         return nullptr;
     }
 
@@ -10935,11 +10915,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadyLicenseAcquisitionServiceRequest interface --------------------
-    static constexpr const char* const type_name_IPlayReadyLicenseAcquisitionServiceRequest = "IPlayReadyLicenseAcquisitionServiceRequest";
 
     static PyObject* _new_IPlayReadyLicenseAcquisitionServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadyLicenseAcquisitionServiceRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest>::type_name);
         return nullptr;
     }
 
@@ -11384,11 +11364,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadyLicenseSession interface --------------------
-    static constexpr const char* const type_name_IPlayReadyLicenseSession = "IPlayReadyLicenseSession";
 
     static PyObject* _new_IPlayReadyLicenseSession(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadyLicenseSession);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession>::type_name);
         return nullptr;
     }
 
@@ -11522,11 +11502,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadyLicenseSession2 interface --------------------
-    static constexpr const char* const type_name_IPlayReadyLicenseSession2 = "IPlayReadyLicenseSession2";
 
     static PyObject* _new_IPlayReadyLicenseSession2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadyLicenseSession2);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2>::type_name);
         return nullptr;
     }
 
@@ -11693,11 +11673,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadySecureStopServiceRequest interface --------------------
-    static constexpr const char* const type_name_IPlayReadySecureStopServiceRequest = "IPlayReadySecureStopServiceRequest";
 
     static PyObject* _new_IPlayReadySecureStopServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadySecureStopServiceRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest>::type_name);
         return nullptr;
     }
 
@@ -12146,11 +12126,11 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     // ----- IPlayReadyServiceRequest interface --------------------
-    static constexpr const char* const type_name_IPlayReadyServiceRequest = "IPlayReadyServiceRequest";
 
     static PyObject* _new_IPlayReadyServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPlayReadyServiceRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest>::type_name);
         return nullptr;
     }
 

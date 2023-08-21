@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Services::TargetedContent
 {
     // ----- TargetedContentAction class --------------------
-    static constexpr const char* const type_name_TargetedContentAction = "TargetedContentAction";
 
     static PyObject* _new_TargetedContentAction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentAction);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>::type_name);
         return nullptr;
     }
 
@@ -112,11 +112,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentAvailabilityChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TargetedContentAvailabilityChangedEventArgs = "TargetedContentAvailabilityChangedEventArgs";
 
     static PyObject* _new_TargetedContentAvailabilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentAvailabilityChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -217,11 +217,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TargetedContentChangedEventArgs = "TargetedContentChangedEventArgs";
 
     static PyObject* _new_TargetedContentChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -342,11 +342,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentCollection class --------------------
-    static constexpr const char* const type_name_TargetedContentCollection = "TargetedContentCollection";
 
     static PyObject* _new_TargetedContentCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentCollection);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>::type_name);
         return nullptr;
     }
 
@@ -583,11 +583,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentContainer class --------------------
-    static constexpr const char* const type_name_TargetedContentContainer = "TargetedContentContainer";
 
     static PyObject* _new_TargetedContentContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentContainer);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>::type_name);
         return nullptr;
     }
 
@@ -802,11 +802,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentFile class --------------------
-    static constexpr const char* const type_name_TargetedContentFile = "TargetedContentFile";
 
     static PyObject* _new_TargetedContentFile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentFile);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>::type_name);
         return nullptr;
     }
 
@@ -907,11 +907,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentImage class --------------------
-    static constexpr const char* const type_name_TargetedContentImage = "TargetedContentImage";
 
     static PyObject* _new_TargetedContentImage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentImage);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>::type_name);
         return nullptr;
     }
 
@@ -1052,11 +1052,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentItem class --------------------
-    static constexpr const char* const type_name_TargetedContentItem = "TargetedContentItem";
 
     static PyObject* _new_TargetedContentItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentItem);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>::type_name);
         return nullptr;
     }
 
@@ -1273,11 +1273,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentItemState class --------------------
-    static constexpr const char* const type_name_TargetedContentItemState = "TargetedContentItemState";
 
     static PyObject* _new_TargetedContentItemState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentItemState);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>::type_name);
         return nullptr;
     }
 
@@ -1388,11 +1388,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentObject class --------------------
-    static constexpr const char* const type_name_TargetedContentObject = "TargetedContentObject";
 
     static PyObject* _new_TargetedContentObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentObject);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>::type_name);
         return nullptr;
     }
 
@@ -1543,11 +1543,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TargetedContentStateChangedEventArgs = "TargetedContentStateChangedEventArgs";
 
     static PyObject* _new_TargetedContentStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1648,11 +1648,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentSubscription class --------------------
-    static constexpr const char* const type_name_TargetedContentSubscription = "TargetedContentSubscription";
 
     static PyObject* _new_TargetedContentSubscription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentSubscription);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>::type_name);
         return nullptr;
     }
 
@@ -1972,11 +1972,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentSubscriptionOptions class --------------------
-    static constexpr const char* const type_name_TargetedContentSubscriptionOptions = "TargetedContentSubscriptionOptions";
 
     static PyObject* _new_TargetedContentSubscriptionOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentSubscriptionOptions);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>::type_name);
         return nullptr;
     }
 
@@ -2186,11 +2186,11 @@ namespace py::cpp::Windows::Services::TargetedContent
     };
 
     // ----- TargetedContentValue class --------------------
-    static constexpr const char* const type_name_TargetedContentValue = "TargetedContentValue";
 
     static PyObject* _new_TargetedContentValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetedContentValue);
+        static_assert(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>::type_name);
         return nullptr;
     }
 

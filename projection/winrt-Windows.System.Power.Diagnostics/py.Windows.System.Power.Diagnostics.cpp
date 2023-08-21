@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Power::Diagnostics
 {
     // ----- BackgroundEnergyDiagnostics class --------------------
-    static constexpr const char* const type_name_BackgroundEnergyDiagnostics = "BackgroundEnergyDiagnostics";
 
     static PyObject* _new_BackgroundEnergyDiagnostics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundEnergyDiagnostics);
+        static_assert(py::py_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::System::Power::Diagnostics
     };
 
     // ----- ForegroundEnergyDiagnostics class --------------------
-    static constexpr const char* const type_name_ForegroundEnergyDiagnostics = "ForegroundEnergyDiagnostics";
 
     static PyObject* _new_ForegroundEnergyDiagnostics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ForegroundEnergyDiagnostics);
+        static_assert(py::py_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>::type_name);
         return nullptr;
     }
 

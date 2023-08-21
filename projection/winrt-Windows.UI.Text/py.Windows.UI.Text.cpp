@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Text
 {
     // ----- ContentLinkInfo class --------------------
-    static constexpr const char* const type_name_ContentLinkInfo = "ContentLinkInfo";
 
     static PyObject* _new_ContentLinkInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -345,11 +344,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- FontWeights class --------------------
-    static constexpr const char* const type_name_FontWeights = "FontWeights";
 
     static PyObject* _new_FontWeights(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FontWeights);
+        static_assert(py::py_type<winrt::Windows::UI::Text::FontWeights>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::FontWeights>::type_name);
         return nullptr;
     }
 
@@ -660,11 +659,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- RichEditTextDocument class --------------------
-    static constexpr const char* const type_name_RichEditTextDocument = "RichEditTextDocument";
 
     static PyObject* _new_RichEditTextDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RichEditTextDocument);
+        static_assert(py::py_type<winrt::Windows::UI::Text::RichEditTextDocument>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::RichEditTextDocument>::type_name);
         return nullptr;
     }
 
@@ -1769,11 +1768,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- RichEditTextRange class --------------------
-    static constexpr const char* const type_name_RichEditTextRange = "RichEditTextRange";
 
     static PyObject* _new_RichEditTextRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RichEditTextRange);
+        static_assert(py::py_type<winrt::Windows::UI::Text::RichEditTextRange>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::RichEditTextRange>::type_name);
         return nullptr;
     }
 
@@ -3455,11 +3454,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- TextConstants class --------------------
-    static constexpr const char* const type_name_TextConstants = "TextConstants";
 
     static PyObject* _new_TextConstants(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TextConstants);
+        static_assert(py::py_type<winrt::Windows::UI::Text::TextConstants>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::TextConstants>::type_name);
         return nullptr;
     }
 
@@ -3669,11 +3668,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- ITextCharacterFormat interface --------------------
-    static constexpr const char* const type_name_ITextCharacterFormat = "ITextCharacterFormat";
 
     static PyObject* _new_ITextCharacterFormat(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITextCharacterFormat);
+        static_assert(py::py_type<winrt::Windows::UI::Text::ITextCharacterFormat>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextCharacterFormat>::type_name);
         return nullptr;
     }
 
@@ -4963,11 +4962,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- ITextDocument interface --------------------
-    static constexpr const char* const type_name_ITextDocument = "ITextDocument";
 
     static PyObject* _new_ITextDocument(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITextDocument);
+        static_assert(py::py_type<winrt::Windows::UI::Text::ITextDocument>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextDocument>::type_name);
         return nullptr;
     }
 
@@ -5840,11 +5839,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- ITextParagraphFormat interface --------------------
-    static constexpr const char* const type_name_ITextParagraphFormat = "ITextParagraphFormat";
 
     static PyObject* _new_ITextParagraphFormat(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITextParagraphFormat);
+        static_assert(py::py_type<winrt::Windows::UI::Text::ITextParagraphFormat>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextParagraphFormat>::type_name);
         return nullptr;
     }
 
@@ -7146,11 +7145,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- ITextRange interface --------------------
-    static constexpr const char* const type_name_ITextRange = "ITextRange";
 
     static PyObject* _new_ITextRange(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITextRange);
+        static_assert(py::py_type<winrt::Windows::UI::Text::ITextRange>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextRange>::type_name);
         return nullptr;
     }
 
@@ -8784,11 +8783,11 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- ITextSelection interface --------------------
-    static constexpr const char* const type_name_ITextSelection = "ITextSelection";
 
     static PyObject* _new_ITextSelection(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITextSelection);
+        static_assert(py::py_type<winrt::Windows::UI::Text::ITextSelection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::ITextSelection>::type_name);
         return nullptr;
     }
 
@@ -10725,7 +10724,6 @@ namespace py::cpp::Windows::UI::Text
     };
 
     // ----- FontWeight struct --------------------
-    static constexpr const char* const type_name_FontWeight = "FontWeight";
 
     PyObject* _new_FontWeight(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

@@ -568,14 +568,6 @@ static PyModuleDef module_def
         w.write("}\n");
     }
 
-    void write_winrt_type_name_constant(writer& w, TypeDef const& type)
-    {
-        w.write(
-            "static constexpr const char* const type_name_@ = \"@\";\n",
-            type.TypeName(),
-            type.TypeName());
-    }
-
     void write_dealloc_function(writer& w, TypeDef const& type)
     {
         auto category = get_category(type);
@@ -909,8 +901,11 @@ if (!%)
             if (is_static_class(type) || constructors.size() == 0)
             {
                 w.write(
-                    "py::set_invalid_activation_error(type_name_@);\n",
-                    type.TypeName());
+                    "static_assert(py::py_type<%>::type_name);\n",
+                    bind<write_python_wrapper_template_type>(type));
+                w.write(
+                    "py::set_invalid_activation_error(py::py_type<%>::type_name);\n",
+                    bind<write_python_wrapper_template_type>(type));
                 w.write("return nullptr;\n");
             }
             else
@@ -979,11 +974,16 @@ auto arg_count = PyTuple_Size(args);
             auto format = R"(
 static PyObject* _new_@(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
 {
-    py::set_invalid_activation_error(type_name_@);
+    static_assert(py::py_type<%>::type_name);
+    py::set_invalid_activation_error(py::py_type<%>::type_name);
     return nullptr;
 }
 )";
-            w.write(format, type.TypeName(), type.TypeName());
+            w.write(
+                format,
+                type.TypeName(),
+                bind<write_python_wrapper_template_type>(type),
+                bind<write_python_wrapper_template_type>(type));
         }
         else if (category == category::class_type)
         {
@@ -2371,7 +2371,6 @@ static PyType_Spec type_spec_@_Meta =
             "\n// ----- @ % --------------------\n",
             type.TypeName(),
             bind<write_category>(type));
-        write_winrt_type_name_constant(w, type);
         write_new_function(w, type);
         write_dealloc_function(w, type);
         write_method_functions(w, type);
@@ -3360,7 +3359,6 @@ if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
         auto guard{w.push_generic_params(type.GenericParam())};
 
         w.write("\n// ----- % struct --------------------\n", type.TypeName());
-        write_winrt_type_name_constant(w, type);
         write_struct_constructor(w, type);
         write_dealloc_function(w, type);
         write_struct_getset_functions(w, type);

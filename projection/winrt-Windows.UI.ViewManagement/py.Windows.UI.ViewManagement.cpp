@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::ViewManagement
 {
     // ----- AccessibilitySettings class --------------------
-    static constexpr const char* const type_name_AccessibilitySettings = "AccessibilitySettings";
 
     static PyObject* _new_AccessibilitySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -190,11 +189,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ActivationViewSwitcher class --------------------
-    static constexpr const char* const type_name_ActivationViewSwitcher = "ActivationViewSwitcher";
 
     static PyObject* _new_ActivationViewSwitcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ActivationViewSwitcher);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>::type_name);
         return nullptr;
     }
 
@@ -350,11 +349,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ApplicationView class --------------------
-    static constexpr const char* const type_name_ApplicationView = "ApplicationView";
 
     static PyObject* _new_ApplicationView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationView);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationView>::type_name);
         return nullptr;
     }
 
@@ -1701,11 +1700,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ApplicationViewConsolidatedEventArgs class --------------------
-    static constexpr const char* const type_name_ApplicationViewConsolidatedEventArgs = "ApplicationViewConsolidatedEventArgs";
 
     static PyObject* _new_ApplicationViewConsolidatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationViewConsolidatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1816,11 +1815,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ApplicationViewScaling class --------------------
-    static constexpr const char* const type_name_ApplicationViewScaling = "ApplicationViewScaling";
 
     static PyObject* _new_ApplicationViewScaling(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationViewScaling);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>::type_name);
         return nullptr;
     }
 
@@ -1963,11 +1962,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ApplicationViewSwitcher class --------------------
-    static constexpr const char* const type_name_ApplicationViewSwitcher = "ApplicationViewSwitcher";
 
     static PyObject* _new_ApplicationViewSwitcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationViewSwitcher);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>::type_name);
         return nullptr;
     }
 
@@ -2299,11 +2298,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ApplicationViewTitleBar class --------------------
-    static constexpr const char* const type_name_ApplicationViewTitleBar = "ApplicationViewTitleBar";
 
     static PyObject* _new_ApplicationViewTitleBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationViewTitleBar);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>::type_name);
         return nullptr;
     }
 
@@ -2950,7 +2949,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ApplicationViewTransferContext class --------------------
-    static constexpr const char* const type_name_ApplicationViewTransferContext = "ApplicationViewTransferContext";
 
     static PyObject* _new_ApplicationViewTransferContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3136,11 +3134,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- InputPane class --------------------
-    static constexpr const char* const type_name_InputPane = "InputPane";
 
     static PyObject* _new_InputPane(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InputPane);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::InputPane>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::InputPane>::type_name);
         return nullptr;
     }
 
@@ -3491,11 +3489,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- InputPaneVisibilityEventArgs class --------------------
-    static constexpr const char* const type_name_InputPaneVisibilityEventArgs = "InputPaneVisibilityEventArgs";
 
     static PyObject* _new_InputPaneVisibilityEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InputPaneVisibilityEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3634,11 +3632,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ProjectionManager class --------------------
-    static constexpr const char* const type_name_ProjectionManager = "ProjectionManager";
 
     static PyObject* _new_ProjectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProjectionManager);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ProjectionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ProjectionManager>::type_name);
         return nullptr;
     }
 
@@ -3961,11 +3959,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- StatusBar class --------------------
-    static constexpr const char* const type_name_StatusBar = "StatusBar";
 
     static PyObject* _new_StatusBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StatusBar);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::StatusBar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::StatusBar>::type_name);
         return nullptr;
     }
 
@@ -4400,11 +4398,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- StatusBarProgressIndicator class --------------------
-    static constexpr const char* const type_name_StatusBarProgressIndicator = "StatusBarProgressIndicator";
 
     static PyObject* _new_StatusBarProgressIndicator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StatusBarProgressIndicator);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>::type_name);
         return nullptr;
     }
 
@@ -4631,7 +4629,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- UISettings class --------------------
-    static constexpr const char* const type_name_UISettings = "UISettings";
 
     static PyObject* _new_UISettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5363,11 +5360,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- UISettingsAnimationsEnabledChangedEventArgs class --------------------
-    static constexpr const char* const type_name_UISettingsAnimationsEnabledChangedEventArgs = "UISettingsAnimationsEnabledChangedEventArgs";
 
     static PyObject* _new_UISettingsAnimationsEnabledChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UISettingsAnimationsEnabledChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5438,11 +5435,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- UISettingsAutoHideScrollBarsChangedEventArgs class --------------------
-    static constexpr const char* const type_name_UISettingsAutoHideScrollBarsChangedEventArgs = "UISettingsAutoHideScrollBarsChangedEventArgs";
 
     static PyObject* _new_UISettingsAutoHideScrollBarsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UISettingsAutoHideScrollBarsChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5513,11 +5510,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- UISettingsMessageDurationChangedEventArgs class --------------------
-    static constexpr const char* const type_name_UISettingsMessageDurationChangedEventArgs = "UISettingsMessageDurationChangedEventArgs";
 
     static PyObject* _new_UISettingsMessageDurationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UISettingsMessageDurationChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5588,11 +5585,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- UIViewSettings class --------------------
-    static constexpr const char* const type_name_UIViewSettings = "UIViewSettings";
 
     static PyObject* _new_UIViewSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UIViewSettings);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::UIViewSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::UIViewSettings>::type_name);
         return nullptr;
     }
 
@@ -5713,11 +5710,11 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     // ----- ViewModePreferences class --------------------
-    static constexpr const char* const type_name_ViewModePreferences = "ViewModePreferences";
 
     static PyObject* _new_ViewModePreferences(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ViewModePreferences);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::ViewModePreferences>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::ViewModePreferences>::type_name);
         return nullptr;
     }
 

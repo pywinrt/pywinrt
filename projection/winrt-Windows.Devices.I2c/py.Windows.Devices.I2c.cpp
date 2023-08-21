@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::I2c
 {
     // ----- I2cConnectionSettings class --------------------
-    static constexpr const char* const type_name_I2cConnectionSettings = "I2cConnectionSettings";
 
     static PyObject* _new_I2cConnectionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -251,11 +250,11 @@ namespace py::cpp::Windows::Devices::I2c
     };
 
     // ----- I2cController class --------------------
-    static constexpr const char* const type_name_I2cController = "I2cController";
 
     static PyObject* _new_I2cController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_I2cController);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::I2cController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::I2cController>::type_name);
         return nullptr;
     }
 
@@ -420,11 +419,11 @@ namespace py::cpp::Windows::Devices::I2c
     };
 
     // ----- I2cDevice class --------------------
-    static constexpr const char* const type_name_I2cDevice = "I2cDevice";
 
     static PyObject* _new_I2cDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_I2cDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::I2cDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::I2cDevice>::type_name);
         return nullptr;
     }
 
@@ -868,11 +867,11 @@ namespace py::cpp::Windows::Devices::I2c
     };
 
     // ----- II2cDeviceStatics interface --------------------
-    static constexpr const char* const type_name_II2cDeviceStatics = "II2cDeviceStatics";
 
     static PyObject* _new_II2cDeviceStatics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_II2cDeviceStatics);
+        static_assert(py::py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>::type_name);
         return nullptr;
     }
 
@@ -1026,7 +1025,6 @@ namespace py::cpp::Windows::Devices::I2c
     };
 
     // ----- I2cTransferResult struct --------------------
-    static constexpr const char* const type_name_I2cTransferResult = "I2cTransferResult";
 
     PyObject* _new_I2cTransferResult(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

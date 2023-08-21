@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Web
 {
     // ----- WebError class --------------------
-    static constexpr const char* const type_name_WebError = "WebError";
 
     static PyObject* _new_WebError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebError);
+        static_assert(py::py_type<winrt::Windows::Web::WebError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::WebError>::type_name);
         return nullptr;
     }
 
@@ -73,11 +73,11 @@ namespace py::cpp::Windows::Web
     };
 
     // ----- IUriToStreamResolver interface --------------------
-    static constexpr const char* const type_name_IUriToStreamResolver = "IUriToStreamResolver";
 
     static PyObject* _new_IUriToStreamResolver(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IUriToStreamResolver);
+        static_assert(py::py_type<winrt::Windows::Web::IUriToStreamResolver>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::IUriToStreamResolver>::type_name);
         return nullptr;
     }
 

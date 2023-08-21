@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Media::Imaging
 {
     // ----- BitmapImage class --------------------
-    static constexpr const char* const type_name_BitmapImage = "BitmapImage";
 
     static PyObject* _new_BitmapImage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -825,11 +824,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- BitmapSource class --------------------
-    static constexpr const char* const type_name_BitmapSource = "BitmapSource";
 
     static PyObject* _new_BitmapSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapSource);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>::type_name);
         return nullptr;
     }
 
@@ -1065,11 +1064,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- DownloadProgressEventArgs class --------------------
-    static constexpr const char* const type_name_DownloadProgressEventArgs = "DownloadProgressEventArgs";
 
     static PyObject* _new_DownloadProgressEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DownloadProgressEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1188,7 +1187,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- RenderTargetBitmap class --------------------
-    static constexpr const char* const type_name_RenderTargetBitmap = "RenderTargetBitmap";
 
     static PyObject* _new_RenderTargetBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1470,7 +1468,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- SoftwareBitmapSource class --------------------
-    static constexpr const char* const type_name_SoftwareBitmapSource = "SoftwareBitmapSource";
 
     static PyObject* _new_SoftwareBitmapSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1653,7 +1650,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- SurfaceImageSource class --------------------
-    static constexpr const char* const type_name_SurfaceImageSource = "SurfaceImageSource";
 
     static PyObject* _new_SurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1771,7 +1767,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- SvgImageSource class --------------------
-    static constexpr const char* const type_name_SvgImageSource = "SvgImageSource";
 
     static PyObject* _new_SvgImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2230,11 +2225,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- SvgImageSourceFailedEventArgs class --------------------
-    static constexpr const char* const type_name_SvgImageSourceFailedEventArgs = "SvgImageSourceFailedEventArgs";
 
     static PyObject* _new_SvgImageSourceFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SvgImageSourceFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2325,11 +2320,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- SvgImageSourceOpenedEventArgs class --------------------
-    static constexpr const char* const type_name_SvgImageSourceOpenedEventArgs = "SvgImageSourceOpenedEventArgs";
 
     static PyObject* _new_SvgImageSourceOpenedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SvgImageSourceOpenedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2400,7 +2395,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- VirtualSurfaceImageSource class --------------------
-    static constexpr const char* const type_name_VirtualSurfaceImageSource = "VirtualSurfaceImageSource";
 
     static PyObject* _new_VirtualSurfaceImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2518,7 +2512,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- WriteableBitmap class --------------------
-    static constexpr const char* const type_name_WriteableBitmap = "WriteableBitmap";
 
     static PyObject* _new_WriteableBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2670,11 +2663,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     };
 
     // ----- XamlRenderingBackgroundTask class --------------------
-    static constexpr const char* const type_name_XamlRenderingBackgroundTask = "XamlRenderingBackgroundTask";
 
     static PyObject* _new_XamlRenderingBackgroundTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlRenderingBackgroundTask);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>::type_name);
         return nullptr;
     }
 

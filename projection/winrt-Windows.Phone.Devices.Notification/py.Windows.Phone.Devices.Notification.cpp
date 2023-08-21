@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Phone::Devices::Notification
 {
     // ----- VibrationDevice class --------------------
-    static constexpr const char* const type_name_VibrationDevice = "VibrationDevice";
 
     static PyObject* _new_VibrationDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VibrationDevice);
+        static_assert(py::py_type<winrt::Windows::Phone::Devices::Notification::VibrationDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Devices::Notification::VibrationDevice>::type_name);
         return nullptr;
     }
 

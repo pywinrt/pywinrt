@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::VoiceCommands
 {
     // ----- VoiceCommand class --------------------
-    static constexpr const char* const type_name_VoiceCommand = "VoiceCommand";
 
     static PyObject* _new_VoiceCommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommand);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommand>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_VoiceCommandCompletedEventArgs = "VoiceCommandCompletedEventArgs";
 
     static PyObject* _new_VoiceCommandCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -237,11 +237,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandConfirmationResult class --------------------
-    static constexpr const char* const type_name_VoiceCommandConfirmationResult = "VoiceCommandConfirmationResult";
 
     static PyObject* _new_VoiceCommandConfirmationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandConfirmationResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult>::type_name);
         return nullptr;
     }
 
@@ -332,7 +332,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandContentTile class --------------------
-    static constexpr const char* const type_name_VoiceCommandContentTile = "VoiceCommandContentTile";
 
     static PyObject* _new_VoiceCommandContentTile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -814,11 +813,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandDefinition class --------------------
-    static constexpr const char* const type_name_VoiceCommandDefinition = "VoiceCommandDefinition";
 
     static PyObject* _new_VoiceCommandDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandDefinition);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition>::type_name);
         return nullptr;
     }
 
@@ -962,11 +961,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandDefinitionManager class --------------------
-    static constexpr const char* const type_name_VoiceCommandDefinitionManager = "VoiceCommandDefinitionManager";
 
     static PyObject* _new_VoiceCommandDefinitionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandDefinitionManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinitionManager>::type_name);
         return nullptr;
     }
 
@@ -1068,11 +1067,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandDisambiguationResult class --------------------
-    static constexpr const char* const type_name_VoiceCommandDisambiguationResult = "VoiceCommandDisambiguationResult";
 
     static PyObject* _new_VoiceCommandDisambiguationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandDisambiguationResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult>::type_name);
         return nullptr;
     }
 
@@ -1163,11 +1162,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandResponse class --------------------
-    static constexpr const char* const type_name_VoiceCommandResponse = "VoiceCommandResponse";
 
     static PyObject* _new_VoiceCommandResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandResponse);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse>::type_name);
         return nullptr;
     }
 
@@ -1550,11 +1549,11 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandServiceConnection class --------------------
-    static constexpr const char* const type_name_VoiceCommandServiceConnection = "VoiceCommandServiceConnection";
 
     static PyObject* _new_VoiceCommandServiceConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandServiceConnection);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection>::type_name);
         return nullptr;
     }
 
@@ -1944,7 +1943,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     };
 
     // ----- VoiceCommandUserMessage class --------------------
-    static constexpr const char* const type_name_VoiceCommandUserMessage = "VoiceCommandUserMessage";
 
     static PyObject* _new_VoiceCommandUserMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

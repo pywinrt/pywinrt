@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Notifications::Management
 {
     // ----- UserNotificationListener class --------------------
-    static constexpr const char* const type_name_UserNotificationListener = "UserNotificationListener";
 
     static PyObject* _new_UserNotificationListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserNotificationListener);
+        static_assert(py::py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListener>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListener>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Perception::Spatial
 {
     // ----- SpatialAnchor class --------------------
-    static constexpr const char* const type_name_SpatialAnchor = "SpatialAnchor";
 
     static PyObject* _new_SpatialAnchor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchor);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchor>::type_name);
         return nullptr;
     }
 
@@ -262,11 +262,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialAnchorExportSufficiency class --------------------
-    static constexpr const char* const type_name_SpatialAnchorExportSufficiency = "SpatialAnchorExportSufficiency";
 
     static PyObject* _new_SpatialAnchorExportSufficiency(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchorExportSufficiency);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>::type_name);
         return nullptr;
     }
 
@@ -397,11 +397,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialAnchorExporter class --------------------
-    static constexpr const char* const type_name_SpatialAnchorExporter = "SpatialAnchorExporter";
 
     static PyObject* _new_SpatialAnchorExporter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchorExporter);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>::type_name);
         return nullptr;
     }
 
@@ -599,11 +599,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialAnchorManager class --------------------
-    static constexpr const char* const type_name_SpatialAnchorManager = "SpatialAnchorManager";
 
     static PyObject* _new_SpatialAnchorManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchorManager);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorManager>::type_name);
         return nullptr;
     }
 
@@ -663,11 +663,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialAnchorRawCoordinateSystemAdjustedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialAnchorRawCoordinateSystemAdjustedEventArgs = "SpatialAnchorRawCoordinateSystemAdjustedEventArgs";
 
     static PyObject* _new_SpatialAnchorRawCoordinateSystemAdjustedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchorRawCoordinateSystemAdjustedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -758,11 +758,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialAnchorStore class --------------------
-    static constexpr const char* const type_name_SpatialAnchorStore = "SpatialAnchorStore";
 
     static PyObject* _new_SpatialAnchorStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchorStore);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorStore>::type_name);
         return nullptr;
     }
 
@@ -960,11 +960,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialAnchorTransferManager class --------------------
-    static constexpr const char* const type_name_SpatialAnchorTransferManager = "SpatialAnchorTransferManager";
 
     static PyObject* _new_SpatialAnchorTransferManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialAnchorTransferManager);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>::type_name);
         return nullptr;
     }
 
@@ -1089,11 +1089,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialBoundingVolume class --------------------
-    static constexpr const char* const type_name_SpatialBoundingVolume = "SpatialBoundingVolume";
 
     static PyObject* _new_SpatialBoundingVolume(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialBoundingVolume);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>::type_name);
         return nullptr;
     }
 
@@ -1296,11 +1296,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialCoordinateSystem class --------------------
-    static constexpr const char* const type_name_SpatialCoordinateSystem = "SpatialCoordinateSystem";
 
     static PyObject* _new_SpatialCoordinateSystem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialCoordinateSystem);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>::type_name);
         return nullptr;
     }
 
@@ -1403,7 +1403,6 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialEntity class --------------------
-    static constexpr const char* const type_name_SpatialEntity = "SpatialEntity";
 
     static PyObject* _new_SpatialEntity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1579,11 +1578,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialEntityAddedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialEntityAddedEventArgs = "SpatialEntityAddedEventArgs";
 
     static PyObject* _new_SpatialEntityAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialEntityAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1674,11 +1673,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialEntityRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialEntityRemovedEventArgs = "SpatialEntityRemovedEventArgs";
 
     static PyObject* _new_SpatialEntityRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialEntityRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1769,11 +1768,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialEntityStore class --------------------
-    static constexpr const char* const type_name_SpatialEntityStore = "SpatialEntityStore";
 
     static PyObject* _new_SpatialEntityStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialEntityStore);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityStore>::type_name);
         return nullptr;
     }
 
@@ -2010,11 +2009,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialEntityUpdatedEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialEntityUpdatedEventArgs = "SpatialEntityUpdatedEventArgs";
 
     static PyObject* _new_SpatialEntityUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialEntityUpdatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2105,11 +2104,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialEntityWatcher class --------------------
-    static constexpr const char* const type_name_SpatialEntityWatcher = "SpatialEntityWatcher";
 
     static PyObject* _new_SpatialEntityWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialEntityWatcher);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>::type_name);
         return nullptr;
     }
 
@@ -2442,11 +2441,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialLocation class --------------------
-    static constexpr const char* const type_name_SpatialLocation = "SpatialLocation";
 
     static PyObject* _new_SpatialLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialLocation);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocation>::type_name);
         return nullptr;
     }
 
@@ -2677,11 +2676,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialLocator class --------------------
-    static constexpr const char* const type_name_SpatialLocator = "SpatialLocator";
 
     static PyObject* _new_SpatialLocator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialLocator);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocator>::type_name);
         return nullptr;
     }
 
@@ -3111,11 +3110,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialLocatorAttachedFrameOfReference class --------------------
-    static constexpr const char* const type_name_SpatialLocatorAttachedFrameOfReference = "SpatialLocatorAttachedFrameOfReference";
 
     static PyObject* _new_SpatialLocatorAttachedFrameOfReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialLocatorAttachedFrameOfReference);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>::type_name);
         return nullptr;
     }
 
@@ -3379,11 +3378,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialLocatorPositionalTrackingDeactivatingEventArgs class --------------------
-    static constexpr const char* const type_name_SpatialLocatorPositionalTrackingDeactivatingEventArgs = "SpatialLocatorPositionalTrackingDeactivatingEventArgs";
 
     static PyObject* _new_SpatialLocatorPositionalTrackingDeactivatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialLocatorPositionalTrackingDeactivatingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3502,11 +3501,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialStageFrameOfReference class --------------------
-    static constexpr const char* const type_name_SpatialStageFrameOfReference = "SpatialStageFrameOfReference";
 
     static PyObject* _new_SpatialStageFrameOfReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialStageFrameOfReference);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>::type_name);
         return nullptr;
     }
 
@@ -3816,11 +3815,11 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialStationaryFrameOfReference class --------------------
-    static constexpr const char* const type_name_SpatialStationaryFrameOfReference = "SpatialStationaryFrameOfReference";
 
     static PyObject* _new_SpatialStationaryFrameOfReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialStationaryFrameOfReference);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>::type_name);
         return nullptr;
     }
 
@@ -3911,7 +3910,6 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialBoundingBox struct --------------------
-    static constexpr const char* const type_name_SpatialBoundingBox = "SpatialBoundingBox";
 
     PyObject* _new_SpatialBoundingBox(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4046,7 +4044,6 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialBoundingFrustum struct --------------------
-    static constexpr const char* const type_name_SpatialBoundingFrustum = "SpatialBoundingFrustum";
 
     PyObject* _new_SpatialBoundingFrustum(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4321,7 +4318,6 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialBoundingOrientedBox struct --------------------
-    static constexpr const char* const type_name_SpatialBoundingOrientedBox = "SpatialBoundingOrientedBox";
 
     PyObject* _new_SpatialBoundingOrientedBox(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4491,7 +4487,6 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialBoundingSphere struct --------------------
-    static constexpr const char* const type_name_SpatialBoundingSphere = "SpatialBoundingSphere";
 
     PyObject* _new_SpatialBoundingSphere(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4626,7 +4621,6 @@ namespace py::cpp::Windows::Perception::Spatial
     };
 
     // ----- SpatialRay struct --------------------
-    static constexpr const char* const type_name_SpatialRay = "SpatialRay";
 
     PyObject* _new_SpatialRay(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

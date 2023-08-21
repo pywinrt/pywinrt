@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Security::Cryptography::DataProtection
 {
     // ----- DataProtectionProvider class --------------------
-    static constexpr const char* const type_name_DataProtectionProvider = "DataProtectionProvider";
 
     static PyObject* _new_DataProtectionProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

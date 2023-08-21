@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::Calls::Provider
 {
     // ----- PhoneCallOrigin class --------------------
-    static constexpr const char* const type_name_PhoneCallOrigin = "PhoneCallOrigin";
 
     static PyObject* _new_PhoneCallOrigin(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -345,11 +344,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     };
 
     // ----- PhoneCallOriginManager class --------------------
-    static constexpr const char* const type_name_PhoneCallOriginManager = "PhoneCallOriginManager";
 
     static PyObject* _new_PhoneCallOriginManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallOriginManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>::type_name);
         return nullptr;
     }
 

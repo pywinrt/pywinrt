@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Foundation::Metadata
 {
     // ----- ApiInformation class --------------------
-    static constexpr const char* const type_name_ApiInformation = "ApiInformation";
 
     static PyObject* _new_ApiInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApiInformation);
+        static_assert(py::py_type<winrt::Windows::Foundation::Metadata::ApiInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Metadata::ApiInformation>::type_name);
         return nullptr;
     }
 

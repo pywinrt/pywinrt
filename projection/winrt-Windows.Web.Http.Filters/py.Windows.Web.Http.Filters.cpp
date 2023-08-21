@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Web::Http::Filters
 {
     // ----- HttpBaseProtocolFilter class --------------------
-    static constexpr const char* const type_name_HttpBaseProtocolFilter = "HttpBaseProtocolFilter";
 
     static PyObject* _new_HttpBaseProtocolFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -858,11 +857,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     };
 
     // ----- HttpCacheControl class --------------------
-    static constexpr const char* const type_name_HttpCacheControl = "HttpCacheControl";
 
     static PyObject* _new_HttpCacheControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpCacheControl);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>::type_name);
         return nullptr;
     }
 
@@ -1029,11 +1028,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     };
 
     // ----- HttpServerCustomValidationRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_HttpServerCustomValidationRequestedEventArgs = "HttpServerCustomValidationRequestedEventArgs";
 
     static PyObject* _new_HttpServerCustomValidationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpServerCustomValidationRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1265,11 +1264,11 @@ namespace py::cpp::Windows::Web::Http::Filters
     };
 
     // ----- IHttpFilter interface --------------------
-    static constexpr const char* const type_name_IHttpFilter = "IHttpFilter";
 
     static PyObject* _new_IHttpFilter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IHttpFilter);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>::type_name);
         return nullptr;
     }
 

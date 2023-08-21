@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::AppRecording
 {
     // ----- AppRecordingManager class --------------------
-    static constexpr const char* const type_name_AppRecordingManager = "AppRecordingManager";
 
     static PyObject* _new_AppRecordingManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppRecordingManager);
+        static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>::type_name);
         return nullptr;
     }
 
@@ -263,11 +263,11 @@ namespace py::cpp::Windows::Media::AppRecording
     };
 
     // ----- AppRecordingResult class --------------------
-    static constexpr const char* const type_name_AppRecordingResult = "AppRecordingResult";
 
     static PyObject* _new_AppRecordingResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppRecordingResult);
+        static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>::type_name);
         return nullptr;
     }
 
@@ -418,11 +418,11 @@ namespace py::cpp::Windows::Media::AppRecording
     };
 
     // ----- AppRecordingSaveScreenshotResult class --------------------
-    static constexpr const char* const type_name_AppRecordingSaveScreenshotResult = "AppRecordingSaveScreenshotResult";
 
     static PyObject* _new_AppRecordingSaveScreenshotResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppRecordingSaveScreenshotResult);
+        static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>::type_name);
         return nullptr;
     }
 
@@ -553,11 +553,11 @@ namespace py::cpp::Windows::Media::AppRecording
     };
 
     // ----- AppRecordingSavedScreenshotInfo class --------------------
-    static constexpr const char* const type_name_AppRecordingSavedScreenshotInfo = "AppRecordingSavedScreenshotInfo";
 
     static PyObject* _new_AppRecordingSavedScreenshotInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppRecordingSavedScreenshotInfo);
+        static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>::type_name);
         return nullptr;
     }
 
@@ -668,11 +668,11 @@ namespace py::cpp::Windows::Media::AppRecording
     };
 
     // ----- AppRecordingStatus class --------------------
-    static constexpr const char* const type_name_AppRecordingStatus = "AppRecordingStatus";
 
     static PyObject* _new_AppRecordingStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppRecordingStatus);
+        static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>::type_name);
         return nullptr;
     }
 
@@ -823,11 +823,11 @@ namespace py::cpp::Windows::Media::AppRecording
     };
 
     // ----- AppRecordingStatusDetails class --------------------
-    static constexpr const char* const type_name_AppRecordingStatusDetails = "AppRecordingStatusDetails";
 
     static PyObject* _new_AppRecordingStatusDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppRecordingStatusDetails);
+        static_assert(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>::type_name);
         return nullptr;
     }
 

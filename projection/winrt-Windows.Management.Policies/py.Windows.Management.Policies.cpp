@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Management::Policies
 {
     // ----- NamedPolicy class --------------------
-    static constexpr const char* const type_name_NamedPolicy = "NamedPolicy";
 
     static PyObject* _new_NamedPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NamedPolicy);
+        static_assert(py::py_type<winrt::Windows::Management::Policies::NamedPolicy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Policies::NamedPolicy>::type_name);
         return nullptr;
     }
 
@@ -108,11 +108,11 @@ namespace py::cpp::Windows::Management::Policies
     };
 
     // ----- NamedPolicyData class --------------------
-    static constexpr const char* const type_name_NamedPolicyData = "NamedPolicyData";
 
     static PyObject* _new_NamedPolicyData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NamedPolicyData);
+        static_assert(py::py_type<winrt::Windows::Management::Policies::NamedPolicyData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Policies::NamedPolicyData>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Composition::Scenes
 {
     // ----- SceneBoundingBox class --------------------
-    static constexpr const char* const type_name_SceneBoundingBox = "SceneBoundingBox";
 
     static PyObject* _new_SceneBoundingBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneBoundingBox);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneBoundingBox>::type_name);
         return nullptr;
     }
 
@@ -182,11 +182,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneComponent class --------------------
-    static constexpr const char* const type_name_SceneComponent = "SceneComponent";
 
     static PyObject* _new_SceneComponent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneComponent);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneComponent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneComponent>::type_name);
         return nullptr;
     }
 
@@ -277,11 +277,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneComponentCollection class --------------------
-    static constexpr const char* const type_name_SceneComponentCollection = "SceneComponentCollection";
 
     static PyObject* _new_SceneComponentCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneComponentCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneComponentCollection>::type_name);
         return nullptr;
     }
 
@@ -900,11 +900,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneMaterial class --------------------
-    static constexpr const char* const type_name_SceneMaterial = "SceneMaterial";
 
     static PyObject* _new_SceneMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneMaterial);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMaterial>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMaterial>::type_name);
         return nullptr;
     }
 
@@ -975,11 +975,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneMaterialInput class --------------------
-    static constexpr const char* const type_name_SceneMaterialInput = "SceneMaterialInput";
 
     static PyObject* _new_SceneMaterialInput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneMaterialInput);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>::type_name);
         return nullptr;
     }
 
@@ -1050,11 +1050,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneMesh class --------------------
-    static constexpr const char* const type_name_SceneMesh = "SceneMesh";
 
     static PyObject* _new_SceneMesh(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneMesh);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMesh>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMesh>::type_name);
         return nullptr;
     }
 
@@ -1260,11 +1260,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneMeshMaterialAttributeMap class --------------------
-    static constexpr const char* const type_name_SceneMeshMaterialAttributeMap = "SceneMeshMaterialAttributeMap";
 
     static PyObject* _new_SceneMeshMaterialAttributeMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneMeshMaterialAttributeMap);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap>::type_name);
         return nullptr;
     }
 
@@ -1673,11 +1673,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneMeshRendererComponent class --------------------
-    static constexpr const char* const type_name_SceneMeshRendererComponent = "SceneMeshRendererComponent";
 
     static PyObject* _new_SceneMeshRendererComponent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneMeshRendererComponent);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMeshRendererComponent>::type_name);
         return nullptr;
     }
 
@@ -1896,11 +1896,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneMetallicRoughnessMaterial class --------------------
-    static constexpr const char* const type_name_SceneMetallicRoughnessMaterial = "SceneMetallicRoughnessMaterial";
 
     static PyObject* _new_SceneMetallicRoughnessMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneMetallicRoughnessMaterial);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial>::type_name);
         return nullptr;
     }
 
@@ -2243,11 +2243,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneModelTransform class --------------------
-    static constexpr const char* const type_name_SceneModelTransform = "SceneModelTransform";
 
     static PyObject* _new_SceneModelTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneModelTransform);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneModelTransform>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneModelTransform>::type_name);
         return nullptr;
     }
 
@@ -2606,11 +2606,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneNode class --------------------
-    static constexpr const char* const type_name_SceneNode = "SceneNode";
 
     static PyObject* _new_SceneNode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneNode);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneNode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneNode>::type_name);
         return nullptr;
     }
 
@@ -2825,11 +2825,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneNodeCollection class --------------------
-    static constexpr const char* const type_name_SceneNodeCollection = "SceneNodeCollection";
 
     static PyObject* _new_SceneNodeCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneNodeCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneNodeCollection>::type_name);
         return nullptr;
     }
 
@@ -3448,11 +3448,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneObject class --------------------
-    static constexpr const char* const type_name_SceneObject = "SceneObject";
 
     static PyObject* _new_SceneObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneObject);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneObject>::type_name);
         return nullptr;
     }
 
@@ -3523,11 +3523,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- ScenePbrMaterial class --------------------
-    static constexpr const char* const type_name_ScenePbrMaterial = "ScenePbrMaterial";
 
     static PyObject* _new_ScenePbrMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ScenePbrMaterial);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>::type_name);
         return nullptr;
     }
 
@@ -4030,11 +4030,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneRendererComponent class --------------------
-    static constexpr const char* const type_name_SceneRendererComponent = "SceneRendererComponent";
 
     static PyObject* _new_SceneRendererComponent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneRendererComponent);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneRendererComponent>::type_name);
         return nullptr;
     }
 
@@ -4105,11 +4105,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneSurfaceMaterialInput class --------------------
-    static constexpr const char* const type_name_SceneSurfaceMaterialInput = "SceneSurfaceMaterialInput";
 
     static PyObject* _new_SceneSurfaceMaterialInput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneSurfaceMaterialInput);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput>::type_name);
         return nullptr;
     }
 
@@ -4404,11 +4404,11 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     };
 
     // ----- SceneVisual class --------------------
-    static constexpr const char* const type_name_SceneVisual = "SceneVisual";
 
     static PyObject* _new_SceneVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Scenes::SceneVisual>::type_name);
         return nullptr;
     }
 

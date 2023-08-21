@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Gaming::UI
 {
     // ----- GameBar class --------------------
-    static constexpr const char* const type_name_GameBar = "GameBar";
 
     static PyObject* _new_GameBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameBar);
+        static_assert(py::py_type<winrt::Windows::Gaming::UI::GameBar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameBar>::type_name);
         return nullptr;
     }
 
@@ -191,11 +191,11 @@ namespace py::cpp::Windows::Gaming::UI
     };
 
     // ----- GameChatMessageReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_GameChatMessageReceivedEventArgs = "GameChatMessageReceivedEventArgs";
 
     static PyObject* _new_GameChatMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameChatMessageReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -366,11 +366,11 @@ namespace py::cpp::Windows::Gaming::UI
     };
 
     // ----- GameChatOverlay class --------------------
-    static constexpr const char* const type_name_GameChatOverlay = "GameChatOverlay";
 
     static PyObject* _new_GameChatOverlay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameChatOverlay);
+        static_assert(py::py_type<winrt::Windows::Gaming::UI::GameChatOverlay>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameChatOverlay>::type_name);
         return nullptr;
     }
 
@@ -554,7 +554,6 @@ namespace py::cpp::Windows::Gaming::UI
     };
 
     // ----- GameChatOverlayMessageSource class --------------------
-    static constexpr const char* const type_name_GameChatOverlayMessageSource = "GameChatOverlayMessageSource";
 
     static PyObject* _new_GameChatOverlayMessageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -730,11 +729,11 @@ namespace py::cpp::Windows::Gaming::UI
     };
 
     // ----- GameUIProviderActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_GameUIProviderActivatedEventArgs = "GameUIProviderActivatedEventArgs";
 
     static PyObject* _new_GameUIProviderActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameUIProviderActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>::type_name);
         return nullptr;
     }
 

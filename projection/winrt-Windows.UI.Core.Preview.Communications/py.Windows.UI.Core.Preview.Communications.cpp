@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Core::Preview::Communications
 {
     // ----- PreviewTeamCleanupRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_PreviewTeamCleanupRequestedEventArgs = "PreviewTeamCleanupRequestedEventArgs";
 
     static PyObject* _new_PreviewTeamCleanupRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewTeamCleanupRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -112,11 +112,11 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     };
 
     // ----- PreviewTeamCommandInvokedEventArgs class --------------------
-    static constexpr const char* const type_name_PreviewTeamCommandInvokedEventArgs = "PreviewTeamCommandInvokedEventArgs";
 
     static PyObject* _new_PreviewTeamCommandInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewTeamCommandInvokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -207,7 +207,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     };
 
     // ----- PreviewTeamDeviceCredentials class --------------------
-    static constexpr const char* const type_name_PreviewTeamDeviceCredentials = "PreviewTeamDeviceCredentials";
 
     static PyObject* _new_PreviewTeamDeviceCredentials(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -365,11 +364,11 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     };
 
     // ----- PreviewTeamEndMeetingRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_PreviewTeamEndMeetingRequestedEventArgs = "PreviewTeamEndMeetingRequestedEventArgs";
 
     static PyObject* _new_PreviewTeamEndMeetingRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewTeamEndMeetingRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -470,11 +469,11 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     };
 
     // ----- PreviewTeamJoinMeetingRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_PreviewTeamJoinMeetingRequestedEventArgs = "PreviewTeamJoinMeetingRequestedEventArgs";
 
     static PyObject* _new_PreviewTeamJoinMeetingRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewTeamJoinMeetingRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -595,11 +594,11 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     };
 
     // ----- PreviewTeamView class --------------------
-    static constexpr const char* const type_name_PreviewTeamView = "PreviewTeamView";
 
     static PyObject* _new_PreviewTeamView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PreviewTeamView);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView>::type_name);
         return nullptr;
     }
 

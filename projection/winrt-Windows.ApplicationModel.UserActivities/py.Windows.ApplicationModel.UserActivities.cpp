@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::UserActivities
 {
     // ----- UserActivity class --------------------
-    static constexpr const char* const type_name_UserActivity = "UserActivity";
 
     static PyObject* _new_UserActivity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -641,7 +640,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityAttribution class --------------------
-    static constexpr const char* const type_name_UserActivityAttribution = "UserActivityAttribution";
 
     static PyObject* _new_UserActivityAttribution(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -898,11 +896,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityChannel class --------------------
-    static constexpr const char* const type_name_UserActivityChannel = "UserActivityChannel";
 
     static PyObject* _new_UserActivityChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivityChannel);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>::type_name);
         return nullptr;
     }
 
@@ -1257,11 +1255,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityContentInfo class --------------------
-    static constexpr const char* const type_name_UserActivityContentInfo = "UserActivityContentInfo";
 
     static PyObject* _new_UserActivityContentInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivityContentInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>::type_name);
         return nullptr;
     }
 
@@ -1394,11 +1392,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityRequest class --------------------
-    static constexpr const char* const type_name_UserActivityRequest = "UserActivityRequest";
 
     static PyObject* _new_UserActivityRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivityRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>::type_name);
         return nullptr;
     }
 
@@ -1502,11 +1500,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityRequestManager class --------------------
-    static constexpr const char* const type_name_UserActivityRequestManager = "UserActivityRequestManager";
 
     static PyObject* _new_UserActivityRequestManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivityRequestManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>::type_name);
         return nullptr;
     }
 
@@ -1652,11 +1650,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_UserActivityRequestedEventArgs = "UserActivityRequestedEventArgs";
 
     static PyObject* _new_UserActivityRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivityRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1777,11 +1775,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivitySession class --------------------
-    static constexpr const char* const type_name_UserActivitySession = "UserActivitySession";
 
     static PyObject* _new_UserActivitySession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivitySession);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>::type_name);
         return nullptr;
     }
 
@@ -1925,11 +1923,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivitySessionHistoryItem class --------------------
-    static constexpr const char* const type_name_UserActivitySessionHistoryItem = "UserActivitySessionHistoryItem";
 
     static PyObject* _new_UserActivitySessionHistoryItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivitySessionHistoryItem);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>::type_name);
         return nullptr;
     }
 
@@ -2060,11 +2058,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- UserActivityVisualElements class --------------------
-    static constexpr const char* const type_name_UserActivityVisualElements = "UserActivityVisualElements";
 
     static PyObject* _new_UserActivityVisualElements(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserActivityVisualElements);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>::type_name);
         return nullptr;
     }
 
@@ -2423,11 +2421,11 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     };
 
     // ----- IUserActivityContentInfo interface --------------------
-    static constexpr const char* const type_name_IUserActivityContentInfo = "IUserActivityContentInfo";
 
     static PyObject* _new_IUserActivityContentInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IUserActivityContentInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>::type_name);
         return nullptr;
     }
 

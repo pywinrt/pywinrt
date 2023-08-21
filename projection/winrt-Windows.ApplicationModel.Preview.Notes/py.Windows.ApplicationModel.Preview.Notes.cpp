@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Preview::Notes
 {
     // ----- NotePlacementChangedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_NotePlacementChangedPreviewEventArgs = "NotePlacementChangedPreviewEventArgs";
 
     static PyObject* _new_NotePlacementChangedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NotePlacementChangedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     };
 
     // ----- NoteVisibilityChangedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_NoteVisibilityChangedPreviewEventArgs = "NoteVisibilityChangedPreviewEventArgs";
 
     static PyObject* _new_NoteVisibilityChangedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NoteVisibilityChangedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -217,11 +217,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     };
 
     // ----- NotesWindowManagerPreview class --------------------
-    static constexpr const char* const type_name_NotesWindowManagerPreview = "NotesWindowManagerPreview";
 
     static PyObject* _new_NotesWindowManagerPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NotesWindowManagerPreview);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>::type_name);
         return nullptr;
     }
 
@@ -848,7 +848,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     };
 
     // ----- NotesWindowManagerPreviewShowNoteOptions class --------------------
-    static constexpr const char* const type_name_NotesWindowManagerPreviewShowNoteOptions = "NotesWindowManagerPreviewShowNoteOptions";
 
     static PyObject* _new_NotesWindowManagerPreviewShowNoteOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

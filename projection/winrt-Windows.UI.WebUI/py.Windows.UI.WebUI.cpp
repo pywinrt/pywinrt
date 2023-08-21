@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::WebUI
 {
     // ----- ActivatedDeferral class --------------------
-    static constexpr const char* const type_name_ActivatedDeferral = "ActivatedDeferral";
 
     static PyObject* _new_ActivatedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ActivatedDeferral);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::ActivatedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::ActivatedDeferral>::type_name);
         return nullptr;
     }
 
@@ -113,11 +113,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- ActivatedOperation class --------------------
-    static constexpr const char* const type_name_ActivatedOperation = "ActivatedOperation";
 
     static PyObject* _new_ActivatedOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ActivatedOperation);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::ActivatedOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::ActivatedOperation>::type_name);
         return nullptr;
     }
 
@@ -218,11 +218,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- BackgroundActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_BackgroundActivatedEventArgs = "BackgroundActivatedEventArgs";
 
     static PyObject* _new_BackgroundActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::BackgroundActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -313,11 +313,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- EnteredBackgroundEventArgs class --------------------
-    static constexpr const char* const type_name_EnteredBackgroundEventArgs = "EnteredBackgroundEventArgs";
 
     static PyObject* _new_EnteredBackgroundEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EnteredBackgroundEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::EnteredBackgroundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -418,11 +418,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- HtmlPrintDocumentSource class --------------------
-    static constexpr const char* const type_name_HtmlPrintDocumentSource = "HtmlPrintDocumentSource";
 
     static PyObject* _new_HtmlPrintDocumentSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HtmlPrintDocumentSource);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::HtmlPrintDocumentSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::HtmlPrintDocumentSource>::type_name);
         return nullptr;
     }
 
@@ -982,11 +982,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- LeavingBackgroundEventArgs class --------------------
-    static constexpr const char* const type_name_LeavingBackgroundEventArgs = "LeavingBackgroundEventArgs";
 
     static PyObject* _new_LeavingBackgroundEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LeavingBackgroundEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::LeavingBackgroundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1087,11 +1087,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- NewWebUIViewCreatedEventArgs class --------------------
-    static constexpr const char* const type_name_NewWebUIViewCreatedEventArgs = "NewWebUIViewCreatedEventArgs";
 
     static PyObject* _new_NewWebUIViewCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NewWebUIViewCreatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1252,11 +1252,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- SuspendingDeferral class --------------------
-    static constexpr const char* const type_name_SuspendingDeferral = "SuspendingDeferral";
 
     static PyObject* _new_SuspendingDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SuspendingDeferral);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::SuspendingDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::SuspendingDeferral>::type_name);
         return nullptr;
     }
 
@@ -1358,11 +1358,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- SuspendingEventArgs class --------------------
-    static constexpr const char* const type_name_SuspendingEventArgs = "SuspendingEventArgs";
 
     static PyObject* _new_SuspendingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SuspendingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::SuspendingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::SuspendingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1453,11 +1453,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- SuspendingOperation class --------------------
-    static constexpr const char* const type_name_SuspendingOperation = "SuspendingOperation";
 
     static PyObject* _new_SuspendingOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SuspendingOperation);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::SuspendingOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::SuspendingOperation>::type_name);
         return nullptr;
     }
 
@@ -1578,11 +1578,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIApplication class --------------------
-    static constexpr const char* const type_name_WebUIApplication = "WebUIApplication";
 
     static PyObject* _new_WebUIApplication(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIApplication);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIApplication>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIApplication>::type_name);
         return nullptr;
     }
 
@@ -2070,11 +2070,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIAppointmentsProviderAddAppointmentActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs = "WebUIAppointmentsProviderAddAppointmentActivatedEventArgs";
 
     static PyObject* _new_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2285,11 +2285,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs = "WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs";
 
     static PyObject* _new_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2500,11 +2500,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs = "WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs";
 
     static PyObject* _new_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2715,11 +2715,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = "WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs";
 
     static PyObject* _new_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2970,11 +2970,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs = "WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs";
 
     static PyObject* _new_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3205,11 +3205,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIBackgroundTaskInstance class --------------------
-    static constexpr const char* const type_name_WebUIBackgroundTaskInstance = "WebUIBackgroundTaskInstance";
 
     static PyObject* _new_WebUIBackgroundTaskInstance(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIBackgroundTaskInstance);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstance>::type_name);
         return nullptr;
     }
 
@@ -3279,11 +3279,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIBackgroundTaskInstanceRuntimeClass class --------------------
-    static constexpr const char* const type_name_WebUIBackgroundTaskInstanceRuntimeClass = "WebUIBackgroundTaskInstanceRuntimeClass";
 
     static PyObject* _new_WebUIBackgroundTaskInstanceRuntimeClass(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIBackgroundTaskInstanceRuntimeClass);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass>::type_name);
         return nullptr;
     }
 
@@ -3605,11 +3605,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIBarcodeScannerPreviewActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIBarcodeScannerPreviewActivatedEventArgs = "WebUIBarcodeScannerPreviewActivatedEventArgs";
 
     static PyObject* _new_WebUIBarcodeScannerPreviewActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIBarcodeScannerPreviewActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3800,11 +3800,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUICachedFileUpdaterActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUICachedFileUpdaterActivatedEventArgs = "WebUICachedFileUpdaterActivatedEventArgs";
 
     static PyObject* _new_WebUICachedFileUpdaterActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUICachedFileUpdaterActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3995,11 +3995,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUICameraSettingsActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUICameraSettingsActivatedEventArgs = "WebUICameraSettingsActivatedEventArgs";
 
     static PyObject* _new_WebUICameraSettingsActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUICameraSettingsActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4190,11 +4190,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUICommandLineActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUICommandLineActivatedEventArgs = "WebUICommandLineActivatedEventArgs";
 
     static PyObject* _new_WebUICommandLineActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUICommandLineActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4385,11 +4385,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactCallActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactCallActivatedEventArgs = "WebUIContactCallActivatedEventArgs";
 
     static PyObject* _new_WebUIContactCallActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactCallActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4620,11 +4620,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactMapActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactMapActivatedEventArgs = "WebUIContactMapActivatedEventArgs";
 
     static PyObject* _new_WebUIContactMapActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactMapActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4835,11 +4835,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactMessageActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactMessageActivatedEventArgs = "WebUIContactMessageActivatedEventArgs";
 
     static PyObject* _new_WebUIContactMessageActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactMessageActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5070,11 +5070,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactPanelActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactPanelActivatedEventArgs = "WebUIContactPanelActivatedEventArgs";
 
     static PyObject* _new_WebUIContactPanelActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactPanelActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5285,11 +5285,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactPickerActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactPickerActivatedEventArgs = "WebUIContactPickerActivatedEventArgs";
 
     static PyObject* _new_WebUIContactPickerActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactPickerActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5460,11 +5460,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactPostActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactPostActivatedEventArgs = "WebUIContactPostActivatedEventArgs";
 
     static PyObject* _new_WebUIContactPostActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactPostActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5695,11 +5695,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIContactVideoCallActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIContactVideoCallActivatedEventArgs = "WebUIContactVideoCallActivatedEventArgs";
 
     static PyObject* _new_WebUIContactVideoCallActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIContactVideoCallActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5930,11 +5930,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIDeviceActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIDeviceActivatedEventArgs = "WebUIDeviceActivatedEventArgs";
 
     static PyObject* _new_WebUIDeviceActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIDeviceActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6165,11 +6165,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIDevicePairingActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIDevicePairingActivatedEventArgs = "WebUIDevicePairingActivatedEventArgs";
 
     static PyObject* _new_WebUIDevicePairingActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIDevicePairingActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6360,11 +6360,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIDialReceiverActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIDialReceiverActivatedEventArgs = "WebUIDialReceiverActivatedEventArgs";
 
     static PyObject* _new_WebUIDialReceiverActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIDialReceiverActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6615,11 +6615,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIFileActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIFileActivatedEventArgs = "WebUIFileActivatedEventArgs";
 
     static PyObject* _new_WebUIFileActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIFileActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIFileActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6870,11 +6870,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIFileOpenPickerActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIFileOpenPickerActivatedEventArgs = "WebUIFileOpenPickerActivatedEventArgs";
 
     static PyObject* _new_WebUIFileOpenPickerActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIFileOpenPickerActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7085,11 +7085,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIFileOpenPickerContinuationEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIFileOpenPickerContinuationEventArgs = "WebUIFileOpenPickerContinuationEventArgs";
 
     static PyObject* _new_WebUIFileOpenPickerContinuationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIFileOpenPickerContinuationEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7300,11 +7300,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIFileSavePickerActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIFileSavePickerActivatedEventArgs = "WebUIFileSavePickerActivatedEventArgs";
 
     static PyObject* _new_WebUIFileSavePickerActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIFileSavePickerActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7535,11 +7535,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIFileSavePickerContinuationEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIFileSavePickerContinuationEventArgs = "WebUIFileSavePickerContinuationEventArgs";
 
     static PyObject* _new_WebUIFileSavePickerContinuationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIFileSavePickerContinuationEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7750,11 +7750,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIFolderPickerContinuationEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIFolderPickerContinuationEventArgs = "WebUIFolderPickerContinuationEventArgs";
 
     static PyObject* _new_WebUIFolderPickerContinuationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIFolderPickerContinuationEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7965,11 +7965,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUILaunchActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUILaunchActivatedEventArgs = "WebUILaunchActivatedEventArgs";
 
     static PyObject* _new_WebUILaunchActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUILaunchActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUILaunchActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8240,11 +8240,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUILockScreenActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUILockScreenActivatedEventArgs = "WebUILockScreenActivatedEventArgs";
 
     static PyObject* _new_WebUILockScreenActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUILockScreenActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8455,11 +8455,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUILockScreenCallActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUILockScreenCallActivatedEventArgs = "WebUILockScreenCallActivatedEventArgs";
 
     static PyObject* _new_WebUILockScreenCallActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUILockScreenCallActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8690,11 +8690,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUILockScreenComponentActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUILockScreenComponentActivatedEventArgs = "WebUILockScreenComponentActivatedEventArgs";
 
     static PyObject* _new_WebUILockScreenComponentActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUILockScreenComponentActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8845,11 +8845,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUINavigatedDeferral class --------------------
-    static constexpr const char* const type_name_WebUINavigatedDeferral = "WebUINavigatedDeferral";
 
     static PyObject* _new_WebUINavigatedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUINavigatedDeferral);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUINavigatedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUINavigatedDeferral>::type_name);
         return nullptr;
     }
 
@@ -8951,11 +8951,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUINavigatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUINavigatedEventArgs = "WebUINavigatedEventArgs";
 
     static PyObject* _new_WebUINavigatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUINavigatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUINavigatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9046,11 +9046,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUINavigatedOperation class --------------------
-    static constexpr const char* const type_name_WebUINavigatedOperation = "WebUINavigatedOperation";
 
     static PyObject* _new_WebUINavigatedOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUINavigatedOperation);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUINavigatedOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUINavigatedOperation>::type_name);
         return nullptr;
     }
 
@@ -9151,11 +9151,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIPhoneCallActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIPhoneCallActivatedEventArgs = "WebUIPhoneCallActivatedEventArgs";
 
     static PyObject* _new_WebUIPhoneCallActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIPhoneCallActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9346,11 +9346,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIPrint3DWorkflowActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIPrint3DWorkflowActivatedEventArgs = "WebUIPrint3DWorkflowActivatedEventArgs";
 
     static PyObject* _new_WebUIPrint3DWorkflowActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIPrint3DWorkflowActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9521,11 +9521,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIPrintTaskSettingsActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIPrintTaskSettingsActivatedEventArgs = "WebUIPrintTaskSettingsActivatedEventArgs";
 
     static PyObject* _new_WebUIPrintTaskSettingsActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIPrintTaskSettingsActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9696,11 +9696,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIPrintWorkflowForegroundTaskActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIPrintWorkflowForegroundTaskActivatedEventArgs = "WebUIPrintWorkflowForegroundTaskActivatedEventArgs";
 
     static PyObject* _new_WebUIPrintWorkflowForegroundTaskActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIPrintWorkflowForegroundTaskActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9851,11 +9851,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIProtocolActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIProtocolActivatedEventArgs = "WebUIProtocolActivatedEventArgs";
 
     static PyObject* _new_WebUIProtocolActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIProtocolActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10106,11 +10106,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIProtocolForResultsActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIProtocolForResultsActivatedEventArgs = "WebUIProtocolForResultsActivatedEventArgs";
 
     static PyObject* _new_WebUIProtocolForResultsActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIProtocolForResultsActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10381,11 +10381,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIRestrictedLaunchActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIRestrictedLaunchActivatedEventArgs = "WebUIRestrictedLaunchActivatedEventArgs";
 
     static PyObject* _new_WebUIRestrictedLaunchActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIRestrictedLaunchActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10576,11 +10576,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUISearchActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUISearchActivatedEventArgs = "WebUISearchActivatedEventArgs";
 
     static PyObject* _new_WebUISearchActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUISearchActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUISearchActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10811,11 +10811,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIShareTargetActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIShareTargetActivatedEventArgs = "WebUIShareTargetActivatedEventArgs";
 
     static PyObject* _new_WebUIShareTargetActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIShareTargetActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11006,11 +11006,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIStartupTaskActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIStartupTaskActivatedEventArgs = "WebUIStartupTaskActivatedEventArgs";
 
     static PyObject* _new_WebUIStartupTaskActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIStartupTaskActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11201,11 +11201,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIToastNotificationActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIToastNotificationActivatedEventArgs = "WebUIToastNotificationActivatedEventArgs";
 
     static PyObject* _new_WebUIToastNotificationActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIToastNotificationActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11416,11 +11416,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIUserDataAccountProviderActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIUserDataAccountProviderActivatedEventArgs = "WebUIUserDataAccountProviderActivatedEventArgs";
 
     static PyObject* _new_WebUIUserDataAccountProviderActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIUserDataAccountProviderActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11591,11 +11591,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIView class --------------------
-    static constexpr const char* const type_name_WebUIView = "WebUIView";
 
     static PyObject* _new_WebUIView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIView);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIView>::type_name);
         return nullptr;
     }
 
@@ -13313,11 +13313,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIVoiceCommandActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIVoiceCommandActivatedEventArgs = "WebUIVoiceCommandActivatedEventArgs";
 
     static PyObject* _new_WebUIVoiceCommandActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIVoiceCommandActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -13508,11 +13508,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIWalletActionActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIWalletActionActivatedEventArgs = "WebUIWalletActionActivatedEventArgs";
 
     static PyObject* _new_WebUIWalletActionActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIWalletActionActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -13723,11 +13723,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIWebAccountProviderActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIWebAccountProviderActivatedEventArgs = "WebUIWebAccountProviderActivatedEventArgs";
 
     static PyObject* _new_WebUIWebAccountProviderActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIWebAccountProviderActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -13918,11 +13918,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- WebUIWebAuthenticationBrokerContinuationEventArgs class --------------------
-    static constexpr const char* const type_name_WebUIWebAuthenticationBrokerContinuationEventArgs = "WebUIWebAuthenticationBrokerContinuationEventArgs";
 
     static PyObject* _new_WebUIWebAuthenticationBrokerContinuationEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebUIWebAuthenticationBrokerContinuationEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs>::type_name);
         return nullptr;
     }
 
@@ -14113,11 +14113,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- IActivatedEventArgsDeferral interface --------------------
-    static constexpr const char* const type_name_IActivatedEventArgsDeferral = "IActivatedEventArgsDeferral";
 
     static PyObject* _new_IActivatedEventArgsDeferral(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IActivatedEventArgsDeferral);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::IActivatedEventArgsDeferral>::type_name);
         return nullptr;
     }
 
@@ -14208,11 +14208,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- IWebUIBackgroundTaskInstance interface --------------------
-    static constexpr const char* const type_name_IWebUIBackgroundTaskInstance = "IWebUIBackgroundTaskInstance";
 
     static PyObject* _new_IWebUIBackgroundTaskInstance(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebUIBackgroundTaskInstance);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::IWebUIBackgroundTaskInstance>::type_name);
         return nullptr;
     }
 
@@ -14331,11 +14331,11 @@ namespace py::cpp::Windows::UI::WebUI
     };
 
     // ----- IWebUINavigatedEventArgs interface --------------------
-    static constexpr const char* const type_name_IWebUINavigatedEventArgs = "IWebUINavigatedEventArgs";
 
     static PyObject* _new_IWebUINavigatedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebUINavigatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WebUI::IWebUINavigatedEventArgs>::type_name);
         return nullptr;
     }
 

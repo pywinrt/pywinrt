@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics
 {
     // ----- IGeometrySource2D interface --------------------
-    static constexpr const char* const type_name_IGeometrySource2D = "IGeometrySource2D";
 
     static PyObject* _new_IGeometrySource2D(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGeometrySource2D);
+        static_assert(py::py_type<winrt::Windows::Graphics::IGeometrySource2D>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::IGeometrySource2D>::type_name);
         return nullptr;
     }
 
@@ -82,7 +82,6 @@ namespace py::cpp::Windows::Graphics
     };
 
     // ----- DisplayAdapterId struct --------------------
-    static constexpr const char* const type_name_DisplayAdapterId = "DisplayAdapterId";
 
     PyObject* _new_DisplayAdapterId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -217,7 +216,6 @@ namespace py::cpp::Windows::Graphics
     };
 
     // ----- DisplayId struct --------------------
-    static constexpr const char* const type_name_DisplayId = "DisplayId";
 
     PyObject* _new_DisplayId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -317,7 +315,6 @@ namespace py::cpp::Windows::Graphics
     };
 
     // ----- PointInt32 struct --------------------
-    static constexpr const char* const type_name_PointInt32 = "PointInt32";
 
     PyObject* _new_PointInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -452,7 +449,6 @@ namespace py::cpp::Windows::Graphics
     };
 
     // ----- RectInt32 struct --------------------
-    static constexpr const char* const type_name_RectInt32 = "RectInt32";
 
     PyObject* _new_RectInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -657,7 +653,6 @@ namespace py::cpp::Windows::Graphics
     };
 
     // ----- SizeInt32 struct --------------------
-    static constexpr const char* const type_name_SizeInt32 = "SizeInt32";
 
     PyObject* _new_SizeInt32(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

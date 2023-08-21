@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::SpeechSynthesis
 {
     // ----- SpeechSynthesisStream class --------------------
-    static constexpr const char* const type_name_SpeechSynthesisStream = "SpeechSynthesisStream";
 
     static PyObject* _new_SpeechSynthesisStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechSynthesisStream);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>::type_name);
         return nullptr;
     }
 
@@ -526,7 +526,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     };
 
     // ----- SpeechSynthesizer class --------------------
-    static constexpr const char* const type_name_SpeechSynthesizer = "SpeechSynthesizer";
 
     static PyObject* _new_SpeechSynthesizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -901,11 +900,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     };
 
     // ----- SpeechSynthesizerOptions class --------------------
-    static constexpr const char* const type_name_SpeechSynthesizerOptions = "SpeechSynthesizerOptions";
 
     static PyObject* _new_SpeechSynthesizerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechSynthesizerOptions);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>::type_name);
         return nullptr;
     }
 
@@ -1312,11 +1311,11 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     };
 
     // ----- VoiceInformation class --------------------
-    static constexpr const char* const type_name_VoiceInformation = "VoiceInformation";
 
     static PyObject* _new_VoiceInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceInformation);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>::type_name);
         return nullptr;
     }
 

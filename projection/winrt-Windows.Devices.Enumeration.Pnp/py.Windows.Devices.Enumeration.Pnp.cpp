@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Enumeration::Pnp
 {
     // ----- PnpObject class --------------------
-    static constexpr const char* const type_name_PnpObject = "PnpObject";
 
     static PyObject* _new_PnpObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PnpObject);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>::type_name);
         return nullptr;
     }
 
@@ -319,11 +319,11 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     };
 
     // ----- PnpObjectCollection class --------------------
-    static constexpr const char* const type_name_PnpObjectCollection = "PnpObjectCollection";
 
     static PyObject* _new_PnpObjectCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PnpObjectCollection);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>::type_name);
         return nullptr;
     }
 
@@ -667,11 +667,11 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     };
 
     // ----- PnpObjectUpdate class --------------------
-    static constexpr const char* const type_name_PnpObjectUpdate = "PnpObjectUpdate";
 
     static PyObject* _new_PnpObjectUpdate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PnpObjectUpdate);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>::type_name);
         return nullptr;
     }
 
@@ -802,11 +802,11 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     };
 
     // ----- PnpObjectWatcher class --------------------
-    static constexpr const char* const type_name_PnpObjectWatcher = "PnpObjectWatcher";
 
     static PyObject* _new_PnpObjectWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PnpObjectWatcher);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>::type_name);
         return nullptr;
     }
 

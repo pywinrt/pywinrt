@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::FaceAnalysis
 {
     // ----- DetectedFace class --------------------
-    static constexpr const char* const type_name_DetectedFace = "DetectedFace";
 
     static PyObject* _new_DetectedFace(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DetectedFace);
+        static_assert(py::py_type<winrt::Windows::Media::FaceAnalysis::DetectedFace>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::FaceAnalysis::DetectedFace>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     };
 
     // ----- FaceDetector class --------------------
-    static constexpr const char* const type_name_FaceDetector = "FaceDetector";
 
     static PyObject* _new_FaceDetector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FaceDetector);
+        static_assert(py::py_type<winrt::Windows::Media::FaceAnalysis::FaceDetector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::FaceAnalysis::FaceDetector>::type_name);
         return nullptr;
     }
 
@@ -458,11 +458,11 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     };
 
     // ----- FaceTracker class --------------------
-    static constexpr const char* const type_name_FaceTracker = "FaceTracker";
 
     static PyObject* _new_FaceTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FaceTracker);
+        static_assert(py::py_type<winrt::Windows::Media::FaceAnalysis::FaceTracker>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::FaceAnalysis::FaceTracker>::type_name);
         return nullptr;
     }
 

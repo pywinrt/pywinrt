@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
 {
     // ----- CoreDragDropManager class --------------------
-    static constexpr const char* const type_name_CoreDragDropManager = "CoreDragDropManager";
 
     static PyObject* _new_CoreDragDropManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreDragDropManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>::type_name);
         return nullptr;
     }
 
@@ -205,11 +205,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     };
 
     // ----- CoreDragInfo class --------------------
-    static constexpr const char* const type_name_CoreDragInfo = "CoreDragInfo";
 
     static PyObject* _new_CoreDragInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreDragInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>::type_name);
         return nullptr;
     }
 
@@ -360,7 +360,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     };
 
     // ----- CoreDragOperation class --------------------
-    static constexpr const char* const type_name_CoreDragOperation = "CoreDragOperation";
 
     static PyObject* _new_CoreDragOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -692,11 +691,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     };
 
     // ----- CoreDragUIOverride class --------------------
-    static constexpr const char* const type_name_CoreDragUIOverride = "CoreDragUIOverride";
 
     static PyObject* _new_CoreDragUIOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreDragUIOverride);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>::type_name);
         return nullptr;
     }
 
@@ -1045,11 +1044,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     };
 
     // ----- CoreDropOperationTargetRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreDropOperationTargetRequestedEventArgs = "CoreDropOperationTargetRequestedEventArgs";
 
     static PyObject* _new_CoreDropOperationTargetRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreDropOperationTargetRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1153,11 +1152,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     };
 
     // ----- ICoreDropOperationTarget interface --------------------
-    static constexpr const char* const type_name_ICoreDropOperationTarget = "ICoreDropOperationTarget";
 
     static PyObject* _new_ICoreDropOperationTarget(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICoreDropOperationTarget);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>::type_name);
         return nullptr;
     }
 

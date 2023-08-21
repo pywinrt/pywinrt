@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Lights::Effects
 {
     // ----- LampArrayBitmapEffect class --------------------
-    static constexpr const char* const type_name_LampArrayBitmapEffect = "LampArrayBitmapEffect";
 
     static PyObject* _new_LampArrayBitmapEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -365,11 +364,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArrayBitmapRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_LampArrayBitmapRequestedEventArgs = "LampArrayBitmapRequestedEventArgs";
 
     static PyObject* _new_LampArrayBitmapRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LampArrayBitmapRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -493,7 +492,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArrayBlinkEffect class --------------------
-    static constexpr const char* const type_name_LampArrayBlinkEffect = "LampArrayBlinkEffect";
 
     static PyObject* _new_LampArrayBlinkEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1026,7 +1024,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArrayColorRampEffect class --------------------
-    static constexpr const char* const type_name_LampArrayColorRampEffect = "LampArrayColorRampEffect";
 
     static PyObject* _new_LampArrayColorRampEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1367,7 +1364,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArrayCustomEffect class --------------------
-    static constexpr const char* const type_name_LampArrayCustomEffect = "LampArrayCustomEffect";
 
     static PyObject* _new_LampArrayCustomEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1657,7 +1653,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArrayEffectPlaylist class --------------------
-    static constexpr const char* const type_name_LampArrayEffectPlaylist = "LampArrayEffectPlaylist";
 
     static PyObject* _new_LampArrayEffectPlaylist(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2430,7 +2425,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArraySolidEffect class --------------------
-    static constexpr const char* const type_name_LampArraySolidEffect = "LampArraySolidEffect";
 
     static PyObject* _new_LampArraySolidEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2771,11 +2765,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- LampArrayUpdateRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_LampArrayUpdateRequestedEventArgs = "LampArrayUpdateRequestedEventArgs";
 
     static PyObject* _new_LampArrayUpdateRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LampArrayUpdateRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3001,11 +2995,11 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     };
 
     // ----- ILampArrayEffect interface --------------------
-    static constexpr const char* const type_name_ILampArrayEffect = "ILampArrayEffect";
 
     static PyObject* _new_ILampArrayEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ILampArrayEffect);
+        static_assert(py::py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>::type_name);
         return nullptr;
     }
 

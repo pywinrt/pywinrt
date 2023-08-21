@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Embedded::DeviceLockdown
 {
     // ----- DeviceLockdownProfile class --------------------
-    static constexpr const char* const type_name_DeviceLockdownProfile = "DeviceLockdownProfile";
 
     static PyObject* _new_DeviceLockdownProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceLockdownProfile);
+        static_assert(py::py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile>::type_name);
         return nullptr;
     }
 
@@ -165,11 +165,11 @@ namespace py::cpp::Windows::Embedded::DeviceLockdown
     };
 
     // ----- DeviceLockdownProfileInformation class --------------------
-    static constexpr const char* const type_name_DeviceLockdownProfileInformation = "DeviceLockdownProfileInformation";
 
     static PyObject* _new_DeviceLockdownProfileInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceLockdownProfileInformation);
+        static_assert(py::py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation>::type_name);
         return nullptr;
     }
 

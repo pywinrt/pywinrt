@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Input::Preview
 {
     // ----- GazeDevicePreview class --------------------
-    static constexpr const char* const type_name_GazeDevicePreview = "GazeDevicePreview";
 
     static PyObject* _new_GazeDevicePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeDevicePreview);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDevicePreview>::type_name);
         return nullptr;
     }
 
@@ -258,11 +258,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeDeviceWatcherAddedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_GazeDeviceWatcherAddedPreviewEventArgs = "GazeDeviceWatcherAddedPreviewEventArgs";
 
     static PyObject* _new_GazeDeviceWatcherAddedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeDeviceWatcherAddedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -353,11 +353,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeDeviceWatcherPreview class --------------------
-    static constexpr const char* const type_name_GazeDeviceWatcherPreview = "GazeDeviceWatcherPreview";
 
     static PyObject* _new_GazeDeviceWatcherPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeDeviceWatcherPreview);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview>::type_name);
         return nullptr;
     }
 
@@ -670,11 +670,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeDeviceWatcherRemovedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_GazeDeviceWatcherRemovedPreviewEventArgs = "GazeDeviceWatcherRemovedPreviewEventArgs";
 
     static PyObject* _new_GazeDeviceWatcherRemovedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeDeviceWatcherRemovedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -765,11 +765,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeDeviceWatcherUpdatedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_GazeDeviceWatcherUpdatedPreviewEventArgs = "GazeDeviceWatcherUpdatedPreviewEventArgs";
 
     static PyObject* _new_GazeDeviceWatcherUpdatedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeDeviceWatcherUpdatedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -860,11 +860,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeEnteredPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_GazeEnteredPreviewEventArgs = "GazeEnteredPreviewEventArgs";
 
     static PyObject* _new_GazeEnteredPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeEnteredPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1003,11 +1003,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeExitedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_GazeExitedPreviewEventArgs = "GazeExitedPreviewEventArgs";
 
     static PyObject* _new_GazeExitedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeExitedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1146,11 +1146,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeInputSourcePreview class --------------------
-    static constexpr const char* const type_name_GazeInputSourcePreview = "GazeInputSourcePreview";
 
     static PyObject* _new_GazeInputSourcePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeInputSourcePreview);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeInputSourcePreview>::type_name);
         return nullptr;
     }
 
@@ -1416,11 +1416,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazeMovedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_GazeMovedPreviewEventArgs = "GazeMovedPreviewEventArgs";
 
     static PyObject* _new_GazeMovedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazeMovedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1589,11 +1589,11 @@ namespace py::cpp::Windows::Devices::Input::Preview
     };
 
     // ----- GazePointPreview class --------------------
-    static constexpr const char* const type_name_GazePointPreview = "GazePointPreview";
 
     static PyObject* _new_GazePointPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GazePointPreview);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::Preview::GazePointPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::Preview::GazePointPreview>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::SmartCards
 {
     // ----- CardAddedEventArgs class --------------------
-    static constexpr const char* const type_name_CardAddedEventArgs = "CardAddedEventArgs";
 
     static PyObject* _new_CardAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CardAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::CardAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::CardAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- CardRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_CardRemovedEventArgs = "CardRemovedEventArgs";
 
     static PyObject* _new_CardRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CardRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -197,11 +197,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- KnownSmartCardAppletIds class --------------------
-    static constexpr const char* const type_name_KnownSmartCardAppletIds = "KnownSmartCardAppletIds";
 
     static PyObject* _new_KnownSmartCardAppletIds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownSmartCardAppletIds);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds>::type_name);
         return nullptr;
     }
 
@@ -291,11 +291,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCard class --------------------
-    static constexpr const char* const type_name_SmartCard = "SmartCard";
 
     static PyObject* _new_SmartCard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCard);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCard>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCard>::type_name);
         return nullptr;
     }
 
@@ -476,7 +476,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardAppletIdGroup class --------------------
-    static constexpr const char* const type_name_SmartCardAppletIdGroup = "SmartCardAppletIdGroup";
 
     static PyObject* _new_SmartCardAppletIdGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1008,11 +1007,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardAppletIdGroupRegistration class --------------------
-    static constexpr const char* const type_name_SmartCardAppletIdGroupRegistration = "SmartCardAppletIdGroupRegistration";
 
     static PyObject* _new_SmartCardAppletIdGroupRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardAppletIdGroupRegistration);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>::type_name);
         return nullptr;
     }
 
@@ -1259,7 +1258,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardAutomaticResponseApdu class --------------------
-    static constexpr const char* const type_name_SmartCardAutomaticResponseApdu = "SmartCardAutomaticResponseApdu";
 
     static PyObject* _new_SmartCardAutomaticResponseApdu(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1744,11 +1742,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardChallengeContext class --------------------
-    static constexpr const char* const type_name_SmartCardChallengeContext = "SmartCardChallengeContext";
 
     static PyObject* _new_SmartCardChallengeContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardChallengeContext);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardChallengeContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardChallengeContext>::type_name);
         return nullptr;
     }
 
@@ -2012,11 +2010,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardConnection class --------------------
-    static constexpr const char* const type_name_SmartCardConnection = "SmartCardConnection";
 
     static PyObject* _new_SmartCardConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardConnection);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardConnection>::type_name);
         return nullptr;
     }
 
@@ -2172,11 +2170,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramGenerator class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramGenerator = "SmartCardCryptogramGenerator";
 
     static PyObject* _new_SmartCardCryptogramGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardCryptogramGenerator);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator>::type_name);
         return nullptr;
     }
 
@@ -2790,7 +2788,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult = "SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult";
 
     static PyObject* _new_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2928,7 +2925,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult = "SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult";
 
     static PyObject* _new_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3066,7 +3062,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult = "SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult";
 
     static PyObject* _new_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3204,7 +3199,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramMaterialCharacteristics class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramMaterialCharacteristics = "SmartCardCryptogramMaterialCharacteristics";
 
     static PyObject* _new_SmartCardCryptogramMaterialCharacteristics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3462,7 +3456,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramMaterialPackageCharacteristics class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramMaterialPackageCharacteristics = "SmartCardCryptogramMaterialPackageCharacteristics";
 
     static PyObject* _new_SmartCardCryptogramMaterialPackageCharacteristics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3640,11 +3633,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramMaterialPossessionProof class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramMaterialPossessionProof = "SmartCardCryptogramMaterialPossessionProof";
 
     static PyObject* _new_SmartCardCryptogramMaterialPossessionProof(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardCryptogramMaterialPossessionProof);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>::type_name);
         return nullptr;
     }
 
@@ -3755,7 +3748,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramPlacementStep class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramPlacementStep = "SmartCardCryptogramPlacementStep";
 
     static PyObject* _new_SmartCardCryptogramPlacementStep(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4285,7 +4277,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramStorageKeyCharacteristics class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramStorageKeyCharacteristics = "SmartCardCryptogramStorageKeyCharacteristics";
 
     static PyObject* _new_SmartCardCryptogramStorageKeyCharacteristics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4463,11 +4454,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardCryptogramStorageKeyInfo class --------------------
-    static constexpr const char* const type_name_SmartCardCryptogramStorageKeyInfo = "SmartCardCryptogramStorageKeyInfo";
 
     static PyObject* _new_SmartCardCryptogramStorageKeyInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardCryptogramStorageKeyInfo);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>::type_name);
         return nullptr;
     }
 
@@ -4698,11 +4689,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardEmulator class --------------------
-    static constexpr const char* const type_name_SmartCardEmulator = "SmartCardEmulator";
 
     static PyObject* _new_SmartCardEmulator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardEmulator);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulator>::type_name);
         return nullptr;
     }
 
@@ -5138,11 +5129,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardEmulatorApduReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_SmartCardEmulatorApduReceivedEventArgs = "SmartCardEmulatorApduReceivedEventArgs";
 
     static PyObject* _new_SmartCardEmulatorApduReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardEmulatorApduReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5401,11 +5392,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardEmulatorConnectionDeactivatedEventArgs class --------------------
-    static constexpr const char* const type_name_SmartCardEmulatorConnectionDeactivatedEventArgs = "SmartCardEmulatorConnectionDeactivatedEventArgs";
 
     static PyObject* _new_SmartCardEmulatorConnectionDeactivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardEmulatorConnectionDeactivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5516,11 +5507,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardEmulatorConnectionProperties class --------------------
-    static constexpr const char* const type_name_SmartCardEmulatorConnectionProperties = "SmartCardEmulatorConnectionProperties";
 
     static PyObject* _new_SmartCardEmulatorConnectionProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardEmulatorConnectionProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>::type_name);
         return nullptr;
     }
 
@@ -5631,7 +5622,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardPinPolicy class --------------------
-    static constexpr const char* const type_name_SmartCardPinPolicy = "SmartCardPinPolicy";
 
     static PyObject* _new_SmartCardPinPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6017,11 +6007,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardPinResetDeferral class --------------------
-    static constexpr const char* const type_name_SmartCardPinResetDeferral = "SmartCardPinResetDeferral";
 
     static PyObject* _new_SmartCardPinResetDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardPinResetDeferral);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral>::type_name);
         return nullptr;
     }
 
@@ -6123,11 +6113,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardPinResetRequest class --------------------
-    static constexpr const char* const type_name_SmartCardPinResetRequest = "SmartCardPinResetRequest";
 
     static PyObject* _new_SmartCardPinResetRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardPinResetRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest>::type_name);
         return nullptr;
     }
 
@@ -6301,11 +6291,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardProvisioning class --------------------
-    static constexpr const char* const type_name_SmartCardProvisioning = "SmartCardProvisioning";
 
     static PyObject* _new_SmartCardProvisioning(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardProvisioning);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardProvisioning>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardProvisioning>::type_name);
         return nullptr;
     }
 
@@ -6756,11 +6746,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardReader class --------------------
-    static constexpr const char* const type_name_SmartCardReader = "SmartCardReader";
 
     static PyObject* _new_SmartCardReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardReader);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardReader>::type_name);
         return nullptr;
     }
 
@@ -7123,11 +7113,11 @@ namespace py::cpp::Windows::Devices::SmartCards
     };
 
     // ----- SmartCardTriggerDetails class --------------------
-    static constexpr const char* const type_name_SmartCardTriggerDetails = "SmartCardTriggerDetails";
 
     static PyObject* _new_SmartCardTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartCardTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails>::type_name);
         return nullptr;
     }
 

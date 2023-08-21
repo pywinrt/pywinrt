@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::AI::MachineLearning::Preview
 {
     // ----- ImageVariableDescriptorPreview class --------------------
-    static constexpr const char* const type_name_ImageVariableDescriptorPreview = "ImageVariableDescriptorPreview";
 
     static PyObject* _new_ImageVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageVariableDescriptorPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>::type_name);
         return nullptr;
     }
 
@@ -222,11 +222,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- InferencingOptionsPreview class --------------------
-    static constexpr const char* const type_name_InferencingOptionsPreview = "InferencingOptionsPreview";
 
     static PyObject* _new_InferencingOptionsPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InferencingOptionsPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>::type_name);
         return nullptr;
     }
 
@@ -537,7 +537,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- LearningModelBindingPreview class --------------------
-    static constexpr const char* const type_name_LearningModelBindingPreview = "LearningModelBindingPreview";
 
     static PyObject* _new_LearningModelBindingPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -954,11 +953,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- LearningModelDescriptionPreview class --------------------
-    static constexpr const char* const type_name_LearningModelDescriptionPreview = "LearningModelDescriptionPreview";
 
     static PyObject* _new_LearningModelDescriptionPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LearningModelDescriptionPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>::type_name);
         return nullptr;
     }
 
@@ -1189,11 +1188,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- LearningModelEvaluationResultPreview class --------------------
-    static constexpr const char* const type_name_LearningModelEvaluationResultPreview = "LearningModelEvaluationResultPreview";
 
     static PyObject* _new_LearningModelEvaluationResultPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LearningModelEvaluationResultPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>::type_name);
         return nullptr;
     }
 
@@ -1304,11 +1303,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- LearningModelPreview class --------------------
-    static constexpr const char* const type_name_LearningModelPreview = "LearningModelPreview";
 
     static PyObject* _new_LearningModelPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LearningModelPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>::type_name);
         return nullptr;
     }
 
@@ -1577,11 +1576,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- LearningModelVariableDescriptorPreview class --------------------
-    static constexpr const char* const type_name_LearningModelVariableDescriptorPreview = "LearningModelVariableDescriptorPreview";
 
     static PyObject* _new_LearningModelVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LearningModelVariableDescriptorPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>::type_name);
         return nullptr;
     }
 
@@ -1732,11 +1731,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- MapVariableDescriptorPreview class --------------------
-    static constexpr const char* const type_name_MapVariableDescriptorPreview = "MapVariableDescriptorPreview";
 
     static PyObject* _new_MapVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapVariableDescriptorPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>::type_name);
         return nullptr;
     }
 
@@ -1967,11 +1966,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- SequenceVariableDescriptorPreview class --------------------
-    static constexpr const char* const type_name_SequenceVariableDescriptorPreview = "SequenceVariableDescriptorPreview";
 
     static PyObject* _new_SequenceVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SequenceVariableDescriptorPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>::type_name);
         return nullptr;
     }
 
@@ -2142,11 +2141,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- TensorVariableDescriptorPreview class --------------------
-    static constexpr const char* const type_name_TensorVariableDescriptorPreview = "TensorVariableDescriptorPreview";
 
     static PyObject* _new_TensorVariableDescriptorPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TensorVariableDescriptorPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>::type_name);
         return nullptr;
     }
 
@@ -2337,11 +2336,11 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     };
 
     // ----- ILearningModelVariableDescriptorPreview interface --------------------
-    static constexpr const char* const type_name_ILearningModelVariableDescriptorPreview = "ILearningModelVariableDescriptorPreview";
 
     static PyObject* _new_ILearningModelVariableDescriptorPreview(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ILearningModelVariableDescriptorPreview);
+        static_assert(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>::type_name);
         return nullptr;
     }
 

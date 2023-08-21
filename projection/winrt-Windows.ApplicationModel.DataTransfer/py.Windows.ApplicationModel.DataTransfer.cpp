@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::DataTransfer
 {
     // ----- Clipboard class --------------------
-    static constexpr const char* const type_name_Clipboard = "Clipboard";
 
     static PyObject* _new_Clipboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Clipboard);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>::type_name);
         return nullptr;
     }
 
@@ -563,7 +563,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ClipboardContentOptions class --------------------
-    static constexpr const char* const type_name_ClipboardContentOptions = "ClipboardContentOptions";
 
     static PyObject* _new_ClipboardContentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -797,11 +796,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ClipboardHistoryChangedEventArgs class --------------------
-    static constexpr const char* const type_name_ClipboardHistoryChangedEventArgs = "ClipboardHistoryChangedEventArgs";
 
     static PyObject* _new_ClipboardHistoryChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ClipboardHistoryChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -872,11 +871,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ClipboardHistoryItem class --------------------
-    static constexpr const char* const type_name_ClipboardHistoryItem = "ClipboardHistoryItem";
 
     static PyObject* _new_ClipboardHistoryItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ClipboardHistoryItem);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>::type_name);
         return nullptr;
     }
 
@@ -1007,11 +1006,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ClipboardHistoryItemsResult class --------------------
-    static constexpr const char* const type_name_ClipboardHistoryItemsResult = "ClipboardHistoryItemsResult";
 
     static PyObject* _new_ClipboardHistoryItemsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ClipboardHistoryItemsResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult>::type_name);
         return nullptr;
     }
 
@@ -1122,7 +1121,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataPackage class --------------------
-    static constexpr const char* const type_name_DataPackage = "DataPackage";
 
     static PyObject* _new_DataPackage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1872,11 +1870,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataPackagePropertySet class --------------------
-    static constexpr const char* const type_name_DataPackagePropertySet = "DataPackagePropertySet";
 
     static PyObject* _new_DataPackagePropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataPackagePropertySet);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet>::type_name);
         return nullptr;
     }
 
@@ -2881,11 +2879,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataPackagePropertySetView class --------------------
-    static constexpr const char* const type_name_DataPackagePropertySetView = "DataPackagePropertySetView";
 
     static PyObject* _new_DataPackagePropertySetView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataPackagePropertySetView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView>::type_name);
         return nullptr;
     }
 
@@ -3465,11 +3463,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataPackageView class --------------------
-    static constexpr const char* const type_name_DataPackageView = "DataPackageView";
 
     static PyObject* _new_DataPackageView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataPackageView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageView>::type_name);
         return nullptr;
     }
 
@@ -4100,11 +4098,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataProviderDeferral class --------------------
-    static constexpr const char* const type_name_DataProviderDeferral = "DataProviderDeferral";
 
     static PyObject* _new_DataProviderDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataProviderDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral>::type_name);
         return nullptr;
     }
 
@@ -4206,11 +4204,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataProviderRequest class --------------------
-    static constexpr const char* const type_name_DataProviderRequest = "DataProviderRequest";
 
     static PyObject* _new_DataProviderRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataProviderRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest>::type_name);
         return nullptr;
     }
 
@@ -4384,11 +4382,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataRequest class --------------------
-    static constexpr const char* const type_name_DataRequest = "DataRequest";
 
     static PyObject* _new_DataRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequest>::type_name);
         return nullptr;
     }
 
@@ -4590,11 +4588,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataRequestDeferral class --------------------
-    static constexpr const char* const type_name_DataRequestDeferral = "DataRequestDeferral";
 
     static PyObject* _new_DataRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -4696,11 +4694,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_DataRequestedEventArgs = "DataRequestedEventArgs";
 
     static PyObject* _new_DataRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4791,11 +4789,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- DataTransferManager class --------------------
-    static constexpr const char* const type_name_DataTransferManager = "DataTransferManager";
 
     static PyObject* _new_DataTransferManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataTransferManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager>::type_name);
         return nullptr;
     }
 
@@ -5113,11 +5111,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- HtmlFormatHelper class --------------------
-    static constexpr const char* const type_name_HtmlFormatHelper = "HtmlFormatHelper";
 
     static PyObject* _new_HtmlFormatHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HtmlFormatHelper);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper>::type_name);
         return nullptr;
     }
 
@@ -5211,11 +5209,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- OperationCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_OperationCompletedEventArgs = "OperationCompletedEventArgs";
 
     static PyObject* _new_OperationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OperationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5326,11 +5324,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ShareCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_ShareCompletedEventArgs = "ShareCompletedEventArgs";
 
     static PyObject* _new_ShareCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5421,7 +5419,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ShareProvider class --------------------
-    static constexpr const char* const type_name_ShareProvider = "ShareProvider";
 
     static PyObject* _new_ShareProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5632,11 +5629,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ShareProviderOperation class --------------------
-    static constexpr const char* const type_name_ShareProviderOperation = "ShareProviderOperation";
 
     static PyObject* _new_ShareProviderOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareProviderOperation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation>::type_name);
         return nullptr;
     }
 
@@ -5778,11 +5775,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ShareProvidersRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_ShareProvidersRequestedEventArgs = "ShareProvidersRequestedEventArgs";
 
     static PyObject* _new_ShareProvidersRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareProvidersRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5923,11 +5920,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ShareTargetInfo class --------------------
-    static constexpr const char* const type_name_ShareTargetInfo = "ShareTargetInfo";
 
     static PyObject* _new_ShareTargetInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareTargetInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo>::type_name);
         return nullptr;
     }
 
@@ -6038,7 +6035,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- ShareUIOptions class --------------------
-    static constexpr const char* const type_name_ShareUIOptions = "ShareUIOptions";
 
     static PyObject* _new_ShareUIOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6232,11 +6228,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- SharedStorageAccessManager class --------------------
-    static constexpr const char* const type_name_SharedStorageAccessManager = "SharedStorageAccessManager";
 
     static PyObject* _new_SharedStorageAccessManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SharedStorageAccessManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager>::type_name);
         return nullptr;
     }
 
@@ -6363,11 +6359,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- StandardDataFormats class --------------------
-    static constexpr const char* const type_name_StandardDataFormats = "StandardDataFormats";
 
     static PyObject* _new_StandardDataFormats(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StandardDataFormats);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats>::type_name);
         return nullptr;
     }
 
@@ -6597,11 +6593,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     };
 
     // ----- TargetApplicationChosenEventArgs class --------------------
-    static constexpr const char* const type_name_TargetApplicationChosenEventArgs = "TargetApplicationChosenEventArgs";
 
     static PyObject* _new_TargetApplicationChosenEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetApplicationChosenEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>::type_name);
         return nullptr;
     }
 

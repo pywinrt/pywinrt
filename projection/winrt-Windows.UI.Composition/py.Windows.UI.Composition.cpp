@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Composition
 {
     // ----- AmbientLight class --------------------
-    static constexpr const char* const type_name_AmbientLight = "AmbientLight";
 
     static PyObject* _new_AmbientLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AmbientLight);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::AmbientLight>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::AmbientLight>::type_name);
         return nullptr;
     }
 
@@ -178,11 +178,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- AnimationController class --------------------
-    static constexpr const char* const type_name_AnimationController = "AnimationController";
 
     static PyObject* _new_AnimationController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AnimationController);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::AnimationController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::AnimationController>::type_name);
         return nullptr;
     }
 
@@ -519,11 +519,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- AnimationPropertyInfo class --------------------
-    static constexpr const char* const type_name_AnimationPropertyInfo = "AnimationPropertyInfo";
 
     static PyObject* _new_AnimationPropertyInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AnimationPropertyInfo);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::AnimationPropertyInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::AnimationPropertyInfo>::type_name);
         return nullptr;
     }
 
@@ -702,11 +702,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- BackEasingFunction class --------------------
-    static constexpr const char* const type_name_BackEasingFunction = "BackEasingFunction";
 
     static PyObject* _new_BackEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::BackEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BackEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -817,11 +817,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- BooleanKeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_BooleanKeyFrameAnimation = "BooleanKeyFrameAnimation";
 
     static PyObject* _new_BooleanKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BooleanKeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -926,11 +926,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- BounceEasingFunction class --------------------
-    static constexpr const char* const type_name_BounceEasingFunction = "BounceEasingFunction";
 
     static PyObject* _new_BounceEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BounceEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::BounceEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -1061,11 +1061,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- BounceScalarNaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_BounceScalarNaturalMotionAnimation = "BounceScalarNaturalMotionAnimation";
 
     static PyObject* _new_BounceScalarNaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BounceScalarNaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -1232,11 +1232,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- BounceVector2NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_BounceVector2NaturalMotionAnimation = "BounceVector2NaturalMotionAnimation";
 
     static PyObject* _new_BounceVector2NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BounceVector2NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -1403,11 +1403,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- BounceVector3NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_BounceVector3NaturalMotionAnimation = "BounceVector3NaturalMotionAnimation";
 
     static PyObject* _new_BounceVector3NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BounceVector3NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -1574,11 +1574,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CircleEasingFunction class --------------------
-    static constexpr const char* const type_name_CircleEasingFunction = "CircleEasingFunction";
 
     static PyObject* _new_CircleEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CircleEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CircleEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CircleEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -1669,11 +1669,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ColorKeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_ColorKeyFrameAnimation = "ColorKeyFrameAnimation";
 
     static PyObject* _new_ColorKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ColorKeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -1849,11 +1849,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionAnimation class --------------------
-    static constexpr const char* const type_name_CompositionAnimation = "CompositionAnimation";
 
     static PyObject* _new_CompositionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionAnimation>::type_name);
         return nullptr;
     }
 
@@ -2430,11 +2430,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionAnimationGroup class --------------------
-    static constexpr const char* const type_name_CompositionAnimationGroup = "CompositionAnimationGroup";
 
     static PyObject* _new_CompositionAnimationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionAnimationGroup);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionAnimationGroup>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionAnimationGroup>::type_name);
         return nullptr;
     }
 
@@ -2666,11 +2666,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionBackdropBrush class --------------------
-    static constexpr const char* const type_name_CompositionBackdropBrush = "CompositionBackdropBrush";
 
     static PyObject* _new_CompositionBackdropBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionBackdropBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionBackdropBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionBackdropBrush>::type_name);
         return nullptr;
     }
 
@@ -2741,11 +2741,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionBatchCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_CompositionBatchCompletedEventArgs = "CompositionBatchCompletedEventArgs";
 
     static PyObject* _new_CompositionBatchCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionBatchCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2816,11 +2816,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionBrush class --------------------
-    static constexpr const char* const type_name_CompositionBrush = "CompositionBrush";
 
     static PyObject* _new_CompositionBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionBrush>::type_name);
         return nullptr;
     }
 
@@ -2891,11 +2891,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionCapabilities class --------------------
-    static constexpr const char* const type_name_CompositionCapabilities = "CompositionCapabilities";
 
     static PyObject* _new_CompositionCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionCapabilities);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionCapabilities>::type_name);
         return nullptr;
     }
 
@@ -3101,11 +3101,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionClip class --------------------
-    static constexpr const char* const type_name_CompositionClip = "CompositionClip";
 
     static PyObject* _new_CompositionClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionClip);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionClip>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionClip>::type_name);
         return nullptr;
     }
 
@@ -3512,11 +3512,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionColorBrush class --------------------
-    static constexpr const char* const type_name_CompositionColorBrush = "CompositionColorBrush";
 
     static PyObject* _new_CompositionColorBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionColorBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionColorBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionColorBrush>::type_name);
         return nullptr;
     }
 
@@ -3635,11 +3635,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionColorGradientStop class --------------------
-    static constexpr const char* const type_name_CompositionColorGradientStop = "CompositionColorGradientStop";
 
     static PyObject* _new_CompositionColorGradientStop(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionColorGradientStop);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStop>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStop>::type_name);
         return nullptr;
     }
 
@@ -3806,11 +3806,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionColorGradientStopCollection class --------------------
-    static constexpr const char* const type_name_CompositionColorGradientStopCollection = "CompositionColorGradientStopCollection";
 
     static PyObject* _new_CompositionColorGradientStopCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionColorGradientStopCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>::type_name);
         return nullptr;
     }
 
@@ -4429,11 +4429,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionCommitBatch class --------------------
-    static constexpr const char* const type_name_CompositionCommitBatch = "CompositionCommitBatch";
 
     static PyObject* _new_CompositionCommitBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionCommitBatch);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionCommitBatch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionCommitBatch>::type_name);
         return nullptr;
     }
 
@@ -4589,11 +4589,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionContainerShape class --------------------
-    static constexpr const char* const type_name_CompositionContainerShape = "CompositionContainerShape";
 
     static PyObject* _new_CompositionContainerShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionContainerShape);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionContainerShape>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionContainerShape>::type_name);
         return nullptr;
     }
 
@@ -4684,11 +4684,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionDrawingSurface class --------------------
-    static constexpr const char* const type_name_CompositionDrawingSurface = "CompositionDrawingSurface";
 
     static PyObject* _new_CompositionDrawingSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionDrawingSurface);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionDrawingSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionDrawingSurface>::type_name);
         return nullptr;
     }
 
@@ -4984,11 +4984,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionEasingFunction class --------------------
-    static constexpr const char* const type_name_CompositionEasingFunction = "CompositionEasingFunction";
 
     static PyObject* _new_CompositionEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -5416,11 +5416,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionEffectBrush class --------------------
-    static constexpr const char* const type_name_CompositionEffectBrush = "CompositionEffectBrush";
 
     static PyObject* _new_CompositionEffectBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionEffectBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEffectBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEffectBrush>::type_name);
         return nullptr;
     }
 
@@ -5557,11 +5557,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionEffectFactory class --------------------
-    static constexpr const char* const type_name_CompositionEffectFactory = "CompositionEffectFactory";
 
     static PyObject* _new_CompositionEffectFactory(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionEffectFactory);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEffectFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEffectFactory>::type_name);
         return nullptr;
     }
 
@@ -5702,7 +5702,6 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionEffectSourceParameter class --------------------
-    static constexpr const char* const type_name_CompositionEffectSourceParameter = "CompositionEffectSourceParameter";
 
     static PyObject* _new_CompositionEffectSourceParameter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5822,11 +5821,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionEllipseGeometry class --------------------
-    static constexpr const char* const type_name_CompositionEllipseGeometry = "CompositionEllipseGeometry";
 
     static PyObject* _new_CompositionEllipseGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionEllipseGeometry);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionEllipseGeometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionEllipseGeometry>::type_name);
         return nullptr;
     }
 
@@ -5993,11 +5992,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionGeometricClip class --------------------
-    static constexpr const char* const type_name_CompositionGeometricClip = "CompositionGeometricClip";
 
     static PyObject* _new_CompositionGeometricClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionGeometricClip);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGeometricClip>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGeometricClip>::type_name);
         return nullptr;
     }
 
@@ -6164,11 +6163,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionGeometry class --------------------
-    static constexpr const char* const type_name_CompositionGeometry = "CompositionGeometry";
 
     static PyObject* _new_CompositionGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionGeometry);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGeometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGeometry>::type_name);
         return nullptr;
     }
 
@@ -6383,11 +6382,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionGradientBrush class --------------------
-    static constexpr const char* const type_name_CompositionGradientBrush = "CompositionGradientBrush";
 
     static PyObject* _new_CompositionGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionGradientBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGradientBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGradientBrush>::type_name);
         return nullptr;
     }
 
@@ -6958,11 +6957,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionGraphicsDevice class --------------------
-    static constexpr const char* const type_name_CompositionGraphicsDevice = "CompositionGraphicsDevice";
 
     static PyObject* _new_CompositionGraphicsDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionGraphicsDevice);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionGraphicsDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionGraphicsDevice>::type_name);
         return nullptr;
     }
 
@@ -7281,11 +7280,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionLight class --------------------
-    static constexpr const char* const type_name_CompositionLight = "CompositionLight";
 
     static PyObject* _new_CompositionLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionLight);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionLight>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionLight>::type_name);
         return nullptr;
     }
 
@@ -7444,11 +7443,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionLineGeometry class --------------------
-    static constexpr const char* const type_name_CompositionLineGeometry = "CompositionLineGeometry";
 
     static PyObject* _new_CompositionLineGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionLineGeometry);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionLineGeometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionLineGeometry>::type_name);
         return nullptr;
     }
 
@@ -7615,11 +7614,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionLinearGradientBrush class --------------------
-    static constexpr const char* const type_name_CompositionLinearGradientBrush = "CompositionLinearGradientBrush";
 
     static PyObject* _new_CompositionLinearGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionLinearGradientBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>::type_name);
         return nullptr;
     }
 
@@ -7786,11 +7785,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionMaskBrush class --------------------
-    static constexpr const char* const type_name_CompositionMaskBrush = "CompositionMaskBrush";
 
     static PyObject* _new_CompositionMaskBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionMaskBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionMaskBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionMaskBrush>::type_name);
         return nullptr;
     }
 
@@ -7957,11 +7956,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionMipmapSurface class --------------------
-    static constexpr const char* const type_name_CompositionMipmapSurface = "CompositionMipmapSurface";
 
     static PyObject* _new_CompositionMipmapSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionMipmapSurface);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionMipmapSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionMipmapSurface>::type_name);
         return nullptr;
     }
 
@@ -8144,11 +8143,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionNineGridBrush class --------------------
-    static constexpr const char* const type_name_CompositionNineGridBrush = "CompositionNineGridBrush";
 
     static PyObject* _new_CompositionNineGridBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionNineGridBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionNineGridBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionNineGridBrush>::type_name);
         return nullptr;
     }
 
@@ -8813,11 +8812,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionObject class --------------------
-    static constexpr const char* const type_name_CompositionObject = "CompositionObject";
 
     static PyObject* _new_CompositionObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionObject);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionObject>::type_name);
         return nullptr;
     }
 
@@ -9408,7 +9407,6 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionPath class --------------------
-    static constexpr const char* const type_name_CompositionPath = "CompositionPath";
 
     static PyObject* _new_CompositionPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9508,11 +9506,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionPathGeometry class --------------------
-    static constexpr const char* const type_name_CompositionPathGeometry = "CompositionPathGeometry";
 
     static PyObject* _new_CompositionPathGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionPathGeometry);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionPathGeometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionPathGeometry>::type_name);
         return nullptr;
     }
 
@@ -9631,11 +9629,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionProjectedShadow class --------------------
-    static constexpr const char* const type_name_CompositionProjectedShadow = "CompositionProjectedShadow";
 
     static PyObject* _new_CompositionProjectedShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionProjectedShadow);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadow>::type_name);
         return nullptr;
     }
 
@@ -9938,11 +9936,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionProjectedShadowCaster class --------------------
-    static constexpr const char* const type_name_CompositionProjectedShadowCaster = "CompositionProjectedShadowCaster";
 
     static PyObject* _new_CompositionProjectedShadowCaster(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionProjectedShadowCaster);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>::type_name);
         return nullptr;
     }
 
@@ -10109,11 +10107,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionProjectedShadowCasterCollection class --------------------
-    static constexpr const char* const type_name_CompositionProjectedShadowCasterCollection = "CompositionProjectedShadowCasterCollection";
 
     static PyObject* _new_CompositionProjectedShadowCasterCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionProjectedShadowCasterCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>::type_name);
         return nullptr;
     }
 
@@ -10486,11 +10484,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionProjectedShadowReceiver class --------------------
-    static constexpr const char* const type_name_CompositionProjectedShadowReceiver = "CompositionProjectedShadowReceiver";
 
     static PyObject* _new_CompositionProjectedShadowReceiver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionProjectedShadowReceiver);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>::type_name);
         return nullptr;
     }
 
@@ -10609,11 +10607,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionProjectedShadowReceiverUnorderedCollection class --------------------
-    static constexpr const char* const type_name_CompositionProjectedShadowReceiverUnorderedCollection = "CompositionProjectedShadowReceiverUnorderedCollection";
 
     static PyObject* _new_CompositionProjectedShadowReceiverUnorderedCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionProjectedShadowReceiverUnorderedCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>::type_name);
         return nullptr;
     }
 
@@ -10845,11 +10843,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionPropertySet class --------------------
-    static constexpr const char* const type_name_CompositionPropertySet = "CompositionPropertySet";
 
     static PyObject* _new_CompositionPropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionPropertySet);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionPropertySet>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionPropertySet>::type_name);
         return nullptr;
     }
 
@@ -11631,11 +11629,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionRadialGradientBrush class --------------------
-    static constexpr const char* const type_name_CompositionRadialGradientBrush = "CompositionRadialGradientBrush";
 
     static PyObject* _new_CompositionRadialGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionRadialGradientBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>::type_name);
         return nullptr;
     }
 
@@ -11850,11 +11848,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionRectangleGeometry class --------------------
-    static constexpr const char* const type_name_CompositionRectangleGeometry = "CompositionRectangleGeometry";
 
     static PyObject* _new_CompositionRectangleGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionRectangleGeometry);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionRectangleGeometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionRectangleGeometry>::type_name);
         return nullptr;
     }
 
@@ -12021,11 +12019,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionRoundedRectangleGeometry class --------------------
-    static constexpr const char* const type_name_CompositionRoundedRectangleGeometry = "CompositionRoundedRectangleGeometry";
 
     static PyObject* _new_CompositionRoundedRectangleGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionRoundedRectangleGeometry);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>::type_name);
         return nullptr;
     }
 
@@ -12240,11 +12238,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionScopedBatch class --------------------
-    static constexpr const char* const type_name_CompositionScopedBatch = "CompositionScopedBatch";
 
     static PyObject* _new_CompositionScopedBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionScopedBatch);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionScopedBatch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionScopedBatch>::type_name);
         return nullptr;
     }
 
@@ -12493,11 +12491,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionShadow class --------------------
-    static constexpr const char* const type_name_CompositionShadow = "CompositionShadow";
 
     static PyObject* _new_CompositionShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionShadow);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionShadow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionShadow>::type_name);
         return nullptr;
     }
 
@@ -12568,11 +12566,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionShape class --------------------
-    static constexpr const char* const type_name_CompositionShape = "CompositionShape";
 
     static PyObject* _new_CompositionShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionShape);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionShape>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionShape>::type_name);
         return nullptr;
     }
 
@@ -12931,11 +12929,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionShapeCollection class --------------------
-    static constexpr const char* const type_name_CompositionShapeCollection = "CompositionShapeCollection";
 
     static PyObject* _new_CompositionShapeCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionShapeCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionShapeCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionShapeCollection>::type_name);
         return nullptr;
     }
 
@@ -13554,11 +13552,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionSpriteShape class --------------------
-    static constexpr const char* const type_name_CompositionSpriteShape = "CompositionSpriteShape";
 
     static PyObject* _new_CompositionSpriteShape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionSpriteShape);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionSpriteShape>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionSpriteShape>::type_name);
         return nullptr;
     }
 
@@ -14177,11 +14175,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionStrokeDashArray class --------------------
-    static constexpr const char* const type_name_CompositionStrokeDashArray = "CompositionStrokeDashArray";
 
     static PyObject* _new_CompositionStrokeDashArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionStrokeDashArray);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionStrokeDashArray>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionStrokeDashArray>::type_name);
         return nullptr;
     }
 
@@ -14800,11 +14798,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionSurfaceBrush class --------------------
-    static constexpr const char* const type_name_CompositionSurfaceBrush = "CompositionSurfaceBrush";
 
     static PyObject* _new_CompositionSurfaceBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionSurfaceBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionSurfaceBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionSurfaceBrush>::type_name);
         return nullptr;
     }
 
@@ -15499,11 +15497,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionTarget class --------------------
-    static constexpr const char* const type_name_CompositionTarget = "CompositionTarget";
 
     static PyObject* _new_CompositionTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionTarget);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionTarget>::type_name);
         return nullptr;
     }
 
@@ -15622,11 +15620,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionTransform class --------------------
-    static constexpr const char* const type_name_CompositionTransform = "CompositionTransform";
 
     static PyObject* _new_CompositionTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionTransform);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionTransform>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionTransform>::type_name);
         return nullptr;
     }
 
@@ -15697,11 +15695,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionViewBox class --------------------
-    static constexpr const char* const type_name_CompositionViewBox = "CompositionViewBox";
 
     static PyObject* _new_CompositionViewBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionViewBox);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionViewBox>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionViewBox>::type_name);
         return nullptr;
     }
 
@@ -16012,11 +16010,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionVirtualDrawingSurface class --------------------
-    static constexpr const char* const type_name_CompositionVirtualDrawingSurface = "CompositionVirtualDrawingSurface";
 
     static PyObject* _new_CompositionVirtualDrawingSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionVirtualDrawingSurface);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>::type_name);
         return nullptr;
     }
 
@@ -16120,11 +16118,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CompositionVisualSurface class --------------------
-    static constexpr const char* const type_name_CompositionVisualSurface = "CompositionVisualSurface";
 
     static PyObject* _new_CompositionVisualSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionVisualSurface);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CompositionVisualSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CompositionVisualSurface>::type_name);
         return nullptr;
     }
 
@@ -16339,7 +16337,6 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Compositor class --------------------
-    static constexpr const char* const type_name_Compositor = "Compositor";
 
     static PyObject* _new_Compositor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18840,11 +18837,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ContainerVisual class --------------------
-    static constexpr const char* const type_name_ContainerVisual = "ContainerVisual";
 
     static PyObject* _new_ContainerVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContainerVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ContainerVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ContainerVisual>::type_name);
         return nullptr;
     }
 
@@ -18935,11 +18932,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- CubicBezierEasingFunction class --------------------
-    static constexpr const char* const type_name_CubicBezierEasingFunction = "CubicBezierEasingFunction";
 
     static PyObject* _new_CubicBezierEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CubicBezierEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::CubicBezierEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::CubicBezierEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -19050,11 +19047,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- DelegatedInkTrailVisual class --------------------
-    static constexpr const char* const type_name_DelegatedInkTrailVisual = "DelegatedInkTrailVisual";
 
     static PyObject* _new_DelegatedInkTrailVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DelegatedInkTrailVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>::type_name);
         return nullptr;
     }
 
@@ -19321,11 +19318,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- DistantLight class --------------------
-    static constexpr const char* const type_name_DistantLight = "DistantLight";
 
     static PyObject* _new_DistantLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DistantLight);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::DistantLight>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::DistantLight>::type_name);
         return nullptr;
     }
 
@@ -19588,11 +19585,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- DropShadow class --------------------
-    static constexpr const char* const type_name_DropShadow = "DropShadow";
 
     static PyObject* _new_DropShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DropShadow);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::DropShadow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::DropShadow>::type_name);
         return nullptr;
     }
 
@@ -19951,11 +19948,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ElasticEasingFunction class --------------------
-    static constexpr const char* const type_name_ElasticEasingFunction = "ElasticEasingFunction";
 
     static PyObject* _new_ElasticEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ElasticEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ElasticEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ElasticEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -20086,11 +20083,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ExponentialEasingFunction class --------------------
-    static constexpr const char* const type_name_ExponentialEasingFunction = "ExponentialEasingFunction";
 
     static PyObject* _new_ExponentialEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExponentialEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ExponentialEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ExponentialEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -20201,11 +20198,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ExpressionAnimation class --------------------
-    static constexpr const char* const type_name_ExpressionAnimation = "ExpressionAnimation";
 
     static PyObject* _new_ExpressionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExpressionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ExpressionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ExpressionAnimation>::type_name);
         return nullptr;
     }
 
@@ -20324,11 +20321,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ImplicitAnimationCollection class --------------------
-    static constexpr const char* const type_name_ImplicitAnimationCollection = "ImplicitAnimationCollection";
 
     static PyObject* _new_ImplicitAnimationCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImplicitAnimationCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ImplicitAnimationCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ImplicitAnimationCollection>::type_name);
         return nullptr;
     }
 
@@ -20737,11 +20734,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- InitialValueExpressionCollection class --------------------
-    static constexpr const char* const type_name_InitialValueExpressionCollection = "InitialValueExpressionCollection";
 
     static PyObject* _new_InitialValueExpressionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InitialValueExpressionCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::InitialValueExpressionCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::InitialValueExpressionCollection>::type_name);
         return nullptr;
     }
 
@@ -21150,11 +21147,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- InsetClip class --------------------
-    static constexpr const char* const type_name_InsetClip = "InsetClip";
 
     static PyObject* _new_InsetClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InsetClip);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::InsetClip>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::InsetClip>::type_name);
         return nullptr;
     }
 
@@ -21417,11 +21414,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- KeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_KeyFrameAnimation = "KeyFrameAnimation";
 
     static PyObject* _new_KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::KeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::KeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -21905,11 +21902,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- LayerVisual class --------------------
-    static constexpr const char* const type_name_LayerVisual = "LayerVisual";
 
     static PyObject* _new_LayerVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LayerVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::LayerVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::LayerVisual>::type_name);
         return nullptr;
     }
 
@@ -22076,11 +22073,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- LinearEasingFunction class --------------------
-    static constexpr const char* const type_name_LinearEasingFunction = "LinearEasingFunction";
 
     static PyObject* _new_LinearEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LinearEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::LinearEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::LinearEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -22151,11 +22148,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_NaturalMotionAnimation = "NaturalMotionAnimation";
 
     static PyObject* _new_NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -22370,11 +22367,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- PathKeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_PathKeyFrameAnimation = "PathKeyFrameAnimation";
 
     static PyObject* _new_PathKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PathKeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::PathKeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::PathKeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -22502,11 +22499,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- PointLight class --------------------
-    static constexpr const char* const type_name_PointLight = "PointLight";
 
     static PyObject* _new_PointLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointLight);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::PointLight>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::PointLight>::type_name);
         return nullptr;
     }
 
@@ -23009,11 +23006,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- PowerEasingFunction class --------------------
-    static constexpr const char* const type_name_PowerEasingFunction = "PowerEasingFunction";
 
     static PyObject* _new_PowerEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PowerEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::PowerEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::PowerEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -23124,11 +23121,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- QuaternionKeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_QuaternionKeyFrameAnimation = "QuaternionKeyFrameAnimation";
 
     static PyObject* _new_QuaternionKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_QuaternionKeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -23256,11 +23253,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- RectangleClip class --------------------
-    static constexpr const char* const type_name_RectangleClip = "RectangleClip";
 
     static PyObject* _new_RectangleClip(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RectangleClip);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::RectangleClip>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::RectangleClip>::type_name);
         return nullptr;
     }
 
@@ -23715,11 +23712,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- RedirectVisual class --------------------
-    static constexpr const char* const type_name_RedirectVisual = "RedirectVisual";
 
     static PyObject* _new_RedirectVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RedirectVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::RedirectVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::RedirectVisual>::type_name);
         return nullptr;
     }
 
@@ -23838,11 +23835,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- RenderingDeviceReplacedEventArgs class --------------------
-    static constexpr const char* const type_name_RenderingDeviceReplacedEventArgs = "RenderingDeviceReplacedEventArgs";
 
     static PyObject* _new_RenderingDeviceReplacedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RenderingDeviceReplacedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -23933,11 +23930,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ScalarKeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_ScalarKeyFrameAnimation = "ScalarKeyFrameAnimation";
 
     static PyObject* _new_ScalarKeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ScalarKeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -24065,11 +24062,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ScalarNaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_ScalarNaturalMotionAnimation = "ScalarNaturalMotionAnimation";
 
     static PyObject* _new_ScalarNaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ScalarNaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -24284,11 +24281,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ShapeVisual class --------------------
-    static constexpr const char* const type_name_ShapeVisual = "ShapeVisual";
 
     static PyObject* _new_ShapeVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShapeVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ShapeVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ShapeVisual>::type_name);
         return nullptr;
     }
 
@@ -24427,11 +24424,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- SineEasingFunction class --------------------
-    static constexpr const char* const type_name_SineEasingFunction = "SineEasingFunction";
 
     static PyObject* _new_SineEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SineEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::SineEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SineEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -24522,11 +24519,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- SpotLight class --------------------
-    static constexpr const char* const type_name_SpotLight = "SpotLight";
 
     static PyObject* _new_SpotLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpotLight);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::SpotLight>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpotLight>::type_name);
         return nullptr;
     }
 
@@ -25365,11 +25362,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- SpringScalarNaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_SpringScalarNaturalMotionAnimation = "SpringScalarNaturalMotionAnimation";
 
     static PyObject* _new_SpringScalarNaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpringScalarNaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -25536,11 +25533,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- SpringVector2NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_SpringVector2NaturalMotionAnimation = "SpringVector2NaturalMotionAnimation";
 
     static PyObject* _new_SpringVector2NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpringVector2NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -25707,11 +25704,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- SpringVector3NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_SpringVector3NaturalMotionAnimation = "SpringVector3NaturalMotionAnimation";
 
     static PyObject* _new_SpringVector3NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpringVector3NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -25878,11 +25875,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- SpriteVisual class --------------------
-    static constexpr const char* const type_name_SpriteVisual = "SpriteVisual";
 
     static PyObject* _new_SpriteVisual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpriteVisual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::SpriteVisual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::SpriteVisual>::type_name);
         return nullptr;
     }
 
@@ -26049,11 +26046,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- StepEasingFunction class --------------------
-    static constexpr const char* const type_name_StepEasingFunction = "StepEasingFunction";
 
     static PyObject* _new_StepEasingFunction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StepEasingFunction);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::StepEasingFunction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::StepEasingFunction>::type_name);
         return nullptr;
     }
 
@@ -26364,11 +26361,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Vector2KeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_Vector2KeyFrameAnimation = "Vector2KeyFrameAnimation";
 
     static PyObject* _new_Vector2KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Vector2KeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -26496,11 +26493,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Vector2NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_Vector2NaturalMotionAnimation = "Vector2NaturalMotionAnimation";
 
     static PyObject* _new_Vector2NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Vector2NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -26715,11 +26712,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Vector3KeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_Vector3KeyFrameAnimation = "Vector3KeyFrameAnimation";
 
     static PyObject* _new_Vector3KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Vector3KeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -26847,11 +26844,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Vector3NaturalMotionAnimation class --------------------
-    static constexpr const char* const type_name_Vector3NaturalMotionAnimation = "Vector3NaturalMotionAnimation";
 
     static PyObject* _new_Vector3NaturalMotionAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Vector3NaturalMotionAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>::type_name);
         return nullptr;
     }
 
@@ -27066,11 +27063,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Vector4KeyFrameAnimation class --------------------
-    static constexpr const char* const type_name_Vector4KeyFrameAnimation = "Vector4KeyFrameAnimation";
 
     static PyObject* _new_Vector4KeyFrameAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Vector4KeyFrameAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>::type_name);
         return nullptr;
     }
 
@@ -27198,11 +27195,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- Visual class --------------------
-    static constexpr const char* const type_name_Visual = "Visual";
 
     static PyObject* _new_Visual(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Visual);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Visual>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Visual>::type_name);
         return nullptr;
     }
 
@@ -28301,11 +28298,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- VisualCollection class --------------------
-    static constexpr const char* const type_name_VisualCollection = "VisualCollection";
 
     static PyObject* _new_VisualCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VisualCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::VisualCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::VisualCollection>::type_name);
         return nullptr;
     }
 
@@ -28638,11 +28635,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- VisualUnorderedCollection class --------------------
-    static constexpr const char* const type_name_VisualUnorderedCollection = "VisualUnorderedCollection";
 
     static PyObject* _new_VisualUnorderedCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VisualUnorderedCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::VisualUnorderedCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::VisualUnorderedCollection>::type_name);
         return nullptr;
     }
 
@@ -28874,11 +28871,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- IAnimationObject interface --------------------
-    static constexpr const char* const type_name_IAnimationObject = "IAnimationObject";
 
     static PyObject* _new_IAnimationObject(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAnimationObject);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::IAnimationObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IAnimationObject>::type_name);
         return nullptr;
     }
 
@@ -28983,11 +28980,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ICompositionAnimationBase interface --------------------
-    static constexpr const char* const type_name_ICompositionAnimationBase = "ICompositionAnimationBase";
 
     static PyObject* _new_ICompositionAnimationBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICompositionAnimationBase);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>::type_name);
         return nullptr;
     }
 
@@ -29058,11 +29055,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ICompositionSupportsSystemBackdrop interface --------------------
-    static constexpr const char* const type_name_ICompositionSupportsSystemBackdrop = "ICompositionSupportsSystemBackdrop";
 
     static PyObject* _new_ICompositionSupportsSystemBackdrop(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICompositionSupportsSystemBackdrop);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>::type_name);
         return nullptr;
     }
 
@@ -29181,11 +29178,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ICompositionSurface interface --------------------
-    static constexpr const char* const type_name_ICompositionSurface = "ICompositionSurface";
 
     static PyObject* _new_ICompositionSurface(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICompositionSurface);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSurface>::type_name);
         return nullptr;
     }
 
@@ -29256,11 +29253,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- ICompositionSurfaceFacade interface --------------------
-    static constexpr const char* const type_name_ICompositionSurfaceFacade = "ICompositionSurfaceFacade";
 
     static PyObject* _new_ICompositionSurfaceFacade(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICompositionSurfaceFacade);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>::type_name);
         return nullptr;
     }
 
@@ -29361,11 +29358,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- IVisualElement interface --------------------
-    static constexpr const char* const type_name_IVisualElement = "IVisualElement";
 
     static PyObject* _new_IVisualElement(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IVisualElement);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::IVisualElement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IVisualElement>::type_name);
         return nullptr;
     }
 
@@ -29436,11 +29433,11 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- IVisualElement2 interface --------------------
-    static constexpr const char* const type_name_IVisualElement2 = "IVisualElement2";
 
     static PyObject* _new_IVisualElement2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IVisualElement2);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::IVisualElement2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::IVisualElement2>::type_name);
         return nullptr;
     }
 
@@ -29541,7 +29538,6 @@ namespace py::cpp::Windows::UI::Composition
     };
 
     // ----- InkTrailPoint struct --------------------
-    static constexpr const char* const type_name_InkTrailPoint = "InkTrailPoint";
 
     PyObject* _new_InkTrailPoint(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

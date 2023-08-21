@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Storage::Streams
 {
     // ----- Buffer class --------------------
-    static constexpr const char* const type_name_Buffer = "Buffer";
 
     static PyObject* _new_Buffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -260,7 +259,6 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- DataReader class --------------------
-    static constexpr const char* const type_name_DataReader = "DataReader";
 
     static PyObject* _new_DataReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1188,11 +1186,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- DataReaderLoadOperation class --------------------
-    static constexpr const char* const type_name_DataReaderLoadOperation = "DataReaderLoadOperation";
 
     static PyObject* _new_DataReaderLoadOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataReaderLoadOperation);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::DataReaderLoadOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::DataReaderLoadOperation>::type_name);
         return nullptr;
     }
 
@@ -1469,7 +1467,6 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- DataWriter class --------------------
-    static constexpr const char* const type_name_DataWriter = "DataWriter";
 
     static PyObject* _new_DataWriter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2453,11 +2450,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- DataWriterStoreOperation class --------------------
-    static constexpr const char* const type_name_DataWriterStoreOperation = "DataWriterStoreOperation";
 
     static PyObject* _new_DataWriterStoreOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataWriterStoreOperation);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::DataWriterStoreOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::DataWriterStoreOperation>::type_name);
         return nullptr;
     }
 
@@ -2734,11 +2731,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- FileInputStream class --------------------
-    static constexpr const char* const type_name_FileInputStream = "FileInputStream";
 
     static PyObject* _new_FileInputStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileInputStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::FileInputStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::FileInputStream>::type_name);
         return nullptr;
     }
 
@@ -2896,11 +2893,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- FileOutputStream class --------------------
-    static constexpr const char* const type_name_FileOutputStream = "FileOutputStream";
 
     static PyObject* _new_FileOutputStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileOutputStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::FileOutputStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::FileOutputStream>::type_name);
         return nullptr;
     }
 
@@ -3086,11 +3083,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- FileRandomAccessStream class --------------------
-    static constexpr const char* const type_name_FileRandomAccessStream = "FileRandomAccessStream";
 
     static PyObject* _new_FileRandomAccessStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileRandomAccessStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::FileRandomAccessStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::FileRandomAccessStream>::type_name);
         return nullptr;
     }
 
@@ -3769,7 +3766,6 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- InMemoryRandomAccessStream class --------------------
-    static constexpr const char* const type_name_InMemoryRandomAccessStream = "InMemoryRandomAccessStream";
 
     static PyObject* _new_InMemoryRandomAccessStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4251,11 +4247,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- InputStreamOverStream class --------------------
-    static constexpr const char* const type_name_InputStreamOverStream = "InputStreamOverStream";
 
     static PyObject* _new_InputStreamOverStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InputStreamOverStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::InputStreamOverStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::InputStreamOverStream>::type_name);
         return nullptr;
     }
 
@@ -4413,11 +4409,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- OutputStreamOverStream class --------------------
-    static constexpr const char* const type_name_OutputStreamOverStream = "OutputStreamOverStream";
 
     static PyObject* _new_OutputStreamOverStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OutputStreamOverStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::OutputStreamOverStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::OutputStreamOverStream>::type_name);
         return nullptr;
     }
 
@@ -4603,11 +4599,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- RandomAccessStream class --------------------
-    static constexpr const char* const type_name_RandomAccessStream = "RandomAccessStream";
 
     static PyObject* _new_RandomAccessStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RandomAccessStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::RandomAccessStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::RandomAccessStream>::type_name);
         return nullptr;
     }
 
@@ -4725,11 +4721,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- RandomAccessStreamOverStream class --------------------
-    static constexpr const char* const type_name_RandomAccessStreamOverStream = "RandomAccessStreamOverStream";
 
     static PyObject* _new_RandomAccessStreamOverStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RandomAccessStreamOverStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>::type_name);
         return nullptr;
     }
 
@@ -5184,11 +5180,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- RandomAccessStreamReference class --------------------
-    static constexpr const char* const type_name_RandomAccessStreamReference = "RandomAccessStreamReference";
 
     static PyObject* _new_RandomAccessStreamReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RandomAccessStreamReference);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::RandomAccessStreamReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::RandomAccessStreamReference>::type_name);
         return nullptr;
     }
 
@@ -5385,11 +5381,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IBuffer interface --------------------
-    static constexpr const char* const type_name_IBuffer = "IBuffer";
 
     static PyObject* _new_IBuffer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBuffer);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IBuffer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IBuffer>::type_name);
         return nullptr;
     }
 
@@ -5549,11 +5545,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IContentTypeProvider interface --------------------
-    static constexpr const char* const type_name_IContentTypeProvider = "IContentTypeProvider";
 
     static PyObject* _new_IContentTypeProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IContentTypeProvider);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>::type_name);
         return nullptr;
     }
 
@@ -5644,11 +5640,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IDataReader interface --------------------
-    static constexpr const char* const type_name_IDataReader = "IDataReader";
 
     static PyObject* _new_IDataReader(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDataReader);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IDataReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IDataReader>::type_name);
         return nullptr;
     }
 
@@ -6462,11 +6458,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IDataWriter interface --------------------
-    static constexpr const char* const type_name_IDataWriter = "IDataWriter";
 
     static PyObject* _new_IDataWriter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDataWriter);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IDataWriter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IDataWriter>::type_name);
         return nullptr;
     }
 
@@ -7355,11 +7351,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IInputStream interface --------------------
-    static constexpr const char* const type_name_IInputStream = "IInputStream";
 
     static PyObject* _new_IInputStream(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInputStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IInputStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IInputStream>::type_name);
         return nullptr;
     }
 
@@ -7517,11 +7513,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IInputStreamReference interface --------------------
-    static constexpr const char* const type_name_IInputStreamReference = "IInputStreamReference";
 
     static PyObject* _new_IInputStreamReference(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInputStreamReference);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IInputStreamReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IInputStreamReference>::type_name);
         return nullptr;
     }
 
@@ -7622,11 +7618,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IOutputStream interface --------------------
-    static constexpr const char* const type_name_IOutputStream = "IOutputStream";
 
     static PyObject* _new_IOutputStream(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IOutputStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IOutputStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IOutputStream>::type_name);
         return nullptr;
     }
 
@@ -7812,11 +7808,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IPropertySetSerializer interface --------------------
-    static constexpr const char* const type_name_IPropertySetSerializer = "IPropertySetSerializer";
 
     static PyObject* _new_IPropertySetSerializer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPropertySetSerializer);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>::type_name);
         return nullptr;
     }
 
@@ -7953,11 +7949,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IRandomAccessStream interface --------------------
-    static constexpr const char* const type_name_IRandomAccessStream = "IRandomAccessStream";
 
     static PyObject* _new_IRandomAccessStream(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IRandomAccessStream);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>::type_name);
         return nullptr;
     }
 
@@ -8412,11 +8408,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IRandomAccessStreamReference interface --------------------
-    static constexpr const char* const type_name_IRandomAccessStreamReference = "IRandomAccessStreamReference";
 
     static PyObject* _new_IRandomAccessStreamReference(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IRandomAccessStreamReference);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>::type_name);
         return nullptr;
     }
 
@@ -8517,11 +8513,11 @@ namespace py::cpp::Windows::Storage::Streams
     };
 
     // ----- IRandomAccessStreamWithContentType interface --------------------
-    static constexpr const char* const type_name_IRandomAccessStreamWithContentType = "IRandomAccessStreamWithContentType";
 
     static PyObject* _new_IRandomAccessStreamWithContentType(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IRandomAccessStreamWithContentType);
+        static_assert(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>::type_name);
         return nullptr;
     }
 

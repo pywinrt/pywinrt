@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Background
 {
     // ----- DeviceServicingDetails class --------------------
-    static constexpr const char* const type_name_DeviceServicingDetails = "DeviceServicingDetails";
 
     static PyObject* _new_DeviceServicingDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceServicingDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::Devices::Background
     };
 
     // ----- DeviceUseDetails class --------------------
-    static constexpr const char* const type_name_DeviceUseDetails = "DeviceUseDetails";
 
     static PyObject* _new_DeviceUseDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceUseDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Background::DeviceUseDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Background::DeviceUseDetails>::type_name);
         return nullptr;
     }
 

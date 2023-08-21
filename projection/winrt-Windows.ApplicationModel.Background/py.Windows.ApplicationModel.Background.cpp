@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::Background
 {
     // ----- ActivitySensorTrigger class --------------------
-    static constexpr const char* const type_name_ActivitySensorTrigger = "ActivitySensorTrigger";
 
     static PyObject* _new_ActivitySensorTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -187,11 +186,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- AlarmApplicationManager class --------------------
-    static constexpr const char* const type_name_AlarmApplicationManager = "AlarmApplicationManager";
 
     static PyObject* _new_AlarmApplicationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AlarmApplicationManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>::type_name);
         return nullptr;
     }
 
@@ -281,7 +280,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- AppBroadcastTrigger class --------------------
-    static constexpr const char* const type_name_AppBroadcastTrigger = "AppBroadcastTrigger";
 
     static PyObject* _new_AppBroadcastTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -429,11 +427,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- AppBroadcastTriggerProviderInfo class --------------------
-    static constexpr const char* const type_name_AppBroadcastTriggerProviderInfo = "AppBroadcastTriggerProviderInfo";
 
     static PyObject* _new_AppBroadcastTriggerProviderInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastTriggerProviderInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>::type_name);
         return nullptr;
     }
 
@@ -792,7 +790,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ApplicationTrigger class --------------------
-    static constexpr const char* const type_name_ApplicationTrigger = "ApplicationTrigger";
 
     static PyObject* _new_ApplicationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -940,11 +937,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ApplicationTriggerDetails class --------------------
-    static constexpr const char* const type_name_ApplicationTriggerDetails = "ApplicationTriggerDetails";
 
     static PyObject* _new_ApplicationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -1035,7 +1032,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- AppointmentStoreNotificationTrigger class --------------------
-    static constexpr const char* const type_name_AppointmentStoreNotificationTrigger = "AppointmentStoreNotificationTrigger";
 
     static PyObject* _new_AppointmentStoreNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1133,11 +1129,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundExecutionManager class --------------------
-    static constexpr const char* const type_name_BackgroundExecutionManager = "BackgroundExecutionManager";
 
     static PyObject* _new_BackgroundExecutionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundExecutionManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>::type_name);
         return nullptr;
     }
 
@@ -1435,7 +1431,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundTaskBuilder class --------------------
-    static constexpr const char* const type_name_BackgroundTaskBuilder = "BackgroundTaskBuilder";
 
     static PyObject* _new_BackgroundTaskBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1902,11 +1897,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundTaskCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_BackgroundTaskCompletedEventArgs = "BackgroundTaskCompletedEventArgs";
 
     static PyObject* _new_BackgroundTaskCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTaskCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2028,11 +2023,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundTaskDeferral class --------------------
-    static constexpr const char* const type_name_BackgroundTaskDeferral = "BackgroundTaskDeferral";
 
     static PyObject* _new_BackgroundTaskDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTaskDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>::type_name);
         return nullptr;
     }
 
@@ -2134,11 +2129,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundTaskProgressEventArgs class --------------------
-    static constexpr const char* const type_name_BackgroundTaskProgressEventArgs = "BackgroundTaskProgressEventArgs";
 
     static PyObject* _new_BackgroundTaskProgressEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTaskProgressEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2249,11 +2244,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundTaskRegistration class --------------------
-    static constexpr const char* const type_name_BackgroundTaskRegistration = "BackgroundTaskRegistration";
 
     static PyObject* _new_BackgroundTaskRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundTaskRegistration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>::type_name);
         return nullptr;
     }
 
@@ -2619,7 +2614,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundTaskRegistrationGroup class --------------------
-    static constexpr const char* const type_name_BackgroundTaskRegistrationGroup = "BackgroundTaskRegistrationGroup";
 
     static PyObject* _new_BackgroundTaskRegistrationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2840,11 +2834,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BackgroundWorkCost class --------------------
-    static constexpr const char* const type_name_BackgroundWorkCost = "BackgroundWorkCost";
 
     static PyObject* _new_BackgroundWorkCost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundWorkCost);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>::type_name);
         return nullptr;
     }
 
@@ -2914,7 +2908,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BluetoothLEAdvertisementPublisherTrigger class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementPublisherTrigger = "BluetoothLEAdvertisementPublisherTrigger";
 
     static PyObject* _new_BluetoothLEAdvertisementPublisherTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3224,7 +3217,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- BluetoothLEAdvertisementWatcherTrigger class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementWatcherTrigger = "BluetoothLEAdvertisementWatcherTrigger";
 
     static PyObject* _new_BluetoothLEAdvertisementWatcherTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3546,7 +3538,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- CachedFileUpdaterTrigger class --------------------
-    static constexpr const char* const type_name_CachedFileUpdaterTrigger = "CachedFileUpdaterTrigger";
 
     static PyObject* _new_CachedFileUpdaterTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3644,11 +3635,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- CachedFileUpdaterTriggerDetails class --------------------
-    static constexpr const char* const type_name_CachedFileUpdaterTriggerDetails = "CachedFileUpdaterTriggerDetails";
 
     static PyObject* _new_CachedFileUpdaterTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CachedFileUpdaterTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -3779,7 +3770,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ChatMessageNotificationTrigger class --------------------
-    static constexpr const char* const type_name_ChatMessageNotificationTrigger = "ChatMessageNotificationTrigger";
 
     static PyObject* _new_ChatMessageNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3877,7 +3867,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ChatMessageReceivedNotificationTrigger class --------------------
-    static constexpr const char* const type_name_ChatMessageReceivedNotificationTrigger = "ChatMessageReceivedNotificationTrigger";
 
     static PyObject* _new_ChatMessageReceivedNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3975,7 +3964,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- CommunicationBlockingAppSetAsActiveTrigger class --------------------
-    static constexpr const char* const type_name_CommunicationBlockingAppSetAsActiveTrigger = "CommunicationBlockingAppSetAsActiveTrigger";
 
     static PyObject* _new_CommunicationBlockingAppSetAsActiveTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4073,7 +4061,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ContactStoreNotificationTrigger class --------------------
-    static constexpr const char* const type_name_ContactStoreNotificationTrigger = "ContactStoreNotificationTrigger";
 
     static PyObject* _new_ContactStoreNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4171,7 +4158,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ContentPrefetchTrigger class --------------------
-    static constexpr const char* const type_name_ContentPrefetchTrigger = "ContentPrefetchTrigger";
 
     static PyObject* _new_ContentPrefetchTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4304,7 +4290,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ConversationalAgentTrigger class --------------------
-    static constexpr const char* const type_name_ConversationalAgentTrigger = "ConversationalAgentTrigger";
 
     static PyObject* _new_ConversationalAgentTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4402,7 +4387,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- CustomSystemEventTrigger class --------------------
-    static constexpr const char* const type_name_CustomSystemEventTrigger = "CustomSystemEventTrigger";
 
     static PyObject* _new_CustomSystemEventTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4543,11 +4527,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- DeviceConnectionChangeTrigger class --------------------
-    static constexpr const char* const type_name_DeviceConnectionChangeTrigger = "DeviceConnectionChangeTrigger";
 
     static PyObject* _new_DeviceConnectionChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceConnectionChangeTrigger);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>::type_name);
         return nullptr;
     }
 
@@ -4738,7 +4722,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- DeviceManufacturerNotificationTrigger class --------------------
-    static constexpr const char* const type_name_DeviceManufacturerNotificationTrigger = "DeviceManufacturerNotificationTrigger";
 
     static PyObject* _new_DeviceManufacturerNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4879,7 +4862,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- DeviceServicingTrigger class --------------------
-    static constexpr const char* const type_name_DeviceServicingTrigger = "DeviceServicingTrigger";
 
     static PyObject* _new_DeviceServicingTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5032,7 +5014,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- DeviceUseTrigger class --------------------
-    static constexpr const char* const type_name_DeviceUseTrigger = "DeviceUseTrigger";
 
     static PyObject* _new_DeviceUseTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5183,11 +5164,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- DeviceWatcherTrigger class --------------------
-    static constexpr const char* const type_name_DeviceWatcherTrigger = "DeviceWatcherTrigger";
 
     static PyObject* _new_DeviceWatcherTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceWatcherTrigger);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>::type_name);
         return nullptr;
     }
 
@@ -5258,7 +5239,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- EmailStoreNotificationTrigger class --------------------
-    static constexpr const char* const type_name_EmailStoreNotificationTrigger = "EmailStoreNotificationTrigger";
 
     static PyObject* _new_EmailStoreNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5356,7 +5336,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- GattCharacteristicNotificationTrigger class --------------------
-    static constexpr const char* const type_name_GattCharacteristicNotificationTrigger = "GattCharacteristicNotificationTrigger";
 
     static PyObject* _new_GattCharacteristicNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5512,11 +5491,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- GattServiceProviderTrigger class --------------------
-    static constexpr const char* const type_name_GattServiceProviderTrigger = "GattServiceProviderTrigger";
 
     static PyObject* _new_GattServiceProviderTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattServiceProviderTrigger);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>::type_name);
         return nullptr;
     }
 
@@ -5708,11 +5687,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- GattServiceProviderTriggerResult class --------------------
-    static constexpr const char* const type_name_GattServiceProviderTriggerResult = "GattServiceProviderTriggerResult";
 
     static PyObject* _new_GattServiceProviderTriggerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattServiceProviderTriggerResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>::type_name);
         return nullptr;
     }
 
@@ -5823,7 +5802,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- GeovisitTrigger class --------------------
-    static constexpr const char* const type_name_GeovisitTrigger = "GeovisitTrigger";
 
     static PyObject* _new_GeovisitTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5969,7 +5947,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- LocationTrigger class --------------------
-    static constexpr const char* const type_name_LocationTrigger = "LocationTrigger";
 
     static PyObject* _new_LocationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6089,7 +6066,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MaintenanceTrigger class --------------------
-    static constexpr const char* const type_name_MaintenanceTrigger = "MaintenanceTrigger";
 
     static PyObject* _new_MaintenanceTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6230,7 +6206,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MediaProcessingTrigger class --------------------
-    static constexpr const char* const type_name_MediaProcessingTrigger = "MediaProcessingTrigger";
 
     static PyObject* _new_MediaProcessingTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6378,7 +6353,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MobileBroadbandDeviceServiceNotificationTrigger class --------------------
-    static constexpr const char* const type_name_MobileBroadbandDeviceServiceNotificationTrigger = "MobileBroadbandDeviceServiceNotificationTrigger";
 
     static PyObject* _new_MobileBroadbandDeviceServiceNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6476,7 +6450,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MobileBroadbandPcoDataChangeTrigger class --------------------
-    static constexpr const char* const type_name_MobileBroadbandPcoDataChangeTrigger = "MobileBroadbandPcoDataChangeTrigger";
 
     static PyObject* _new_MobileBroadbandPcoDataChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6574,7 +6547,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MobileBroadbandPinLockStateChangeTrigger class --------------------
-    static constexpr const char* const type_name_MobileBroadbandPinLockStateChangeTrigger = "MobileBroadbandPinLockStateChangeTrigger";
 
     static PyObject* _new_MobileBroadbandPinLockStateChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6672,7 +6644,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MobileBroadbandRadioStateChangeTrigger class --------------------
-    static constexpr const char* const type_name_MobileBroadbandRadioStateChangeTrigger = "MobileBroadbandRadioStateChangeTrigger";
 
     static PyObject* _new_MobileBroadbandRadioStateChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6770,7 +6741,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- MobileBroadbandRegistrationStateChangeTrigger class --------------------
-    static constexpr const char* const type_name_MobileBroadbandRegistrationStateChangeTrigger = "MobileBroadbandRegistrationStateChangeTrigger";
 
     static PyObject* _new_MobileBroadbandRegistrationStateChangeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6868,7 +6838,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- NetworkOperatorDataUsageTrigger class --------------------
-    static constexpr const char* const type_name_NetworkOperatorDataUsageTrigger = "NetworkOperatorDataUsageTrigger";
 
     static PyObject* _new_NetworkOperatorDataUsageTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6966,7 +6935,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- NetworkOperatorHotspotAuthenticationTrigger class --------------------
-    static constexpr const char* const type_name_NetworkOperatorHotspotAuthenticationTrigger = "NetworkOperatorHotspotAuthenticationTrigger";
 
     static PyObject* _new_NetworkOperatorHotspotAuthenticationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7064,7 +7032,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- NetworkOperatorNotificationTrigger class --------------------
-    static constexpr const char* const type_name_NetworkOperatorNotificationTrigger = "NetworkOperatorNotificationTrigger";
 
     static PyObject* _new_NetworkOperatorNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7184,7 +7151,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- PaymentAppCanMakePaymentTrigger class --------------------
-    static constexpr const char* const type_name_PaymentAppCanMakePaymentTrigger = "PaymentAppCanMakePaymentTrigger";
 
     static PyObject* _new_PaymentAppCanMakePaymentTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7282,7 +7248,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- PhoneTrigger class --------------------
-    static constexpr const char* const type_name_PhoneTrigger = "PhoneTrigger";
 
     static PyObject* _new_PhoneTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7423,7 +7388,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- PushNotificationTrigger class --------------------
-    static constexpr const char* const type_name_PushNotificationTrigger = "PushNotificationTrigger";
 
     static PyObject* _new_PushNotificationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7536,7 +7500,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- RcsEndUserMessageAvailableTrigger class --------------------
-    static constexpr const char* const type_name_RcsEndUserMessageAvailableTrigger = "RcsEndUserMessageAvailableTrigger";
 
     static PyObject* _new_RcsEndUserMessageAvailableTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7634,7 +7597,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- RfcommConnectionTrigger class --------------------
-    static constexpr const char* const type_name_RfcommConnectionTrigger = "RfcommConnectionTrigger";
 
     static PyObject* _new_RfcommConnectionTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7916,7 +7878,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SecondaryAuthenticationFactorAuthenticationTrigger class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorAuthenticationTrigger = "SecondaryAuthenticationFactorAuthenticationTrigger";
 
     static PyObject* _new_SecondaryAuthenticationFactorAuthenticationTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8014,7 +7975,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SensorDataThresholdTrigger class --------------------
-    static constexpr const char* const type_name_SensorDataThresholdTrigger = "SensorDataThresholdTrigger";
 
     static PyObject* _new_SensorDataThresholdTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8114,7 +8074,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SmartCardTrigger class --------------------
-    static constexpr const char* const type_name_SmartCardTrigger = "SmartCardTrigger";
 
     static PyObject* _new_SmartCardTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8234,7 +8193,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SmsMessageReceivedTrigger class --------------------
-    static constexpr const char* const type_name_SmsMessageReceivedTrigger = "SmsMessageReceivedTrigger";
 
     static PyObject* _new_SmsMessageReceivedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8334,7 +8292,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SocketActivityTrigger class --------------------
-    static constexpr const char* const type_name_SocketActivityTrigger = "SocketActivityTrigger";
 
     static PyObject* _new_SocketActivityTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8452,7 +8409,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- StorageLibraryChangeTrackerTrigger class --------------------
-    static constexpr const char* const type_name_StorageLibraryChangeTrackerTrigger = "StorageLibraryChangeTrackerTrigger";
 
     static PyObject* _new_StorageLibraryChangeTrackerTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8552,11 +8508,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- StorageLibraryContentChangedTrigger class --------------------
-    static constexpr const char* const type_name_StorageLibraryContentChangedTrigger = "StorageLibraryContentChangedTrigger";
 
     static PyObject* _new_StorageLibraryContentChangedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageLibraryContentChangedTrigger);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>::type_name);
         return nullptr;
     }
 
@@ -8691,7 +8647,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SystemCondition class --------------------
-    static constexpr const char* const type_name_SystemCondition = "SystemCondition";
 
     static PyObject* _new_SystemCondition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8811,7 +8766,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- SystemTrigger class --------------------
-    static constexpr const char* const type_name_SystemTrigger = "SystemTrigger";
 
     static PyObject* _new_SystemTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8952,7 +8906,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- TetheringEntitlementCheckTrigger class --------------------
-    static constexpr const char* const type_name_TetheringEntitlementCheckTrigger = "TetheringEntitlementCheckTrigger";
 
     static PyObject* _new_TetheringEntitlementCheckTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9050,7 +9003,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- TimeTrigger class --------------------
-    static constexpr const char* const type_name_TimeTrigger = "TimeTrigger";
 
     static PyObject* _new_TimeTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9191,7 +9143,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ToastNotificationActionTrigger class --------------------
-    static constexpr const char* const type_name_ToastNotificationActionTrigger = "ToastNotificationActionTrigger";
 
     static PyObject* _new_ToastNotificationActionTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9304,7 +9255,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- ToastNotificationHistoryChangedTrigger class --------------------
-    static constexpr const char* const type_name_ToastNotificationHistoryChangedTrigger = "ToastNotificationHistoryChangedTrigger";
 
     static PyObject* _new_ToastNotificationHistoryChangedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9417,7 +9367,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- UserNotificationChangedTrigger class --------------------
-    static constexpr const char* const type_name_UserNotificationChangedTrigger = "UserNotificationChangedTrigger";
 
     static PyObject* _new_UserNotificationChangedTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9517,7 +9466,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- WiFiOnDemandHotspotConnectTrigger class --------------------
-    static constexpr const char* const type_name_WiFiOnDemandHotspotConnectTrigger = "WiFiOnDemandHotspotConnectTrigger";
 
     static PyObject* _new_WiFiOnDemandHotspotConnectTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9615,7 +9563,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- WiFiOnDemandHotspotUpdateMetadataTrigger class --------------------
-    static constexpr const char* const type_name_WiFiOnDemandHotspotUpdateMetadataTrigger = "WiFiOnDemandHotspotUpdateMetadataTrigger";
 
     static PyObject* _new_WiFiOnDemandHotspotUpdateMetadataTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9713,11 +9660,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundCondition interface --------------------
-    static constexpr const char* const type_name_IBackgroundCondition = "IBackgroundCondition";
 
     static PyObject* _new_IBackgroundCondition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundCondition);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>::type_name);
         return nullptr;
     }
 
@@ -9788,11 +9735,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTask interface --------------------
-    static constexpr const char* const type_name_IBackgroundTask = "IBackgroundTask";
 
     static PyObject* _new_IBackgroundTask(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTask);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>::type_name);
         return nullptr;
     }
 
@@ -9896,11 +9843,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTaskInstance interface --------------------
-    static constexpr const char* const type_name_IBackgroundTaskInstance = "IBackgroundTaskInstance";
 
     static PyObject* _new_IBackgroundTaskInstance(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTaskInstance);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>::type_name);
         return nullptr;
     }
 
@@ -10174,11 +10121,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTaskInstance2 interface --------------------
-    static constexpr const char* const type_name_IBackgroundTaskInstance2 = "IBackgroundTaskInstance2";
 
     static PyObject* _new_IBackgroundTaskInstance2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTaskInstance2);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>::type_name);
         return nullptr;
     }
 
@@ -10484,11 +10431,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTaskInstance4 interface --------------------
-    static constexpr const char* const type_name_IBackgroundTaskInstance4 = "IBackgroundTaskInstance4";
 
     static PyObject* _new_IBackgroundTaskInstance4(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTaskInstance4);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>::type_name);
         return nullptr;
     }
 
@@ -10782,11 +10729,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTaskRegistration interface --------------------
-    static constexpr const char* const type_name_IBackgroundTaskRegistration = "IBackgroundTaskRegistration";
 
     static PyObject* _new_IBackgroundTaskRegistration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTaskRegistration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>::type_name);
         return nullptr;
     }
 
@@ -11020,11 +10967,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTaskRegistration2 interface --------------------
-    static constexpr const char* const type_name_IBackgroundTaskRegistration2 = "IBackgroundTaskRegistration2";
 
     static PyObject* _new_IBackgroundTaskRegistration2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTaskRegistration2);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>::type_name);
         return nullptr;
     }
 
@@ -11278,11 +11225,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTaskRegistration3 interface --------------------
-    static constexpr const char* const type_name_IBackgroundTaskRegistration3 = "IBackgroundTaskRegistration3";
 
     static PyObject* _new_IBackgroundTaskRegistration3(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTaskRegistration3);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>::type_name);
         return nullptr;
     }
 
@@ -11536,11 +11483,11 @@ namespace py::cpp::Windows::ApplicationModel::Background
     };
 
     // ----- IBackgroundTrigger interface --------------------
-    static constexpr const char* const type_name_IBackgroundTrigger = "IBackgroundTrigger";
 
     static PyObject* _new_IBackgroundTrigger(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBackgroundTrigger);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>::type_name);
         return nullptr;
     }
 

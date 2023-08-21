@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Geolocation::Provider
 {
     // ----- GeolocationProvider class --------------------
-    static constexpr const char* const type_name_GeolocationProvider = "GeolocationProvider";
 
     static PyObject* _new_GeolocationProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

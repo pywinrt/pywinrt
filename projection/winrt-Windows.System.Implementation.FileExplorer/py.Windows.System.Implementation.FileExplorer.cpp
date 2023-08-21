@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::System::Implementation::FileExplorer
 {
     // ----- SysStorageProviderEventReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_SysStorageProviderEventReceivedEventArgs = "SysStorageProviderEventReceivedEventArgs";
 
     static PyObject* _new_SysStorageProviderEventReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -127,11 +126,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     };
 
     // ----- ISysStorageProviderEventSource interface --------------------
-    static constexpr const char* const type_name_ISysStorageProviderEventSource = "ISysStorageProviderEventSource";
 
     static PyObject* _new_ISysStorageProviderEventSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISysStorageProviderEventSource);
+        static_assert(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderEventSource>::type_name);
         return nullptr;
     }
 
@@ -247,11 +246,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     };
 
     // ----- ISysStorageProviderHandlerFactory interface --------------------
-    static constexpr const char* const type_name_ISysStorageProviderHandlerFactory = "ISysStorageProviderHandlerFactory";
 
     static PyObject* _new_ISysStorageProviderHandlerFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISysStorageProviderHandlerFactory);
+        static_assert(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHandlerFactory>::type_name);
         return nullptr;
     }
 
@@ -387,11 +386,11 @@ namespace py::cpp::Windows::System::Implementation::FileExplorer
     };
 
     // ----- ISysStorageProviderHttpRequestProvider interface --------------------
-    static constexpr const char* const type_name_ISysStorageProviderHttpRequestProvider = "ISysStorageProviderHttpRequestProvider";
 
     static PyObject* _new_ISysStorageProviderHttpRequestProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISysStorageProviderHttpRequestProvider);
+        static_assert(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Implementation::FileExplorer::ISysStorageProviderHttpRequestProvider>::type_name);
         return nullptr;
     }
 

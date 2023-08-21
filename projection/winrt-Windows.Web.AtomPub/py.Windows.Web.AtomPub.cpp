@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Web::AtomPub
 {
     // ----- AtomPubClient class --------------------
-    static constexpr const char* const type_name_AtomPubClient = "AtomPubClient";
 
     static PyObject* _new_AtomPubClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -785,11 +784,11 @@ namespace py::cpp::Windows::Web::AtomPub
     };
 
     // ----- ResourceCollection class --------------------
-    static constexpr const char* const type_name_ResourceCollection = "ResourceCollection";
 
     static PyObject* _new_ResourceCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceCollection);
+        static_assert(py::py_type<winrt::Windows::Web::AtomPub::ResourceCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::AtomPub::ResourceCollection>::type_name);
         return nullptr;
     }
 
@@ -1252,11 +1251,11 @@ namespace py::cpp::Windows::Web::AtomPub
     };
 
     // ----- ServiceDocument class --------------------
-    static constexpr const char* const type_name_ServiceDocument = "ServiceDocument";
 
     static PyObject* _new_ServiceDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ServiceDocument);
+        static_assert(py::py_type<winrt::Windows::Web::AtomPub::ServiceDocument>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::AtomPub::ServiceDocument>::type_name);
         return nullptr;
     }
 
@@ -1659,11 +1658,11 @@ namespace py::cpp::Windows::Web::AtomPub
     };
 
     // ----- Workspace class --------------------
-    static constexpr const char* const type_name_Workspace = "Workspace";
 
     static PyObject* _new_Workspace(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Workspace);
+        static_assert(py::py_type<winrt::Windows::Web::AtomPub::Workspace>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::AtomPub::Workspace>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Networking::XboxLive
 {
     // ----- XboxLiveDeviceAddress class --------------------
-    static constexpr const char* const type_name_XboxLiveDeviceAddress = "XboxLiveDeviceAddress";
 
     static PyObject* _new_XboxLiveDeviceAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveDeviceAddress);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>::type_name);
         return nullptr;
     }
 
@@ -485,11 +485,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveEndpointPair class --------------------
-    static constexpr const char* const type_name_XboxLiveEndpointPair = "XboxLiveEndpointPair";
 
     static PyObject* _new_XboxLiveEndpointPair(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveEndpointPair);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPair>::type_name);
         return nullptr;
     }
 
@@ -909,11 +909,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveEndpointPairCreationResult class --------------------
-    static constexpr const char* const type_name_XboxLiveEndpointPairCreationResult = "XboxLiveEndpointPairCreationResult";
 
     static PyObject* _new_XboxLiveEndpointPairCreationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveEndpointPairCreationResult);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult>::type_name);
         return nullptr;
     }
 
@@ -1064,11 +1064,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveEndpointPairStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_XboxLiveEndpointPairStateChangedEventArgs = "XboxLiveEndpointPairStateChangedEventArgs";
 
     static PyObject* _new_XboxLiveEndpointPairStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveEndpointPairStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1179,11 +1179,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveEndpointPairTemplate class --------------------
-    static constexpr const char* const type_name_XboxLiveEndpointPairTemplate = "XboxLiveEndpointPairTemplate";
 
     static PyObject* _new_XboxLiveEndpointPairTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveEndpointPairTemplate);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate>::type_name);
         return nullptr;
     }
 
@@ -1621,11 +1621,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveInboundEndpointPairCreatedEventArgs class --------------------
-    static constexpr const char* const type_name_XboxLiveInboundEndpointPairCreatedEventArgs = "XboxLiveInboundEndpointPairCreatedEventArgs";
 
     static PyObject* _new_XboxLiveInboundEndpointPairCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveInboundEndpointPairCreatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1716,7 +1716,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveQualityOfServiceMeasurement class --------------------
-    static constexpr const char* const type_name_XboxLiveQualityOfServiceMeasurement = "XboxLiveQualityOfServiceMeasurement";
 
     static PyObject* _new_XboxLiveQualityOfServiceMeasurement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2489,11 +2488,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveQualityOfServiceMetricResult class --------------------
-    static constexpr const char* const type_name_XboxLiveQualityOfServiceMetricResult = "XboxLiveQualityOfServiceMetricResult";
 
     static PyObject* _new_XboxLiveQualityOfServiceMetricResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveQualityOfServiceMetricResult);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult>::type_name);
         return nullptr;
     }
 
@@ -2644,11 +2643,11 @@ namespace py::cpp::Windows::Networking::XboxLive
     };
 
     // ----- XboxLiveQualityOfServicePrivatePayloadResult class --------------------
-    static constexpr const char* const type_name_XboxLiveQualityOfServicePrivatePayloadResult = "XboxLiveQualityOfServicePrivatePayloadResult";
 
     static PyObject* _new_XboxLiveQualityOfServicePrivatePayloadResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XboxLiveQualityOfServicePrivatePayloadResult);
+        static_assert(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult>::type_name);
         return nullptr;
     }
 

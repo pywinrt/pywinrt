@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Sms
 {
     // ----- DeleteSmsMessageOperation class --------------------
-    static constexpr const char* const type_name_DeleteSmsMessageOperation = "DeleteSmsMessageOperation";
 
     static PyObject* _new_DeleteSmsMessageOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeleteSmsMessageOperation);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::DeleteSmsMessageOperation>::type_name);
         return nullptr;
     }
 
@@ -289,11 +289,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- DeleteSmsMessagesOperation class --------------------
-    static constexpr const char* const type_name_DeleteSmsMessagesOperation = "DeleteSmsMessagesOperation";
 
     static PyObject* _new_DeleteSmsMessagesOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeleteSmsMessagesOperation);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::DeleteSmsMessagesOperation>::type_name);
         return nullptr;
     }
 
@@ -571,11 +571,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- GetSmsDeviceOperation class --------------------
-    static constexpr const char* const type_name_GetSmsDeviceOperation = "GetSmsDeviceOperation";
 
     static PyObject* _new_GetSmsDeviceOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GetSmsDeviceOperation);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::GetSmsDeviceOperation>::type_name);
         return nullptr;
     }
 
@@ -852,11 +852,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- GetSmsMessageOperation class --------------------
-    static constexpr const char* const type_name_GetSmsMessageOperation = "GetSmsMessageOperation";
 
     static PyObject* _new_GetSmsMessageOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GetSmsMessageOperation);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::GetSmsMessageOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::GetSmsMessageOperation>::type_name);
         return nullptr;
     }
 
@@ -1133,11 +1133,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- GetSmsMessagesOperation class --------------------
-    static constexpr const char* const type_name_GetSmsMessagesOperation = "GetSmsMessagesOperation";
 
     static PyObject* _new_GetSmsMessagesOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GetSmsMessagesOperation);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::GetSmsMessagesOperation>::type_name);
         return nullptr;
     }
 
@@ -1462,11 +1462,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SendSmsMessageOperation class --------------------
-    static constexpr const char* const type_name_SendSmsMessageOperation = "SendSmsMessageOperation";
 
     static PyObject* _new_SendSmsMessageOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SendSmsMessageOperation);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SendSmsMessageOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SendSmsMessageOperation>::type_name);
         return nullptr;
     }
 
@@ -1744,7 +1744,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsAppMessage class --------------------
-    static constexpr const char* const type_name_SmsAppMessage = "SmsAppMessage";
 
     static PyObject* _new_SmsAppMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2462,7 +2461,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsBinaryMessage class --------------------
-    static constexpr const char* const type_name_SmsBinaryMessage = "SmsBinaryMessage";
 
     static PyObject* _new_SmsBinaryMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2711,11 +2709,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsBroadcastMessage class --------------------
-    static constexpr const char* const type_name_SmsBroadcastMessage = "SmsBroadcastMessage";
 
     static PyObject* _new_SmsBroadcastMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsBroadcastMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsBroadcastMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsBroadcastMessage>::type_name);
         return nullptr;
     }
 
@@ -3086,11 +3084,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsDevice class --------------------
-    static constexpr const char* const type_name_SmsDevice = "SmsDevice";
 
     static PyObject* _new_SmsDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsDevice>::type_name);
         return nullptr;
     }
 
@@ -3519,11 +3517,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsDevice2 class --------------------
-    static constexpr const char* const type_name_SmsDevice2 = "SmsDevice2";
 
     static PyObject* _new_SmsDevice2(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsDevice2);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsDevice2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsDevice2>::type_name);
         return nullptr;
     }
 
@@ -3975,11 +3973,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsDeviceMessageStore class --------------------
-    static constexpr const char* const type_name_SmsDeviceMessageStore = "SmsDeviceMessageStore";
 
     static PyObject* _new_SmsDeviceMessageStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsDeviceMessageStore);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsDeviceMessageStore>::type_name);
         return nullptr;
     }
 
@@ -4198,7 +4196,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsFilterRule class --------------------
-    static constexpr const char* const type_name_SmsFilterRule = "SmsFilterRule";
 
     static PyObject* _new_SmsFilterRule(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4586,7 +4583,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsFilterRules class --------------------
-    static constexpr const char* const type_name_SmsFilterRules = "SmsFilterRules";
 
     static PyObject* _new_SmsFilterRules(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4726,11 +4722,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsMessageReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_SmsMessageReceivedEventArgs = "SmsMessageReceivedEventArgs";
 
     static PyObject* _new_SmsMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsMessageReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsMessageReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4841,11 +4837,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsMessageReceivedTriggerDetails class --------------------
-    static constexpr const char* const type_name_SmsMessageReceivedTriggerDetails = "SmsMessageReceivedTriggerDetails";
 
     static PyObject* _new_SmsMessageReceivedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsMessageReceivedTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -5118,11 +5114,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsMessageRegistration class --------------------
-    static constexpr const char* const type_name_SmsMessageRegistration = "SmsMessageRegistration";
 
     static PyObject* _new_SmsMessageRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsMessageRegistration);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsMessageRegistration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsMessageRegistration>::type_name);
         return nullptr;
     }
 
@@ -5362,11 +5358,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsReceivedEventDetails class --------------------
-    static constexpr const char* const type_name_SmsReceivedEventDetails = "SmsReceivedEventDetails";
 
     static PyObject* _new_SmsReceivedEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsReceivedEventDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsReceivedEventDetails>::type_name);
         return nullptr;
     }
 
@@ -5517,11 +5513,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsSendMessageResult class --------------------
-    static constexpr const char* const type_name_SmsSendMessageResult = "SmsSendMessageResult";
 
     static PyObject* _new_SmsSendMessageResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsSendMessageResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsSendMessageResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsSendMessageResult>::type_name);
         return nullptr;
     }
 
@@ -5732,11 +5728,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsStatusMessage class --------------------
-    static constexpr const char* const type_name_SmsStatusMessage = "SmsStatusMessage";
 
     static PyObject* _new_SmsStatusMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsStatusMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsStatusMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsStatusMessage>::type_name);
         return nullptr;
     }
 
@@ -6047,7 +6043,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsTextMessage class --------------------
-    static constexpr const char* const type_name_SmsTextMessage = "SmsTextMessage";
 
     static PyObject* _new_SmsTextMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6554,7 +6549,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsTextMessage2 class --------------------
-    static constexpr const char* const type_name_SmsTextMessage2 = "SmsTextMessage2";
 
     static PyObject* _new_SmsTextMessage2(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7120,11 +7114,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsVoicemailMessage class --------------------
-    static constexpr const char* const type_name_SmsVoicemailMessage = "SmsVoicemailMessage";
 
     static PyObject* _new_SmsVoicemailMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsVoicemailMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsVoicemailMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsVoicemailMessage>::type_name);
         return nullptr;
     }
 
@@ -7375,11 +7369,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsWapMessage class --------------------
-    static constexpr const char* const type_name_SmsWapMessage = "SmsWapMessage";
 
     static PyObject* _new_SmsWapMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmsWapMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::SmsWapMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::SmsWapMessage>::type_name);
         return nullptr;
     }
 
@@ -7690,11 +7684,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- ISmsBinaryMessage interface --------------------
-    static constexpr const char* const type_name_ISmsBinaryMessage = "ISmsBinaryMessage";
 
     static PyObject* _new_ISmsBinaryMessage(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISmsBinaryMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsBinaryMessage>::type_name);
         return nullptr;
     }
 
@@ -7916,11 +7910,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- ISmsDevice interface --------------------
-    static constexpr const char* const type_name_ISmsDevice = "ISmsDevice";
 
     static PyObject* _new_ISmsDevice(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISmsDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsDevice>::type_name);
         return nullptr;
     }
 
@@ -8225,11 +8219,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- ISmsMessage interface --------------------
-    static constexpr const char* const type_name_ISmsMessage = "ISmsMessage";
 
     static PyObject* _new_ISmsMessage(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISmsMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsMessage>::type_name);
         return nullptr;
     }
 
@@ -8340,11 +8334,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- ISmsMessageBase interface --------------------
-    static constexpr const char* const type_name_ISmsMessageBase = "ISmsMessageBase";
 
     static PyObject* _new_ISmsMessageBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISmsMessageBase);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsMessageBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsMessageBase>::type_name);
         return nullptr;
     }
 
@@ -8515,11 +8509,11 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- ISmsTextMessage interface --------------------
-    static constexpr const char* const type_name_ISmsTextMessage = "ISmsTextMessage";
 
     static PyObject* _new_ISmsTextMessage(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISmsTextMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Sms::ISmsTextMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sms::ISmsTextMessage>::type_name);
         return nullptr;
     }
 
@@ -8934,7 +8928,6 @@ namespace py::cpp::Windows::Devices::Sms
     };
 
     // ----- SmsEncodedLength struct --------------------
-    static constexpr const char* const type_name_SmsEncodedLength = "SmsEncodedLength";
 
     PyObject* _new_SmsEncodedLength(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

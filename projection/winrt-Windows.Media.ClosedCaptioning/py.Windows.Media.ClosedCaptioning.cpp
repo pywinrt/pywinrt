@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::ClosedCaptioning
 {
     // ----- ClosedCaptionProperties class --------------------
-    static constexpr const char* const type_name_ClosedCaptionProperties = "ClosedCaptionProperties";
 
     static PyObject* _new_ClosedCaptionProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ClosedCaptionProperties);
+        static_assert(py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>::type_name);
         return nullptr;
     }
 

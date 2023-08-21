@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::AppService
 {
     // ----- AppServiceCatalog class --------------------
-    static constexpr const char* const type_name_AppServiceCatalog = "AppServiceCatalog";
 
     static PyObject* _new_AppServiceCatalog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceCatalog);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceCatalog>::type_name);
         return nullptr;
     }
 
@@ -73,11 +73,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceClosedEventArgs class --------------------
-    static constexpr const char* const type_name_AppServiceClosedEventArgs = "AppServiceClosedEventArgs";
 
     static PyObject* _new_AppServiceClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceClosedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -168,7 +168,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceConnection class --------------------
-    static constexpr const char* const type_name_AppServiceConnection = "AppServiceConnection";
 
     static PyObject* _new_AppServiceConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -681,11 +680,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceDeferral class --------------------
-    static constexpr const char* const type_name_AppServiceDeferral = "AppServiceDeferral";
 
     static PyObject* _new_AppServiceDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceDeferral>::type_name);
         return nullptr;
     }
 
@@ -787,11 +786,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceRequest class --------------------
-    static constexpr const char* const type_name_AppServiceRequest = "AppServiceRequest";
 
     static PyObject* _new_AppServiceRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequest>::type_name);
         return nullptr;
     }
 
@@ -914,11 +913,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceRequestReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_AppServiceRequestReceivedEventArgs = "AppServiceRequestReceivedEventArgs";
 
     static PyObject* _new_AppServiceRequestReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceRequestReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1039,11 +1038,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceResponse class --------------------
-    static constexpr const char* const type_name_AppServiceResponse = "AppServiceResponse";
 
     static PyObject* _new_AppServiceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceResponse);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceResponse>::type_name);
         return nullptr;
     }
 
@@ -1154,11 +1153,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- AppServiceTriggerDetails class --------------------
-    static constexpr const char* const type_name_AppServiceTriggerDetails = "AppServiceTriggerDetails";
 
     static PyObject* _new_AppServiceTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppServiceTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::AppServiceTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -1361,11 +1360,11 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     };
 
     // ----- StatelessAppServiceResponse class --------------------
-    static constexpr const char* const type_name_StatelessAppServiceResponse = "StatelessAppServiceResponse";
 
     static PyObject* _new_StatelessAppServiceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StatelessAppServiceResponse);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppService::StatelessAppServiceResponse>::type_name);
         return nullptr;
     }
 

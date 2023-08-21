@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Gpio::Provider
 {
     // ----- GpioPinProviderValueChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GpioPinProviderValueChangedEventArgs = "GpioPinProviderValueChangedEventArgs";
 
     static PyObject* _new_GpioPinProviderValueChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -127,11 +126,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     };
 
     // ----- IGpioControllerProvider interface --------------------
-    static constexpr const char* const type_name_IGpioControllerProvider = "IGpioControllerProvider";
 
     static PyObject* _new_IGpioControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGpioControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -255,11 +254,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     };
 
     // ----- IGpioPinProvider interface --------------------
-    static constexpr const char* const type_name_IGpioPinProvider = "IGpioPinProvider";
 
     static PyObject* _new_IGpioPinProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGpioPinProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioPinProvider>::type_name);
         return nullptr;
     }
 
@@ -621,11 +620,11 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     };
 
     // ----- IGpioProvider interface --------------------
-    static constexpr const char* const type_name_IGpioProvider = "IGpioProvider";
 
     static PyObject* _new_IGpioProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGpioProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::Provider::IGpioProvider>::type_name);
         return nullptr;
     }
 

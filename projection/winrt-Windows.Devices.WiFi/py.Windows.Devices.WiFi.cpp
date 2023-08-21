@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::WiFi
 {
     // ----- WiFiAdapter class --------------------
-    static constexpr const char* const type_name_WiFiAdapter = "WiFiAdapter";
 
     static PyObject* _new_WiFiAdapter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiAdapter);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiAdapter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiAdapter>::type_name);
         return nullptr;
     }
 
@@ -484,11 +484,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiAvailableNetwork class --------------------
-    static constexpr const char* const type_name_WiFiAvailableNetwork = "WiFiAvailableNetwork";
 
     static PyObject* _new_WiFiAvailableNetwork(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiAvailableNetwork);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>::type_name);
         return nullptr;
     }
 
@@ -779,11 +779,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiConnectionResult class --------------------
-    static constexpr const char* const type_name_WiFiConnectionResult = "WiFiConnectionResult";
 
     static PyObject* _new_WiFiConnectionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiConnectionResult);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiConnectionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiConnectionResult>::type_name);
         return nullptr;
     }
 
@@ -874,11 +874,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiNetworkReport class --------------------
-    static constexpr const char* const type_name_WiFiNetworkReport = "WiFiNetworkReport";
 
     static PyObject* _new_WiFiNetworkReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiNetworkReport);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiNetworkReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiNetworkReport>::type_name);
         return nullptr;
     }
 
@@ -989,11 +989,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiOnDemandHotspotConnectTriggerDetails class --------------------
-    static constexpr const char* const type_name_WiFiOnDemandHotspotConnectTriggerDetails = "WiFiOnDemandHotspotConnectTriggerDetails";
 
     static PyObject* _new_WiFiOnDemandHotspotConnectTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiOnDemandHotspotConnectTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -1177,11 +1177,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiOnDemandHotspotConnectionResult class --------------------
-    static constexpr const char* const type_name_WiFiOnDemandHotspotConnectionResult = "WiFiOnDemandHotspotConnectionResult";
 
     static PyObject* _new_WiFiOnDemandHotspotConnectionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiOnDemandHotspotConnectionResult);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>::type_name);
         return nullptr;
     }
 
@@ -1272,11 +1272,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiOnDemandHotspotNetwork class --------------------
-    static constexpr const char* const type_name_WiFiOnDemandHotspotNetwork = "WiFiOnDemandHotspotNetwork";
 
     static PyObject* _new_WiFiOnDemandHotspotNetwork(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiOnDemandHotspotNetwork);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork>::type_name);
         return nullptr;
     }
 
@@ -1462,11 +1462,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiOnDemandHotspotNetworkProperties class --------------------
-    static constexpr const char* const type_name_WiFiOnDemandHotspotNetworkProperties = "WiFiOnDemandHotspotNetworkProperties";
 
     static PyObject* _new_WiFiOnDemandHotspotNetworkProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiOnDemandHotspotNetworkProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>::type_name);
         return nullptr;
     }
 
@@ -1873,11 +1873,11 @@ namespace py::cpp::Windows::Devices::WiFi
     };
 
     // ----- WiFiWpsConfigurationResult class --------------------
-    static constexpr const char* const type_name_WiFiWpsConfigurationResult = "WiFiWpsConfigurationResult";
 
     static PyObject* _new_WiFiWpsConfigurationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiWpsConfigurationResult);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>::type_name);
         return nullptr;
     }
 

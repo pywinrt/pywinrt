@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::WindowManagement::Preview
 {
     // ----- WindowManagementPreview class --------------------
-    static constexpr const char* const type_name_WindowManagementPreview = "WindowManagementPreview";
 
     static PyObject* _new_WindowManagementPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowManagementPreview);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview>::type_name);
         return nullptr;
     }
 

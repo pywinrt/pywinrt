@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::ViewManagement::Core
 {
     // ----- CoreFrameworkInputView class --------------------
-    static constexpr const char* const type_name_CoreFrameworkInputView = "CoreFrameworkInputView";
 
     static PyObject* _new_CoreFrameworkInputView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreFrameworkInputView);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>::type_name);
         return nullptr;
     }
 
@@ -234,11 +234,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreFrameworkInputViewAnimationStartingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreFrameworkInputViewAnimationStartingEventArgs = "CoreFrameworkInputViewAnimationStartingEventArgs";
 
     static PyObject* _new_CoreFrameworkInputViewAnimationStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreFrameworkInputViewAnimationStartingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -369,11 +369,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreFrameworkInputViewOcclusionsChangedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs = "CoreFrameworkInputViewOcclusionsChangedEventArgs";
 
     static PyObject* _new_CoreFrameworkInputViewOcclusionsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -484,11 +484,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputView class --------------------
-    static constexpr const char* const type_name_CoreInputView = "CoreInputView";
 
     static PyObject* _new_CoreInputView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputView);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>::type_name);
         return nullptr;
     }
 
@@ -1171,11 +1171,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputViewAnimationStartingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreInputViewAnimationStartingEventArgs = "CoreInputViewAnimationStartingEventArgs";
 
     static PyObject* _new_CoreInputViewAnimationStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputViewAnimationStartingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1334,11 +1334,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputViewHidingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreInputViewHidingEventArgs = "CoreInputViewHidingEventArgs";
 
     static PyObject* _new_CoreInputViewHidingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputViewHidingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1439,11 +1439,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputViewOcclusion class --------------------
-    static constexpr const char* const type_name_CoreInputViewOcclusion = "CoreInputViewOcclusion";
 
     static PyObject* _new_CoreInputViewOcclusion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputViewOcclusion);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>::type_name);
         return nullptr;
     }
 
@@ -1554,11 +1554,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputViewOcclusionsChangedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreInputViewOcclusionsChangedEventArgs = "CoreInputViewOcclusionsChangedEventArgs";
 
     static PyObject* _new_CoreInputViewOcclusionsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputViewOcclusionsChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1697,11 +1697,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputViewShowingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreInputViewShowingEventArgs = "CoreInputViewShowingEventArgs";
 
     static PyObject* _new_CoreInputViewShowingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputViewShowingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1802,11 +1802,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- CoreInputViewTransferringXYFocusEventArgs class --------------------
-    static constexpr const char* const type_name_CoreInputViewTransferringXYFocusEventArgs = "CoreInputViewTransferringXYFocusEventArgs";
 
     static PyObject* _new_CoreInputViewTransferringXYFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInputViewTransferringXYFocusEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2013,11 +2013,11 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
     };
 
     // ----- UISettingsController class --------------------
-    static constexpr const char* const type_name_UISettingsController = "UISettingsController";
 
     static PyObject* _new_UISettingsController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UISettingsController);
+        static_assert(py::py_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>::type_name);
         return nullptr;
     }
 

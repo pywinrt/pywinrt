@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::WindowManagement
 {
     // ----- AppWindow class --------------------
-    static constexpr const char* const type_name_AppWindow = "AppWindow";
 
     static PyObject* _new_AppWindow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindow);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindow>::type_name);
         return nullptr;
     }
 
@@ -918,11 +918,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppWindowChangedEventArgs = "AppWindowChangedEventArgs";
 
     static PyObject* _new_AppWindowChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1153,11 +1153,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowCloseRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_AppWindowCloseRequestedEventArgs = "AppWindowCloseRequestedEventArgs";
 
     static PyObject* _new_AppWindowCloseRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowCloseRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1306,11 +1306,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowClosedEventArgs class --------------------
-    static constexpr const char* const type_name_AppWindowClosedEventArgs = "AppWindowClosedEventArgs";
 
     static PyObject* _new_AppWindowClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowClosedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1401,11 +1401,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowFrame class --------------------
-    static constexpr const char* const type_name_AppWindowFrame = "AppWindowFrame";
 
     static PyObject* _new_AppWindowFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowFrame);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>::type_name);
         return nullptr;
     }
 
@@ -1559,11 +1559,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowPlacement class --------------------
-    static constexpr const char* const type_name_AppWindowPlacement = "AppWindowPlacement";
 
     static PyObject* _new_AppWindowPlacement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowPlacement);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>::type_name);
         return nullptr;
     }
 
@@ -1694,11 +1694,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowPresentationConfiguration class --------------------
-    static constexpr const char* const type_name_AppWindowPresentationConfiguration = "AppWindowPresentationConfiguration";
 
     static PyObject* _new_AppWindowPresentationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowPresentationConfiguration);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>::type_name);
         return nullptr;
     }
 
@@ -1789,11 +1789,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowPresenter class --------------------
-    static constexpr const char* const type_name_AppWindowPresenter = "AppWindowPresenter";
 
     static PyObject* _new_AppWindowPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowPresenter);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>::type_name);
         return nullptr;
     }
 
@@ -1958,11 +1958,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowTitleBar class --------------------
-    static constexpr const char* const type_name_AppWindowTitleBar = "AppWindowTitleBar";
 
     static PyObject* _new_AppWindowTitleBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowTitleBar);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>::type_name);
         return nullptr;
     }
 
@@ -2770,11 +2770,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- AppWindowTitleBarOcclusion class --------------------
-    static constexpr const char* const type_name_AppWindowTitleBarOcclusion = "AppWindowTitleBarOcclusion";
 
     static PyObject* _new_AppWindowTitleBarOcclusion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppWindowTitleBarOcclusion);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>::type_name);
         return nullptr;
     }
 
@@ -2865,7 +2865,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- CompactOverlayPresentationConfiguration class --------------------
-    static constexpr const char* const type_name_CompactOverlayPresentationConfiguration = "CompactOverlayPresentationConfiguration";
 
     static PyObject* _new_CompactOverlayPresentationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2963,7 +2962,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- DefaultPresentationConfiguration class --------------------
-    static constexpr const char* const type_name_DefaultPresentationConfiguration = "DefaultPresentationConfiguration";
 
     static PyObject* _new_DefaultPresentationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3061,11 +3059,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- DisplayRegion class --------------------
-    static constexpr const char* const type_name_DisplayRegion = "DisplayRegion";
 
     static PyObject* _new_DisplayRegion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayRegion);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::DisplayRegion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::DisplayRegion>::type_name);
         return nullptr;
     }
 
@@ -3281,7 +3279,6 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- FullScreenPresentationConfiguration class --------------------
-    static constexpr const char* const type_name_FullScreenPresentationConfiguration = "FullScreenPresentationConfiguration";
 
     static PyObject* _new_FullScreenPresentationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3427,11 +3424,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- WindowServices class --------------------
-    static constexpr const char* const type_name_WindowServices = "WindowServices";
 
     static PyObject* _new_WindowServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowServices);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowServices>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowServices>::type_name);
         return nullptr;
     }
 
@@ -3491,11 +3488,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- WindowingEnvironment class --------------------
-    static constexpr const char* const type_name_WindowingEnvironment = "WindowingEnvironment";
 
     static PyObject* _new_WindowingEnvironment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowingEnvironment);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>::type_name);
         return nullptr;
     }
 
@@ -3731,11 +3728,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- WindowingEnvironmentAddedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowingEnvironmentAddedEventArgs = "WindowingEnvironmentAddedEventArgs";
 
     static PyObject* _new_WindowingEnvironmentAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowingEnvironmentAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3826,11 +3823,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- WindowingEnvironmentChangedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowingEnvironmentChangedEventArgs = "WindowingEnvironmentChangedEventArgs";
 
     static PyObject* _new_WindowingEnvironmentChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowingEnvironmentChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3901,11 +3898,11 @@ namespace py::cpp::Windows::UI::WindowManagement
     };
 
     // ----- WindowingEnvironmentRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowingEnvironmentRemovedEventArgs = "WindowingEnvironmentRemovedEventArgs";
 
     static PyObject* _new_WindowingEnvironmentRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowingEnvironmentRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>::type_name);
         return nullptr;
     }
 

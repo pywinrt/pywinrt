@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Services::Maps::Guidance
 {
     // ----- GuidanceAudioNotificationRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_GuidanceAudioNotificationRequestedEventArgs = "GuidanceAudioNotificationRequestedEventArgs";
 
     static PyObject* _new_GuidanceAudioNotificationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceAudioNotificationRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceLaneInfo class --------------------
-    static constexpr const char* const type_name_GuidanceLaneInfo = "GuidanceLaneInfo";
 
     static PyObject* _new_GuidanceLaneInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceLaneInfo);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceLaneInfo>::type_name);
         return nullptr;
     }
 
@@ -257,11 +257,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceManeuver class --------------------
-    static constexpr const char* const type_name_GuidanceManeuver = "GuidanceManeuver";
 
     static PyObject* _new_GuidanceManeuver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceManeuver);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceManeuver>::type_name);
         return nullptr;
     }
 
@@ -572,11 +572,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceMapMatchedCoordinate class --------------------
-    static constexpr const char* const type_name_GuidanceMapMatchedCoordinate = "GuidanceMapMatchedCoordinate";
 
     static PyObject* _new_GuidanceMapMatchedCoordinate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceMapMatchedCoordinate);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate>::type_name);
         return nullptr;
     }
 
@@ -747,11 +747,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceNavigator class --------------------
-    static constexpr const char* const type_name_GuidanceNavigator = "GuidanceNavigator";
 
     static PyObject* _new_GuidanceNavigator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceNavigator);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceNavigator>::type_name);
         return nullptr;
     }
 
@@ -1707,11 +1707,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceReroutedEventArgs class --------------------
-    static constexpr const char* const type_name_GuidanceReroutedEventArgs = "GuidanceReroutedEventArgs";
 
     static PyObject* _new_GuidanceReroutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceReroutedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1802,11 +1802,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceRoadSegment class --------------------
-    static constexpr const char* const type_name_GuidanceRoadSegment = "GuidanceRoadSegment";
 
     static PyObject* _new_GuidanceRoadSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceRoadSegment);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSegment>::type_name);
         return nullptr;
     }
 
@@ -2077,11 +2077,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceRoadSignpost class --------------------
-    static constexpr const char* const type_name_GuidanceRoadSignpost = "GuidanceRoadSignpost";
 
     static PyObject* _new_GuidanceRoadSignpost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceRoadSignpost);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoadSignpost>::type_name);
         return nullptr;
     }
 
@@ -2252,11 +2252,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceRoute class --------------------
-    static constexpr const char* const type_name_GuidanceRoute = "GuidanceRoute";
 
     static PyObject* _new_GuidanceRoute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceRoute);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceRoute>::type_name);
         return nullptr;
     }
 
@@ -2541,11 +2541,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceTelemetryCollector class --------------------
-    static constexpr const char* const type_name_GuidanceTelemetryCollector = "GuidanceTelemetryCollector";
 
     static PyObject* _new_GuidanceTelemetryCollector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceTelemetryCollector);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector>::type_name);
         return nullptr;
     }
 
@@ -2821,11 +2821,11 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     };
 
     // ----- GuidanceUpdatedEventArgs class --------------------
-    static constexpr const char* const type_name_GuidanceUpdatedEventArgs = "GuidanceUpdatedEventArgs";
 
     static PyObject* _new_GuidanceUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidanceUpdatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs>::type_name);
         return nullptr;
     }
 

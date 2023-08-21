@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Input::Inking::Preview
 {
     // ----- PalmRejectionDelayZonePreview class --------------------
-    static constexpr const char* const type_name_PalmRejectionDelayZonePreview = "PalmRejectionDelayZonePreview";
 
     static PyObject* _new_PalmRejectionDelayZonePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PalmRejectionDelayZonePreview);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview>::type_name);
         return nullptr;
     }
 

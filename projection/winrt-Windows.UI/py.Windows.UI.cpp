@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI
 {
     // ----- ColorHelper class --------------------
-    static constexpr const char* const type_name_ColorHelper = "ColorHelper";
 
     static PyObject* _new_ColorHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ColorHelper);
+        static_assert(py::py_type<winrt::Windows::UI::ColorHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::ColorHelper>::type_name);
         return nullptr;
     }
 
@@ -149,11 +149,11 @@ namespace py::cpp::Windows::UI
     };
 
     // ----- Colors class --------------------
-    static constexpr const char* const type_name_Colors = "Colors";
 
     static PyObject* _new_Colors(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Colors);
+        static_assert(py::py_type<winrt::Windows::UI::Colors>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Colors>::type_name);
         return nullptr;
     }
 
@@ -3064,11 +3064,11 @@ namespace py::cpp::Windows::UI
     };
 
     // ----- UIContentRoot class --------------------
-    static constexpr const char* const type_name_UIContentRoot = "UIContentRoot";
 
     static PyObject* _new_UIContentRoot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UIContentRoot);
+        static_assert(py::py_type<winrt::Windows::UI::UIContentRoot>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIContentRoot>::type_name);
         return nullptr;
     }
 
@@ -3159,11 +3159,11 @@ namespace py::cpp::Windows::UI
     };
 
     // ----- UIContext class --------------------
-    static constexpr const char* const type_name_UIContext = "UIContext";
 
     static PyObject* _new_UIContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UIContext);
+        static_assert(py::py_type<winrt::Windows::UI::UIContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::UIContext>::type_name);
         return nullptr;
     }
 
@@ -3234,7 +3234,6 @@ namespace py::cpp::Windows::UI
     };
 
     // ----- Color struct --------------------
-    static constexpr const char* const type_name_Color = "Color";
 
     PyObject* _new_Color(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -3439,7 +3438,6 @@ namespace py::cpp::Windows::UI
     };
 
     // ----- WindowId struct --------------------
-    static constexpr const char* const type_name_WindowId = "WindowId";
 
     PyObject* _new_WindowId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

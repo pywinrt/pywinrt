@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Transcoding
 {
     // ----- MediaTranscoder class --------------------
-    static constexpr const char* const type_name_MediaTranscoder = "MediaTranscoder";
 
     static PyObject* _new_MediaTranscoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -590,11 +589,11 @@ namespace py::cpp::Windows::Media::Transcoding
     };
 
     // ----- PrepareTranscodeResult class --------------------
-    static constexpr const char* const type_name_PrepareTranscodeResult = "PrepareTranscodeResult";
 
     static PyObject* _new_PrepareTranscodeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrepareTranscodeResult);
+        static_assert(py::py_type<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>::type_name);
         return nullptr;
     }
 

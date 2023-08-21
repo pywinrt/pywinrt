@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
 {
     // ----- ExtendedExecutionForegroundRevokedEventArgs class --------------------
-    static constexpr const char* const type_name_ExtendedExecutionForegroundRevokedEventArgs = "ExtendedExecutionForegroundRevokedEventArgs";
 
     static PyObject* _new_ExtendedExecutionForegroundRevokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExtendedExecutionForegroundRevokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,7 +102,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution::Foreground
     };
 
     // ----- ExtendedExecutionForegroundSession class --------------------
-    static constexpr const char* const type_name_ExtendedExecutionForegroundSession = "ExtendedExecutionForegroundSession";
 
     static PyObject* _new_ExtendedExecutionForegroundSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

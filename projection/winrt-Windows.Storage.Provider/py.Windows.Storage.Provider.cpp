@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Storage::Provider
 {
     // ----- CachedFileUpdater class --------------------
-    static constexpr const char* const type_name_CachedFileUpdater = "CachedFileUpdater";
 
     static PyObject* _new_CachedFileUpdater(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CachedFileUpdater);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdater>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdater>::type_name);
         return nullptr;
     }
 
@@ -78,11 +78,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- CachedFileUpdaterUI class --------------------
-    static constexpr const char* const type_name_CachedFileUpdaterUI = "CachedFileUpdaterUI";
 
     static PyObject* _new_CachedFileUpdaterUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CachedFileUpdaterUI);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>::type_name);
         return nullptr;
     }
 
@@ -381,11 +381,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- FileUpdateRequest class --------------------
-    static constexpr const char* const type_name_FileUpdateRequest = "FileUpdateRequest";
 
     static PyObject* _new_FileUpdateRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileUpdateRequest);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequest>::type_name);
         return nullptr;
     }
 
@@ -655,11 +655,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- FileUpdateRequestDeferral class --------------------
-    static constexpr const char* const type_name_FileUpdateRequestDeferral = "FileUpdateRequestDeferral";
 
     static PyObject* _new_FileUpdateRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileUpdateRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -761,11 +761,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- FileUpdateRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_FileUpdateRequestedEventArgs = "FileUpdateRequestedEventArgs";
 
     static PyObject* _new_FileUpdateRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileUpdateRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -856,7 +856,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderFileTypeInfo class --------------------
-    static constexpr const char* const type_name_StorageProviderFileTypeInfo = "StorageProviderFileTypeInfo";
 
     static PyObject* _new_StorageProviderFileTypeInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -997,7 +996,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderGetContentInfoForPathResult class --------------------
-    static constexpr const char* const type_name_StorageProviderGetContentInfoForPathResult = "StorageProviderGetContentInfoForPathResult";
 
     static PyObject* _new_StorageProviderGetContentInfoForPathResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1239,7 +1237,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderGetPathForContentUriResult class --------------------
-    static constexpr const char* const type_name_StorageProviderGetPathForContentUriResult = "StorageProviderGetPathForContentUriResult";
 
     static PyObject* _new_StorageProviderGetPathForContentUriResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1433,11 +1430,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderItemProperties class --------------------
-    static constexpr const char* const type_name_StorageProviderItemProperties = "StorageProviderItemProperties";
 
     static PyObject* _new_StorageProviderItemProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageProviderItemProperties);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>::type_name);
         return nullptr;
     }
 
@@ -1500,7 +1497,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderItemProperty class --------------------
-    static constexpr const char* const type_name_StorageProviderItemProperty = "StorageProviderItemProperty";
 
     static PyObject* _new_StorageProviderItemProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1742,7 +1738,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderItemPropertyDefinition class --------------------
-    static constexpr const char* const type_name_StorageProviderItemPropertyDefinition = "StorageProviderItemPropertyDefinition";
 
     static PyObject* _new_StorageProviderItemPropertyDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1936,7 +1931,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderMoreInfoUI class --------------------
-    static constexpr const char* const type_name_StorageProviderMoreInfoUI = "StorageProviderMoreInfoUI";
 
     static PyObject* _new_StorageProviderMoreInfoUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2130,7 +2124,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderQuotaUI class --------------------
-    static constexpr const char* const type_name_StorageProviderQuotaUI = "StorageProviderQuotaUI";
 
     static PyObject* _new_StorageProviderQuotaUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2420,7 +2413,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderStatusUI class --------------------
-    static constexpr const char* const type_name_StorageProviderStatusUI = "StorageProviderStatusUI";
 
     static PyObject* _new_StorageProviderStatusUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2902,7 +2894,6 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderSyncRootInfo class --------------------
-    static constexpr const char* const type_name_StorageProviderSyncRootInfo = "StorageProviderSyncRootInfo";
 
     static PyObject* _new_StorageProviderSyncRootInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3808,11 +3799,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- StorageProviderSyncRootManager class --------------------
-    static constexpr const char* const type_name_StorageProviderSyncRootManager = "StorageProviderSyncRootManager";
 
     static PyObject* _new_StorageProviderSyncRootManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageProviderSyncRootManager);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>::type_name);
         return nullptr;
     }
 
@@ -4032,11 +4023,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- IStorageProviderItemPropertySource interface --------------------
-    static constexpr const char* const type_name_IStorageProviderItemPropertySource = "IStorageProviderItemPropertySource";
 
     static PyObject* _new_IStorageProviderItemPropertySource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageProviderItemPropertySource);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>::type_name);
         return nullptr;
     }
 
@@ -4139,11 +4130,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- IStorageProviderPropertyCapabilities interface --------------------
-    static constexpr const char* const type_name_IStorageProviderPropertyCapabilities = "IStorageProviderPropertyCapabilities";
 
     static PyObject* _new_IStorageProviderPropertyCapabilities(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageProviderPropertyCapabilities);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>::type_name);
         return nullptr;
     }
 
@@ -4246,11 +4237,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- IStorageProviderStatusUISource interface --------------------
-    static constexpr const char* const type_name_IStorageProviderStatusUISource = "IStorageProviderStatusUISource";
 
     static PyObject* _new_IStorageProviderStatusUISource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageProviderStatusUISource);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>::type_name);
         return nullptr;
     }
 
@@ -4396,11 +4387,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- IStorageProviderStatusUISourceFactory interface --------------------
-    static constexpr const char* const type_name_IStorageProviderStatusUISourceFactory = "IStorageProviderStatusUISourceFactory";
 
     static PyObject* _new_IStorageProviderStatusUISourceFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageProviderStatusUISourceFactory);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>::type_name);
         return nullptr;
     }
 
@@ -4503,11 +4494,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- IStorageProviderUICommand interface --------------------
-    static constexpr const char* const type_name_IStorageProviderUICommand = "IStorageProviderUICommand";
 
     static PyObject* _new_IStorageProviderUICommand(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageProviderUICommand);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>::type_name);
         return nullptr;
     }
 
@@ -4689,11 +4680,11 @@ namespace py::cpp::Windows::Storage::Provider
     };
 
     // ----- IStorageProviderUriSource interface --------------------
-    static constexpr const char* const type_name_IStorageProviderUriSource = "IStorageProviderUriSource";
 
     static PyObject* _new_IStorageProviderUriSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageProviderUriSource);
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>::type_name);
         return nullptr;
     }
 

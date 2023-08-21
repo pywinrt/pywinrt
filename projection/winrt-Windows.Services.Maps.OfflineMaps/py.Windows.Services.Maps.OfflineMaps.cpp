@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Services::Maps::OfflineMaps
 {
     // ----- OfflineMapPackage class --------------------
-    static constexpr const char* const type_name_OfflineMapPackage = "OfflineMapPackage";
 
     static PyObject* _new_OfflineMapPackage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OfflineMapPackage);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>::type_name);
         return nullptr;
     }
 
@@ -333,11 +333,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     };
 
     // ----- OfflineMapPackageQueryResult class --------------------
-    static constexpr const char* const type_name_OfflineMapPackageQueryResult = "OfflineMapPackageQueryResult";
 
     static PyObject* _new_OfflineMapPackageQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OfflineMapPackageQueryResult);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>::type_name);
         return nullptr;
     }
 
@@ -448,11 +448,11 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     };
 
     // ----- OfflineMapPackageStartDownloadResult class --------------------
-    static constexpr const char* const type_name_OfflineMapPackageStartDownloadResult = "OfflineMapPackageStartDownloadResult";
 
     static PyObject* _new_OfflineMapPackageStartDownloadResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OfflineMapPackageStartDownloadResult);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>::type_name);
         return nullptr;
     }
 

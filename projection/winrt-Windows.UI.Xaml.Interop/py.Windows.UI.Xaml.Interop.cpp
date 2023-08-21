@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Interop
 {
     // ----- NotifyCollectionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_NotifyCollectionChangedEventArgs = "NotifyCollectionChangedEventArgs";
 
     static PyObject* _new_NotifyCollectionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -211,11 +210,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- IBindableIterable interface --------------------
-    static constexpr const char* const type_name_IBindableIterable = "IBindableIterable";
 
     static PyObject* _new_IBindableIterable(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBindableIterable);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>::type_name);
         return nullptr;
     }
 
@@ -316,11 +315,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- IBindableIterator interface --------------------
-    static constexpr const char* const type_name_IBindableIterator = "IBindableIterator";
 
     static PyObject* _new_IBindableIterator(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBindableIterator);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>::type_name);
         return nullptr;
     }
 
@@ -461,11 +460,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- IBindableObservableVector interface --------------------
-    static constexpr const char* const type_name_IBindableObservableVector = "IBindableObservableVector";
 
     static PyObject* _new_IBindableObservableVector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBindableObservableVector);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>::type_name);
         return nullptr;
     }
 
@@ -934,11 +933,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- IBindableVector interface --------------------
-    static constexpr const char* const type_name_IBindableVector = "IBindableVector";
 
     static PyObject* _new_IBindableVector(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBindableVector);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>::type_name);
         return nullptr;
     }
 
@@ -1362,11 +1361,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- IBindableVectorView interface --------------------
-    static constexpr const char* const type_name_IBindableVectorView = "IBindableVectorView";
 
     static PyObject* _new_IBindableVectorView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBindableVectorView);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>::type_name);
         return nullptr;
     }
 
@@ -1564,11 +1563,11 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- INotifyCollectionChanged interface --------------------
-    static constexpr const char* const type_name_INotifyCollectionChanged = "INotifyCollectionChanged";
 
     static PyObject* _new_INotifyCollectionChanged(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INotifyCollectionChanged);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>::type_name);
         return nullptr;
     }
 
@@ -1684,7 +1683,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     };
 
     // ----- TypeName struct --------------------
-    static constexpr const char* const type_name_TypeName = "TypeName";
 
     PyObject* _new_TypeName(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

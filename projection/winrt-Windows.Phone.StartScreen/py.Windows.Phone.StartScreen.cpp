@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Phone::StartScreen
 {
     // ----- DualSimTile class --------------------
-    static constexpr const char* const type_name_DualSimTile = "DualSimTile";
 
     static PyObject* _new_DualSimTile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -505,11 +504,11 @@ namespace py::cpp::Windows::Phone::StartScreen
     };
 
     // ----- IToastNotificationManagerStatics3 interface --------------------
-    static constexpr const char* const type_name_IToastNotificationManagerStatics3 = "IToastNotificationManagerStatics3";
 
     static PyObject* _new_IToastNotificationManagerStatics3(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IToastNotificationManagerStatics3);
+        static_assert(py::py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>::type_name);
         return nullptr;
     }
 

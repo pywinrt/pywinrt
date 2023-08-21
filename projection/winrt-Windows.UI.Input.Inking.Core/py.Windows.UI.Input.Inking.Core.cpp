@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Input::Inking::Core
 {
     // ----- CoreIncrementalInkStroke class --------------------
-    static constexpr const char* const type_name_CoreIncrementalInkStroke = "CoreIncrementalInkStroke";
 
     static PyObject* _new_CoreIncrementalInkStroke(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -230,11 +229,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     };
 
     // ----- CoreInkIndependentInputSource class --------------------
-    static constexpr const char* const type_name_CoreInkIndependentInputSource = "CoreInkIndependentInputSource";
 
     static PyObject* _new_CoreInkIndependentInputSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreInkIndependentInputSource);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>::type_name);
         return nullptr;
     }
 
@@ -720,7 +719,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     };
 
     // ----- CoreInkPresenterHost class --------------------
-    static constexpr const char* const type_name_CoreInkPresenterHost = "CoreInkPresenterHost";
 
     static PyObject* _new_CoreInkPresenterHost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -886,11 +884,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     };
 
     // ----- CoreWetStrokeUpdateEventArgs class --------------------
-    static constexpr const char* const type_name_CoreWetStrokeUpdateEventArgs = "CoreWetStrokeUpdateEventArgs";
 
     static PyObject* _new_CoreWetStrokeUpdateEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreWetStrokeUpdateEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1049,11 +1047,11 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     };
 
     // ----- CoreWetStrokeUpdateSource class --------------------
-    static constexpr const char* const type_name_CoreWetStrokeUpdateSource = "CoreWetStrokeUpdateSource";
 
     static PyObject* _new_CoreWetStrokeUpdateSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreWetStrokeUpdateSource);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>::type_name);
         return nullptr;
     }
 

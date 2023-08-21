@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Networking::PushNotifications
 {
     // ----- PushNotificationChannel class --------------------
-    static constexpr const char* const type_name_PushNotificationChannel = "PushNotificationChannel";
 
     static PyObject* _new_PushNotificationChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PushNotificationChannel);
+        static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>::type_name);
         return nullptr;
     }
 
@@ -198,11 +198,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
     };
 
     // ----- PushNotificationChannelManager class --------------------
-    static constexpr const char* const type_name_PushNotificationChannelManager = "PushNotificationChannelManager";
 
     static PyObject* _new_PushNotificationChannelManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PushNotificationChannelManager);
+        static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>::type_name);
         return nullptr;
     }
 
@@ -421,11 +421,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
     };
 
     // ----- PushNotificationChannelManagerForUser class --------------------
-    static constexpr const char* const type_name_PushNotificationChannelManagerForUser = "PushNotificationChannelManagerForUser";
 
     static PyObject* _new_PushNotificationChannelManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PushNotificationChannelManagerForUser);
+        static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>::type_name);
         return nullptr;
     }
 
@@ -653,11 +653,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
     };
 
     // ----- PushNotificationChannelsRevokedEventArgs class --------------------
-    static constexpr const char* const type_name_PushNotificationChannelsRevokedEventArgs = "PushNotificationChannelsRevokedEventArgs";
 
     static PyObject* _new_PushNotificationChannelsRevokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PushNotificationChannelsRevokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -728,11 +728,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
     };
 
     // ----- PushNotificationReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_PushNotificationReceivedEventArgs = "PushNotificationReceivedEventArgs";
 
     static PyObject* _new_PushNotificationReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PushNotificationReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -951,11 +951,11 @@ namespace py::cpp::Windows::Networking::PushNotifications
     };
 
     // ----- RawNotification class --------------------
-    static constexpr const char* const type_name_RawNotification = "RawNotification";
 
     static PyObject* _new_RawNotification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RawNotification);
+        static_assert(py::py_type<winrt::Windows::Networking::PushNotifications::RawNotification>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::PushNotifications::RawNotification>::type_name);
         return nullptr;
     }
 

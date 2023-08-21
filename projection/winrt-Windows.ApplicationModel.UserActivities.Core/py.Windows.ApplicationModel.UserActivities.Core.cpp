@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::UserActivities::Core
 {
     // ----- CoreUserActivityManager class --------------------
-    static constexpr const char* const type_name_CoreUserActivityManager = "CoreUserActivityManager";
 
     static PyObject* _new_CoreUserActivityManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreUserActivityManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>::type_name);
         return nullptr;
     }
 

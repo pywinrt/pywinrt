@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Management::Workplace
 {
     // ----- MdmPolicy class --------------------
-    static constexpr const char* const type_name_MdmPolicy = "MdmPolicy";
 
     static PyObject* _new_MdmPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MdmPolicy);
+        static_assert(py::py_type<winrt::Windows::Management::Workplace::MdmPolicy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Workplace::MdmPolicy>::type_name);
         return nullptr;
     }
 
@@ -191,11 +191,11 @@ namespace py::cpp::Windows::Management::Workplace
     };
 
     // ----- WorkplaceSettings class --------------------
-    static constexpr const char* const type_name_WorkplaceSettings = "WorkplaceSettings";
 
     static PyObject* _new_WorkplaceSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WorkplaceSettings);
+        static_assert(py::py_type<winrt::Windows::Management::Workplace::WorkplaceSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Workplace::WorkplaceSettings>::type_name);
         return nullptr;
     }
 

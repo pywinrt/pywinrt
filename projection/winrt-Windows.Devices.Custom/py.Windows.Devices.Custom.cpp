@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Custom
 {
     // ----- CustomDevice class --------------------
-    static constexpr const char* const type_name_CustomDevice = "CustomDevice";
 
     static PyObject* _new_CustomDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CustomDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Custom::CustomDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Custom::CustomDevice>::type_name);
         return nullptr;
     }
 
@@ -256,7 +256,6 @@ namespace py::cpp::Windows::Devices::Custom
     };
 
     // ----- IOControlCode class --------------------
-    static constexpr const char* const type_name_IOControlCode = "IOControlCode";
 
     static PyObject* _new_IOControlCode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -459,11 +458,11 @@ namespace py::cpp::Windows::Devices::Custom
     };
 
     // ----- KnownDeviceTypes class --------------------
-    static constexpr const char* const type_name_KnownDeviceTypes = "KnownDeviceTypes";
 
     static PyObject* _new_KnownDeviceTypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownDeviceTypes);
+        static_assert(py::py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>::type_name);
         return nullptr;
     }
 
@@ -533,11 +532,11 @@ namespace py::cpp::Windows::Devices::Custom
     };
 
     // ----- IIOControlCode interface --------------------
-    static constexpr const char* const type_name_IIOControlCode = "IIOControlCode";
 
     static PyObject* _new_IIOControlCode(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IIOControlCode);
+        static_assert(py::py_type<winrt::Windows::Devices::Custom::IIOControlCode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Custom::IIOControlCode>::type_name);
         return nullptr;
     }
 

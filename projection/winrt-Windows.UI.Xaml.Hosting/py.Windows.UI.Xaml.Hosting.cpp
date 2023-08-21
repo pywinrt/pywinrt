@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Xaml::Hosting
 {
     // ----- DesignerAppExitedEventArgs class --------------------
-    static constexpr const char* const type_name_DesignerAppExitedEventArgs = "DesignerAppExitedEventArgs";
 
     static PyObject* _new_DesignerAppExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DesignerAppExitedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,7 +102,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- DesignerAppManager class --------------------
-    static constexpr const char* const type_name_DesignerAppManager = "DesignerAppManager";
 
     static PyObject* _new_DesignerAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -387,11 +386,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- DesignerAppView class --------------------
-    static constexpr const char* const type_name_DesignerAppView = "DesignerAppView";
 
     static PyObject* _new_DesignerAppView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DesignerAppView);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesignerAppView>::type_name);
         return nullptr;
     }
 
@@ -628,7 +627,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- DesktopWindowXamlSource class --------------------
-    static constexpr const char* const type_name_DesktopWindowXamlSource = "DesktopWindowXamlSource";
 
     static PyObject* _new_DesktopWindowXamlSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -969,11 +967,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- DesktopWindowXamlSourceGotFocusEventArgs class --------------------
-    static constexpr const char* const type_name_DesktopWindowXamlSourceGotFocusEventArgs = "DesktopWindowXamlSourceGotFocusEventArgs";
 
     static PyObject* _new_DesktopWindowXamlSourceGotFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DesktopWindowXamlSourceGotFocusEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1064,11 +1062,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- DesktopWindowXamlSourceTakeFocusRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs = "DesktopWindowXamlSourceTakeFocusRequestedEventArgs";
 
     static PyObject* _new_DesktopWindowXamlSourceTakeFocusRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1159,11 +1157,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- ElementCompositionPreview class --------------------
-    static constexpr const char* const type_name_ElementCompositionPreview = "ElementCompositionPreview";
 
     static PyObject* _new_ElementCompositionPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ElementCompositionPreview);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::ElementCompositionPreview>::type_name);
         return nullptr;
     }
 
@@ -1564,11 +1562,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- WindowsXamlManager class --------------------
-    static constexpr const char* const type_name_WindowsXamlManager = "WindowsXamlManager";
 
     static PyObject* _new_WindowsXamlManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsXamlManager);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::WindowsXamlManager>::type_name);
         return nullptr;
     }
 
@@ -1722,7 +1720,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- XamlSourceFocusNavigationRequest class --------------------
-    static constexpr const char* const type_name_XamlSourceFocusNavigationRequest = "XamlSourceFocusNavigationRequest";
 
     static PyObject* _new_XamlSourceFocusNavigationRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1915,7 +1912,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- XamlSourceFocusNavigationResult class --------------------
-    static constexpr const char* const type_name_XamlSourceFocusNavigationResult = "XamlSourceFocusNavigationResult";
 
     static PyObject* _new_XamlSourceFocusNavigationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2035,11 +2031,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- XamlUIPresenter class --------------------
-    static constexpr const char* const type_name_XamlUIPresenter = "XamlUIPresenter";
 
     static PyObject* _new_XamlUIPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlUIPresenter);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::XamlUIPresenter>::type_name);
         return nullptr;
     }
 
@@ -2578,11 +2574,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- IXamlUIPresenterHost interface --------------------
-    static constexpr const char* const type_name_IXamlUIPresenterHost = "IXamlUIPresenterHost";
 
     static PyObject* _new_IXamlUIPresenterHost(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlUIPresenterHost);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost>::type_name);
         return nullptr;
     }
 
@@ -2685,11 +2681,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- IXamlUIPresenterHost2 interface --------------------
-    static constexpr const char* const type_name_IXamlUIPresenterHost2 = "IXamlUIPresenterHost2";
 
     static PyObject* _new_IXamlUIPresenterHost2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlUIPresenterHost2);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2>::type_name);
         return nullptr;
     }
 
@@ -2790,11 +2786,11 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     };
 
     // ----- IXamlUIPresenterHost3 interface --------------------
-    static constexpr const char* const type_name_IXamlUIPresenterHost3 = "IXamlUIPresenterHost3";
 
     static PyObject* _new_IXamlUIPresenterHost3(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXamlUIPresenterHost3);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3>::type_name);
         return nullptr;
     }
 

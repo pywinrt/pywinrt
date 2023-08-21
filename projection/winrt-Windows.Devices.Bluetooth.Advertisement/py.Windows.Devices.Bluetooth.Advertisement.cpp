@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
 {
     // ----- BluetoothLEAdvertisement class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisement = "BluetoothLEAdvertisement";
 
     static PyObject* _new_BluetoothLEAdvertisement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -325,7 +324,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementBytePattern class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementBytePattern = "BluetoothLEAdvertisementBytePattern";
 
     static PyObject* _new_BluetoothLEAdvertisementBytePattern(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -584,7 +582,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementDataSection class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementDataSection = "BluetoothLEAdvertisementDataSection";
 
     static PyObject* _new_BluetoothLEAdvertisementDataSection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -794,11 +791,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementDataTypes class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementDataTypes = "BluetoothLEAdvertisementDataTypes";
 
     static PyObject* _new_BluetoothLEAdvertisementDataTypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAdvertisementDataTypes);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataTypes>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataTypes>::type_name);
         return nullptr;
     }
 
@@ -1288,7 +1285,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementFilter class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementFilter = "BluetoothLEAdvertisementFilter";
 
     static PyObject* _new_BluetoothLEAdvertisementFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1454,7 +1450,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementPublisher class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementPublisher = "BluetoothLEAdvertisementPublisher";
 
     static PyObject* _new_BluetoothLEAdvertisementPublisher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1906,11 +1901,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementPublisherStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementPublisherStatusChangedEventArgs = "BluetoothLEAdvertisementPublisherStatusChangedEventArgs";
 
     static PyObject* _new_BluetoothLEAdvertisementPublisherStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAdvertisementPublisherStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2041,11 +2036,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementReceivedEventArgs = "BluetoothLEAdvertisementReceivedEventArgs";
 
     static PyObject* _new_BluetoothLEAdvertisementReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAdvertisementReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2356,7 +2351,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementWatcher class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementWatcher = "BluetoothLEAdvertisementWatcher";
 
     static PyObject* _new_BluetoothLEAdvertisementWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2913,11 +2907,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEAdvertisementWatcherStoppedEventArgs class --------------------
-    static constexpr const char* const type_name_BluetoothLEAdvertisementWatcherStoppedEventArgs = "BluetoothLEAdvertisementWatcherStoppedEventArgs";
 
     static PyObject* _new_BluetoothLEAdvertisementWatcherStoppedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAdvertisementWatcherStoppedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3008,7 +3002,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     };
 
     // ----- BluetoothLEManufacturerData class --------------------
-    static constexpr const char* const type_name_BluetoothLEManufacturerData = "BluetoothLEManufacturerData";
 
     static PyObject* _new_BluetoothLEManufacturerData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

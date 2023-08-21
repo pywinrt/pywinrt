@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Isolation
 {
     // ----- IsolatedWindowsEnvironment class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironment = "IsolatedWindowsEnvironment";
 
     static PyObject* _new_IsolatedWindowsEnvironment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironment);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>::type_name);
         return nullptr;
     }
 
@@ -678,11 +678,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentCreateResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentCreateResult = "IsolatedWindowsEnvironmentCreateResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentCreateResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentCreateResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult>::type_name);
         return nullptr;
     }
 
@@ -846,11 +846,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentFile class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentFile = "IsolatedWindowsEnvironmentFile";
 
     static PyObject* _new_IsolatedWindowsEnvironmentFile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentFile);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile>::type_name);
         return nullptr;
     }
 
@@ -1032,11 +1032,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentHost class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentHost = "IsolatedWindowsEnvironmentHost";
 
     static PyObject* _new_IsolatedWindowsEnvironmentHost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentHost);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost>::type_name);
         return nullptr;
     }
 
@@ -1126,11 +1126,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentLaunchFileResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentLaunchFileResult = "IsolatedWindowsEnvironmentLaunchFileResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentLaunchFileResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentLaunchFileResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>::type_name);
         return nullptr;
     }
 
@@ -1261,7 +1261,6 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentOptions class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentOptions = "IsolatedWindowsEnvironmentOptions";
 
     static PyObject* _new_IsolatedWindowsEnvironmentOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1961,11 +1960,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistration class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentOwnerRegistration = "IsolatedWindowsEnvironmentOwnerRegistration";
 
     static PyObject* _new_IsolatedWindowsEnvironmentOwnerRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentOwnerRegistration);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration>::type_name);
         return nullptr;
     }
 
@@ -2061,7 +2060,6 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistrationData class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentOwnerRegistrationData = "IsolatedWindowsEnvironmentOwnerRegistrationData";
 
     static PyObject* _new_IsolatedWindowsEnvironmentOwnerRegistrationData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2239,11 +2237,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentOwnerRegistrationResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult = "IsolatedWindowsEnvironmentOwnerRegistrationResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentOwnerRegistrationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult>::type_name);
         return nullptr;
     }
 
@@ -2354,11 +2352,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentPostMessageResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentPostMessageResult = "IsolatedWindowsEnvironmentPostMessageResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentPostMessageResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentPostMessageResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>::type_name);
         return nullptr;
     }
 
@@ -2469,11 +2467,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentProcess class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentProcess = "IsolatedWindowsEnvironmentProcess";
 
     static PyObject* _new_IsolatedWindowsEnvironmentProcess(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentProcess);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess>::type_name);
         return nullptr;
     }
 
@@ -2678,7 +2676,6 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentShareFileRequestOptions class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentShareFileRequestOptions = "IsolatedWindowsEnvironmentShareFileRequestOptions";
 
     static PyObject* _new_IsolatedWindowsEnvironmentShareFileRequestOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2824,11 +2821,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentShareFileResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentShareFileResult = "IsolatedWindowsEnvironmentShareFileResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentShareFileResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentShareFileResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>::type_name);
         return nullptr;
     }
 
@@ -2959,7 +2956,6 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentShareFolderRequestOptions class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentShareFolderRequestOptions = "IsolatedWindowsEnvironmentShareFolderRequestOptions";
 
     static PyObject* _new_IsolatedWindowsEnvironmentShareFolderRequestOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3105,11 +3101,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentShareFolderResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentShareFolderResult = "IsolatedWindowsEnvironmentShareFolderResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentShareFolderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentShareFolderResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>::type_name);
         return nullptr;
     }
 
@@ -3220,11 +3216,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentStartProcessResult class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentStartProcessResult = "IsolatedWindowsEnvironmentStartProcessResult";
 
     static PyObject* _new_IsolatedWindowsEnvironmentStartProcessResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentStartProcessResult);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>::type_name);
         return nullptr;
     }
 
@@ -3355,7 +3351,6 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentTelemetryParameters class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentTelemetryParameters = "IsolatedWindowsEnvironmentTelemetryParameters";
 
     static PyObject* _new_IsolatedWindowsEnvironmentTelemetryParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3501,11 +3496,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentUserInfo class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentUserInfo = "IsolatedWindowsEnvironmentUserInfo";
 
     static PyObject* _new_IsolatedWindowsEnvironmentUserInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsEnvironmentUserInfo);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo>::type_name);
         return nullptr;
     }
 
@@ -3676,11 +3671,11 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsHostMessenger class --------------------
-    static constexpr const char* const type_name_IsolatedWindowsHostMessenger = "IsolatedWindowsHostMessenger";
 
     static PyObject* _new_IsolatedWindowsHostMessenger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IsolatedWindowsHostMessenger);
+        static_assert(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger>::type_name);
         return nullptr;
     }
 
@@ -3843,7 +3838,6 @@ namespace py::cpp::Windows::Security::Isolation
     };
 
     // ----- IsolatedWindowsEnvironmentCreateProgress struct --------------------
-    static constexpr const char* const type_name_IsolatedWindowsEnvironmentCreateProgress = "IsolatedWindowsEnvironmentCreateProgress";
 
     PyObject* _new_IsolatedWindowsEnvironmentCreateProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

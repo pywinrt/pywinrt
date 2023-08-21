@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Playlists
 {
     // ----- Playlist class --------------------
-    static constexpr const char* const type_name_Playlist = "Playlist";
 
     static PyObject* _new_Playlist(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

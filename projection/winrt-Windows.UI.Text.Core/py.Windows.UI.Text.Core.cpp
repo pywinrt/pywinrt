@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Text::Core
 {
     // ----- CoreTextCompositionCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextCompositionCompletedEventArgs = "CoreTextCompositionCompletedEventArgs";
 
     static PyObject* _new_CoreTextCompositionCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextCompositionCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -152,11 +152,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextCompositionSegment class --------------------
-    static constexpr const char* const type_name_CoreTextCompositionSegment = "CoreTextCompositionSegment";
 
     static PyObject* _new_CoreTextCompositionSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextCompositionSegment);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>::type_name);
         return nullptr;
     }
 
@@ -267,11 +267,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextCompositionStartedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextCompositionStartedEventArgs = "CoreTextCompositionStartedEventArgs";
 
     static PyObject* _new_CoreTextCompositionStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextCompositionStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -392,11 +392,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextEditContext class --------------------
-    static constexpr const char* const type_name_CoreTextEditContext = "CoreTextEditContext";
 
     static PyObject* _new_CoreTextEditContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextEditContext);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>::type_name);
         return nullptr;
     }
 
@@ -1270,11 +1270,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextFormatUpdatingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextFormatUpdatingEventArgs = "CoreTextFormatUpdatingEventArgs";
 
     static PyObject* _new_CoreTextFormatUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextFormatUpdatingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1563,11 +1563,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextLayoutBounds class --------------------
-    static constexpr const char* const type_name_CoreTextLayoutBounds = "CoreTextLayoutBounds";
 
     static PyObject* _new_CoreTextLayoutBounds(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextLayoutBounds);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>::type_name);
         return nullptr;
     }
 
@@ -1734,11 +1734,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextLayoutRequest class --------------------
-    static constexpr const char* const type_name_CoreTextLayoutRequest = "CoreTextLayoutRequest";
 
     static PyObject* _new_CoreTextLayoutRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextLayoutRequest);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>::type_name);
         return nullptr;
     }
 
@@ -1919,11 +1919,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextLayoutRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextLayoutRequestedEventArgs = "CoreTextLayoutRequestedEventArgs";
 
     static PyObject* _new_CoreTextLayoutRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextLayoutRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2014,11 +2014,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextSelectionRequest class --------------------
-    static constexpr const char* const type_name_CoreTextSelectionRequest = "CoreTextSelectionRequest";
 
     static PyObject* _new_CoreTextSelectionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextSelectionRequest);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>::type_name);
         return nullptr;
     }
 
@@ -2187,11 +2187,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextSelectionRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextSelectionRequestedEventArgs = "CoreTextSelectionRequestedEventArgs";
 
     static PyObject* _new_CoreTextSelectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextSelectionRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2282,11 +2282,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextSelectionUpdatingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextSelectionUpdatingEventArgs = "CoreTextSelectionUpdatingEventArgs";
 
     static PyObject* _new_CoreTextSelectionUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextSelectionUpdatingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2475,11 +2475,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextServicesConstants class --------------------
-    static constexpr const char* const type_name_CoreTextServicesConstants = "CoreTextServicesConstants";
 
     static PyObject* _new_CoreTextServicesConstants(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextServicesConstants);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>::type_name);
         return nullptr;
     }
 
@@ -2549,11 +2549,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextServicesManager class --------------------
-    static constexpr const char* const type_name_CoreTextServicesManager = "CoreTextServicesManager";
 
     static PyObject* _new_CoreTextServicesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextServicesManager);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>::type_name);
         return nullptr;
     }
 
@@ -2749,11 +2749,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextTextRequest class --------------------
-    static constexpr const char* const type_name_CoreTextTextRequest = "CoreTextTextRequest";
 
     static PyObject* _new_CoreTextTextRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextTextRequest);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>::type_name);
         return nullptr;
     }
 
@@ -2942,11 +2942,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextTextRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextTextRequestedEventArgs = "CoreTextTextRequestedEventArgs";
 
     static PyObject* _new_CoreTextTextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextTextRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3037,11 +3037,11 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextTextUpdatingEventArgs class --------------------
-    static constexpr const char* const type_name_CoreTextTextUpdatingEventArgs = "CoreTextTextUpdatingEventArgs";
 
     static PyObject* _new_CoreTextTextUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreTextTextUpdatingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3290,7 +3290,6 @@ namespace py::cpp::Windows::UI::Text::Core
     };
 
     // ----- CoreTextRange struct --------------------
-    static constexpr const char* const type_name_CoreTextRange = "CoreTextRange";
 
     PyObject* _new_CoreTextRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Spi
 {
     // ----- SpiBusInfo class --------------------
-    static constexpr const char* const type_name_SpiBusInfo = "SpiBusInfo";
 
     static PyObject* _new_SpiBusInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpiBusInfo);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::SpiBusInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::SpiBusInfo>::type_name);
         return nullptr;
     }
 
@@ -162,7 +162,6 @@ namespace py::cpp::Windows::Devices::Spi
     };
 
     // ----- SpiConnectionSettings class --------------------
-    static constexpr const char* const type_name_SpiConnectionSettings = "SpiConnectionSettings";
 
     static PyObject* _new_SpiConnectionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -502,11 +501,11 @@ namespace py::cpp::Windows::Devices::Spi
     };
 
     // ----- SpiController class --------------------
-    static constexpr const char* const type_name_SpiController = "SpiController";
 
     static PyObject* _new_SpiController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpiController);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::SpiController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::SpiController>::type_name);
         return nullptr;
     }
 
@@ -671,11 +670,11 @@ namespace py::cpp::Windows::Devices::Spi
     };
 
     // ----- SpiDevice class --------------------
-    static constexpr const char* const type_name_SpiDevice = "SpiDevice";
 
     static PyObject* _new_SpiDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpiDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::SpiDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::SpiDevice>::type_name);
         return nullptr;
     }
 
@@ -1088,11 +1087,11 @@ namespace py::cpp::Windows::Devices::Spi
     };
 
     // ----- ISpiDeviceStatics interface --------------------
-    static constexpr const char* const type_name_ISpiDeviceStatics = "ISpiDeviceStatics";
 
     static PyObject* _new_ISpiDeviceStatics(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISpiDeviceStatics);
+        static_assert(py::py_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>::type_name);
         return nullptr;
     }
 

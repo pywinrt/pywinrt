@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Midi
 {
     // ----- MidiActiveSensingMessage class --------------------
-    static constexpr const char* const type_name_MidiActiveSensingMessage = "MidiActiveSensingMessage";
 
     static PyObject* _new_MidiActiveSensingMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -165,7 +164,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiChannelPressureMessage class --------------------
-    static constexpr const char* const type_name_MidiChannelPressureMessage = "MidiChannelPressureMessage";
 
     static PyObject* _new_MidiChannelPressureMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -366,7 +364,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiContinueMessage class --------------------
-    static constexpr const char* const type_name_MidiContinueMessage = "MidiContinueMessage";
 
     static PyObject* _new_MidiContinueMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -524,7 +521,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiControlChangeMessage class --------------------
-    static constexpr const char* const type_name_MidiControlChangeMessage = "MidiControlChangeMessage";
 
     static PyObject* _new_MidiControlChangeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -746,11 +742,11 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiInPort class --------------------
-    static constexpr const char* const type_name_MidiInPort = "MidiInPort";
 
     static PyObject* _new_MidiInPort(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MidiInPort);
+        static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiInPort>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiInPort>::type_name);
         return nullptr;
     }
 
@@ -1001,11 +997,11 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiMessageReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MidiMessageReceivedEventArgs = "MidiMessageReceivedEventArgs";
 
     static PyObject* _new_MidiMessageReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MidiMessageReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1096,7 +1092,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiNoteOffMessage class --------------------
-    static constexpr const char* const type_name_MidiNoteOffMessage = "MidiNoteOffMessage";
 
     static PyObject* _new_MidiNoteOffMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1318,7 +1313,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiNoteOnMessage class --------------------
-    static constexpr const char* const type_name_MidiNoteOnMessage = "MidiNoteOnMessage";
 
     static PyObject* _new_MidiNoteOnMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1540,11 +1534,11 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiOutPort class --------------------
-    static constexpr const char* const type_name_MidiOutPort = "MidiOutPort";
 
     static PyObject* _new_MidiOutPort(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MidiOutPort);
+        static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiOutPort>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiOutPort>::type_name);
         return nullptr;
     }
 
@@ -1816,7 +1810,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiPitchBendChangeMessage class --------------------
-    static constexpr const char* const type_name_MidiPitchBendChangeMessage = "MidiPitchBendChangeMessage";
 
     static PyObject* _new_MidiPitchBendChangeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2017,7 +2010,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiPolyphonicKeyPressureMessage class --------------------
-    static constexpr const char* const type_name_MidiPolyphonicKeyPressureMessage = "MidiPolyphonicKeyPressureMessage";
 
     static PyObject* _new_MidiPolyphonicKeyPressureMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2239,7 +2231,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiProgramChangeMessage class --------------------
-    static constexpr const char* const type_name_MidiProgramChangeMessage = "MidiProgramChangeMessage";
 
     static PyObject* _new_MidiProgramChangeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2440,7 +2431,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiSongPositionPointerMessage class --------------------
-    static constexpr const char* const type_name_MidiSongPositionPointerMessage = "MidiSongPositionPointerMessage";
 
     static PyObject* _new_MidiSongPositionPointerMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2620,7 +2610,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiSongSelectMessage class --------------------
-    static constexpr const char* const type_name_MidiSongSelectMessage = "MidiSongSelectMessage";
 
     static PyObject* _new_MidiSongSelectMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2800,7 +2789,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiStartMessage class --------------------
-    static constexpr const char* const type_name_MidiStartMessage = "MidiStartMessage";
 
     static PyObject* _new_MidiStartMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2958,7 +2946,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiStopMessage class --------------------
-    static constexpr const char* const type_name_MidiStopMessage = "MidiStopMessage";
 
     static PyObject* _new_MidiStopMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3116,11 +3103,11 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiSynthesizer class --------------------
-    static constexpr const char* const type_name_MidiSynthesizer = "MidiSynthesizer";
 
     static PyObject* _new_MidiSynthesizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MidiSynthesizer);
+        static_assert(py::py_type<winrt::Windows::Devices::Midi::MidiSynthesizer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::MidiSynthesizer>::type_name);
         return nullptr;
     }
 
@@ -3480,7 +3467,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiSystemExclusiveMessage class --------------------
-    static constexpr const char* const type_name_MidiSystemExclusiveMessage = "MidiSystemExclusiveMessage";
 
     static PyObject* _new_MidiSystemExclusiveMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3640,7 +3626,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiSystemResetMessage class --------------------
-    static constexpr const char* const type_name_MidiSystemResetMessage = "MidiSystemResetMessage";
 
     static PyObject* _new_MidiSystemResetMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3798,7 +3783,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiTimeCodeMessage class --------------------
-    static constexpr const char* const type_name_MidiTimeCodeMessage = "MidiTimeCodeMessage";
 
     static PyObject* _new_MidiTimeCodeMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3999,7 +3983,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiTimingClockMessage class --------------------
-    static constexpr const char* const type_name_MidiTimingClockMessage = "MidiTimingClockMessage";
 
     static PyObject* _new_MidiTimingClockMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4157,7 +4140,6 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- MidiTuneRequestMessage class --------------------
-    static constexpr const char* const type_name_MidiTuneRequestMessage = "MidiTuneRequestMessage";
 
     static PyObject* _new_MidiTuneRequestMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4315,11 +4297,11 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- IMidiMessage interface --------------------
-    static constexpr const char* const type_name_IMidiMessage = "IMidiMessage";
 
     static PyObject* _new_IMidiMessage(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMidiMessage);
+        static_assert(py::py_type<winrt::Windows::Devices::Midi::IMidiMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::IMidiMessage>::type_name);
         return nullptr;
     }
 
@@ -4450,11 +4432,11 @@ namespace py::cpp::Windows::Devices::Midi
     };
 
     // ----- IMidiOutPort interface --------------------
-    static constexpr const char* const type_name_IMidiOutPort = "IMidiOutPort";
 
     static PyObject* _new_IMidiOutPort(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMidiOutPort);
+        static_assert(py::py_type<winrt::Windows::Devices::Midi::IMidiOutPort>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Midi::IMidiOutPort>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Web::Http::Headers
 {
     // ----- HttpCacheDirectiveHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpCacheDirectiveHeaderValueCollection = "HttpCacheDirectiveHeaderValueCollection";
 
     static PyObject* _new_HttpCacheDirectiveHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpCacheDirectiveHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpCacheDirectiveHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -931,7 +931,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpChallengeHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpChallengeHeaderValue = "HttpChallengeHeaderValue";
 
     static PyObject* _new_HttpChallengeHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1228,11 +1227,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpChallengeHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpChallengeHeaderValueCollection = "HttpChallengeHeaderValueCollection";
 
     static PyObject* _new_HttpChallengeHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpChallengeHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpChallengeHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -1960,7 +1959,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpConnectionOptionHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpConnectionOptionHeaderValue = "HttpConnectionOptionHeaderValue";
 
     static PyObject* _new_HttpConnectionOptionHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2201,11 +2199,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpConnectionOptionHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpConnectionOptionHeaderValueCollection = "HttpConnectionOptionHeaderValueCollection";
 
     static PyObject* _new_HttpConnectionOptionHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpConnectionOptionHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpConnectionOptionHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -2933,7 +2931,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentCodingHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpContentCodingHeaderValue = "HttpContentCodingHeaderValue";
 
     static PyObject* _new_HttpContentCodingHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3174,11 +3171,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentCodingHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpContentCodingHeaderValueCollection = "HttpContentCodingHeaderValueCollection";
 
     static PyObject* _new_HttpContentCodingHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpContentCodingHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -3906,7 +3903,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentCodingWithQualityHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpContentCodingWithQualityHeaderValue = "HttpContentCodingWithQualityHeaderValue";
 
     static PyObject* _new_HttpContentCodingWithQualityHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4183,11 +4179,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentCodingWithQualityHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpContentCodingWithQualityHeaderValueCollection = "HttpContentCodingWithQualityHeaderValueCollection";
 
     static PyObject* _new_HttpContentCodingWithQualityHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpContentCodingWithQualityHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpContentCodingWithQualityHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -4915,7 +4911,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentDispositionHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpContentDispositionHeaderValue = "HttpContentDispositionHeaderValue";
 
     static PyObject* _new_HttpContentDispositionHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5396,7 +5391,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentHeaderCollection class --------------------
-    static constexpr const char* const type_name_HttpContentHeaderCollection = "HttpContentHeaderCollection";
 
     static PyObject* _new_HttpContentHeaderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6367,7 +6361,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpContentRangeHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpContentRangeHeaderValue = "HttpContentRangeHeaderValue";
 
     static PyObject* _new_HttpContentRangeHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6729,7 +6722,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpCookiePairHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpCookiePairHeaderValue = "HttpCookiePairHeaderValue";
 
     static PyObject* _new_HttpCookiePairHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7034,11 +7026,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpCookiePairHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpCookiePairHeaderValueCollection = "HttpCookiePairHeaderValueCollection";
 
     static PyObject* _new_HttpCookiePairHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpCookiePairHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpCookiePairHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -7766,7 +7758,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpCredentialsHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpCredentialsHeaderValue = "HttpCredentialsHeaderValue";
 
     static PyObject* _new_HttpCredentialsHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8063,11 +8054,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpDateOrDeltaHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpDateOrDeltaHeaderValue = "HttpDateOrDeltaHeaderValue";
 
     static PyObject* _new_HttpDateOrDeltaHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDateOrDeltaHeaderValue);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpDateOrDeltaHeaderValue>::type_name);
         return nullptr;
     }
 
@@ -8299,7 +8290,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpExpectationHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpExpectationHeaderValue = "HttpExpectationHeaderValue";
 
     static PyObject* _new_HttpExpectationHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8624,11 +8614,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpExpectationHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpExpectationHeaderValueCollection = "HttpExpectationHeaderValueCollection";
 
     static PyObject* _new_HttpExpectationHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpExpectationHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpExpectationHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -9356,11 +9346,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpLanguageHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpLanguageHeaderValueCollection = "HttpLanguageHeaderValueCollection";
 
     static PyObject* _new_HttpLanguageHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpLanguageHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -10088,7 +10078,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpLanguageRangeWithQualityHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpLanguageRangeWithQualityHeaderValue = "HttpLanguageRangeWithQualityHeaderValue";
 
     static PyObject* _new_HttpLanguageRangeWithQualityHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10365,11 +10354,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpLanguageRangeWithQualityHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpLanguageRangeWithQualityHeaderValueCollection = "HttpLanguageRangeWithQualityHeaderValueCollection";
 
     static PyObject* _new_HttpLanguageRangeWithQualityHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpLanguageRangeWithQualityHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpLanguageRangeWithQualityHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -11097,7 +11086,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpMediaTypeHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpMediaTypeHeaderValue = "HttpMediaTypeHeaderValue";
 
     static PyObject* _new_HttpMediaTypeHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11434,7 +11422,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpMediaTypeWithQualityHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpMediaTypeWithQualityHeaderValue = "HttpMediaTypeWithQualityHeaderValue";
 
     static PyObject* _new_HttpMediaTypeWithQualityHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11835,11 +11822,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpMediaTypeWithQualityHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpMediaTypeWithQualityHeaderValueCollection = "HttpMediaTypeWithQualityHeaderValueCollection";
 
     static PyObject* _new_HttpMediaTypeWithQualityHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpMediaTypeWithQualityHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpMediaTypeWithQualityHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -12567,11 +12554,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpMethodHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpMethodHeaderValueCollection = "HttpMethodHeaderValueCollection";
 
     static PyObject* _new_HttpMethodHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpMethodHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpMethodHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -13299,7 +13286,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpNameValueHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpNameValueHeaderValue = "HttpNameValueHeaderValue";
 
     static PyObject* _new_HttpNameValueHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13604,7 +13590,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpProductHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpProductHeaderValue = "HttpProductHeaderValue";
 
     static PyObject* _new_HttpProductHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13881,7 +13866,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpProductInfoHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpProductInfoHeaderValue = "HttpProductInfoHeaderValue";
 
     static PyObject* _new_HttpProductInfoHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14158,11 +14142,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpProductInfoHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpProductInfoHeaderValueCollection = "HttpProductInfoHeaderValueCollection";
 
     static PyObject* _new_HttpProductInfoHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpProductInfoHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpProductInfoHeaderValueCollection>::type_name);
         return nullptr;
     }
 
@@ -14890,11 +14874,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpRequestHeaderCollection class --------------------
-    static constexpr const char* const type_name_HttpRequestHeaderCollection = "HttpRequestHeaderCollection";
 
     static PyObject* _new_HttpRequestHeaderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpRequestHeaderCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpRequestHeaderCollection>::type_name);
         return nullptr;
     }
 
@@ -16026,11 +16010,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpResponseHeaderCollection class --------------------
-    static constexpr const char* const type_name_HttpResponseHeaderCollection = "HttpResponseHeaderCollection";
 
     static PyObject* _new_HttpResponseHeaderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpResponseHeaderCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpResponseHeaderCollection>::type_name);
         return nullptr;
     }
 
@@ -16862,7 +16846,6 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpTransferCodingHeaderValue class --------------------
-    static constexpr const char* const type_name_HttpTransferCodingHeaderValue = "HttpTransferCodingHeaderValue";
 
     static PyObject* _new_HttpTransferCodingHeaderValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17123,11 +17106,11 @@ namespace py::cpp::Windows::Web::Http::Headers
     };
 
     // ----- HttpTransferCodingHeaderValueCollection class --------------------
-    static constexpr const char* const type_name_HttpTransferCodingHeaderValueCollection = "HttpTransferCodingHeaderValueCollection";
 
     static PyObject* _new_HttpTransferCodingHeaderValueCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpTransferCodingHeaderValueCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Headers::HttpTransferCodingHeaderValueCollection>::type_name);
         return nullptr;
     }
 

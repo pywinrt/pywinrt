@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Gaming::XboxLive::Storage
 {
     // ----- GameSaveBlobGetResult class --------------------
-    static constexpr const char* const type_name_GameSaveBlobGetResult = "GameSaveBlobGetResult";
 
     static PyObject* _new_GameSaveBlobGetResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveBlobGetResult);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>::type_name);
         return nullptr;
     }
 
@@ -122,11 +122,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveBlobInfo class --------------------
-    static constexpr const char* const type_name_GameSaveBlobInfo = "GameSaveBlobInfo";
 
     static PyObject* _new_GameSaveBlobInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveBlobInfo);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>::type_name);
         return nullptr;
     }
 
@@ -237,11 +237,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveBlobInfoGetResult class --------------------
-    static constexpr const char* const type_name_GameSaveBlobInfoGetResult = "GameSaveBlobInfoGetResult";
 
     static PyObject* _new_GameSaveBlobInfoGetResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveBlobInfoGetResult);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>::type_name);
         return nullptr;
     }
 
@@ -352,11 +352,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveBlobInfoQuery class --------------------
-    static constexpr const char* const type_name_GameSaveBlobInfoQuery = "GameSaveBlobInfoQuery";
 
     static PyObject* _new_GameSaveBlobInfoQuery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveBlobInfoQuery);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>::type_name);
         return nullptr;
     }
 
@@ -508,11 +508,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveContainer class --------------------
-    static constexpr const char* const type_name_GameSaveContainer = "GameSaveContainer";
 
     static PyObject* _new_GameSaveContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveContainer);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>::type_name);
         return nullptr;
     }
 
@@ -787,11 +787,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveContainerInfo class --------------------
-    static constexpr const char* const type_name_GameSaveContainerInfo = "GameSaveContainerInfo";
 
     static PyObject* _new_GameSaveContainerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveContainerInfo);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>::type_name);
         return nullptr;
     }
 
@@ -962,11 +962,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveContainerInfoGetResult class --------------------
-    static constexpr const char* const type_name_GameSaveContainerInfoGetResult = "GameSaveContainerInfoGetResult";
 
     static PyObject* _new_GameSaveContainerInfoGetResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveContainerInfoGetResult);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>::type_name);
         return nullptr;
     }
 
@@ -1077,11 +1077,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveContainerInfoQuery class --------------------
-    static constexpr const char* const type_name_GameSaveContainerInfoQuery = "GameSaveContainerInfoQuery";
 
     static PyObject* _new_GameSaveContainerInfoQuery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveContainerInfoQuery);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>::type_name);
         return nullptr;
     }
 
@@ -1233,11 +1233,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveOperationResult class --------------------
-    static constexpr const char* const type_name_GameSaveOperationResult = "GameSaveOperationResult";
 
     static PyObject* _new_GameSaveOperationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveOperationResult);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>::type_name);
         return nullptr;
     }
 
@@ -1328,11 +1328,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveProvider class --------------------
-    static constexpr const char* const type_name_GameSaveProvider = "GameSaveProvider";
 
     static PyObject* _new_GameSaveProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveProvider);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>::type_name);
         return nullptr;
     }
 
@@ -1653,11 +1653,11 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     };
 
     // ----- GameSaveProviderGetResult class --------------------
-    static constexpr const char* const type_name_GameSaveProviderGetResult = "GameSaveProviderGetResult";
 
     static PyObject* _new_GameSaveProviderGetResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameSaveProviderGetResult);
+        static_assert(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>::type_name);
         return nullptr;
     }
 

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Storage::Compression
 {
     // ----- Compressor class --------------------
-    static constexpr const char* const type_name_Compressor = "Compressor";
 
     static PyObject* _new_Compressor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -299,7 +298,6 @@ namespace py::cpp::Windows::Storage::Compression
     };
 
     // ----- Decompressor class --------------------
-    static constexpr const char* const type_name_Decompressor = "Decompressor";
 
     static PyObject* _new_Decompressor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

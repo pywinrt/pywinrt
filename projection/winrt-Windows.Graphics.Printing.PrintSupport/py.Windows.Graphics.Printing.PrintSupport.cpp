@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 {
     // ----- PrintSupportExtensionSession class --------------------
-    static constexpr const char* const type_name_PrintSupportExtensionSession = "PrintSupportExtensionSession";
 
     static PyObject* _new_PrintSupportExtensionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportExtensionSession);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>::type_name);
         return nullptr;
     }
 
@@ -268,11 +268,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportExtensionTriggerDetails class --------------------
-    static constexpr const char* const type_name_PrintSupportExtensionTriggerDetails = "PrintSupportExtensionTriggerDetails";
 
     static PyObject* _new_PrintSupportExtensionTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportExtensionTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -363,11 +363,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportPrintDeviceCapabilitiesChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintSupportPrintDeviceCapabilitiesChangedEventArgs = "PrintSupportPrintDeviceCapabilitiesChangedEventArgs";
 
     static PyObject* _new_PrintSupportPrintDeviceCapabilitiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportPrintDeviceCapabilitiesChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -680,11 +680,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportPrintDeviceCapabilitiesUpdatePolicy class --------------------
-    static constexpr const char* const type_name_PrintSupportPrintDeviceCapabilitiesUpdatePolicy = "PrintSupportPrintDeviceCapabilitiesUpdatePolicy";
 
     static PyObject* _new_PrintSupportPrintDeviceCapabilitiesUpdatePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportPrintDeviceCapabilitiesUpdatePolicy);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>::type_name);
         return nullptr;
     }
 
@@ -819,7 +819,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportPrintTicketElement class --------------------
-    static constexpr const char* const type_name_PrintSupportPrintTicketElement = "PrintSupportPrintTicketElement";
 
     static PyObject* _new_PrintSupportPrintTicketElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1013,11 +1012,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportPrintTicketValidationRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintSupportPrintTicketValidationRequestedEventArgs = "PrintSupportPrintTicketValidationRequestedEventArgs";
 
     static PyObject* _new_PrintSupportPrintTicketValidationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportPrintTicketValidationRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1171,11 +1170,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportPrinterSelectedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintSupportPrinterSelectedEventArgs = "PrintSupportPrinterSelectedEventArgs";
 
     static PyObject* _new_PrintSupportPrinterSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportPrinterSelectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1463,11 +1462,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportSessionInfo class --------------------
-    static constexpr const char* const type_name_PrintSupportSessionInfo = "PrintSupportSessionInfo";
 
     static PyObject* _new_PrintSupportSessionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportSessionInfo);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>::type_name);
         return nullptr;
     }
 
@@ -1578,11 +1577,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportSettingsActivatedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintSupportSettingsActivatedEventArgs = "PrintSupportSettingsActivatedEventArgs";
 
     static PyObject* _new_PrintSupportSettingsActivatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportSettingsActivatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1783,11 +1782,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     };
 
     // ----- PrintSupportSettingsUISession class --------------------
-    static constexpr const char* const type_name_PrintSupportSettingsUISession = "PrintSupportSettingsUISession";
 
     static PyObject* _new_PrintSupportSettingsUISession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintSupportSettingsUISession);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>::type_name);
         return nullptr;
     }
 

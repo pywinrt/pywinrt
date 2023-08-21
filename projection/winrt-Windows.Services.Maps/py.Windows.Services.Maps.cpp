@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Services::Maps
 {
     // ----- EnhancedWaypoint class --------------------
-    static constexpr const char* const type_name_EnhancedWaypoint = "EnhancedWaypoint";
 
     static PyObject* _new_EnhancedWaypoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -148,11 +147,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- ManeuverWarning class --------------------
-    static constexpr const char* const type_name_ManeuverWarning = "ManeuverWarning";
 
     static PyObject* _new_ManeuverWarning(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ManeuverWarning);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::ManeuverWarning>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::ManeuverWarning>::type_name);
         return nullptr;
     }
 
@@ -263,11 +262,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapAddress class --------------------
-    static constexpr const char* const type_name_MapAddress = "MapAddress";
 
     static PyObject* _new_MapAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapAddress);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapAddress>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapAddress>::type_name);
         return nullptr;
     }
 
@@ -658,11 +657,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapLocation class --------------------
-    static constexpr const char* const type_name_MapLocation = "MapLocation";
 
     static PyObject* _new_MapLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapLocation);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapLocation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapLocation>::type_name);
         return nullptr;
     }
 
@@ -813,11 +812,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapLocationFinder class --------------------
-    static constexpr const char* const type_name_MapLocationFinder = "MapLocationFinder";
 
     static PyObject* _new_MapLocationFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapLocationFinder);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapLocationFinder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapLocationFinder>::type_name);
         return nullptr;
     }
 
@@ -955,11 +954,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapLocationFinderResult class --------------------
-    static constexpr const char* const type_name_MapLocationFinderResult = "MapLocationFinderResult";
 
     static PyObject* _new_MapLocationFinderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapLocationFinderResult);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapLocationFinderResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapLocationFinderResult>::type_name);
         return nullptr;
     }
 
@@ -1070,11 +1069,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapManager class --------------------
-    static constexpr const char* const type_name_MapManager = "MapManager";
 
     static PyObject* _new_MapManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapManager);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapManager>::type_name);
         return nullptr;
     }
 
@@ -1166,11 +1165,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapRoute class --------------------
-    static constexpr const char* const type_name_MapRoute = "MapRoute";
 
     static PyObject* _new_MapRoute(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapRoute);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapRoute>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRoute>::type_name);
         return nullptr;
     }
 
@@ -1461,7 +1460,6 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapRouteDrivingOptions class --------------------
-    static constexpr const char* const type_name_MapRouteDrivingOptions = "MapRouteDrivingOptions";
 
     static PyObject* _new_MapRouteDrivingOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1799,11 +1797,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapRouteFinder class --------------------
-    static constexpr const char* const type_name_MapRouteFinder = "MapRouteFinder";
 
     static PyObject* _new_MapRouteFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapRouteFinder);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteFinder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteFinder>::type_name);
         return nullptr;
     }
 
@@ -2151,11 +2149,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapRouteFinderResult class --------------------
-    static constexpr const char* const type_name_MapRouteFinderResult = "MapRouteFinderResult";
 
     static PyObject* _new_MapRouteFinderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapRouteFinderResult);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteFinderResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteFinderResult>::type_name);
         return nullptr;
     }
 
@@ -2286,11 +2284,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapRouteLeg class --------------------
-    static constexpr const char* const type_name_MapRouteLeg = "MapRouteLeg";
 
     static PyObject* _new_MapRouteLeg(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapRouteLeg);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteLeg>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteLeg>::type_name);
         return nullptr;
     }
 
@@ -2501,11 +2499,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapRouteManeuver class --------------------
-    static constexpr const char* const type_name_MapRouteManeuver = "MapRouteManeuver";
 
     static PyObject* _new_MapRouteManeuver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapRouteManeuver);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapRouteManeuver>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapRouteManeuver>::type_name);
         return nullptr;
     }
 
@@ -2776,11 +2774,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- MapService class --------------------
-    static constexpr const char* const type_name_MapService = "MapService";
 
     static PyObject* _new_MapService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapService);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::MapService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::MapService>::type_name);
         return nullptr;
     }
 
@@ -2954,11 +2952,11 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- PlaceInfo class --------------------
-    static constexpr const char* const type_name_PlaceInfo = "PlaceInfo";
 
     static PyObject* _new_PlaceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlaceInfo);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::PlaceInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::PlaceInfo>::type_name);
         return nullptr;
     }
 
@@ -3396,7 +3394,6 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     // ----- PlaceInfoCreateOptions class --------------------
-    static constexpr const char* const type_name_PlaceInfoCreateOptions = "PlaceInfoCreateOptions";
 
     static PyObject* _new_PlaceInfoCreateOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

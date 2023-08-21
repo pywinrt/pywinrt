@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Profile
 {
     // ----- AnalyticsInfo class --------------------
-    static constexpr const char* const type_name_AnalyticsInfo = "AnalyticsInfo";
 
     static PyObject* _new_AnalyticsInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AnalyticsInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::AnalyticsInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::AnalyticsInfo>::type_name);
         return nullptr;
     }
 
@@ -133,11 +133,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- AnalyticsVersionInfo class --------------------
-    static constexpr const char* const type_name_AnalyticsVersionInfo = "AnalyticsVersionInfo";
 
     static PyObject* _new_AnalyticsVersionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AnalyticsVersionInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>::type_name);
         return nullptr;
     }
 
@@ -268,11 +268,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- AppApplicability class --------------------
-    static constexpr const char* const type_name_AppApplicability = "AppApplicability";
 
     static PyObject* _new_AppApplicability(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppApplicability);
+        static_assert(py::py_type<winrt::Windows::System::Profile::AppApplicability>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::AppApplicability>::type_name);
         return nullptr;
     }
 
@@ -334,11 +334,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- EducationSettings class --------------------
-    static constexpr const char* const type_name_EducationSettings = "EducationSettings";
 
     static PyObject* _new_EducationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EducationSettings);
+        static_assert(py::py_type<winrt::Windows::System::Profile::EducationSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::EducationSettings>::type_name);
         return nullptr;
     }
 
@@ -408,11 +408,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- HardwareIdentification class --------------------
-    static constexpr const char* const type_name_HardwareIdentification = "HardwareIdentification";
 
     static PyObject* _new_HardwareIdentification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HardwareIdentification);
+        static_assert(py::py_type<winrt::Windows::System::Profile::HardwareIdentification>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::HardwareIdentification>::type_name);
         return nullptr;
     }
 
@@ -474,11 +474,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- HardwareToken class --------------------
-    static constexpr const char* const type_name_HardwareToken = "HardwareToken";
 
     static PyObject* _new_HardwareToken(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HardwareToken);
+        static_assert(py::py_type<winrt::Windows::System::Profile::HardwareToken>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::HardwareToken>::type_name);
         return nullptr;
     }
 
@@ -609,11 +609,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- KnownRetailInfoProperties class --------------------
-    static constexpr const char* const type_name_KnownRetailInfoProperties = "KnownRetailInfoProperties";
 
     static PyObject* _new_KnownRetailInfoProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownRetailInfoProperties);
+        static_assert(py::py_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>::type_name);
         return nullptr;
     }
 
@@ -1103,11 +1103,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- PlatformDiagnosticsAndUsageDataSettings class --------------------
-    static constexpr const char* const type_name_PlatformDiagnosticsAndUsageDataSettings = "PlatformDiagnosticsAndUsageDataSettings";
 
     static PyObject* _new_PlatformDiagnosticsAndUsageDataSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlatformDiagnosticsAndUsageDataSettings);
+        static_assert(py::py_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>::type_name);
         return nullptr;
     }
 
@@ -1254,11 +1254,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- RetailInfo class --------------------
-    static constexpr const char* const type_name_RetailInfo = "RetailInfo";
 
     static PyObject* _new_RetailInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RetailInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::RetailInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::RetailInfo>::type_name);
         return nullptr;
     }
 
@@ -1348,11 +1348,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- SharedModeSettings class --------------------
-    static constexpr const char* const type_name_SharedModeSettings = "SharedModeSettings";
 
     static PyObject* _new_SharedModeSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SharedModeSettings);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SharedModeSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SharedModeSettings>::type_name);
         return nullptr;
     }
 
@@ -1442,11 +1442,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- SmartAppControlPolicy class --------------------
-    static constexpr const char* const type_name_SmartAppControlPolicy = "SmartAppControlPolicy";
 
     static PyObject* _new_SmartAppControlPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmartAppControlPolicy);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SmartAppControlPolicy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SmartAppControlPolicy>::type_name);
         return nullptr;
     }
 
@@ -1561,11 +1561,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- SystemIdentification class --------------------
-    static constexpr const char* const type_name_SystemIdentification = "SystemIdentification";
 
     static PyObject* _new_SystemIdentification(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemIdentification);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemIdentification>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemIdentification>::type_name);
         return nullptr;
     }
 
@@ -1657,11 +1657,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- SystemIdentificationInfo class --------------------
-    static constexpr const char* const type_name_SystemIdentificationInfo = "SystemIdentificationInfo";
 
     static PyObject* _new_SystemIdentificationInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemIdentificationInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemIdentificationInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemIdentificationInfo>::type_name);
         return nullptr;
     }
 
@@ -1772,11 +1772,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- SystemSetupInfo class --------------------
-    static constexpr const char* const type_name_SystemSetupInfo = "SystemSetupInfo";
 
     static PyObject* _new_SystemSetupInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemSetupInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemSetupInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemSetupInfo>::type_name);
         return nullptr;
     }
 
@@ -1891,11 +1891,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- UnsupportedAppRequirement class --------------------
-    static constexpr const char* const type_name_UnsupportedAppRequirement = "UnsupportedAppRequirement";
 
     static PyObject* _new_UnsupportedAppRequirement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UnsupportedAppRequirement);
+        static_assert(py::py_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>::type_name);
         return nullptr;
     }
 
@@ -2006,11 +2006,11 @@ namespace py::cpp::Windows::System::Profile
     };
 
     // ----- WindowsIntegrityPolicy class --------------------
-    static constexpr const char* const type_name_WindowsIntegrityPolicy = "WindowsIntegrityPolicy";
 
     static PyObject* _new_WindowsIntegrityPolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowsIntegrityPolicy);
+        static_assert(py::py_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>::type_name);
         return nullptr;
     }
 

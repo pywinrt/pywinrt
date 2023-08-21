@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Cryptography
 {
     // ----- CryptographicBuffer class --------------------
-    static constexpr const char* const type_name_CryptographicBuffer = "CryptographicBuffer";
 
     static PyObject* _new_CryptographicBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CryptographicBuffer);
+        static_assert(py::py_type<winrt::Windows::Security::Cryptography::CryptographicBuffer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Cryptography::CryptographicBuffer>::type_name);
         return nullptr;
     }
 

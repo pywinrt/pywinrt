@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Web::Http
 {
     // ----- HttpBufferContent class --------------------
-    static constexpr const char* const type_name_HttpBufferContent = "HttpBufferContent";
 
     static PyObject* _new_HttpBufferContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -437,7 +436,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpClient class --------------------
-    static constexpr const char* const type_name_HttpClient = "HttpClient";
 
     static PyObject* _new_HttpClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1315,7 +1313,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpCookie class --------------------
-    static constexpr const char* const type_name_HttpCookie = "HttpCookie";
 
     static PyObject* _new_HttpCookie(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1713,11 +1710,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpCookieCollection class --------------------
-    static constexpr const char* const type_name_HttpCookieCollection = "HttpCookieCollection";
 
     static PyObject* _new_HttpCookieCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpCookieCollection);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpCookieCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpCookieCollection>::type_name);
         return nullptr;
     }
 
@@ -2061,11 +2058,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpCookieManager class --------------------
-    static constexpr const char* const type_name_HttpCookieManager = "HttpCookieManager";
 
     static PyObject* _new_HttpCookieManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpCookieManager);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpCookieManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpCookieManager>::type_name);
         return nullptr;
     }
 
@@ -2254,7 +2251,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpFormUrlEncodedContent class --------------------
-    static constexpr const char* const type_name_HttpFormUrlEncodedContent = "HttpFormUrlEncodedContent";
 
     static PyObject* _new_HttpFormUrlEncodedContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2667,11 +2663,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpGetBufferResult class --------------------
-    static constexpr const char* const type_name_HttpGetBufferResult = "HttpGetBufferResult";
 
     static PyObject* _new_HttpGetBufferResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpGetBufferResult);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpGetBufferResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpGetBufferResult>::type_name);
         return nullptr;
     }
 
@@ -2939,11 +2935,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpGetInputStreamResult class --------------------
-    static constexpr const char* const type_name_HttpGetInputStreamResult = "HttpGetInputStreamResult";
 
     static PyObject* _new_HttpGetInputStreamResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpGetInputStreamResult);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>::type_name);
         return nullptr;
     }
 
@@ -3211,11 +3207,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpGetStringResult class --------------------
-    static constexpr const char* const type_name_HttpGetStringResult = "HttpGetStringResult";
 
     static PyObject* _new_HttpGetStringResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpGetStringResult);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpGetStringResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpGetStringResult>::type_name);
         return nullptr;
     }
 
@@ -3483,7 +3479,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpMethod class --------------------
-    static constexpr const char* const type_name_HttpMethod = "HttpMethod";
 
     static PyObject* _new_HttpMethod(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3807,7 +3802,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpMultipartContent class --------------------
-    static constexpr const char* const type_name_HttpMultipartContent = "HttpMultipartContent";
 
     static PyObject* _new_HttpMultipartContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4326,7 +4320,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpMultipartFormDataContent class --------------------
-    static constexpr const char* const type_name_HttpMultipartFormDataContent = "HttpMultipartFormDataContent";
 
     static PyObject* _new_HttpMultipartFormDataContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4874,7 +4867,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpRequestMessage class --------------------
-    static constexpr const char* const type_name_HttpRequestMessage = "HttpRequestMessage";
 
     static PyObject* _new_HttpRequestMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5337,11 +5329,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpRequestResult class --------------------
-    static constexpr const char* const type_name_HttpRequestResult = "HttpRequestResult";
 
     static PyObject* _new_HttpRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpRequestResult);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpRequestResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpRequestResult>::type_name);
         return nullptr;
     }
 
@@ -5589,7 +5581,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpResponseMessage class --------------------
-    static constexpr const char* const type_name_HttpResponseMessage = "HttpResponseMessage";
 
     static PyObject* _new_HttpResponseMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6157,7 +6148,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpStreamContent class --------------------
-    static constexpr const char* const type_name_HttpStreamContent = "HttpStreamContent";
 
     static PyObject* _new_HttpStreamContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6570,7 +6560,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpStringContent class --------------------
-    static constexpr const char* const type_name_HttpStringContent = "HttpStringContent";
 
     static PyObject* _new_HttpStringContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7016,11 +7005,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpTransportInformation class --------------------
-    static constexpr const char* const type_name_HttpTransportInformation = "HttpTransportInformation";
 
     static PyObject* _new_HttpTransportInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpTransportInformation);
+        static_assert(py::py_type<winrt::Windows::Web::Http::HttpTransportInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::HttpTransportInformation>::type_name);
         return nullptr;
     }
 
@@ -7215,11 +7204,11 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- IHttpContent interface --------------------
-    static constexpr const char* const type_name_IHttpContent = "IHttpContent";
 
     static PyObject* _new_IHttpContent(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IHttpContent);
+        static_assert(py::py_type<winrt::Windows::Web::Http::IHttpContent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::IHttpContent>::type_name);
         return nullptr;
     }
 
@@ -7559,7 +7548,6 @@ namespace py::cpp::Windows::Web::Http
     };
 
     // ----- HttpProgress struct --------------------
-    static constexpr const char* const type_name_HttpProgress = "HttpProgress";
 
     PyObject* _new_HttpProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

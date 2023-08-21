@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Printing3D
 {
     // ----- Print3DManager class --------------------
-    static constexpr const char* const type_name_Print3DManager = "Print3DManager";
 
     static PyObject* _new_Print3DManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DManager);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DManager>::type_name);
         return nullptr;
     }
 
@@ -187,11 +187,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Print3DTask class --------------------
-    static constexpr const char* const type_name_Print3DTask = "Print3DTask";
 
     static PyObject* _new_Print3DTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DTask);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTask>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTask>::type_name);
         return nullptr;
     }
 
@@ -417,11 +417,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Print3DTaskCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_Print3DTaskCompletedEventArgs = "Print3DTaskCompletedEventArgs";
 
     static PyObject* _new_Print3DTaskCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DTaskCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -532,11 +532,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Print3DTaskRequest class --------------------
-    static constexpr const char* const type_name_Print3DTaskRequest = "Print3DTaskRequest";
 
     static PyObject* _new_Print3DTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DTaskRequest);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>::type_name);
         return nullptr;
     }
 
@@ -641,11 +641,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Print3DTaskRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_Print3DTaskRequestedEventArgs = "Print3DTaskRequestedEventArgs";
 
     static PyObject* _new_Print3DTaskRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DTaskRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -736,11 +736,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Print3DTaskSourceChangedEventArgs class --------------------
-    static constexpr const char* const type_name_Print3DTaskSourceChangedEventArgs = "Print3DTaskSourceChangedEventArgs";
 
     static PyObject* _new_Print3DTaskSourceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DTaskSourceChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -831,11 +831,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Print3DTaskSourceRequestedArgs class --------------------
-    static constexpr const char* const type_name_Print3DTaskSourceRequestedArgs = "Print3DTaskSourceRequestedArgs";
 
     static PyObject* _new_Print3DTaskSourceRequestedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DTaskSourceRequestedArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>::type_name);
         return nullptr;
     }
 
@@ -939,7 +939,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3D3MFPackage class --------------------
-    static constexpr const char* const type_name_Printing3D3MFPackage = "Printing3D3MFPackage";
 
     static PyObject* _new_Printing3D3MFPackage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1375,7 +1374,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DBaseMaterial class --------------------
-    static constexpr const char* const type_name_Printing3DBaseMaterial = "Printing3DBaseMaterial";
 
     static PyObject* _new_Printing3DBaseMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1629,7 +1627,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DBaseMaterialGroup class --------------------
-    static constexpr const char* const type_name_Printing3DBaseMaterialGroup = "Printing3DBaseMaterialGroup";
 
     static PyObject* _new_Printing3DBaseMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1769,7 +1766,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DColorMaterial class --------------------
-    static constexpr const char* const type_name_Printing3DColorMaterial = "Printing3DColorMaterial";
 
     static PyObject* _new_Printing3DColorMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1963,7 +1959,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DColorMaterialGroup class --------------------
-    static constexpr const char* const type_name_Printing3DColorMaterialGroup = "Printing3DColorMaterialGroup";
 
     static PyObject* _new_Printing3DColorMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2103,7 +2098,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DComponent class --------------------
-    static constexpr const char* const type_name_Printing3DComponent = "Printing3DComponent";
 
     static PyObject* _new_Printing3DComponent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2461,7 +2455,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DComponentWithMatrix class --------------------
-    static constexpr const char* const type_name_Printing3DComponentWithMatrix = "Printing3DComponentWithMatrix";
 
     static PyObject* _new_Printing3DComponentWithMatrix(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2655,7 +2648,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DCompositeMaterial class --------------------
-    static constexpr const char* const type_name_Printing3DCompositeMaterial = "Printing3DCompositeMaterial";
 
     static PyObject* _new_Printing3DCompositeMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2773,7 +2765,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DCompositeMaterialGroup class --------------------
-    static constexpr const char* const type_name_Printing3DCompositeMaterialGroup = "Printing3DCompositeMaterialGroup";
 
     static PyObject* _new_Printing3DCompositeMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2981,7 +2972,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DFaceReductionOptions class --------------------
-    static constexpr const char* const type_name_Printing3DFaceReductionOptions = "Printing3DFaceReductionOptions";
 
     static PyObject* _new_Printing3DFaceReductionOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3223,7 +3213,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DMaterial class --------------------
-    static constexpr const char* const type_name_Printing3DMaterial = "Printing3DMaterial";
 
     static PyObject* _new_Printing3DMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3421,7 +3410,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DMesh class --------------------
-    static constexpr const char* const type_name_Printing3DMesh = "Printing3DMesh";
 
     static PyObject* _new_Printing3DMesh(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4131,11 +4119,11 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DMeshVerificationResult class --------------------
-    static constexpr const char* const type_name_Printing3DMeshVerificationResult = "Printing3DMeshVerificationResult";
 
     static PyObject* _new_Printing3DMeshVerificationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Printing3DMeshVerificationResult);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>::type_name);
         return nullptr;
     }
 
@@ -4266,7 +4254,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DModel class --------------------
-    static constexpr const char* const type_name_Printing3DModel = "Printing3DModel";
 
     static PyObject* _new_Printing3DModel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4867,7 +4854,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DModelTexture class --------------------
-    static constexpr const char* const type_name_Printing3DModelTexture = "Printing3DModelTexture";
 
     static PyObject* _new_Printing3DModelTexture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5109,7 +5095,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DMultiplePropertyMaterial class --------------------
-    static constexpr const char* const type_name_Printing3DMultiplePropertyMaterial = "Printing3DMultiplePropertyMaterial";
 
     static PyObject* _new_Printing3DMultiplePropertyMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5227,7 +5212,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DMultiplePropertyMaterialGroup class --------------------
-    static constexpr const char* const type_name_Printing3DMultiplePropertyMaterialGroup = "Printing3DMultiplePropertyMaterialGroup";
 
     static PyObject* _new_Printing3DMultiplePropertyMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5387,7 +5371,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DTexture2CoordMaterial class --------------------
-    static constexpr const char* const type_name_Printing3DTexture2CoordMaterial = "Printing3DTexture2CoordMaterial";
 
     static PyObject* _new_Printing3DTexture2CoordMaterial(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5629,7 +5612,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DTexture2CoordMaterialGroup class --------------------
-    static constexpr const char* const type_name_Printing3DTexture2CoordMaterialGroup = "Printing3DTexture2CoordMaterialGroup";
 
     static PyObject* _new_Printing3DTexture2CoordMaterialGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5817,7 +5799,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DTextureResource class --------------------
-    static constexpr const char* const type_name_Printing3DTextureResource = "Printing3DTextureResource";
 
     static PyObject* _new_Printing3DTextureResource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6011,7 +5992,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     };
 
     // ----- Printing3DBufferDescription struct --------------------
-    static constexpr const char* const type_name_Printing3DBufferDescription = "Printing3DBufferDescription";
 
     PyObject* _new_Printing3DBufferDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 {
     // ----- CustomMapTileDataSource class --------------------
-    static constexpr const char* const type_name_CustomMapTileDataSource = "CustomMapTileDataSource";
 
     static PyObject* _new_CustomMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -150,7 +149,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- HttpMapTileDataSource class --------------------
-    static constexpr const char* const type_name_HttpMapTileDataSource = "HttpMapTileDataSource";
 
     static PyObject* _new_HttpMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -424,7 +422,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- LocalMapTileDataSource class --------------------
-    static constexpr const char* const type_name_LocalMapTileDataSource = "LocalMapTileDataSource";
 
     static PyObject* _new_LocalMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -630,7 +627,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapActualCameraChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MapActualCameraChangedEventArgs = "MapActualCameraChangedEventArgs";
 
     static PyObject* _new_MapActualCameraChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -768,7 +764,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapActualCameraChangingEventArgs class --------------------
-    static constexpr const char* const type_name_MapActualCameraChangingEventArgs = "MapActualCameraChangingEventArgs";
 
     static PyObject* _new_MapActualCameraChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -906,7 +901,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapBillboard class --------------------
-    static constexpr const char* const type_name_MapBillboard = "MapBillboard";
 
     static PyObject* _new_MapBillboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1298,7 +1292,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapCamera class --------------------
-    static constexpr const char* const type_name_MapCamera = "MapCamera";
 
     static PyObject* _new_MapCamera(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1690,7 +1683,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapContextRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MapContextRequestedEventArgs = "MapContextRequestedEventArgs";
 
     static PyObject* _new_MapContextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1848,7 +1840,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControl class --------------------
-    static constexpr const char* const type_name_MapControl = "MapControl";
 
     static PyObject* _new_MapControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6366,7 +6357,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlBusinessLandmarkClickEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlBusinessLandmarkClickEventArgs = "MapControlBusinessLandmarkClickEventArgs";
 
     static PyObject* _new_MapControlBusinessLandmarkClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6484,7 +6474,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlBusinessLandmarkPointerEnteredEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlBusinessLandmarkPointerEnteredEventArgs = "MapControlBusinessLandmarkPointerEnteredEventArgs";
 
     static PyObject* _new_MapControlBusinessLandmarkPointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6602,7 +6591,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlBusinessLandmarkPointerExitedEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlBusinessLandmarkPointerExitedEventArgs = "MapControlBusinessLandmarkPointerExitedEventArgs";
 
     static PyObject* _new_MapControlBusinessLandmarkPointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6720,7 +6708,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlBusinessLandmarkRightTappedEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlBusinessLandmarkRightTappedEventArgs = "MapControlBusinessLandmarkRightTappedEventArgs";
 
     static PyObject* _new_MapControlBusinessLandmarkRightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6838,7 +6825,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlDataHelper class --------------------
-    static constexpr const char* const type_name_MapControlDataHelper = "MapControlDataHelper";
 
     static PyObject* _new_MapControlDataHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7330,7 +7316,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlTransitFeatureClickEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlTransitFeatureClickEventArgs = "MapControlTransitFeatureClickEventArgs";
 
     static PyObject* _new_MapControlTransitFeatureClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7488,7 +7473,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlTransitFeaturePointerEnteredEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlTransitFeaturePointerEnteredEventArgs = "MapControlTransitFeaturePointerEnteredEventArgs";
 
     static PyObject* _new_MapControlTransitFeaturePointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7646,7 +7630,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlTransitFeaturePointerExitedEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlTransitFeaturePointerExitedEventArgs = "MapControlTransitFeaturePointerExitedEventArgs";
 
     static PyObject* _new_MapControlTransitFeaturePointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7804,7 +7787,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapControlTransitFeatureRightTappedEventArgs class --------------------
-    static constexpr const char* const type_name_MapControlTransitFeatureRightTappedEventArgs = "MapControlTransitFeatureRightTappedEventArgs";
 
     static PyObject* _new_MapControlTransitFeatureRightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7962,7 +7944,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapCustomExperience class --------------------
-    static constexpr const char* const type_name_MapCustomExperience = "MapCustomExperience";
 
     static PyObject* _new_MapCustomExperience(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8060,7 +8041,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapCustomExperienceChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MapCustomExperienceChangedEventArgs = "MapCustomExperienceChangedEventArgs";
 
     static PyObject* _new_MapCustomExperienceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8158,7 +8138,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElement class --------------------
-    static constexpr const char* const type_name_MapElement = "MapElement";
 
     static PyObject* _new_MapElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8752,7 +8731,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElement3D class --------------------
-    static constexpr const char* const type_name_MapElement3D = "MapElement3D";
 
     static PyObject* _new_MapElement3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9258,7 +9236,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementClickEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementClickEventArgs = "MapElementClickEventArgs";
 
     static PyObject* _new_MapElementClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9416,7 +9393,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementPointerEnteredEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementPointerEnteredEventArgs = "MapElementPointerEnteredEventArgs";
 
     static PyObject* _new_MapElementPointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9574,7 +9550,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementPointerExitedEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementPointerExitedEventArgs = "MapElementPointerExitedEventArgs";
 
     static PyObject* _new_MapElementPointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9732,7 +9707,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementsLayer class --------------------
-    static constexpr const char* const type_name_MapElementsLayer = "MapElementsLayer";
 
     static PyObject* _new_MapElementsLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10098,7 +10072,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementsLayerClickEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementsLayerClickEventArgs = "MapElementsLayerClickEventArgs";
 
     static PyObject* _new_MapElementsLayerClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10256,7 +10229,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementsLayerContextRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementsLayerContextRequestedEventArgs = "MapElementsLayerContextRequestedEventArgs";
 
     static PyObject* _new_MapElementsLayerContextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10414,7 +10386,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementsLayerPointerEnteredEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementsLayerPointerEnteredEventArgs = "MapElementsLayerPointerEnteredEventArgs";
 
     static PyObject* _new_MapElementsLayerPointerEnteredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10572,7 +10543,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapElementsLayerPointerExitedEventArgs class --------------------
-    static constexpr const char* const type_name_MapElementsLayerPointerExitedEventArgs = "MapElementsLayerPointerExitedEventArgs";
 
     static PyObject* _new_MapElementsLayerPointerExitedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10730,7 +10700,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapIcon class --------------------
-    static constexpr const char* const type_name_MapIcon = "MapIcon";
 
     static PyObject* _new_MapIcon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11168,7 +11137,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapInputEventArgs class --------------------
-    static constexpr const char* const type_name_MapInputEventArgs = "MapInputEventArgs";
 
     static PyObject* _new_MapInputEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11306,7 +11274,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapItemsControl class --------------------
-    static constexpr const char* const type_name_MapItemsControl = "MapItemsControl";
 
     static PyObject* _new_MapItemsControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11600,7 +11567,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapLayer class --------------------
-    static constexpr const char* const type_name_MapLayer = "MapLayer";
 
     static PyObject* _new_MapLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11922,7 +11888,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapModel3D class --------------------
-    static constexpr const char* const type_name_MapModel3D = "MapModel3D";
 
     static PyObject* _new_MapModel3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12073,7 +12038,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapPolygon class --------------------
-    static constexpr const char* const type_name_MapPolygon = "MapPolygon";
 
     static PyObject* _new_MapPolygon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12511,7 +12475,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapPolyline class --------------------
-    static constexpr const char* const type_name_MapPolyline = "MapPolyline";
 
     static PyObject* _new_MapPolyline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12861,7 +12824,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapRightTappedEventArgs class --------------------
-    static constexpr const char* const type_name_MapRightTappedEventArgs = "MapRightTappedEventArgs";
 
     static PyObject* _new_MapRightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12999,7 +12961,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapRouteView class --------------------
-    static constexpr const char* const type_name_MapRouteView = "MapRouteView";
 
     static PyObject* _new_MapRouteView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13215,11 +13176,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapScene class --------------------
-    static constexpr const char* const type_name_MapScene = "MapScene";
 
     static PyObject* _new_MapScene(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapScene);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>::type_name);
         return nullptr;
     }
 
@@ -13605,11 +13566,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapStyleSheet class --------------------
-    static constexpr const char* const type_name_MapStyleSheet = "MapStyleSheet";
 
     static PyObject* _new_MapStyleSheet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapStyleSheet);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>::type_name);
         return nullptr;
     }
 
@@ -13969,11 +13930,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapStyleSheetEntries class --------------------
-    static constexpr const char* const type_name_MapStyleSheetEntries = "MapStyleSheetEntries";
 
     static PyObject* _new_MapStyleSheetEntries(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapStyleSheetEntries);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>::type_name);
         return nullptr;
     }
 
@@ -15303,11 +15264,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapStyleSheetEntryStates class --------------------
-    static constexpr const char* const type_name_MapStyleSheetEntryStates = "MapStyleSheetEntryStates";
 
     static PyObject* _new_MapStyleSheetEntryStates(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapStyleSheetEntryStates);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>::type_name);
         return nullptr;
     }
 
@@ -15417,7 +15378,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTargetCameraChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MapTargetCameraChangedEventArgs = "MapTargetCameraChangedEventArgs";
 
     static PyObject* _new_MapTargetCameraChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15555,7 +15515,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileBitmapRequest class --------------------
-    static constexpr const char* const type_name_MapTileBitmapRequest = "MapTileBitmapRequest";
 
     static PyObject* _new_MapTileBitmapRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15731,7 +15690,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileBitmapRequestDeferral class --------------------
-    static constexpr const char* const type_name_MapTileBitmapRequestDeferral = "MapTileBitmapRequestDeferral";
 
     static PyObject* _new_MapTileBitmapRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15860,7 +15818,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileBitmapRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MapTileBitmapRequestedEventArgs = "MapTileBitmapRequestedEventArgs";
 
     static PyObject* _new_MapTileBitmapRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16058,7 +16015,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileDataSource class --------------------
-    static constexpr const char* const type_name_MapTileDataSource = "MapTileDataSource";
 
     static PyObject* _new_MapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16156,7 +16112,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileSource class --------------------
-    static constexpr const char* const type_name_MapTileSource = "MapTileSource";
 
     static PyObject* _new_MapTileSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17425,7 +17380,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileUriRequest class --------------------
-    static constexpr const char* const type_name_MapTileUriRequest = "MapTileUriRequest";
 
     static PyObject* _new_MapTileUriRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17601,7 +17555,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileUriRequestDeferral class --------------------
-    static constexpr const char* const type_name_MapTileUriRequestDeferral = "MapTileUriRequestDeferral";
 
     static PyObject* _new_MapTileUriRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17730,7 +17683,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapTileUriRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MapTileUriRequestedEventArgs = "MapTileUriRequestedEventArgs";
 
     static PyObject* _new_MapTileUriRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17928,7 +17880,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- StreetsideExperience class --------------------
-    static constexpr const char* const type_name_StreetsideExperience = "StreetsideExperience";
 
     static PyObject* _new_StreetsideExperience(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18334,11 +18285,11 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- StreetsidePanorama class --------------------
-    static constexpr const char* const type_name_StreetsidePanorama = "StreetsidePanorama";
 
     static PyObject* _new_StreetsidePanorama(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StreetsidePanorama);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>::type_name);
         return nullptr;
     }
 
@@ -18482,7 +18433,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     // ----- MapZoomLevelRange struct --------------------
-    static constexpr const char* const type_name_MapZoomLevelRange = "MapZoomLevelRange";
 
     PyObject* _new_MapZoomLevelRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

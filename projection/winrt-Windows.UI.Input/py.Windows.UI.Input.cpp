@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Input
 {
     // ----- AttachableInputObject class --------------------
-    static constexpr const char* const type_name_AttachableInputObject = "AttachableInputObject";
 
     static PyObject* _new_AttachableInputObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AttachableInputObject);
+        static_assert(py::py_type<winrt::Windows::UI::Input::AttachableInputObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::AttachableInputObject>::type_name);
         return nullptr;
     }
 
@@ -135,11 +135,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- CrossSlidingEventArgs class --------------------
-    static constexpr const char* const type_name_CrossSlidingEventArgs = "CrossSlidingEventArgs";
 
     static PyObject* _new_CrossSlidingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CrossSlidingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::CrossSlidingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::CrossSlidingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -290,11 +290,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- DraggingEventArgs class --------------------
-    static constexpr const char* const type_name_DraggingEventArgs = "DraggingEventArgs";
 
     static PyObject* _new_DraggingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DraggingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::DraggingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::DraggingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -445,11 +445,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- EdgeGesture class --------------------
-    static constexpr const char* const type_name_EdgeGesture = "EdgeGesture";
 
     static PyObject* _new_EdgeGesture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EdgeGesture);
+        static_assert(py::py_type<winrt::Windows::UI::Input::EdgeGesture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::EdgeGesture>::type_name);
         return nullptr;
     }
 
@@ -685,11 +685,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- EdgeGestureEventArgs class --------------------
-    static constexpr const char* const type_name_EdgeGestureEventArgs = "EdgeGestureEventArgs";
 
     static PyObject* _new_EdgeGestureEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EdgeGestureEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::EdgeGestureEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::EdgeGestureEventArgs>::type_name);
         return nullptr;
     }
 
@@ -780,7 +780,6 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- GestureRecognizer class --------------------
-    static constexpr const char* const type_name_GestureRecognizer = "GestureRecognizer";
 
     static PyObject* _new_GestureRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2675,11 +2674,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- HoldingEventArgs class --------------------
-    static constexpr const char* const type_name_HoldingEventArgs = "HoldingEventArgs";
 
     static PyObject* _new_HoldingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HoldingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::HoldingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::HoldingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2850,11 +2849,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- InputActivationListener class --------------------
-    static constexpr const char* const type_name_InputActivationListener = "InputActivationListener";
 
     static PyObject* _new_InputActivationListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InputActivationListener);
+        static_assert(py::py_type<winrt::Windows::UI::Input::InputActivationListener>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::InputActivationListener>::type_name);
         return nullptr;
     }
 
@@ -2990,11 +2989,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- InputActivationListenerActivationChangedEventArgs class --------------------
-    static constexpr const char* const type_name_InputActivationListenerActivationChangedEventArgs = "InputActivationListenerActivationChangedEventArgs";
 
     static PyObject* _new_InputActivationListenerActivationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InputActivationListenerActivationChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3085,11 +3084,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- KeyboardDeliveryInterceptor class --------------------
-    static constexpr const char* const type_name_KeyboardDeliveryInterceptor = "KeyboardDeliveryInterceptor";
 
     static PyObject* _new_KeyboardDeliveryInterceptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KeyboardDeliveryInterceptor);
+        static_assert(py::py_type<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>::type_name);
         return nullptr;
     }
 
@@ -3328,11 +3327,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- ManipulationCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationCompletedEventArgs = "ManipulationCompletedEventArgs";
 
     static PyObject* _new_ManipulationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ManipulationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3523,11 +3522,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- ManipulationInertiaStartingEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationInertiaStartingEventArgs = "ManipulationInertiaStartingEventArgs";
 
     static PyObject* _new_ManipulationInertiaStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ManipulationInertiaStartingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3718,11 +3717,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- ManipulationStartedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationStartedEventArgs = "ManipulationStartedEventArgs";
 
     static PyObject* _new_ManipulationStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ManipulationStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3873,11 +3872,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- ManipulationUpdatedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationUpdatedEventArgs = "ManipulationUpdatedEventArgs";
 
     static PyObject* _new_ManipulationUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ManipulationUpdatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4088,11 +4087,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- MouseWheelParameters class --------------------
-    static constexpr const char* const type_name_MouseWheelParameters = "MouseWheelParameters";
 
     static PyObject* _new_MouseWheelParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MouseWheelParameters);
+        static_assert(py::py_type<winrt::Windows::UI::Input::MouseWheelParameters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::MouseWheelParameters>::type_name);
         return nullptr;
     }
 
@@ -4355,11 +4354,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- PointerPoint class --------------------
-    static constexpr const char* const type_name_PointerPoint = "PointerPoint";
 
     static PyObject* _new_PointerPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointerPoint);
+        static_assert(py::py_type<winrt::Windows::UI::Input::PointerPoint>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::PointerPoint>::type_name);
         return nullptr;
     }
 
@@ -4696,11 +4695,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- PointerPointProperties class --------------------
-    static constexpr const char* const type_name_PointerPointProperties = "PointerPointProperties";
 
     static PyObject* _new_PointerPointProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointerPointProperties);
+        static_assert(py::py_type<winrt::Windows::UI::Input::PointerPointProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::PointerPointProperties>::type_name);
         return nullptr;
     }
 
@@ -5297,11 +5296,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- PointerVisualizationSettings class --------------------
-    static constexpr const char* const type_name_PointerVisualizationSettings = "PointerVisualizationSettings";
 
     static PyObject* _new_PointerVisualizationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointerVisualizationSettings);
+        static_assert(py::py_type<winrt::Windows::UI::Input::PointerVisualizationSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::PointerVisualizationSettings>::type_name);
         return nullptr;
     }
 
@@ -5498,11 +5497,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialController class --------------------
-    static constexpr const char* const type_name_RadialController = "RadialController";
 
     static PyObject* _new_RadialController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialController);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialController>::type_name);
         return nullptr;
     }
 
@@ -6199,11 +6198,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerButtonClickedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerButtonClickedEventArgs = "RadialControllerButtonClickedEventArgs";
 
     static PyObject* _new_RadialControllerButtonClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerButtonClickedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6314,11 +6313,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerButtonHoldingEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerButtonHoldingEventArgs = "RadialControllerButtonHoldingEventArgs";
 
     static PyObject* _new_RadialControllerButtonHoldingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerButtonHoldingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6429,11 +6428,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerButtonPressedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerButtonPressedEventArgs = "RadialControllerButtonPressedEventArgs";
 
     static PyObject* _new_RadialControllerButtonPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerButtonPressedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6544,11 +6543,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerButtonReleasedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerButtonReleasedEventArgs = "RadialControllerButtonReleasedEventArgs";
 
     static PyObject* _new_RadialControllerButtonReleasedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerButtonReleasedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6659,11 +6658,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerConfiguration class --------------------
-    static constexpr const char* const type_name_RadialControllerConfiguration = "RadialControllerConfiguration";
 
     static PyObject* _new_RadialControllerConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerConfiguration);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerConfiguration>::type_name);
         return nullptr;
     }
 
@@ -7060,11 +7059,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerControlAcquiredEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerControlAcquiredEventArgs = "RadialControllerControlAcquiredEventArgs";
 
     static PyObject* _new_RadialControllerControlAcquiredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerControlAcquiredEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7195,11 +7194,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerMenu class --------------------
-    static constexpr const char* const type_name_RadialControllerMenu = "RadialControllerMenu";
 
     static PyObject* _new_RadialControllerMenu(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerMenu);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerMenu>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerMenu>::type_name);
         return nullptr;
     }
 
@@ -7431,11 +7430,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerMenuItem class --------------------
-    static constexpr const char* const type_name_RadialControllerMenuItem = "RadialControllerMenuItem";
 
     static PyObject* _new_RadialControllerMenuItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerMenuItem);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerMenuItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerMenuItem>::type_name);
         return nullptr;
     }
 
@@ -7742,11 +7741,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerRotationChangedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerRotationChangedEventArgs = "RadialControllerRotationChangedEventArgs";
 
     static PyObject* _new_RadialControllerRotationChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerRotationChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7897,11 +7896,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerScreenContact class --------------------
-    static constexpr const char* const type_name_RadialControllerScreenContact = "RadialControllerScreenContact";
 
     static PyObject* _new_RadialControllerScreenContact(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerScreenContact);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContact>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContact>::type_name);
         return nullptr;
     }
 
@@ -8012,11 +8011,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerScreenContactContinuedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerScreenContactContinuedEventArgs = "RadialControllerScreenContactContinuedEventArgs";
 
     static PyObject* _new_RadialControllerScreenContactContinuedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerScreenContactContinuedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8147,11 +8146,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerScreenContactEndedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerScreenContactEndedEventArgs = "RadialControllerScreenContactEndedEventArgs";
 
     static PyObject* _new_RadialControllerScreenContactEndedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerScreenContactEndedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8262,11 +8261,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RadialControllerScreenContactStartedEventArgs class --------------------
-    static constexpr const char* const type_name_RadialControllerScreenContactStartedEventArgs = "RadialControllerScreenContactStartedEventArgs";
 
     static PyObject* _new_RadialControllerScreenContactStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerScreenContactStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8397,11 +8396,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- RightTappedEventArgs class --------------------
-    static constexpr const char* const type_name_RightTappedEventArgs = "RightTappedEventArgs";
 
     static PyObject* _new_RightTappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RightTappedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::RightTappedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::RightTappedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8532,11 +8531,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- SystemButtonEventController class --------------------
-    static constexpr const char* const type_name_SystemButtonEventController = "SystemButtonEventController";
 
     static PyObject* _new_SystemButtonEventController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemButtonEventController);
+        static_assert(py::py_type<winrt::Windows::UI::Input::SystemButtonEventController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemButtonEventController>::type_name);
         return nullptr;
     }
 
@@ -8819,11 +8818,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- SystemFunctionButtonEventArgs class --------------------
-    static constexpr const char* const type_name_SystemFunctionButtonEventArgs = "SystemFunctionButtonEventArgs";
 
     static PyObject* _new_SystemFunctionButtonEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemFunctionButtonEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8962,11 +8961,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- SystemFunctionLockChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SystemFunctionLockChangedEventArgs = "SystemFunctionLockChangedEventArgs";
 
     static PyObject* _new_SystemFunctionLockChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemFunctionLockChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9125,11 +9124,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- SystemFunctionLockIndicatorChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SystemFunctionLockIndicatorChangedEventArgs = "SystemFunctionLockIndicatorChangedEventArgs";
 
     static PyObject* _new_SystemFunctionLockIndicatorChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemFunctionLockIndicatorChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9288,11 +9287,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- TappedEventArgs class --------------------
-    static constexpr const char* const type_name_TappedEventArgs = "TappedEventArgs";
 
     static PyObject* _new_TappedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TappedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::TappedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::TappedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9443,11 +9442,11 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- IPointerPointTransform interface --------------------
-    static constexpr const char* const type_name_IPointerPointTransform = "IPointerPointTransform";
 
     static PyObject* _new_IPointerPointTransform(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPointerPointTransform);
+        static_assert(py::py_type<winrt::Windows::UI::Input::IPointerPointTransform>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::IPointerPointTransform>::type_name);
         return nullptr;
     }
 
@@ -9615,7 +9614,6 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- CrossSlideThresholds struct --------------------
-    static constexpr const char* const type_name_CrossSlideThresholds = "CrossSlideThresholds";
 
     PyObject* _new_CrossSlideThresholds(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -9820,7 +9818,6 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- ManipulationDelta struct --------------------
-    static constexpr const char* const type_name_ManipulationDelta = "ManipulationDelta";
 
     PyObject* _new_ManipulationDelta(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -10025,7 +10022,6 @@ namespace py::cpp::Windows::UI::Input
     };
 
     // ----- ManipulationVelocities struct --------------------
-    static constexpr const char* const type_name_ManipulationVelocities = "ManipulationVelocities";
 
     PyObject* _new_ManipulationVelocities(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

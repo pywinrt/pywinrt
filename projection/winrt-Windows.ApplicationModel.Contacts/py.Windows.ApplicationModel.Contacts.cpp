@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Contacts
 {
     // ----- AggregateContactManager class --------------------
-    static constexpr const char* const type_name_AggregateContactManager = "AggregateContactManager";
 
     static PyObject* _new_AggregateContactManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AggregateContactManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>::type_name);
         return nullptr;
     }
 
@@ -246,7 +246,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- Contact class --------------------
-    static constexpr const char* const type_name_Contact = "Contact";
 
     static PyObject* _new_Contact(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1648,7 +1647,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactAddress class --------------------
-    static constexpr const char* const type_name_ContactAddress = "ContactAddress";
 
     static PyObject* _new_ContactAddress(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2082,7 +2080,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactAnnotation class --------------------
-    static constexpr const char* const type_name_ContactAnnotation = "ContactAnnotation";
 
     static PyObject* _new_ContactAnnotation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2452,11 +2449,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactAnnotationList class --------------------
-    static constexpr const char* const type_name_ContactAnnotationList = "ContactAnnotationList";
 
     static PyObject* _new_ContactAnnotationList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactAnnotationList);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>::type_name);
         return nullptr;
     }
 
@@ -2775,11 +2772,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactAnnotationStore class --------------------
-    static constexpr const char* const type_name_ContactAnnotationStore = "ContactAnnotationStore";
 
     static PyObject* _new_ContactAnnotationStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactAnnotationStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>::type_name);
         return nullptr;
     }
 
@@ -3122,11 +3119,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactBatch class --------------------
-    static constexpr const char* const type_name_ContactBatch = "ContactBatch";
 
     static PyObject* _new_ContactBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactBatch);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>::type_name);
         return nullptr;
     }
 
@@ -3237,11 +3234,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactCardDelayedDataLoader class --------------------
-    static constexpr const char* const type_name_ContactCardDelayedDataLoader = "ContactCardDelayedDataLoader";
 
     static PyObject* _new_ContactCardDelayedDataLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactCardDelayedDataLoader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>::type_name);
         return nullptr;
     }
 
@@ -3398,7 +3395,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactCardOptions class --------------------
-    static constexpr const char* const type_name_ContactCardOptions = "ContactCardOptions";
 
     static PyObject* _new_ContactCardOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3612,11 +3608,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactChange class --------------------
-    static constexpr const char* const type_name_ContactChange = "ContactChange";
 
     static PyObject* _new_ContactChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactChange);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>::type_name);
         return nullptr;
     }
 
@@ -3727,11 +3723,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactChangeReader class --------------------
-    static constexpr const char* const type_name_ContactChangeReader = "ContactChangeReader";
 
     static PyObject* _new_ContactChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactChangeReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>::type_name);
         return nullptr;
     }
 
@@ -3896,11 +3892,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactChangeTracker class --------------------
-    static constexpr const char* const type_name_ContactChangeTracker = "ContactChangeTracker";
 
     static PyObject* _new_ContactChangeTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactChangeTracker);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>::type_name);
         return nullptr;
     }
 
@@ -4083,11 +4079,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactChangedDeferral class --------------------
-    static constexpr const char* const type_name_ContactChangedDeferral = "ContactChangedDeferral";
 
     static PyObject* _new_ContactChangedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactChangedDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>::type_name);
         return nullptr;
     }
 
@@ -4189,11 +4185,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactChangedEventArgs class --------------------
-    static constexpr const char* const type_name_ContactChangedEventArgs = "ContactChangedEventArgs";
 
     static PyObject* _new_ContactChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4294,7 +4290,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactConnectedServiceAccount class --------------------
-    static constexpr const char* const type_name_ContactConnectedServiceAccount = "ContactConnectedServiceAccount";
 
     static PyObject* _new_ContactConnectedServiceAccount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4488,7 +4483,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactDate class --------------------
-    static constexpr const char* const type_name_ContactDate = "ContactDate";
 
     static PyObject* _new_ContactDate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4826,7 +4820,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactEmail class --------------------
-    static constexpr const char* const type_name_ContactEmail = "ContactEmail";
 
     static PyObject* _new_ContactEmail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5068,7 +5061,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactField class --------------------
-    static constexpr const char* const type_name_ContactField = "ContactField";
 
     static PyObject* _new_ContactField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5284,7 +5276,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactFieldFactory class --------------------
-    static constexpr const char* const type_name_ContactFieldFactory = "ContactFieldFactory";
 
     static PyObject* _new_ContactFieldFactory(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5616,11 +5607,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactGroup class --------------------
-    static constexpr const char* const type_name_ContactGroup = "ContactGroup";
 
     static PyObject* _new_ContactGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactGroup);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>::type_name);
         return nullptr;
     }
 
@@ -5691,11 +5682,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactInformation class --------------------
-    static constexpr const char* const type_name_ContactInformation = "ContactInformation";
 
     static PyObject* _new_ContactInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactInformation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>::type_name);
         return nullptr;
     }
 
@@ -5948,7 +5939,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactInstantMessageField class --------------------
-    static constexpr const char* const type_name_ContactInstantMessageField = "ContactInstantMessageField";
 
     static PyObject* _new_ContactInstantMessageField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6243,7 +6233,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactJobInfo class --------------------
-    static constexpr const char* const type_name_ContactJobInfo = "ContactJobInfo";
 
     static PyObject* _new_ContactJobInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6725,11 +6714,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactLaunchActionVerbs class --------------------
-    static constexpr const char* const type_name_ContactLaunchActionVerbs = "ContactLaunchActionVerbs";
 
     static PyObject* _new_ContactLaunchActionVerbs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactLaunchActionVerbs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>::type_name);
         return nullptr;
     }
 
@@ -6879,11 +6868,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactList class --------------------
-    static constexpr const char* const type_name_ContactList = "ContactList";
 
     static PyObject* _new_ContactList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactList);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactList>::type_name);
         return nullptr;
     }
 
@@ -7709,11 +7698,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactListLimitedWriteOperations class --------------------
-    static constexpr const char* const type_name_ContactListLimitedWriteOperations = "ContactListLimitedWriteOperations";
 
     static PyObject* _new_ContactListLimitedWriteOperations(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListLimitedWriteOperations);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>::type_name);
         return nullptr;
     }
 
@@ -7848,11 +7837,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactListSyncConstraints class --------------------
-    static constexpr const char* const type_name_ContactListSyncConstraints = "ContactListSyncConstraints";
 
     static PyObject* _new_ContactListSyncConstraints(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListSyncConstraints);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>::type_name);
         return nullptr;
     }
 
@@ -9267,11 +9256,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactListSyncManager class --------------------
-    static constexpr const char* const type_name_ContactListSyncManager = "ContactListSyncManager";
 
     static PyObject* _new_ContactListSyncManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListSyncManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>::type_name);
         return nullptr;
     }
 
@@ -9561,7 +9550,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactLocationField class --------------------
-    static constexpr const char* const type_name_ContactLocationField = "ContactLocationField";
 
     static PyObject* _new_ContactLocationField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9898,11 +9886,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactManager class --------------------
-    static constexpr const char* const type_name_ContactManager = "ContactManager";
 
     static PyObject* _new_ContactManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>::type_name);
         return nullptr;
     }
 
@@ -10539,11 +10527,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactManagerForUser class --------------------
-    static constexpr const char* const type_name_ContactManagerForUser = "ContactManagerForUser";
 
     static PyObject* _new_ContactManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactManagerForUser);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>::type_name);
         return nullptr;
     }
 
@@ -10913,11 +10901,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactMatchReason class --------------------
-    static constexpr const char* const type_name_ContactMatchReason = "ContactMatchReason";
 
     static PyObject* _new_ContactMatchReason(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactMatchReason);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>::type_name);
         return nullptr;
     }
 
@@ -11048,11 +11036,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactPanel class --------------------
-    static constexpr const char* const type_name_ContactPanel = "ContactPanel";
 
     static PyObject* _new_ContactPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactPanel);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>::type_name);
         return nullptr;
     }
 
@@ -11292,11 +11280,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactPanelClosingEventArgs class --------------------
-    static constexpr const char* const type_name_ContactPanelClosingEventArgs = "ContactPanelClosingEventArgs";
 
     static PyObject* _new_ContactPanelClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactPanelClosingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11397,11 +11385,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactPanelLaunchFullAppRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_ContactPanelLaunchFullAppRequestedEventArgs = "ContactPanelLaunchFullAppRequestedEventArgs";
 
     static PyObject* _new_ContactPanelLaunchFullAppRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactPanelLaunchFullAppRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -11520,7 +11508,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactPhone class --------------------
-    static constexpr const char* const type_name_ContactPhone = "ContactPhone";
 
     static PyObject* _new_ContactPhone(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11762,7 +11749,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactPicker class --------------------
-    static constexpr const char* const type_name_ContactPicker = "ContactPicker";
 
     static PyObject* _new_ContactPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12198,7 +12184,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactQueryOptions class --------------------
-    static constexpr const char* const type_name_ContactQueryOptions = "ContactQueryOptions";
 
     static PyObject* _new_ContactQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12531,11 +12516,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactQueryTextSearch class --------------------
-    static constexpr const char* const type_name_ContactQueryTextSearch = "ContactQueryTextSearch";
 
     static PyObject* _new_ContactQueryTextSearch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactQueryTextSearch);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>::type_name);
         return nullptr;
     }
 
@@ -12750,11 +12735,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactReader class --------------------
-    static constexpr const char* const type_name_ContactReader = "ContactReader";
 
     static PyObject* _new_ContactReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>::type_name);
         return nullptr;
     }
 
@@ -12887,7 +12872,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactSignificantOther class --------------------
-    static constexpr const char* const type_name_ContactSignificantOther = "ContactSignificantOther";
 
     static PyObject* _new_ContactSignificantOther(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13129,11 +13113,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactStore class --------------------
-    static constexpr const char* const type_name_ContactStore = "ContactStore";
 
     static PyObject* _new_ContactStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>::type_name);
         return nullptr;
     }
 
@@ -13598,11 +13582,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactStoreNotificationTriggerDetails class --------------------
-    static constexpr const char* const type_name_ContactStoreNotificationTriggerDetails = "ContactStoreNotificationTriggerDetails";
 
     static PyObject* _new_ContactStoreNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactStoreNotificationTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -13673,7 +13657,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- ContactWebsite class --------------------
-    static constexpr const char* const type_name_ContactWebsite = "ContactWebsite";
 
     static PyObject* _new_ContactWebsite(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13915,7 +13898,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- FullContactCardOptions class --------------------
-    static constexpr const char* const type_name_FullContactCardOptions = "FullContactCardOptions";
 
     static PyObject* _new_FullContactCardOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14061,11 +14043,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- KnownContactField class --------------------
-    static constexpr const char* const type_name_KnownContactField = "KnownContactField";
 
     static PyObject* _new_KnownContactField(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownContactField);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>::type_name);
         return nullptr;
     }
 
@@ -14259,11 +14241,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- PinnedContactIdsQueryResult class --------------------
-    static constexpr const char* const type_name_PinnedContactIdsQueryResult = "PinnedContactIdsQueryResult";
 
     static PyObject* _new_PinnedContactIdsQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PinnedContactIdsQueryResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>::type_name);
         return nullptr;
     }
 
@@ -14354,11 +14336,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- PinnedContactManager class --------------------
-    static constexpr const char* const type_name_PinnedContactManager = "PinnedContactManager";
 
     static PyObject* _new_PinnedContactManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PinnedContactManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>::type_name);
         return nullptr;
     }
 
@@ -14768,11 +14750,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- IContactField interface --------------------
-    static constexpr const char* const type_name_IContactField = "IContactField";
 
     static PyObject* _new_IContactField(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IContactField);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>::type_name);
         return nullptr;
     }
 
@@ -14923,11 +14905,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- IContactFieldFactory interface --------------------
-    static constexpr const char* const type_name_IContactFieldFactory = "IContactFieldFactory";
 
     static PyObject* _new_IContactFieldFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IContactFieldFactory);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>::type_name);
         return nullptr;
     }
 
@@ -15076,11 +15058,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- IContactInstantMessageFieldFactory interface --------------------
-    static constexpr const char* const type_name_IContactInstantMessageFieldFactory = "IContactInstantMessageFieldFactory";
 
     static PyObject* _new_IContactInstantMessageFieldFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IContactInstantMessageFieldFactory);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>::type_name);
         return nullptr;
     }
 
@@ -15228,11 +15210,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     };
 
     // ----- IContactLocationFieldFactory interface --------------------
-    static constexpr const char* const type_name_IContactLocationFieldFactory = "IContactLocationFieldFactory";
 
     static PyObject* _new_IContactLocationFieldFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IContactLocationFieldFactory);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>::type_name);
         return nullptr;
     }
 

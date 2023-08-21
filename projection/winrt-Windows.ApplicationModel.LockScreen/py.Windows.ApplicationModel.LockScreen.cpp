@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::LockScreen
 {
     // ----- LockApplicationHost class --------------------
-    static constexpr const char* const type_name_LockApplicationHost = "LockApplicationHost";
 
     static PyObject* _new_LockApplicationHost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockApplicationHost);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>::type_name);
         return nullptr;
     }
 
@@ -188,11 +188,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     };
 
     // ----- LockScreenBadge class --------------------
-    static constexpr const char* const type_name_LockScreenBadge = "LockScreenBadge";
 
     static PyObject* _new_LockScreenBadge(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenBadge);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>::type_name);
         return nullptr;
     }
 
@@ -374,11 +374,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     };
 
     // ----- LockScreenInfo class --------------------
-    static constexpr const char* const type_name_LockScreenInfo = "LockScreenInfo";
 
     static PyObject* _new_LockScreenInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>::type_name);
         return nullptr;
     }
 
@@ -709,11 +709,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     };
 
     // ----- LockScreenUnlockingDeferral class --------------------
-    static constexpr const char* const type_name_LockScreenUnlockingDeferral = "LockScreenUnlockingDeferral";
 
     static PyObject* _new_LockScreenUnlockingDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenUnlockingDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>::type_name);
         return nullptr;
     }
 
@@ -815,11 +815,11 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     };
 
     // ----- LockScreenUnlockingEventArgs class --------------------
-    static constexpr const char* const type_name_LockScreenUnlockingEventArgs = "LockScreenUnlockingEventArgs";
 
     static PyObject* _new_LockScreenUnlockingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreenUnlockingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Services::Store
 {
     // ----- StoreAcquireLicenseResult class --------------------
-    static constexpr const char* const type_name_StoreAcquireLicenseResult = "StoreAcquireLicenseResult";
 
     static PyObject* _new_StoreAcquireLicenseResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreAcquireLicenseResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreAcquireLicenseResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreAcquireLicenseResult>::type_name);
         return nullptr;
     }
 
@@ -122,11 +122,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreAppLicense class --------------------
-    static constexpr const char* const type_name_StoreAppLicense = "StoreAppLicense";
 
     static PyObject* _new_StoreAppLicense(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreAppLicense);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreAppLicense>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreAppLicense>::type_name);
         return nullptr;
     }
 
@@ -397,11 +397,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreAvailability class --------------------
-    static constexpr const char* const type_name_StoreAvailability = "StoreAvailability";
 
     static PyObject* _new_StoreAvailability(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreAvailability);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreAvailability>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreAvailability>::type_name);
         return nullptr;
     }
 
@@ -602,11 +602,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreCanAcquireLicenseResult class --------------------
-    static constexpr const char* const type_name_StoreCanAcquireLicenseResult = "StoreCanAcquireLicenseResult";
 
     static PyObject* _new_StoreCanAcquireLicenseResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreCanAcquireLicenseResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>::type_name);
         return nullptr;
     }
 
@@ -737,11 +737,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreCollectionData class --------------------
-    static constexpr const char* const type_name_StoreCollectionData = "StoreCollectionData";
 
     static PyObject* _new_StoreCollectionData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreCollectionData);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreCollectionData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreCollectionData>::type_name);
         return nullptr;
     }
 
@@ -972,11 +972,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreConsumableResult class --------------------
-    static constexpr const char* const type_name_StoreConsumableResult = "StoreConsumableResult";
 
     static PyObject* _new_StoreConsumableResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreConsumableResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreConsumableResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreConsumableResult>::type_name);
         return nullptr;
     }
 
@@ -1127,11 +1127,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreContext class --------------------
-    static constexpr const char* const type_name_StoreContext = "StoreContext";
 
     static PyObject* _new_StoreContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreContext);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreContext>::type_name);
         return nullptr;
     }
 
@@ -2499,11 +2499,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreImage class --------------------
-    static constexpr const char* const type_name_StoreImage = "StoreImage";
 
     static PyObject* _new_StoreImage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreImage);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreImage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreImage>::type_name);
         return nullptr;
     }
 
@@ -2674,11 +2674,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreLicense class --------------------
-    static constexpr const char* const type_name_StoreLicense = "StoreLicense";
 
     static PyObject* _new_StoreLicense(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreLicense);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreLicense>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreLicense>::type_name);
         return nullptr;
     }
 
@@ -2849,7 +2849,6 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePackageInstallOptions class --------------------
-    static constexpr const char* const type_name_StorePackageInstallOptions = "StorePackageInstallOptions";
 
     static PyObject* _new_StorePackageInstallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2995,11 +2994,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePackageLicense class --------------------
-    static constexpr const char* const type_name_StorePackageLicense = "StorePackageLicense";
 
     static PyObject* _new_StorePackageLicense(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePackageLicense);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StorePackageLicense>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StorePackageLicense>::type_name);
         return nullptr;
     }
 
@@ -3239,11 +3238,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePackageUpdate class --------------------
-    static constexpr const char* const type_name_StorePackageUpdate = "StorePackageUpdate";
 
     static PyObject* _new_StorePackageUpdate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePackageUpdate);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StorePackageUpdate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StorePackageUpdate>::type_name);
         return nullptr;
     }
 
@@ -3354,11 +3353,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePackageUpdateResult class --------------------
-    static constexpr const char* const type_name_StorePackageUpdateResult = "StorePackageUpdateResult";
 
     static PyObject* _new_StorePackageUpdateResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePackageUpdateResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StorePackageUpdateResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StorePackageUpdateResult>::type_name);
         return nullptr;
     }
 
@@ -3489,11 +3488,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePrice class --------------------
-    static constexpr const char* const type_name_StorePrice = "StorePrice";
 
     static PyObject* _new_StorePrice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePrice);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StorePrice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StorePrice>::type_name);
         return nullptr;
     }
 
@@ -3744,11 +3743,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreProduct class --------------------
-    static constexpr const char* const type_name_StoreProduct = "StoreProduct";
 
     static PyObject* _new_StoreProduct(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreProduct);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreProduct>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreProduct>::type_name);
         return nullptr;
     }
 
@@ -4199,7 +4198,6 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreProductOptions class --------------------
-    static constexpr const char* const type_name_StoreProductOptions = "StoreProductOptions";
 
     static PyObject* _new_StoreProductOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4317,11 +4315,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreProductPagedQueryResult class --------------------
-    static constexpr const char* const type_name_StoreProductPagedQueryResult = "StoreProductPagedQueryResult";
 
     static PyObject* _new_StoreProductPagedQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreProductPagedQueryResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreProductPagedQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreProductPagedQueryResult>::type_name);
         return nullptr;
     }
 
@@ -4482,11 +4480,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreProductQueryResult class --------------------
-    static constexpr const char* const type_name_StoreProductQueryResult = "StoreProductQueryResult";
 
     static PyObject* _new_StoreProductQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreProductQueryResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreProductQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreProductQueryResult>::type_name);
         return nullptr;
     }
 
@@ -4597,11 +4595,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreProductResult class --------------------
-    static constexpr const char* const type_name_StoreProductResult = "StoreProductResult";
 
     static PyObject* _new_StoreProductResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreProductResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreProductResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreProductResult>::type_name);
         return nullptr;
     }
 
@@ -4712,7 +4710,6 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePurchaseProperties class --------------------
-    static constexpr const char* const type_name_StorePurchaseProperties = "StorePurchaseProperties";
 
     static PyObject* _new_StorePurchaseProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4921,11 +4918,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePurchaseResult class --------------------
-    static constexpr const char* const type_name_StorePurchaseResult = "StorePurchaseResult";
 
     static PyObject* _new_StorePurchaseResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePurchaseResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StorePurchaseResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StorePurchaseResult>::type_name);
         return nullptr;
     }
 
@@ -5036,11 +5033,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreQueueItem class --------------------
-    static constexpr const char* const type_name_StoreQueueItem = "StoreQueueItem";
 
     static PyObject* _new_StoreQueueItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreQueueItem);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreQueueItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreQueueItem>::type_name);
         return nullptr;
     }
 
@@ -5381,11 +5378,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreQueueItemCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_StoreQueueItemCompletedEventArgs = "StoreQueueItemCompletedEventArgs";
 
     static PyObject* _new_StoreQueueItemCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreQueueItemCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5476,11 +5473,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreQueueItemStatus class --------------------
-    static constexpr const char* const type_name_StoreQueueItemStatus = "StoreQueueItemStatus";
 
     static PyObject* _new_StoreQueueItemStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreQueueItemStatus);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreQueueItemStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreQueueItemStatus>::type_name);
         return nullptr;
     }
 
@@ -5631,11 +5628,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreRateAndReviewResult class --------------------
-    static constexpr const char* const type_name_StoreRateAndReviewResult = "StoreRateAndReviewResult";
 
     static PyObject* _new_StoreRateAndReviewResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreRateAndReviewResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreRateAndReviewResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreRateAndReviewResult>::type_name);
         return nullptr;
     }
 
@@ -5786,11 +5783,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreRequestHelper class --------------------
-    static constexpr const char* const type_name_StoreRequestHelper = "StoreRequestHelper";
 
     static PyObject* _new_StoreRequestHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreRequestHelper);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreRequestHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreRequestHelper>::type_name);
         return nullptr;
     }
 
@@ -5854,11 +5851,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreSendRequestResult class --------------------
-    static constexpr const char* const type_name_StoreSendRequestResult = "StoreSendRequestResult";
 
     static PyObject* _new_StoreSendRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreSendRequestResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreSendRequestResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreSendRequestResult>::type_name);
         return nullptr;
     }
 
@@ -5989,11 +5986,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreSku class --------------------
-    static constexpr const char* const type_name_StoreSku = "StoreSku";
 
     static PyObject* _new_StoreSku(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreSku);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreSku>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreSku>::type_name);
         return nullptr;
     }
 
@@ -6464,11 +6461,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreSubscriptionInfo class --------------------
-    static constexpr const char* const type_name_StoreSubscriptionInfo = "StoreSubscriptionInfo";
 
     static PyObject* _new_StoreSubscriptionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreSubscriptionInfo);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreSubscriptionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreSubscriptionInfo>::type_name);
         return nullptr;
     }
 
@@ -6639,11 +6636,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreUninstallStorePackageResult class --------------------
-    static constexpr const char* const type_name_StoreUninstallStorePackageResult = "StoreUninstallStorePackageResult";
 
     static PyObject* _new_StoreUninstallStorePackageResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreUninstallStorePackageResult);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>::type_name);
         return nullptr;
     }
 
@@ -6754,11 +6751,11 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StoreVideo class --------------------
-    static constexpr const char* const type_name_StoreVideo = "StoreVideo";
 
     static PyObject* _new_StoreVideo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreVideo);
+        static_assert(py::py_type<winrt::Windows::Services::Store::StoreVideo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Store::StoreVideo>::type_name);
         return nullptr;
     }
 
@@ -6949,7 +6946,6 @@ namespace py::cpp::Windows::Services::Store
     };
 
     // ----- StorePackageUpdateStatus struct --------------------
-    static constexpr const char* const type_name_StorePackageUpdateStatus = "StorePackageUpdateStatus";
 
     PyObject* _new_StorePackageUpdateStatus(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

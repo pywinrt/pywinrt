@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Effects
 {
     // ----- AudioCaptureEffectsManager class --------------------
-    static constexpr const char* const type_name_AudioCaptureEffectsManager = "AudioCaptureEffectsManager";
 
     static PyObject* _new_AudioCaptureEffectsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioCaptureEffectsManager);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>::type_name);
         return nullptr;
     }
 
@@ -157,11 +157,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- AudioEffect class --------------------
-    static constexpr const char* const type_name_AudioEffect = "AudioEffect";
 
     static PyObject* _new_AudioEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioEffect);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::AudioEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioEffect>::type_name);
         return nullptr;
     }
 
@@ -252,7 +252,6 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- AudioEffectDefinition class --------------------
-    static constexpr const char* const type_name_AudioEffectDefinition = "AudioEffectDefinition";
 
     static PyObject* _new_AudioEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -408,11 +407,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- AudioEffectsManager class --------------------
-    static constexpr const char* const type_name_AudioEffectsManager = "AudioEffectsManager";
 
     static PyObject* _new_AudioEffectsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioEffectsManager);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::AudioEffectsManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioEffectsManager>::type_name);
         return nullptr;
     }
 
@@ -552,11 +551,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- AudioRenderEffectsManager class --------------------
-    static constexpr const char* const type_name_AudioRenderEffectsManager = "AudioRenderEffectsManager";
 
     static PyObject* _new_AudioRenderEffectsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioRenderEffectsManager);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>::type_name);
         return nullptr;
     }
 
@@ -773,11 +772,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- CompositeVideoFrameContext class --------------------
-    static constexpr const char* const type_name_CompositeVideoFrameContext = "CompositeVideoFrameContext";
 
     static PyObject* _new_CompositeVideoFrameContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositeVideoFrameContext);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>::type_name);
         return nullptr;
     }
 
@@ -940,11 +939,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- ProcessAudioFrameContext class --------------------
-    static constexpr const char* const type_name_ProcessAudioFrameContext = "ProcessAudioFrameContext";
 
     static PyObject* _new_ProcessAudioFrameContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProcessAudioFrameContext);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>::type_name);
         return nullptr;
     }
 
@@ -1055,11 +1054,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- ProcessVideoFrameContext class --------------------
-    static constexpr const char* const type_name_ProcessVideoFrameContext = "ProcessVideoFrameContext";
 
     static PyObject* _new_ProcessVideoFrameContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProcessVideoFrameContext);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>::type_name);
         return nullptr;
     }
 
@@ -1170,7 +1169,6 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- SlowMotionEffectDefinition class --------------------
-    static constexpr const char* const type_name_SlowMotionEffectDefinition = "SlowMotionEffectDefinition";
 
     static PyObject* _new_SlowMotionEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1356,7 +1354,6 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- VideoCompositorDefinition class --------------------
-    static constexpr const char* const type_name_VideoCompositorDefinition = "VideoCompositorDefinition";
 
     static PyObject* _new_VideoCompositorDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1512,7 +1509,6 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- VideoEffectDefinition class --------------------
-    static constexpr const char* const type_name_VideoEffectDefinition = "VideoEffectDefinition";
 
     static PyObject* _new_VideoEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1668,7 +1664,6 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- VideoTransformEffectDefinition class --------------------
-    static constexpr const char* const type_name_VideoTransformEffectDefinition = "VideoTransformEffectDefinition";
 
     static PyObject* _new_VideoTransformEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2114,11 +2109,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- VideoTransformSphericalProjection class --------------------
-    static constexpr const char* const type_name_VideoTransformSphericalProjection = "VideoTransformSphericalProjection";
 
     static PyObject* _new_VideoTransformSphericalProjection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoTransformSphericalProjection);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>::type_name);
         return nullptr;
     }
 
@@ -2429,11 +2424,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- IAudioEffectDefinition interface --------------------
-    static constexpr const char* const type_name_IAudioEffectDefinition = "IAudioEffectDefinition";
 
     static PyObject* _new_IAudioEffectDefinition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAudioEffectDefinition);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>::type_name);
         return nullptr;
     }
 
@@ -2544,11 +2539,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- IBasicAudioEffect interface --------------------
-    static constexpr const char* const type_name_IBasicAudioEffect = "IBasicAudioEffect";
 
     static PyObject* _new_IBasicAudioEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBasicAudioEffect);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>::type_name);
         return nullptr;
     }
 
@@ -2822,11 +2817,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- IBasicVideoEffect interface --------------------
-    static constexpr const char* const type_name_IBasicVideoEffect = "IBasicVideoEffect";
 
     static PyObject* _new_IBasicVideoEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBasicVideoEffect);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>::type_name);
         return nullptr;
     }
 
@@ -3141,11 +3136,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- IVideoCompositor interface --------------------
-    static constexpr const char* const type_name_IVideoCompositor = "IVideoCompositor";
 
     static PyObject* _new_IVideoCompositor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IVideoCompositor);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoCompositor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoCompositor>::type_name);
         return nullptr;
     }
 
@@ -3400,11 +3395,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- IVideoCompositorDefinition interface --------------------
-    static constexpr const char* const type_name_IVideoCompositorDefinition = "IVideoCompositorDefinition";
 
     static PyObject* _new_IVideoCompositorDefinition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IVideoCompositorDefinition);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>::type_name);
         return nullptr;
     }
 
@@ -3515,11 +3510,11 @@ namespace py::cpp::Windows::Media::Effects
     };
 
     // ----- IVideoEffectDefinition interface --------------------
-    static constexpr const char* const type_name_IVideoEffectDefinition = "IVideoEffectDefinition";
 
     static PyObject* _new_IVideoEffectDefinition(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IVideoEffectDefinition);
+        static_assert(py::py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>::type_name);
         return nullptr;
     }
 

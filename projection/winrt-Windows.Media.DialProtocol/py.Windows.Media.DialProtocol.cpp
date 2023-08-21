@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::DialProtocol
 {
     // ----- DialApp class --------------------
-    static constexpr const char* const type_name_DialApp = "DialApp";
 
     static PyObject* _new_DialApp(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialApp);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialApp>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialApp>::type_name);
         return nullptr;
     }
 
@@ -194,11 +194,11 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialAppStateDetails class --------------------
-    static constexpr const char* const type_name_DialAppStateDetails = "DialAppStateDetails";
 
     static PyObject* _new_DialAppStateDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialAppStateDetails);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>::type_name);
         return nullptr;
     }
 
@@ -309,11 +309,11 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialDevice class --------------------
-    static constexpr const char* const type_name_DialDevice = "DialDevice";
 
     static PyObject* _new_DialDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialDevice);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialDevice>::type_name);
         return nullptr;
     }
 
@@ -572,7 +572,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialDevicePicker class --------------------
-    static constexpr const char* const type_name_DialDevicePicker = "DialDevicePicker";
 
     static PyObject* _new_DialDevicePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1018,11 +1017,11 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialDevicePickerFilter class --------------------
-    static constexpr const char* const type_name_DialDevicePickerFilter = "DialDevicePickerFilter";
 
     static PyObject* _new_DialDevicePickerFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialDevicePickerFilter);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>::type_name);
         return nullptr;
     }
 
@@ -1113,11 +1112,11 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialDeviceSelectedEventArgs class --------------------
-    static constexpr const char* const type_name_DialDeviceSelectedEventArgs = "DialDeviceSelectedEventArgs";
 
     static PyObject* _new_DialDeviceSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialDeviceSelectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1208,11 +1207,11 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialDisconnectButtonClickedEventArgs class --------------------
-    static constexpr const char* const type_name_DialDisconnectButtonClickedEventArgs = "DialDisconnectButtonClickedEventArgs";
 
     static PyObject* _new_DialDisconnectButtonClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialDisconnectButtonClickedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1303,11 +1302,11 @@ namespace py::cpp::Windows::Media::DialProtocol
     };
 
     // ----- DialReceiverApp class --------------------
-    static constexpr const char* const type_name_DialReceiverApp = "DialReceiverApp";
 
     static PyObject* _new_DialReceiverApp(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DialReceiverApp);
+        static_assert(py::py_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>::type_name);
         return nullptr;
     }
 

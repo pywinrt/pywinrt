@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Globalization
 {
     // ----- ApplicationLanguages class --------------------
-    static constexpr const char* const type_name_ApplicationLanguages = "ApplicationLanguages";
 
     static PyObject* _new_ApplicationLanguages(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationLanguages);
+        static_assert(py::py_type<winrt::Windows::Globalization::ApplicationLanguages>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::ApplicationLanguages>::type_name);
         return nullptr;
     }
 
@@ -175,7 +175,6 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- Calendar class --------------------
-    static constexpr const char* const type_name_Calendar = "Calendar";
 
     static PyObject* _new_Calendar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2981,11 +2980,11 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- CalendarIdentifiers class --------------------
-    static constexpr const char* const type_name_CalendarIdentifiers = "CalendarIdentifiers";
 
     static PyObject* _new_CalendarIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CalendarIdentifiers);
+        static_assert(py::py_type<winrt::Windows::Globalization::CalendarIdentifiers>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::CalendarIdentifiers>::type_name);
         return nullptr;
     }
 
@@ -3335,11 +3334,11 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- ClockIdentifiers class --------------------
-    static constexpr const char* const type_name_ClockIdentifiers = "ClockIdentifiers";
 
     static PyObject* _new_ClockIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ClockIdentifiers);
+        static_assert(py::py_type<winrt::Windows::Globalization::ClockIdentifiers>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::ClockIdentifiers>::type_name);
         return nullptr;
     }
 
@@ -3429,7 +3428,6 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- CurrencyAmount class --------------------
-    static constexpr const char* const type_name_CurrencyAmount = "CurrencyAmount";
 
     static PyObject* _new_CurrencyAmount(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3570,11 +3568,11 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- CurrencyIdentifiers class --------------------
-    static constexpr const char* const type_name_CurrencyIdentifiers = "CurrencyIdentifiers";
 
     static PyObject* _new_CurrencyIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CurrencyIdentifiers);
+        static_assert(py::py_type<winrt::Windows::Globalization::CurrencyIdentifiers>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::CurrencyIdentifiers>::type_name);
         return nullptr;
     }
 
@@ -6864,7 +6862,6 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- GeographicRegion class --------------------
-    static constexpr const char* const type_name_GeographicRegion = "GeographicRegion";
 
     static PyObject* _new_GeographicRegion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7149,11 +7146,11 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- JapanesePhoneme class --------------------
-    static constexpr const char* const type_name_JapanesePhoneme = "JapanesePhoneme";
 
     static PyObject* _new_JapanesePhoneme(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_JapanesePhoneme);
+        static_assert(py::py_type<winrt::Windows::Globalization::JapanesePhoneme>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::JapanesePhoneme>::type_name);
         return nullptr;
     }
 
@@ -7284,11 +7281,11 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- JapanesePhoneticAnalyzer class --------------------
-    static constexpr const char* const type_name_JapanesePhoneticAnalyzer = "JapanesePhoneticAnalyzer";
 
     static PyObject* _new_JapanesePhoneticAnalyzer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_JapanesePhoneticAnalyzer);
+        static_assert(py::py_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>::type_name);
         return nullptr;
     }
 
@@ -7371,7 +7368,6 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- Language class --------------------
-    static constexpr const char* const type_name_Language = "Language";
 
     static PyObject* _new_Language(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7759,11 +7755,11 @@ namespace py::cpp::Windows::Globalization
     };
 
     // ----- NumeralSystemIdentifiers class --------------------
-    static constexpr const char* const type_name_NumeralSystemIdentifiers = "NumeralSystemIdentifiers";
 
     static PyObject* _new_NumeralSystemIdentifiers(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NumeralSystemIdentifiers);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>::type_name);
         return nullptr;
     }
 

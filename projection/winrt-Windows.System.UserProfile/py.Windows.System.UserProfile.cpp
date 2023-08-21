@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::UserProfile
 {
     // ----- AdvertisingManager class --------------------
-    static constexpr const char* const type_name_AdvertisingManager = "AdvertisingManager";
 
     static PyObject* _new_AdvertisingManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdvertisingManager);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManager>::type_name);
         return nullptr;
     }
 
@@ -113,11 +113,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- AdvertisingManagerForUser class --------------------
-    static constexpr const char* const type_name_AdvertisingManagerForUser = "AdvertisingManagerForUser";
 
     static PyObject* _new_AdvertisingManagerForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdvertisingManagerForUser);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>::type_name);
         return nullptr;
     }
 
@@ -228,11 +228,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- AssignedAccessSettings class --------------------
-    static constexpr const char* const type_name_AssignedAccessSettings = "AssignedAccessSettings";
 
     static PyObject* _new_AssignedAccessSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AssignedAccessSettings);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>::type_name);
         return nullptr;
     }
 
@@ -425,11 +425,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- DiagnosticsSettings class --------------------
-    static constexpr const char* const type_name_DiagnosticsSettings = "DiagnosticsSettings";
 
     static PyObject* _new_DiagnosticsSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DiagnosticsSettings);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>::type_name);
         return nullptr;
     }
 
@@ -602,11 +602,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- FirstSignInSettings class --------------------
-    static constexpr const char* const type_name_FirstSignInSettings = "FirstSignInSettings";
 
     static PyObject* _new_FirstSignInSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FirstSignInSettings);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>::type_name);
         return nullptr;
     }
 
@@ -936,11 +936,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- GlobalizationPreferences class --------------------
-    static constexpr const char* const type_name_GlobalizationPreferences = "GlobalizationPreferences";
 
     static PyObject* _new_GlobalizationPreferences(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalizationPreferences);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>::type_name);
         return nullptr;
     }
 
@@ -1206,11 +1206,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- GlobalizationPreferencesForUser class --------------------
-    static constexpr const char* const type_name_GlobalizationPreferencesForUser = "GlobalizationPreferencesForUser";
 
     static PyObject* _new_GlobalizationPreferencesForUser(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalizationPreferencesForUser);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>::type_name);
         return nullptr;
     }
 
@@ -1421,11 +1421,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- LockScreen class --------------------
-    static constexpr const char* const type_name_LockScreen = "LockScreen";
 
     static PyObject* _new_LockScreen(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LockScreen);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::LockScreen>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::LockScreen>::type_name);
         return nullptr;
     }
 
@@ -1651,11 +1651,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- UserInformation class --------------------
-    static constexpr const char* const type_name_UserInformation = "UserInformation";
 
     static PyObject* _new_UserInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserInformation);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::UserInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::UserInformation>::type_name);
         return nullptr;
     }
 
@@ -2134,11 +2134,11 @@ namespace py::cpp::Windows::System::UserProfile
     };
 
     // ----- UserProfilePersonalizationSettings class --------------------
-    static constexpr const char* const type_name_UserProfilePersonalizationSettings = "UserProfilePersonalizationSettings";
 
     static PyObject* _new_UserProfilePersonalizationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserProfilePersonalizationSettings);
+        static_assert(py::py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>::type_name);
         return nullptr;
     }
 

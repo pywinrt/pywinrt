@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Management::Core
 {
     // ----- ApplicationDataManager class --------------------
-    static constexpr const char* const type_name_ApplicationDataManager = "ApplicationDataManager";
 
     static PyObject* _new_ApplicationDataManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationDataManager);
+        static_assert(py::py_type<winrt::Windows::Management::Core::ApplicationDataManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Core::ApplicationDataManager>::type_name);
         return nullptr;
     }
 

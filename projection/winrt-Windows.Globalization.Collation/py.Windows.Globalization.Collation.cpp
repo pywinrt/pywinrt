@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Globalization::Collation
 {
     // ----- CharacterGrouping class --------------------
-    static constexpr const char* const type_name_CharacterGrouping = "CharacterGrouping";
 
     static PyObject* _new_CharacterGrouping(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CharacterGrouping);
+        static_assert(py::py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>::type_name);
         return nullptr;
     }
 
@@ -122,7 +122,6 @@ namespace py::cpp::Windows::Globalization::Collation
     };
 
     // ----- CharacterGroupings class --------------------
-    static constexpr const char* const type_name_CharacterGroupings = "CharacterGroupings";
 
     static PyObject* _new_CharacterGroupings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

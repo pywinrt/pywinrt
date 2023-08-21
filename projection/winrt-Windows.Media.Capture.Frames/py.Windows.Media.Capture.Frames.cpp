@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Capture::Frames
 {
     // ----- AudioMediaFrame class --------------------
-    static constexpr const char* const type_name_AudioMediaFrame = "AudioMediaFrame";
 
     static PyObject* _new_AudioMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioMediaFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>::type_name);
         return nullptr;
     }
 
@@ -152,11 +152,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- BufferMediaFrame class --------------------
-    static constexpr const char* const type_name_BufferMediaFrame = "BufferMediaFrame";
 
     static PyObject* _new_BufferMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BufferMediaFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>::type_name);
         return nullptr;
     }
 
@@ -267,11 +267,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- DepthMediaFrame class --------------------
-    static constexpr const char* const type_name_DepthMediaFrame = "DepthMediaFrame";
 
     static PyObject* _new_DepthMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DepthMediaFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>::type_name);
         return nullptr;
     }
 
@@ -475,11 +475,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- DepthMediaFrameFormat class --------------------
-    static constexpr const char* const type_name_DepthMediaFrameFormat = "DepthMediaFrameFormat";
 
     static PyObject* _new_DepthMediaFrameFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DepthMediaFrameFormat);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>::type_name);
         return nullptr;
     }
 
@@ -590,11 +590,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- InfraredMediaFrame class --------------------
-    static constexpr const char* const type_name_InfraredMediaFrame = "InfraredMediaFrame";
 
     static PyObject* _new_InfraredMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InfraredMediaFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>::type_name);
         return nullptr;
     }
 
@@ -725,11 +725,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameArrivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaFrameArrivedEventArgs = "MediaFrameArrivedEventArgs";
 
     static PyObject* _new_MediaFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameArrivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -800,11 +800,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameFormat class --------------------
-    static constexpr const char* const type_name_MediaFrameFormat = "MediaFrameFormat";
 
     static PyObject* _new_MediaFrameFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameFormat);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>::type_name);
         return nullptr;
     }
 
@@ -995,11 +995,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameReader class --------------------
-    static constexpr const char* const type_name_MediaFrameReader = "MediaFrameReader";
 
     static PyObject* _new_MediaFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameReader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>::type_name);
         return nullptr;
     }
 
@@ -1306,11 +1306,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameReference class --------------------
-    static constexpr const char* const type_name_MediaFrameReference = "MediaFrameReference";
 
     static PyObject* _new_MediaFrameReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameReference);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>::type_name);
         return nullptr;
     }
 
@@ -1614,11 +1614,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameSource class --------------------
-    static constexpr const char* const type_name_MediaFrameSource = "MediaFrameSource";
 
     static PyObject* _new_MediaFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameSource);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>::type_name);
         return nullptr;
     }
 
@@ -1878,11 +1878,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameSourceController class --------------------
-    static constexpr const char* const type_name_MediaFrameSourceController = "MediaFrameSourceController";
 
     static PyObject* _new_MediaFrameSourceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameSourceController);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>::type_name);
         return nullptr;
     }
 
@@ -2124,11 +2124,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameSourceGetPropertyResult class --------------------
-    static constexpr const char* const type_name_MediaFrameSourceGetPropertyResult = "MediaFrameSourceGetPropertyResult";
 
     static PyObject* _new_MediaFrameSourceGetPropertyResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameSourceGetPropertyResult);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>::type_name);
         return nullptr;
     }
 
@@ -2239,11 +2239,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameSourceGroup class --------------------
-    static constexpr const char* const type_name_MediaFrameSourceGroup = "MediaFrameSourceGroup";
 
     static PyObject* _new_MediaFrameSourceGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameSourceGroup);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>::type_name);
         return nullptr;
     }
 
@@ -2466,11 +2466,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MediaFrameSourceInfo class --------------------
-    static constexpr const char* const type_name_MediaFrameSourceInfo = "MediaFrameSourceInfo";
 
     static PyObject* _new_MediaFrameSourceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFrameSourceInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>::type_name);
         return nullptr;
     }
 
@@ -2773,11 +2773,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MultiSourceMediaFrameArrivedEventArgs class --------------------
-    static constexpr const char* const type_name_MultiSourceMediaFrameArrivedEventArgs = "MultiSourceMediaFrameArrivedEventArgs";
 
     static PyObject* _new_MultiSourceMediaFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MultiSourceMediaFrameArrivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2848,11 +2848,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MultiSourceMediaFrameReader class --------------------
-    static constexpr const char* const type_name_MultiSourceMediaFrameReader = "MultiSourceMediaFrameReader";
 
     static PyObject* _new_MultiSourceMediaFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MultiSourceMediaFrameReader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>::type_name);
         return nullptr;
     }
 
@@ -3159,11 +3159,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- MultiSourceMediaFrameReference class --------------------
-    static constexpr const char* const type_name_MultiSourceMediaFrameReference = "MultiSourceMediaFrameReference";
 
     static PyObject* _new_MultiSourceMediaFrameReference(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MultiSourceMediaFrameReference);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>::type_name);
         return nullptr;
     }
 
@@ -3319,11 +3319,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- VideoMediaFrame class --------------------
-    static constexpr const char* const type_name_VideoMediaFrame = "VideoMediaFrame";
 
     static PyObject* _new_VideoMediaFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoMediaFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>::type_name);
         return nullptr;
     }
 
@@ -3564,11 +3564,11 @@ namespace py::cpp::Windows::Media::Capture::Frames
     };
 
     // ----- VideoMediaFrameFormat class --------------------
-    static constexpr const char* const type_name_VideoMediaFrameFormat = "VideoMediaFrameFormat";
 
     static PyObject* _new_VideoMediaFrameFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoMediaFrameFormat);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>::type_name);
         return nullptr;
     }
 

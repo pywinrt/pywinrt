@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Adc::Provider
 {
     // ----- IAdcControllerProvider interface --------------------
-    static constexpr const char* const type_name_IAdcControllerProvider = "IAdcControllerProvider";
 
     static PyObject* _new_IAdcControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAdcControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -340,11 +340,11 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     };
 
     // ----- IAdcProvider interface --------------------
-    static constexpr const char* const type_name_IAdcProvider = "IAdcProvider";
 
     static PyObject* _new_IAdcProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAdcProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Adc::Provider::IAdcProvider>::type_name);
         return nullptr;
     }
 

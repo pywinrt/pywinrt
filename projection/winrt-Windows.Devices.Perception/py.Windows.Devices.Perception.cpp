@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Perception
 {
     // ----- KnownCameraIntrinsicsProperties class --------------------
-    static constexpr const char* const type_name_KnownCameraIntrinsicsProperties = "KnownCameraIntrinsicsProperties";
 
     static PyObject* _new_KnownCameraIntrinsicsProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownCameraIntrinsicsProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>::type_name);
         return nullptr;
     }
 
@@ -141,11 +141,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- KnownPerceptionColorFrameSourceProperties class --------------------
-    static constexpr const char* const type_name_KnownPerceptionColorFrameSourceProperties = "KnownPerceptionColorFrameSourceProperties";
 
     static PyObject* _new_KnownPerceptionColorFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionColorFrameSourceProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>::type_name);
         return nullptr;
     }
 
@@ -255,11 +255,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- KnownPerceptionDepthFrameSourceProperties class --------------------
-    static constexpr const char* const type_name_KnownPerceptionDepthFrameSourceProperties = "KnownPerceptionDepthFrameSourceProperties";
 
     static PyObject* _new_KnownPerceptionDepthFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionDepthFrameSourceProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>::type_name);
         return nullptr;
     }
 
@@ -349,11 +349,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- KnownPerceptionFrameSourceProperties class --------------------
-    static constexpr const char* const type_name_KnownPerceptionFrameSourceProperties = "KnownPerceptionFrameSourceProperties";
 
     static PyObject* _new_KnownPerceptionFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionFrameSourceProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>::type_name);
         return nullptr;
     }
 
@@ -523,11 +523,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- KnownPerceptionInfraredFrameSourceProperties class --------------------
-    static constexpr const char* const type_name_KnownPerceptionInfraredFrameSourceProperties = "KnownPerceptionInfraredFrameSourceProperties";
 
     static PyObject* _new_KnownPerceptionInfraredFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionInfraredFrameSourceProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>::type_name);
         return nullptr;
     }
 
@@ -717,11 +717,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- KnownPerceptionVideoFrameSourceProperties class --------------------
-    static constexpr const char* const type_name_KnownPerceptionVideoFrameSourceProperties = "KnownPerceptionVideoFrameSourceProperties";
 
     static PyObject* _new_KnownPerceptionVideoFrameSourceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionVideoFrameSourceProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>::type_name);
         return nullptr;
     }
 
@@ -871,11 +871,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- KnownPerceptionVideoProfileProperties class --------------------
-    static constexpr const char* const type_name_KnownPerceptionVideoProfileProperties = "KnownPerceptionVideoProfileProperties";
 
     static PyObject* _new_KnownPerceptionVideoProfileProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionVideoProfileProperties);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>::type_name);
         return nullptr;
     }
 
@@ -1025,11 +1025,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrame class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrame = "PerceptionColorFrame";
 
     static PyObject* _new_PerceptionColorFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrame);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>::type_name);
         return nullptr;
     }
 
@@ -1173,11 +1173,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrameArrivedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrameArrivedEventArgs = "PerceptionColorFrameArrivedEventArgs";
 
     static PyObject* _new_PerceptionColorFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrameArrivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1298,11 +1298,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrameReader class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrameReader = "PerceptionColorFrameReader";
 
     static PyObject* _new_PerceptionColorFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrameReader);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>::type_name);
         return nullptr;
     }
 
@@ -1569,11 +1569,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrameSource class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrameSource = "PerceptionColorFrameSource";
 
     static PyObject* _new_PerceptionColorFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrameSource);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>::type_name);
         return nullptr;
     }
 
@@ -2498,11 +2498,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrameSourceAddedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrameSourceAddedEventArgs = "PerceptionColorFrameSourceAddedEventArgs";
 
     static PyObject* _new_PerceptionColorFrameSourceAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrameSourceAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2593,11 +2593,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrameSourceRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrameSourceRemovedEventArgs = "PerceptionColorFrameSourceRemovedEventArgs";
 
     static PyObject* _new_PerceptionColorFrameSourceRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrameSourceRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2688,11 +2688,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionColorFrameSourceWatcher class --------------------
-    static constexpr const char* const type_name_PerceptionColorFrameSourceWatcher = "PerceptionColorFrameSourceWatcher";
 
     static PyObject* _new_PerceptionColorFrameSourceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionColorFrameSourceWatcher);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>::type_name);
         return nullptr;
     }
 
@@ -3025,11 +3025,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionControlSession class --------------------
-    static constexpr const char* const type_name_PerceptionControlSession = "PerceptionControlSession";
 
     static PyObject* _new_PerceptionControlSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionControlSession);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionControlSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionControlSession>::type_name);
         return nullptr;
     }
 
@@ -3231,11 +3231,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthCorrelatedCameraIntrinsics class --------------------
-    static constexpr const char* const type_name_PerceptionDepthCorrelatedCameraIntrinsics = "PerceptionDepthCorrelatedCameraIntrinsics";
 
     static PyObject* _new_PerceptionDepthCorrelatedCameraIntrinsics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthCorrelatedCameraIntrinsics);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>::type_name);
         return nullptr;
     }
 
@@ -3441,11 +3441,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthCorrelatedCoordinateMapper class --------------------
-    static constexpr const char* const type_name_PerceptionDepthCorrelatedCoordinateMapper = "PerceptionDepthCorrelatedCoordinateMapper";
 
     static PyObject* _new_PerceptionDepthCorrelatedCoordinateMapper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthCorrelatedCoordinateMapper);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>::type_name);
         return nullptr;
     }
 
@@ -3651,11 +3651,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrame class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrame = "PerceptionDepthFrame";
 
     static PyObject* _new_PerceptionDepthFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrame);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>::type_name);
         return nullptr;
     }
 
@@ -3799,11 +3799,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrameArrivedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrameArrivedEventArgs = "PerceptionDepthFrameArrivedEventArgs";
 
     static PyObject* _new_PerceptionDepthFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrameArrivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3924,11 +3924,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrameReader class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrameReader = "PerceptionDepthFrameReader";
 
     static PyObject* _new_PerceptionDepthFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrameReader);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>::type_name);
         return nullptr;
     }
 
@@ -4195,11 +4195,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrameSource class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrameSource = "PerceptionDepthFrameSource";
 
     static PyObject* _new_PerceptionDepthFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrameSource);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>::type_name);
         return nullptr;
     }
 
@@ -5124,11 +5124,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrameSourceAddedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrameSourceAddedEventArgs = "PerceptionDepthFrameSourceAddedEventArgs";
 
     static PyObject* _new_PerceptionDepthFrameSourceAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrameSourceAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5219,11 +5219,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrameSourceRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrameSourceRemovedEventArgs = "PerceptionDepthFrameSourceRemovedEventArgs";
 
     static PyObject* _new_PerceptionDepthFrameSourceRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrameSourceRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5314,11 +5314,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionDepthFrameSourceWatcher class --------------------
-    static constexpr const char* const type_name_PerceptionDepthFrameSourceWatcher = "PerceptionDepthFrameSourceWatcher";
 
     static PyObject* _new_PerceptionDepthFrameSourceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionDepthFrameSourceWatcher);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>::type_name);
         return nullptr;
     }
 
@@ -5651,11 +5651,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionFrameSourcePropertiesChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionFrameSourcePropertiesChangedEventArgs = "PerceptionFrameSourcePropertiesChangedEventArgs";
 
     static PyObject* _new_PerceptionFrameSourcePropertiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionFrameSourcePropertiesChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5766,11 +5766,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionFrameSourcePropertyChangeResult class --------------------
-    static constexpr const char* const type_name_PerceptionFrameSourcePropertyChangeResult = "PerceptionFrameSourcePropertyChangeResult";
 
     static PyObject* _new_PerceptionFrameSourcePropertyChangeResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionFrameSourcePropertyChangeResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>::type_name);
         return nullptr;
     }
 
@@ -5881,11 +5881,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrame class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrame = "PerceptionInfraredFrame";
 
     static PyObject* _new_PerceptionInfraredFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrame);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>::type_name);
         return nullptr;
     }
 
@@ -6029,11 +6029,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrameArrivedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrameArrivedEventArgs = "PerceptionInfraredFrameArrivedEventArgs";
 
     static PyObject* _new_PerceptionInfraredFrameArrivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrameArrivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6154,11 +6154,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrameReader class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrameReader = "PerceptionInfraredFrameReader";
 
     static PyObject* _new_PerceptionInfraredFrameReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrameReader);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>::type_name);
         return nullptr;
     }
 
@@ -6425,11 +6425,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrameSource class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrameSource = "PerceptionInfraredFrameSource";
 
     static PyObject* _new_PerceptionInfraredFrameSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrameSource);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>::type_name);
         return nullptr;
     }
 
@@ -7354,11 +7354,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrameSourceAddedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrameSourceAddedEventArgs = "PerceptionInfraredFrameSourceAddedEventArgs";
 
     static PyObject* _new_PerceptionInfraredFrameSourceAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrameSourceAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7449,11 +7449,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrameSourceRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrameSourceRemovedEventArgs = "PerceptionInfraredFrameSourceRemovedEventArgs";
 
     static PyObject* _new_PerceptionInfraredFrameSourceRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrameSourceRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7544,11 +7544,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionInfraredFrameSourceWatcher class --------------------
-    static constexpr const char* const type_name_PerceptionInfraredFrameSourceWatcher = "PerceptionInfraredFrameSourceWatcher";
 
     static PyObject* _new_PerceptionInfraredFrameSourceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionInfraredFrameSourceWatcher);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>::type_name);
         return nullptr;
     }
 
@@ -7881,11 +7881,11 @@ namespace py::cpp::Windows::Devices::Perception
     };
 
     // ----- PerceptionVideoProfile class --------------------
-    static constexpr const char* const type_name_PerceptionVideoProfile = "PerceptionVideoProfile";
 
     static PyObject* _new_PerceptionVideoProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionVideoProfile);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Perception::Spatial::Surfaces
 {
     // ----- SpatialSurfaceInfo class --------------------
-    static constexpr const char* const type_name_SpatialSurfaceInfo = "SpatialSurfaceInfo";
 
     static PyObject* _new_SpatialSurfaceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialSurfaceInfo);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>::type_name);
         return nullptr;
     }
 
@@ -207,11 +207,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     };
 
     // ----- SpatialSurfaceMesh class --------------------
-    static constexpr const char* const type_name_SpatialSurfaceMesh = "SpatialSurfaceMesh";
 
     static PyObject* _new_SpatialSurfaceMesh(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialSurfaceMesh);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>::type_name);
         return nullptr;
     }
 
@@ -402,11 +402,11 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     };
 
     // ----- SpatialSurfaceMeshBuffer class --------------------
-    static constexpr const char* const type_name_SpatialSurfaceMeshBuffer = "SpatialSurfaceMeshBuffer";
 
     static PyObject* _new_SpatialSurfaceMeshBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialSurfaceMeshBuffer);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>::type_name);
         return nullptr;
     }
 
@@ -557,7 +557,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     };
 
     // ----- SpatialSurfaceMeshOptions class --------------------
-    static constexpr const char* const type_name_SpatialSurfaceMeshOptions = "SpatialSurfaceMeshOptions";
 
     static PyObject* _new_SpatialSurfaceMeshOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -927,7 +926,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     };
 
     // ----- SpatialSurfaceObserver class --------------------
-    static constexpr const char* const type_name_SpatialSurfaceObserver = "SpatialSurfaceObserver";
 
     static PyObject* _new_SpatialSurfaceObserver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

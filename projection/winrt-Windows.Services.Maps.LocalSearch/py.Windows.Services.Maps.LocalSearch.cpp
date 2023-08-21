@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Services::Maps::LocalSearch
 {
     // ----- LocalCategories class --------------------
-    static constexpr const char* const type_name_LocalCategories = "LocalCategories";
 
     static PyObject* _new_LocalCategories(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LocalCategories);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>::type_name);
         return nullptr;
     }
 
@@ -221,11 +221,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     };
 
     // ----- LocalLocation class --------------------
-    static constexpr const char* const type_name_LocalLocation = "LocalLocation";
 
     static PyObject* _new_LocalLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LocalLocation);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>::type_name);
         return nullptr;
     }
 
@@ -496,11 +496,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     };
 
     // ----- LocalLocationFinder class --------------------
-    static constexpr const char* const type_name_LocalLocationFinder = "LocalLocationFinder";
 
     static PyObject* _new_LocalLocationFinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LocalLocationFinder);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>::type_name);
         return nullptr;
     }
 
@@ -565,11 +565,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     };
 
     // ----- LocalLocationFinderResult class --------------------
-    static constexpr const char* const type_name_LocalLocationFinderResult = "LocalLocationFinderResult";
 
     static PyObject* _new_LocalLocationFinderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LocalLocationFinderResult);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>::type_name);
         return nullptr;
     }
 
@@ -680,11 +680,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     };
 
     // ----- LocalLocationHoursOfOperationItem class --------------------
-    static constexpr const char* const type_name_LocalLocationHoursOfOperationItem = "LocalLocationHoursOfOperationItem";
 
     static PyObject* _new_LocalLocationHoursOfOperationItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LocalLocationHoursOfOperationItem);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>::type_name);
         return nullptr;
     }
 
@@ -815,11 +815,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     };
 
     // ----- LocalLocationRatingInfo class --------------------
-    static constexpr const char* const type_name_LocalLocationRatingInfo = "LocalLocationRatingInfo";
 
     static PyObject* _new_LocalLocationRatingInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LocalLocationRatingInfo);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>::type_name);
         return nullptr;
     }
 
@@ -950,11 +950,11 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     };
 
     // ----- PlaceInfoHelper class --------------------
-    static constexpr const char* const type_name_PlaceInfoHelper = "PlaceInfoHelper";
 
     static PyObject* _new_PlaceInfoHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlaceInfoHelper);
+        static_assert(py::py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>::type_name);
         return nullptr;
     }
 

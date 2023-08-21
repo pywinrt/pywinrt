@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::AllJoyn
 {
     // ----- AllJoynAboutData class --------------------
-    static constexpr const char* const type_name_AllJoynAboutData = "AllJoynAboutData";
 
     static PyObject* _new_AllJoynAboutData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynAboutData);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>::type_name);
         return nullptr;
     }
 
@@ -574,11 +574,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynAboutDataView class --------------------
-    static constexpr const char* const type_name_AllJoynAboutDataView = "AllJoynAboutDataView";
 
     static PyObject* _new_AllJoynAboutDataView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynAboutDataView);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView>::type_name);
         return nullptr;
     }
 
@@ -1026,7 +1026,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynAcceptSessionJoinerEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynAcceptSessionJoinerEventArgs = "AllJoynAcceptSessionJoinerEventArgs";
 
     static PyObject* _new_AllJoynAcceptSessionJoinerEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1261,11 +1260,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynAuthenticationCompleteEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynAuthenticationCompleteEventArgs = "AllJoynAuthenticationCompleteEventArgs";
 
     static PyObject* _new_AllJoynAuthenticationCompleteEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynAuthenticationCompleteEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1396,7 +1395,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynBusAttachment class --------------------
-    static constexpr const char* const type_name_AllJoynBusAttachment = "AllJoynBusAttachment";
 
     static PyObject* _new_AllJoynBusAttachment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2088,11 +2086,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynBusAttachmentStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynBusAttachmentStateChangedEventArgs = "AllJoynBusAttachmentStateChangedEventArgs";
 
     static PyObject* _new_AllJoynBusAttachmentStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynBusAttachmentStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2203,7 +2201,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynBusObject class --------------------
-    static constexpr const char* const type_name_AllJoynBusObject = "AllJoynBusObject";
 
     static PyObject* _new_AllJoynBusObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2512,7 +2509,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynBusObjectStoppedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynBusObjectStoppedEventArgs = "AllJoynBusObjectStoppedEventArgs";
 
     static PyObject* _new_AllJoynBusObjectStoppedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2632,11 +2628,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynCredentials class --------------------
-    static constexpr const char* const type_name_AllJoynCredentials = "AllJoynCredentials";
 
     static PyObject* _new_AllJoynCredentials(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynCredentials);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentials>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentials>::type_name);
         return nullptr;
     }
 
@@ -2871,11 +2867,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynCredentialsRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynCredentialsRequestedEventArgs = "AllJoynCredentialsRequestedEventArgs";
 
     static PyObject* _new_AllJoynCredentialsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynCredentialsRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3056,11 +3052,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynCredentialsVerificationRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynCredentialsVerificationRequestedEventArgs = "AllJoynCredentialsVerificationRequestedEventArgs";
 
     static PyObject* _new_AllJoynCredentialsVerificationRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynCredentialsVerificationRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3312,7 +3308,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynMessageInfo class --------------------
-    static constexpr const char* const type_name_AllJoynMessageInfo = "AllJoynMessageInfo";
 
     static PyObject* _new_AllJoynMessageInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3432,7 +3427,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynProducerStoppedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynProducerStoppedEventArgs = "AllJoynProducerStoppedEventArgs";
 
     static PyObject* _new_AllJoynProducerStoppedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3552,7 +3546,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynServiceInfo class --------------------
-    static constexpr const char* const type_name_AllJoynServiceInfo = "AllJoynServiceInfo";
 
     static PyObject* _new_AllJoynServiceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3746,7 +3739,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynServiceInfoRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynServiceInfoRemovedEventArgs = "AllJoynServiceInfoRemovedEventArgs";
 
     static PyObject* _new_AllJoynServiceInfoRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3866,11 +3858,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynSession class --------------------
-    static constexpr const char* const type_name_AllJoynSession = "AllJoynSession";
 
     static PyObject* _new_AllJoynSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynSession);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynSession>::type_name);
         return nullptr;
     }
 
@@ -4201,7 +4193,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynSessionJoinedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynSessionJoinedEventArgs = "AllJoynSessionJoinedEventArgs";
 
     static PyObject* _new_AllJoynSessionJoinedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4321,7 +4312,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynSessionLostEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynSessionLostEventArgs = "AllJoynSessionLostEventArgs";
 
     static PyObject* _new_AllJoynSessionLostEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4441,7 +4431,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynSessionMemberAddedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynSessionMemberAddedEventArgs = "AllJoynSessionMemberAddedEventArgs";
 
     static PyObject* _new_AllJoynSessionMemberAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4561,7 +4550,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynSessionMemberRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynSessionMemberRemovedEventArgs = "AllJoynSessionMemberRemovedEventArgs";
 
     static PyObject* _new_AllJoynSessionMemberRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4681,11 +4669,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynStatus class --------------------
-    static constexpr const char* const type_name_AllJoynStatus = "AllJoynStatus";
 
     static PyObject* _new_AllJoynStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AllJoynStatus);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::AllJoynStatus>::type_name);
         return nullptr;
     }
 
@@ -5095,7 +5083,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- AllJoynWatcherStoppedEventArgs class --------------------
-    static constexpr const char* const type_name_AllJoynWatcherStoppedEventArgs = "AllJoynWatcherStoppedEventArgs";
 
     static PyObject* _new_AllJoynWatcherStoppedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5215,11 +5202,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- IAllJoynAcceptSessionJoiner interface --------------------
-    static constexpr const char* const type_name_IAllJoynAcceptSessionJoiner = "IAllJoynAcceptSessionJoiner";
 
     static PyObject* _new_IAllJoynAcceptSessionJoiner(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAllJoynAcceptSessionJoiner);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>::type_name);
         return nullptr;
     }
 
@@ -5321,11 +5308,11 @@ namespace py::cpp::Windows::Devices::AllJoyn
     };
 
     // ----- IAllJoynProducer interface --------------------
-    static constexpr const char* const type_name_IAllJoynProducer = "IAllJoynProducer";
 
     static PyObject* _new_IAllJoynProducer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAllJoynProducer);
+        static_assert(py::py_type<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>::type_name);
         return nullptr;
     }
 

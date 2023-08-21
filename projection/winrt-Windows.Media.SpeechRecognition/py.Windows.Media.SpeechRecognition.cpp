@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::SpeechRecognition
 {
     // ----- SpeechContinuousRecognitionCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_SpeechContinuousRecognitionCompletedEventArgs = "SpeechContinuousRecognitionCompletedEventArgs";
 
     static PyObject* _new_SpeechContinuousRecognitionCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechContinuousRecognitionCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechContinuousRecognitionResultGeneratedEventArgs class --------------------
-    static constexpr const char* const type_name_SpeechContinuousRecognitionResultGeneratedEventArgs = "SpeechContinuousRecognitionResultGeneratedEventArgs";
 
     static PyObject* _new_SpeechContinuousRecognitionResultGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechContinuousRecognitionResultGeneratedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -197,11 +197,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechContinuousRecognitionSession class --------------------
-    static constexpr const char* const type_name_SpeechContinuousRecognitionSession = "SpeechContinuousRecognitionSession";
 
     static PyObject* _new_SpeechContinuousRecognitionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechContinuousRecognitionSession);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>::type_name);
         return nullptr;
     }
 
@@ -581,11 +581,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionCompilationResult class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionCompilationResult = "SpeechRecognitionCompilationResult";
 
     static PyObject* _new_SpeechRecognitionCompilationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionCompilationResult);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>::type_name);
         return nullptr;
     }
 
@@ -676,7 +676,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionGrammarFileConstraint class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionGrammarFileConstraint = "SpeechRecognitionGrammarFileConstraint";
 
     static PyObject* _new_SpeechRecognitionGrammarFileConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -976,11 +975,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionHypothesis class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionHypothesis = "SpeechRecognitionHypothesis";
 
     static PyObject* _new_SpeechRecognitionHypothesis(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionHypothesis);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>::type_name);
         return nullptr;
     }
 
@@ -1071,11 +1070,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionHypothesisGeneratedEventArgs class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionHypothesisGeneratedEventArgs = "SpeechRecognitionHypothesisGeneratedEventArgs";
 
     static PyObject* _new_SpeechRecognitionHypothesisGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionHypothesisGeneratedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1166,7 +1165,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionListConstraint class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionListConstraint = "SpeechRecognitionListConstraint";
 
     static PyObject* _new_SpeechRecognitionListConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1466,11 +1464,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionQualityDegradingEventArgs class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionQualityDegradingEventArgs = "SpeechRecognitionQualityDegradingEventArgs";
 
     static PyObject* _new_SpeechRecognitionQualityDegradingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionQualityDegradingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1561,11 +1559,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionResult class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionResult = "SpeechRecognitionResult";
 
     static PyObject* _new_SpeechRecognitionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionResult);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>::type_name);
         return nullptr;
     }
 
@@ -1848,11 +1846,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionSemanticInterpretation class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionSemanticInterpretation = "SpeechRecognitionSemanticInterpretation";
 
     static PyObject* _new_SpeechRecognitionSemanticInterpretation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionSemanticInterpretation);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>::type_name);
         return nullptr;
     }
 
@@ -1943,7 +1941,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionTopicConstraint class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionTopicConstraint = "SpeechRecognitionTopicConstraint";
 
     static PyObject* _new_SpeechRecognitionTopicConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2265,11 +2262,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognitionVoiceCommandDefinitionConstraint class --------------------
-    static constexpr const char* const type_name_SpeechRecognitionVoiceCommandDefinitionConstraint = "SpeechRecognitionVoiceCommandDefinitionConstraint";
 
     static PyObject* _new_SpeechRecognitionVoiceCommandDefinitionConstraint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognitionVoiceCommandDefinitionConstraint);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>::type_name);
         return nullptr;
     }
 
@@ -2504,7 +2501,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognizer class --------------------
-    static constexpr const char* const type_name_SpeechRecognizer = "SpeechRecognizer";
 
     static PyObject* _new_SpeechRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3157,11 +3153,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognizerStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SpeechRecognizerStateChangedEventArgs = "SpeechRecognizerStateChangedEventArgs";
 
     static PyObject* _new_SpeechRecognizerStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognizerStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3252,11 +3248,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognizerTimeouts class --------------------
-    static constexpr const char* const type_name_SpeechRecognizerTimeouts = "SpeechRecognizerTimeouts";
 
     static PyObject* _new_SpeechRecognizerTimeouts(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognizerTimeouts);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>::type_name);
         return nullptr;
     }
 
@@ -3471,11 +3467,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- SpeechRecognizerUIOptions class --------------------
-    static constexpr const char* const type_name_SpeechRecognizerUIOptions = "SpeechRecognizerUIOptions";
 
     static PyObject* _new_SpeechRecognizerUIOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpeechRecognizerUIOptions);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>::type_name);
         return nullptr;
     }
 
@@ -3738,11 +3734,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- VoiceCommandManager class --------------------
-    static constexpr const char* const type_name_VoiceCommandManager = "VoiceCommandManager";
 
     static PyObject* _new_VoiceCommandManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandManager);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>::type_name);
         return nullptr;
     }
 
@@ -3844,11 +3840,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- VoiceCommandSet class --------------------
-    static constexpr const char* const type_name_VoiceCommandSet = "VoiceCommandSet";
 
     static PyObject* _new_VoiceCommandSet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VoiceCommandSet);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>::type_name);
         return nullptr;
     }
 
@@ -3992,11 +3988,11 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     };
 
     // ----- ISpeechRecognitionConstraint interface --------------------
-    static constexpr const char* const type_name_ISpeechRecognitionConstraint = "ISpeechRecognitionConstraint";
 
     static PyObject* _new_ISpeechRecognitionConstraint(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISpeechRecognitionConstraint);
+        static_assert(py::py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>::type_name);
         return nullptr;
     }
 

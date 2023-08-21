@@ -27,7 +27,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 namespace py::cpp::Windows::Foundation
 {
     // ----- Deferral class --------------------
-    static constexpr const char* const type_name_Deferral = "Deferral";
 
     static PyObject* _new_Deferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -211,11 +210,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- GuidHelper class --------------------
-    static constexpr const char* const type_name_GuidHelper = "GuidHelper";
 
     static PyObject* _new_GuidHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GuidHelper);
+        static_assert(py::py_type<winrt::Windows::Foundation::GuidHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::GuidHelper>::type_name);
         return nullptr;
     }
 
@@ -348,7 +347,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- MemoryBuffer class --------------------
-    static constexpr const char* const type_name_MemoryBuffer = "MemoryBuffer";
 
     static PyObject* _new_MemoryBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -531,11 +529,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- PropertyValue class --------------------
-    static constexpr const char* const type_name_PropertyValue = "PropertyValue";
 
     static PyObject* _new_PropertyValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PropertyValue);
+        static_assert(py::py_type<winrt::Windows::Foundation::PropertyValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::PropertyValue>::type_name);
         return nullptr;
     }
 
@@ -1811,7 +1809,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- Uri class --------------------
-    static constexpr const char* const type_name_Uri = "Uri";
 
     static PyObject* _new_Uri(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2439,7 +2436,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- WwwFormUrlDecoder class --------------------
-    static constexpr const char* const type_name_WwwFormUrlDecoder = "WwwFormUrlDecoder";
 
     static PyObject* _new_WwwFormUrlDecoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2844,11 +2840,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- WwwFormUrlDecoderEntry class --------------------
-    static constexpr const char* const type_name_WwwFormUrlDecoderEntry = "WwwFormUrlDecoderEntry";
 
     static PyObject* _new_WwwFormUrlDecoderEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WwwFormUrlDecoderEntry);
+        static_assert(py::py_type<winrt::Windows::Foundation::WwwFormUrlDecoderEntry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::WwwFormUrlDecoderEntry>::type_name);
         return nullptr;
     }
 
@@ -2959,11 +2955,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IAsyncAction interface --------------------
-    static constexpr const char* const type_name_IAsyncAction = "IAsyncAction";
 
     static PyObject* _new_IAsyncAction(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAsyncAction);
+        static_assert(py::py_type<winrt::Windows::Foundation::IAsyncAction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IAsyncAction>::type_name);
         return nullptr;
     }
 
@@ -3241,11 +3237,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IAsyncActionWithProgress interface --------------------
-    static constexpr const char* const type_name_IAsyncActionWithProgress = "IAsyncActionWithProgress";
 
     static PyObject* _new_IAsyncActionWithProgress(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAsyncActionWithProgress);
+        static_assert(py::py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>::type_name);
+        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IAsyncActionWithProgress>::type_name);
         return nullptr;
     }
 
@@ -3399,11 +3395,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IAsyncInfo interface --------------------
-    static constexpr const char* const type_name_IAsyncInfo = "IAsyncInfo";
 
     static PyObject* _new_IAsyncInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAsyncInfo);
+        static_assert(py::py_type<winrt::Windows::Foundation::IAsyncInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IAsyncInfo>::type_name);
         return nullptr;
     }
 
@@ -3596,11 +3592,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IAsyncOperationWithProgress interface --------------------
-    static constexpr const char* const type_name_IAsyncOperationWithProgress = "IAsyncOperationWithProgress";
 
     static PyObject* _new_IAsyncOperationWithProgress(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAsyncOperationWithProgress);
+        static_assert(py::py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>::type_name);
+        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IAsyncOperationWithProgress>::type_name);
         return nullptr;
     }
 
@@ -3754,11 +3750,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IAsyncOperation interface --------------------
-    static constexpr const char* const type_name_IAsyncOperation = "IAsyncOperation";
 
     static PyObject* _new_IAsyncOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IAsyncOperation);
+        static_assert(py::py_type<py::proj::Windows::Foundation::IAsyncOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IAsyncOperation>::type_name);
         return nullptr;
     }
 
@@ -3889,11 +3885,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IClosable interface --------------------
-    static constexpr const char* const type_name_IClosable = "IClosable";
 
     static PyObject* _new_IClosable(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IClosable);
+        static_assert(py::py_type<winrt::Windows::Foundation::IClosable>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IClosable>::type_name);
         return nullptr;
     }
 
@@ -4017,11 +4013,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IGetActivationFactory interface --------------------
-    static constexpr const char* const type_name_IGetActivationFactory = "IGetActivationFactory";
 
     static PyObject* _new_IGetActivationFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGetActivationFactory);
+        static_assert(py::py_type<winrt::Windows::Foundation::IGetActivationFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IGetActivationFactory>::type_name);
         return nullptr;
     }
 
@@ -4124,11 +4120,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IMemoryBuffer interface --------------------
-    static constexpr const char* const type_name_IMemoryBuffer = "IMemoryBuffer";
 
     static PyObject* _new_IMemoryBuffer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMemoryBuffer);
+        static_assert(py::py_type<winrt::Windows::Foundation::IMemoryBuffer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IMemoryBuffer>::type_name);
         return nullptr;
     }
 
@@ -4282,11 +4278,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IMemoryBufferReference interface --------------------
-    static constexpr const char* const type_name_IMemoryBufferReference = "IMemoryBufferReference";
 
     static PyObject* _new_IMemoryBufferReference(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMemoryBufferReference);
+        static_assert(py::py_type<winrt::Windows::Foundation::IMemoryBufferReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IMemoryBufferReference>::type_name);
         return nullptr;
     }
 
@@ -4496,11 +4492,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IPropertyValue interface --------------------
-    static constexpr const char* const type_name_IPropertyValue = "IPropertyValue";
 
     static PyObject* _new_IPropertyValue(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPropertyValue);
+        static_assert(py::py_type<winrt::Windows::Foundation::IPropertyValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IPropertyValue>::type_name);
         return nullptr;
     }
 
@@ -5892,11 +5888,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IReferenceArray interface --------------------
-    static constexpr const char* const type_name_IReferenceArray = "IReferenceArray";
 
     static PyObject* _new_IReferenceArray(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IReferenceArray);
+        static_assert(py::py_type<py::proj::Windows::Foundation::IReferenceArray>::type_name);
+        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IReferenceArray>::type_name);
         return nullptr;
     }
 
@@ -6202,11 +6198,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IReference interface --------------------
-    static constexpr const char* const type_name_IReference = "IReference";
 
     static PyObject* _new_IReference(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IReference);
+        static_assert(py::py_type<py::proj::Windows::Foundation::IReference>::type_name);
+        py::set_invalid_activation_error(py::py_type<py::proj::Windows::Foundation::IReference>::type_name);
         return nullptr;
     }
 
@@ -6512,11 +6508,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IStringable interface --------------------
-    static constexpr const char* const type_name_IStringable = "IStringable";
 
     static PyObject* _new_IStringable(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStringable);
+        static_assert(py::py_type<winrt::Windows::Foundation::IStringable>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IStringable>::type_name);
         return nullptr;
     }
 
@@ -6631,11 +6627,11 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- IWwwFormUrlDecoderEntry interface --------------------
-    static constexpr const char* const type_name_IWwwFormUrlDecoderEntry = "IWwwFormUrlDecoderEntry";
 
     static PyObject* _new_IWwwFormUrlDecoderEntry(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWwwFormUrlDecoderEntry);
+        static_assert(py::py_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::IWwwFormUrlDecoderEntry>::type_name);
         return nullptr;
     }
 
@@ -6746,7 +6742,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- EventRegistrationToken struct --------------------
-    static constexpr const char* const type_name_EventRegistrationToken = "EventRegistrationToken";
 
     PyObject* _new_EventRegistrationToken(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -6847,7 +6842,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- HResult struct --------------------
-    static constexpr const char* const type_name_HResult = "HResult";
 
     PyObject* _new_HResult(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -6948,7 +6942,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- Point struct --------------------
-    static constexpr const char* const type_name_Point = "Point";
 
     PyObject* _new_Point(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -7083,7 +7076,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- Rect struct --------------------
-    static constexpr const char* const type_name_Rect = "Rect";
 
     PyObject* _new_Rect(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -7288,7 +7280,6 @@ namespace py::cpp::Windows::Foundation
     };
 
     // ----- Size struct --------------------
-    static constexpr const char* const type_name_Size = "Size";
 
     PyObject* _new_Size(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
 {
     // ----- DnssdRegistrationResult class --------------------
-    static constexpr const char* const type_name_DnssdRegistrationResult = "DnssdRegistrationResult";
 
     static PyObject* _new_DnssdRegistrationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -209,7 +208,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     };
 
     // ----- DnssdServiceInstance class --------------------
-    static constexpr const char* const type_name_DnssdServiceInstance = "DnssdServiceInstance";
 
     static PyObject* _new_DnssdServiceInstance(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -721,11 +719,11 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     };
 
     // ----- DnssdServiceInstanceCollection class --------------------
-    static constexpr const char* const type_name_DnssdServiceInstanceCollection = "DnssdServiceInstanceCollection";
 
     static PyObject* _new_DnssdServiceInstanceCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DnssdServiceInstanceCollection);
+        static_assert(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>::type_name);
         return nullptr;
     }
 
@@ -1069,11 +1067,11 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     };
 
     // ----- DnssdServiceWatcher class --------------------
-    static constexpr const char* const type_name_DnssdServiceWatcher = "DnssdServiceWatcher";
 
     static PyObject* _new_DnssdServiceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DnssdServiceWatcher);
+        static_assert(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>::type_name);
         return nullptr;
     }
 

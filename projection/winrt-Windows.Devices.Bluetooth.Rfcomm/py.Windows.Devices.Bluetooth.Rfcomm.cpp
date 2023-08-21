@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 {
     // ----- RfcommDeviceService class --------------------
-    static constexpr const char* const type_name_RfcommDeviceService = "RfcommDeviceService";
 
     static PyObject* _new_RfcommDeviceService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RfcommDeviceService);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>::type_name);
         return nullptr;
     }
 
@@ -527,11 +527,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     };
 
     // ----- RfcommDeviceServicesResult class --------------------
-    static constexpr const char* const type_name_RfcommDeviceServicesResult = "RfcommDeviceServicesResult";
 
     static PyObject* _new_RfcommDeviceServicesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RfcommDeviceServicesResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>::type_name);
         return nullptr;
     }
 
@@ -642,11 +642,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     };
 
     // ----- RfcommServiceId class --------------------
-    static constexpr const char* const type_name_RfcommServiceId = "RfcommServiceId";
 
     static PyObject* _new_RfcommServiceId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RfcommServiceId);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>::type_name);
         return nullptr;
     }
 
@@ -1001,11 +1001,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     };
 
     // ----- RfcommServiceProvider class --------------------
-    static constexpr const char* const type_name_RfcommServiceProvider = "RfcommServiceProvider";
 
     static PyObject* _new_RfcommServiceProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RfcommServiceProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>::type_name);
         return nullptr;
     }
 

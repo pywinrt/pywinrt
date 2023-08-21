@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
 {
     // ----- HolographicApplicationPreview class --------------------
-    static constexpr const char* const type_name_HolographicApplicationPreview = "HolographicApplicationPreview";
 
     static PyObject* _new_HolographicApplicationPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicApplicationPreview);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>::type_name);
         return nullptr;
     }
 
@@ -103,11 +103,11 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Holographic
     };
 
     // ----- HolographicKeyboardPlacementOverridePreview class --------------------
-    static constexpr const char* const type_name_HolographicKeyboardPlacementOverridePreview = "HolographicKeyboardPlacementOverridePreview";
 
     static PyObject* _new_HolographicKeyboardPlacementOverridePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicKeyboardPlacementOverridePreview);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>::type_name);
         return nullptr;
     }
 

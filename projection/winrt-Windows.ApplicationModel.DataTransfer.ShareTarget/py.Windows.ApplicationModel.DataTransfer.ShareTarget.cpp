@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
 {
     // ----- QuickLink class --------------------
-    static constexpr const char* const type_name_QuickLink = "QuickLink";
 
     static PyObject* _new_QuickLink(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -289,11 +288,11 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
     };
 
     // ----- ShareOperation class --------------------
-    static constexpr const char* const type_name_ShareOperation = "ShareOperation";
 
     static PyObject* _new_ShareOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ShareOperation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>::type_name);
         return nullptr;
     }
 

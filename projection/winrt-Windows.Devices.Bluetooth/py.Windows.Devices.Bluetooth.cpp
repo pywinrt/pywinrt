@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Bluetooth
 {
     // ----- BluetoothAdapter class --------------------
-    static constexpr const char* const type_name_BluetoothAdapter = "BluetoothAdapter";
 
     static PyObject* _new_BluetoothAdapter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothAdapter);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothAdapter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothAdapter>::type_name);
         return nullptr;
     }
 
@@ -424,11 +424,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothClassOfDevice class --------------------
-    static constexpr const char* const type_name_BluetoothClassOfDevice = "BluetoothClassOfDevice";
 
     static PyObject* _new_BluetoothClassOfDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothClassOfDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice>::type_name);
         return nullptr;
     }
 
@@ -645,11 +645,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothDevice class --------------------
-    static constexpr const char* const type_name_BluetoothDevice = "BluetoothDevice";
 
     static PyObject* _new_BluetoothDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothDevice>::type_name);
         return nullptr;
     }
 
@@ -1567,11 +1567,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothDeviceId class --------------------
-    static constexpr const char* const type_name_BluetoothDeviceId = "BluetoothDeviceId";
 
     static PyObject* _new_BluetoothDeviceId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothDeviceId);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>::type_name);
         return nullptr;
     }
 
@@ -1734,11 +1734,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEAppearance class --------------------
-    static constexpr const char* const type_name_BluetoothLEAppearance = "BluetoothLEAppearance";
 
     static PyObject* _new_BluetoothLEAppearance(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAppearance);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance>::type_name);
         return nullptr;
     }
 
@@ -1934,11 +1934,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEAppearanceCategories class --------------------
-    static constexpr const char* const type_name_BluetoothLEAppearanceCategories = "BluetoothLEAppearanceCategories";
 
     static PyObject* _new_BluetoothLEAppearanceCategories(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAppearanceCategories);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories>::type_name);
         return nullptr;
     }
 
@@ -2428,11 +2428,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEAppearanceSubcategories class --------------------
-    static constexpr const char* const type_name_BluetoothLEAppearanceSubcategories = "BluetoothLEAppearanceSubcategories";
 
     static PyObject* _new_BluetoothLEAppearanceSubcategories(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEAppearanceSubcategories);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories>::type_name);
         return nullptr;
     }
 
@@ -3042,11 +3042,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEConnectionParameters class --------------------
-    static constexpr const char* const type_name_BluetoothLEConnectionParameters = "BluetoothLEConnectionParameters";
 
     static PyObject* _new_BluetoothLEConnectionParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEConnectionParameters);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>::type_name);
         return nullptr;
     }
 
@@ -3177,11 +3177,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEConnectionPhy class --------------------
-    static constexpr const char* const type_name_BluetoothLEConnectionPhy = "BluetoothLEConnectionPhy";
 
     static PyObject* _new_BluetoothLEConnectionPhy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEConnectionPhy);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>::type_name);
         return nullptr;
     }
 
@@ -3292,11 +3292,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEConnectionPhyInfo class --------------------
-    static constexpr const char* const type_name_BluetoothLEConnectionPhyInfo = "BluetoothLEConnectionPhyInfo";
 
     static PyObject* _new_BluetoothLEConnectionPhyInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEConnectionPhyInfo);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>::type_name);
         return nullptr;
     }
 
@@ -3427,11 +3427,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEDevice class --------------------
-    static constexpr const char* const type_name_BluetoothLEDevice = "BluetoothLEDevice";
 
     static PyObject* _new_BluetoothLEDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice>::type_name);
         return nullptr;
     }
 
@@ -4553,11 +4553,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEPreferredConnectionParameters class --------------------
-    static constexpr const char* const type_name_BluetoothLEPreferredConnectionParameters = "BluetoothLEPreferredConnectionParameters";
 
     static PyObject* _new_BluetoothLEPreferredConnectionParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEPreferredConnectionParameters);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>::type_name);
         return nullptr;
     }
 
@@ -4788,11 +4788,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothLEPreferredConnectionParametersRequest class --------------------
-    static constexpr const char* const type_name_BluetoothLEPreferredConnectionParametersRequest = "BluetoothLEPreferredConnectionParametersRequest";
 
     static PyObject* _new_BluetoothLEPreferredConnectionParametersRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothLEPreferredConnectionParametersRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>::type_name);
         return nullptr;
     }
 
@@ -4936,7 +4936,6 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothSignalStrengthFilter class --------------------
-    static constexpr const char* const type_name_BluetoothSignalStrengthFilter = "BluetoothSignalStrengthFilter";
 
     static PyObject* _new_BluetoothSignalStrengthFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5226,11 +5225,11 @@ namespace py::cpp::Windows::Devices::Bluetooth
     };
 
     // ----- BluetoothUuidHelper class --------------------
-    static constexpr const char* const type_name_BluetoothUuidHelper = "BluetoothUuidHelper";
 
     static PyObject* _new_BluetoothUuidHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BluetoothUuidHelper);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper>::type_name);
         return nullptr;
     }
 

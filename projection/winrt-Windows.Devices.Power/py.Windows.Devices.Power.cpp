@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Power
 {
     // ----- Battery class --------------------
-    static constexpr const char* const type_name_Battery = "Battery";
 
     static PyObject* _new_Battery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Battery);
+        static_assert(py::py_type<winrt::Windows::Devices::Power::Battery>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Power::Battery>::type_name);
         return nullptr;
     }
 
@@ -279,11 +279,11 @@ namespace py::cpp::Windows::Devices::Power
     };
 
     // ----- BatteryReport class --------------------
-    static constexpr const char* const type_name_BatteryReport = "BatteryReport";
 
     static PyObject* _new_BatteryReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BatteryReport);
+        static_assert(py::py_type<winrt::Windows::Devices::Power::BatteryReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Power::BatteryReport>::type_name);
         return nullptr;
     }
 

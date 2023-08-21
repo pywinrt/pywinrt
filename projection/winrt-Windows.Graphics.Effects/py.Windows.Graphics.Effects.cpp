@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Effects
 {
     // ----- IGraphicsEffect interface --------------------
-    static constexpr const char* const type_name_IGraphicsEffect = "IGraphicsEffect";
 
     static PyObject* _new_IGraphicsEffect(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGraphicsEffect);
+        static_assert(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffect>::type_name);
         return nullptr;
     }
 
@@ -130,11 +130,11 @@ namespace py::cpp::Windows::Graphics::Effects
     };
 
     // ----- IGraphicsEffectSource interface --------------------
-    static constexpr const char* const type_name_IGraphicsEffectSource = "IGraphicsEffectSource";
 
     static PyObject* _new_IGraphicsEffectSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGraphicsEffectSource);
+        static_assert(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Effects::IGraphicsEffectSource>::type_name);
         return nullptr;
     }
 

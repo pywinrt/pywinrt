@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Globalization::DateTimeFormatting
 {
     // ----- DateTimeFormatter class --------------------
-    static constexpr const char* const type_name_DateTimeFormatter = "DateTimeFormatter";
 
     static PyObject* _new_DateTimeFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

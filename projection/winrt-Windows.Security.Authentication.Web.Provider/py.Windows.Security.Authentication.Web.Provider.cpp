@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Security::Authentication::Web::Provider
 {
     // ----- WebAccountClientView class --------------------
-    static constexpr const char* const type_name_WebAccountClientView = "WebAccountClientView";
 
     static PyObject* _new_WebAccountClientView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -185,11 +184,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountManager class --------------------
-    static constexpr const char* const type_name_WebAccountManager = "WebAccountManager";
 
     static PyObject* _new_WebAccountManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountManager);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager>::type_name);
         return nullptr;
     }
 
@@ -965,11 +964,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderAddAccountOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderAddAccountOperation = "WebAccountProviderAddAccountOperation";
 
     static PyObject* _new_WebAccountProviderAddAccountOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderAddAccountOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation>::type_name);
         return nullptr;
     }
 
@@ -1091,11 +1090,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderDeleteAccountOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderDeleteAccountOperation = "WebAccountProviderDeleteAccountOperation";
 
     static PyObject* _new_WebAccountProviderDeleteAccountOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderDeleteAccountOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation>::type_name);
         return nullptr;
     }
 
@@ -1270,11 +1269,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderGetTokenSilentOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderGetTokenSilentOperation = "WebAccountProviderGetTokenSilentOperation";
 
     static PyObject* _new_WebAccountProviderGetTokenSilentOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderGetTokenSilentOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation>::type_name);
         return nullptr;
     }
 
@@ -1569,11 +1568,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderManageAccountOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderManageAccountOperation = "WebAccountProviderManageAccountOperation";
 
     static PyObject* _new_WebAccountProviderManageAccountOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderManageAccountOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation>::type_name);
         return nullptr;
     }
 
@@ -1715,11 +1714,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderRequestTokenOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderRequestTokenOperation = "WebAccountProviderRequestTokenOperation";
 
     static PyObject* _new_WebAccountProviderRequestTokenOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderRequestTokenOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation>::type_name);
         return nullptr;
     }
 
@@ -1993,11 +1992,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderRetrieveCookiesOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderRetrieveCookiesOperation = "WebAccountProviderRetrieveCookiesOperation";
 
     static PyObject* _new_WebAccountProviderRetrieveCookiesOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderRetrieveCookiesOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation>::type_name);
         return nullptr;
     }
 
@@ -2260,11 +2259,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderSignOutAccountOperation class --------------------
-    static constexpr const char* const type_name_WebAccountProviderSignOutAccountOperation = "WebAccountProviderSignOutAccountOperation";
 
     static PyObject* _new_WebAccountProviderSignOutAccountOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderSignOutAccountOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation>::type_name);
         return nullptr;
     }
 
@@ -2479,11 +2478,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebAccountProviderTriggerDetails class --------------------
-    static constexpr const char* const type_name_WebAccountProviderTriggerDetails = "WebAccountProviderTriggerDetails";
 
     static PyObject* _new_WebAccountProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAccountProviderTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -2594,11 +2593,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebProviderTokenRequest class --------------------
-    static constexpr const char* const type_name_WebProviderTokenRequest = "WebProviderTokenRequest";
 
     static PyObject* _new_WebProviderTokenRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebProviderTokenRequest);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest>::type_name);
         return nullptr;
     }
 
@@ -2887,7 +2886,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- WebProviderTokenResponse class --------------------
-    static constexpr const char* const type_name_WebProviderTokenResponse = "WebProviderTokenResponse";
 
     static PyObject* _new_WebProviderTokenResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3007,11 +3005,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderBaseReportOperation interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderBaseReportOperation = "IWebAccountProviderBaseReportOperation";
 
     static PyObject* _new_IWebAccountProviderBaseReportOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderBaseReportOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation>::type_name);
         return nullptr;
     }
 
@@ -3146,11 +3144,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderOperation interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderOperation = "IWebAccountProviderOperation";
 
     static PyObject* _new_IWebAccountProviderOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation>::type_name);
         return nullptr;
     }
 
@@ -3241,11 +3239,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderSilentReportOperation interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderSilentReportOperation = "IWebAccountProviderSilentReportOperation";
 
     static PyObject* _new_IWebAccountProviderSilentReportOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderSilentReportOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation>::type_name);
         return nullptr;
     }
 
@@ -3432,11 +3430,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderTokenObjects interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderTokenObjects = "IWebAccountProviderTokenObjects";
 
     static PyObject* _new_IWebAccountProviderTokenObjects(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderTokenObjects);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects>::type_name);
         return nullptr;
     }
 
@@ -3527,11 +3525,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderTokenObjects2 interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderTokenObjects2 = "IWebAccountProviderTokenObjects2";
 
     static PyObject* _new_IWebAccountProviderTokenObjects2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderTokenObjects2);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2>::type_name);
         return nullptr;
     }
 
@@ -3642,11 +3640,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderTokenOperation interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderTokenOperation = "IWebAccountProviderTokenOperation";
 
     static PyObject* _new_IWebAccountProviderTokenOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderTokenOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation>::type_name);
         return nullptr;
     }
 
@@ -3825,11 +3823,11 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     };
 
     // ----- IWebAccountProviderUIReportOperation interface --------------------
-    static constexpr const char* const type_name_IWebAccountProviderUIReportOperation = "IWebAccountProviderUIReportOperation";
 
     static PyObject* _new_IWebAccountProviderUIReportOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebAccountProviderUIReportOperation);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation>::type_name);
         return nullptr;
     }
 

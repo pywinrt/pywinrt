@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::RemoteDesktop::Provider
 {
     // ----- RemoteDesktopConnectionInfo class --------------------
-    static constexpr const char* const type_name_RemoteDesktopConnectionInfo = "RemoteDesktopConnectionInfo";
 
     static PyObject* _new_RemoteDesktopConnectionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RemoteDesktopConnectionInfo);
+        static_assert(py::py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo>::type_name);
         return nullptr;
     }
 

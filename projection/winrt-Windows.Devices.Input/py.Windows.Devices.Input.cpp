@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Input
 {
     // ----- KeyboardCapabilities class --------------------
-    static constexpr const char* const type_name_KeyboardCapabilities = "KeyboardCapabilities";
 
     static PyObject* _new_KeyboardCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -125,7 +124,6 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- MouseCapabilities class --------------------
-    static constexpr const char* const type_name_MouseCapabilities = "MouseCapabilities";
 
     static PyObject* _new_MouseCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -323,11 +321,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- MouseDevice class --------------------
-    static constexpr const char* const type_name_MouseDevice = "MouseDevice";
 
     static PyObject* _new_MouseDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MouseDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::MouseDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::MouseDevice>::type_name);
         return nullptr;
     }
 
@@ -473,11 +471,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- MouseEventArgs class --------------------
-    static constexpr const char* const type_name_MouseEventArgs = "MouseEventArgs";
 
     static PyObject* _new_MouseEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MouseEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::MouseEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::MouseEventArgs>::type_name);
         return nullptr;
     }
 
@@ -568,11 +566,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenButtonListener class --------------------
-    static constexpr const char* const type_name_PenButtonListener = "PenButtonListener";
 
     static PyObject* _new_PenButtonListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenButtonListener);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenButtonListener>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenButtonListener>::type_name);
         return nullptr;
     }
 
@@ -883,11 +881,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenDevice class --------------------
-    static constexpr const char* const type_name_PenDevice = "PenDevice";
 
     static PyObject* _new_PenDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenDevice>::type_name);
         return nullptr;
     }
 
@@ -1030,11 +1028,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenDockListener class --------------------
-    static constexpr const char* const type_name_PenDockListener = "PenDockListener";
 
     static PyObject* _new_PenDockListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenDockListener);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenDockListener>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenDockListener>::type_name);
         return nullptr;
     }
 
@@ -1300,11 +1298,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenDockedEventArgs class --------------------
-    static constexpr const char* const type_name_PenDockedEventArgs = "PenDockedEventArgs";
 
     static PyObject* _new_PenDockedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenDockedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenDockedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenDockedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1375,11 +1373,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenTailButtonClickedEventArgs class --------------------
-    static constexpr const char* const type_name_PenTailButtonClickedEventArgs = "PenTailButtonClickedEventArgs";
 
     static PyObject* _new_PenTailButtonClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenTailButtonClickedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1450,11 +1448,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenTailButtonDoubleClickedEventArgs class --------------------
-    static constexpr const char* const type_name_PenTailButtonDoubleClickedEventArgs = "PenTailButtonDoubleClickedEventArgs";
 
     static PyObject* _new_PenTailButtonDoubleClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenTailButtonDoubleClickedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1525,11 +1523,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenTailButtonLongPressedEventArgs class --------------------
-    static constexpr const char* const type_name_PenTailButtonLongPressedEventArgs = "PenTailButtonLongPressedEventArgs";
 
     static PyObject* _new_PenTailButtonLongPressedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenTailButtonLongPressedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1600,11 +1598,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PenUndockedEventArgs class --------------------
-    static constexpr const char* const type_name_PenUndockedEventArgs = "PenUndockedEventArgs";
 
     static PyObject* _new_PenUndockedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenUndockedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1675,11 +1673,11 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PointerDevice class --------------------
-    static constexpr const char* const type_name_PointerDevice = "PointerDevice";
 
     static PyObject* _new_PointerDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointerDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Input::PointerDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Input::PointerDevice>::type_name);
         return nullptr;
     }
 
@@ -1952,7 +1950,6 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- TouchCapabilities class --------------------
-    static constexpr const char* const type_name_TouchCapabilities = "TouchCapabilities";
 
     static PyObject* _new_TouchCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2090,7 +2087,6 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- MouseDelta struct --------------------
-    static constexpr const char* const type_name_MouseDelta = "MouseDelta";
 
     PyObject* _new_MouseDelta(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -2225,7 +2221,6 @@ namespace py::cpp::Windows::Devices::Input
     };
 
     // ----- PointerDeviceUsage struct --------------------
-    static constexpr const char* const type_name_PointerDeviceUsage = "PointerDeviceUsage";
 
     PyObject* _new_PointerDeviceUsage(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

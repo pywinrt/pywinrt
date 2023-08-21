@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Preview
 {
     // ----- TwoPanelHingedDevicePosturePreview class --------------------
-    static constexpr const char* const type_name_TwoPanelHingedDevicePosturePreview = "TwoPanelHingedDevicePosturePreview";
 
     static PyObject* _new_TwoPanelHingedDevicePosturePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TwoPanelHingedDevicePosturePreview);
+        static_assert(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>::type_name);
         return nullptr;
     }
 
@@ -187,11 +187,11 @@ namespace py::cpp::Windows::System::Preview
     };
 
     // ----- TwoPanelHingedDevicePosturePreviewReading class --------------------
-    static constexpr const char* const type_name_TwoPanelHingedDevicePosturePreviewReading = "TwoPanelHingedDevicePosturePreviewReading";
 
     static PyObject* _new_TwoPanelHingedDevicePosturePreviewReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TwoPanelHingedDevicePosturePreviewReading);
+        static_assert(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>::type_name);
         return nullptr;
     }
 
@@ -382,11 +382,11 @@ namespace py::cpp::Windows::System::Preview
     };
 
     // ----- TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
 
     static PyObject* _new_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>::type_name);
         return nullptr;
     }
 

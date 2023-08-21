@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Imaging
 {
     // ----- BitmapBuffer class --------------------
-    static constexpr const char* const type_name_BitmapBuffer = "BitmapBuffer";
 
     static PyObject* _new_BitmapBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapBuffer);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>::type_name);
         return nullptr;
     }
 
@@ -227,11 +227,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapCodecInformation class --------------------
-    static constexpr const char* const type_name_BitmapCodecInformation = "BitmapCodecInformation";
 
     static PyObject* _new_BitmapCodecInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapCodecInformation);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>::type_name);
         return nullptr;
     }
 
@@ -382,11 +382,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapDecoder class --------------------
-    static constexpr const char* const type_name_BitmapDecoder = "BitmapDecoder";
 
     static PyObject* _new_BitmapDecoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapDecoder);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>::type_name);
         return nullptr;
     }
 
@@ -1201,11 +1201,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapEncoder class --------------------
-    static constexpr const char* const type_name_BitmapEncoder = "BitmapEncoder";
 
     static PyObject* _new_BitmapEncoder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapEncoder);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>::type_name);
         return nullptr;
     }
 
@@ -1962,11 +1962,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapFrame class --------------------
-    static constexpr const char* const type_name_BitmapFrame = "BitmapFrame";
 
     static PyObject* _new_BitmapFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapFrame);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapFrame>::type_name);
         return nullptr;
     }
 
@@ -2376,11 +2376,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapProperties class --------------------
-    static constexpr const char* const type_name_BitmapProperties = "BitmapProperties";
 
     static PyObject* _new_BitmapProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapProperties);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapProperties>::type_name);
         return nullptr;
     }
 
@@ -2515,11 +2515,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapPropertiesView class --------------------
-    static constexpr const char* const type_name_BitmapPropertiesView = "BitmapPropertiesView";
 
     static PyObject* _new_BitmapPropertiesView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BitmapPropertiesView);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>::type_name);
         return nullptr;
     }
 
@@ -2622,7 +2622,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapPropertySet class --------------------
-    static constexpr const char* const type_name_BitmapPropertySet = "BitmapPropertySet";
 
     static PyObject* _new_BitmapPropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3058,7 +3057,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapTransform class --------------------
-    static constexpr const char* const type_name_BitmapTransform = "BitmapTransform";
 
     static PyObject* _new_BitmapTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3444,7 +3442,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapTypedValue class --------------------
-    static constexpr const char* const type_name_BitmapTypedValue = "BitmapTypedValue";
 
     static PyObject* _new_BitmapTypedValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3585,11 +3582,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- ImageStream class --------------------
-    static constexpr const char* const type_name_ImageStream = "ImageStream";
 
     static PyObject* _new_ImageStream(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageStream);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::ImageStream>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::ImageStream>::type_name);
         return nullptr;
     }
 
@@ -4064,11 +4061,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- PixelDataProvider class --------------------
-    static constexpr const char* const type_name_PixelDataProvider = "PixelDataProvider";
 
     static PyObject* _new_PixelDataProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PixelDataProvider);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>::type_name);
         return nullptr;
     }
 
@@ -4169,7 +4166,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- SoftwareBitmap class --------------------
-    static constexpr const char* const type_name_SoftwareBitmap = "SoftwareBitmap";
 
     static PyObject* _new_SoftwareBitmap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4898,11 +4894,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- IBitmapFrame interface --------------------
-    static constexpr const char* const type_name_IBitmapFrame = "IBitmapFrame";
 
     static PyObject* _new_IBitmapFrame(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBitmapFrame);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>::type_name);
         return nullptr;
     }
 
@@ -5237,11 +5233,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- IBitmapFrameWithSoftwareBitmap interface --------------------
-    static constexpr const char* const type_name_IBitmapFrameWithSoftwareBitmap = "IBitmapFrameWithSoftwareBitmap";
 
     static PyObject* _new_IBitmapFrameWithSoftwareBitmap(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBitmapFrameWithSoftwareBitmap);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>::type_name);
         return nullptr;
     }
 
@@ -5651,11 +5647,11 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- IBitmapPropertiesView interface --------------------
-    static constexpr const char* const type_name_IBitmapPropertiesView = "IBitmapPropertiesView";
 
     static PyObject* _new_IBitmapPropertiesView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IBitmapPropertiesView);
+        static_assert(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>::type_name);
         return nullptr;
     }
 
@@ -5758,7 +5754,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapBounds struct --------------------
-    static constexpr const char* const type_name_BitmapBounds = "BitmapBounds";
 
     PyObject* _new_BitmapBounds(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -5963,7 +5958,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapPlaneDescription struct --------------------
-    static constexpr const char* const type_name_BitmapPlaneDescription = "BitmapPlaneDescription";
 
     PyObject* _new_BitmapPlaneDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -6168,7 +6162,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     };
 
     // ----- BitmapSize struct --------------------
-    static constexpr const char* const type_name_BitmapSize = "BitmapSize";
 
     PyObject* _new_BitmapSize(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

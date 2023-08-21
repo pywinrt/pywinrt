@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::HumanInterfaceDevice
 {
     // ----- HidBooleanControl class --------------------
-    static constexpr const char* const type_name_HidBooleanControl = "HidBooleanControl";
 
     static PyObject* _new_HidBooleanControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidBooleanControl);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>::type_name);
         return nullptr;
     }
 
@@ -210,11 +210,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidBooleanControlDescription class --------------------
-    static constexpr const char* const type_name_HidBooleanControlDescription = "HidBooleanControlDescription";
 
     static PyObject* _new_HidBooleanControlDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidBooleanControlDescription);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>::type_name);
         return nullptr;
     }
 
@@ -425,11 +425,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidCollection class --------------------
-    static constexpr const char* const type_name_HidCollection = "HidCollection";
 
     static PyObject* _new_HidCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidCollection);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>::type_name);
         return nullptr;
     }
 
@@ -580,11 +580,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidDevice class --------------------
-    static constexpr const char* const type_name_HidDevice = "HidDevice";
 
     static PyObject* _new_HidDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>::type_name);
         return nullptr;
     }
 
@@ -1274,11 +1274,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidFeatureReport class --------------------
-    static constexpr const char* const type_name_HidFeatureReport = "HidFeatureReport";
 
     static PyObject* _new_HidFeatureReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidFeatureReport);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>::type_name);
         return nullptr;
     }
 
@@ -1547,11 +1547,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidInputReport class --------------------
-    static constexpr const char* const type_name_HidInputReport = "HidInputReport";
 
     static PyObject* _new_HidInputReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidInputReport);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>::type_name);
         return nullptr;
     }
 
@@ -1832,11 +1832,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidInputReportReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_HidInputReportReceivedEventArgs = "HidInputReportReceivedEventArgs";
 
     static PyObject* _new_HidInputReportReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidInputReportReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1927,11 +1927,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidNumericControl class --------------------
-    static constexpr const char* const type_name_HidNumericControl = "HidNumericControl";
 
     static PyObject* _new_HidNumericControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidNumericControl);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>::type_name);
         return nullptr;
     }
 
@@ -2198,11 +2198,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidNumericControlDescription class --------------------
-    static constexpr const char* const type_name_HidNumericControlDescription = "HidNumericControlDescription";
 
     static PyObject* _new_HidNumericControlDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidNumericControlDescription);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>::type_name);
         return nullptr;
     }
 
@@ -2593,11 +2593,11 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     };
 
     // ----- HidOutputReport class --------------------
-    static constexpr const char* const type_name_HidOutputReport = "HidOutputReport";
 
     static PyObject* _new_HidOutputReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidOutputReport);
+        static_assert(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>::type_name);
         return nullptr;
     }
 

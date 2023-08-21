@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Core
 {
     // ----- AudioStreamDescriptor class --------------------
-    static constexpr const char* const type_name_AudioStreamDescriptor = "AudioStreamDescriptor";
 
     static PyObject* _new_AudioStreamDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -417,11 +416,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- AudioTrack class --------------------
-    static constexpr const char* const type_name_AudioTrack = "AudioTrack";
 
     static PyObject* _new_AudioTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioTrack);
+        static_assert(py::py_type<winrt::Windows::Media::Core::AudioTrack>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::AudioTrack>::type_name);
         return nullptr;
     }
 
@@ -735,11 +734,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- AudioTrackOpenFailedEventArgs class --------------------
-    static constexpr const char* const type_name_AudioTrackOpenFailedEventArgs = "AudioTrackOpenFailedEventArgs";
 
     static PyObject* _new_AudioTrackOpenFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioTrackOpenFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -830,11 +829,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- AudioTrackSupportInfo class --------------------
-    static constexpr const char* const type_name_AudioTrackSupportInfo = "AudioTrackSupportInfo";
 
     static PyObject* _new_AudioTrackSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AudioTrackSupportInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Core::AudioTrackSupportInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::AudioTrackSupportInfo>::type_name);
         return nullptr;
     }
 
@@ -985,7 +984,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- ChapterCue class --------------------
-    static constexpr const char* const type_name_ChapterCue = "ChapterCue";
 
     static PyObject* _new_ChapterCue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1275,11 +1273,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- CodecInfo class --------------------
-    static constexpr const char* const type_name_CodecInfo = "CodecInfo";
 
     static PyObject* _new_CodecInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CodecInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Core::CodecInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::CodecInfo>::type_name);
         return nullptr;
     }
 
@@ -1450,7 +1448,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- CodecQuery class --------------------
-    static constexpr const char* const type_name_CodecQuery = "CodecQuery";
 
     static PyObject* _new_CodecQuery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1582,11 +1579,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- CodecSubtypes class --------------------
-    static constexpr const char* const type_name_CodecSubtypes = "CodecSubtypes";
 
     static PyObject* _new_CodecSubtypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CodecSubtypes);
+        static_assert(py::py_type<winrt::Windows::Media::Core::CodecSubtypes>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::CodecSubtypes>::type_name);
         return nullptr;
     }
 
@@ -2656,7 +2653,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- DataCue class --------------------
-    static constexpr const char* const type_name_DataCue = "DataCue";
 
     static PyObject* _new_DataCue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2966,11 +2962,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- FaceDetectedEventArgs class --------------------
-    static constexpr const char* const type_name_FaceDetectedEventArgs = "FaceDetectedEventArgs";
 
     static PyObject* _new_FaceDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FaceDetectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::FaceDetectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::FaceDetectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3061,11 +3057,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- FaceDetectionEffect class --------------------
-    static constexpr const char* const type_name_FaceDetectionEffect = "FaceDetectionEffect";
 
     static PyObject* _new_FaceDetectionEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FaceDetectionEffect);
+        static_assert(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffect>::type_name);
         return nullptr;
     }
 
@@ -3310,7 +3306,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- FaceDetectionEffectDefinition class --------------------
-    static constexpr const char* const type_name_FaceDetectionEffectDefinition = "FaceDetectionEffectDefinition";
 
     static PyObject* _new_FaceDetectionEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3544,11 +3539,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- FaceDetectionEffectFrame class --------------------
-    static constexpr const char* const type_name_FaceDetectionEffectFrame = "FaceDetectionEffectFrame";
 
     static PyObject* _new_FaceDetectionEffectFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FaceDetectionEffectFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffectFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::FaceDetectionEffectFrame>::type_name);
         return nullptr;
     }
 
@@ -3944,11 +3939,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- HighDynamicRangeControl class --------------------
-    static constexpr const char* const type_name_HighDynamicRangeControl = "HighDynamicRangeControl";
 
     static PyObject* _new_HighDynamicRangeControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HighDynamicRangeControl);
+        static_assert(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeControl>::type_name);
         return nullptr;
     }
 
@@ -4067,11 +4062,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- HighDynamicRangeOutput class --------------------
-    static constexpr const char* const type_name_HighDynamicRangeOutput = "HighDynamicRangeOutput";
 
     static PyObject* _new_HighDynamicRangeOutput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HighDynamicRangeOutput);
+        static_assert(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeOutput>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::HighDynamicRangeOutput>::type_name);
         return nullptr;
     }
 
@@ -4182,7 +4177,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- ImageCue class --------------------
-    static constexpr const char* const type_name_ImageCue = "ImageCue";
 
     static PyObject* _new_ImageCue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4568,11 +4562,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- InitializeMediaStreamSourceRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_InitializeMediaStreamSourceRequestedEventArgs = "InitializeMediaStreamSourceRequestedEventArgs";
 
     static PyObject* _new_InitializeMediaStreamSourceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InitializeMediaStreamSourceRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4713,11 +4707,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- LowLightFusion class --------------------
-    static constexpr const char* const type_name_LowLightFusion = "LowLightFusion";
 
     static PyObject* _new_LowLightFusion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLightFusion);
+        static_assert(py::py_type<winrt::Windows::Media::Core::LowLightFusion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::LowLightFusion>::type_name);
         return nullptr;
     }
 
@@ -4839,11 +4833,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- LowLightFusionResult class --------------------
-    static constexpr const char* const type_name_LowLightFusionResult = "LowLightFusionResult";
 
     static PyObject* _new_LowLightFusionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLightFusionResult);
+        static_assert(py::py_type<winrt::Windows::Media::Core::LowLightFusionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::LowLightFusionResult>::type_name);
         return nullptr;
     }
 
@@ -4987,7 +4981,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaBinder class --------------------
-    static constexpr const char* const type_name_MediaBinder = "MediaBinder";
 
     static PyObject* _new_MediaBinder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5198,11 +5191,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaBindingEventArgs class --------------------
-    static constexpr const char* const type_name_MediaBindingEventArgs = "MediaBindingEventArgs";
 
     static PyObject* _new_MediaBindingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBindingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaBindingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaBindingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5568,11 +5561,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaCueEventArgs class --------------------
-    static constexpr const char* const type_name_MediaCueEventArgs = "MediaCueEventArgs";
 
     static PyObject* _new_MediaCueEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCueEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaCueEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaCueEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5663,11 +5656,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaSource class --------------------
-    static constexpr const char* const type_name_MediaSource = "MediaSource";
 
     static PyObject* _new_MediaSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaSource);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSource>::type_name);
         return nullptr;
     }
 
@@ -6516,7 +6509,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaSourceAppServiceConnection class --------------------
-    static constexpr const char* const type_name_MediaSourceAppServiceConnection = "MediaSourceAppServiceConnection";
 
     static PyObject* _new_MediaSourceAppServiceConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6692,11 +6684,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaSourceError class --------------------
-    static constexpr const char* const type_name_MediaSourceError = "MediaSourceError";
 
     static PyObject* _new_MediaSourceError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaSourceError);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaSourceError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSourceError>::type_name);
         return nullptr;
     }
 
@@ -6787,11 +6779,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaSourceOpenOperationCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaSourceOpenOperationCompletedEventArgs = "MediaSourceOpenOperationCompletedEventArgs";
 
     static PyObject* _new_MediaSourceOpenOperationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaSourceOpenOperationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6882,11 +6874,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaSourceStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaSourceStateChangedEventArgs = "MediaSourceStateChangedEventArgs";
 
     static PyObject* _new_MediaSourceStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaSourceStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6997,11 +6989,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSample class --------------------
-    static constexpr const char* const type_name_MediaStreamSample = "MediaStreamSample";
 
     static PyObject* _new_MediaStreamSample(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSample);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSample>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSample>::type_name);
         return nullptr;
     }
 
@@ -7509,11 +7501,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSamplePropertySet class --------------------
-    static constexpr const char* const type_name_MediaStreamSamplePropertySet = "MediaStreamSamplePropertySet";
 
     static PyObject* _new_MediaStreamSamplePropertySet(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSamplePropertySet);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>::type_name);
         return nullptr;
     }
 
@@ -7922,11 +7914,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSampleProtectionProperties class --------------------
-    static constexpr const char* const type_name_MediaStreamSampleProtectionProperties = "MediaStreamSampleProtectionProperties";
 
     static PyObject* _new_MediaStreamSampleProtectionProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSampleProtectionProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>::type_name);
         return nullptr;
     }
 
@@ -8213,7 +8205,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSource class --------------------
-    static constexpr const char* const type_name_MediaStreamSource = "MediaStreamSource";
 
     static PyObject* _new_MediaStreamSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9110,11 +9101,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceClosedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceClosedEventArgs = "MediaStreamSourceClosedEventArgs";
 
     static PyObject* _new_MediaStreamSourceClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceClosedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9205,11 +9196,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceClosedRequest class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceClosedRequest = "MediaStreamSourceClosedRequest";
 
     static PyObject* _new_MediaStreamSourceClosedRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceClosedRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>::type_name);
         return nullptr;
     }
 
@@ -9300,11 +9291,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSampleRenderedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSampleRenderedEventArgs = "MediaStreamSourceSampleRenderedEventArgs";
 
     static PyObject* _new_MediaStreamSourceSampleRenderedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSampleRenderedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9395,11 +9386,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSampleRequest class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSampleRequest = "MediaStreamSourceSampleRequest";
 
     static PyObject* _new_MediaStreamSourceSampleRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSampleRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>::type_name);
         return nullptr;
     }
 
@@ -9601,11 +9592,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSampleRequestDeferral class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSampleRequestDeferral = "MediaStreamSourceSampleRequestDeferral";
 
     static PyObject* _new_MediaStreamSourceSampleRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSampleRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -9707,11 +9698,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSampleRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSampleRequestedEventArgs = "MediaStreamSourceSampleRequestedEventArgs";
 
     static PyObject* _new_MediaStreamSourceSampleRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSampleRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9802,11 +9793,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceStartingEventArgs class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceStartingEventArgs = "MediaStreamSourceStartingEventArgs";
 
     static PyObject* _new_MediaStreamSourceStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceStartingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9897,11 +9888,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceStartingRequest class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceStartingRequest = "MediaStreamSourceStartingRequest";
 
     static PyObject* _new_MediaStreamSourceStartingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceStartingRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>::type_name);
         return nullptr;
     }
 
@@ -10055,11 +10046,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceStartingRequestDeferral class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceStartingRequestDeferral = "MediaStreamSourceStartingRequestDeferral";
 
     static PyObject* _new_MediaStreamSourceStartingRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceStartingRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -10161,11 +10152,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSwitchStreamsRequest class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSwitchStreamsRequest = "MediaStreamSourceSwitchStreamsRequest";
 
     static PyObject* _new_MediaStreamSourceSwitchStreamsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSwitchStreamsRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>::type_name);
         return nullptr;
     }
 
@@ -10306,11 +10297,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSwitchStreamsRequestDeferral class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSwitchStreamsRequestDeferral = "MediaStreamSourceSwitchStreamsRequestDeferral";
 
     static PyObject* _new_MediaStreamSourceSwitchStreamsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSwitchStreamsRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -10412,11 +10403,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MediaStreamSourceSwitchStreamsRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaStreamSourceSwitchStreamsRequestedEventArgs = "MediaStreamSourceSwitchStreamsRequestedEventArgs";
 
     static PyObject* _new_MediaStreamSourceSwitchStreamsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaStreamSourceSwitchStreamsRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10507,11 +10498,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MseSourceBuffer class --------------------
-    static constexpr const char* const type_name_MseSourceBuffer = "MseSourceBuffer";
 
     static PyObject* _new_MseSourceBuffer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MseSourceBuffer);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MseSourceBuffer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MseSourceBuffer>::type_name);
         return nullptr;
     }
 
@@ -11192,11 +11183,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MseSourceBufferList class --------------------
-    static constexpr const char* const type_name_MseSourceBufferList = "MseSourceBufferList";
 
     static PyObject* _new_MseSourceBufferList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MseSourceBufferList);
+        static_assert(py::py_type<winrt::Windows::Media::Core::MseSourceBufferList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::MseSourceBufferList>::type_name);
         return nullptr;
     }
 
@@ -11377,7 +11368,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MseStreamSource class --------------------
-    static constexpr const char* const type_name_MseStreamSource = "MseStreamSource";
 
     static PyObject* _new_MseStreamSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11896,11 +11886,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- SceneAnalysisEffect class --------------------
-    static constexpr const char* const type_name_SceneAnalysisEffect = "SceneAnalysisEffect";
 
     static PyObject* _new_SceneAnalysisEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneAnalysisEffect);
+        static_assert(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffect>::type_name);
         return nullptr;
     }
 
@@ -12117,7 +12107,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- SceneAnalysisEffectDefinition class --------------------
-    static constexpr const char* const type_name_SceneAnalysisEffectDefinition = "SceneAnalysisEffectDefinition";
 
     static PyObject* _new_SceneAnalysisEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12255,11 +12244,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- SceneAnalysisEffectFrame class --------------------
-    static constexpr const char* const type_name_SceneAnalysisEffectFrame = "SceneAnalysisEffectFrame";
 
     static PyObject* _new_SceneAnalysisEffectFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneAnalysisEffectFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>::type_name);
         return nullptr;
     }
 
@@ -12695,11 +12684,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- SceneAnalyzedEventArgs class --------------------
-    static constexpr const char* const type_name_SceneAnalyzedEventArgs = "SceneAnalyzedEventArgs";
 
     static PyObject* _new_SceneAnalyzedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SceneAnalyzedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::SceneAnalyzedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::SceneAnalyzedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -12790,7 +12779,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- SpeechCue class --------------------
-    static constexpr const char* const type_name_SpeechCue = "SpeechCue";
 
     static PyObject* _new_SpeechCue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13176,7 +13164,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedMetadataStreamDescriptor class --------------------
-    static constexpr const char* const type_name_TimedMetadataStreamDescriptor = "TimedMetadataStreamDescriptor";
 
     static PyObject* _new_TimedMetadataStreamDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13490,7 +13477,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedMetadataTrack class --------------------
-    static constexpr const char* const type_name_TimedMetadataTrack = "TimedMetadataTrack";
 
     static PyObject* _new_TimedMetadataTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14021,11 +14007,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedMetadataTrackError class --------------------
-    static constexpr const char* const type_name_TimedMetadataTrackError = "TimedMetadataTrackError";
 
     static PyObject* _new_TimedMetadataTrackError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedMetadataTrackError);
+        static_assert(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackError>::type_name);
         return nullptr;
     }
 
@@ -14136,11 +14122,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedMetadataTrackFailedEventArgs class --------------------
-    static constexpr const char* const type_name_TimedMetadataTrackFailedEventArgs = "TimedMetadataTrackFailedEventArgs";
 
     static PyObject* _new_TimedMetadataTrackFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedMetadataTrackFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -14231,11 +14217,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextBouten class --------------------
-    static constexpr const char* const type_name_TimedTextBouten = "TimedTextBouten";
 
     static PyObject* _new_TimedTextBouten(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedTextBouten);
+        static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextBouten>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextBouten>::type_name);
         return nullptr;
     }
 
@@ -14450,7 +14436,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextCue class --------------------
-    static constexpr const char* const type_name_TimedTextCue = "TimedTextCue";
 
     static PyObject* _new_TimedTextCue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14808,7 +14793,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextLine class --------------------
-    static constexpr const char* const type_name_TimedTextLine = "TimedTextLine";
 
     static PyObject* _new_TimedTextLine(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14974,7 +14958,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextRegion class --------------------
-    static constexpr const char* const type_name_TimedTextRegion = "TimedTextRegion";
 
     static PyObject* _new_TimedTextRegion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15648,11 +15631,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextRuby class --------------------
-    static constexpr const char* const type_name_TimedTextRuby = "TimedTextRuby";
 
     static PyObject* _new_TimedTextRuby(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedTextRuby);
+        static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextRuby>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextRuby>::type_name);
         return nullptr;
     }
 
@@ -15915,11 +15898,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextSource class --------------------
-    static constexpr const char* const type_name_TimedTextSource = "TimedTextSource";
 
     static PyObject* _new_TimedTextSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedTextSource);
+        static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextSource>::type_name);
         return nullptr;
     }
 
@@ -16251,11 +16234,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextSourceResolveResultEventArgs class --------------------
-    static constexpr const char* const type_name_TimedTextSourceResolveResultEventArgs = "TimedTextSourceResolveResultEventArgs";
 
     static PyObject* _new_TimedTextSourceResolveResultEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedTextSourceResolveResultEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>::type_name);
         return nullptr;
     }
 
@@ -16366,7 +16349,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextStyle class --------------------
-    static constexpr const char* const type_name_TimedTextStyle = "TimedTextStyle";
 
     static PyObject* _new_TimedTextStyle(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17368,7 +17350,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextSubformat class --------------------
-    static constexpr const char* const type_name_TimedTextSubformat = "TimedTextSubformat";
 
     static PyObject* _new_TimedTextSubformat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17610,11 +17591,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoStabilizationEffect class --------------------
-    static constexpr const char* const type_name_VideoStabilizationEffect = "VideoStabilizationEffect";
 
     static PyObject* _new_VideoStabilizationEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoStabilizationEffect);
+        static_assert(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffect>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffect>::type_name);
         return nullptr;
     }
 
@@ -17844,7 +17825,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoStabilizationEffectDefinition class --------------------
-    static constexpr const char* const type_name_VideoStabilizationEffectDefinition = "VideoStabilizationEffectDefinition";
 
     static PyObject* _new_VideoStabilizationEffectDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17982,11 +17962,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoStabilizationEffectEnabledChangedEventArgs class --------------------
-    static constexpr const char* const type_name_VideoStabilizationEffectEnabledChangedEventArgs = "VideoStabilizationEffectEnabledChangedEventArgs";
 
     static PyObject* _new_VideoStabilizationEffectEnabledChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoStabilizationEffectEnabledChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -18077,7 +18057,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoStreamDescriptor class --------------------
-    static constexpr const char* const type_name_VideoStreamDescriptor = "VideoStreamDescriptor";
 
     static PyObject* _new_VideoStreamDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18391,11 +18370,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoTrack class --------------------
-    static constexpr const char* const type_name_VideoTrack = "VideoTrack";
 
     static PyObject* _new_VideoTrack(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoTrack);
+        static_assert(py::py_type<winrt::Windows::Media::Core::VideoTrack>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoTrack>::type_name);
         return nullptr;
     }
 
@@ -18709,11 +18688,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoTrackOpenFailedEventArgs class --------------------
-    static constexpr const char* const type_name_VideoTrackOpenFailedEventArgs = "VideoTrackOpenFailedEventArgs";
 
     static PyObject* _new_VideoTrackOpenFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoTrackOpenFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -18804,11 +18783,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- VideoTrackSupportInfo class --------------------
-    static constexpr const char* const type_name_VideoTrackSupportInfo = "VideoTrackSupportInfo";
 
     static PyObject* _new_VideoTrackSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoTrackSupportInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Core::VideoTrackSupportInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::VideoTrackSupportInfo>::type_name);
         return nullptr;
     }
 
@@ -18919,11 +18898,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- IMediaCue interface --------------------
-    static constexpr const char* const type_name_IMediaCue = "IMediaCue";
 
     static PyObject* _new_IMediaCue(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaCue);
+        static_assert(py::py_type<winrt::Windows::Media::Core::IMediaCue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaCue>::type_name);
         return nullptr;
     }
 
@@ -19138,11 +19117,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- IMediaSource interface --------------------
-    static constexpr const char* const type_name_IMediaSource = "IMediaSource";
 
     static PyObject* _new_IMediaSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaSource);
+        static_assert(py::py_type<winrt::Windows::Media::Core::IMediaSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaSource>::type_name);
         return nullptr;
     }
 
@@ -19213,11 +19192,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- IMediaStreamDescriptor interface --------------------
-    static constexpr const char* const type_name_IMediaStreamDescriptor = "IMediaStreamDescriptor";
 
     static PyObject* _new_IMediaStreamDescriptor(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaStreamDescriptor);
+        static_assert(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>::type_name);
         return nullptr;
     }
 
@@ -19404,11 +19383,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- IMediaStreamDescriptor2 interface --------------------
-    static constexpr const char* const type_name_IMediaStreamDescriptor2 = "IMediaStreamDescriptor2";
 
     static PyObject* _new_IMediaStreamDescriptor2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaStreamDescriptor2);
+        static_assert(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>::type_name);
         return nullptr;
     }
 
@@ -19643,11 +19622,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- IMediaTrack interface --------------------
-    static constexpr const char* const type_name_IMediaTrack = "IMediaTrack";
 
     static PyObject* _new_IMediaTrack(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaTrack);
+        static_assert(py::py_type<winrt::Windows::Media::Core::IMediaTrack>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::IMediaTrack>::type_name);
         return nullptr;
     }
 
@@ -19826,11 +19805,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- ISingleSelectMediaTrackList interface --------------------
-    static constexpr const char* const type_name_ISingleSelectMediaTrackList = "ISingleSelectMediaTrackList";
 
     static PyObject* _new_ISingleSelectMediaTrackList(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISingleSelectMediaTrackList);
+        static_assert(py::py_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>::type_name);
         return nullptr;
     }
 
@@ -19994,11 +19973,11 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- ITimedMetadataTrackProvider interface --------------------
-    static constexpr const char* const type_name_ITimedMetadataTrackProvider = "ITimedMetadataTrackProvider";
 
     static PyObject* _new_ITimedMetadataTrackProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ITimedMetadataTrackProvider);
+        static_assert(py::py_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>::type_name);
         return nullptr;
     }
 
@@ -20089,7 +20068,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- MseTimeRange struct --------------------
-    static constexpr const char* const type_name_MseTimeRange = "MseTimeRange";
 
     PyObject* _new_MseTimeRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -20224,7 +20202,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextDouble struct --------------------
-    static constexpr const char* const type_name_TimedTextDouble = "TimedTextDouble";
 
     PyObject* _new_TimedTextDouble(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -20359,7 +20336,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextPadding struct --------------------
-    static constexpr const char* const type_name_TimedTextPadding = "TimedTextPadding";
 
     PyObject* _new_TimedTextPadding(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -20599,7 +20575,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextPoint struct --------------------
-    static constexpr const char* const type_name_TimedTextPoint = "TimedTextPoint";
 
     PyObject* _new_TimedTextPoint(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -20769,7 +20744,6 @@ namespace py::cpp::Windows::Media::Core
     };
 
     // ----- TimedTextSize struct --------------------
-    static constexpr const char* const type_name_TimedTextSize = "TimedTextSize";
 
     PyObject* _new_TimedTextSize(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

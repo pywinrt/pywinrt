@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Profile::SystemManufacturers
 {
     // ----- OemSupportInfo class --------------------
-    static constexpr const char* const type_name_OemSupportInfo = "OemSupportInfo";
 
     static PyObject* _new_OemSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OemSupportInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     };
 
     // ----- SmbiosInformation class --------------------
-    static constexpr const char* const type_name_SmbiosInformation = "SmbiosInformation";
 
     static PyObject* _new_SmbiosInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SmbiosInformation);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>::type_name);
         return nullptr;
     }
 
@@ -216,11 +216,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     };
 
     // ----- SystemSupportDeviceInfo class --------------------
-    static constexpr const char* const type_name_SystemSupportDeviceInfo = "SystemSupportDeviceInfo";
 
     static PyObject* _new_SystemSupportDeviceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemSupportDeviceInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>::type_name);
         return nullptr;
     }
 
@@ -431,11 +431,11 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     };
 
     // ----- SystemSupportInfo class --------------------
-    static constexpr const char* const type_name_SystemSupportInfo = "SystemSupportInfo";
 
     static PyObject* _new_SystemSupportInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemSupportInfo);
+        static_assert(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>::type_name);
         return nullptr;
     }
 

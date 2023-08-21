@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Core::Preview
 {
     // ----- CoreAppWindowPreview class --------------------
-    static constexpr const char* const type_name_CoreAppWindowPreview = "CoreAppWindowPreview";
 
     static PyObject* _new_CoreAppWindowPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreAppWindowPreview);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>::type_name);
         return nullptr;
     }
 
@@ -114,11 +114,11 @@ namespace py::cpp::Windows::UI::Core::Preview
     };
 
     // ----- SystemNavigationCloseRequestedPreviewEventArgs class --------------------
-    static constexpr const char* const type_name_SystemNavigationCloseRequestedPreviewEventArgs = "SystemNavigationCloseRequestedPreviewEventArgs";
 
     static PyObject* _new_SystemNavigationCloseRequestedPreviewEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemNavigationCloseRequestedPreviewEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>::type_name);
         return nullptr;
     }
 
@@ -267,11 +267,11 @@ namespace py::cpp::Windows::UI::Core::Preview
     };
 
     // ----- SystemNavigationManagerPreview class --------------------
-    static constexpr const char* const type_name_SystemNavigationManagerPreview = "SystemNavigationManagerPreview";
 
     static PyObject* _new_SystemNavigationManagerPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemNavigationManagerPreview);
+        static_assert(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>::type_name);
         return nullptr;
     }
 

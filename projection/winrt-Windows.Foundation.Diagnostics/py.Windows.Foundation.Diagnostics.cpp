@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Foundation::Diagnostics
 {
     // ----- AsyncCausalityTracer class --------------------
-    static constexpr const char* const type_name_AsyncCausalityTracer = "AsyncCausalityTracer";
 
     static PyObject* _new_AsyncCausalityTracer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AsyncCausalityTracer);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>::type_name);
         return nullptr;
     }
 
@@ -270,11 +270,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- ErrorDetails class --------------------
-    static constexpr const char* const type_name_ErrorDetails = "ErrorDetails";
 
     static PyObject* _new_ErrorDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ErrorDetails);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ErrorDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ErrorDetails>::type_name);
         return nullptr;
     }
 
@@ -437,7 +437,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- FileLoggingSession class --------------------
-    static constexpr const char* const type_name_FileLoggingSession = "FileLoggingSession";
 
     static PyObject* _new_FileLoggingSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -773,11 +772,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LogFileGeneratedEventArgs class --------------------
-    static constexpr const char* const type_name_LogFileGeneratedEventArgs = "LogFileGeneratedEventArgs";
 
     static PyObject* _new_LogFileGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LogFileGeneratedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -868,7 +867,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LoggingActivity class --------------------
-    static constexpr const char* const type_name_LoggingActivity = "LoggingActivity";
 
     static PyObject* _new_LoggingActivity(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1448,7 +1446,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LoggingChannel class --------------------
-    static constexpr const char* const type_name_LoggingChannel = "LoggingChannel";
 
     static PyObject* _new_LoggingChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2142,7 +2139,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LoggingChannelOptions class --------------------
-    static constexpr const char* const type_name_LoggingChannelOptions = "LoggingChannelOptions";
 
     static PyObject* _new_LoggingChannelOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2303,7 +2299,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LoggingFields class --------------------
-    static constexpr const char* const type_name_LoggingFields = "LoggingFields";
 
     static PyObject* _new_LoggingFields(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5512,7 +5507,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LoggingOptions class --------------------
-    static constexpr const char* const type_name_LoggingOptions = "LoggingOptions";
 
     static PyObject* _new_LoggingOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5913,7 +5907,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- LoggingSession class --------------------
-    static constexpr const char* const type_name_LoggingSession = "LoggingSession";
 
     static PyObject* _new_LoggingSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6207,7 +6200,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- RuntimeBrokerErrorSettings class --------------------
-    static constexpr const char* const type_name_RuntimeBrokerErrorSettings = "RuntimeBrokerErrorSettings";
 
     static PyObject* _new_RuntimeBrokerErrorSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6368,11 +6360,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- TracingStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TracingStatusChangedEventArgs = "TracingStatusChangedEventArgs";
 
     static PyObject* _new_TracingStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TracingStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6483,11 +6475,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- IErrorReportingSettings interface --------------------
-    static constexpr const char* const type_name_IErrorReportingSettings = "IErrorReportingSettings";
 
     static PyObject* _new_IErrorReportingSettings(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IErrorReportingSettings);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>::type_name);
         return nullptr;
     }
 
@@ -6621,11 +6613,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- IFileLoggingSession interface --------------------
-    static constexpr const char* const type_name_IFileLoggingSession = "IFileLoggingSession";
 
     static PyObject* _new_IFileLoggingSession(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IFileLoggingSession);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>::type_name);
         return nullptr;
     }
 
@@ -6932,11 +6924,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- ILoggingChannel interface --------------------
-    static constexpr const char* const type_name_ILoggingChannel = "ILoggingChannel";
 
     static PyObject* _new_ILoggingChannel(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ILoggingChannel);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>::type_name);
         return nullptr;
     }
 
@@ -7277,11 +7269,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- ILoggingSession interface --------------------
-    static constexpr const char* const type_name_ILoggingSession = "ILoggingSession";
 
     static PyObject* _new_ILoggingSession(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ILoggingSession);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>::type_name);
         return nullptr;
     }
 
@@ -7546,11 +7538,11 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     };
 
     // ----- ILoggingTarget interface --------------------
-    static constexpr const char* const type_name_ILoggingTarget = "ILoggingTarget";
 
     static PyObject* _new_ILoggingTarget(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ILoggingTarget);
+        static_assert(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>::type_name);
         return nullptr;
     }
 

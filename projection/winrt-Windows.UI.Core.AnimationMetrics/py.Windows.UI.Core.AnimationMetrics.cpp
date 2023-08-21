@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Core::AnimationMetrics
 {
     // ----- AnimationDescription class --------------------
-    static constexpr const char* const type_name_AnimationDescription = "AnimationDescription";
 
     static PyObject* _new_AnimationDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -208,11 +207,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     };
 
     // ----- OpacityAnimation class --------------------
-    static constexpr const char* const type_name_OpacityAnimation = "OpacityAnimation";
 
     static PyObject* _new_OpacityAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OpacityAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>::type_name);
         return nullptr;
     }
 
@@ -423,11 +422,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     };
 
     // ----- PropertyAnimation class --------------------
-    static constexpr const char* const type_name_PropertyAnimation = "PropertyAnimation";
 
     static PyObject* _new_PropertyAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PropertyAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>::type_name);
         return nullptr;
     }
 
@@ -598,11 +597,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     };
 
     // ----- ScaleAnimation class --------------------
-    static constexpr const char* const type_name_ScaleAnimation = "ScaleAnimation";
 
     static PyObject* _new_ScaleAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ScaleAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>::type_name);
         return nullptr;
     }
 
@@ -873,11 +872,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     };
 
     // ----- TranslationAnimation class --------------------
-    static constexpr const char* const type_name_TranslationAnimation = "TranslationAnimation";
 
     static PyObject* _new_TranslationAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TranslationAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>::type_name);
         return nullptr;
     }
 
@@ -1048,11 +1047,11 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     };
 
     // ----- IPropertyAnimation interface --------------------
-    static constexpr const char* const type_name_IPropertyAnimation = "IPropertyAnimation";
 
     static PyObject* _new_IPropertyAnimation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPropertyAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>::type_name);
         return nullptr;
     }
 

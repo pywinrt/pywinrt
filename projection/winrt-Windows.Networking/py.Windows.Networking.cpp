@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Networking
 {
     // ----- EndpointPair class --------------------
-    static constexpr const char* const type_name_EndpointPair = "EndpointPair";
 
     static PyObject* _new_EndpointPair(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -302,7 +301,6 @@ namespace py::cpp::Windows::Networking
     };
 
     // ----- HostName class --------------------
-    static constexpr const char* const type_name_HostName = "HostName";
 
     static PyObject* _new_HostName(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

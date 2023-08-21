@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Holographic
 {
     // ----- HolographicCamera class --------------------
-    static constexpr const char* const type_name_HolographicCamera = "HolographicCamera";
 
     static PyObject* _new_HolographicCamera(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicCamera);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCamera>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCamera>::type_name);
         return nullptr;
     }
 
@@ -512,11 +512,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicCameraPose class --------------------
-    static constexpr const char* const type_name_HolographicCameraPose = "HolographicCameraPose";
 
     static PyObject* _new_HolographicCameraPose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicCameraPose);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>::type_name);
         return nullptr;
     }
 
@@ -884,11 +884,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicCameraRenderingParameters class --------------------
-    static constexpr const char* const type_name_HolographicCameraRenderingParameters = "HolographicCameraRenderingParameters";
 
     static PyObject* _new_HolographicCameraRenderingParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicCameraRenderingParameters);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>::type_name);
         return nullptr;
     }
 
@@ -1257,11 +1257,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicCameraViewportParameters class --------------------
-    static constexpr const char* const type_name_HolographicCameraViewportParameters = "HolographicCameraViewportParameters";
 
     static PyObject* _new_HolographicCameraViewportParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicCameraViewportParameters);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>::type_name);
         return nullptr;
     }
 
@@ -1372,11 +1372,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicDisplay class --------------------
-    static constexpr const char* const type_name_HolographicDisplay = "HolographicDisplay";
 
     static PyObject* _new_HolographicDisplay(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicDisplay);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>::type_name);
         return nullptr;
     }
 
@@ -1649,11 +1649,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFrame class --------------------
-    static constexpr const char* const type_name_HolographicFrame = "HolographicFrame";
 
     static PyObject* _new_HolographicFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFrame);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrame>::type_name);
         return nullptr;
     }
 
@@ -2000,11 +2000,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFramePrediction class --------------------
-    static constexpr const char* const type_name_HolographicFramePrediction = "HolographicFramePrediction";
 
     static PyObject* _new_HolographicFramePrediction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFramePrediction);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>::type_name);
         return nullptr;
     }
 
@@ -2115,11 +2115,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFramePresentationMonitor class --------------------
-    static constexpr const char* const type_name_HolographicFramePresentationMonitor = "HolographicFramePresentationMonitor";
 
     static PyObject* _new_HolographicFramePresentationMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFramePresentationMonitor);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>::type_name);
         return nullptr;
     }
 
@@ -2273,11 +2273,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFramePresentationReport class --------------------
-    static constexpr const char* const type_name_HolographicFramePresentationReport = "HolographicFramePresentationReport";
 
     static PyObject* _new_HolographicFramePresentationReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFramePresentationReport);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>::type_name);
         return nullptr;
     }
 
@@ -2448,11 +2448,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFrameRenderingReport class --------------------
-    static constexpr const char* const type_name_HolographicFrameRenderingReport = "HolographicFrameRenderingReport";
 
     static PyObject* _new_HolographicFrameRenderingReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFrameRenderingReport);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>::type_name);
         return nullptr;
     }
 
@@ -2623,11 +2623,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFrameScanoutMonitor class --------------------
-    static constexpr const char* const type_name_HolographicFrameScanoutMonitor = "HolographicFrameScanoutMonitor";
 
     static PyObject* _new_HolographicFrameScanoutMonitor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFrameScanoutMonitor);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>::type_name);
         return nullptr;
     }
 
@@ -2781,11 +2781,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFrameScanoutReport class --------------------
-    static constexpr const char* const type_name_HolographicFrameScanoutReport = "HolographicFrameScanoutReport";
 
     static PyObject* _new_HolographicFrameScanoutReport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicFrameScanoutReport);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>::type_name);
         return nullptr;
     }
 
@@ -2956,7 +2956,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicQuadLayer class --------------------
-    static constexpr const char* const type_name_HolographicQuadLayer = "HolographicQuadLayer";
 
     static PyObject* _new_HolographicQuadLayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3165,11 +3164,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicQuadLayerUpdateParameters class --------------------
-    static constexpr const char* const type_name_HolographicQuadLayerUpdateParameters = "HolographicQuadLayerUpdateParameters";
 
     static PyObject* _new_HolographicQuadLayerUpdateParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicQuadLayerUpdateParameters);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>::type_name);
         return nullptr;
     }
 
@@ -3488,11 +3487,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicSpace class --------------------
-    static constexpr const char* const type_name_HolographicSpace = "HolographicSpace";
 
     static PyObject* _new_HolographicSpace(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicSpace);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpace>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpace>::type_name);
         return nullptr;
     }
 
@@ -4086,11 +4085,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicSpaceCameraAddedEventArgs class --------------------
-    static constexpr const char* const type_name_HolographicSpaceCameraAddedEventArgs = "HolographicSpaceCameraAddedEventArgs";
 
     static PyObject* _new_HolographicSpaceCameraAddedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicSpaceCameraAddedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4211,11 +4210,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicSpaceCameraRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_HolographicSpaceCameraRemovedEventArgs = "HolographicSpaceCameraRemovedEventArgs";
 
     static PyObject* _new_HolographicSpaceCameraRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicSpaceCameraRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4306,11 +4305,11 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicViewConfiguration class --------------------
-    static constexpr const char* const type_name_HolographicViewConfiguration = "HolographicViewConfiguration";
 
     static PyObject* _new_HolographicViewConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HolographicViewConfiguration);
+        static_assert(py::py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>::type_name);
         return nullptr;
     }
 
@@ -4669,7 +4668,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicAdapterId struct --------------------
-    static constexpr const char* const type_name_HolographicAdapterId = "HolographicAdapterId";
 
     PyObject* _new_HolographicAdapterId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4804,7 +4802,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicFrameId struct --------------------
-    static constexpr const char* const type_name_HolographicFrameId = "HolographicFrameId";
 
     PyObject* _new_HolographicFrameId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -4904,7 +4901,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     // ----- HolographicStereoTransform struct --------------------
-    static constexpr const char* const type_name_HolographicStereoTransform = "HolographicStereoTransform";
 
     PyObject* _new_HolographicStereoTransform(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

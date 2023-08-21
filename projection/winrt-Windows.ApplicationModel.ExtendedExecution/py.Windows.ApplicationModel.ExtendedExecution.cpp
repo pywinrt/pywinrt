@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
 {
     // ----- ExtendedExecutionRevokedEventArgs class --------------------
-    static constexpr const char* const type_name_ExtendedExecutionRevokedEventArgs = "ExtendedExecutionRevokedEventArgs";
 
     static PyObject* _new_ExtendedExecutionRevokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExtendedExecutionRevokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,7 +102,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
     };
 
     // ----- ExtendedExecutionSession class --------------------
-    static constexpr const char* const type_name_ExtendedExecutionSession = "ExtendedExecutionSession";
 
     static PyObject* _new_ExtendedExecutionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

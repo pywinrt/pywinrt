@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Resources::Management
 {
     // ----- IndexedResourceCandidate class --------------------
-    static constexpr const char* const type_name_IndexedResourceCandidate = "IndexedResourceCandidate";
 
     static PyObject* _new_IndexedResourceCandidate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IndexedResourceCandidate);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>::type_name);
         return nullptr;
     }
 
@@ -214,11 +214,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     };
 
     // ----- IndexedResourceQualifier class --------------------
-    static constexpr const char* const type_name_IndexedResourceQualifier = "IndexedResourceQualifier";
 
     static PyObject* _new_IndexedResourceQualifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IndexedResourceQualifier);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>::type_name);
         return nullptr;
     }
 
@@ -329,7 +329,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     };
 
     // ----- ResourceIndexer class --------------------
-    static constexpr const char* const type_name_ResourceIndexer = "ResourceIndexer";
 
     static PyObject* _new_ResourceIndexer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

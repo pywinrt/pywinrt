@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Diagnostics::Telemetry
 {
     // ----- PlatformTelemetryClient class --------------------
-    static constexpr const char* const type_name_PlatformTelemetryClient = "PlatformTelemetryClient";
 
     static PyObject* _new_PlatformTelemetryClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlatformTelemetryClient);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>::type_name);
         return nullptr;
     }
 
@@ -94,11 +94,11 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     };
 
     // ----- PlatformTelemetryRegistrationResult class --------------------
-    static constexpr const char* const type_name_PlatformTelemetryRegistrationResult = "PlatformTelemetryRegistrationResult";
 
     static PyObject* _new_PlatformTelemetryRegistrationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlatformTelemetryRegistrationResult);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>::type_name);
         return nullptr;
     }
 
@@ -189,7 +189,6 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     };
 
     // ----- PlatformTelemetryRegistrationSettings class --------------------
-    static constexpr const char* const type_name_PlatformTelemetryRegistrationSettings = "PlatformTelemetryRegistrationSettings";
 
     static PyObject* _new_PlatformTelemetryRegistrationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

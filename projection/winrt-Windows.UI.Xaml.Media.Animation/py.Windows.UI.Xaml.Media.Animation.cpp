@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Media::Animation
 {
     // ----- AddDeleteThemeTransition class --------------------
-    static constexpr const char* const type_name_AddDeleteThemeTransition = "AddDeleteThemeTransition";
 
     static PyObject* _new_AddDeleteThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -105,7 +104,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- BackEase class --------------------
-    static constexpr const char* const type_name_BackEase = "BackEase";
 
     static PyObject* _new_BackEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -291,7 +289,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- BasicConnectedAnimationConfiguration class --------------------
-    static constexpr const char* const type_name_BasicConnectedAnimationConfiguration = "BasicConnectedAnimationConfiguration";
 
     static PyObject* _new_BasicConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -389,7 +386,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- BeginStoryboard class --------------------
-    static constexpr const char* const type_name_BeginStoryboard = "BeginStoryboard";
 
     static PyObject* _new_BeginStoryboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -575,7 +571,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- BounceEase class --------------------
-    static constexpr const char* const type_name_BounceEase = "BounceEase";
 
     static PyObject* _new_BounceEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -829,7 +824,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- CircleEase class --------------------
-    static constexpr const char* const type_name_CircleEase = "CircleEase";
 
     static PyObject* _new_CircleEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -927,7 +921,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ColorAnimation class --------------------
-    static constexpr const char* const type_name_ColorAnimation = "ColorAnimation";
 
     static PyObject* _new_ColorAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1385,7 +1378,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ColorAnimationUsingKeyFrames class --------------------
-    static constexpr const char* const type_name_ColorAnimationUsingKeyFrames = "ColorAnimationUsingKeyFrames";
 
     static PyObject* _new_ColorAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1591,11 +1583,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ColorKeyFrame class --------------------
-    static constexpr const char* const type_name_ColorKeyFrame = "ColorKeyFrame";
 
     static PyObject* _new_ColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ColorKeyFrame);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>::type_name);
         return nullptr;
     }
 
@@ -1822,7 +1814,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ColorKeyFrameCollection class --------------------
-    static constexpr const char* const type_name_ColorKeyFrameCollection = "ColorKeyFrameCollection";
 
     static PyObject* _new_ColorKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2468,7 +2459,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- CommonNavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_CommonNavigationTransitionInfo = "CommonNavigationTransitionInfo";
 
     static PyObject* _new_CommonNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2740,11 +2730,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ConnectedAnimation class --------------------
-    static constexpr const char* const type_name_ConnectedAnimation = "ConnectedAnimation";
 
     static PyObject* _new_ConnectedAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectedAnimation);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>::type_name);
         return nullptr;
     }
 
@@ -3074,11 +3064,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ConnectedAnimationConfiguration class --------------------
-    static constexpr const char* const type_name_ConnectedAnimationConfiguration = "ConnectedAnimationConfiguration";
 
     static PyObject* _new_ConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectedAnimationConfiguration);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>::type_name);
         return nullptr;
     }
 
@@ -3149,11 +3139,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ConnectedAnimationService class --------------------
-    static constexpr const char* const type_name_ConnectedAnimationService = "ConnectedAnimationService";
 
     static PyObject* _new_ConnectedAnimationService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectedAnimationService);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>::type_name);
         return nullptr;
     }
 
@@ -3415,7 +3405,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ContentThemeTransition class --------------------
-    static constexpr const char* const type_name_ContentThemeTransition = "ContentThemeTransition";
 
     static PyObject* _new_ContentThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3669,7 +3658,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ContinuumNavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_ContinuumNavigationTransitionInfo = "ContinuumNavigationTransitionInfo";
 
     static PyObject* _new_ContinuumNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4113,7 +4101,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- CubicEase class --------------------
-    static constexpr const char* const type_name_CubicEase = "CubicEase";
 
     static PyObject* _new_CubicEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4211,7 +4198,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DirectConnectedAnimationConfiguration class --------------------
-    static constexpr const char* const type_name_DirectConnectedAnimationConfiguration = "DirectConnectedAnimationConfiguration";
 
     static PyObject* _new_DirectConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4309,7 +4295,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DiscreteColorKeyFrame class --------------------
-    static constexpr const char* const type_name_DiscreteColorKeyFrame = "DiscreteColorKeyFrame";
 
     static PyObject* _new_DiscreteColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4407,7 +4392,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DiscreteDoubleKeyFrame class --------------------
-    static constexpr const char* const type_name_DiscreteDoubleKeyFrame = "DiscreteDoubleKeyFrame";
 
     static PyObject* _new_DiscreteDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4505,7 +4489,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DiscreteObjectKeyFrame class --------------------
-    static constexpr const char* const type_name_DiscreteObjectKeyFrame = "DiscreteObjectKeyFrame";
 
     static PyObject* _new_DiscreteObjectKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4603,7 +4586,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DiscretePointKeyFrame class --------------------
-    static constexpr const char* const type_name_DiscretePointKeyFrame = "DiscretePointKeyFrame";
 
     static PyObject* _new_DiscretePointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4701,7 +4683,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DoubleAnimation class --------------------
-    static constexpr const char* const type_name_DoubleAnimation = "DoubleAnimation";
 
     static PyObject* _new_DoubleAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5159,7 +5140,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DoubleAnimationUsingKeyFrames class --------------------
-    static constexpr const char* const type_name_DoubleAnimationUsingKeyFrames = "DoubleAnimationUsingKeyFrames";
 
     static PyObject* _new_DoubleAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5365,11 +5345,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DoubleKeyFrame class --------------------
-    static constexpr const char* const type_name_DoubleKeyFrame = "DoubleKeyFrame";
 
     static PyObject* _new_DoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DoubleKeyFrame);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>::type_name);
         return nullptr;
     }
 
@@ -5596,7 +5576,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DoubleKeyFrameCollection class --------------------
-    static constexpr const char* const type_name_DoubleKeyFrameCollection = "DoubleKeyFrameCollection";
 
     static PyObject* _new_DoubleKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6242,7 +6221,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DragItemThemeAnimation class --------------------
-    static constexpr const char* const type_name_DragItemThemeAnimation = "DragItemThemeAnimation";
 
     static PyObject* _new_DragItemThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6428,7 +6406,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DragOverThemeAnimation class --------------------
-    static constexpr const char* const type_name_DragOverThemeAnimation = "DragOverThemeAnimation";
 
     static PyObject* _new_DragOverThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6750,7 +6727,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DrillInNavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_DrillInNavigationTransitionInfo = "DrillInNavigationTransitionInfo";
 
     static PyObject* _new_DrillInNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6848,7 +6824,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DrillInThemeAnimation class --------------------
-    static constexpr const char* const type_name_DrillInThemeAnimation = "DrillInThemeAnimation";
 
     static PyObject* _new_DrillInThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7238,7 +7213,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DrillOutThemeAnimation class --------------------
-    static constexpr const char* const type_name_DrillOutThemeAnimation = "DrillOutThemeAnimation";
 
     static PyObject* _new_DrillOutThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7628,7 +7602,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- DropTargetItemThemeAnimation class --------------------
-    static constexpr const char* const type_name_DropTargetItemThemeAnimation = "DropTargetItemThemeAnimation";
 
     static PyObject* _new_DropTargetItemThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7814,7 +7787,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EasingColorKeyFrame class --------------------
-    static constexpr const char* const type_name_EasingColorKeyFrame = "EasingColorKeyFrame";
 
     static PyObject* _new_EasingColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8000,7 +7972,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EasingDoubleKeyFrame class --------------------
-    static constexpr const char* const type_name_EasingDoubleKeyFrame = "EasingDoubleKeyFrame";
 
     static PyObject* _new_EasingDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8186,11 +8157,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EasingFunctionBase class --------------------
-    static constexpr const char* const type_name_EasingFunctionBase = "EasingFunctionBase";
 
     static PyObject* _new_EasingFunctionBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EasingFunctionBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>::type_name);
         return nullptr;
     }
 
@@ -8381,7 +8352,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EasingPointKeyFrame class --------------------
-    static constexpr const char* const type_name_EasingPointKeyFrame = "EasingPointKeyFrame";
 
     static PyObject* _new_EasingPointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8567,7 +8537,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EdgeUIThemeTransition class --------------------
-    static constexpr const char* const type_name_EdgeUIThemeTransition = "EdgeUIThemeTransition";
 
     static PyObject* _new_EdgeUIThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8753,7 +8722,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ElasticEase class --------------------
-    static constexpr const char* const type_name_ElasticEase = "ElasticEase";
 
     static PyObject* _new_ElasticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9007,7 +8975,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EntranceNavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_EntranceNavigationTransitionInfo = "EntranceNavigationTransitionInfo";
 
     static PyObject* _new_EntranceNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9211,7 +9178,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- EntranceThemeTransition class --------------------
-    static constexpr const char* const type_name_EntranceThemeTransition = "EntranceThemeTransition";
 
     static PyObject* _new_EntranceThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9533,7 +9499,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ExponentialEase class --------------------
-    static constexpr const char* const type_name_ExponentialEase = "ExponentialEase";
 
     static PyObject* _new_ExponentialEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9719,7 +9684,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- FadeInThemeAnimation class --------------------
-    static constexpr const char* const type_name_FadeInThemeAnimation = "FadeInThemeAnimation";
 
     static PyObject* _new_FadeInThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9905,7 +9869,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- FadeOutThemeAnimation class --------------------
-    static constexpr const char* const type_name_FadeOutThemeAnimation = "FadeOutThemeAnimation";
 
     static PyObject* _new_FadeOutThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10091,7 +10054,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- GravityConnectedAnimationConfiguration class --------------------
-    static constexpr const char* const type_name_GravityConnectedAnimationConfiguration = "GravityConnectedAnimationConfiguration";
 
     static PyObject* _new_GravityConnectedAnimationConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10237,7 +10199,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- KeySpline class --------------------
-    static constexpr const char* const type_name_KeySpline = "KeySpline";
 
     static PyObject* _new_KeySpline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10431,11 +10392,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- KeyTimeHelper class --------------------
-    static constexpr const char* const type_name_KeyTimeHelper = "KeyTimeHelper";
 
     static PyObject* _new_KeyTimeHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KeyTimeHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>::type_name);
         return nullptr;
     }
 
@@ -10538,7 +10499,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- LinearColorKeyFrame class --------------------
-    static constexpr const char* const type_name_LinearColorKeyFrame = "LinearColorKeyFrame";
 
     static PyObject* _new_LinearColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10636,7 +10596,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- LinearDoubleKeyFrame class --------------------
-    static constexpr const char* const type_name_LinearDoubleKeyFrame = "LinearDoubleKeyFrame";
 
     static PyObject* _new_LinearDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10734,7 +10693,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- LinearPointKeyFrame class --------------------
-    static constexpr const char* const type_name_LinearPointKeyFrame = "LinearPointKeyFrame";
 
     static PyObject* _new_LinearPointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10832,7 +10790,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- NavigationThemeTransition class --------------------
-    static constexpr const char* const type_name_NavigationThemeTransition = "NavigationThemeTransition";
 
     static PyObject* _new_NavigationThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11018,11 +10975,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- NavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_NavigationTransitionInfo = "NavigationTransitionInfo";
 
     static PyObject* _new_NavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NavigationTransitionInfo);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>::type_name);
         return nullptr;
     }
 
@@ -11156,7 +11113,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ObjectAnimationUsingKeyFrames class --------------------
-    static constexpr const char* const type_name_ObjectAnimationUsingKeyFrames = "ObjectAnimationUsingKeyFrames";
 
     static PyObject* _new_ObjectAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11362,11 +11318,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ObjectKeyFrame class --------------------
-    static constexpr const char* const type_name_ObjectKeyFrame = "ObjectKeyFrame";
 
     static PyObject* _new_ObjectKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ObjectKeyFrame);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>::type_name);
         return nullptr;
     }
 
@@ -11593,7 +11549,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ObjectKeyFrameCollection class --------------------
-    static constexpr const char* const type_name_ObjectKeyFrameCollection = "ObjectKeyFrameCollection";
 
     static PyObject* _new_ObjectKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12239,7 +12194,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PaneThemeTransition class --------------------
-    static constexpr const char* const type_name_PaneThemeTransition = "PaneThemeTransition";
 
     static PyObject* _new_PaneThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12425,7 +12379,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PointAnimation class --------------------
-    static constexpr const char* const type_name_PointAnimation = "PointAnimation";
 
     static PyObject* _new_PointAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12883,7 +12836,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PointAnimationUsingKeyFrames class --------------------
-    static constexpr const char* const type_name_PointAnimationUsingKeyFrames = "PointAnimationUsingKeyFrames";
 
     static PyObject* _new_PointAnimationUsingKeyFrames(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13089,11 +13041,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PointKeyFrame class --------------------
-    static constexpr const char* const type_name_PointKeyFrame = "PointKeyFrame";
 
     static PyObject* _new_PointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointKeyFrame);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>::type_name);
         return nullptr;
     }
 
@@ -13320,7 +13272,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PointKeyFrameCollection class --------------------
-    static constexpr const char* const type_name_PointKeyFrameCollection = "PointKeyFrameCollection";
 
     static PyObject* _new_PointKeyFrameCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13966,7 +13917,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PointerDownThemeAnimation class --------------------
-    static constexpr const char* const type_name_PointerDownThemeAnimation = "PointerDownThemeAnimation";
 
     static PyObject* _new_PointerDownThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14152,7 +14102,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PointerUpThemeAnimation class --------------------
-    static constexpr const char* const type_name_PointerUpThemeAnimation = "PointerUpThemeAnimation";
 
     static PyObject* _new_PointerUpThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14338,7 +14287,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PopInThemeAnimation class --------------------
-    static constexpr const char* const type_name_PopInThemeAnimation = "PopInThemeAnimation";
 
     static PyObject* _new_PopInThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14660,7 +14608,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PopOutThemeAnimation class --------------------
-    static constexpr const char* const type_name_PopOutThemeAnimation = "PopOutThemeAnimation";
 
     static PyObject* _new_PopOutThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14846,7 +14793,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PopupThemeTransition class --------------------
-    static constexpr const char* const type_name_PopupThemeTransition = "PopupThemeTransition";
 
     static PyObject* _new_PopupThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15100,7 +15046,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- PowerEase class --------------------
-    static constexpr const char* const type_name_PowerEase = "PowerEase";
 
     static PyObject* _new_PowerEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15286,7 +15231,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- QuadraticEase class --------------------
-    static constexpr const char* const type_name_QuadraticEase = "QuadraticEase";
 
     static PyObject* _new_QuadraticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15384,7 +15328,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- QuarticEase class --------------------
-    static constexpr const char* const type_name_QuarticEase = "QuarticEase";
 
     static PyObject* _new_QuarticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15482,7 +15425,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- QuinticEase class --------------------
-    static constexpr const char* const type_name_QuinticEase = "QuinticEase";
 
     static PyObject* _new_QuinticEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15580,7 +15522,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- ReorderThemeTransition class --------------------
-    static constexpr const char* const type_name_ReorderThemeTransition = "ReorderThemeTransition";
 
     static PyObject* _new_ReorderThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15678,11 +15619,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- RepeatBehaviorHelper class --------------------
-    static constexpr const char* const type_name_RepeatBehaviorHelper = "RepeatBehaviorHelper";
 
     static PyObject* _new_RepeatBehaviorHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RepeatBehaviorHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>::type_name);
         return nullptr;
     }
 
@@ -15954,7 +15895,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- RepositionThemeAnimation class --------------------
-    static constexpr const char* const type_name_RepositionThemeAnimation = "RepositionThemeAnimation";
 
     static PyObject* _new_RepositionThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16276,7 +16216,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- RepositionThemeTransition class --------------------
-    static constexpr const char* const type_name_RepositionThemeTransition = "RepositionThemeTransition";
 
     static PyObject* _new_RepositionThemeTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16462,7 +16401,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SineEase class --------------------
-    static constexpr const char* const type_name_SineEase = "SineEase";
 
     static PyObject* _new_SineEase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16560,7 +16498,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SlideNavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_SlideNavigationTransitionInfo = "SlideNavigationTransitionInfo";
 
     static PyObject* _new_SlideNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16746,7 +16683,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SplineColorKeyFrame class --------------------
-    static constexpr const char* const type_name_SplineColorKeyFrame = "SplineColorKeyFrame";
 
     static PyObject* _new_SplineColorKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16932,7 +16868,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SplineDoubleKeyFrame class --------------------
-    static constexpr const char* const type_name_SplineDoubleKeyFrame = "SplineDoubleKeyFrame";
 
     static PyObject* _new_SplineDoubleKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17118,7 +17053,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SplinePointKeyFrame class --------------------
-    static constexpr const char* const type_name_SplinePointKeyFrame = "SplinePointKeyFrame";
 
     static PyObject* _new_SplinePointKeyFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17304,7 +17238,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SplitCloseThemeAnimation class --------------------
-    static constexpr const char* const type_name_SplitCloseThemeAnimation = "SplitCloseThemeAnimation";
 
     static PyObject* _new_SplitCloseThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18170,7 +18103,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SplitOpenThemeAnimation class --------------------
-    static constexpr const char* const type_name_SplitOpenThemeAnimation = "SplitOpenThemeAnimation";
 
     static PyObject* _new_SplitOpenThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -19036,7 +18968,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- Storyboard class --------------------
-    static constexpr const char* const type_name_Storyboard = "Storyboard";
 
     static PyObject* _new_Storyboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -19661,7 +19592,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SuppressNavigationTransitionInfo class --------------------
-    static constexpr const char* const type_name_SuppressNavigationTransitionInfo = "SuppressNavigationTransitionInfo";
 
     static PyObject* _new_SuppressNavigationTransitionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -19759,7 +19689,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SwipeBackThemeAnimation class --------------------
-    static constexpr const char* const type_name_SwipeBackThemeAnimation = "SwipeBackThemeAnimation";
 
     static PyObject* _new_SwipeBackThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -20081,7 +20010,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- SwipeHintThemeAnimation class --------------------
-    static constexpr const char* const type_name_SwipeHintThemeAnimation = "SwipeHintThemeAnimation";
 
     static PyObject* _new_SwipeHintThemeAnimation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -20403,11 +20331,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- Timeline class --------------------
-    static constexpr const char* const type_name_Timeline = "Timeline";
 
     static PyObject* _new_Timeline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Timeline);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>::type_name);
         return nullptr;
     }
 
@@ -20993,7 +20921,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- TimelineCollection class --------------------
-    static constexpr const char* const type_name_TimelineCollection = "TimelineCollection";
 
     static PyObject* _new_TimelineCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -21639,11 +21566,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- Transition class --------------------
-    static constexpr const char* const type_name_Transition = "Transition";
 
     static PyObject* _new_Transition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Transition);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>::type_name);
         return nullptr;
     }
 
@@ -21714,7 +21641,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- TransitionCollection class --------------------
-    static constexpr const char* const type_name_TransitionCollection = "TransitionCollection";
 
     static PyObject* _new_TransitionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -22360,7 +22286,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- KeyTime struct --------------------
-    static constexpr const char* const type_name_KeyTime = "KeyTime";
 
     PyObject* _new_KeyTime(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -22460,7 +22385,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     };
 
     // ----- RepeatBehavior struct --------------------
-    static constexpr const char* const type_name_RepeatBehavior = "RepeatBehavior";
 
     PyObject* _new_RepeatBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

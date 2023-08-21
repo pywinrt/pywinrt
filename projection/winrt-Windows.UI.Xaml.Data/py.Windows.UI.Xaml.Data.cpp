@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Data
 {
     // ----- Binding class --------------------
-    static constexpr const char* const type_name_Binding = "Binding";
 
     static PyObject* _new_Binding(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -633,7 +632,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- BindingBase class --------------------
-    static constexpr const char* const type_name_BindingBase = "BindingBase";
 
     static PyObject* _new_BindingBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -731,11 +729,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- BindingExpression class --------------------
-    static constexpr const char* const type_name_BindingExpression = "BindingExpression";
 
     static PyObject* _new_BindingExpression(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BindingExpression);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::BindingExpression>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::BindingExpression>::type_name);
         return nullptr;
     }
 
@@ -877,11 +875,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- BindingExpressionBase class --------------------
-    static constexpr const char* const type_name_BindingExpressionBase = "BindingExpressionBase";
 
     static PyObject* _new_BindingExpressionBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BindingExpressionBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::BindingExpressionBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::BindingExpressionBase>::type_name);
         return nullptr;
     }
 
@@ -952,11 +950,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- BindingOperations class --------------------
-    static constexpr const char* const type_name_BindingOperations = "BindingOperations";
 
     static PyObject* _new_BindingOperations(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BindingOperations);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::BindingOperations>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::BindingOperations>::type_name);
         return nullptr;
     }
 
@@ -1062,7 +1060,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- CollectionViewSource class --------------------
-    static constexpr const char* const type_name_CollectionViewSource = "CollectionViewSource";
 
     static PyObject* _new_CollectionViewSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1424,7 +1421,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- CurrentChangingEventArgs class --------------------
-    static constexpr const char* const type_name_CurrentChangingEventArgs = "CurrentChangingEventArgs";
 
     static PyObject* _new_CurrentChangingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1605,7 +1601,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ItemIndexRange class --------------------
-    static constexpr const char* const type_name_ItemIndexRange = "ItemIndexRange";
 
     static PyObject* _new_ItemIndexRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1766,7 +1761,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- PropertyChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PropertyChangedEventArgs = "PropertyChangedEventArgs";
 
     static PyObject* _new_PropertyChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1886,7 +1880,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- RelativeSource class --------------------
-    static constexpr const char* const type_name_RelativeSource = "RelativeSource";
 
     static PyObject* _new_RelativeSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2032,11 +2025,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ICollectionView interface --------------------
-    static constexpr const char* const type_name_ICollectionView = "ICollectionView";
 
     static PyObject* _new_ICollectionView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICollectionView);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ICollectionView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ICollectionView>::type_name);
         return nullptr;
     }
 
@@ -3126,11 +3119,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ICollectionViewFactory interface --------------------
-    static constexpr const char* const type_name_ICollectionViewFactory = "ICollectionViewFactory";
 
     static PyObject* _new_ICollectionViewFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICollectionViewFactory);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ICollectionViewFactory>::type_name);
         return nullptr;
     }
 
@@ -3231,11 +3224,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ICollectionViewGroup interface --------------------
-    static constexpr const char* const type_name_ICollectionViewGroup = "ICollectionViewGroup";
 
     static PyObject* _new_ICollectionViewGroup(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICollectionViewGroup);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ICollectionViewGroup>::type_name);
         return nullptr;
     }
 
@@ -3346,11 +3339,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ICustomProperty interface --------------------
-    static constexpr const char* const type_name_ICustomProperty = "ICustomProperty";
 
     static PyObject* _new_ICustomProperty(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICustomProperty);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ICustomProperty>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ICustomProperty>::type_name);
         return nullptr;
     }
 
@@ -3635,11 +3628,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ICustomPropertyProvider interface --------------------
-    static constexpr const char* const type_name_ICustomPropertyProvider = "ICustomPropertyProvider";
 
     static PyObject* _new_ICustomPropertyProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICustomPropertyProvider);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ICustomPropertyProvider>::type_name);
         return nullptr;
     }
 
@@ -3825,11 +3818,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- IItemsRangeInfo interface --------------------
-    static constexpr const char* const type_name_IItemsRangeInfo = "IItemsRangeInfo";
 
     static PyObject* _new_IItemsRangeInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IItemsRangeInfo);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::IItemsRangeInfo>::type_name);
         return nullptr;
     }
 
@@ -3987,11 +3980,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- INotifyPropertyChanged interface --------------------
-    static constexpr const char* const type_name_INotifyPropertyChanged = "INotifyPropertyChanged";
 
     static PyObject* _new_INotifyPropertyChanged(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INotifyPropertyChanged);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::INotifyPropertyChanged>::type_name);
         return nullptr;
     }
 
@@ -4107,11 +4100,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ISelectionInfo interface --------------------
-    static constexpr const char* const type_name_ISelectionInfo = "ISelectionInfo";
 
     static PyObject* _new_ISelectionInfo(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISelectionInfo);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ISelectionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ISelectionInfo>::type_name);
         return nullptr;
     }
 
@@ -4310,11 +4303,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- ISupportIncrementalLoading interface --------------------
-    static constexpr const char* const type_name_ISupportIncrementalLoading = "ISupportIncrementalLoading";
 
     static PyObject* _new_ISupportIncrementalLoading(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISupportIncrementalLoading);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::ISupportIncrementalLoading>::type_name);
         return nullptr;
     }
 
@@ -4437,11 +4430,11 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- IValueConverter interface --------------------
-    static constexpr const char* const type_name_IValueConverter = "IValueConverter";
 
     static PyObject* _new_IValueConverter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IValueConverter);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Data::IValueConverter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Data::IValueConverter>::type_name);
         return nullptr;
     }
 
@@ -4582,7 +4575,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     };
 
     // ----- LoadMoreItemsResult struct --------------------
-    static constexpr const char* const type_name_LoadMoreItemsResult = "LoadMoreItemsResult";
 
     PyObject* _new_LoadMoreItemsResult(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

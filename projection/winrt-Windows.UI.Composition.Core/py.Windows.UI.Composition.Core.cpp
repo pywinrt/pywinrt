@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Composition::Core
 {
     // ----- CompositorController class --------------------
-    static constexpr const char* const type_name_CompositorController = "CompositorController";
 
     static PyObject* _new_CompositorController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

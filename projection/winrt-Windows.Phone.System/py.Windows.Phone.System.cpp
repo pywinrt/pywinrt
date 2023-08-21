@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Phone::System
 {
     // ----- SystemProtection class --------------------
-    static constexpr const char* const type_name_SystemProtection = "SystemProtection";
 
     static PyObject* _new_SystemProtection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemProtection);
+        static_assert(py::py_type<winrt::Windows::Phone::System::SystemProtection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::System::SystemProtection>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Accessibility
 {
     // ----- ScreenReaderPositionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_ScreenReaderPositionChangedEventArgs = "ScreenReaderPositionChangedEventArgs";
 
     static PyObject* _new_ScreenReaderPositionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ScreenReaderPositionChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -122,7 +122,6 @@ namespace py::cpp::Windows::UI::Accessibility
     };
 
     // ----- ScreenReaderService class --------------------
-    static constexpr const char* const type_name_ScreenReaderService = "ScreenReaderService";
 
     static PyObject* _new_ScreenReaderService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

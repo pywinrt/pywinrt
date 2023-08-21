@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Printing::PrintTicket
 {
     // ----- PrintTicketCapabilities class --------------------
-    static constexpr const char* const type_name_PrintTicketCapabilities = "PrintTicketCapabilities";
 
     static PyObject* _new_PrintTicketCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTicketCapabilities);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>::type_name);
         return nullptr;
     }
 
@@ -508,11 +508,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- PrintTicketFeature class --------------------
-    static constexpr const char* const type_name_PrintTicketFeature = "PrintTicketFeature";
 
     static PyObject* _new_PrintTicketFeature(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTicketFeature);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>::type_name);
         return nullptr;
     }
 
@@ -799,11 +799,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- PrintTicketOption class --------------------
-    static constexpr const char* const type_name_PrintTicketOption = "PrintTicketOption";
 
     static PyObject* _new_PrintTicketOption(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTicketOption);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>::type_name);
         return nullptr;
     }
 
@@ -1086,11 +1086,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- PrintTicketParameterDefinition class --------------------
-    static constexpr const char* const type_name_PrintTicketParameterDefinition = "PrintTicketParameterDefinition";
 
     static PyObject* _new_PrintTicketParameterDefinition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTicketParameterDefinition);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>::type_name);
         return nullptr;
     }
 
@@ -1301,11 +1301,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- PrintTicketParameterInitializer class --------------------
-    static constexpr const char* const type_name_PrintTicketParameterInitializer = "PrintTicketParameterInitializer";
 
     static PyObject* _new_PrintTicketParameterInitializer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTicketParameterInitializer);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>::type_name);
         return nullptr;
     }
 
@@ -1484,11 +1484,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- PrintTicketValue class --------------------
-    static constexpr const char* const type_name_PrintTicketValue = "PrintTicketValue";
 
     static PyObject* _new_PrintTicketValue(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTicketValue);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>::type_name);
         return nullptr;
     }
 
@@ -1639,11 +1639,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- WorkflowPrintTicket class --------------------
-    static constexpr const char* const type_name_WorkflowPrintTicket = "WorkflowPrintTicket";
 
     static PyObject* _new_WorkflowPrintTicket(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WorkflowPrintTicket);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>::type_name);
         return nullptr;
     }
 
@@ -2330,11 +2330,11 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     };
 
     // ----- WorkflowPrintTicketValidationResult class --------------------
-    static constexpr const char* const type_name_WorkflowPrintTicketValidationResult = "WorkflowPrintTicketValidationResult";
 
     static PyObject* _new_WorkflowPrintTicketValidationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WorkflowPrintTicketValidationResult);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>::type_name);
         return nullptr;
     }
 

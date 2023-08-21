@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Casting
 {
     // ----- CastingConnection class --------------------
-    static constexpr const char* const type_name_CastingConnection = "CastingConnection";
 
     static PyObject* _new_CastingConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CastingConnection);
+        static_assert(py::py_type<winrt::Windows::Media::Casting::CastingConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingConnection>::type_name);
         return nullptr;
     }
 
@@ -375,11 +375,11 @@ namespace py::cpp::Windows::Media::Casting
     };
 
     // ----- CastingConnectionErrorOccurredEventArgs class --------------------
-    static constexpr const char* const type_name_CastingConnectionErrorOccurredEventArgs = "CastingConnectionErrorOccurredEventArgs";
 
     static PyObject* _new_CastingConnectionErrorOccurredEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CastingConnectionErrorOccurredEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>::type_name);
         return nullptr;
     }
 
@@ -490,11 +490,11 @@ namespace py::cpp::Windows::Media::Casting
     };
 
     // ----- CastingDevice class --------------------
-    static constexpr const char* const type_name_CastingDevice = "CastingDevice";
 
     static PyObject* _new_CastingDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CastingDevice);
+        static_assert(py::py_type<winrt::Windows::Media::Casting::CastingDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingDevice>::type_name);
         return nullptr;
     }
 
@@ -813,7 +813,6 @@ namespace py::cpp::Windows::Media::Casting
     };
 
     // ----- CastingDevicePicker class --------------------
-    static constexpr const char* const type_name_CastingDevicePicker = "CastingDevicePicker";
 
     static PyObject* _new_CastingDevicePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1127,11 +1126,11 @@ namespace py::cpp::Windows::Media::Casting
     };
 
     // ----- CastingDevicePickerFilter class --------------------
-    static constexpr const char* const type_name_CastingDevicePickerFilter = "CastingDevicePickerFilter";
 
     static PyObject* _new_CastingDevicePickerFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CastingDevicePickerFilter);
+        static_assert(py::py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>::type_name);
         return nullptr;
     }
 
@@ -1366,11 +1365,11 @@ namespace py::cpp::Windows::Media::Casting
     };
 
     // ----- CastingDeviceSelectedEventArgs class --------------------
-    static constexpr const char* const type_name_CastingDeviceSelectedEventArgs = "CastingDeviceSelectedEventArgs";
 
     static PyObject* _new_CastingDeviceSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CastingDeviceSelectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1461,11 +1460,11 @@ namespace py::cpp::Windows::Media::Casting
     };
 
     // ----- CastingSource class --------------------
-    static constexpr const char* const type_name_CastingSource = "CastingSource";
 
     static PyObject* _new_CastingSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CastingSource);
+        static_assert(py::py_type<winrt::Windows::Media::Casting::CastingSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Casting::CastingSource>::type_name);
         return nullptr;
     }
 

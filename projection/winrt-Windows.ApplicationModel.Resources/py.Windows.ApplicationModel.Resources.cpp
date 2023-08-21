@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::Resources
 {
     // ----- ResourceLoader class --------------------
-    static constexpr const char* const type_name_ResourceLoader = "ResourceLoader";
 
     static PyObject* _new_ResourceLoader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

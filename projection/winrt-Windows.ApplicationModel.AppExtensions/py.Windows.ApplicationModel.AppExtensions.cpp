@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::AppExtensions
 {
     // ----- AppExtension class --------------------
-    static constexpr const char* const type_name_AppExtension = "AppExtension";
 
     static PyObject* _new_AppExtension(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtension);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtension>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtension>::type_name);
         return nullptr;
     }
 
@@ -262,11 +262,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     };
 
     // ----- AppExtensionCatalog class --------------------
-    static constexpr const char* const type_name_AppExtensionCatalog = "AppExtensionCatalog";
 
     static PyObject* _new_AppExtensionCatalog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtensionCatalog);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog>::type_name);
         return nullptr;
     }
 
@@ -656,11 +656,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     };
 
     // ----- AppExtensionPackageInstalledEventArgs class --------------------
-    static constexpr const char* const type_name_AppExtensionPackageInstalledEventArgs = "AppExtensionPackageInstalledEventArgs";
 
     static PyObject* _new_AppExtensionPackageInstalledEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtensionPackageInstalledEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>::type_name);
         return nullptr;
     }
 
@@ -791,11 +791,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     };
 
     // ----- AppExtensionPackageStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppExtensionPackageStatusChangedEventArgs = "AppExtensionPackageStatusChangedEventArgs";
 
     static PyObject* _new_AppExtensionPackageStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtensionPackageStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -906,11 +906,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     };
 
     // ----- AppExtensionPackageUninstallingEventArgs class --------------------
-    static constexpr const char* const type_name_AppExtensionPackageUninstallingEventArgs = "AppExtensionPackageUninstallingEventArgs";
 
     static PyObject* _new_AppExtensionPackageUninstallingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtensionPackageUninstallingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1021,11 +1021,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     };
 
     // ----- AppExtensionPackageUpdatedEventArgs class --------------------
-    static constexpr const char* const type_name_AppExtensionPackageUpdatedEventArgs = "AppExtensionPackageUpdatedEventArgs";
 
     static PyObject* _new_AppExtensionPackageUpdatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtensionPackageUpdatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1156,11 +1156,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     };
 
     // ----- AppExtensionPackageUpdatingEventArgs class --------------------
-    static constexpr const char* const type_name_AppExtensionPackageUpdatingEventArgs = "AppExtensionPackageUpdatingEventArgs";
 
     static PyObject* _new_AppExtensionPackageUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppExtensionPackageUpdatingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>::type_name);
         return nullptr;
     }
 

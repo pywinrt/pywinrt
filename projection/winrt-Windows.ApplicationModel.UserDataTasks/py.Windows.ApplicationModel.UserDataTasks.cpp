@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::UserDataTasks
 {
     // ----- UserDataTask class --------------------
-    static constexpr const char* const type_name_UserDataTask = "UserDataTask";
 
     static PyObject* _new_UserDataTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -741,11 +740,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskBatch class --------------------
-    static constexpr const char* const type_name_UserDataTaskBatch = "UserDataTaskBatch";
 
     static PyObject* _new_UserDataTaskBatch(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskBatch);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>::type_name);
         return nullptr;
     }
 
@@ -836,11 +835,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskList class --------------------
-    static constexpr const char* const type_name_UserDataTaskList = "UserDataTaskList";
 
     static PyObject* _new_UserDataTaskList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskList);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>::type_name);
         return nullptr;
     }
 
@@ -1391,11 +1390,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskListLimitedWriteOperations class --------------------
-    static constexpr const char* const type_name_UserDataTaskListLimitedWriteOperations = "UserDataTaskListLimitedWriteOperations";
 
     static PyObject* _new_UserDataTaskListLimitedWriteOperations(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskListLimitedWriteOperations);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>::type_name);
         return nullptr;
     }
 
@@ -1594,11 +1593,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskListSyncManager class --------------------
-    static constexpr const char* const type_name_UserDataTaskListSyncManager = "UserDataTaskListSyncManager";
 
     static PyObject* _new_UserDataTaskListSyncManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskListSyncManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>::type_name);
         return nullptr;
     }
 
@@ -1888,11 +1887,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskManager class --------------------
-    static constexpr const char* const type_name_UserDataTaskManager = "UserDataTaskManager";
 
     static PyObject* _new_UserDataTaskManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>::type_name);
         return nullptr;
     }
 
@@ -2077,7 +2076,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskQueryOptions class --------------------
-    static constexpr const char* const type_name_UserDataTaskQueryOptions = "UserDataTaskQueryOptions";
 
     static PyObject* _new_UserDataTaskQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2271,11 +2269,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskReader class --------------------
-    static constexpr const char* const type_name_UserDataTaskReader = "UserDataTaskReader";
 
     static PyObject* _new_UserDataTaskReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>::type_name);
         return nullptr;
     }
 
@@ -2376,7 +2374,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskRecurrenceProperties class --------------------
-    static constexpr const char* const type_name_UserDataTaskRecurrenceProperties = "UserDataTaskRecurrenceProperties";
 
     static PyObject* _new_UserDataTaskRecurrenceProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2858,7 +2855,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskRegenerationProperties class --------------------
-    static constexpr const char* const type_name_UserDataTaskRegenerationProperties = "UserDataTaskRegenerationProperties";
 
     static PyObject* _new_UserDataTaskRegenerationProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3148,11 +3144,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     };
 
     // ----- UserDataTaskStore class --------------------
-    static constexpr const char* const type_name_UserDataTaskStore = "UserDataTaskStore";
 
     static PyObject* _new_UserDataTaskStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataTaskStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>::type_name);
         return nullptr;
     }
 

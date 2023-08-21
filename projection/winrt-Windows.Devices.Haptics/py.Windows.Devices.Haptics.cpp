@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Haptics
 {
     // ----- KnownSimpleHapticsControllerWaveforms class --------------------
-    static constexpr const char* const type_name_KnownSimpleHapticsControllerWaveforms = "KnownSimpleHapticsControllerWaveforms";
 
     static PyObject* _new_KnownSimpleHapticsControllerWaveforms(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownSimpleHapticsControllerWaveforms);
+        static_assert(py::py_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>::type_name);
         return nullptr;
     }
 
@@ -361,11 +361,11 @@ namespace py::cpp::Windows::Devices::Haptics
     };
 
     // ----- SimpleHapticsController class --------------------
-    static constexpr const char* const type_name_SimpleHapticsController = "SimpleHapticsController";
 
     static PyObject* _new_SimpleHapticsController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SimpleHapticsController);
+        static_assert(py::py_type<winrt::Windows::Devices::Haptics::SimpleHapticsController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Haptics::SimpleHapticsController>::type_name);
         return nullptr;
     }
 
@@ -713,11 +713,11 @@ namespace py::cpp::Windows::Devices::Haptics
     };
 
     // ----- SimpleHapticsControllerFeedback class --------------------
-    static constexpr const char* const type_name_SimpleHapticsControllerFeedback = "SimpleHapticsControllerFeedback";
 
     static PyObject* _new_SimpleHapticsControllerFeedback(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SimpleHapticsControllerFeedback);
+        static_assert(py::py_type<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>::type_name);
         return nullptr;
     }
 
@@ -828,11 +828,11 @@ namespace py::cpp::Windows::Devices::Haptics
     };
 
     // ----- VibrationDevice class --------------------
-    static constexpr const char* const type_name_VibrationDevice = "VibrationDevice";
 
     static PyObject* _new_VibrationDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VibrationDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Haptics::VibrationDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Haptics::VibrationDevice>::type_name);
         return nullptr;
     }
 

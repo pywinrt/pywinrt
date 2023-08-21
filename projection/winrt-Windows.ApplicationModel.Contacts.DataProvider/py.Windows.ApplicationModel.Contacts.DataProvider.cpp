@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
 {
     // ----- ContactDataProviderConnection class --------------------
-    static constexpr const char* const type_name_ContactDataProviderConnection = "ContactDataProviderConnection";
 
     static PyObject* _new_ContactDataProviderConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactDataProviderConnection);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>::type_name);
         return nullptr;
     }
 
@@ -293,11 +293,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactDataProviderTriggerDetails class --------------------
-    static constexpr const char* const type_name_ContactDataProviderTriggerDetails = "ContactDataProviderTriggerDetails";
 
     static PyObject* _new_ContactDataProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactDataProviderTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -388,11 +388,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListCreateOrUpdateContactRequest class --------------------
-    static constexpr const char* const type_name_ContactListCreateOrUpdateContactRequest = "ContactListCreateOrUpdateContactRequest";
 
     static PyObject* _new_ContactListCreateOrUpdateContactRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListCreateOrUpdateContactRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>::type_name);
         return nullptr;
     }
 
@@ -565,11 +565,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListCreateOrUpdateContactRequestEventArgs class --------------------
-    static constexpr const char* const type_name_ContactListCreateOrUpdateContactRequestEventArgs = "ContactListCreateOrUpdateContactRequestEventArgs";
 
     static PyObject* _new_ContactListCreateOrUpdateContactRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListCreateOrUpdateContactRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -690,11 +690,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListDeleteContactRequest class --------------------
-    static constexpr const char* const type_name_ContactListDeleteContactRequest = "ContactListDeleteContactRequest";
 
     static PyObject* _new_ContactListDeleteContactRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListDeleteContactRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>::type_name);
         return nullptr;
     }
 
@@ -865,11 +865,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListDeleteContactRequestEventArgs class --------------------
-    static constexpr const char* const type_name_ContactListDeleteContactRequestEventArgs = "ContactListDeleteContactRequestEventArgs";
 
     static PyObject* _new_ContactListDeleteContactRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListDeleteContactRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -990,11 +990,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListServerSearchReadBatchRequest class --------------------
-    static constexpr const char* const type_name_ContactListServerSearchReadBatchRequest = "ContactListServerSearchReadBatchRequest";
 
     static PyObject* _new_ContactListServerSearchReadBatchRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListServerSearchReadBatchRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>::type_name);
         return nullptr;
     }
 
@@ -1239,11 +1239,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListServerSearchReadBatchRequestEventArgs class --------------------
-    static constexpr const char* const type_name_ContactListServerSearchReadBatchRequestEventArgs = "ContactListServerSearchReadBatchRequestEventArgs";
 
     static PyObject* _new_ContactListServerSearchReadBatchRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListServerSearchReadBatchRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1364,11 +1364,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListSyncManagerSyncRequest class --------------------
-    static constexpr const char* const type_name_ContactListSyncManagerSyncRequest = "ContactListSyncManagerSyncRequest";
 
     static PyObject* _new_ContactListSyncManagerSyncRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListSyncManagerSyncRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>::type_name);
         return nullptr;
     }
 
@@ -1519,11 +1519,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     };
 
     // ----- ContactListSyncManagerSyncRequestEventArgs class --------------------
-    static constexpr const char* const type_name_ContactListSyncManagerSyncRequestEventArgs = "ContactListSyncManagerSyncRequestEventArgs";
 
     static PyObject* _new_ContactListSyncManagerSyncRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContactListSyncManagerSyncRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>::type_name);
         return nullptr;
     }
 

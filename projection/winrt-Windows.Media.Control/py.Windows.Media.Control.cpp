@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Control
 {
     // ----- CurrentSessionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_CurrentSessionChangedEventArgs = "CurrentSessionChangedEventArgs";
 
     static PyObject* _new_CurrentSessionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CurrentSessionChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -82,11 +82,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- GlobalSystemMediaTransportControlsSession class --------------------
-    static constexpr const char* const type_name_GlobalSystemMediaTransportControlsSession = "GlobalSystemMediaTransportControlsSession";
 
     static PyObject* _new_GlobalSystemMediaTransportControlsSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalSystemMediaTransportControlsSession);
+        static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>::type_name);
         return nullptr;
     }
 
@@ -860,11 +860,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- GlobalSystemMediaTransportControlsSessionManager class --------------------
-    static constexpr const char* const type_name_GlobalSystemMediaTransportControlsSessionManager = "GlobalSystemMediaTransportControlsSessionManager";
 
     static PyObject* _new_GlobalSystemMediaTransportControlsSessionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalSystemMediaTransportControlsSessionManager);
+        static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>::type_name);
         return nullptr;
     }
 
@@ -1115,11 +1115,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- GlobalSystemMediaTransportControlsSessionMediaProperties class --------------------
-    static constexpr const char* const type_name_GlobalSystemMediaTransportControlsSessionMediaProperties = "GlobalSystemMediaTransportControlsSessionMediaProperties";
 
     static PyObject* _new_GlobalSystemMediaTransportControlsSessionMediaProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalSystemMediaTransportControlsSessionMediaProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>::type_name);
         return nullptr;
     }
 
@@ -1390,11 +1390,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- GlobalSystemMediaTransportControlsSessionPlaybackControls class --------------------
-    static constexpr const char* const type_name_GlobalSystemMediaTransportControlsSessionPlaybackControls = "GlobalSystemMediaTransportControlsSessionPlaybackControls";
 
     static PyObject* _new_GlobalSystemMediaTransportControlsSessionPlaybackControls(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalSystemMediaTransportControlsSessionPlaybackControls);
+        static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>::type_name);
         return nullptr;
     }
 
@@ -1765,11 +1765,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- GlobalSystemMediaTransportControlsSessionPlaybackInfo class --------------------
-    static constexpr const char* const type_name_GlobalSystemMediaTransportControlsSessionPlaybackInfo = "GlobalSystemMediaTransportControlsSessionPlaybackInfo";
 
     static PyObject* _new_GlobalSystemMediaTransportControlsSessionPlaybackInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalSystemMediaTransportControlsSessionPlaybackInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>::type_name);
         return nullptr;
     }
 
@@ -1960,11 +1960,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- GlobalSystemMediaTransportControlsSessionTimelineProperties class --------------------
-    static constexpr const char* const type_name_GlobalSystemMediaTransportControlsSessionTimelineProperties = "GlobalSystemMediaTransportControlsSessionTimelineProperties";
 
     static PyObject* _new_GlobalSystemMediaTransportControlsSessionTimelineProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GlobalSystemMediaTransportControlsSessionTimelineProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>::type_name);
         return nullptr;
     }
 
@@ -2155,11 +2155,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- MediaPropertiesChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPropertiesChangedEventArgs = "MediaPropertiesChangedEventArgs";
 
     static PyObject* _new_MediaPropertiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPropertiesChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2230,11 +2230,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- PlaybackInfoChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PlaybackInfoChangedEventArgs = "PlaybackInfoChangedEventArgs";
 
     static PyObject* _new_PlaybackInfoChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlaybackInfoChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2305,11 +2305,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- SessionsChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SessionsChangedEventArgs = "SessionsChangedEventArgs";
 
     static PyObject* _new_SessionsChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SessionsChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2380,11 +2380,11 @@ namespace py::cpp::Windows::Media::Control
     };
 
     // ----- TimelinePropertiesChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TimelinePropertiesChangedEventArgs = "TimelinePropertiesChangedEventArgs";
 
     static PyObject* _new_TimelinePropertiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimelinePropertiesChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>::type_name);
         return nullptr;
     }
 

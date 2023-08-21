@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Data::Pdf
 {
     // ----- PdfDocument class --------------------
-    static constexpr const char* const type_name_PdfDocument = "PdfDocument";
 
     static PyObject* _new_PdfDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PdfDocument);
+        static_assert(py::py_type<winrt::Windows::Data::Pdf::PdfDocument>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Pdf::PdfDocument>::type_name);
         return nullptr;
     }
 
@@ -260,11 +260,11 @@ namespace py::cpp::Windows::Data::Pdf
     };
 
     // ----- PdfPage class --------------------
-    static constexpr const char* const type_name_PdfPage = "PdfPage";
 
     static PyObject* _new_PdfPage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PdfPage);
+        static_assert(py::py_type<winrt::Windows::Data::Pdf::PdfPage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Pdf::PdfPage>::type_name);
         return nullptr;
     }
 
@@ -571,11 +571,11 @@ namespace py::cpp::Windows::Data::Pdf
     };
 
     // ----- PdfPageDimensions class --------------------
-    static constexpr const char* const type_name_PdfPageDimensions = "PdfPageDimensions";
 
     static PyObject* _new_PdfPageDimensions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PdfPageDimensions);
+        static_assert(py::py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>::type_name);
         return nullptr;
     }
 
@@ -746,7 +746,6 @@ namespace py::cpp::Windows::Data::Pdf
     };
 
     // ----- PdfPageRenderOptions class --------------------
-    static constexpr const char* const type_name_PdfPageRenderOptions = "PdfPageRenderOptions";
 
     static PyObject* _new_PdfPageRenderOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

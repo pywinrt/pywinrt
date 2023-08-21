@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 {
     // ----- DevicePortalConnection class --------------------
-    static constexpr const char* const type_name_DevicePortalConnection = "DevicePortalConnection";
 
     static PyObject* _new_DevicePortalConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePortalConnection);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>::type_name);
         return nullptr;
     }
 
@@ -338,11 +338,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     };
 
     // ----- DevicePortalConnectionClosedEventArgs class --------------------
-    static constexpr const char* const type_name_DevicePortalConnectionClosedEventArgs = "DevicePortalConnectionClosedEventArgs";
 
     static PyObject* _new_DevicePortalConnectionClosedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePortalConnectionClosedEventArgs);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -433,11 +433,11 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     };
 
     // ----- DevicePortalConnectionRequestReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_DevicePortalConnectionRequestReceivedEventArgs = "DevicePortalConnectionRequestReceivedEventArgs";
 
     static PyObject* _new_DevicePortalConnectionRequestReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePortalConnectionRequestReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>::type_name);
         return nullptr;
     }
 

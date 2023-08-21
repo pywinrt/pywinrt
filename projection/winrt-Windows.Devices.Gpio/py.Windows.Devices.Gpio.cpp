@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Devices::Gpio
 {
     // ----- GpioChangeCounter class --------------------
-    static constexpr const char* const type_name_GpioChangeCounter = "GpioChangeCounter";
 
     static PyObject* _new_GpioChangeCounter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -350,7 +349,6 @@ namespace py::cpp::Windows::Devices::Gpio
     };
 
     // ----- GpioChangeReader class --------------------
-    static constexpr const char* const type_name_GpioChangeReader = "GpioChangeReader";
 
     static PyObject* _new_GpioChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -882,11 +880,11 @@ namespace py::cpp::Windows::Devices::Gpio
     };
 
     // ----- GpioController class --------------------
-    static constexpr const char* const type_name_GpioController = "GpioController";
 
     static PyObject* _new_GpioController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GpioController);
+        static_assert(py::py_type<winrt::Windows::Devices::Gpio::GpioController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::GpioController>::type_name);
         return nullptr;
     }
 
@@ -1174,11 +1172,11 @@ namespace py::cpp::Windows::Devices::Gpio
     };
 
     // ----- GpioPin class --------------------
-    static constexpr const char* const type_name_GpioPin = "GpioPin";
 
     static PyObject* _new_GpioPin(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GpioPin);
+        static_assert(py::py_type<winrt::Windows::Devices::Gpio::GpioPin>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::GpioPin>::type_name);
         return nullptr;
     }
 
@@ -1593,11 +1591,11 @@ namespace py::cpp::Windows::Devices::Gpio
     };
 
     // ----- GpioPinValueChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GpioPinValueChangedEventArgs = "GpioPinValueChangedEventArgs";
 
     static PyObject* _new_GpioPinValueChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GpioPinValueChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1688,7 +1686,6 @@ namespace py::cpp::Windows::Devices::Gpio
     };
 
     // ----- GpioChangeCount struct --------------------
-    static constexpr const char* const type_name_GpioChangeCount = "GpioChangeCount";
 
     PyObject* _new_GpioChangeCount(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1823,7 +1820,6 @@ namespace py::cpp::Windows::Devices::Gpio
     };
 
     // ----- GpioChangeRecord struct --------------------
-    static constexpr const char* const type_name_GpioChangeRecord = "GpioChangeRecord";
 
     PyObject* _new_GpioChangeRecord(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

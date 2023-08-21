@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Management::Deployment
 {
     // ----- AddPackageOptions class --------------------
-    static constexpr const char* const type_name_AddPackageOptions = "AddPackageOptions";
 
     static PyObject* _new_AddPackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -877,11 +876,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- AppInstallerManager class --------------------
-    static constexpr const char* const type_name_AppInstallerManager = "AppInstallerManager";
 
     static PyObject* _new_AppInstallerManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInstallerManager);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::AppInstallerManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::AppInstallerManager>::type_name);
         return nullptr;
     }
 
@@ -1113,7 +1112,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- AutoUpdateSettingsOptions class --------------------
-    static constexpr const char* const type_name_AutoUpdateSettingsOptions = "AutoUpdateSettingsOptions";
 
     static PyObject* _new_AutoUpdateSettingsOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1755,7 +1753,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- CreateSharedPackageContainerOptions class --------------------
-    static constexpr const char* const type_name_CreateSharedPackageContainerOptions = "CreateSharedPackageContainerOptions";
 
     static PyObject* _new_CreateSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1969,11 +1966,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- CreateSharedPackageContainerResult class --------------------
-    static constexpr const char* const type_name_CreateSharedPackageContainerResult = "CreateSharedPackageContainerResult";
 
     static PyObject* _new_CreateSharedPackageContainerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CreateSharedPackageContainerResult);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>::type_name);
         return nullptr;
     }
 
@@ -2104,7 +2101,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- DeleteSharedPackageContainerOptions class --------------------
-    static constexpr const char* const type_name_DeleteSharedPackageContainerOptions = "DeleteSharedPackageContainerOptions";
 
     static PyObject* _new_DeleteSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2298,11 +2294,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- DeleteSharedPackageContainerResult class --------------------
-    static constexpr const char* const type_name_DeleteSharedPackageContainerResult = "DeleteSharedPackageContainerResult";
 
     static PyObject* _new_DeleteSharedPackageContainerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeleteSharedPackageContainerResult);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>::type_name);
         return nullptr;
     }
 
@@ -2413,11 +2409,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- DeploymentResult class --------------------
-    static constexpr const char* const type_name_DeploymentResult = "DeploymentResult";
 
     static PyObject* _new_DeploymentResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeploymentResult);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::DeploymentResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::DeploymentResult>::type_name);
         return nullptr;
     }
 
@@ -2568,7 +2564,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- FindSharedPackageContainerOptions class --------------------
-    static constexpr const char* const type_name_FindSharedPackageContainerOptions = "FindSharedPackageContainerOptions";
 
     static PyObject* _new_FindSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2762,7 +2757,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- PackageAllUserProvisioningOptions class --------------------
-    static constexpr const char* const type_name_PackageAllUserProvisioningOptions = "PackageAllUserProvisioningOptions";
 
     static PyObject* _new_PackageAllUserProvisioningOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2900,7 +2894,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- PackageManager class --------------------
-    static constexpr const char* const type_name_PackageManager = "PackageManager";
 
     static PyObject* _new_PackageManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4814,11 +4807,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- PackageManagerDebugSettings class --------------------
-    static constexpr const char* const type_name_PackageManagerDebugSettings = "PackageManagerDebugSettings";
 
     static PyObject* _new_PackageManagerDebugSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageManagerDebugSettings);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>::type_name);
         return nullptr;
     }
 
@@ -4946,11 +4939,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- PackageUserInformation class --------------------
-    static constexpr const char* const type_name_PackageUserInformation = "PackageUserInformation";
 
     static PyObject* _new_PackageUserInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageUserInformation);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::PackageUserInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::PackageUserInformation>::type_name);
         return nullptr;
     }
 
@@ -5061,11 +5054,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- PackageVolume class --------------------
-    static constexpr const char* const type_name_PackageVolume = "PackageVolume";
 
     static PyObject* _new_PackageVolume(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageVolume);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::PackageVolume>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::PackageVolume>::type_name);
         return nullptr;
     }
 
@@ -5690,7 +5683,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- RegisterPackageOptions class --------------------
-    static constexpr const char* const type_name_RegisterPackageOptions = "RegisterPackageOptions";
 
     static PyObject* _new_RegisterPackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6328,11 +6320,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- SharedPackageContainer class --------------------
-    static constexpr const char* const type_name_SharedPackageContainer = "SharedPackageContainer";
 
     static PyObject* _new_SharedPackageContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SharedPackageContainer);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainer>::type_name);
         return nullptr;
     }
 
@@ -6536,11 +6528,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- SharedPackageContainerManager class --------------------
-    static constexpr const char* const type_name_SharedPackageContainerManager = "SharedPackageContainerManager";
 
     static PyObject* _new_SharedPackageContainerManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SharedPackageContainerManager);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>::type_name);
         return nullptr;
     }
 
@@ -6851,7 +6843,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- SharedPackageContainerMember class --------------------
-    static constexpr const char* const type_name_SharedPackageContainerMember = "SharedPackageContainerMember";
 
     static PyObject* _new_SharedPackageContainerMember(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6971,7 +6962,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- StagePackageOptions class --------------------
-    static constexpr const char* const type_name_StagePackageOptions = "StagePackageOptions";
 
     static PyObject* _new_StagePackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7601,7 +7591,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- UpdateSharedPackageContainerOptions class --------------------
-    static constexpr const char* const type_name_UpdateSharedPackageContainerOptions = "UpdateSharedPackageContainerOptions";
 
     static PyObject* _new_UpdateSharedPackageContainerOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7795,11 +7784,11 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- UpdateSharedPackageContainerResult class --------------------
-    static constexpr const char* const type_name_UpdateSharedPackageContainerResult = "UpdateSharedPackageContainerResult";
 
     static PyObject* _new_UpdateSharedPackageContainerResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UpdateSharedPackageContainerResult);
+        static_assert(py::py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>::type_name);
         return nullptr;
     }
 
@@ -7910,7 +7899,6 @@ namespace py::cpp::Windows::Management::Deployment
     };
 
     // ----- DeploymentProgress struct --------------------
-    static constexpr const char* const type_name_DeploymentProgress = "DeploymentProgress";
 
     PyObject* _new_DeploymentProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

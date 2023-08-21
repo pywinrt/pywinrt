@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Networking::Connectivity
 {
     // ----- AttributedNetworkUsage class --------------------
-    static constexpr const char* const type_name_AttributedNetworkUsage = "AttributedNetworkUsage";
 
     static PyObject* _new_AttributedNetworkUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AttributedNetworkUsage);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>::type_name);
         return nullptr;
     }
 
@@ -182,7 +182,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- CellularApnContext class --------------------
-    static constexpr const char* const type_name_CellularApnContext = "CellularApnContext";
 
     static PyObject* _new_CellularApnContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -616,11 +615,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ConnectionCost class --------------------
-    static constexpr const char* const type_name_ConnectionCost = "ConnectionCost";
 
     static PyObject* _new_ConnectionCost(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectionCost);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionCost>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionCost>::type_name);
         return nullptr;
     }
 
@@ -791,11 +790,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ConnectionProfile class --------------------
-    static constexpr const char* const type_name_ConnectionProfile = "ConnectionProfile";
 
     static PyObject* _new_ConnectionProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectionProfile);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionProfile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionProfile>::type_name);
         return nullptr;
     }
 
@@ -1480,7 +1479,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ConnectionProfileFilter class --------------------
-    static constexpr const char* const type_name_ConnectionProfileFilter = "ConnectionProfileFilter";
 
     static PyObject* _new_ConnectionProfileFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2030,11 +2028,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ConnectionSession class --------------------
-    static constexpr const char* const type_name_ConnectionSession = "ConnectionSession";
 
     static PyObject* _new_ConnectionSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectionSession);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectionSession>::type_name);
         return nullptr;
     }
 
@@ -2178,11 +2176,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ConnectivityInterval class --------------------
-    static constexpr const char* const type_name_ConnectivityInterval = "ConnectivityInterval";
 
     static PyObject* _new_ConnectivityInterval(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectivityInterval);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityInterval>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityInterval>::type_name);
         return nullptr;
     }
 
@@ -2293,11 +2291,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ConnectivityManager class --------------------
-    static constexpr const char* const type_name_ConnectivityManager = "ConnectivityManager";
 
     static PyObject* _new_ConnectivityManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ConnectivityManager);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ConnectivityManager>::type_name);
         return nullptr;
     }
 
@@ -2425,11 +2423,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- DataPlanStatus class --------------------
-    static constexpr const char* const type_name_DataPlanStatus = "DataPlanStatus";
 
     static PyObject* _new_DataPlanStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataPlanStatus);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanStatus>::type_name);
         return nullptr;
     }
 
@@ -2620,11 +2618,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- DataPlanUsage class --------------------
-    static constexpr const char* const type_name_DataPlanUsage = "DataPlanUsage";
 
     static PyObject* _new_DataPlanUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataPlanUsage);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanUsage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::DataPlanUsage>::type_name);
         return nullptr;
     }
 
@@ -2735,11 +2733,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- DataUsage class --------------------
-    static constexpr const char* const type_name_DataUsage = "DataUsage";
 
     static PyObject* _new_DataUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataUsage);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::DataUsage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::DataUsage>::type_name);
         return nullptr;
     }
 
@@ -2850,11 +2848,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- IPInformation class --------------------
-    static constexpr const char* const type_name_IPInformation = "IPInformation";
 
     static PyObject* _new_IPInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPInformation);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::IPInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::IPInformation>::type_name);
         return nullptr;
     }
 
@@ -2965,11 +2963,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- LanIdentifier class --------------------
-    static constexpr const char* const type_name_LanIdentifier = "LanIdentifier";
 
     static PyObject* _new_LanIdentifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LanIdentifier);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifier>::type_name);
         return nullptr;
     }
 
@@ -3100,11 +3098,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- LanIdentifierData class --------------------
-    static constexpr const char* const type_name_LanIdentifierData = "LanIdentifierData";
 
     static PyObject* _new_LanIdentifierData(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LanIdentifierData);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifierData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::LanIdentifierData>::type_name);
         return nullptr;
     }
 
@@ -3215,11 +3213,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkAdapter class --------------------
-    static constexpr const char* const type_name_NetworkAdapter = "NetworkAdapter";
 
     static PyObject* _new_NetworkAdapter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NetworkAdapter);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkAdapter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkAdapter>::type_name);
         return nullptr;
     }
 
@@ -3420,11 +3418,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkInformation class --------------------
-    static constexpr const char* const type_name_NetworkInformation = "NetworkInformation";
 
     static PyObject* _new_NetworkInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NetworkInformation);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkInformation>::type_name);
         return nullptr;
     }
 
@@ -3716,11 +3714,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkItem class --------------------
-    static constexpr const char* const type_name_NetworkItem = "NetworkItem";
 
     static PyObject* _new_NetworkItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NetworkItem);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkItem>::type_name);
         return nullptr;
     }
 
@@ -3841,11 +3839,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkSecuritySettings class --------------------
-    static constexpr const char* const type_name_NetworkSecuritySettings = "NetworkSecuritySettings";
 
     static PyObject* _new_NetworkSecuritySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NetworkSecuritySettings);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>::type_name);
         return nullptr;
     }
 
@@ -3956,11 +3954,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkStateChangeEventDetails class --------------------
-    static constexpr const char* const type_name_NetworkStateChangeEventDetails = "NetworkStateChangeEventDetails";
 
     static PyObject* _new_NetworkStateChangeEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NetworkStateChangeEventDetails);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>::type_name);
         return nullptr;
     }
 
@@ -4191,11 +4189,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkUsage class --------------------
-    static constexpr const char* const type_name_NetworkUsage = "NetworkUsage";
 
     static PyObject* _new_NetworkUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NetworkUsage);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::NetworkUsage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::NetworkUsage>::type_name);
         return nullptr;
     }
 
@@ -4326,11 +4324,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ProviderNetworkUsage class --------------------
-    static constexpr const char* const type_name_ProviderNetworkUsage = "ProviderNetworkUsage";
 
     static PyObject* _new_ProviderNetworkUsage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProviderNetworkUsage);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>::type_name);
         return nullptr;
     }
 
@@ -4461,11 +4459,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- ProxyConfiguration class --------------------
-    static constexpr const char* const type_name_ProxyConfiguration = "ProxyConfiguration";
 
     static PyObject* _new_ProxyConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProxyConfiguration);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::ProxyConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::ProxyConfiguration>::type_name);
         return nullptr;
     }
 
@@ -4576,7 +4574,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- RoutePolicy class --------------------
-    static constexpr const char* const type_name_RoutePolicy = "RoutePolicy";
 
     static PyObject* _new_RoutePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4738,11 +4735,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- WlanConnectionProfileDetails class --------------------
-    static constexpr const char* const type_name_WlanConnectionProfileDetails = "WlanConnectionProfileDetails";
 
     static PyObject* _new_WlanConnectionProfileDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WlanConnectionProfileDetails);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>::type_name);
         return nullptr;
     }
 
@@ -4843,11 +4840,11 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- WwanConnectionProfileDetails class --------------------
-    static constexpr const char* const type_name_WwanConnectionProfileDetails = "WwanConnectionProfileDetails";
 
     static PyObject* _new_WwanConnectionProfileDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WwanConnectionProfileDetails);
+        static_assert(py::py_type<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>::type_name);
         return nullptr;
     }
 
@@ -5058,7 +5055,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     };
 
     // ----- NetworkUsageStates struct --------------------
-    static constexpr const char* const type_name_NetworkUsageStates = "NetworkUsageStates";
 
     PyObject* _new_NetworkUsageStates(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

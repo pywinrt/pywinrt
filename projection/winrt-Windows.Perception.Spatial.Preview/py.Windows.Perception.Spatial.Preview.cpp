@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Perception::Spatial::Preview
 {
     // ----- SpatialGraphInteropFrameOfReferencePreview class --------------------
-    static constexpr const char* const type_name_SpatialGraphInteropFrameOfReferencePreview = "SpatialGraphInteropFrameOfReferencePreview";
 
     static PyObject* _new_SpatialGraphInteropFrameOfReferencePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialGraphInteropFrameOfReferencePreview);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
     };
 
     // ----- SpatialGraphInteropPreview class --------------------
-    static constexpr const char* const type_name_SpatialGraphInteropPreview = "SpatialGraphInteropPreview";
 
     static PyObject* _new_SpatialGraphInteropPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SpatialGraphInteropPreview);
+        static_assert(py::py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>::type_name);
         return nullptr;
     }
 

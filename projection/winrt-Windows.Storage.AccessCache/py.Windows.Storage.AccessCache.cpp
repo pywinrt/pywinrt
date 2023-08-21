@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Storage::AccessCache
 {
     // ----- AccessListEntryView class --------------------
-    static constexpr const char* const type_name_AccessListEntryView = "AccessListEntryView";
 
     static PyObject* _new_AccessListEntryView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AccessListEntryView);
+        static_assert(py::py_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>::type_name);
         return nullptr;
     }
 
@@ -355,11 +355,11 @@ namespace py::cpp::Windows::Storage::AccessCache
     };
 
     // ----- ItemRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_ItemRemovedEventArgs = "ItemRemovedEventArgs";
 
     static PyObject* _new_ItemRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ItemRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -450,11 +450,11 @@ namespace py::cpp::Windows::Storage::AccessCache
     };
 
     // ----- StorageApplicationPermissions class --------------------
-    static constexpr const char* const type_name_StorageApplicationPermissions = "StorageApplicationPermissions";
 
     static PyObject* _new_StorageApplicationPermissions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageApplicationPermissions);
+        static_assert(py::py_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>::type_name);
         return nullptr;
     }
 
@@ -608,11 +608,11 @@ namespace py::cpp::Windows::Storage::AccessCache
     };
 
     // ----- StorageItemAccessList class --------------------
-    static constexpr const char* const type_name_StorageItemAccessList = "StorageItemAccessList";
 
     static PyObject* _new_StorageItemAccessList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageItemAccessList);
+        static_assert(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>::type_name);
         return nullptr;
     }
 
@@ -1120,11 +1120,11 @@ namespace py::cpp::Windows::Storage::AccessCache
     };
 
     // ----- StorageItemMostRecentlyUsedList class --------------------
-    static constexpr const char* const type_name_StorageItemMostRecentlyUsedList = "StorageItemMostRecentlyUsedList";
 
     static PyObject* _new_StorageItemMostRecentlyUsedList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageItemMostRecentlyUsedList);
+        static_assert(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>::type_name);
         return nullptr;
     }
 
@@ -1723,11 +1723,11 @@ namespace py::cpp::Windows::Storage::AccessCache
     };
 
     // ----- IStorageItemAccessList interface --------------------
-    static constexpr const char* const type_name_IStorageItemAccessList = "IStorageItemAccessList";
 
     static PyObject* _new_IStorageItemAccessList(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageItemAccessList);
+        static_assert(py::py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>::type_name);
         return nullptr;
     }
 
@@ -2235,7 +2235,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     };
 
     // ----- AccessListEntry struct --------------------
-    static constexpr const char* const type_name_AccessListEntry = "AccessListEntry";
 
     PyObject* _new_AccessListEntry(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

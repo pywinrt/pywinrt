@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::SerialCommunication
 {
     // ----- ErrorReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_ErrorReceivedEventArgs = "ErrorReceivedEventArgs";
 
     static PyObject* _new_ErrorReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ErrorReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     };
 
     // ----- PinChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PinChangedEventArgs = "PinChangedEventArgs";
 
     static PyObject* _new_PinChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PinChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -197,11 +197,11 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     };
 
     // ----- SerialDevice class --------------------
-    static constexpr const char* const type_name_SerialDevice = "SerialDevice";
 
     static PyObject* _new_SerialDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SerialDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>::type_name);
         return nullptr;
     }
 

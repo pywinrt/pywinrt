@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Services::Cortana
 {
     // ----- CortanaActionableInsights class --------------------
-    static constexpr const char* const type_name_CortanaActionableInsights = "CortanaActionableInsights";
 
     static PyObject* _new_CortanaActionableInsights(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CortanaActionableInsights);
+        static_assert(py::py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>::type_name);
         return nullptr;
     }
 
@@ -353,7 +353,6 @@ namespace py::cpp::Windows::Services::Cortana
     };
 
     // ----- CortanaActionableInsightsOptions class --------------------
-    static constexpr const char* const type_name_CortanaActionableInsightsOptions = "CortanaActionableInsightsOptions";
 
     static PyObject* _new_CortanaActionableInsightsOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -547,11 +546,11 @@ namespace py::cpp::Windows::Services::Cortana
     };
 
     // ----- CortanaPermissionsManager class --------------------
-    static constexpr const char* const type_name_CortanaPermissionsManager = "CortanaPermissionsManager";
 
     static PyObject* _new_CortanaPermissionsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CortanaPermissionsManager);
+        static_assert(py::py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>::type_name);
         return nullptr;
     }
 
@@ -778,11 +777,11 @@ namespace py::cpp::Windows::Services::Cortana
     };
 
     // ----- CortanaSettings class --------------------
-    static constexpr const char* const type_name_CortanaSettings = "CortanaSettings";
 
     static PyObject* _new_CortanaSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CortanaSettings);
+        static_assert(py::py_type<winrt::Windows::Services::Cortana::CortanaSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Services::Cortana::CortanaSettings>::type_name);
         return nullptr;
     }
 

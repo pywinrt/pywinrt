@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Composition::Effects
 {
     // ----- SceneLightingEffect class --------------------
-    static constexpr const char* const type_name_SceneLightingEffect = "SceneLightingEffect";
 
     static PyObject* _new_SceneLightingEffect(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

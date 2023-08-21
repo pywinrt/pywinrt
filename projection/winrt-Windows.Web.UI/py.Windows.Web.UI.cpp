@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Web::UI
 {
     // ----- WebViewControlContentLoadingEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlContentLoadingEventArgs = "WebViewControlContentLoadingEventArgs";
 
     static PyObject* _new_WebViewControlContentLoadingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlContentLoadingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -102,11 +102,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlDOMContentLoadedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlDOMContentLoadedEventArgs = "WebViewControlDOMContentLoadedEventArgs";
 
     static PyObject* _new_WebViewControlDOMContentLoadedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlDOMContentLoadedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -197,11 +197,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlDeferredPermissionRequest class --------------------
-    static constexpr const char* const type_name_WebViewControlDeferredPermissionRequest = "WebViewControlDeferredPermissionRequest";
 
     static PyObject* _new_WebViewControlDeferredPermissionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlDeferredPermissionRequest);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>::type_name);
         return nullptr;
     }
 
@@ -394,11 +394,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlLongRunningScriptDetectedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlLongRunningScriptDetectedEventArgs = "WebViewControlLongRunningScriptDetectedEventArgs";
 
     static PyObject* _new_WebViewControlLongRunningScriptDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlLongRunningScriptDetectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -537,11 +537,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlNavigationCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlNavigationCompletedEventArgs = "WebViewControlNavigationCompletedEventArgs";
 
     static PyObject* _new_WebViewControlNavigationCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlNavigationCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -672,11 +672,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlNavigationStartingEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlNavigationStartingEventArgs = "WebViewControlNavigationStartingEventArgs";
 
     static PyObject* _new_WebViewControlNavigationStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlNavigationStartingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -815,11 +815,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlNewWindowRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlNewWindowRequestedEventArgs = "WebViewControlNewWindowRequestedEventArgs";
 
     static PyObject* _new_WebViewControlNewWindowRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlNewWindowRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1056,11 +1056,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlPermissionRequest class --------------------
-    static constexpr const char* const type_name_WebViewControlPermissionRequest = "WebViewControlPermissionRequest";
 
     static PyObject* _new_WebViewControlPermissionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlPermissionRequest);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>::type_name);
         return nullptr;
     }
 
@@ -1304,11 +1304,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlPermissionRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlPermissionRequestedEventArgs = "WebViewControlPermissionRequestedEventArgs";
 
     static PyObject* _new_WebViewControlPermissionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlPermissionRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1399,11 +1399,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlScriptNotifyEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlScriptNotifyEventArgs = "WebViewControlScriptNotifyEventArgs";
 
     static PyObject* _new_WebViewControlScriptNotifyEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlScriptNotifyEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1514,11 +1514,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlSettings class --------------------
-    static constexpr const char* const type_name_WebViewControlSettings = "WebViewControlSettings";
 
     static PyObject* _new_WebViewControlSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlSettings);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlSettings>::type_name);
         return nullptr;
     }
 
@@ -1733,11 +1733,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlUnsupportedUriSchemeIdentifiedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs = "WebViewControlUnsupportedUriSchemeIdentifiedEventArgs";
 
     static PyObject* _new_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1876,11 +1876,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlUnviewableContentIdentifiedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlUnviewableContentIdentifiedEventArgs = "WebViewControlUnviewableContentIdentifiedEventArgs";
 
     static PyObject* _new_WebViewControlUnviewableContentIdentifiedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlUnviewableContentIdentifiedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2011,11 +2011,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- WebViewControlWebResourceRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WebViewControlWebResourceRequestedEventArgs = "WebViewControlWebResourceRequestedEventArgs";
 
     static PyObject* _new_WebViewControlWebResourceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebViewControlWebResourceRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2184,11 +2184,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- IWebViewControl interface --------------------
-    static constexpr const char* const type_name_IWebViewControl = "IWebViewControl";
 
     static PyObject* _new_IWebViewControl(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebViewControl);
+        static_assert(py::py_type<winrt::Windows::Web::UI::IWebViewControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::IWebViewControl>::type_name);
         return nullptr;
     }
 
@@ -3665,11 +3665,11 @@ namespace py::cpp::Windows::Web::UI
     };
 
     // ----- IWebViewControl2 interface --------------------
-    static constexpr const char* const type_name_IWebViewControl2 = "IWebViewControl2";
 
     static PyObject* _new_IWebViewControl2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IWebViewControl2);
+        static_assert(py::py_type<winrt::Windows::Web::UI::IWebViewControl2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::UI::IWebViewControl2>::type_name);
         return nullptr;
     }
 

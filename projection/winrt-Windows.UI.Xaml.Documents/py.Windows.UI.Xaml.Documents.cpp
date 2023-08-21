@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Xaml::Documents
 {
     // ----- Block class --------------------
-    static constexpr const char* const type_name_Block = "Block";
 
     static PyObject* _new_Block(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Block);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Block>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::Block>::type_name);
         return nullptr;
     }
 
@@ -442,11 +442,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- BlockCollection class --------------------
-    static constexpr const char* const type_name_BlockCollection = "BlockCollection";
 
     static PyObject* _new_BlockCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BlockCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>::type_name);
         return nullptr;
     }
 
@@ -1065,7 +1065,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Bold class --------------------
-    static constexpr const char* const type_name_Bold = "Bold";
 
     static PyObject* _new_Bold(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1163,7 +1162,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- ContactContentLinkProvider class --------------------
-    static constexpr const char* const type_name_ContactContentLinkProvider = "ContactContentLinkProvider";
 
     static PyObject* _new_ContactContentLinkProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1261,7 +1259,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- ContentLink class --------------------
-    static constexpr const char* const type_name_ContentLink = "ContentLink";
 
     static PyObject* _new_ContentLink(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2518,11 +2515,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- ContentLinkInvokedEventArgs class --------------------
-    static constexpr const char* const type_name_ContentLinkInvokedEventArgs = "ContentLinkInvokedEventArgs";
 
     static PyObject* _new_ContentLinkInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContentLinkInvokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2661,11 +2658,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- ContentLinkProvider class --------------------
-    static constexpr const char* const type_name_ContentLinkProvider = "ContentLinkProvider";
 
     static PyObject* _new_ContentLinkProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContentLinkProvider);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>::type_name);
         return nullptr;
     }
 
@@ -2736,7 +2733,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- ContentLinkProviderCollection class --------------------
-    static constexpr const char* const type_name_ContentLinkProviderCollection = "ContentLinkProviderCollection";
 
     static PyObject* _new_ContentLinkProviderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3382,7 +3378,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Glyphs class --------------------
-    static constexpr const char* const type_name_Glyphs = "Glyphs";
 
     static PyObject* _new_Glyphs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4180,7 +4175,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Hyperlink class --------------------
-    static constexpr const char* const type_name_Hyperlink = "Hyperlink";
 
     static PyObject* _new_Hyperlink(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5389,11 +5383,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- HyperlinkClickEventArgs class --------------------
-    static constexpr const char* const type_name_HyperlinkClickEventArgs = "HyperlinkClickEventArgs";
 
     static PyObject* _new_HyperlinkClickEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HyperlinkClickEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5464,11 +5458,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Inline class --------------------
-    static constexpr const char* const type_name_Inline = "Inline";
 
     static PyObject* _new_Inline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Inline);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Inline>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::Inline>::type_name);
         return nullptr;
     }
 
@@ -5539,11 +5533,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- InlineCollection class --------------------
-    static constexpr const char* const type_name_InlineCollection = "InlineCollection";
 
     static PyObject* _new_InlineCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InlineCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>::type_name);
         return nullptr;
     }
 
@@ -6162,7 +6156,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- InlineUIContainer class --------------------
-    static constexpr const char* const type_name_InlineUIContainer = "InlineUIContainer";
 
     static PyObject* _new_InlineUIContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6308,7 +6301,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Italic class --------------------
-    static constexpr const char* const type_name_Italic = "Italic";
 
     static PyObject* _new_Italic(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6406,7 +6398,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- LineBreak class --------------------
-    static constexpr const char* const type_name_LineBreak = "LineBreak";
 
     static PyObject* _new_LineBreak(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6504,7 +6495,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Paragraph class --------------------
-    static constexpr const char* const type_name_Paragraph = "Paragraph";
 
     static PyObject* _new_Paragraph(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6710,7 +6700,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- PlaceContentLinkProvider class --------------------
-    static constexpr const char* const type_name_PlaceContentLinkProvider = "PlaceContentLinkProvider";
 
     static PyObject* _new_PlaceContentLinkProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6808,7 +6797,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Run class --------------------
-    static constexpr const char* const type_name_Run = "Run";
 
     static PyObject* _new_Run(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7042,7 +7030,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Span class --------------------
-    static constexpr const char* const type_name_Span = "Span";
 
     static PyObject* _new_Span(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7188,11 +7175,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- TextElement class --------------------
-    static constexpr const char* const type_name_TextElement = "TextElement";
 
     static PyObject* _new_TextElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TextElement);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::TextElement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::TextElement>::type_name);
         return nullptr;
     }
 
@@ -8853,7 +8840,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- TextHighlighter class --------------------
-    static constexpr const char* const type_name_TextHighlighter = "TextHighlighter";
 
     static PyObject* _new_TextHighlighter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9127,11 +9113,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- TextHighlighterBase class --------------------
-    static constexpr const char* const type_name_TextHighlighterBase = "TextHighlighterBase";
 
     static PyObject* _new_TextHighlighterBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TextHighlighterBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>::type_name);
         return nullptr;
     }
 
@@ -9202,11 +9188,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- TextPointer class --------------------
-    static constexpr const char* const type_name_TextPointer = "TextPointer";
 
     static PyObject* _new_TextPointer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TextPointer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::TextPointer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::TextPointer>::type_name);
         return nullptr;
     }
 
@@ -9422,11 +9408,11 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Typography class --------------------
-    static constexpr const char* const type_name_Typography = "Typography";
 
     static PyObject* _new_Typography(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Typography);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Documents::Typography>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Documents::Typography>::type_name);
         return nullptr;
     }
 
@@ -13215,7 +13201,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- Underline class --------------------
-    static constexpr const char* const type_name_Underline = "Underline";
 
     static PyObject* _new_Underline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13313,7 +13298,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     };
 
     // ----- TextRange struct --------------------
-    static constexpr const char* const type_name_TextRange = "TextRange";
 
     PyObject* _new_TextRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

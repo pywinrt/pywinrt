@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Devices::Core
 {
     // ----- CameraIntrinsics class --------------------
-    static constexpr const char* const type_name_CameraIntrinsics = "CameraIntrinsics";
 
     static PyObject* _new_CameraIntrinsics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -516,11 +515,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- DepthCorrelatedCoordinateMapper class --------------------
-    static constexpr const char* const type_name_DepthCorrelatedCoordinateMapper = "DepthCorrelatedCoordinateMapper";
 
     static PyObject* _new_DepthCorrelatedCoordinateMapper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DepthCorrelatedCoordinateMapper);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper>::type_name);
         return nullptr;
     }
 
@@ -782,11 +781,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameControlCapabilities class --------------------
-    static constexpr const char* const type_name_FrameControlCapabilities = "FrameControlCapabilities";
 
     static PyObject* _new_FrameControlCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameControlCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameControlCapabilities>::type_name);
         return nullptr;
     }
 
@@ -977,7 +976,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameController class --------------------
-    static constexpr const char* const type_name_FrameController = "FrameController";
 
     static PyObject* _new_FrameController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1223,11 +1221,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameExposureCapabilities class --------------------
-    static constexpr const char* const type_name_FrameExposureCapabilities = "FrameExposureCapabilities";
 
     static PyObject* _new_FrameExposureCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameExposureCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCapabilities>::type_name);
         return nullptr;
     }
 
@@ -1378,11 +1376,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameExposureCompensationCapabilities class --------------------
-    static constexpr const char* const type_name_FrameExposureCompensationCapabilities = "FrameExposureCompensationCapabilities";
 
     static PyObject* _new_FrameExposureCompensationCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameExposureCompensationCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities>::type_name);
         return nullptr;
     }
 
@@ -1533,11 +1531,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameExposureCompensationControl class --------------------
-    static constexpr const char* const type_name_FrameExposureCompensationControl = "FrameExposureCompensationControl";
 
     static PyObject* _new_FrameExposureCompensationControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameExposureCompensationControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureCompensationControl>::type_name);
         return nullptr;
     }
 
@@ -1656,11 +1654,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameExposureControl class --------------------
-    static constexpr const char* const type_name_FrameExposureControl = "FrameExposureControl";
 
     static PyObject* _new_FrameExposureControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameExposureControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameExposureControl>::type_name);
         return nullptr;
     }
 
@@ -1827,11 +1825,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameFlashCapabilities class --------------------
-    static constexpr const char* const type_name_FrameFlashCapabilities = "FrameFlashCapabilities";
 
     static PyObject* _new_FrameFlashCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameFlashCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashCapabilities>::type_name);
         return nullptr;
     }
 
@@ -1962,11 +1960,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameFlashControl class --------------------
-    static constexpr const char* const type_name_FrameFlashControl = "FrameFlashControl";
 
     static PyObject* _new_FrameFlashControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameFlashControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFlashControl>::type_name);
         return nullptr;
     }
 
@@ -2229,11 +2227,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameFocusCapabilities class --------------------
-    static constexpr const char* const type_name_FrameFocusCapabilities = "FrameFocusCapabilities";
 
     static PyObject* _new_FrameFocusCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameFocusCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusCapabilities>::type_name);
         return nullptr;
     }
 
@@ -2384,11 +2382,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameFocusControl class --------------------
-    static constexpr const char* const type_name_FrameFocusControl = "FrameFocusControl";
 
     static PyObject* _new_FrameFocusControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameFocusControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameFocusControl>::type_name);
         return nullptr;
     }
 
@@ -2507,11 +2505,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameIsoSpeedCapabilities class --------------------
-    static constexpr const char* const type_name_FrameIsoSpeedCapabilities = "FrameIsoSpeedCapabilities";
 
     static PyObject* _new_FrameIsoSpeedCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameIsoSpeedCapabilities);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities>::type_name);
         return nullptr;
     }
 
@@ -2662,11 +2660,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- FrameIsoSpeedControl class --------------------
-    static constexpr const char* const type_name_FrameIsoSpeedControl = "FrameIsoSpeedControl";
 
     static PyObject* _new_FrameIsoSpeedControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameIsoSpeedControl);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::FrameIsoSpeedControl>::type_name);
         return nullptr;
     }
 
@@ -2833,11 +2831,11 @@ namespace py::cpp::Windows::Media::Devices::Core
     };
 
     // ----- VariablePhotoSequenceController class --------------------
-    static constexpr const char* const type_name_VariablePhotoSequenceController = "VariablePhotoSequenceController";
 
     static PyObject* _new_VariablePhotoSequenceController(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VariablePhotoSequenceController);
+        static_assert(py::py_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Devices::Core::VariablePhotoSequenceController>::type_name);
         return nullptr;
     }
 

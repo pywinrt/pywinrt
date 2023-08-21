@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Payments::Provider
 {
     // ----- PaymentAppCanMakePaymentTriggerDetails class --------------------
-    static constexpr const char* const type_name_PaymentAppCanMakePaymentTriggerDetails = "PaymentAppCanMakePaymentTriggerDetails";
 
     static PyObject* _new_PaymentAppCanMakePaymentTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentAppCanMakePaymentTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppCanMakePaymentTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -135,11 +135,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     };
 
     // ----- PaymentAppManager class --------------------
-    static constexpr const char* const type_name_PaymentAppManager = "PaymentAppManager";
 
     static PyObject* _new_PaymentAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentAppManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentAppManager>::type_name);
         return nullptr;
     }
 
@@ -312,11 +312,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     };
 
     // ----- PaymentTransaction class --------------------
-    static constexpr const char* const type_name_PaymentTransaction = "PaymentTransaction";
 
     static PyObject* _new_PaymentTransaction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentTransaction);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransaction>::type_name);
         return nullptr;
     }
 
@@ -710,11 +710,11 @@ namespace py::cpp::Windows::ApplicationModel::Payments::Provider
     };
 
     // ----- PaymentTransactionAcceptResult class --------------------
-    static constexpr const char* const type_name_PaymentTransactionAcceptResult = "PaymentTransactionAcceptResult";
 
     static PyObject* _new_PaymentTransactionAcceptResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PaymentTransactionAcceptResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Payments::Provider::PaymentTransactionAcceptResult>::type_name);
         return nullptr;
     }
 

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Data::Xml::Xsl
 {
     // ----- XsltProcessor class --------------------
-    static constexpr const char* const type_name_XsltProcessor = "XsltProcessor";
 
     static PyObject* _new_XsltProcessor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Input::Inking
 {
     // ----- InkDrawingAttributes class --------------------
-    static constexpr const char* const type_name_InkDrawingAttributes = "InkDrawingAttributes";
 
     static PyObject* _new_InkDrawingAttributes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -579,11 +578,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkDrawingAttributesPencilProperties class --------------------
-    static constexpr const char* const type_name_InkDrawingAttributesPencilProperties = "InkDrawingAttributesPencilProperties";
 
     static PyObject* _new_InkDrawingAttributesPencilProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkDrawingAttributesPencilProperties);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkDrawingAttributesPencilProperties>::type_name);
         return nullptr;
     }
 
@@ -702,11 +701,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkInputConfiguration class --------------------
-    static constexpr const char* const type_name_InkInputConfiguration = "InkInputConfiguration";
 
     static PyObject* _new_InkInputConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkInputConfiguration);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkInputConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkInputConfiguration>::type_name);
         return nullptr;
     }
 
@@ -921,11 +920,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkInputProcessingConfiguration class --------------------
-    static constexpr const char* const type_name_InkInputProcessingConfiguration = "InkInputProcessingConfiguration";
 
     static PyObject* _new_InkInputProcessingConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkInputProcessingConfiguration);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkInputProcessingConfiguration>::type_name);
         return nullptr;
     }
 
@@ -1092,7 +1091,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkManager class --------------------
-    static constexpr const char* const type_name_InkManager = "InkManager";
 
     static PyObject* _new_InkManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1914,11 +1912,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkModelerAttributes class --------------------
-    static constexpr const char* const type_name_InkModelerAttributes = "InkModelerAttributes";
 
     static PyObject* _new_InkModelerAttributes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkModelerAttributes);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkModelerAttributes>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkModelerAttributes>::type_name);
         return nullptr;
     }
 
@@ -2133,7 +2131,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkPoint class --------------------
-    static constexpr const char* const type_name_InkPoint = "InkPoint";
 
     static PyObject* _new_InkPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2353,11 +2350,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkPresenter class --------------------
-    static constexpr const char* const type_name_InkPresenter = "InkPresenter";
 
     static PyObject* _new_InkPresenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkPresenter);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkPresenter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkPresenter>::type_name);
         return nullptr;
     }
 
@@ -2916,7 +2913,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkPresenterProtractor class --------------------
-    static constexpr const char* const type_name_InkPresenterProtractor = "InkPresenterProtractor";
 
     static PyObject* _new_InkPresenterProtractor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3564,7 +3560,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkPresenterRuler class --------------------
-    static constexpr const char* const type_name_InkPresenterRuler = "InkPresenterRuler";
 
     static PyObject* _new_InkPresenterRuler(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4068,11 +4063,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkRecognitionResult class --------------------
-    static constexpr const char* const type_name_InkRecognitionResult = "InkRecognitionResult";
 
     static PyObject* _new_InkRecognitionResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkRecognitionResult);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkRecognitionResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkRecognitionResult>::type_name);
         return nullptr;
     }
 
@@ -4223,11 +4218,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkRecognizer class --------------------
-    static constexpr const char* const type_name_InkRecognizer = "InkRecognizer";
 
     static PyObject* _new_InkRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkRecognizer);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkRecognizer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkRecognizer>::type_name);
         return nullptr;
     }
 
@@ -4318,7 +4313,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkRecognizerContainer class --------------------
-    static constexpr const char* const type_name_InkRecognizerContainer = "InkRecognizerContainer";
 
     static PyObject* _new_InkRecognizerContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4512,11 +4506,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStroke class --------------------
-    static constexpr const char* const type_name_InkStroke = "InkStroke";
 
     static PyObject* _new_InkStroke(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkStroke);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkStroke>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkStroke>::type_name);
         return nullptr;
     }
 
@@ -4997,7 +4991,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStrokeBuilder class --------------------
-    static constexpr const char* const type_name_InkStrokeBuilder = "InkStrokeBuilder";
 
     static PyObject* _new_InkStrokeBuilder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5313,7 +5306,6 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStrokeContainer class --------------------
-    static constexpr const char* const type_name_InkStrokeContainer = "InkStrokeContainer";
 
     static PyObject* _new_InkStrokeContainer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5958,11 +5950,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStrokeInput class --------------------
-    static constexpr const char* const type_name_InkStrokeInput = "InkStrokeInput";
 
     static PyObject* _new_InkStrokeInput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkStrokeInput);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokeInput>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokeInput>::type_name);
         return nullptr;
     }
 
@@ -6233,11 +6225,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStrokeRenderingSegment class --------------------
-    static constexpr const char* const type_name_InkStrokeRenderingSegment = "InkStrokeRenderingSegment";
 
     static PyObject* _new_InkStrokeRenderingSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkStrokeRenderingSegment);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokeRenderingSegment>::type_name);
         return nullptr;
     }
 
@@ -6448,11 +6440,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStrokesCollectedEventArgs class --------------------
-    static constexpr const char* const type_name_InkStrokesCollectedEventArgs = "InkStrokesCollectedEventArgs";
 
     static PyObject* _new_InkStrokesCollectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkStrokesCollectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokesCollectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6543,11 +6535,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkStrokesErasedEventArgs class --------------------
-    static constexpr const char* const type_name_InkStrokesErasedEventArgs = "InkStrokesErasedEventArgs";
 
     static PyObject* _new_InkStrokesErasedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkStrokesErasedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkStrokesErasedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6638,11 +6630,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkSynchronizer class --------------------
-    static constexpr const char* const type_name_InkSynchronizer = "InkSynchronizer";
 
     static PyObject* _new_InkSynchronizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkSynchronizer);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkSynchronizer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkSynchronizer>::type_name);
         return nullptr;
     }
 
@@ -6774,11 +6766,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- InkUnprocessedInput class --------------------
-    static constexpr const char* const type_name_InkUnprocessedInput = "InkUnprocessedInput";
 
     static PyObject* _new_InkUnprocessedInput(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkUnprocessedInput);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::InkUnprocessedInput>::type_name);
         return nullptr;
     }
 
@@ -7184,11 +7176,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- PenAndInkSettings class --------------------
-    static constexpr const char* const type_name_PenAndInkSettings = "PenAndInkSettings";
 
     static PyObject* _new_PenAndInkSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PenAndInkSettings);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::PenAndInkSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::PenAndInkSettings>::type_name);
         return nullptr;
     }
 
@@ -7442,11 +7434,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- IInkPointFactory interface --------------------
-    static constexpr const char* const type_name_IInkPointFactory = "IInkPointFactory";
 
     static PyObject* _new_IInkPointFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkPointFactory);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkPointFactory>::type_name);
         return nullptr;
     }
 
@@ -7550,11 +7542,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- IInkPresenterRulerFactory interface --------------------
-    static constexpr const char* const type_name_IInkPresenterRulerFactory = "IInkPresenterRulerFactory";
 
     static PyObject* _new_IInkPresenterRulerFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkPresenterRulerFactory);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterRulerFactory>::type_name);
         return nullptr;
     }
 
@@ -7657,11 +7649,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- IInkPresenterStencil interface --------------------
-    static constexpr const char* const type_name_IInkPresenterStencil = "IInkPresenterStencil";
 
     static PyObject* _new_IInkPresenterStencil(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkPresenterStencil);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkPresenterStencil>::type_name);
         return nullptr;
     }
 
@@ -7944,11 +7936,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- IInkRecognizerContainer interface --------------------
-    static constexpr const char* const type_name_IInkRecognizerContainer = "IInkRecognizerContainer";
 
     static PyObject* _new_IInkRecognizerContainer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkRecognizerContainer);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkRecognizerContainer>::type_name);
         return nullptr;
     }
 
@@ -8115,11 +8107,11 @@ namespace py::cpp::Windows::UI::Input::Inking
     };
 
     // ----- IInkStrokeContainer interface --------------------
-    static constexpr const char* const type_name_IInkStrokeContainer = "IInkStrokeContainer";
 
     static PyObject* _new_IInkStrokeContainer(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IInkStrokeContainer);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Inking::IInkStrokeContainer>::type_name);
         return nullptr;
     }
 

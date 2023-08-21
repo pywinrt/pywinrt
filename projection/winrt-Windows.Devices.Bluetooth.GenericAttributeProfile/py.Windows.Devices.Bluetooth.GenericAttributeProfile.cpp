@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 {
     // ----- GattCharacteristic class --------------------
-    static constexpr const char* const type_name_GattCharacteristic = "GattCharacteristic";
 
     static PyObject* _new_GattCharacteristic(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattCharacteristic);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic>::type_name);
         return nullptr;
     }
 
@@ -742,11 +742,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattCharacteristicUuids class --------------------
-    static constexpr const char* const type_name_GattCharacteristicUuids = "GattCharacteristicUuids";
 
     static PyObject* _new_GattCharacteristicUuids(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattCharacteristicUuids);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicUuids>::type_name);
         return nullptr;
     }
 
@@ -2416,11 +2416,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattCharacteristicsResult class --------------------
-    static constexpr const char* const type_name_GattCharacteristicsResult = "GattCharacteristicsResult";
 
     static PyObject* _new_GattCharacteristicsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattCharacteristicsResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult>::type_name);
         return nullptr;
     }
 
@@ -2551,11 +2551,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattClientNotificationResult class --------------------
-    static constexpr const char* const type_name_GattClientNotificationResult = "GattClientNotificationResult";
 
     static PyObject* _new_GattClientNotificationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattClientNotificationResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult>::type_name);
         return nullptr;
     }
 
@@ -2706,11 +2706,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattDescriptor class --------------------
-    static constexpr const char* const type_name_GattDescriptor = "GattDescriptor";
 
     static PyObject* _new_GattDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattDescriptor);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor>::type_name);
         return nullptr;
     }
 
@@ -3015,11 +3015,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattDescriptorUuids class --------------------
-    static constexpr const char* const type_name_GattDescriptorUuids = "GattDescriptorUuids";
 
     static PyObject* _new_GattDescriptorUuids(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattDescriptorUuids);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorUuids>::type_name);
         return nullptr;
     }
 
@@ -3189,11 +3189,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattDescriptorsResult class --------------------
-    static constexpr const char* const type_name_GattDescriptorsResult = "GattDescriptorsResult";
 
     static PyObject* _new_GattDescriptorsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattDescriptorsResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult>::type_name);
         return nullptr;
     }
 
@@ -3324,11 +3324,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattDeviceService class --------------------
-    static constexpr const char* const type_name_GattDeviceService = "GattDeviceService";
 
     static PyObject* _new_GattDeviceService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattDeviceService);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService>::type_name);
         return nullptr;
     }
 
@@ -4261,11 +4261,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattDeviceServicesResult class --------------------
-    static constexpr const char* const type_name_GattDeviceServicesResult = "GattDeviceServicesResult";
 
     static PyObject* _new_GattDeviceServicesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattDeviceServicesResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult>::type_name);
         return nullptr;
     }
 
@@ -4396,11 +4396,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalCharacteristic class --------------------
-    static constexpr const char* const type_name_GattLocalCharacteristic = "GattLocalCharacteristic";
 
     static PyObject* _new_GattLocalCharacteristic(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattLocalCharacteristic);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic>::type_name);
         return nullptr;
     }
 
@@ -4872,7 +4872,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalCharacteristicParameters class --------------------
-    static constexpr const char* const type_name_GattLocalCharacteristicParameters = "GattLocalCharacteristicParameters";
 
     static PyObject* _new_GattLocalCharacteristicParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5230,11 +5229,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalCharacteristicResult class --------------------
-    static constexpr const char* const type_name_GattLocalCharacteristicResult = "GattLocalCharacteristicResult";
 
     static PyObject* _new_GattLocalCharacteristicResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattLocalCharacteristicResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult>::type_name);
         return nullptr;
     }
 
@@ -5345,11 +5344,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalDescriptor class --------------------
-    static constexpr const char* const type_name_GattLocalDescriptor = "GattLocalDescriptor";
 
     static PyObject* _new_GattLocalDescriptor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattLocalDescriptor);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor>::type_name);
         return nullptr;
     }
 
@@ -5590,7 +5589,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalDescriptorParameters class --------------------
-    static constexpr const char* const type_name_GattLocalDescriptorParameters = "GattLocalDescriptorParameters";
 
     static PyObject* _new_GattLocalDescriptorParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5832,11 +5830,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalDescriptorResult class --------------------
-    static constexpr const char* const type_name_GattLocalDescriptorResult = "GattLocalDescriptorResult";
 
     static PyObject* _new_GattLocalDescriptorResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattLocalDescriptorResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult>::type_name);
         return nullptr;
     }
 
@@ -5947,11 +5945,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattLocalService class --------------------
-    static constexpr const char* const type_name_GattLocalService = "GattLocalService";
 
     static PyObject* _new_GattLocalService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattLocalService);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService>::type_name);
         return nullptr;
     }
 
@@ -6095,11 +6093,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattPresentationFormat class --------------------
-    static constexpr const char* const type_name_GattPresentationFormat = "GattPresentationFormat";
 
     static PyObject* _new_GattPresentationFormat(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattPresentationFormat);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat>::type_name);
         return nullptr;
     }
 
@@ -6346,11 +6344,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattPresentationFormatTypes class --------------------
-    static constexpr const char* const type_name_GattPresentationFormatTypes = "GattPresentationFormatTypes";
 
     static PyObject* _new_GattPresentationFormatTypes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattPresentationFormatTypes);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormatTypes>::type_name);
         return nullptr;
     }
 
@@ -6940,11 +6938,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattProtocolError class --------------------
-    static constexpr const char* const type_name_GattProtocolError = "GattProtocolError";
 
     static PyObject* _new_GattProtocolError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattProtocolError);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattProtocolError>::type_name);
         return nullptr;
     }
 
@@ -7334,11 +7332,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattReadClientCharacteristicConfigurationDescriptorResult class --------------------
-    static constexpr const char* const type_name_GattReadClientCharacteristicConfigurationDescriptorResult = "GattReadClientCharacteristicConfigurationDescriptorResult";
 
     static PyObject* _new_GattReadClientCharacteristicConfigurationDescriptorResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattReadClientCharacteristicConfigurationDescriptorResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult>::type_name);
         return nullptr;
     }
 
@@ -7469,11 +7467,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattReadRequest class --------------------
-    static constexpr const char* const type_name_GattReadRequest = "GattReadRequest";
 
     static PyObject* _new_GattReadRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattReadRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest>::type_name);
         return nullptr;
     }
 
@@ -7715,11 +7713,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattReadRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_GattReadRequestedEventArgs = "GattReadRequestedEventArgs";
 
     static PyObject* _new_GattReadRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattReadRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7870,11 +7868,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattReadResult class --------------------
-    static constexpr const char* const type_name_GattReadResult = "GattReadResult";
 
     static PyObject* _new_GattReadResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattReadResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult>::type_name);
         return nullptr;
     }
 
@@ -8005,7 +8003,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattReliableWriteTransaction class --------------------
-    static constexpr const char* const type_name_GattReliableWriteTransaction = "GattReliableWriteTransaction";
 
     static PyObject* _new_GattReliableWriteTransaction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8197,11 +8194,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattRequestStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GattRequestStateChangedEventArgs = "GattRequestStateChangedEventArgs";
 
     static PyObject* _new_GattRequestStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattRequestStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8312,11 +8309,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattServiceProvider class --------------------
-    static constexpr const char* const type_name_GattServiceProvider = "GattServiceProvider";
 
     static PyObject* _new_GattServiceProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattServiceProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider>::type_name);
         return nullptr;
     }
 
@@ -8587,11 +8584,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattServiceProviderAdvertisementStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GattServiceProviderAdvertisementStatusChangedEventArgs = "GattServiceProviderAdvertisementStatusChangedEventArgs";
 
     static PyObject* _new_GattServiceProviderAdvertisementStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattServiceProviderAdvertisementStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8702,7 +8699,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattServiceProviderAdvertisingParameters class --------------------
-    static constexpr const char* const type_name_GattServiceProviderAdvertisingParameters = "GattServiceProviderAdvertisingParameters";
 
     static PyObject* _new_GattServiceProviderAdvertisingParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8944,11 +8940,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattServiceProviderResult class --------------------
-    static constexpr const char* const type_name_GattServiceProviderResult = "GattServiceProviderResult";
 
     static PyObject* _new_GattServiceProviderResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattServiceProviderResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult>::type_name);
         return nullptr;
     }
 
@@ -9059,11 +9055,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattServiceUuids class --------------------
-    static constexpr const char* const type_name_GattServiceUuids = "GattServiceUuids";
 
     static PyObject* _new_GattServiceUuids(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattServiceUuids);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceUuids>::type_name);
         return nullptr;
     }
 
@@ -9553,11 +9549,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattSession class --------------------
-    static constexpr const char* const type_name_GattSession = "GattSession";
 
     static PyObject* _new_GattSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattSession);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession>::type_name);
         return nullptr;
     }
 
@@ -9931,11 +9927,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattSessionStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GattSessionStatusChangedEventArgs = "GattSessionStatusChangedEventArgs";
 
     static PyObject* _new_GattSessionStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattSessionStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10046,11 +10042,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattSubscribedClient class --------------------
-    static constexpr const char* const type_name_GattSubscribedClient = "GattSubscribedClient";
 
     static PyObject* _new_GattSubscribedClient(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattSubscribedClient);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient>::type_name);
         return nullptr;
     }
 
@@ -10206,11 +10202,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattValueChangedEventArgs class --------------------
-    static constexpr const char* const type_name_GattValueChangedEventArgs = "GattValueChangedEventArgs";
 
     static PyObject* _new_GattValueChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattValueChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10321,11 +10317,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattWriteRequest class --------------------
-    static constexpr const char* const type_name_GattWriteRequest = "GattWriteRequest";
 
     static PyObject* _new_GattWriteRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattWriteRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest>::type_name);
         return nullptr;
     }
 
@@ -10585,11 +10581,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattWriteRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_GattWriteRequestedEventArgs = "GattWriteRequestedEventArgs";
 
     static PyObject* _new_GattWriteRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattWriteRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -10740,11 +10736,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     };
 
     // ----- GattWriteResult class --------------------
-    static constexpr const char* const type_name_GattWriteResult = "GattWriteResult";
 
     static PyObject* _new_GattWriteResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GattWriteResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Capture::Core
 {
     // ----- VariablePhotoCapturedEventArgs class --------------------
-    static constexpr const char* const type_name_VariablePhotoCapturedEventArgs = "VariablePhotoCapturedEventArgs";
 
     static PyObject* _new_VariablePhotoCapturedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VariablePhotoCapturedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -162,11 +162,11 @@ namespace py::cpp::Windows::Media::Capture::Core
     };
 
     // ----- VariablePhotoSequenceCapture class --------------------
-    static constexpr const char* const type_name_VariablePhotoSequenceCapture = "VariablePhotoSequenceCapture";
 
     static PyObject* _new_VariablePhotoSequenceCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VariablePhotoSequenceCapture);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>::type_name);
         return nullptr;
     }
 

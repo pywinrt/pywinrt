@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Streaming::Adaptive
 {
     // ----- AdaptiveMediaSource class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSource = "AdaptiveMediaSource";
 
     static PyObject* _new_AdaptiveMediaSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSource);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource>::type_name);
         return nullptr;
     }
 
@@ -1020,11 +1020,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceAdvancedSettings class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceAdvancedSettings = "AdaptiveMediaSourceAdvancedSettings";
 
     static PyObject* _new_AdaptiveMediaSourceAdvancedSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceAdvancedSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings>::type_name);
         return nullptr;
     }
 
@@ -1239,11 +1239,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceCorrelatedTimes class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceCorrelatedTimes = "AdaptiveMediaSourceCorrelatedTimes";
 
     static PyObject* _new_AdaptiveMediaSourceCorrelatedTimes(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceCorrelatedTimes);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes>::type_name);
         return nullptr;
     }
 
@@ -1374,11 +1374,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceCreationResult class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceCreationResult = "AdaptiveMediaSourceCreationResult";
 
     static PyObject* _new_AdaptiveMediaSourceCreationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceCreationResult);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult>::type_name);
         return nullptr;
     }
 
@@ -1529,11 +1529,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDiagnosticAvailableEventArgs class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs = "AdaptiveMediaSourceDiagnosticAvailableEventArgs";
 
     static PyObject* _new_AdaptiveMediaSourceDiagnosticAvailableEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1844,11 +1844,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDiagnostics class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDiagnostics = "AdaptiveMediaSourceDiagnostics";
 
     static PyObject* _new_AdaptiveMediaSourceDiagnostics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDiagnostics);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics>::type_name);
         return nullptr;
     }
 
@@ -1964,11 +1964,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadBitrateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs = "AdaptiveMediaSourceDownloadBitrateChangedEventArgs";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadBitrateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2099,11 +2099,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadCompletedEventArgs = "AdaptiveMediaSourceDownloadCompletedEventArgs";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2374,11 +2374,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadFailedEventArgs class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadFailedEventArgs = "AdaptiveMediaSourceDownloadFailedEventArgs";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2669,11 +2669,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadRequestedDeferral class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadRequestedDeferral = "AdaptiveMediaSourceDownloadRequestedDeferral";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadRequestedDeferral);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral>::type_name);
         return nullptr;
     }
 
@@ -2775,11 +2775,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadRequestedEventArgs = "AdaptiveMediaSourceDownloadRequestedEventArgs";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3060,11 +3060,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadResult class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadResult = "AdaptiveMediaSourceDownloadResult";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadResult);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult>::type_name);
         return nullptr;
     }
 
@@ -3471,11 +3471,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourceDownloadStatistics class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourceDownloadStatistics = "AdaptiveMediaSourceDownloadStatistics";
 
     static PyObject* _new_AdaptiveMediaSourceDownloadStatistics(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourceDownloadStatistics);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics>::type_name);
         return nullptr;
     }
 
@@ -3626,11 +3626,11 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     };
 
     // ----- AdaptiveMediaSourcePlaybackBitrateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = "AdaptiveMediaSourcePlaybackBitrateChangedEventArgs";
 
     static PyObject* _new_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs>::type_name);
         return nullptr;
     }
 

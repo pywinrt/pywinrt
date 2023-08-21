@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Printing
 {
     // ----- AddPagesEventArgs class --------------------
-    static constexpr const char* const type_name_AddPagesEventArgs = "AddPagesEventArgs";
 
     static PyObject* _new_AddPagesEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -125,7 +124,6 @@ namespace py::cpp::Windows::UI::Xaml::Printing
     };
 
     // ----- GetPreviewPageEventArgs class --------------------
-    static constexpr const char* const type_name_GetPreviewPageEventArgs = "GetPreviewPageEventArgs";
 
     static PyObject* _new_GetPreviewPageEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -243,7 +241,6 @@ namespace py::cpp::Windows::UI::Xaml::Printing
     };
 
     // ----- PaginateEventArgs class --------------------
-    static constexpr const char* const type_name_PaginateEventArgs = "PaginateEventArgs";
 
     static PyObject* _new_PaginateEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -381,7 +378,6 @@ namespace py::cpp::Windows::UI::Xaml::Printing
     };
 
     // ----- PrintDocument class --------------------
-    static constexpr const char* const type_name_PrintDocument = "PrintDocument";
 
     static PyObject* _new_PrintDocument(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

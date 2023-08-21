@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Search::Core
 {
     // ----- RequestingFocusOnKeyboardInputEventArgs class --------------------
-    static constexpr const char* const type_name_RequestingFocusOnKeyboardInputEventArgs = "RequestingFocusOnKeyboardInputEventArgs";
 
     static PyObject* _new_RequestingFocusOnKeyboardInputEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RequestingFocusOnKeyboardInputEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>::type_name);
         return nullptr;
     }
 
@@ -82,11 +82,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     };
 
     // ----- SearchSuggestion class --------------------
-    static constexpr const char* const type_name_SearchSuggestion = "SearchSuggestion";
 
     static PyObject* _new_SearchSuggestion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchSuggestion);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>::type_name);
         return nullptr;
     }
 
@@ -277,7 +277,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     };
 
     // ----- SearchSuggestionManager class --------------------
-    static constexpr const char* const type_name_SearchSuggestionManager = "SearchSuggestionManager";
 
     static PyObject* _new_SearchSuggestionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -778,11 +777,11 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     };
 
     // ----- SearchSuggestionsRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_SearchSuggestionsRequestedEventArgs = "SearchSuggestionsRequestedEventArgs";
 
     static PyObject* _new_SearchSuggestionsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchSuggestionsRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>::type_name);
         return nullptr;
     }
 

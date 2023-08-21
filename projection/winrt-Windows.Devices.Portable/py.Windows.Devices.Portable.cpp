@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Portable
 {
     // ----- ServiceDevice class --------------------
-    static constexpr const char* const type_name_ServiceDevice = "ServiceDevice";
 
     static PyObject* _new_ServiceDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ServiceDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Portable::ServiceDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Portable::ServiceDevice>::type_name);
         return nullptr;
     }
 
@@ -105,11 +105,11 @@ namespace py::cpp::Windows::Devices::Portable
     };
 
     // ----- StorageDevice class --------------------
-    static constexpr const char* const type_name_StorageDevice = "StorageDevice";
 
     static PyObject* _new_StorageDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::Portable::StorageDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Portable::StorageDevice>::type_name);
         return nullptr;
     }
 

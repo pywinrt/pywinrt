@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Core
 {
     // ----- AppListEntry class --------------------
-    static constexpr const char* const type_name_AppListEntry = "AppListEntry";
 
     static PyObject* _new_AppListEntry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppListEntry);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>::type_name);
         return nullptr;
     }
 
@@ -204,11 +204,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- CoreApplication class --------------------
-    static constexpr const char* const type_name_CoreApplication = "CoreApplication";
 
     static PyObject* _new_CoreApplication(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreApplication);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>::type_name);
         return nullptr;
     }
 
@@ -1011,11 +1011,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- CoreApplicationView class --------------------
-    static constexpr const char* const type_name_CoreApplicationView = "CoreApplicationView";
 
     static PyObject* _new_CoreApplicationView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreApplicationView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>::type_name);
         return nullptr;
     }
 
@@ -1336,11 +1336,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- CoreApplicationViewTitleBar class --------------------
-    static constexpr const char* const type_name_CoreApplicationViewTitleBar = "CoreApplicationViewTitleBar";
 
     static PyObject* _new_CoreApplicationViewTitleBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CoreApplicationViewTitleBar);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>::type_name);
         return nullptr;
     }
 
@@ -1629,11 +1629,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- HostedViewClosingEventArgs class --------------------
-    static constexpr const char* const type_name_HostedViewClosingEventArgs = "HostedViewClosingEventArgs";
 
     static PyObject* _new_HostedViewClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HostedViewClosingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1734,11 +1734,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- UnhandledError class --------------------
-    static constexpr const char* const type_name_UnhandledError = "UnhandledError";
 
     static PyObject* _new_UnhandledError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UnhandledError);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>::type_name);
         return nullptr;
     }
 
@@ -1860,11 +1860,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- UnhandledErrorDetectedEventArgs class --------------------
-    static constexpr const char* const type_name_UnhandledErrorDetectedEventArgs = "UnhandledErrorDetectedEventArgs";
 
     static PyObject* _new_UnhandledErrorDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UnhandledErrorDetectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1955,11 +1955,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- ICoreApplicationUnhandledError interface --------------------
-    static constexpr const char* const type_name_ICoreApplicationUnhandledError = "ICoreApplicationUnhandledError";
 
     static PyObject* _new_ICoreApplicationUnhandledError(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICoreApplicationUnhandledError);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>::type_name);
         return nullptr;
     }
 
@@ -2075,11 +2075,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- IFrameworkView interface --------------------
-    static constexpr const char* const type_name_IFrameworkView = "IFrameworkView";
 
     static PyObject* _new_IFrameworkView(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IFrameworkView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>::type_name);
         return nullptr;
     }
 
@@ -2311,11 +2311,11 @@ namespace py::cpp::Windows::ApplicationModel::Core
     };
 
     // ----- IFrameworkViewSource interface --------------------
-    static constexpr const char* const type_name_IFrameworkViewSource = "IFrameworkViewSource";
 
     static PyObject* _new_IFrameworkViewSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IFrameworkViewSource);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>::type_name);
         return nullptr;
     }
 

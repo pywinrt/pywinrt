@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Printing
 {
     // ----- PrintManager class --------------------
-    static constexpr const char* const type_name_PrintManager = "PrintManager";
 
     static PyObject* _new_PrintManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintManager);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintManager>::type_name);
         return nullptr;
     }
 
@@ -217,7 +217,6 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintPageInfo class --------------------
-    static constexpr const char* const type_name_PrintPageInfo = "PrintPageInfo";
 
     static PyObject* _new_PrintPageInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -555,7 +554,6 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintPageRange class --------------------
-    static constexpr const char* const type_name_PrintPageRange = "PrintPageRange";
 
     static PyObject* _new_PrintPageRange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -711,11 +709,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintPageRangeOptions class --------------------
-    static constexpr const char* const type_name_PrintPageRangeOptions = "PrintPageRangeOptions";
 
     static PyObject* _new_PrintPageRangeOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintPageRangeOptions);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>::type_name);
         return nullptr;
     }
 
@@ -930,11 +928,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTask class --------------------
-    static constexpr const char* const type_name_PrintTask = "PrintTask";
 
     static PyObject* _new_PrintTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTask);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTask>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTask>::type_name);
         return nullptr;
     }
 
@@ -1389,11 +1387,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintTaskCompletedEventArgs = "PrintTaskCompletedEventArgs";
 
     static PyObject* _new_PrintTaskCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1484,11 +1482,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskOptions class --------------------
-    static constexpr const char* const type_name_PrintTaskOptions = "PrintTaskOptions";
 
     static PyObject* _new_PrintTaskOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskOptions);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskOptions>::type_name);
         return nullptr;
     }
 
@@ -2299,11 +2297,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskProgressingEventArgs class --------------------
-    static constexpr const char* const type_name_PrintTaskProgressingEventArgs = "PrintTaskProgressingEventArgs";
 
     static PyObject* _new_PrintTaskProgressingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskProgressingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2394,11 +2392,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskRequest class --------------------
-    static constexpr const char* const type_name_PrintTaskRequest = "PrintTaskRequest";
 
     static PyObject* _new_PrintTaskRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskRequest);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequest>::type_name);
         return nullptr;
     }
 
@@ -2552,11 +2550,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskRequestedDeferral class --------------------
-    static constexpr const char* const type_name_PrintTaskRequestedDeferral = "PrintTaskRequestedDeferral";
 
     static PyObject* _new_PrintTaskRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskRequestedDeferral);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>::type_name);
         return nullptr;
     }
 
@@ -2658,11 +2656,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintTaskRequestedEventArgs = "PrintTaskRequestedEventArgs";
 
     static PyObject* _new_PrintTaskRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2753,11 +2751,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskSourceRequestedArgs class --------------------
-    static constexpr const char* const type_name_PrintTaskSourceRequestedArgs = "PrintTaskSourceRequestedArgs";
 
     static PyObject* _new_PrintTaskSourceRequestedArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskSourceRequestedArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>::type_name);
         return nullptr;
     }
 
@@ -2911,11 +2909,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintTaskSourceRequestedDeferral class --------------------
-    static constexpr const char* const type_name_PrintTaskSourceRequestedDeferral = "PrintTaskSourceRequestedDeferral";
 
     static PyObject* _new_PrintTaskSourceRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskSourceRequestedDeferral);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>::type_name);
         return nullptr;
     }
 
@@ -3017,11 +3015,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- StandardPrintTaskOptions class --------------------
-    static constexpr const char* const type_name_StandardPrintTaskOptions = "StandardPrintTaskOptions";
 
     static PyObject* _new_StandardPrintTaskOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StandardPrintTaskOptions);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>::type_name);
         return nullptr;
     }
 
@@ -3371,11 +3369,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- IPrintDocumentSource interface --------------------
-    static constexpr const char* const type_name_IPrintDocumentSource = "IPrintDocumentSource";
 
     static PyObject* _new_IPrintDocumentSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintDocumentSource);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>::type_name);
         return nullptr;
     }
 
@@ -3446,11 +3444,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- IPrintTaskOptionsCore interface --------------------
-    static constexpr const char* const type_name_IPrintTaskOptionsCore = "IPrintTaskOptionsCore";
 
     static PyObject* _new_IPrintTaskOptionsCore(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintTaskOptionsCore);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>::type_name);
         return nullptr;
     }
 
@@ -3553,11 +3551,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- IPrintTaskOptionsCoreProperties interface --------------------
-    static constexpr const char* const type_name_IPrintTaskOptionsCoreProperties = "IPrintTaskOptionsCoreProperties";
 
     static PyObject* _new_IPrintTaskOptionsCoreProperties(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintTaskOptionsCoreProperties);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>::type_name);
         return nullptr;
     }
 
@@ -4196,11 +4194,11 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- IPrintTaskOptionsCoreUIConfiguration interface --------------------
-    static constexpr const char* const type_name_IPrintTaskOptionsCoreUIConfiguration = "IPrintTaskOptionsCoreUIConfiguration";
 
     static PyObject* _new_IPrintTaskOptionsCoreUIConfiguration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintTaskOptionsCoreUIConfiguration);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>::type_name);
         return nullptr;
     }
 
@@ -4291,7 +4289,6 @@ namespace py::cpp::Windows::Graphics::Printing
     };
 
     // ----- PrintPageDescription struct --------------------
-    static constexpr const char* const type_name_PrintPageDescription = "PrintPageDescription";
 
     PyObject* _new_PrintPageDescription(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

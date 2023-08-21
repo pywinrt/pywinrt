@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::Search
 {
     // ----- LocalContentSuggestionSettings class --------------------
-    static constexpr const char* const type_name_LocalContentSuggestionSettings = "LocalContentSuggestionSettings";
 
     static PyObject* _new_LocalContentSuggestionSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -241,11 +240,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPane class --------------------
-    static constexpr const char* const type_name_SearchPane = "SearchPane";
 
     static PyObject* _new_SearchPane(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPane);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPane>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPane>::type_name);
         return nullptr;
     }
 
@@ -971,11 +970,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneQueryChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SearchPaneQueryChangedEventArgs = "SearchPaneQueryChangedEventArgs";
 
     static PyObject* _new_SearchPaneQueryChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneQueryChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1106,11 +1105,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneQueryLinguisticDetails class --------------------
-    static constexpr const char* const type_name_SearchPaneQueryLinguisticDetails = "SearchPaneQueryLinguisticDetails";
 
     static PyObject* _new_SearchPaneQueryLinguisticDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneQueryLinguisticDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>::type_name);
         return nullptr;
     }
 
@@ -1241,11 +1240,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneQuerySubmittedEventArgs class --------------------
-    static constexpr const char* const type_name_SearchPaneQuerySubmittedEventArgs = "SearchPaneQuerySubmittedEventArgs";
 
     static PyObject* _new_SearchPaneQuerySubmittedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneQuerySubmittedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1376,11 +1375,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneResultSuggestionChosenEventArgs class --------------------
-    static constexpr const char* const type_name_SearchPaneResultSuggestionChosenEventArgs = "SearchPaneResultSuggestionChosenEventArgs";
 
     static PyObject* _new_SearchPaneResultSuggestionChosenEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneResultSuggestionChosenEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1471,11 +1470,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneSuggestionsRequest class --------------------
-    static constexpr const char* const type_name_SearchPaneSuggestionsRequest = "SearchPaneSuggestionsRequest";
 
     static PyObject* _new_SearchPaneSuggestionsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneSuggestionsRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>::type_name);
         return nullptr;
     }
 
@@ -1616,11 +1615,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneSuggestionsRequestDeferral class --------------------
-    static constexpr const char* const type_name_SearchPaneSuggestionsRequestDeferral = "SearchPaneSuggestionsRequestDeferral";
 
     static PyObject* _new_SearchPaneSuggestionsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneSuggestionsRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -1722,11 +1721,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneSuggestionsRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_SearchPaneSuggestionsRequestedEventArgs = "SearchPaneSuggestionsRequestedEventArgs";
 
     static PyObject* _new_SearchPaneSuggestionsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneSuggestionsRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1877,11 +1876,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchPaneVisibilityChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SearchPaneVisibilityChangedEventArgs = "SearchPaneVisibilityChangedEventArgs";
 
     static PyObject* _new_SearchPaneVisibilityChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchPaneVisibilityChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1972,7 +1971,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchQueryLinguisticDetails class --------------------
-    static constexpr const char* const type_name_SearchQueryLinguisticDetails = "SearchQueryLinguisticDetails";
 
     static PyObject* _new_SearchQueryLinguisticDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2134,11 +2132,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchSuggestionCollection class --------------------
-    static constexpr const char* const type_name_SearchSuggestionCollection = "SearchSuggestionCollection";
 
     static PyObject* _new_SearchSuggestionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchSuggestionCollection);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>::type_name);
         return nullptr;
     }
 
@@ -2365,11 +2363,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchSuggestionsRequest class --------------------
-    static constexpr const char* const type_name_SearchSuggestionsRequest = "SearchSuggestionsRequest";
 
     static PyObject* _new_SearchSuggestionsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchSuggestionsRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>::type_name);
         return nullptr;
     }
 
@@ -2510,11 +2508,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- SearchSuggestionsRequestDeferral class --------------------
-    static constexpr const char* const type_name_SearchSuggestionsRequestDeferral = "SearchSuggestionsRequestDeferral";
 
     static PyObject* _new_SearchSuggestionsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SearchSuggestionsRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -2616,11 +2614,11 @@ namespace py::cpp::Windows::ApplicationModel::Search
     };
 
     // ----- ISearchPaneQueryChangedEventArgs interface --------------------
-    static constexpr const char* const type_name_ISearchPaneQueryChangedEventArgs = "ISearchPaneQueryChangedEventArgs";
 
     static PyObject* _new_ISearchPaneQueryChangedEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISearchPaneQueryChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>::type_name);
         return nullptr;
     }
 

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Input::Core
 {
     // ----- RadialControllerIndependentInputSource class --------------------
-    static constexpr const char* const type_name_RadialControllerIndependentInputSource = "RadialControllerIndependentInputSource";
 
     static PyObject* _new_RadialControllerIndependentInputSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RadialControllerIndependentInputSource);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Core::RadialControllerIndependentInputSource>::type_name);
         return nullptr;
     }
 

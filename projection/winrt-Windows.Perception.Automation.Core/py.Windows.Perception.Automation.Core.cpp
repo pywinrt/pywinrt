@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Perception::Automation::Core
 {
     // ----- CorePerceptionAutomation class --------------------
-    static constexpr const char* const type_name_CorePerceptionAutomation = "CorePerceptionAutomation";
 
     static PyObject* _new_CorePerceptionAutomation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CorePerceptionAutomation);
+        static_assert(py::py_type<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>::type_name);
         return nullptr;
     }
 

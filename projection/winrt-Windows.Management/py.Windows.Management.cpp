@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Management
 {
     // ----- MdmAlert class --------------------
-    static constexpr const char* const type_name_MdmAlert = "MdmAlert";
 
     static PyObject* _new_MdmAlert(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -413,11 +412,11 @@ namespace py::cpp::Windows::Management
     };
 
     // ----- MdmSession class --------------------
-    static constexpr const char* const type_name_MdmSession = "MdmSession";
 
     static PyObject* _new_MdmSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MdmSession);
+        static_assert(py::py_type<winrt::Windows::Management::MdmSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::MdmSession>::type_name);
         return nullptr;
     }
 
@@ -679,11 +678,11 @@ namespace py::cpp::Windows::Management
     };
 
     // ----- MdmSessionManager class --------------------
-    static constexpr const char* const type_name_MdmSessionManager = "MdmSessionManager";
 
     static PyObject* _new_MdmSessionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MdmSessionManager);
+        static_assert(py::py_type<winrt::Windows::Management::MdmSessionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Management::MdmSessionManager>::type_name);
         return nullptr;
     }
 

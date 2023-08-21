@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Resources::Core
 {
     // ----- NamedResource class --------------------
-    static constexpr const char* const type_name_NamedResource = "NamedResource";
 
     static PyObject* _new_NamedResource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NamedResource);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>::type_name);
         return nullptr;
     }
 
@@ -222,11 +222,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceCandidate class --------------------
-    static constexpr const char* const type_name_ResourceCandidate = "ResourceCandidate";
 
     static PyObject* _new_ResourceCandidate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceCandidate);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>::type_name);
         return nullptr;
     }
 
@@ -509,11 +509,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceCandidateVectorView class --------------------
-    static constexpr const char* const type_name_ResourceCandidateVectorView = "ResourceCandidateVectorView";
 
     static PyObject* _new_ResourceCandidateVectorView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceCandidateVectorView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>::type_name);
         return nullptr;
     }
 
@@ -857,7 +857,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceContext class --------------------
-    static constexpr const char* const type_name_ResourceContext = "ResourceContext";
 
     static PyObject* _new_ResourceContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1371,11 +1370,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceContextLanguagesVectorView class --------------------
-    static constexpr const char* const type_name_ResourceContextLanguagesVectorView = "ResourceContextLanguagesVectorView";
 
     static PyObject* _new_ResourceContextLanguagesVectorView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceContextLanguagesVectorView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>::type_name);
         return nullptr;
     }
 
@@ -1719,11 +1718,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceManager class --------------------
-    static constexpr const char* const type_name_ResourceManager = "ResourceManager";
 
     static PyObject* _new_ResourceManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>::type_name);
         return nullptr;
     }
 
@@ -2058,11 +2057,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceMap class --------------------
-    static constexpr const char* const type_name_ResourceMap = "ResourceMap";
 
     static PyObject* _new_ResourceMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceMap);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>::type_name);
         return nullptr;
     }
 
@@ -2467,11 +2466,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceMapIterator class --------------------
-    static constexpr const char* const type_name_ResourceMapIterator = "ResourceMapIterator";
 
     static PyObject* _new_ResourceMapIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceMapIterator);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>::type_name);
         return nullptr;
     }
 
@@ -2672,11 +2671,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceMapMapView class --------------------
-    static constexpr const char* const type_name_ResourceMapMapView = "ResourceMapMapView";
 
     static PyObject* _new_ResourceMapMapView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceMapMapView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>::type_name);
         return nullptr;
     }
 
@@ -2976,11 +2975,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceMapMapViewIterator class --------------------
-    static constexpr const char* const type_name_ResourceMapMapViewIterator = "ResourceMapMapViewIterator";
 
     static PyObject* _new_ResourceMapMapViewIterator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceMapMapViewIterator);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>::type_name);
         return nullptr;
     }
 
@@ -3181,11 +3180,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceQualifier class --------------------
-    static constexpr const char* const type_name_ResourceQualifier = "ResourceQualifier";
 
     static PyObject* _new_ResourceQualifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceQualifier);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>::type_name);
         return nullptr;
     }
 
@@ -3356,11 +3355,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceQualifierMapView class --------------------
-    static constexpr const char* const type_name_ResourceQualifierMapView = "ResourceQualifierMapView";
 
     static PyObject* _new_ResourceQualifierMapView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceQualifierMapView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>::type_name);
         return nullptr;
     }
 
@@ -3660,11 +3659,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceQualifierObservableMap class --------------------
-    static constexpr const char* const type_name_ResourceQualifierObservableMap = "ResourceQualifierObservableMap";
 
     static PyObject* _new_ResourceQualifierObservableMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceQualifierObservableMap);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>::type_name);
         return nullptr;
     }
 
@@ -4118,11 +4117,11 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceQualifierVectorView class --------------------
-    static constexpr const char* const type_name_ResourceQualifierVectorView = "ResourceQualifierVectorView";
 
     static PyObject* _new_ResourceQualifierVectorView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ResourceQualifierVectorView);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>::type_name);
         return nullptr;
     }
 
@@ -4466,7 +4465,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     };
 
     // ----- ResourceLayoutInfo struct --------------------
-    static constexpr const char* const type_name_ResourceLayoutInfo = "ResourceLayoutInfo";
 
     PyObject* _new_ResourceLayoutInfo(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

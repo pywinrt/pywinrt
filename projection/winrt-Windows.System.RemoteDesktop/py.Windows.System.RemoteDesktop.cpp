@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::RemoteDesktop
 {
     // ----- InteractiveSession class --------------------
-    static constexpr const char* const type_name_InteractiveSession = "InteractiveSession";
 
     static PyObject* _new_InteractiveSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InteractiveSession);
+        static_assert(py::py_type<winrt::Windows::System::RemoteDesktop::InteractiveSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::RemoteDesktop::InteractiveSession>::type_name);
         return nullptr;
     }
 

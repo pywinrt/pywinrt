@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Store::Preview
 {
     // ----- DeliveryOptimizationSettings class --------------------
-    static constexpr const char* const type_name_DeliveryOptimizationSettings = "DeliveryOptimizationSettings";
 
     static PyObject* _new_DeliveryOptimizationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeliveryOptimizationSettings);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>::type_name);
         return nullptr;
     }
 
@@ -152,11 +152,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- StoreConfiguration class --------------------
-    static constexpr const char* const type_name_StoreConfiguration = "StoreConfiguration";
 
     static PyObject* _new_StoreConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreConfiguration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>::type_name);
         return nullptr;
     }
 
@@ -1073,11 +1073,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- StoreHardwareManufacturerInfo class --------------------
-    static constexpr const char* const type_name_StoreHardwareManufacturerInfo = "StoreHardwareManufacturerInfo";
 
     static PyObject* _new_StoreHardwareManufacturerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StoreHardwareManufacturerInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>::type_name);
         return nullptr;
     }
 
@@ -1228,11 +1228,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- StorePreview class --------------------
-    static constexpr const char* const type_name_StorePreview = "StorePreview";
 
     static PyObject* _new_StorePreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePreview);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>::type_name);
         return nullptr;
     }
 
@@ -1325,11 +1325,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- StorePreviewProductInfo class --------------------
-    static constexpr const char* const type_name_StorePreviewProductInfo = "StorePreviewProductInfo";
 
     static PyObject* _new_StorePreviewProductInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePreviewProductInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>::type_name);
         return nullptr;
     }
 
@@ -1500,11 +1500,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- StorePreviewPurchaseResults class --------------------
-    static constexpr const char* const type_name_StorePreviewPurchaseResults = "StorePreviewPurchaseResults";
 
     static PyObject* _new_StorePreviewPurchaseResults(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePreviewPurchaseResults);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>::type_name);
         return nullptr;
     }
 
@@ -1595,11 +1595,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- StorePreviewSkuInfo class --------------------
-    static constexpr const char* const type_name_StorePreviewSkuInfo = "StorePreviewSkuInfo";
 
     static PyObject* _new_StorePreviewSkuInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorePreviewSkuInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>::type_name);
         return nullptr;
     }
 
@@ -1850,11 +1850,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     // ----- WebAuthenticationCoreManagerHelper class --------------------
-    static constexpr const char* const type_name_WebAuthenticationCoreManagerHelper = "WebAuthenticationCoreManagerHelper";
 
     static PyObject* _new_WebAuthenticationCoreManagerHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WebAuthenticationCoreManagerHelper);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>::type_name);
         return nullptr;
     }
 

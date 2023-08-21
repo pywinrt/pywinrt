@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Web::Http::Diagnostics
 {
     // ----- HttpDiagnosticProvider class --------------------
-    static constexpr const char* const type_name_HttpDiagnosticProvider = "HttpDiagnosticProvider";
 
     static PyObject* _new_HttpDiagnosticProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDiagnosticProvider);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>::type_name);
         return nullptr;
     }
 
@@ -311,11 +311,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     };
 
     // ----- HttpDiagnosticProviderRequestResponseCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_HttpDiagnosticProviderRequestResponseCompletedEventArgs = "HttpDiagnosticProviderRequestResponseCompletedEventArgs";
 
     static PyObject* _new_HttpDiagnosticProviderRequestResponseCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDiagnosticProviderRequestResponseCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -526,11 +526,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     };
 
     // ----- HttpDiagnosticProviderRequestResponseTimestamps class --------------------
-    static constexpr const char* const type_name_HttpDiagnosticProviderRequestResponseTimestamps = "HttpDiagnosticProviderRequestResponseTimestamps";
 
     static PyObject* _new_HttpDiagnosticProviderRequestResponseTimestamps(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDiagnosticProviderRequestResponseTimestamps);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>::type_name);
         return nullptr;
     }
 
@@ -781,11 +781,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     };
 
     // ----- HttpDiagnosticProviderRequestSentEventArgs class --------------------
-    static constexpr const char* const type_name_HttpDiagnosticProviderRequestSentEventArgs = "HttpDiagnosticProviderRequestSentEventArgs";
 
     static PyObject* _new_HttpDiagnosticProviderRequestSentEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDiagnosticProviderRequestSentEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>::type_name);
         return nullptr;
     }
 
@@ -996,11 +996,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     };
 
     // ----- HttpDiagnosticProviderResponseReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_HttpDiagnosticProviderResponseReceivedEventArgs = "HttpDiagnosticProviderResponseReceivedEventArgs";
 
     static PyObject* _new_HttpDiagnosticProviderResponseReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDiagnosticProviderResponseReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1131,11 +1131,11 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     };
 
     // ----- HttpDiagnosticSourceLocation class --------------------
-    static constexpr const char* const type_name_HttpDiagnosticSourceLocation = "HttpDiagnosticSourceLocation";
 
     static PyObject* _new_HttpDiagnosticSourceLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HttpDiagnosticSourceLocation);
+        static_assert(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>::type_name);
         return nullptr;
     }
 

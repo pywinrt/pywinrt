@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Playback
 {
     // ----- BackgroundMediaPlayer class --------------------
-    static constexpr const char* const type_name_BackgroundMediaPlayer = "BackgroundMediaPlayer";
 
     static PyObject* _new_BackgroundMediaPlayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BackgroundMediaPlayer);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>::type_name);
         return nullptr;
     }
 
@@ -298,11 +298,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- CurrentMediaPlaybackItemChangedEventArgs class --------------------
-    static constexpr const char* const type_name_CurrentMediaPlaybackItemChangedEventArgs = "CurrentMediaPlaybackItemChangedEventArgs";
 
     static PyObject* _new_CurrentMediaPlaybackItemChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CurrentMediaPlaybackItemChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -433,7 +433,6 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreak class --------------------
-    static constexpr const char* const type_name_MediaBreak = "MediaBreak";
 
     static PyObject* _new_MediaBreak(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -677,11 +676,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreakEndedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaBreakEndedEventArgs = "MediaBreakEndedEventArgs";
 
     static PyObject* _new_MediaBreakEndedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBreakEndedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -772,11 +771,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreakManager class --------------------
-    static constexpr const char* const type_name_MediaBreakManager = "MediaBreakManager";
 
     static PyObject* _new_MediaBreakManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBreakManager);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakManager>::type_name);
         return nullptr;
     }
 
@@ -1131,11 +1130,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreakSchedule class --------------------
-    static constexpr const char* const type_name_MediaBreakSchedule = "MediaBreakSchedule";
 
     static PyObject* _new_MediaBreakSchedule(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBreakSchedule);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakSchedule>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakSchedule>::type_name);
         return nullptr;
     }
 
@@ -1453,11 +1452,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreakSeekedOverEventArgs class --------------------
-    static constexpr const char* const type_name_MediaBreakSeekedOverEventArgs = "MediaBreakSeekedOverEventArgs";
 
     static PyObject* _new_MediaBreakSeekedOverEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBreakSeekedOverEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1588,11 +1587,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreakSkippedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaBreakSkippedEventArgs = "MediaBreakSkippedEventArgs";
 
     static PyObject* _new_MediaBreakSkippedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBreakSkippedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1683,11 +1682,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaBreakStartedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaBreakStartedEventArgs = "MediaBreakStartedEventArgs";
 
     static PyObject* _new_MediaBreakStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaBreakStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1778,11 +1777,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaItemDisplayProperties class --------------------
-    static constexpr const char* const type_name_MediaItemDisplayProperties = "MediaItemDisplayProperties";
 
     static PyObject* _new_MediaItemDisplayProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaItemDisplayProperties);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>::type_name);
         return nullptr;
     }
 
@@ -2020,11 +2019,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackAudioTrackList class --------------------
-    static constexpr const char* const type_name_MediaPlaybackAudioTrackList = "MediaPlaybackAudioTrackList";
 
     static PyObject* _new_MediaPlaybackAudioTrackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackAudioTrackList);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>::type_name);
         return nullptr;
     }
 
@@ -2461,11 +2460,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManager class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManager = "MediaPlaybackCommandManager";
 
     static PyObject* _new_MediaPlaybackCommandManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManager);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>::type_name);
         return nullptr;
     }
 
@@ -3254,11 +3253,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs = "MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3427,11 +3426,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerCommandBehavior class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerCommandBehavior = "MediaPlaybackCommandManagerCommandBehavior";
 
     static PyObject* _new_MediaPlaybackCommandManagerCommandBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerCommandBehavior);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>::type_name);
         return nullptr;
     }
 
@@ -3635,11 +3634,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerFastForwardReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerFastForwardReceivedEventArgs = "MediaPlaybackCommandManagerFastForwardReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerFastForwardReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerFastForwardReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3788,11 +3787,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerNextReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerNextReceivedEventArgs = "MediaPlaybackCommandManagerNextReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerNextReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerNextReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3941,11 +3940,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerPauseReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerPauseReceivedEventArgs = "MediaPlaybackCommandManagerPauseReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerPauseReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerPauseReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4094,11 +4093,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerPlayReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerPlayReceivedEventArgs = "MediaPlaybackCommandManagerPlayReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerPlayReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerPlayReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4247,11 +4246,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerPositionReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerPositionReceivedEventArgs = "MediaPlaybackCommandManagerPositionReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerPositionReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerPositionReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4420,11 +4419,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerPreviousReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerPreviousReceivedEventArgs = "MediaPlaybackCommandManagerPreviousReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerPreviousReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerPreviousReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4573,11 +4572,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerRateReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerRateReceivedEventArgs = "MediaPlaybackCommandManagerRateReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerRateReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerRateReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4746,11 +4745,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerRewindReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerRewindReceivedEventArgs = "MediaPlaybackCommandManagerRewindReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerRewindReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerRewindReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4899,11 +4898,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackCommandManagerShuffleReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackCommandManagerShuffleReceivedEventArgs = "MediaPlaybackCommandManagerShuffleReceivedEventArgs";
 
     static PyObject* _new_MediaPlaybackCommandManagerShuffleReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackCommandManagerShuffleReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5072,7 +5071,6 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackItem class --------------------
-    static constexpr const char* const type_name_MediaPlaybackItem = "MediaPlaybackItem";
 
     static PyObject* _new_MediaPlaybackItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5739,11 +5737,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackItemError class --------------------
-    static constexpr const char* const type_name_MediaPlaybackItemError = "MediaPlaybackItemError";
 
     static PyObject* _new_MediaPlaybackItemError(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackItemError);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>::type_name);
         return nullptr;
     }
 
@@ -5854,11 +5852,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackItemFailedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackItemFailedEventArgs = "MediaPlaybackItemFailedEventArgs";
 
     static PyObject* _new_MediaPlaybackItemFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackItemFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5969,11 +5967,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackItemOpenedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackItemOpenedEventArgs = "MediaPlaybackItemOpenedEventArgs";
 
     static PyObject* _new_MediaPlaybackItemOpenedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackItemOpenedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6064,7 +6062,6 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackList class --------------------
-    static constexpr const char* const type_name_MediaPlaybackList = "MediaPlaybackList";
 
     static PyObject* _new_MediaPlaybackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6742,11 +6739,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackSession class --------------------
-    static constexpr const char* const type_name_MediaPlaybackSession = "MediaPlaybackSession";
 
     static PyObject* _new_MediaPlaybackSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackSession);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSession>::type_name);
         return nullptr;
     }
 
@@ -8108,11 +8105,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackSessionBufferingStartedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlaybackSessionBufferingStartedEventArgs = "MediaPlaybackSessionBufferingStartedEventArgs";
 
     static PyObject* _new_MediaPlaybackSessionBufferingStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackSessionBufferingStartedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8203,11 +8200,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackSessionOutputDegradationPolicyState class --------------------
-    static constexpr const char* const type_name_MediaPlaybackSessionOutputDegradationPolicyState = "MediaPlaybackSessionOutputDegradationPolicyState";
 
     static PyObject* _new_MediaPlaybackSessionOutputDegradationPolicyState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackSessionOutputDegradationPolicyState);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>::type_name);
         return nullptr;
     }
 
@@ -8298,11 +8295,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackSphericalVideoProjection class --------------------
-    static constexpr const char* const type_name_MediaPlaybackSphericalVideoProjection = "MediaPlaybackSphericalVideoProjection";
 
     static PyObject* _new_MediaPlaybackSphericalVideoProjection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackSphericalVideoProjection);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>::type_name);
         return nullptr;
     }
 
@@ -8613,11 +8610,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackTimedMetadataTrackList class --------------------
-    static constexpr const char* const type_name_MediaPlaybackTimedMetadataTrackList = "MediaPlaybackTimedMetadataTrackList";
 
     static PyObject* _new_MediaPlaybackTimedMetadataTrackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackTimedMetadataTrackList);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>::type_name);
         return nullptr;
     }
 
@@ -9072,11 +9069,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlaybackVideoTrackList class --------------------
-    static constexpr const char* const type_name_MediaPlaybackVideoTrackList = "MediaPlaybackVideoTrackList";
 
     static PyObject* _new_MediaPlaybackVideoTrackList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlaybackVideoTrackList);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>::type_name);
         return nullptr;
     }
 
@@ -9513,7 +9510,6 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlayer class --------------------
-    static constexpr const char* const type_name_MediaPlayer = "MediaPlayer";
 
     static PyObject* _new_MediaPlayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11944,11 +11940,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlayerDataReceivedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlayerDataReceivedEventArgs = "MediaPlayerDataReceivedEventArgs";
 
     static PyObject* _new_MediaPlayerDataReceivedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlayerDataReceivedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -12039,11 +12035,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlayerFailedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlayerFailedEventArgs = "MediaPlayerFailedEventArgs";
 
     static PyObject* _new_MediaPlayerFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlayerFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -12174,11 +12170,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlayerRateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaPlayerRateChangedEventArgs = "MediaPlayerRateChangedEventArgs";
 
     static PyObject* _new_MediaPlayerRateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlayerRateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -12269,11 +12265,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- MediaPlayerSurface class --------------------
-    static constexpr const char* const type_name_MediaPlayerSurface = "MediaPlayerSurface";
 
     static PyObject* _new_MediaPlayerSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaPlayerSurface);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::MediaPlayerSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::MediaPlayerSurface>::type_name);
         return nullptr;
     }
 
@@ -12457,7 +12453,6 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- PlaybackMediaMarker class --------------------
-    static constexpr const char* const type_name_PlaybackMediaMarker = "PlaybackMediaMarker";
 
     static PyObject* _new_PlaybackMediaMarker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12634,11 +12629,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- PlaybackMediaMarkerReachedEventArgs class --------------------
-    static constexpr const char* const type_name_PlaybackMediaMarkerReachedEventArgs = "PlaybackMediaMarkerReachedEventArgs";
 
     static PyObject* _new_PlaybackMediaMarkerReachedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlaybackMediaMarkerReachedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -12729,11 +12724,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- PlaybackMediaMarkerSequence class --------------------
-    static constexpr const char* const type_name_PlaybackMediaMarkerSequence = "PlaybackMediaMarkerSequence";
 
     static PyObject* _new_PlaybackMediaMarkerSequence(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlaybackMediaMarkerSequence);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>::type_name);
         return nullptr;
     }
 
@@ -12932,11 +12927,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- TimedMetadataPresentationModeChangedEventArgs class --------------------
-    static constexpr const char* const type_name_TimedMetadataPresentationModeChangedEventArgs = "TimedMetadataPresentationModeChangedEventArgs";
 
     static PyObject* _new_TimedMetadataPresentationModeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimedMetadataPresentationModeChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -13067,11 +13062,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- IMediaEnginePlaybackSource interface --------------------
-    static constexpr const char* const type_name_IMediaEnginePlaybackSource = "IMediaEnginePlaybackSource";
 
     static PyObject* _new_IMediaEnginePlaybackSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaEnginePlaybackSource);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>::type_name);
         return nullptr;
     }
 
@@ -13195,11 +13190,11 @@ namespace py::cpp::Windows::Media::Playback
     };
 
     // ----- IMediaPlaybackSource interface --------------------
-    static constexpr const char* const type_name_IMediaPlaybackSource = "IMediaPlaybackSource";
 
     static PyObject* _new_IMediaPlaybackSource(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaPlaybackSource);
+        static_assert(py::py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>::type_name);
         return nullptr;
     }
 

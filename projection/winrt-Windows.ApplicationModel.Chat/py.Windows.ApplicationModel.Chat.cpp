@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Chat
 {
     // ----- ChatCapabilities class --------------------
-    static constexpr const char* const type_name_ChatCapabilities = "ChatCapabilities";
 
     static PyObject* _new_ChatCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatCapabilities);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>::type_name);
         return nullptr;
     }
 
@@ -182,11 +182,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatCapabilitiesManager class --------------------
-    static constexpr const char* const type_name_ChatCapabilitiesManager = "ChatCapabilitiesManager";
 
     static PyObject* _new_ChatCapabilitiesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatCapabilitiesManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager>::type_name);
         return nullptr;
     }
 
@@ -322,11 +322,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatConversation class --------------------
-    static constexpr const char* const type_name_ChatConversation = "ChatConversation";
 
     static PyObject* _new_ChatConversation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatConversation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatConversation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatConversation>::type_name);
         return nullptr;
     }
 
@@ -916,11 +916,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatConversationReader class --------------------
-    static constexpr const char* const type_name_ChatConversationReader = "ChatConversationReader";
 
     static PyObject* _new_ChatConversationReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatConversationReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatConversationReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatConversationReader>::type_name);
         return nullptr;
     }
 
@@ -1041,7 +1041,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatConversationThreadingInfo class --------------------
-    static constexpr const char* const type_name_ChatConversationThreadingInfo = "ChatConversationThreadingInfo";
 
     static PyObject* _new_ChatConversationThreadingInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1351,7 +1350,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessage class --------------------
-    static constexpr const char* const type_name_ChatMessage = "ChatMessage";
 
     static PyObject* _new_ChatMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2589,7 +2587,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageAttachment class --------------------
-    static constexpr const char* const type_name_ChatMessageAttachment = "ChatMessageAttachment";
 
     static PyObject* _new_ChatMessageAttachment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3026,11 +3023,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageBlocking class --------------------
-    static constexpr const char* const type_name_ChatMessageBlocking = "ChatMessageBlocking";
 
     static PyObject* _new_ChatMessageBlocking(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageBlocking);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking>::type_name);
         return nullptr;
     }
 
@@ -3093,11 +3090,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageChange class --------------------
-    static constexpr const char* const type_name_ChatMessageChange = "ChatMessageChange";
 
     static PyObject* _new_ChatMessageChange(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageChange);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>::type_name);
         return nullptr;
     }
 
@@ -3208,11 +3205,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageChangeReader class --------------------
-    static constexpr const char* const type_name_ChatMessageChangeReader = "ChatMessageChangeReader";
 
     static PyObject* _new_ChatMessageChangeReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageChangeReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader>::type_name);
         return nullptr;
     }
 
@@ -3377,11 +3374,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageChangeTracker class --------------------
-    static constexpr const char* const type_name_ChatMessageChangeTracker = "ChatMessageChangeTracker";
 
     static PyObject* _new_ChatMessageChangeTracker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageChangeTracker);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker>::type_name);
         return nullptr;
     }
 
@@ -3544,11 +3541,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageChangedDeferral class --------------------
-    static constexpr const char* const type_name_ChatMessageChangedDeferral = "ChatMessageChangedDeferral";
 
     static PyObject* _new_ChatMessageChangedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageChangedDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral>::type_name);
         return nullptr;
     }
 
@@ -3650,11 +3647,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageChangedEventArgs class --------------------
-    static constexpr const char* const type_name_ChatMessageChangedEventArgs = "ChatMessageChangedEventArgs";
 
     static PyObject* _new_ChatMessageChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3755,11 +3752,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageManager class --------------------
-    static constexpr const char* const type_name_ChatMessageManager = "ChatMessageManager";
 
     static PyObject* _new_ChatMessageManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageManager>::type_name);
         return nullptr;
     }
 
@@ -4004,11 +4001,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageNotificationTriggerDetails class --------------------
-    static constexpr const char* const type_name_ChatMessageNotificationTriggerDetails = "ChatMessageNotificationTriggerDetails";
 
     static PyObject* _new_ChatMessageNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageNotificationTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -4179,11 +4176,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageReader class --------------------
-    static constexpr const char* const type_name_ChatMessageReader = "ChatMessageReader";
 
     static PyObject* _new_ChatMessageReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageReader>::type_name);
         return nullptr;
     }
 
@@ -4304,11 +4301,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageStore class --------------------
-    static constexpr const char* const type_name_ChatMessageStore = "ChatMessageStore";
 
     static PyObject* _new_ChatMessageStore(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageStore);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>::type_name);
         return nullptr;
     }
 
@@ -5224,11 +5221,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageStoreChangedEventArgs class --------------------
-    static constexpr const char* const type_name_ChatMessageStoreChangedEventArgs = "ChatMessageStoreChangedEventArgs";
 
     static PyObject* _new_ChatMessageStoreChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageStoreChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5339,11 +5336,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageTransport class --------------------
-    static constexpr const char* const type_name_ChatMessageTransport = "ChatMessageTransport";
 
     static PyObject* _new_ChatMessageTransport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageTransport);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>::type_name);
         return nullptr;
     }
 
@@ -5564,11 +5561,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageTransportConfiguration class --------------------
-    static constexpr const char* const type_name_ChatMessageTransportConfiguration = "ChatMessageTransportConfiguration";
 
     static PyObject* _new_ChatMessageTransportConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageTransportConfiguration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration>::type_name);
         return nullptr;
     }
 
@@ -5739,11 +5736,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatMessageValidationResult class --------------------
-    static constexpr const char* const type_name_ChatMessageValidationResult = "ChatMessageValidationResult";
 
     static PyObject* _new_ChatMessageValidationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatMessageValidationResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult>::type_name);
         return nullptr;
     }
 
@@ -5894,7 +5891,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatQueryOptions class --------------------
-    static constexpr const char* const type_name_ChatQueryOptions = "ChatQueryOptions";
 
     static PyObject* _new_ChatQueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6040,7 +6036,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatRecipientDeliveryInfo class --------------------
-    static constexpr const char* const type_name_ChatRecipientDeliveryInfo = "ChatRecipientDeliveryInfo";
 
     static PyObject* _new_ChatRecipientDeliveryInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6382,11 +6377,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatSearchReader class --------------------
-    static constexpr const char* const type_name_ChatSearchReader = "ChatSearchReader";
 
     static PyObject* _new_ChatSearchReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatSearchReader);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatSearchReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatSearchReader>::type_name);
         return nullptr;
     }
 
@@ -6507,11 +6502,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatSyncConfiguration class --------------------
-    static constexpr const char* const type_name_ChatSyncConfiguration = "ChatSyncConfiguration";
 
     static PyObject* _new_ChatSyncConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatSyncConfiguration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>::type_name);
         return nullptr;
     }
 
@@ -6678,11 +6673,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- ChatSyncManager class --------------------
-    static constexpr const char* const type_name_ChatSyncManager = "ChatSyncManager";
 
     static PyObject* _new_ChatSyncManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ChatSyncManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>::type_name);
         return nullptr;
     }
 
@@ -6930,11 +6925,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsEndUserMessage class --------------------
-    static constexpr const char* const type_name_RcsEndUserMessage = "RcsEndUserMessage";
 
     static PyObject* _new_RcsEndUserMessage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsEndUserMessage);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage>::type_name);
         return nullptr;
     }
 
@@ -7170,11 +7165,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsEndUserMessageAction class --------------------
-    static constexpr const char* const type_name_RcsEndUserMessageAction = "RcsEndUserMessageAction";
 
     static PyObject* _new_RcsEndUserMessageAction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsEndUserMessageAction);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>::type_name);
         return nullptr;
     }
 
@@ -7265,11 +7260,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsEndUserMessageAvailableEventArgs class --------------------
-    static constexpr const char* const type_name_RcsEndUserMessageAvailableEventArgs = "RcsEndUserMessageAvailableEventArgs";
 
     static PyObject* _new_RcsEndUserMessageAvailableEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsEndUserMessageAvailableEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7380,11 +7375,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsEndUserMessageAvailableTriggerDetails class --------------------
-    static constexpr const char* const type_name_RcsEndUserMessageAvailableTriggerDetails = "RcsEndUserMessageAvailableTriggerDetails";
 
     static PyObject* _new_RcsEndUserMessageAvailableTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsEndUserMessageAvailableTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -7495,11 +7490,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsEndUserMessageManager class --------------------
-    static constexpr const char* const type_name_RcsEndUserMessageManager = "RcsEndUserMessageManager";
 
     static PyObject* _new_RcsEndUserMessageManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsEndUserMessageManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager>::type_name);
         return nullptr;
     }
 
@@ -7615,11 +7610,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsManager class --------------------
-    static constexpr const char* const type_name_RcsManager = "RcsManager";
 
     static PyObject* _new_RcsManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsManager>::type_name);
         return nullptr;
     }
 
@@ -7818,11 +7813,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsServiceKindSupportedChangedEventArgs class --------------------
-    static constexpr const char* const type_name_RcsServiceKindSupportedChangedEventArgs = "RcsServiceKindSupportedChangedEventArgs";
 
     static PyObject* _new_RcsServiceKindSupportedChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsServiceKindSupportedChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7913,11 +7908,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsTransport class --------------------
-    static constexpr const char* const type_name_RcsTransport = "RcsTransport";
 
     static PyObject* _new_RcsTransport(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsTransport);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsTransport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsTransport>::type_name);
         return nullptr;
     }
 
@@ -8197,11 +8192,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RcsTransportConfiguration class --------------------
-    static constexpr const char* const type_name_RcsTransportConfiguration = "RcsTransportConfiguration";
 
     static PyObject* _new_RcsTransportConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RcsTransportConfiguration);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration>::type_name);
         return nullptr;
     }
 
@@ -8392,11 +8387,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- RemoteParticipantComposingChangedEventArgs class --------------------
-    static constexpr const char* const type_name_RemoteParticipantComposingChangedEventArgs = "RemoteParticipantComposingChangedEventArgs";
 
     static PyObject* _new_RemoteParticipantComposingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RemoteParticipantComposingChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8527,11 +8522,11 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     };
 
     // ----- IChatItem interface --------------------
-    static constexpr const char* const type_name_IChatItem = "IChatItem";
 
     static PyObject* _new_IChatItem(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IChatItem);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Chat::IChatItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Chat::IChatItem>::type_name);
         return nullptr;
     }
 

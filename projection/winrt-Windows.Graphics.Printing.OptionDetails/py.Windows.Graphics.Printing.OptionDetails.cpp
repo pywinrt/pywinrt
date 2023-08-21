@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Printing::OptionDetails
 {
     // ----- PrintBindingOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintBindingOptionDetails = "PrintBindingOptionDetails";
 
     static PyObject* _new_PrintBindingOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintBindingOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBindingOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -386,11 +386,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintBorderingOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintBorderingOptionDetails = "PrintBorderingOptionDetails";
 
     static PyObject* _new_PrintBorderingOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintBorderingOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintBorderingOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -765,11 +765,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintCollationOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintCollationOptionDetails = "PrintCollationOptionDetails";
 
     static PyObject* _new_PrintCollationOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintCollationOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCollationOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -1144,11 +1144,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintColorModeOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintColorModeOptionDetails = "PrintColorModeOptionDetails";
 
     static PyObject* _new_PrintColorModeOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintColorModeOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintColorModeOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -1523,11 +1523,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintCopiesOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintCopiesOptionDetails = "PrintCopiesOptionDetails";
 
     static PyObject* _new_PrintCopiesOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintCopiesOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCopiesOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -1922,11 +1922,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintCustomItemDetails class --------------------
-    static constexpr const char* const type_name_PrintCustomItemDetails = "PrintCustomItemDetails";
 
     static PyObject* _new_PrintCustomItemDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintCustomItemDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemDetails>::type_name);
         return nullptr;
     }
 
@@ -2065,11 +2065,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintCustomItemListOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintCustomItemListOptionDetails = "PrintCustomItemListOptionDetails";
 
     static PyObject* _new_PrintCustomItemListOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintCustomItemListOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomItemListOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -2550,11 +2550,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintCustomTextOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintCustomTextOptionDetails = "PrintCustomTextOptionDetails";
 
     static PyObject* _new_PrintCustomTextOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintCustomTextOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomTextOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -3005,11 +3005,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintCustomToggleOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintCustomToggleOptionDetails = "PrintCustomToggleOptionDetails";
 
     static PyObject* _new_PrintCustomToggleOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintCustomToggleOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintCustomToggleOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -3412,11 +3412,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintDuplexOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintDuplexOptionDetails = "PrintDuplexOptionDetails";
 
     static PyObject* _new_PrintDuplexOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintDuplexOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintDuplexOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -3791,11 +3791,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintHolePunchOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintHolePunchOptionDetails = "PrintHolePunchOptionDetails";
 
     static PyObject* _new_PrintHolePunchOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintHolePunchOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintHolePunchOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -4170,11 +4170,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintMediaSizeOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintMediaSizeOptionDetails = "PrintMediaSizeOptionDetails";
 
     static PyObject* _new_PrintMediaSizeOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintMediaSizeOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaSizeOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -4549,11 +4549,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintMediaTypeOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintMediaTypeOptionDetails = "PrintMediaTypeOptionDetails";
 
     static PyObject* _new_PrintMediaTypeOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintMediaTypeOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintMediaTypeOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -4928,11 +4928,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintOrientationOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintOrientationOptionDetails = "PrintOrientationOptionDetails";
 
     static PyObject* _new_PrintOrientationOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintOrientationOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintOrientationOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -5307,11 +5307,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintPageRangeOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintPageRangeOptionDetails = "PrintPageRangeOptionDetails";
 
     static PyObject* _new_PrintPageRangeOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintPageRangeOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintPageRangeOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -5666,11 +5666,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintQualityOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintQualityOptionDetails = "PrintQualityOptionDetails";
 
     static PyObject* _new_PrintQualityOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintQualityOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintQualityOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -6045,11 +6045,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintStapleOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintStapleOptionDetails = "PrintStapleOptionDetails";
 
     static PyObject* _new_PrintStapleOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintStapleOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintStapleOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -6424,11 +6424,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintTaskOptionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintTaskOptionChangedEventArgs = "PrintTaskOptionChangedEventArgs";
 
     static PyObject* _new_PrintTaskOptionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskOptionChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6519,11 +6519,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- PrintTaskOptionDetails class --------------------
-    static constexpr const char* const type_name_PrintTaskOptionDetails = "PrintTaskOptionDetails";
 
     static PyObject* _new_PrintTaskOptionDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::PrintTaskOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -6887,11 +6887,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- IPrintCustomOptionDetails interface --------------------
-    static constexpr const char* const type_name_IPrintCustomOptionDetails = "IPrintCustomOptionDetails";
 
     static PyObject* _new_IPrintCustomOptionDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintCustomOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintCustomOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -7198,11 +7198,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- IPrintItemListOptionDetails interface --------------------
-    static constexpr const char* const type_name_IPrintItemListOptionDetails = "IPrintItemListOptionDetails";
 
     static PyObject* _new_IPrintItemListOptionDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintItemListOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintItemListOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -7481,11 +7481,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- IPrintNumberOptionDetails interface --------------------
-    static constexpr const char* const type_name_IPrintNumberOptionDetails = "IPrintNumberOptionDetails";
 
     static PyObject* _new_IPrintNumberOptionDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintNumberOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintNumberOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -7784,11 +7784,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- IPrintOptionDetails interface --------------------
-    static constexpr const char* const type_name_IPrintOptionDetails = "IPrintOptionDetails";
 
     static PyObject* _new_IPrintOptionDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintOptionDetails>::type_name);
         return nullptr;
     }
 
@@ -8047,11 +8047,11 @@ namespace py::cpp::Windows::Graphics::Printing::OptionDetails
     };
 
     // ----- IPrintTextOptionDetails interface --------------------
-    static constexpr const char* const type_name_IPrintTextOptionDetails = "IPrintTextOptionDetails";
 
     static PyObject* _new_IPrintTextOptionDetails(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPrintTextOptionDetails);
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::OptionDetails::IPrintTextOptionDetails>::type_name);
         return nullptr;
     }
 

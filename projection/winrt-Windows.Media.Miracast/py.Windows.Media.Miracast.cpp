@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Media::Miracast
 {
     // ----- MiracastReceiver class --------------------
-    static constexpr const char* const type_name_MiracastReceiver = "MiracastReceiver";
 
     static PyObject* _new_MiracastReceiver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -492,11 +491,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverApplySettingsResult class --------------------
-    static constexpr const char* const type_name_MiracastReceiverApplySettingsResult = "MiracastReceiverApplySettingsResult";
 
     static PyObject* _new_MiracastReceiverApplySettingsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverApplySettingsResult);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverApplySettingsResult>::type_name);
         return nullptr;
     }
 
@@ -607,11 +606,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverConnection class --------------------
-    static constexpr const char* const type_name_MiracastReceiverConnection = "MiracastReceiverConnection";
 
     static PyObject* _new_MiracastReceiverConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverConnection);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnection>::type_name);
         return nullptr;
     }
 
@@ -992,11 +991,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverConnectionCreatedEventArgs class --------------------
-    static constexpr const char* const type_name_MiracastReceiverConnectionCreatedEventArgs = "MiracastReceiverConnectionCreatedEventArgs";
 
     static PyObject* _new_MiracastReceiverConnectionCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverConnectionCreatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1137,11 +1136,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverCursorImageChannel class --------------------
-    static constexpr const char* const type_name_MiracastReceiverCursorImageChannel = "MiracastReceiverCursorImageChannel";
 
     static PyObject* _new_MiracastReceiverCursorImageChannel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverCursorImageChannel);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannel>::type_name);
         return nullptr;
     }
 
@@ -1382,11 +1381,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverCursorImageChannelSettings class --------------------
-    static constexpr const char* const type_name_MiracastReceiverCursorImageChannelSettings = "MiracastReceiverCursorImageChannelSettings";
 
     static PyObject* _new_MiracastReceiverCursorImageChannelSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverCursorImageChannelSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings>::type_name);
         return nullptr;
     }
 
@@ -1553,11 +1552,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverDisconnectedEventArgs class --------------------
-    static constexpr const char* const type_name_MiracastReceiverDisconnectedEventArgs = "MiracastReceiverDisconnectedEventArgs";
 
     static PyObject* _new_MiracastReceiverDisconnectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverDisconnectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1648,11 +1647,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverGameControllerDevice class --------------------
-    static constexpr const char* const type_name_MiracastReceiverGameControllerDevice = "MiracastReceiverGameControllerDevice";
 
     static PyObject* _new_MiracastReceiverGameControllerDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverGameControllerDevice);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverGameControllerDevice>::type_name);
         return nullptr;
     }
 
@@ -1904,11 +1903,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverInputDevices class --------------------
-    static constexpr const char* const type_name_MiracastReceiverInputDevices = "MiracastReceiverInputDevices";
 
     static PyObject* _new_MiracastReceiverInputDevices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverInputDevices);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverInputDevices>::type_name);
         return nullptr;
     }
 
@@ -2019,11 +2018,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverKeyboardDevice class --------------------
-    static constexpr const char* const type_name_MiracastReceiverKeyboardDevice = "MiracastReceiverKeyboardDevice";
 
     static PyObject* _new_MiracastReceiverKeyboardDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverKeyboardDevice);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverKeyboardDevice>::type_name);
         return nullptr;
     }
 
@@ -2227,11 +2226,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverMediaSourceCreatedEventArgs class --------------------
-    static constexpr const char* const type_name_MiracastReceiverMediaSourceCreatedEventArgs = "MiracastReceiverMediaSourceCreatedEventArgs";
 
     static PyObject* _new_MiracastReceiverMediaSourceCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverMediaSourceCreatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2392,11 +2391,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverSession class --------------------
-    static constexpr const char* const type_name_MiracastReceiverSession = "MiracastReceiverSession";
 
     static PyObject* _new_MiracastReceiverSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverSession);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSession>::type_name);
         return nullptr;
     }
 
@@ -2811,11 +2810,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverSessionStartResult class --------------------
-    static constexpr const char* const type_name_MiracastReceiverSessionStartResult = "MiracastReceiverSessionStartResult";
 
     static PyObject* _new_MiracastReceiverSessionStartResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverSessionStartResult);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSessionStartResult>::type_name);
         return nullptr;
     }
 
@@ -2926,11 +2925,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverSettings class --------------------
-    static constexpr const char* const type_name_MiracastReceiverSettings = "MiracastReceiverSettings";
 
     static PyObject* _new_MiracastReceiverSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverSettings>::type_name);
         return nullptr;
     }
 
@@ -3241,11 +3240,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverStatus class --------------------
-    static constexpr const char* const type_name_MiracastReceiverStatus = "MiracastReceiverStatus";
 
     static PyObject* _new_MiracastReceiverStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverStatus);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverStatus>::type_name);
         return nullptr;
     }
 
@@ -3416,11 +3415,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverStreamControl class --------------------
-    static constexpr const char* const type_name_MiracastReceiverStreamControl = "MiracastReceiverStreamControl";
 
     static PyObject* _new_MiracastReceiverStreamControl(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverStreamControl);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverStreamControl>::type_name);
         return nullptr;
     }
 
@@ -3664,11 +3663,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastReceiverVideoStreamSettings class --------------------
-    static constexpr const char* const type_name_MiracastReceiverVideoStreamSettings = "MiracastReceiverVideoStreamSettings";
 
     static PyObject* _new_MiracastReceiverVideoStreamSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastReceiverVideoStreamSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings>::type_name);
         return nullptr;
     }
 
@@ -3835,11 +3834,11 @@ namespace py::cpp::Windows::Media::Miracast
     };
 
     // ----- MiracastTransmitter class --------------------
-    static constexpr const char* const type_name_MiracastTransmitter = "MiracastTransmitter";
 
     static PyObject* _new_MiracastTransmitter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MiracastTransmitter);
+        static_assert(py::py_type<winrt::Windows::Media::Miracast::MiracastTransmitter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Miracast::MiracastTransmitter>::type_name);
         return nullptr;
     }
 

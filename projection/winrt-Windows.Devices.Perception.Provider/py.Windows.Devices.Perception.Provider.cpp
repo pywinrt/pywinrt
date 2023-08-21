@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Perception::Provider
 {
     // ----- KnownPerceptionFrameKind class --------------------
-    static constexpr const char* const type_name_KnownPerceptionFrameKind = "KnownPerceptionFrameKind";
 
     static PyObject* _new_KnownPerceptionFrameKind(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KnownPerceptionFrameKind);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>::type_name);
         return nullptr;
     }
 
@@ -121,7 +121,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionControlGroup class --------------------
-    static constexpr const char* const type_name_PerceptionControlGroup = "PerceptionControlGroup";
 
     static PyObject* _new_PerceptionControlGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -241,7 +240,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionCorrelation class --------------------
-    static constexpr const char* const type_name_PerceptionCorrelation = "PerceptionCorrelation";
 
     static PyObject* _new_PerceptionCorrelation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -403,7 +401,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionCorrelationGroup class --------------------
-    static constexpr const char* const type_name_PerceptionCorrelationGroup = "PerceptionCorrelationGroup";
 
     static PyObject* _new_PerceptionCorrelationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -523,7 +520,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionFaceAuthenticationGroup class --------------------
-    static constexpr const char* const type_name_PerceptionFaceAuthenticationGroup = "PerceptionFaceAuthenticationGroup";
 
     static PyObject* _new_PerceptionFaceAuthenticationGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -645,11 +641,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionFrame class --------------------
-    static constexpr const char* const type_name_PerceptionFrame = "PerceptionFrame";
 
     static PyObject* _new_PerceptionFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionFrame);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>::type_name);
         return nullptr;
     }
 
@@ -808,7 +804,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionFrameProviderInfo class --------------------
-    static constexpr const char* const type_name_PerceptionFrameProviderInfo = "PerceptionFrameProviderInfo";
 
     static PyObject* _new_PerceptionFrameProviderInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1146,11 +1141,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionFrameProviderManagerService class --------------------
-    static constexpr const char* const type_name_PerceptionFrameProviderManagerService = "PerceptionFrameProviderManagerService";
 
     static PyObject* _new_PerceptionFrameProviderManagerService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionFrameProviderManagerService);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>::type_name);
         return nullptr;
     }
 
@@ -1520,11 +1515,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionPropertyChangeRequest class --------------------
-    static constexpr const char* const type_name_PerceptionPropertyChangeRequest = "PerceptionPropertyChangeRequest";
 
     static PyObject* _new_PerceptionPropertyChangeRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PerceptionPropertyChangeRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>::type_name);
         return nullptr;
     }
 
@@ -1713,7 +1708,6 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- PerceptionVideoFrameAllocator class --------------------
-    static constexpr const char* const type_name_PerceptionVideoFrameAllocator = "PerceptionVideoFrameAllocator";
 
     static PyObject* _new_PerceptionVideoFrameAllocator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1931,11 +1925,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- IPerceptionFrameProvider interface --------------------
-    static constexpr const char* const type_name_IPerceptionFrameProvider = "IPerceptionFrameProvider";
 
     static PyObject* _new_IPerceptionFrameProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPerceptionFrameProvider);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>::type_name);
         return nullptr;
     }
 
@@ -2214,11 +2208,11 @@ namespace py::cpp::Windows::Devices::Perception::Provider
     };
 
     // ----- IPerceptionFrameProviderManager interface --------------------
-    static constexpr const char* const type_name_IPerceptionFrameProviderManager = "IPerceptionFrameProviderManager";
 
     static PyObject* _new_IPerceptionFrameProviderManager(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPerceptionFrameProviderManager);
+        static_assert(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>::type_name);
         return nullptr;
     }
 

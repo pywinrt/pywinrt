@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
 {
     // ----- DeviceAccountConfiguration class --------------------
-    static constexpr const char* const type_name_DeviceAccountConfiguration = "DeviceAccountConfiguration";
 
     static PyObject* _new_DeviceAccountConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2209,11 +2208,11 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::SystemAccess
     };
 
     // ----- UserDataAccountSystemAccessManager class --------------------
-    static constexpr const char* const type_name_UserDataAccountSystemAccessManager = "UserDataAccountSystemAccessManager";
 
     static PyObject* _new_UserDataAccountSystemAccessManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataAccountSystemAccessManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager>::type_name);
         return nullptr;
     }
 

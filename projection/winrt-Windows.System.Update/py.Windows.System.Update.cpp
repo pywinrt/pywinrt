@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Update
 {
     // ----- SystemUpdateItem class --------------------
-    static constexpr const char* const type_name_SystemUpdateItem = "SystemUpdateItem";
 
     static PyObject* _new_SystemUpdateItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemUpdateItem);
+        static_assert(py::py_type<winrt::Windows::System::Update::SystemUpdateItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Update::SystemUpdateItem>::type_name);
         return nullptr;
     }
 
@@ -242,11 +242,11 @@ namespace py::cpp::Windows::System::Update
     };
 
     // ----- SystemUpdateLastErrorInfo class --------------------
-    static constexpr const char* const type_name_SystemUpdateLastErrorInfo = "SystemUpdateLastErrorInfo";
 
     static PyObject* _new_SystemUpdateLastErrorInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemUpdateLastErrorInfo);
+        static_assert(py::py_type<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>::type_name);
         return nullptr;
     }
 
@@ -377,11 +377,11 @@ namespace py::cpp::Windows::System::Update
     };
 
     // ----- SystemUpdateManager class --------------------
-    static constexpr const char* const type_name_SystemUpdateManager = "SystemUpdateManager";
 
     static PyObject* _new_SystemUpdateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SystemUpdateManager);
+        static_assert(py::py_type<winrt::Windows::System::Update::SystemUpdateManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Update::SystemUpdateManager>::type_name);
         return nullptr;
     }
 

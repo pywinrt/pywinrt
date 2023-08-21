@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 {
     // ----- AppBarAutomationPeer class --------------------
-    static constexpr const char* const type_name_AppBarAutomationPeer = "AppBarAutomationPeer";
 
     static PyObject* _new_AppBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -456,7 +455,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- AppBarButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_AppBarButtonAutomationPeer = "AppBarButtonAutomationPeer";
 
     static PyObject* _new_AppBarButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -638,7 +636,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- AppBarToggleButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_AppBarToggleButtonAutomationPeer = "AppBarToggleButtonAutomationPeer";
 
     static PyObject* _new_AppBarToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -738,7 +735,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- AutoSuggestBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_AutoSuggestBoxAutomationPeer = "AutoSuggestBoxAutomationPeer";
 
     static PyObject* _new_AutoSuggestBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -869,11 +865,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- AutomationPeer class --------------------
-    static constexpr const char* const type_name_AutomationPeer = "AutomationPeer";
 
     static PyObject* _new_AutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -4134,7 +4130,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- AutomationPeerAnnotation class --------------------
-    static constexpr const char* const type_name_AutomationPeerAnnotation = "AutomationPeerAnnotation";
 
     static PyObject* _new_AutomationPeerAnnotation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4419,7 +4414,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_ButtonAutomationPeer = "ButtonAutomationPeer";
 
     static PyObject* _new_ButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4550,11 +4544,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ButtonBaseAutomationPeer class --------------------
-    static constexpr const char* const type_name_ButtonBaseAutomationPeer = "ButtonBaseAutomationPeer";
 
     static PyObject* _new_ButtonBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ButtonBaseAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -4625,7 +4619,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- CalendarDatePickerAutomationPeer class --------------------
-    static constexpr const char* const type_name_CalendarDatePickerAutomationPeer = "CalendarDatePickerAutomationPeer";
 
     static PyObject* _new_CalendarDatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4829,7 +4822,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- CaptureElementAutomationPeer class --------------------
-    static constexpr const char* const type_name_CaptureElementAutomationPeer = "CaptureElementAutomationPeer";
 
     static PyObject* _new_CaptureElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4929,7 +4921,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- CheckBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_CheckBoxAutomationPeer = "CheckBoxAutomationPeer";
 
     static PyObject* _new_CheckBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5029,7 +5020,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ColorPickerSliderAutomationPeer class --------------------
-    static constexpr const char* const type_name_ColorPickerSliderAutomationPeer = "ColorPickerSliderAutomationPeer";
 
     static PyObject* _new_ColorPickerSliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5129,7 +5119,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ColorSpectrumAutomationPeer class --------------------
-    static constexpr const char* const type_name_ColorSpectrumAutomationPeer = "ColorSpectrumAutomationPeer";
 
     static PyObject* _new_ColorSpectrumAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5229,7 +5218,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ComboBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_ComboBoxAutomationPeer = "ComboBoxAutomationPeer";
 
     static PyObject* _new_ComboBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5700,7 +5688,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ComboBoxItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ComboBoxItemAutomationPeer = "ComboBoxItemAutomationPeer";
 
     static PyObject* _new_ComboBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5800,7 +5787,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ComboBoxItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_ComboBoxItemDataAutomationPeer = "ComboBoxItemDataAutomationPeer";
 
     static PyObject* _new_ComboBoxItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5932,7 +5918,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- DatePickerAutomationPeer class --------------------
-    static constexpr const char* const type_name_DatePickerAutomationPeer = "DatePickerAutomationPeer";
 
     static PyObject* _new_DatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6032,11 +6017,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- DatePickerFlyoutPresenterAutomationPeer class --------------------
-    static constexpr const char* const type_name_DatePickerFlyoutPresenterAutomationPeer = "DatePickerFlyoutPresenterAutomationPeer";
 
     static PyObject* _new_DatePickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DatePickerFlyoutPresenterAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -6107,7 +6092,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- FlipViewAutomationPeer class --------------------
-    static constexpr const char* const type_name_FlipViewAutomationPeer = "FlipViewAutomationPeer";
 
     static PyObject* _new_FlipViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6207,7 +6191,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- FlipViewItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_FlipViewItemAutomationPeer = "FlipViewItemAutomationPeer";
 
     static PyObject* _new_FlipViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6307,7 +6290,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- FlipViewItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_FlipViewItemDataAutomationPeer = "FlipViewItemDataAutomationPeer";
 
     static PyObject* _new_FlipViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6439,7 +6421,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- FlyoutPresenterAutomationPeer class --------------------
-    static constexpr const char* const type_name_FlyoutPresenterAutomationPeer = "FlyoutPresenterAutomationPeer";
 
     static PyObject* _new_FlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6539,7 +6520,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- FrameworkElementAutomationPeer class --------------------
-    static constexpr const char* const type_name_FrameworkElementAutomationPeer = "FrameworkElementAutomationPeer";
 
     static PyObject* _new_FrameworkElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6723,7 +6703,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- GridViewAutomationPeer class --------------------
-    static constexpr const char* const type_name_GridViewAutomationPeer = "GridViewAutomationPeer";
 
     static PyObject* _new_GridViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6823,7 +6802,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- GridViewHeaderItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_GridViewHeaderItemAutomationPeer = "GridViewHeaderItemAutomationPeer";
 
     static PyObject* _new_GridViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6923,7 +6901,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- GridViewItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_GridViewItemAutomationPeer = "GridViewItemAutomationPeer";
 
     static PyObject* _new_GridViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7023,7 +7000,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- GridViewItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_GridViewItemDataAutomationPeer = "GridViewItemDataAutomationPeer";
 
     static PyObject* _new_GridViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7155,7 +7131,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- GroupItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_GroupItemAutomationPeer = "GroupItemAutomationPeer";
 
     static PyObject* _new_GroupItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7255,7 +7230,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- HubAutomationPeer class --------------------
-    static constexpr const char* const type_name_HubAutomationPeer = "HubAutomationPeer";
 
     static PyObject* _new_HubAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7355,7 +7329,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- HubSectionAutomationPeer class --------------------
-    static constexpr const char* const type_name_HubSectionAutomationPeer = "HubSectionAutomationPeer";
 
     static PyObject* _new_HubSectionAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7486,7 +7459,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- HyperlinkButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_HyperlinkButtonAutomationPeer = "HyperlinkButtonAutomationPeer";
 
     static PyObject* _new_HyperlinkButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7617,7 +7589,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ImageAutomationPeer class --------------------
-    static constexpr const char* const type_name_ImageAutomationPeer = "ImageAutomationPeer";
 
     static PyObject* _new_ImageAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7717,11 +7688,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- InkToolbarAutomationPeer class --------------------
-    static constexpr const char* const type_name_InkToolbarAutomationPeer = "InkToolbarAutomationPeer";
 
     static PyObject* _new_InkToolbarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InkToolbarAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -7792,7 +7763,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ItemAutomationPeer = "ItemAutomationPeer";
 
     static PyObject* _new_ItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7964,7 +7934,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ItemsControlAutomationPeer class --------------------
-    static constexpr const char* const type_name_ItemsControlAutomationPeer = "ItemsControlAutomationPeer";
 
     static PyObject* _new_ItemsControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8162,7 +8131,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListBoxAutomationPeer = "ListBoxAutomationPeer";
 
     static PyObject* _new_ListBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8262,7 +8230,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListBoxItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListBoxItemAutomationPeer = "ListBoxItemAutomationPeer";
 
     static PyObject* _new_ListBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8362,7 +8329,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListBoxItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListBoxItemDataAutomationPeer = "ListBoxItemDataAutomationPeer";
 
     static PyObject* _new_ListBoxItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8494,11 +8460,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListPickerFlyoutPresenterAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListPickerFlyoutPresenterAutomationPeer = "ListPickerFlyoutPresenterAutomationPeer";
 
     static PyObject* _new_ListPickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ListPickerFlyoutPresenterAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -8569,7 +8535,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListViewAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListViewAutomationPeer = "ListViewAutomationPeer";
 
     static PyObject* _new_ListViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8669,7 +8634,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListViewBaseAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListViewBaseAutomationPeer = "ListViewBaseAutomationPeer";
 
     static PyObject* _new_ListViewBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8809,11 +8773,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListViewBaseHeaderItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListViewBaseHeaderItemAutomationPeer = "ListViewBaseHeaderItemAutomationPeer";
 
     static PyObject* _new_ListViewBaseHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ListViewBaseHeaderItemAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -8884,7 +8848,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListViewHeaderItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListViewHeaderItemAutomationPeer = "ListViewHeaderItemAutomationPeer";
 
     static PyObject* _new_ListViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8984,7 +8947,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListViewItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListViewItemAutomationPeer = "ListViewItemAutomationPeer";
 
     static PyObject* _new_ListViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9084,7 +9046,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ListViewItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_ListViewItemDataAutomationPeer = "ListViewItemDataAutomationPeer";
 
     static PyObject* _new_ListViewItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9216,11 +9177,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- LoopingSelectorAutomationPeer class --------------------
-    static constexpr const char* const type_name_LoopingSelectorAutomationPeer = "LoopingSelectorAutomationPeer";
 
     static PyObject* _new_LoopingSelectorAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LoopingSelectorAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -9665,11 +9626,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- LoopingSelectorItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_LoopingSelectorItemAutomationPeer = "LoopingSelectorItemAutomationPeer";
 
     static PyObject* _new_LoopingSelectorItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LoopingSelectorItemAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -9904,11 +9865,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- LoopingSelectorItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_LoopingSelectorItemDataAutomationPeer = "LoopingSelectorItemDataAutomationPeer";
 
     static PyObject* _new_LoopingSelectorItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LoopingSelectorItemDataAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -10010,11 +9971,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MapControlAutomationPeer class --------------------
-    static constexpr const char* const type_name_MapControlAutomationPeer = "MapControlAutomationPeer";
 
     static PyObject* _new_MapControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MapControlAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -10580,7 +10541,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MediaElementAutomationPeer class --------------------
-    static constexpr const char* const type_name_MediaElementAutomationPeer = "MediaElementAutomationPeer";
 
     static PyObject* _new_MediaElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10680,7 +10640,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MediaPlayerElementAutomationPeer class --------------------
-    static constexpr const char* const type_name_MediaPlayerElementAutomationPeer = "MediaPlayerElementAutomationPeer";
 
     static PyObject* _new_MediaPlayerElementAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10780,7 +10739,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MediaTransportControlsAutomationPeer class --------------------
-    static constexpr const char* const type_name_MediaTransportControlsAutomationPeer = "MediaTransportControlsAutomationPeer";
 
     static PyObject* _new_MediaTransportControlsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10880,7 +10838,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MenuBarAutomationPeer class --------------------
-    static constexpr const char* const type_name_MenuBarAutomationPeer = "MenuBarAutomationPeer";
 
     static PyObject* _new_MenuBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10980,7 +10937,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MenuBarItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_MenuBarItemAutomationPeer = "MenuBarItemAutomationPeer";
 
     static PyObject* _new_MenuBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11193,7 +11149,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MenuFlyoutItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_MenuFlyoutItemAutomationPeer = "MenuFlyoutItemAutomationPeer";
 
     static PyObject* _new_MenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11324,7 +11279,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- MenuFlyoutPresenterAutomationPeer class --------------------
-    static constexpr const char* const type_name_MenuFlyoutPresenterAutomationPeer = "MenuFlyoutPresenterAutomationPeer";
 
     static PyObject* _new_MenuFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11424,7 +11378,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- NavigationViewItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_NavigationViewItemAutomationPeer = "NavigationViewItemAutomationPeer";
 
     static PyObject* _new_NavigationViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11524,7 +11477,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- PasswordBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_PasswordBoxAutomationPeer = "PasswordBoxAutomationPeer";
 
     static PyObject* _new_PasswordBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11624,7 +11576,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- PersonPictureAutomationPeer class --------------------
-    static constexpr const char* const type_name_PersonPictureAutomationPeer = "PersonPictureAutomationPeer";
 
     static PyObject* _new_PersonPictureAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11724,11 +11675,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- PickerFlyoutPresenterAutomationPeer class --------------------
-    static constexpr const char* const type_name_PickerFlyoutPresenterAutomationPeer = "PickerFlyoutPresenterAutomationPeer";
 
     static PyObject* _new_PickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PickerFlyoutPresenterAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -11799,7 +11750,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- PivotAutomationPeer class --------------------
-    static constexpr const char* const type_name_PivotAutomationPeer = "PivotAutomationPeer";
 
     static PyObject* _new_PivotAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12157,7 +12107,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- PivotItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_PivotItemAutomationPeer = "PivotItemAutomationPeer";
 
     static PyObject* _new_PivotItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12257,7 +12206,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- PivotItemDataAutomationPeer class --------------------
-    static constexpr const char* const type_name_PivotItemDataAutomationPeer = "PivotItemDataAutomationPeer";
 
     static PyObject* _new_PivotItemDataAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12553,7 +12501,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ProgressBarAutomationPeer class --------------------
-    static constexpr const char* const type_name_ProgressBarAutomationPeer = "ProgressBarAutomationPeer";
 
     static PyObject* _new_ProgressBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12653,7 +12600,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ProgressRingAutomationPeer class --------------------
-    static constexpr const char* const type_name_ProgressRingAutomationPeer = "ProgressRingAutomationPeer";
 
     static PyObject* _new_ProgressRingAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12753,7 +12699,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RadioButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_RadioButtonAutomationPeer = "RadioButtonAutomationPeer";
 
     static PyObject* _new_RadioButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12986,7 +12931,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RangeBaseAutomationPeer class --------------------
-    static constexpr const char* const type_name_RangeBaseAutomationPeer = "RangeBaseAutomationPeer";
 
     static PyObject* _new_RangeBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13239,7 +13183,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RatingControlAutomationPeer class --------------------
-    static constexpr const char* const type_name_RatingControlAutomationPeer = "RatingControlAutomationPeer";
 
     static PyObject* _new_RatingControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13339,7 +13282,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RepeatButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_RepeatButtonAutomationPeer = "RepeatButtonAutomationPeer";
 
     static PyObject* _new_RepeatButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13470,7 +13412,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RichEditBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_RichEditBoxAutomationPeer = "RichEditBoxAutomationPeer";
 
     static PyObject* _new_RichEditBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13570,7 +13511,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RichTextBlockAutomationPeer class --------------------
-    static constexpr const char* const type_name_RichTextBlockAutomationPeer = "RichTextBlockAutomationPeer";
 
     static PyObject* _new_RichTextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13670,7 +13610,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RichTextBlockOverflowAutomationPeer class --------------------
-    static constexpr const char* const type_name_RichTextBlockOverflowAutomationPeer = "RichTextBlockOverflowAutomationPeer";
 
     static PyObject* _new_RichTextBlockOverflowAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13770,7 +13709,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ScrollBarAutomationPeer class --------------------
-    static constexpr const char* const type_name_ScrollBarAutomationPeer = "ScrollBarAutomationPeer";
 
     static PyObject* _new_ScrollBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13870,7 +13808,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ScrollViewerAutomationPeer class --------------------
-    static constexpr const char* const type_name_ScrollViewerAutomationPeer = "ScrollViewerAutomationPeer";
 
     static PyObject* _new_ScrollViewerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14158,7 +14095,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- SearchBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_SearchBoxAutomationPeer = "SearchBoxAutomationPeer";
 
     static PyObject* _new_SearchBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14258,7 +14194,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- SelectorAutomationPeer class --------------------
-    static constexpr const char* const type_name_SelectorAutomationPeer = "SelectorAutomationPeer";
 
     static PyObject* _new_SelectorAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14428,7 +14363,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- SelectorItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_SelectorItemAutomationPeer = "SelectorItemAutomationPeer";
 
     static PyObject* _new_SelectorItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14662,7 +14596,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- SemanticZoomAutomationPeer class --------------------
-    static constexpr const char* const type_name_SemanticZoomAutomationPeer = "SemanticZoomAutomationPeer";
 
     static PyObject* _new_SemanticZoomAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14813,7 +14746,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- SettingsFlyoutAutomationPeer class --------------------
-    static constexpr const char* const type_name_SettingsFlyoutAutomationPeer = "SettingsFlyoutAutomationPeer";
 
     static PyObject* _new_SettingsFlyoutAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14913,7 +14845,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- SliderAutomationPeer class --------------------
-    static constexpr const char* const type_name_SliderAutomationPeer = "SliderAutomationPeer";
 
     static PyObject* _new_SliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15013,7 +14944,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- TextBlockAutomationPeer class --------------------
-    static constexpr const char* const type_name_TextBlockAutomationPeer = "TextBlockAutomationPeer";
 
     static PyObject* _new_TextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15113,7 +15043,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- TextBoxAutomationPeer class --------------------
-    static constexpr const char* const type_name_TextBoxAutomationPeer = "TextBoxAutomationPeer";
 
     static PyObject* _new_TextBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15213,7 +15142,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ThumbAutomationPeer class --------------------
-    static constexpr const char* const type_name_ThumbAutomationPeer = "ThumbAutomationPeer";
 
     static PyObject* _new_ThumbAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15313,7 +15241,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- TimePickerAutomationPeer class --------------------
-    static constexpr const char* const type_name_TimePickerAutomationPeer = "TimePickerAutomationPeer";
 
     static PyObject* _new_TimePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15413,11 +15340,11 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- TimePickerFlyoutPresenterAutomationPeer class --------------------
-    static constexpr const char* const type_name_TimePickerFlyoutPresenterAutomationPeer = "TimePickerFlyoutPresenterAutomationPeer";
 
     static PyObject* _new_TimePickerFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TimePickerFlyoutPresenterAutomationPeer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>::type_name);
         return nullptr;
     }
 
@@ -15488,7 +15415,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ToggleButtonAutomationPeer class --------------------
-    static constexpr const char* const type_name_ToggleButtonAutomationPeer = "ToggleButtonAutomationPeer";
 
     static PyObject* _new_ToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15639,7 +15565,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ToggleMenuFlyoutItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_ToggleMenuFlyoutItemAutomationPeer = "ToggleMenuFlyoutItemAutomationPeer";
 
     static PyObject* _new_ToggleMenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15790,7 +15715,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- ToggleSwitchAutomationPeer class --------------------
-    static constexpr const char* const type_name_ToggleSwitchAutomationPeer = "ToggleSwitchAutomationPeer";
 
     static PyObject* _new_ToggleSwitchAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15941,7 +15865,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- TreeViewItemAutomationPeer class --------------------
-    static constexpr const char* const type_name_TreeViewItemAutomationPeer = "TreeViewItemAutomationPeer";
 
     static PyObject* _new_TreeViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16123,7 +16046,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- TreeViewListAutomationPeer class --------------------
-    static constexpr const char* const type_name_TreeViewListAutomationPeer = "TreeViewListAutomationPeer";
 
     static PyObject* _new_TreeViewListAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16223,7 +16145,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     };
 
     // ----- RawElementProviderRuntimeId struct --------------------
-    static constexpr const char* const type_name_RawElementProviderRuntimeId = "RawElementProviderRuntimeId";
 
     PyObject* _new_RawElementProviderRuntimeId(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Display::Core
 {
     // ----- HdmiDisplayInformation class --------------------
-    static constexpr const char* const type_name_HdmiDisplayInformation = "HdmiDisplayInformation";
 
     static PyObject* _new_HdmiDisplayInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HdmiDisplayInformation);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>::type_name);
         return nullptr;
     }
 
@@ -322,11 +322,11 @@ namespace py::cpp::Windows::Graphics::Display::Core
     };
 
     // ----- HdmiDisplayMode class --------------------
-    static constexpr const char* const type_name_HdmiDisplayMode = "HdmiDisplayMode";
 
     static PyObject* _new_HdmiDisplayMode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HdmiDisplayMode);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>::type_name);
         return nullptr;
     }
 
@@ -649,7 +649,6 @@ namespace py::cpp::Windows::Graphics::Display::Core
     };
 
     // ----- HdmiDisplayHdr2086Metadata struct --------------------
-    static constexpr const char* const type_name_HdmiDisplayHdr2086Metadata = "HdmiDisplayHdr2086Metadata";
 
     PyObject* _new_HdmiDisplayHdr2086Metadata(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

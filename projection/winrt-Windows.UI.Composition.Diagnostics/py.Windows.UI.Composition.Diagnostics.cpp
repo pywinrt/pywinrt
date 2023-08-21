@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::Composition::Diagnostics
 {
     // ----- CompositionDebugHeatMaps class --------------------
-    static constexpr const char* const type_name_CompositionDebugHeatMaps = "CompositionDebugHeatMaps";
 
     static PyObject* _new_CompositionDebugHeatMaps(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionDebugHeatMaps);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>::type_name);
         return nullptr;
     }
 
@@ -215,11 +215,11 @@ namespace py::cpp::Windows::UI::Composition::Diagnostics
     };
 
     // ----- CompositionDebugSettings class --------------------
-    static constexpr const char* const type_name_CompositionDebugSettings = "CompositionDebugSettings";
 
     static PyObject* _new_CompositionDebugSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionDebugSettings);
+        static_assert(py::py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>::type_name);
         return nullptr;
     }
 

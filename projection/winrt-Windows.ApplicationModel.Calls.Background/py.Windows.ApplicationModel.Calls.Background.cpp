@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Calls::Background
 {
     // ----- PhoneCallBlockedTriggerDetails class --------------------
-    static constexpr const char* const type_name_PhoneCallBlockedTriggerDetails = "PhoneCallBlockedTriggerDetails";
 
     static PyObject* _new_PhoneCallBlockedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallBlockedTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     };
 
     // ----- PhoneCallOriginDataRequestTriggerDetails class --------------------
-    static constexpr const char* const type_name_PhoneCallOriginDataRequestTriggerDetails = "PhoneCallOriginDataRequestTriggerDetails";
 
     static PyObject* _new_PhoneCallOriginDataRequestTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneCallOriginDataRequestTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -257,11 +257,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     };
 
     // ----- PhoneIncomingCallDismissedTriggerDetails class --------------------
-    static constexpr const char* const type_name_PhoneIncomingCallDismissedTriggerDetails = "PhoneIncomingCallDismissedTriggerDetails";
 
     static PyObject* _new_PhoneIncomingCallDismissedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneIncomingCallDismissedTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -452,11 +452,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     };
 
     // ----- PhoneIncomingCallNotificationTriggerDetails class --------------------
-    static constexpr const char* const type_name_PhoneIncomingCallNotificationTriggerDetails = "PhoneIncomingCallNotificationTriggerDetails";
 
     static PyObject* _new_PhoneIncomingCallNotificationTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneIncomingCallNotificationTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -567,11 +567,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     };
 
     // ----- PhoneLineChangedTriggerDetails class --------------------
-    static constexpr const char* const type_name_PhoneLineChangedTriggerDetails = "PhoneLineChangedTriggerDetails";
 
     static PyObject* _new_PhoneLineChangedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneLineChangedTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -714,11 +714,11 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     };
 
     // ----- PhoneNewVoicemailMessageTriggerDetails class --------------------
-    static constexpr const char* const type_name_PhoneNewVoicemailMessageTriggerDetails = "PhoneNewVoicemailMessageTriggerDetails";
 
     static PyObject* _new_PhoneNewVoicemailMessageTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhoneNewVoicemailMessageTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails>::type_name);
         return nullptr;
     }
 

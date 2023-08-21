@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel
 {
     // ----- AppDisplayInfo class --------------------
-    static constexpr const char* const type_name_AppDisplayInfo = "AppDisplayInfo";
 
     static PyObject* _new_AppDisplayInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppDisplayInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppDisplayInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppDisplayInfo>::type_name);
         return nullptr;
     }
 
@@ -154,11 +154,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- AppInfo class --------------------
-    static constexpr const char* const type_name_AppInfo = "AppInfo";
 
     static PyObject* _new_AppInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppInfo>::type_name);
         return nullptr;
     }
 
@@ -474,11 +474,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- AppInstallerInfo class --------------------
-    static constexpr const char* const type_name_AppInstallerInfo = "AppInstallerInfo";
 
     static PyObject* _new_AppInstallerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInstallerInfo);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppInstallerInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppInstallerInfo>::type_name);
         return nullptr;
     }
 
@@ -869,11 +869,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- AppInstance class --------------------
-    static constexpr const char* const type_name_AppInstance = "AppInstance";
 
     static PyObject* _new_AppInstance(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInstance);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::AppInstance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::AppInstance>::type_name);
         return nullptr;
     }
 
@@ -1178,11 +1178,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- CameraApplicationManager class --------------------
-    static constexpr const char* const type_name_CameraApplicationManager = "CameraApplicationManager";
 
     static PyObject* _new_CameraApplicationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraApplicationManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>::type_name);
         return nullptr;
     }
 
@@ -1243,11 +1243,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- DesignMode class --------------------
-    static constexpr const char* const type_name_DesignMode = "DesignMode";
 
     static PyObject* _new_DesignMode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DesignMode);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::DesignMode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::DesignMode>::type_name);
         return nullptr;
     }
 
@@ -1337,11 +1337,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- EnteredBackgroundEventArgs class --------------------
-    static constexpr const char* const type_name_EnteredBackgroundEventArgs = "EnteredBackgroundEventArgs";
 
     static PyObject* _new_EnteredBackgroundEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EnteredBackgroundEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1442,7 +1442,6 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- FindRelatedPackagesOptions class --------------------
-    static constexpr const char* const type_name_FindRelatedPackagesOptions = "FindRelatedPackagesOptions";
 
     static PyObject* _new_FindRelatedPackagesOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1782,11 +1781,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- FullTrustProcessLaunchResult class --------------------
-    static constexpr const char* const type_name_FullTrustProcessLaunchResult = "FullTrustProcessLaunchResult";
 
     static PyObject* _new_FullTrustProcessLaunchResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FullTrustProcessLaunchResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>::type_name);
         return nullptr;
     }
 
@@ -1897,11 +1896,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- FullTrustProcessLauncher class --------------------
-    static constexpr const char* const type_name_FullTrustProcessLauncher = "FullTrustProcessLauncher";
 
     static PyObject* _new_FullTrustProcessLauncher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FullTrustProcessLauncher);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>::type_name);
         return nullptr;
     }
 
@@ -2099,11 +2098,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- LeavingBackgroundEventArgs class --------------------
-    static constexpr const char* const type_name_LeavingBackgroundEventArgs = "LeavingBackgroundEventArgs";
 
     static PyObject* _new_LeavingBackgroundEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LeavingBackgroundEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2204,11 +2203,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- LimitedAccessFeatureRequestResult class --------------------
-    static constexpr const char* const type_name_LimitedAccessFeatureRequestResult = "LimitedAccessFeatureRequestResult";
 
     static PyObject* _new_LimitedAccessFeatureRequestResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LimitedAccessFeatureRequestResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>::type_name);
         return nullptr;
     }
 
@@ -2339,11 +2338,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- LimitedAccessFeatures class --------------------
-    static constexpr const char* const type_name_LimitedAccessFeatures = "LimitedAccessFeatures";
 
     static PyObject* _new_LimitedAccessFeatures(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LimitedAccessFeatures);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatures>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatures>::type_name);
         return nullptr;
     }
 
@@ -2407,11 +2406,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- Package class --------------------
-    static constexpr const char* const type_name_Package = "Package";
 
     static PyObject* _new_Package(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Package);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Package>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Package>::type_name);
         return nullptr;
     }
 
@@ -3526,11 +3525,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageCatalog class --------------------
-    static constexpr const char* const type_name_PackageCatalog = "PackageCatalog";
 
     static PyObject* _new_PackageCatalog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageCatalog);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageCatalog>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageCatalog>::type_name);
         return nullptr;
     }
 
@@ -4093,11 +4092,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageCatalogAddOptionalPackageResult class --------------------
-    static constexpr const char* const type_name_PackageCatalogAddOptionalPackageResult = "PackageCatalogAddOptionalPackageResult";
 
     static PyObject* _new_PackageCatalogAddOptionalPackageResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageCatalogAddOptionalPackageResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>::type_name);
         return nullptr;
     }
 
@@ -4208,11 +4207,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageCatalogAddResourcePackageResult class --------------------
-    static constexpr const char* const type_name_PackageCatalogAddResourcePackageResult = "PackageCatalogAddResourcePackageResult";
 
     static PyObject* _new_PackageCatalogAddResourcePackageResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageCatalogAddResourcePackageResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>::type_name);
         return nullptr;
     }
 
@@ -4343,11 +4342,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageCatalogRemoveOptionalPackagesResult class --------------------
-    static constexpr const char* const type_name_PackageCatalogRemoveOptionalPackagesResult = "PackageCatalogRemoveOptionalPackagesResult";
 
     static PyObject* _new_PackageCatalogRemoveOptionalPackagesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageCatalogRemoveOptionalPackagesResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>::type_name);
         return nullptr;
     }
 
@@ -4458,11 +4457,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageCatalogRemoveResourcePackagesResult class --------------------
-    static constexpr const char* const type_name_PackageCatalogRemoveResourcePackagesResult = "PackageCatalogRemoveResourcePackagesResult";
 
     static PyObject* _new_PackageCatalogRemoveResourcePackagesResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageCatalogRemoveResourcePackagesResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>::type_name);
         return nullptr;
     }
 
@@ -4573,11 +4572,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageContentGroup class --------------------
-    static constexpr const char* const type_name_PackageContentGroup = "PackageContentGroup";
 
     static PyObject* _new_PackageContentGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageContentGroup);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageContentGroup>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageContentGroup>::type_name);
         return nullptr;
     }
 
@@ -4768,11 +4767,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageContentGroupStagingEventArgs class --------------------
-    static constexpr const char* const type_name_PackageContentGroupStagingEventArgs = "PackageContentGroupStagingEventArgs";
 
     static PyObject* _new_PackageContentGroupStagingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageContentGroupStagingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4983,11 +4982,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageId class --------------------
-    static constexpr const char* const type_name_PackageId = "PackageId";
 
     static PyObject* _new_PackageId(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageId);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageId>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageId>::type_name);
         return nullptr;
     }
 
@@ -5258,11 +5257,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageInstallingEventArgs class --------------------
-    static constexpr const char* const type_name_PackageInstallingEventArgs = "PackageInstallingEventArgs";
 
     static PyObject* _new_PackageInstallingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageInstallingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5433,11 +5432,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageStagingEventArgs class --------------------
-    static constexpr const char* const type_name_PackageStagingEventArgs = "PackageStagingEventArgs";
 
     static PyObject* _new_PackageStagingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageStagingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageStagingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageStagingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5608,11 +5607,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageStatus class --------------------
-    static constexpr const char* const type_name_PackageStatus = "PackageStatus";
 
     static PyObject* _new_PackageStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageStatus);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageStatus>::type_name);
         return nullptr;
     }
 
@@ -5953,11 +5952,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PackageStatusChangedEventArgs = "PackageStatusChangedEventArgs";
 
     static PyObject* _new_PackageStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6048,11 +6047,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageUninstallingEventArgs class --------------------
-    static constexpr const char* const type_name_PackageUninstallingEventArgs = "PackageUninstallingEventArgs";
 
     static PyObject* _new_PackageUninstallingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageUninstallingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6223,11 +6222,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageUpdateAvailabilityResult class --------------------
-    static constexpr const char* const type_name_PackageUpdateAvailabilityResult = "PackageUpdateAvailabilityResult";
 
     static PyObject* _new_PackageUpdateAvailabilityResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageUpdateAvailabilityResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>::type_name);
         return nullptr;
     }
 
@@ -6338,11 +6337,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageUpdatingEventArgs class --------------------
-    static constexpr const char* const type_name_PackageUpdatingEventArgs = "PackageUpdatingEventArgs";
 
     static PyObject* _new_PackageUpdatingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageUpdatingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6533,11 +6532,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- StartupTask class --------------------
-    static constexpr const char* const type_name_StartupTask = "StartupTask";
 
     static PyObject* _new_StartupTask(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StartupTask);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::StartupTask>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::StartupTask>::type_name);
         return nullptr;
     }
 
@@ -6771,11 +6770,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- SuspendingDeferral class --------------------
-    static constexpr const char* const type_name_SuspendingDeferral = "SuspendingDeferral";
 
     static PyObject* _new_SuspendingDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SuspendingDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SuspendingDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SuspendingDeferral>::type_name);
         return nullptr;
     }
 
@@ -6877,11 +6876,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- SuspendingEventArgs class --------------------
-    static constexpr const char* const type_name_SuspendingEventArgs = "SuspendingEventArgs";
 
     static PyObject* _new_SuspendingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SuspendingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SuspendingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SuspendingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6972,11 +6971,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- SuspendingOperation class --------------------
-    static constexpr const char* const type_name_SuspendingOperation = "SuspendingOperation";
 
     static PyObject* _new_SuspendingOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SuspendingOperation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::SuspendingOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::SuspendingOperation>::type_name);
         return nullptr;
     }
 
@@ -7097,11 +7096,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- IEnteredBackgroundEventArgs interface --------------------
-    static constexpr const char* const type_name_IEnteredBackgroundEventArgs = "IEnteredBackgroundEventArgs";
 
     static PyObject* _new_IEnteredBackgroundEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IEnteredBackgroundEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7202,11 +7201,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- ILeavingBackgroundEventArgs interface --------------------
-    static constexpr const char* const type_name_ILeavingBackgroundEventArgs = "ILeavingBackgroundEventArgs";
 
     static PyObject* _new_ILeavingBackgroundEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ILeavingBackgroundEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7307,11 +7306,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- IPackageCatalogStatics2 interface --------------------
-    static constexpr const char* const type_name_IPackageCatalogStatics2 = "IPackageCatalogStatics2";
 
     static PyObject* _new_IPackageCatalogStatics2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IPackageCatalogStatics2);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>::type_name);
         return nullptr;
     }
 
@@ -7414,11 +7413,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- ISuspendingDeferral interface --------------------
-    static constexpr const char* const type_name_ISuspendingDeferral = "ISuspendingDeferral";
 
     static PyObject* _new_ISuspendingDeferral(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISuspendingDeferral);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>::type_name);
         return nullptr;
     }
 
@@ -7520,11 +7519,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- ISuspendingEventArgs interface --------------------
-    static constexpr const char* const type_name_ISuspendingEventArgs = "ISuspendingEventArgs";
 
     static PyObject* _new_ISuspendingEventArgs(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISuspendingEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7615,11 +7614,11 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- ISuspendingOperation interface --------------------
-    static constexpr const char* const type_name_ISuspendingOperation = "ISuspendingOperation";
 
     static PyObject* _new_ISuspendingOperation(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISuspendingOperation);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>::type_name);
         return nullptr;
     }
 
@@ -7740,7 +7739,6 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageInstallProgress struct --------------------
-    static constexpr const char* const type_name_PackageInstallProgress = "PackageInstallProgress";
 
     PyObject* _new_PackageInstallProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -7840,7 +7838,6 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     // ----- PackageVersion struct --------------------
-    static constexpr const char* const type_name_PackageVersion = "PackageVersion";
 
     PyObject* _new_PackageVersion(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

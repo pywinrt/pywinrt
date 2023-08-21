@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 {
     // ----- AppInstallItem class --------------------
-    static constexpr const char* const type_name_AppInstallItem = "AppInstallItem";
 
     static PyObject* _new_AppInstallItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInstallItem);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem>::type_name);
         return nullptr;
     }
 
@@ -766,7 +766,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- AppInstallManager class --------------------
-    static constexpr const char* const type_name_AppInstallManager = "AppInstallManager";
 
     static PyObject* _new_AppInstallManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2217,11 +2216,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- AppInstallManagerItemEventArgs class --------------------
-    static constexpr const char* const type_name_AppInstallManagerItemEventArgs = "AppInstallManagerItemEventArgs";
 
     static PyObject* _new_AppInstallManagerItemEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInstallManagerItemEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2312,7 +2311,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- AppInstallOptions class --------------------
-    static constexpr const char* const type_name_AppInstallOptions = "AppInstallOptions";
 
     static PyObject* _new_AppInstallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3130,11 +3128,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- AppInstallStatus class --------------------
-    static constexpr const char* const type_name_AppInstallStatus = "AppInstallStatus";
 
     static PyObject* _new_AppInstallStatus(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppInstallStatus);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus>::type_name);
         return nullptr;
     }
 
@@ -3365,7 +3363,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- AppUpdateOptions class --------------------
-    static constexpr const char* const type_name_AppUpdateOptions = "AppUpdateOptions";
 
     static PyObject* _new_AppUpdateOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3607,11 +3604,11 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     };
 
     // ----- GetEntitlementResult class --------------------
-    static constexpr const char* const type_name_GetEntitlementResult = "GetEntitlementResult";
 
     static PyObject* _new_GetEntitlementResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GetEntitlementResult);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>::type_name);
         return nullptr;
     }
 

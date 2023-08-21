@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Shapes
 {
     // ----- Ellipse class --------------------
-    static constexpr const char* const type_name_Ellipse = "Ellipse";
 
     static PyObject* _new_Ellipse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -105,7 +104,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Line class --------------------
-    static constexpr const char* const type_name_Line = "Line";
 
     static PyObject* _new_Line(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -495,7 +493,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Path class --------------------
-    static constexpr const char* const type_name_Path = "Path";
 
     static PyObject* _new_Path(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -681,7 +678,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Polygon class --------------------
-    static constexpr const char* const type_name_Polygon = "Polygon";
 
     static PyObject* _new_Polygon(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -935,7 +931,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Polyline class --------------------
-    static constexpr const char* const type_name_Polyline = "Polyline";
 
     static PyObject* _new_Polyline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1189,7 +1184,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Rectangle class --------------------
-    static constexpr const char* const type_name_Rectangle = "Rectangle";
 
     static PyObject* _new_Rectangle(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1443,11 +1437,11 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     };
 
     // ----- Shape class --------------------
-    static constexpr const char* const type_name_Shape = "Shape";
 
     static PyObject* _new_Shape(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Shape);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Shapes::Shape>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Shapes::Shape>::type_name);
         return nullptr;
     }
 

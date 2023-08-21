@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
 {
     // ----- AppCapability class --------------------
-    static constexpr const char* const type_name_AppCapability = "AppCapability";
 
     static PyObject* _new_AppCapability(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCapability);
+        static_assert(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>::type_name);
         return nullptr;
     }
 
@@ -406,11 +406,11 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
     };
 
     // ----- AppCapabilityAccessChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppCapabilityAccessChangedEventArgs = "AppCapabilityAccessChangedEventArgs";
 
     static PyObject* _new_AppCapabilityAccessChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCapabilityAccessChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>::type_name);
         return nullptr;
     }
 

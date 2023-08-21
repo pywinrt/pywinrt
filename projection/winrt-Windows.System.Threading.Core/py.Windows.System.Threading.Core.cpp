@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::System::Threading::Core
 {
     // ----- PreallocatedWorkItem class --------------------
-    static constexpr const char* const type_name_PreallocatedWorkItem = "PreallocatedWorkItem";
 
     static PyObject* _new_PreallocatedWorkItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -170,11 +169,11 @@ namespace py::cpp::Windows::System::Threading::Core
     };
 
     // ----- SignalNotifier class --------------------
-    static constexpr const char* const type_name_SignalNotifier = "SignalNotifier";
 
     static PyObject* _new_SignalNotifier(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SignalNotifier);
+        static_assert(py::py_type<winrt::Windows::System::Threading::Core::SignalNotifier>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Threading::Core::SignalNotifier>::type_name);
         return nullptr;
     }
 

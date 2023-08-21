@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
 {
     // ----- AppointmentCalendarCancelMeetingRequest class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarCancelMeetingRequest = "AppointmentCalendarCancelMeetingRequest";
 
     static PyObject* _new_AppointmentCalendarCancelMeetingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarCancelMeetingRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest>::type_name);
         return nullptr;
     }
 
@@ -262,11 +262,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarCancelMeetingRequestEventArgs class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarCancelMeetingRequestEventArgs = "AppointmentCalendarCancelMeetingRequestEventArgs";
 
     static PyObject* _new_AppointmentCalendarCancelMeetingRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarCancelMeetingRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -387,11 +387,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarCreateOrUpdateAppointmentRequest class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarCreateOrUpdateAppointmentRequest = "AppointmentCalendarCreateOrUpdateAppointmentRequest";
 
     static PyObject* _new_AppointmentCalendarCreateOrUpdateAppointmentRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarCreateOrUpdateAppointmentRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest>::type_name);
         return nullptr;
     }
 
@@ -604,11 +604,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs = "AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs";
 
     static PyObject* _new_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -729,11 +729,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarForwardMeetingRequest class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarForwardMeetingRequest = "AppointmentCalendarForwardMeetingRequest";
 
     static PyObject* _new_AppointmentCalendarForwardMeetingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarForwardMeetingRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest>::type_name);
         return nullptr;
     }
 
@@ -1004,11 +1004,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarForwardMeetingRequestEventArgs class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarForwardMeetingRequestEventArgs = "AppointmentCalendarForwardMeetingRequestEventArgs";
 
     static PyObject* _new_AppointmentCalendarForwardMeetingRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarForwardMeetingRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1129,11 +1129,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarProposeNewTimeForMeetingRequest class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarProposeNewTimeForMeetingRequest = "AppointmentCalendarProposeNewTimeForMeetingRequest";
 
     static PyObject* _new_AppointmentCalendarProposeNewTimeForMeetingRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarProposeNewTimeForMeetingRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest>::type_name);
         return nullptr;
     }
 
@@ -1404,11 +1404,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs = "AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs";
 
     static PyObject* _new_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1529,11 +1529,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarSyncManagerSyncRequest class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarSyncManagerSyncRequest = "AppointmentCalendarSyncManagerSyncRequest";
 
     static PyObject* _new_AppointmentCalendarSyncManagerSyncRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarSyncManagerSyncRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest>::type_name);
         return nullptr;
     }
 
@@ -1684,11 +1684,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarSyncManagerSyncRequestEventArgs class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarSyncManagerSyncRequestEventArgs = "AppointmentCalendarSyncManagerSyncRequestEventArgs";
 
     static PyObject* _new_AppointmentCalendarSyncManagerSyncRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarSyncManagerSyncRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1809,11 +1809,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarUpdateMeetingResponseRequest class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarUpdateMeetingResponseRequest = "AppointmentCalendarUpdateMeetingResponseRequest";
 
     static PyObject* _new_AppointmentCalendarUpdateMeetingResponseRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarUpdateMeetingResponseRequest);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest>::type_name);
         return nullptr;
     }
 
@@ -2084,11 +2084,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentCalendarUpdateMeetingResponseRequestEventArgs class --------------------
-    static constexpr const char* const type_name_AppointmentCalendarUpdateMeetingResponseRequestEventArgs = "AppointmentCalendarUpdateMeetingResponseRequestEventArgs";
 
     static PyObject* _new_AppointmentCalendarUpdateMeetingResponseRequestEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentCalendarUpdateMeetingResponseRequestEventArgs);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2209,11 +2209,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentDataProviderConnection class --------------------
-    static constexpr const char* const type_name_AppointmentDataProviderConnection = "AppointmentDataProviderConnection";
 
     static PyObject* _new_AppointmentDataProviderConnection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentDataProviderConnection);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection>::type_name);
         return nullptr;
     }
 
@@ -2585,11 +2585,11 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     };
 
     // ----- AppointmentDataProviderTriggerDetails class --------------------
-    static constexpr const char* const type_name_AppointmentDataProviderTriggerDetails = "AppointmentDataProviderTriggerDetails";
 
     static PyObject* _new_AppointmentDataProviderTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppointmentDataProviderTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails>::type_name);
         return nullptr;
     }
 

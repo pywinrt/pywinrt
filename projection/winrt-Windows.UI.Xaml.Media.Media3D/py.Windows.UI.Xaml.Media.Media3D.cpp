@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Media::Media3D
 {
     // ----- CompositeTransform3D class --------------------
-    static constexpr const char* const type_name_CompositeTransform3D = "CompositeTransform3D";
 
     static PyObject* _new_CompositeTransform3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -941,11 +940,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     };
 
     // ----- Matrix3DHelper class --------------------
-    static constexpr const char* const type_name_Matrix3DHelper = "Matrix3DHelper";
 
     static PyObject* _new_Matrix3DHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Matrix3DHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper>::type_name);
         return nullptr;
     }
 
@@ -1232,7 +1231,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     };
 
     // ----- PerspectiveTransform3D class --------------------
-    static constexpr const char* const type_name_PerspectiveTransform3D = "PerspectiveTransform3D";
 
     static PyObject* _new_PerspectiveTransform3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1554,11 +1552,11 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     };
 
     // ----- Transform3D class --------------------
-    static constexpr const char* const type_name_Transform3D = "Transform3D";
 
     static PyObject* _new_Transform3D(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Transform3D);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Media3D::Transform3D>::type_name);
         return nullptr;
     }
 
@@ -1629,7 +1627,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     };
 
     // ----- Matrix3D struct --------------------
-    static constexpr const char* const type_name_Matrix3D = "Matrix3D";
 
     PyObject* _new_Matrix3D(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

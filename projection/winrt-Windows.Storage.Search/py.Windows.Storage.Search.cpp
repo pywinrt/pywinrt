@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Storage::Search
 {
     // ----- ContentIndexer class --------------------
-    static constexpr const char* const type_name_ContentIndexer = "ContentIndexer";
 
     static PyObject* _new_ContentIndexer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContentIndexer);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::ContentIndexer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::ContentIndexer>::type_name);
         return nullptr;
     }
 
@@ -421,11 +421,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- ContentIndexerQuery class --------------------
-    static constexpr const char* const type_name_ContentIndexerQuery = "ContentIndexerQuery";
 
     static PyObject* _new_ContentIndexerQuery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContentIndexerQuery);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::ContentIndexerQuery>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::ContentIndexerQuery>::type_name);
         return nullptr;
     }
 
@@ -648,7 +648,6 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- IndexableContent class --------------------
-    static constexpr const char* const type_name_IndexableContent = "IndexableContent";
 
     static PyObject* _new_IndexableContent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -910,7 +909,6 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- QueryOptions class --------------------
-    static constexpr const char* const type_name_QueryOptions = "QueryOptions";
 
     static PyObject* _new_QueryOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1511,11 +1509,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- SortEntryVector class --------------------
-    static constexpr const char* const type_name_SortEntryVector = "SortEntryVector";
 
     static PyObject* _new_SortEntryVector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SortEntryVector);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::SortEntryVector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::SortEntryVector>::type_name);
         return nullptr;
     }
 
@@ -2134,11 +2132,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- StorageFileQueryResult class --------------------
-    static constexpr const char* const type_name_StorageFileQueryResult = "StorageFileQueryResult";
 
     static PyObject* _new_StorageFileQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageFileQueryResult);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::StorageFileQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::StorageFileQueryResult>::type_name);
         return nullptr;
     }
 
@@ -2527,11 +2525,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- StorageFolderQueryResult class --------------------
-    static constexpr const char* const type_name_StorageFolderQueryResult = "StorageFolderQueryResult";
 
     static PyObject* _new_StorageFolderQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageFolderQueryResult);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::StorageFolderQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::StorageFolderQueryResult>::type_name);
         return nullptr;
     }
 
@@ -2888,11 +2886,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- StorageItemQueryResult class --------------------
-    static constexpr const char* const type_name_StorageItemQueryResult = "StorageItemQueryResult";
 
     static PyObject* _new_StorageItemQueryResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageItemQueryResult);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::StorageItemQueryResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::StorageItemQueryResult>::type_name);
         return nullptr;
     }
 
@@ -3249,11 +3247,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- StorageLibraryChangeTrackerTriggerDetails class --------------------
-    static constexpr const char* const type_name_StorageLibraryChangeTrackerTriggerDetails = "StorageLibraryChangeTrackerTriggerDetails";
 
     static PyObject* _new_StorageLibraryChangeTrackerTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageLibraryChangeTrackerTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -3364,11 +3362,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- StorageLibraryContentChangedTriggerDetails class --------------------
-    static constexpr const char* const type_name_StorageLibraryContentChangedTriggerDetails = "StorageLibraryContentChangedTriggerDetails";
 
     static PyObject* _new_StorageLibraryContentChangedTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StorageLibraryContentChangedTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -3491,7 +3489,6 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- ValueAndLanguage class --------------------
-    static constexpr const char* const type_name_ValueAndLanguage = "ValueAndLanguage";
 
     static PyObject* _new_ValueAndLanguage(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3685,11 +3682,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- IIndexableContent interface --------------------
-    static constexpr const char* const type_name_IIndexableContent = "IIndexableContent";
 
     static PyObject* _new_IIndexableContent(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IIndexableContent);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::IIndexableContent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::IIndexableContent>::type_name);
         return nullptr;
     }
 
@@ -3924,11 +3921,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- IStorageFolderQueryOperations interface --------------------
-    static constexpr const char* const type_name_IStorageFolderQueryOperations = "IStorageFolderQueryOperations";
 
     static PyObject* _new_IStorageFolderQueryOperations(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageFolderQueryOperations);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>::type_name);
         return nullptr;
     }
 
@@ -4492,11 +4489,11 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- IStorageQueryResultBase interface --------------------
-    static constexpr const char* const type_name_IStorageQueryResultBase = "IStorageQueryResultBase";
 
     static PyObject* _new_IStorageQueryResultBase(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IStorageQueryResultBase);
+        static_assert(py::py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>::type_name);
         return nullptr;
     }
 
@@ -4802,7 +4799,6 @@ namespace py::cpp::Windows::Storage::Search
     };
 
     // ----- SortEntry struct --------------------
-    static constexpr const char* const type_name_SortEntry = "SortEntry";
 
     PyObject* _new_SortEntry(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

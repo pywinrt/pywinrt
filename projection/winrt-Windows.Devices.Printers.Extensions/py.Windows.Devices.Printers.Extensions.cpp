@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Printers::Extensions
 {
     // ----- Print3DWorkflow class --------------------
-    static constexpr const char* const type_name_Print3DWorkflow = "Print3DWorkflow";
 
     static PyObject* _new_Print3DWorkflow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DWorkflow);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>::type_name);
         return nullptr;
     }
 
@@ -270,11 +270,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- Print3DWorkflowPrintRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_Print3DWorkflowPrintRequestedEventArgs = "Print3DWorkflowPrintRequestedEventArgs";
 
     static PyObject* _new_Print3DWorkflowPrintRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DWorkflowPrintRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -464,11 +464,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- Print3DWorkflowPrinterChangedEventArgs class --------------------
-    static constexpr const char* const type_name_Print3DWorkflowPrinterChangedEventArgs = "Print3DWorkflowPrinterChangedEventArgs";
 
     static PyObject* _new_Print3DWorkflowPrinterChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Print3DWorkflowPrinterChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -559,11 +559,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- PrintExtensionContext class --------------------
-    static constexpr const char* const type_name_PrintExtensionContext = "PrintExtensionContext";
 
     static PyObject* _new_PrintExtensionContext(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintExtensionContext);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>::type_name);
         return nullptr;
     }
 
@@ -625,11 +625,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- PrintNotificationEventDetails class --------------------
-    static constexpr const char* const type_name_PrintNotificationEventDetails = "PrintNotificationEventDetails";
 
     static PyObject* _new_PrintNotificationEventDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintNotificationEventDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>::type_name);
         return nullptr;
     }
 
@@ -768,11 +768,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- PrintTaskConfiguration class --------------------
-    static constexpr const char* const type_name_PrintTaskConfiguration = "PrintTaskConfiguration";
 
     static PyObject* _new_PrintTaskConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskConfiguration);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>::type_name);
         return nullptr;
     }
 
@@ -908,11 +908,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- PrintTaskConfigurationSaveRequest class --------------------
-    static constexpr const char* const type_name_PrintTaskConfigurationSaveRequest = "PrintTaskConfigurationSaveRequest";
 
     static PyObject* _new_PrintTaskConfigurationSaveRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskConfigurationSaveRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>::type_name);
         return nullptr;
     }
 
@@ -1097,11 +1097,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- PrintTaskConfigurationSaveRequestedDeferral class --------------------
-    static constexpr const char* const type_name_PrintTaskConfigurationSaveRequestedDeferral = "PrintTaskConfigurationSaveRequestedDeferral";
 
     static PyObject* _new_PrintTaskConfigurationSaveRequestedDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskConfigurationSaveRequestedDeferral);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>::type_name);
         return nullptr;
     }
 
@@ -1203,11 +1203,11 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     };
 
     // ----- PrintTaskConfigurationSaveRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_PrintTaskConfigurationSaveRequestedEventArgs = "PrintTaskConfigurationSaveRequestedEventArgs";
 
     static PyObject* _new_PrintTaskConfigurationSaveRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PrintTaskConfigurationSaveRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>::type_name);
         return nullptr;
     }
 

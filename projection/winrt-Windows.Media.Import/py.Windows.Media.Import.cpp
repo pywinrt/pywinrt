@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Import
 {
     // ----- PhotoImportDeleteImportedItemsFromSourceResult class --------------------
-    static constexpr const char* const type_name_PhotoImportDeleteImportedItemsFromSourceResult = "PhotoImportDeleteImportedItemsFromSourceResult";
 
     static PyObject* _new_PhotoImportDeleteImportedItemsFromSourceResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportDeleteImportedItemsFromSourceResult);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult>::type_name);
         return nullptr;
     }
 
@@ -342,11 +342,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportFindItemsResult class --------------------
-    static constexpr const char* const type_name_PhotoImportFindItemsResult = "PhotoImportFindItemsResult";
 
     static PyObject* _new_PhotoImportFindItemsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportFindItemsResult);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportFindItemsResult>::type_name);
         return nullptr;
     }
 
@@ -1176,11 +1176,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportImportItemsResult class --------------------
-    static constexpr const char* const type_name_PhotoImportImportItemsResult = "PhotoImportImportItemsResult";
 
     static PyObject* _new_PhotoImportImportItemsResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportImportItemsResult);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportImportItemsResult>::type_name);
         return nullptr;
     }
 
@@ -1541,11 +1541,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportItem class --------------------
-    static constexpr const char* const type_name_PhotoImportItem = "PhotoImportItem";
 
     static PyObject* _new_PhotoImportItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportItem);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportItem>::type_name);
         return nullptr;
     }
 
@@ -1904,11 +1904,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportItemImportedEventArgs class --------------------
-    static constexpr const char* const type_name_PhotoImportItemImportedEventArgs = "PhotoImportItemImportedEventArgs";
 
     static PyObject* _new_PhotoImportItemImportedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportItemImportedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportItemImportedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1999,11 +1999,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportManager class --------------------
-    static constexpr const char* const type_name_PhotoImportManager = "PhotoImportManager";
 
     static PyObject* _new_PhotoImportManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportManager);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportManager>::type_name);
         return nullptr;
     }
 
@@ -2123,11 +2123,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportOperation class --------------------
-    static constexpr const char* const type_name_PhotoImportOperation = "PhotoImportOperation";
 
     static PyObject* _new_PhotoImportOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportOperation);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportOperation>::type_name);
         return nullptr;
     }
 
@@ -2298,11 +2298,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportSelectionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_PhotoImportSelectionChangedEventArgs = "PhotoImportSelectionChangedEventArgs";
 
     static PyObject* _new_PhotoImportSelectionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportSelectionChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSelectionChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2393,11 +2393,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportSession class --------------------
-    static constexpr const char* const type_name_PhotoImportSession = "PhotoImportSession";
 
     static PyObject* _new_PhotoImportSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportSession);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSession>::type_name);
         return nullptr;
     }
 
@@ -2882,11 +2882,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportSidecar class --------------------
-    static constexpr const char* const type_name_PhotoImportSidecar = "PhotoImportSidecar";
 
     static PyObject* _new_PhotoImportSidecar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportSidecar);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSidecar>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSidecar>::type_name);
         return nullptr;
     }
 
@@ -3017,11 +3017,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportSource class --------------------
-    static constexpr const char* const type_name_PhotoImportSource = "PhotoImportSource";
 
     static PyObject* _new_PhotoImportSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportSource);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportSource>::type_name);
         return nullptr;
     }
 
@@ -3506,11 +3506,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportStorageMedium class --------------------
-    static constexpr const char* const type_name_PhotoImportStorageMedium = "PhotoImportStorageMedium";
 
     static PyObject* _new_PhotoImportStorageMedium(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportStorageMedium);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportStorageMedium>::type_name);
         return nullptr;
     }
 
@@ -3752,11 +3752,11 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportVideoSegment class --------------------
-    static constexpr const char* const type_name_PhotoImportVideoSegment = "PhotoImportVideoSegment";
 
     static PyObject* _new_PhotoImportVideoSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoImportVideoSegment);
+        static_assert(py::py_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Import::PhotoImportVideoSegment>::type_name);
         return nullptr;
     }
 
@@ -3927,7 +3927,6 @@ namespace py::cpp::Windows::Media::Import
     };
 
     // ----- PhotoImportProgress struct --------------------
-    static constexpr const char* const type_name_PhotoImportProgress = "PhotoImportProgress";
 
     PyObject* _new_PhotoImportProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

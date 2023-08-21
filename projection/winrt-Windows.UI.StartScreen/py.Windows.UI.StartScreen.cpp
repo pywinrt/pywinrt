@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::UI::StartScreen
 {
     // ----- JumpList class --------------------
-    static constexpr const char* const type_name_JumpList = "JumpList";
 
     static PyObject* _new_JumpList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_JumpList);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::JumpList>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::JumpList>::type_name);
         return nullptr;
     }
 
@@ -240,11 +240,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- JumpListItem class --------------------
-    static constexpr const char* const type_name_JumpListItem = "JumpListItem";
 
     static PyObject* _new_JumpListItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_JumpListItem);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::JumpListItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::JumpListItem>::type_name);
         return nullptr;
     }
 
@@ -630,7 +630,6 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- SecondaryTile class --------------------
-    static constexpr const char* const type_name_SecondaryTile = "SecondaryTile";
 
     static PyObject* _new_SecondaryTile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1888,11 +1887,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- SecondaryTileVisualElements class --------------------
-    static constexpr const char* const type_name_SecondaryTileVisualElements = "SecondaryTileVisualElements";
 
     static PyObject* _new_SecondaryTileVisualElements(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryTileVisualElements);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>::type_name);
         return nullptr;
     }
 
@@ -2559,11 +2558,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- StartScreenManager class --------------------
-    static constexpr const char* const type_name_StartScreenManager = "StartScreenManager";
 
     static PyObject* _new_StartScreenManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StartScreenManager);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::StartScreenManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::StartScreenManager>::type_name);
         return nullptr;
     }
 
@@ -2876,11 +2875,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- TileMixedRealityModel class --------------------
-    static constexpr const char* const type_name_TileMixedRealityModel = "TileMixedRealityModel";
 
     static PyObject* _new_TileMixedRealityModel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TileMixedRealityModel);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>::type_name);
         return nullptr;
     }
 
@@ -3095,11 +3094,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- VisualElementsRequest class --------------------
-    static constexpr const char* const type_name_VisualElementsRequest = "VisualElementsRequest";
 
     static PyObject* _new_VisualElementsRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VisualElementsRequest);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>::type_name);
         return nullptr;
     }
 
@@ -3260,11 +3259,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- VisualElementsRequestDeferral class --------------------
-    static constexpr const char* const type_name_VisualElementsRequestDeferral = "VisualElementsRequestDeferral";
 
     static PyObject* _new_VisualElementsRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VisualElementsRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -3366,11 +3365,11 @@ namespace py::cpp::Windows::UI::StartScreen
     };
 
     // ----- VisualElementsRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_VisualElementsRequestedEventArgs = "VisualElementsRequestedEventArgs";
 
     static PyObject* _new_VisualElementsRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VisualElementsRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>::type_name);
         return nullptr;
     }
 

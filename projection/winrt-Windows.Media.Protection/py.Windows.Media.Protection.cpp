@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Protection
 {
     // ----- ComponentLoadFailedEventArgs class --------------------
-    static constexpr const char* const type_name_ComponentLoadFailedEventArgs = "ComponentLoadFailedEventArgs";
 
     static PyObject* _new_ComponentLoadFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ComponentLoadFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -122,11 +122,11 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- ComponentRenewal class --------------------
-    static constexpr const char* const type_name_ComponentRenewal = "ComponentRenewal";
 
     static PyObject* _new_ComponentRenewal(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ComponentRenewal);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::ComponentRenewal>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::ComponentRenewal>::type_name);
         return nullptr;
     }
 
@@ -188,7 +188,6 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- HdcpSession class --------------------
-    static constexpr const char* const type_name_HdcpSession = "HdcpSession";
 
     static PyObject* _new_HdcpSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -478,7 +477,6 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- MediaProtectionManager class --------------------
-    static constexpr const char* const type_name_MediaProtectionManager = "MediaProtectionManager";
 
     static PyObject* _new_MediaProtectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -731,7 +729,6 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- MediaProtectionPMPServer class --------------------
-    static constexpr const char* const type_name_MediaProtectionPMPServer = "MediaProtectionPMPServer";
 
     static PyObject* _new_MediaProtectionPMPServer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -851,11 +848,11 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- MediaProtectionServiceCompletion class --------------------
-    static constexpr const char* const type_name_MediaProtectionServiceCompletion = "MediaProtectionServiceCompletion";
 
     static PyObject* _new_MediaProtectionServiceCompletion(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaProtectionServiceCompletion);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>::type_name);
         return nullptr;
     }
 
@@ -959,7 +956,6 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- ProtectionCapabilities class --------------------
-    static constexpr const char* const type_name_ProtectionCapabilities = "ProtectionCapabilities";
 
     static PyObject* _new_ProtectionCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1090,11 +1086,11 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- RevocationAndRenewalInformation class --------------------
-    static constexpr const char* const type_name_RevocationAndRenewalInformation = "RevocationAndRenewalInformation";
 
     static PyObject* _new_RevocationAndRenewalInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RevocationAndRenewalInformation);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>::type_name);
         return nullptr;
     }
 
@@ -1185,11 +1181,11 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- RevocationAndRenewalItem class --------------------
-    static constexpr const char* const type_name_RevocationAndRenewalItem = "RevocationAndRenewalItem";
 
     static PyObject* _new_RevocationAndRenewalItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RevocationAndRenewalItem);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>::type_name);
         return nullptr;
     }
 
@@ -1360,11 +1356,11 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- ServiceRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_ServiceRequestedEventArgs = "ServiceRequestedEventArgs";
 
     static PyObject* _new_ServiceRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ServiceRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1495,11 +1491,11 @@ namespace py::cpp::Windows::Media::Protection
     };
 
     // ----- IMediaProtectionServiceRequest interface --------------------
-    static constexpr const char* const type_name_IMediaProtectionServiceRequest = "IMediaProtectionServiceRequest";
 
     static PyObject* _new_IMediaProtectionServiceRequest(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IMediaProtectionServiceRequest);
+        static_assert(py::py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>::type_name);
         return nullptr;
     }
 

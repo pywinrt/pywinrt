@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Capture
 {
     // ----- Direct3D11CaptureFrame class --------------------
-    static constexpr const char* const type_name_Direct3D11CaptureFrame = "Direct3D11CaptureFrame";
 
     static PyObject* _new_Direct3D11CaptureFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Direct3D11CaptureFrame);
+        static_assert(py::py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>::type_name);
         return nullptr;
     }
 
@@ -195,11 +195,11 @@ namespace py::cpp::Windows::Graphics::Capture
     };
 
     // ----- Direct3D11CaptureFramePool class --------------------
-    static constexpr const char* const type_name_Direct3D11CaptureFramePool = "Direct3D11CaptureFramePool";
 
     static PyObject* _new_Direct3D11CaptureFramePool(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Direct3D11CaptureFramePool);
+        static_assert(py::py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>::type_name);
         return nullptr;
     }
 
@@ -556,11 +556,11 @@ namespace py::cpp::Windows::Graphics::Capture
     };
 
     // ----- GraphicsCaptureAccess class --------------------
-    static constexpr const char* const type_name_GraphicsCaptureAccess = "GraphicsCaptureAccess";
 
     static PyObject* _new_GraphicsCaptureAccess(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GraphicsCaptureAccess);
+        static_assert(py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>::type_name);
         return nullptr;
     }
 
@@ -622,11 +622,11 @@ namespace py::cpp::Windows::Graphics::Capture
     };
 
     // ----- GraphicsCaptureItem class --------------------
-    static constexpr const char* const type_name_GraphicsCaptureItem = "GraphicsCaptureItem";
 
     static PyObject* _new_GraphicsCaptureItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GraphicsCaptureItem);
+        static_assert(py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>::type_name);
         return nullptr;
     }
 
@@ -878,7 +878,6 @@ namespace py::cpp::Windows::Graphics::Capture
     };
 
     // ----- GraphicsCapturePicker class --------------------
-    static constexpr const char* const type_name_GraphicsCapturePicker = "GraphicsCapturePicker";
 
     static PyObject* _new_GraphicsCapturePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1006,11 +1005,11 @@ namespace py::cpp::Windows::Graphics::Capture
     };
 
     // ----- GraphicsCaptureSession class --------------------
-    static constexpr const char* const type_name_GraphicsCaptureSession = "GraphicsCaptureSession";
 
     static PyObject* _new_GraphicsCaptureSession(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GraphicsCaptureSession);
+        static_assert(py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>::type_name);
         return nullptr;
     }
 

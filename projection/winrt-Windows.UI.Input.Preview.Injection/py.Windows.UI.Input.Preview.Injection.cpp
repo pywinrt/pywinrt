@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Input::Preview::Injection
 {
     // ----- InjectedInputGamepadInfo class --------------------
-    static constexpr const char* const type_name_InjectedInputGamepadInfo = "InjectedInputGamepadInfo";
 
     static PyObject* _new_InjectedInputGamepadInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -456,7 +455,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputKeyboardInfo class --------------------
-    static constexpr const char* const type_name_InjectedInputKeyboardInfo = "InjectedInputKeyboardInfo";
 
     static PyObject* _new_InjectedInputKeyboardInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -698,7 +696,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputMouseInfo class --------------------
-    static constexpr const char* const type_name_InjectedInputMouseInfo = "InjectedInputMouseInfo";
 
     static PyObject* _new_InjectedInputMouseInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1036,7 +1033,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputPenInfo class --------------------
-    static constexpr const char* const type_name_InjectedInputPenInfo = "InjectedInputPenInfo";
 
     static PyObject* _new_InjectedInputPenInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1470,7 +1466,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputTouchInfo class --------------------
-    static constexpr const char* const type_name_InjectedInputTouchInfo = "InjectedInputTouchInfo";
 
     static PyObject* _new_InjectedInputTouchInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1808,11 +1803,11 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InputInjector class --------------------
-    static constexpr const char* const type_name_InputInjector = "InputInjector";
 
     static PyObject* _new_InputInjector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InputInjector);
+        static_assert(py::py_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>::type_name);
         return nullptr;
     }
 
@@ -2331,7 +2326,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputPoint struct --------------------
-    static constexpr const char* const type_name_InjectedInputPoint = "InjectedInputPoint";
 
     PyObject* _new_InjectedInputPoint(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -2466,7 +2460,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputPointerInfo struct --------------------
-    static constexpr const char* const type_name_InjectedInputPointerInfo = "InjectedInputPointerInfo";
 
     PyObject* _new_InjectedInputPointerInfo(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -2706,7 +2699,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     };
 
     // ----- InjectedInputRectangle struct --------------------
-    static constexpr const char* const type_name_InjectedInputRectangle = "InjectedInputRectangle";
 
     PyObject* _new_InjectedInputRectangle(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

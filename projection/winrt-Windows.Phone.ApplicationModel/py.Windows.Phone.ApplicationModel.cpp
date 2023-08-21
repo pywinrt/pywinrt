@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Phone::ApplicationModel
 {
     // ----- ApplicationProfile class --------------------
-    static constexpr const char* const type_name_ApplicationProfile = "ApplicationProfile";
 
     static PyObject* _new_ApplicationProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationProfile);
+        static_assert(py::py_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfile>::type_name);
         return nullptr;
     }
 

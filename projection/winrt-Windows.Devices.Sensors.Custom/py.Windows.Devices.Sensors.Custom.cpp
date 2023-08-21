@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Sensors::Custom
 {
     // ----- CustomSensor class --------------------
-    static constexpr const char* const type_name_CustomSensor = "CustomSensor";
 
     static PyObject* _new_CustomSensor(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CustomSensor);
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>::type_name);
         return nullptr;
     }
 
@@ -377,11 +377,11 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     };
 
     // ----- CustomSensorReading class --------------------
-    static constexpr const char* const type_name_CustomSensorReading = "CustomSensorReading";
 
     static PyObject* _new_CustomSensorReading(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CustomSensorReading);
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>::type_name);
         return nullptr;
     }
 
@@ -512,11 +512,11 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     };
 
     // ----- CustomSensorReadingChangedEventArgs class --------------------
-    static constexpr const char* const type_name_CustomSensorReadingChangedEventArgs = "CustomSensorReadingChangedEventArgs";
 
     static PyObject* _new_CustomSensorReadingChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CustomSensorReadingChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>::type_name);
         return nullptr;
     }
 

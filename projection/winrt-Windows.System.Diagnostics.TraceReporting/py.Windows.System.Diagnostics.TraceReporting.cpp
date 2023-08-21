@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::System::Diagnostics::TraceReporting
 {
     // ----- PlatformDiagnosticActions class --------------------
-    static constexpr const char* const type_name_PlatformDiagnosticActions = "PlatformDiagnosticActions";
 
     static PyObject* _new_PlatformDiagnosticActions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlatformDiagnosticActions);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>::type_name);
         return nullptr;
     }
 
@@ -308,11 +308,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     };
 
     // ----- PlatformDiagnosticTraceInfo class --------------------
-    static constexpr const char* const type_name_PlatformDiagnosticTraceInfo = "PlatformDiagnosticTraceInfo";
 
     static PyObject* _new_PlatformDiagnosticTraceInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlatformDiagnosticTraceInfo);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>::type_name);
         return nullptr;
     }
 
@@ -503,11 +503,11 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     };
 
     // ----- PlatformDiagnosticTraceRuntimeInfo class --------------------
-    static constexpr const char* const type_name_PlatformDiagnosticTraceRuntimeInfo = "PlatformDiagnosticTraceRuntimeInfo";
 
     static PyObject* _new_PlatformDiagnosticTraceRuntimeInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PlatformDiagnosticTraceRuntimeInfo);
+        static_assert(py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>::type_name);
         return nullptr;
     }
 

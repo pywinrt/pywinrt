@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Graphics::Display
 {
     // ----- AdvancedColorInfo class --------------------
-    static constexpr const char* const type_name_AdvancedColorInfo = "AdvancedColorInfo";
 
     static PyObject* _new_AdvancedColorInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdvancedColorInfo);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::AdvancedColorInfo>::type_name);
         return nullptr;
     }
 
@@ -326,11 +326,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- BrightnessOverride class --------------------
-    static constexpr const char* const type_name_BrightnessOverride = "BrightnessOverride";
 
     static PyObject* _new_BrightnessOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BrightnessOverride);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverride>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverride>::type_name);
         return nullptr;
     }
 
@@ -850,11 +850,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- BrightnessOverrideSettings class --------------------
-    static constexpr const char* const type_name_BrightnessOverrideSettings = "BrightnessOverrideSettings";
 
     static PyObject* _new_BrightnessOverrideSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BrightnessOverrideSettings);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::BrightnessOverrideSettings>::type_name);
         return nullptr;
     }
 
@@ -1061,11 +1061,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- ColorOverrideSettings class --------------------
-    static constexpr const char* const type_name_ColorOverrideSettings = "ColorOverrideSettings";
 
     static PyObject* _new_ColorOverrideSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ColorOverrideSettings);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::ColorOverrideSettings>::type_name);
         return nullptr;
     }
 
@@ -1188,11 +1188,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- DisplayEnhancementOverride class --------------------
-    static constexpr const char* const type_name_DisplayEnhancementOverride = "DisplayEnhancementOverride";
 
     static PyObject* _new_DisplayEnhancementOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayEnhancementOverride);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverride>::type_name);
         return nullptr;
     }
 
@@ -1656,11 +1656,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- DisplayEnhancementOverrideCapabilities class --------------------
-    static constexpr const char* const type_name_DisplayEnhancementOverrideCapabilities = "DisplayEnhancementOverrideCapabilities";
 
     static PyObject* _new_DisplayEnhancementOverrideCapabilities(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayEnhancementOverrideCapabilities);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities>::type_name);
         return nullptr;
     }
 
@@ -1801,11 +1801,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- DisplayEnhancementOverrideCapabilitiesChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DisplayEnhancementOverrideCapabilitiesChangedEventArgs = "DisplayEnhancementOverrideCapabilitiesChangedEventArgs";
 
     static PyObject* _new_DisplayEnhancementOverrideCapabilitiesChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayEnhancementOverrideCapabilitiesChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1896,11 +1896,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- DisplayInformation class --------------------
-    static constexpr const char* const type_name_DisplayInformation = "DisplayInformation";
 
     static PyObject* _new_DisplayInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayInformation);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayInformation>::type_name);
         return nullptr;
     }
 
@@ -2613,11 +2613,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- DisplayProperties class --------------------
-    static constexpr const char* const type_name_DisplayProperties = "DisplayProperties";
 
     static PyObject* _new_DisplayProperties(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayProperties);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayProperties>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayProperties>::type_name);
         return nullptr;
     }
 
@@ -3064,11 +3064,11 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- DisplayServices class --------------------
-    static constexpr const char* const type_name_DisplayServices = "DisplayServices";
 
     static PyObject* _new_DisplayServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DisplayServices);
+        static_assert(py::py_type<winrt::Windows::Graphics::Display::DisplayServices>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Display::DisplayServices>::type_name);
         return nullptr;
     }
 
@@ -3169,7 +3169,6 @@ namespace py::cpp::Windows::Graphics::Display
     };
 
     // ----- NitRange struct --------------------
-    static constexpr const char* const type_name_NitRange = "NitRange";
 
     PyObject* _new_NitRange(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

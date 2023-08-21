@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Enumeration
 {
     // ----- DeviceAccessChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DeviceAccessChangedEventArgs = "DeviceAccessChangedEventArgs";
 
     static PyObject* _new_DeviceAccessChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceAccessChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -122,11 +122,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceAccessInformation class --------------------
-    static constexpr const char* const type_name_DeviceAccessInformation = "DeviceAccessInformation";
 
     static PyObject* _new_DeviceAccessInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceAccessInformation);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceAccessInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceAccessInformation>::type_name);
         return nullptr;
     }
 
@@ -358,11 +358,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceConnectionChangeTriggerDetails class --------------------
-    static constexpr const char* const type_name_DeviceConnectionChangeTriggerDetails = "DeviceConnectionChangeTriggerDetails";
 
     static PyObject* _new_DeviceConnectionChangeTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceConnectionChangeTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -453,11 +453,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceDisconnectButtonClickedEventArgs class --------------------
-    static constexpr const char* const type_name_DeviceDisconnectButtonClickedEventArgs = "DeviceDisconnectButtonClickedEventArgs";
 
     static PyObject* _new_DeviceDisconnectButtonClickedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceDisconnectButtonClickedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -548,11 +548,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceInformation class --------------------
-    static constexpr const char* const type_name_DeviceInformation = "DeviceInformation";
 
     static PyObject* _new_DeviceInformation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceInformation);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformation>::type_name);
         return nullptr;
     }
 
@@ -1169,11 +1169,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceInformationCollection class --------------------
-    static constexpr const char* const type_name_DeviceInformationCollection = "DeviceInformationCollection";
 
     static PyObject* _new_DeviceInformationCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceInformationCollection);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationCollection>::type_name);
         return nullptr;
     }
 
@@ -1517,11 +1517,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceInformationCustomPairing class --------------------
-    static constexpr const char* const type_name_DeviceInformationCustomPairing = "DeviceInformationCustomPairing";
 
     static PyObject* _new_DeviceInformationCustomPairing(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceInformationCustomPairing);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing>::type_name);
         return nullptr;
     }
 
@@ -1712,11 +1712,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceInformationPairing class --------------------
-    static constexpr const char* const type_name_DeviceInformationPairing = "DeviceInformationPairing";
 
     static PyObject* _new_DeviceInformationPairing(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceInformationPairing);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationPairing>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationPairing>::type_name);
         return nullptr;
     }
 
@@ -2033,11 +2033,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceInformationUpdate class --------------------
-    static constexpr const char* const type_name_DeviceInformationUpdate = "DeviceInformationUpdate";
 
     static PyObject* _new_DeviceInformationUpdate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceInformationUpdate);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>::type_name);
         return nullptr;
     }
 
@@ -2168,11 +2168,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DevicePairingRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_DevicePairingRequestedEventArgs = "DevicePairingRequestedEventArgs";
 
     static PyObject* _new_DevicePairingRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePairingRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2418,11 +2418,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DevicePairingResult class --------------------
-    static constexpr const char* const type_name_DevicePairingResult = "DevicePairingResult";
 
     static PyObject* _new_DevicePairingResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePairingResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DevicePairingResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DevicePairingResult>::type_name);
         return nullptr;
     }
 
@@ -2533,7 +2533,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DevicePicker class --------------------
-    static constexpr const char* const type_name_DevicePicker = "DevicePicker";
 
     static PyObject* _new_DevicePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3000,11 +2999,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DevicePickerAppearance class --------------------
-    static constexpr const char* const type_name_DevicePickerAppearance = "DevicePickerAppearance";
 
     static PyObject* _new_DevicePickerAppearance(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePickerAppearance);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DevicePickerAppearance>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DevicePickerAppearance>::type_name);
         return nullptr;
     }
 
@@ -3411,11 +3410,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DevicePickerFilter class --------------------
-    static constexpr const char* const type_name_DevicePickerFilter = "DevicePickerFilter";
 
     static PyObject* _new_DevicePickerFilter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DevicePickerFilter);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DevicePickerFilter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DevicePickerFilter>::type_name);
         return nullptr;
     }
 
@@ -3526,11 +3525,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceSelectedEventArgs class --------------------
-    static constexpr const char* const type_name_DeviceSelectedEventArgs = "DeviceSelectedEventArgs";
 
     static PyObject* _new_DeviceSelectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceSelectedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceSelectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceSelectedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3621,11 +3620,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceThumbnail class --------------------
-    static constexpr const char* const type_name_DeviceThumbnail = "DeviceThumbnail";
 
     static PyObject* _new_DeviceThumbnail(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceThumbnail);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceThumbnail>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceThumbnail>::type_name);
         return nullptr;
     }
 
@@ -4100,11 +4099,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceUnpairingResult class --------------------
-    static constexpr const char* const type_name_DeviceUnpairingResult = "DeviceUnpairingResult";
 
     static PyObject* _new_DeviceUnpairingResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceUnpairingResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceUnpairingResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceUnpairingResult>::type_name);
         return nullptr;
     }
 
@@ -4195,11 +4194,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceWatcher class --------------------
-    static constexpr const char* const type_name_DeviceWatcher = "DeviceWatcher";
 
     static PyObject* _new_DeviceWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceWatcher);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceWatcher>::type_name);
         return nullptr;
     }
 
@@ -4609,11 +4608,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceWatcherEvent class --------------------
-    static constexpr const char* const type_name_DeviceWatcherEvent = "DeviceWatcherEvent";
 
     static PyObject* _new_DeviceWatcherEvent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceWatcherEvent);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherEvent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherEvent>::type_name);
         return nullptr;
     }
 
@@ -4744,11 +4743,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- DeviceWatcherTriggerDetails class --------------------
-    static constexpr const char* const type_name_DeviceWatcherTriggerDetails = "DeviceWatcherTriggerDetails";
 
     static PyObject* _new_DeviceWatcherTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DeviceWatcherTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -4839,11 +4838,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- EnclosureLocation class --------------------
-    static constexpr const char* const type_name_EnclosureLocation = "EnclosureLocation";
 
     static PyObject* _new_EnclosureLocation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EnclosureLocation);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::EnclosureLocation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::EnclosureLocation>::type_name);
         return nullptr;
     }
 
@@ -4994,11 +4993,11 @@ namespace py::cpp::Windows::Devices::Enumeration
     };
 
     // ----- IDevicePairingSettings interface --------------------
-    static constexpr const char* const type_name_IDevicePairingSettings = "IDevicePairingSettings";
 
     static PyObject* _new_IDevicePairingSettings(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDevicePairingSettings);
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>::type_name);
         return nullptr;
     }
 

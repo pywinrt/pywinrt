@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::WiFiDirect
 {
     // ----- WiFiDirectAdvertisement class --------------------
-    static constexpr const char* const type_name_WiFiDirectAdvertisement = "WiFiDirectAdvertisement";
 
     static PyObject* _new_WiFiDirectAdvertisement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiDirectAdvertisement);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement>::type_name);
         return nullptr;
     }
 
@@ -266,7 +266,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectAdvertisementPublisher class --------------------
-    static constexpr const char* const type_name_WiFiDirectAdvertisementPublisher = "WiFiDirectAdvertisementPublisher";
 
     static PyObject* _new_WiFiDirectAdvertisementPublisher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -511,11 +510,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectAdvertisementPublisherStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_WiFiDirectAdvertisementPublisherStatusChangedEventArgs = "WiFiDirectAdvertisementPublisherStatusChangedEventArgs";
 
     static PyObject* _new_WiFiDirectAdvertisementPublisherStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiDirectAdvertisementPublisherStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -626,7 +625,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectConnectionListener class --------------------
-    static constexpr const char* const type_name_WiFiDirectConnectionListener = "WiFiDirectConnectionListener";
 
     static PyObject* _new_WiFiDirectConnectionListener(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -769,7 +767,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectConnectionParameters class --------------------
-    static constexpr const char* const type_name_WiFiDirectConnectionParameters = "WiFiDirectConnectionParameters";
 
     static PyObject* _new_WiFiDirectConnectionParameters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1015,11 +1012,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectConnectionRequest class --------------------
-    static constexpr const char* const type_name_WiFiDirectConnectionRequest = "WiFiDirectConnectionRequest";
 
     static PyObject* _new_WiFiDirectConnectionRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiDirectConnectionRequest);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest>::type_name);
         return nullptr;
     }
 
@@ -1163,11 +1160,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectConnectionRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_WiFiDirectConnectionRequestedEventArgs = "WiFiDirectConnectionRequestedEventArgs";
 
     static PyObject* _new_WiFiDirectConnectionRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiDirectConnectionRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1268,11 +1265,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectDevice class --------------------
-    static constexpr const char* const type_name_WiFiDirectDevice = "WiFiDirectDevice";
 
     static PyObject* _new_WiFiDirectDevice(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiDirectDevice);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectDevice>::type_name);
         return nullptr;
     }
 
@@ -1614,7 +1611,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectInformationElement class --------------------
-    static constexpr const char* const type_name_WiFiDirectInformationElement = "WiFiDirectInformationElement";
 
     static PyObject* _new_WiFiDirectInformationElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1920,11 +1916,11 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     };
 
     // ----- WiFiDirectLegacySettings class --------------------
-    static constexpr const char* const type_name_WiFiDirectLegacySettings = "WiFiDirectLegacySettings";
 
     static PyObject* _new_WiFiDirectLegacySettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WiFiDirectLegacySettings);
+        static_assert(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings>::type_name);
         return nullptr;
     }
 

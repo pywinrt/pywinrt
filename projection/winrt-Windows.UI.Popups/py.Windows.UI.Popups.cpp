@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Popups
 {
     // ----- MessageDialog class --------------------
-    static constexpr const char* const type_name_MessageDialog = "MessageDialog";
 
     static PyObject* _new_MessageDialog(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -413,7 +412,6 @@ namespace py::cpp::Windows::UI::Popups
     };
 
     // ----- PopupMenu class --------------------
-    static constexpr const char* const type_name_PopupMenu = "PopupMenu";
 
     static PyObject* _new_PopupMenu(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -616,7 +614,6 @@ namespace py::cpp::Windows::UI::Popups
     };
 
     // ----- UICommand class --------------------
-    static constexpr const char* const type_name_UICommand = "UICommand";
 
     static PyObject* _new_UICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -906,7 +903,6 @@ namespace py::cpp::Windows::UI::Popups
     };
 
     // ----- UICommandSeparator class --------------------
-    static constexpr const char* const type_name_UICommandSeparator = "UICommandSeparator";
 
     static PyObject* _new_UICommandSeparator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1148,11 +1144,11 @@ namespace py::cpp::Windows::UI::Popups
     };
 
     // ----- IUICommand interface --------------------
-    static constexpr const char* const type_name_IUICommand = "IUICommand";
 
     static PyObject* _new_IUICommand(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IUICommand);
+        static_assert(py::py_type<winrt::Windows::UI::Popups::IUICommand>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Popups::IUICommand>::type_name);
         return nullptr;
     }
 

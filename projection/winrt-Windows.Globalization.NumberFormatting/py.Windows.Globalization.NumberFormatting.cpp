@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::Globalization::NumberFormatting
 {
     // ----- CurrencyFormatter class --------------------
-    static constexpr const char* const type_name_CurrencyFormatter = "CurrencyFormatter";
 
     static PyObject* _new_CurrencyFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -941,7 +940,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- DecimalFormatter class --------------------
-    static constexpr const char* const type_name_DecimalFormatter = "DecimalFormatter";
 
     static PyObject* _new_DecimalFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1743,7 +1741,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- IncrementNumberRounder class --------------------
-    static constexpr const char* const type_name_IncrementNumberRounder = "IncrementNumberRounder";
 
     static PyObject* _new_IncrementNumberRounder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2129,7 +2126,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- NumeralSystemTranslator class --------------------
-    static constexpr const char* const type_name_NumeralSystemTranslator = "NumeralSystemTranslator";
 
     static PyObject* _new_NumeralSystemTranslator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2362,7 +2358,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- PercentFormatter class --------------------
-    static constexpr const char* const type_name_PercentFormatter = "PercentFormatter";
 
     static PyObject* _new_PercentFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3164,7 +3159,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- PermilleFormatter class --------------------
-    static constexpr const char* const type_name_PermilleFormatter = "PermilleFormatter";
 
     static PyObject* _new_PermilleFormatter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3966,7 +3960,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- SignificantDigitsNumberRounder class --------------------
-    static constexpr const char* const type_name_SignificantDigitsNumberRounder = "SignificantDigitsNumberRounder";
 
     static PyObject* _new_SignificantDigitsNumberRounder(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4352,11 +4345,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- INumberFormatter interface --------------------
-    static constexpr const char* const type_name_INumberFormatter = "INumberFormatter";
 
     static PyObject* _new_INumberFormatter(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INumberFormatter);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>::type_name);
         return nullptr;
     }
 
@@ -4459,11 +4452,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- INumberFormatter2 interface --------------------
-    static constexpr const char* const type_name_INumberFormatter2 = "INumberFormatter2";
 
     static PyObject* _new_INumberFormatter2(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INumberFormatter2);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>::type_name);
         return nullptr;
     }
 
@@ -4630,11 +4623,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- INumberFormatterOptions interface --------------------
-    static constexpr const char* const type_name_INumberFormatterOptions = "INumberFormatterOptions";
 
     static PyObject* _new_INumberFormatterOptions(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INumberFormatterOptions);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>::type_name);
         return nullptr;
     }
 
@@ -5025,11 +5018,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- INumberParser interface --------------------
-    static constexpr const char* const type_name_INumberParser = "INumberParser";
 
     static PyObject* _new_INumberParser(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INumberParser);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>::type_name);
         return nullptr;
     }
 
@@ -5196,11 +5189,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- INumberRounder interface --------------------
-    static constexpr const char* const type_name_INumberRounder = "INumberRounder";
 
     static PyObject* _new_INumberRounder(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INumberRounder);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>::type_name);
         return nullptr;
     }
 
@@ -5463,11 +5456,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- INumberRounderOption interface --------------------
-    static constexpr const char* const type_name_INumberRounderOption = "INumberRounderOption";
 
     static PyObject* _new_INumberRounderOption(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_INumberRounderOption);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>::type_name);
         return nullptr;
     }
 
@@ -5586,11 +5579,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- ISignedZeroOption interface --------------------
-    static constexpr const char* const type_name_ISignedZeroOption = "ISignedZeroOption";
 
     static PyObject* _new_ISignedZeroOption(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISignedZeroOption);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>::type_name);
         return nullptr;
     }
 
@@ -5709,11 +5702,11 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     };
 
     // ----- ISignificantDigitsOption interface --------------------
-    static constexpr const char* const type_name_ISignificantDigitsOption = "ISignificantDigitsOption";
 
     static PyObject* _new_ISignificantDigitsOption(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ISignificantDigitsOption);
+        static_assert(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>::type_name);
         return nullptr;
     }
 

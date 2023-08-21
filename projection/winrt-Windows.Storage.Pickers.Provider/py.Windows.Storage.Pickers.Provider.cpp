@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Storage::Pickers::Provider
 {
     // ----- FileOpenPickerUI class --------------------
-    static constexpr const char* const type_name_FileOpenPickerUI = "FileOpenPickerUI";
 
     static PyObject* _new_FileOpenPickerUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileOpenPickerUI);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>::type_name);
         return nullptr;
     }
 
@@ -410,11 +410,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- FileRemovedEventArgs class --------------------
-    static constexpr const char* const type_name_FileRemovedEventArgs = "FileRemovedEventArgs";
 
     static PyObject* _new_FileRemovedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileRemovedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -505,11 +505,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- FileSavePickerUI class --------------------
-    static constexpr const char* const type_name_FileSavePickerUI = "FileSavePickerUI";
 
     static PyObject* _new_FileSavePickerUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileSavePickerUI);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>::type_name);
         return nullptr;
     }
 
@@ -810,11 +810,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- PickerClosingDeferral class --------------------
-    static constexpr const char* const type_name_PickerClosingDeferral = "PickerClosingDeferral";
 
     static PyObject* _new_PickerClosingDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PickerClosingDeferral);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>::type_name);
         return nullptr;
     }
 
@@ -916,11 +916,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- PickerClosingEventArgs class --------------------
-    static constexpr const char* const type_name_PickerClosingEventArgs = "PickerClosingEventArgs";
 
     static PyObject* _new_PickerClosingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PickerClosingEventArgs);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1031,11 +1031,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- PickerClosingOperation class --------------------
-    static constexpr const char* const type_name_PickerClosingOperation = "PickerClosingOperation";
 
     static PyObject* _new_PickerClosingOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PickerClosingOperation);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>::type_name);
         return nullptr;
     }
 
@@ -1156,11 +1156,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- TargetFileRequest class --------------------
-    static constexpr const char* const type_name_TargetFileRequest = "TargetFileRequest";
 
     static PyObject* _new_TargetFileRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetFileRequest);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>::type_name);
         return nullptr;
     }
 
@@ -1309,11 +1309,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- TargetFileRequestDeferral class --------------------
-    static constexpr const char* const type_name_TargetFileRequestDeferral = "TargetFileRequestDeferral";
 
     static PyObject* _new_TargetFileRequestDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetFileRequestDeferral);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>::type_name);
         return nullptr;
     }
 
@@ -1415,11 +1415,11 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     };
 
     // ----- TargetFileRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_TargetFileRequestedEventArgs = "TargetFileRequestedEventArgs";
 
     static PyObject* _new_TargetFileRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TargetFileRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>::type_name);
         return nullptr;
     }
 

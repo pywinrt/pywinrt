@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Input
 {
     // ----- AccessKeyDisplayDismissedEventArgs class --------------------
-    static constexpr const char* const type_name_AccessKeyDisplayDismissedEventArgs = "AccessKeyDisplayDismissedEventArgs";
 
     static PyObject* _new_AccessKeyDisplayDismissedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -105,7 +104,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- AccessKeyDisplayRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_AccessKeyDisplayRequestedEventArgs = "AccessKeyDisplayRequestedEventArgs";
 
     static PyObject* _new_AccessKeyDisplayRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -223,7 +221,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- AccessKeyInvokedEventArgs class --------------------
-    static constexpr const char* const type_name_AccessKeyInvokedEventArgs = "AccessKeyInvokedEventArgs";
 
     static PyObject* _new_AccessKeyInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -369,11 +366,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- AccessKeyManager class --------------------
-    static constexpr const char* const type_name_AccessKeyManager = "AccessKeyManager";
 
     static PyObject* _new_AccessKeyManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AccessKeyManager);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::AccessKeyManager>::type_name);
         return nullptr;
     }
 
@@ -602,11 +599,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- CanExecuteRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_CanExecuteRequestedEventArgs = "CanExecuteRequestedEventArgs";
 
     static PyObject* _new_CanExecuteRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CanExecuteRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -745,11 +742,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- CharacterReceivedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_CharacterReceivedRoutedEventArgs = "CharacterReceivedRoutedEventArgs";
 
     static PyObject* _new_CharacterReceivedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CharacterReceivedRoutedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -908,7 +905,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ContextRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_ContextRequestedEventArgs = "ContextRequestedEventArgs";
 
     static PyObject* _new_ContextRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1099,7 +1095,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- DoubleTappedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_DoubleTappedRoutedEventArgs = "DoubleTappedRoutedEventArgs";
 
     static PyObject* _new_DoubleTappedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1297,11 +1292,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ExecuteRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_ExecuteRequestedEventArgs = "ExecuteRequestedEventArgs";
 
     static PyObject* _new_ExecuteRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExecuteRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1392,7 +1387,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- FindNextElementOptions class --------------------
-    static constexpr const char* const type_name_FindNextElementOptions = "FindNextElementOptions";
 
     static PyObject* _new_FindNextElementOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1682,11 +1676,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- FocusManager class --------------------
-    static constexpr const char* const type_name_FocusManager = "FocusManager";
 
     static PyObject* _new_FocusManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusManager);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManager>::type_name);
         return nullptr;
     }
 
@@ -2296,11 +2290,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- FocusManagerGotFocusEventArgs class --------------------
-    static constexpr const char* const type_name_FocusManagerGotFocusEventArgs = "FocusManagerGotFocusEventArgs";
 
     static PyObject* _new_FocusManagerGotFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusManagerGotFocusEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2411,11 +2405,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- FocusManagerLostFocusEventArgs class --------------------
-    static constexpr const char* const type_name_FocusManagerLostFocusEventArgs = "FocusManagerLostFocusEventArgs";
 
     static PyObject* _new_FocusManagerLostFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusManagerLostFocusEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2526,11 +2520,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- FocusMovementResult class --------------------
-    static constexpr const char* const type_name_FocusMovementResult = "FocusMovementResult";
 
     static PyObject* _new_FocusMovementResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FocusMovementResult);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::FocusMovementResult>::type_name);
         return nullptr;
     }
 
@@ -2621,11 +2615,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- GettingFocusEventArgs class --------------------
-    static constexpr const char* const type_name_GettingFocusEventArgs = "GettingFocusEventArgs";
 
     static PyObject* _new_GettingFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GettingFocusEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::GettingFocusEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3002,7 +2996,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- HoldingRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_HoldingRoutedEventArgs = "HoldingRoutedEventArgs";
 
     static PyObject* _new_HoldingRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3220,11 +3213,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- InertiaExpansionBehavior class --------------------
-    static constexpr const char* const type_name_InertiaExpansionBehavior = "InertiaExpansionBehavior";
 
     static PyObject* _new_InertiaExpansionBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InertiaExpansionBehavior);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaExpansionBehavior>::type_name);
         return nullptr;
     }
 
@@ -3391,11 +3384,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- InertiaRotationBehavior class --------------------
-    static constexpr const char* const type_name_InertiaRotationBehavior = "InertiaRotationBehavior";
 
     static PyObject* _new_InertiaRotationBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InertiaRotationBehavior);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaRotationBehavior>::type_name);
         return nullptr;
     }
 
@@ -3562,11 +3555,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- InertiaTranslationBehavior class --------------------
-    static constexpr const char* const type_name_InertiaTranslationBehavior = "InertiaTranslationBehavior";
 
     static PyObject* _new_InertiaTranslationBehavior(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InertiaTranslationBehavior);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::InertiaTranslationBehavior>::type_name);
         return nullptr;
     }
 
@@ -3733,7 +3726,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- InputScope class --------------------
-    static constexpr const char* const type_name_InputScope = "InputScope";
 
     static PyObject* _new_InputScope(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3851,7 +3843,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- InputScopeName class --------------------
-    static constexpr const char* const type_name_InputScopeName = "InputScopeName";
 
     static PyObject* _new_InputScopeName(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4012,11 +4003,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- KeyRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_KeyRoutedEventArgs = "KeyRoutedEventArgs";
 
     static PyObject* _new_KeyRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KeyRoutedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::KeyRoutedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4215,7 +4206,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- KeyboardAccelerator class --------------------
-    static constexpr const char* const type_name_KeyboardAccelerator = "KeyboardAccelerator";
 
     static PyObject* _new_KeyboardAccelerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4650,11 +4640,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- KeyboardAcceleratorInvokedEventArgs class --------------------
-    static constexpr const char* const type_name_KeyboardAcceleratorInvokedEventArgs = "KeyboardAcceleratorInvokedEventArgs";
 
     static PyObject* _new_KeyboardAcceleratorInvokedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_KeyboardAcceleratorInvokedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4813,11 +4803,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- LosingFocusEventArgs class --------------------
-    static constexpr const char* const type_name_LosingFocusEventArgs = "LosingFocusEventArgs";
 
     static PyObject* _new_LosingFocusEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LosingFocusEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::LosingFocusEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5194,7 +5184,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ManipulationCompletedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationCompletedRoutedEventArgs = "ManipulationCompletedRoutedEventArgs";
 
     static PyObject* _new_ManipulationCompletedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5460,7 +5449,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ManipulationDeltaRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationDeltaRoutedEventArgs = "ManipulationDeltaRoutedEventArgs";
 
     static PyObject* _new_ManipulationDeltaRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5777,7 +5765,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ManipulationInertiaStartingRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationInertiaStartingRoutedEventArgs = "ManipulationInertiaStartingRoutedEventArgs";
 
     static PyObject* _new_ManipulationInertiaStartingRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6167,7 +6154,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ManipulationPivot class --------------------
-    static constexpr const char* const type_name_ManipulationPivot = "ManipulationPivot";
 
     static PyObject* _new_ManipulationPivot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6377,7 +6363,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ManipulationStartedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationStartedRoutedEventArgs = "ManipulationStartedRoutedEventArgs";
 
     static PyObject* _new_ManipulationStartedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6634,7 +6619,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ManipulationStartingRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_ManipulationStartingRoutedEventArgs = "ManipulationStartingRoutedEventArgs";
 
     static PyObject* _new_ManipulationStartingRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6924,11 +6908,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- NoFocusCandidateFoundEventArgs class --------------------
-    static constexpr const char* const type_name_NoFocusCandidateFoundEventArgs = "NoFocusCandidateFoundEventArgs";
 
     static PyObject* _new_NoFocusCandidateFoundEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_NoFocusCandidateFoundEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7087,11 +7071,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- Pointer class --------------------
-    static constexpr const char* const type_name_Pointer = "Pointer";
 
     static PyObject* _new_Pointer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Pointer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::Pointer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::Pointer>::type_name);
         return nullptr;
     }
 
@@ -7242,11 +7226,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- PointerRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_PointerRoutedEventArgs = "PointerRoutedEventArgs";
 
     static PyObject* _new_PointerRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointerRoutedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::PointerRoutedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7489,11 +7473,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ProcessKeyboardAcceleratorEventArgs class --------------------
-    static constexpr const char* const type_name_ProcessKeyboardAcceleratorEventArgs = "ProcessKeyboardAcceleratorEventArgs";
 
     static PyObject* _new_ProcessKeyboardAcceleratorEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ProcessKeyboardAcceleratorEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7652,7 +7636,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- RightTappedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_RightTappedRoutedEventArgs = "RightTappedRoutedEventArgs";
 
     static PyObject* _new_RightTappedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7850,7 +7833,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- StandardUICommand class --------------------
-    static constexpr const char* const type_name_StandardUICommand = "StandardUICommand";
 
     static PyObject* _new_StandardUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8051,7 +8033,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- TappedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_TappedRoutedEventArgs = "TappedRoutedEventArgs";
 
     static PyObject* _new_TappedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8249,7 +8230,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- XamlUICommand class --------------------
-    static constexpr const char* const type_name_XamlUICommand = "XamlUICommand";
 
     static PyObject* _new_XamlUICommand(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8978,11 +8958,11 @@ namespace py::cpp::Windows::UI::Xaml::Input
     };
 
     // ----- ICommand interface --------------------
-    static constexpr const char* const type_name_ICommand = "ICommand";
 
     static PyObject* _new_ICommand(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICommand);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Input::ICommand>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Input::ICommand>::type_name);
         return nullptr;
     }
 

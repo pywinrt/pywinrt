@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml::Media
 {
     // ----- AcrylicBrush class --------------------
-    static constexpr const char* const type_name_AcrylicBrush = "AcrylicBrush";
 
     static PyObject* _new_AcrylicBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -533,7 +532,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- ArcSegment class --------------------
-    static constexpr const char* const type_name_ArcSegment = "ArcSegment";
 
     static PyObject* _new_ArcSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -991,7 +989,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- BezierSegment class --------------------
-    static constexpr const char* const type_name_BezierSegment = "BezierSegment";
 
     static PyObject* _new_BezierSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1313,7 +1310,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- BitmapCache class --------------------
-    static constexpr const char* const type_name_BitmapCache = "BitmapCache";
 
     static PyObject* _new_BitmapCache(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1411,11 +1407,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Brush class --------------------
-    static constexpr const char* const type_name_Brush = "Brush";
 
     static PyObject* _new_Brush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Brush);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Brush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Brush>::type_name);
         return nullptr;
     }
 
@@ -1778,7 +1774,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- BrushCollection class --------------------
-    static constexpr const char* const type_name_BrushCollection = "BrushCollection";
 
     static PyObject* _new_BrushCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2424,11 +2419,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- CacheMode class --------------------
-    static constexpr const char* const type_name_CacheMode = "CacheMode";
 
     static PyObject* _new_CacheMode(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CacheMode);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::CacheMode>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::CacheMode>::type_name);
         return nullptr;
     }
 
@@ -2499,7 +2494,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- CompositeTransform class --------------------
-    static constexpr const char* const type_name_CompositeTransform = "CompositeTransform";
 
     static PyObject* _new_CompositeTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3229,11 +3223,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- CompositionTarget class --------------------
-    static constexpr const char* const type_name_CompositionTarget = "CompositionTarget";
 
     static PyObject* _new_CompositionTarget(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CompositionTarget);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>::type_name);
         return nullptr;
     }
 
@@ -3439,7 +3433,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- DoubleCollection class --------------------
-    static constexpr const char* const type_name_DoubleCollection = "DoubleCollection";
 
     static PyObject* _new_DoubleCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4085,7 +4078,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- EllipseGeometry class --------------------
-    static constexpr const char* const type_name_EllipseGeometry = "EllipseGeometry";
 
     static PyObject* _new_EllipseGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4407,7 +4399,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- FontFamily class --------------------
-    static constexpr const char* const type_name_FontFamily = "FontFamily";
 
     static PyObject* _new_FontFamily(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4567,11 +4558,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- GeneralTransform class --------------------
-    static constexpr const char* const type_name_GeneralTransform = "GeneralTransform";
 
     static PyObject* _new_GeneralTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GeneralTransform);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>::type_name);
         return nullptr;
     }
 
@@ -4868,11 +4859,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Geometry class --------------------
-    static constexpr const char* const type_name_Geometry = "Geometry";
 
     static PyObject* _new_Geometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Geometry);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Geometry>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Geometry>::type_name);
         return nullptr;
     }
 
@@ -5091,7 +5082,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- GeometryCollection class --------------------
-    static constexpr const char* const type_name_GeometryCollection = "GeometryCollection";
 
     static PyObject* _new_GeometryCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5737,7 +5727,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- GeometryGroup class --------------------
-    static constexpr const char* const type_name_GeometryGroup = "GeometryGroup";
 
     static PyObject* _new_GeometryGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -5991,11 +5980,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- GradientBrush class --------------------
-    static constexpr const char* const type_name_GradientBrush = "GradientBrush";
 
     static PyObject* _new_GradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GradientBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::GradientBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::GradientBrush>::type_name);
         return nullptr;
     }
 
@@ -6358,7 +6347,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- GradientStop class --------------------
-    static constexpr const char* const type_name_GradientStop = "GradientStop";
 
     static PyObject* _new_GradientStop(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6612,7 +6600,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- GradientStopCollection class --------------------
-    static constexpr const char* const type_name_GradientStopCollection = "GradientStopCollection";
 
     static PyObject* _new_GradientStopCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7258,7 +7245,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- ImageBrush class --------------------
-    static constexpr const char* const type_name_ImageBrush = "ImageBrush";
 
     static PyObject* _new_ImageBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7534,11 +7520,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- ImageSource class --------------------
-    static constexpr const char* const type_name_ImageSource = "ImageSource";
 
     static PyObject* _new_ImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageSource);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::ImageSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::ImageSource>::type_name);
         return nullptr;
     }
 
@@ -7609,7 +7595,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- LineGeometry class --------------------
-    static constexpr const char* const type_name_LineGeometry = "LineGeometry";
 
     static PyObject* _new_LineGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -7863,7 +7848,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- LineSegment class --------------------
-    static constexpr const char* const type_name_LineSegment = "LineSegment";
 
     static PyObject* _new_LineSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8049,7 +8033,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- LinearGradientBrush class --------------------
-    static constexpr const char* const type_name_LinearGradientBrush = "LinearGradientBrush";
 
     static PyObject* _new_LinearGradientBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8319,11 +8302,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- LoadedImageSourceLoadCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_LoadedImageSourceLoadCompletedEventArgs = "LoadedImageSourceLoadCompletedEventArgs";
 
     static PyObject* _new_LoadedImageSourceLoadCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LoadedImageSourceLoadCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8414,11 +8397,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- LoadedImageSurface class --------------------
-    static constexpr const char* const type_name_LoadedImageSurface = "LoadedImageSurface";
 
     static PyObject* _new_LoadedImageSurface(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LoadedImageSurface);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>::type_name);
         return nullptr;
     }
 
@@ -8753,7 +8736,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Matrix3DProjection class --------------------
-    static constexpr const char* const type_name_Matrix3DProjection = "Matrix3DProjection";
 
     static PyObject* _new_Matrix3DProjection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8939,11 +8921,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- MatrixHelper class --------------------
-    static constexpr const char* const type_name_MatrixHelper = "MatrixHelper";
 
     static PyObject* _new_MatrixHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MatrixHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>::type_name);
         return nullptr;
     }
 
@@ -9156,7 +9138,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- MatrixTransform class --------------------
-    static constexpr const char* const type_name_MatrixTransform = "MatrixTransform";
 
     static PyObject* _new_MatrixTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9342,11 +9323,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- MediaTransportControlsThumbnailRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaTransportControlsThumbnailRequestedEventArgs = "MediaTransportControlsThumbnailRequestedEventArgs";
 
     static PyObject* _new_MediaTransportControlsThumbnailRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaTransportControlsThumbnailRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9480,7 +9461,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PartialMediaFailureDetectedEventArgs class --------------------
-    static constexpr const char* const type_name_PartialMediaFailureDetectedEventArgs = "PartialMediaFailureDetectedEventArgs";
 
     static PyObject* _new_PartialMediaFailureDetectedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9618,7 +9598,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PathFigure class --------------------
-    static constexpr const char* const type_name_PathFigure = "PathFigure";
 
     static PyObject* _new_PathFigure(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10008,7 +9987,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PathFigureCollection class --------------------
-    static constexpr const char* const type_name_PathFigureCollection = "PathFigureCollection";
 
     static PyObject* _new_PathFigureCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10654,7 +10632,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PathGeometry class --------------------
-    static constexpr const char* const type_name_PathGeometry = "PathGeometry";
 
     static PyObject* _new_PathGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -10908,11 +10885,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PathSegment class --------------------
-    static constexpr const char* const type_name_PathSegment = "PathSegment";
 
     static PyObject* _new_PathSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PathSegment);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::PathSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::PathSegment>::type_name);
         return nullptr;
     }
 
@@ -10983,7 +10960,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PathSegmentCollection class --------------------
-    static constexpr const char* const type_name_PathSegmentCollection = "PathSegmentCollection";
 
     static PyObject* _new_PathSegmentCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11629,7 +11605,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PlaneProjection class --------------------
-    static constexpr const char* const type_name_PlaneProjection = "PlaneProjection";
 
     static PyObject* _new_PlaneProjection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12603,7 +12578,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PointCollection class --------------------
-    static constexpr const char* const type_name_PointCollection = "PointCollection";
 
     static PyObject* _new_PointCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13249,7 +13223,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PolyBezierSegment class --------------------
-    static constexpr const char* const type_name_PolyBezierSegment = "PolyBezierSegment";
 
     static PyObject* _new_PolyBezierSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13435,7 +13408,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PolyLineSegment class --------------------
-    static constexpr const char* const type_name_PolyLineSegment = "PolyLineSegment";
 
     static PyObject* _new_PolyLineSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13621,7 +13593,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- PolyQuadraticBezierSegment class --------------------
-    static constexpr const char* const type_name_PolyQuadraticBezierSegment = "PolyQuadraticBezierSegment";
 
     static PyObject* _new_PolyQuadraticBezierSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13807,11 +13778,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Projection class --------------------
-    static constexpr const char* const type_name_Projection = "Projection";
 
     static PyObject* _new_Projection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Projection);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Projection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Projection>::type_name);
         return nullptr;
     }
 
@@ -13882,7 +13853,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- QuadraticBezierSegment class --------------------
-    static constexpr const char* const type_name_QuadraticBezierSegment = "QuadraticBezierSegment";
 
     static PyObject* _new_QuadraticBezierSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14136,7 +14106,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RateChangedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_RateChangedRoutedEventArgs = "RateChangedRoutedEventArgs";
 
     static PyObject* _new_RateChangedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14234,7 +14203,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RectangleGeometry class --------------------
-    static constexpr const char* const type_name_RectangleGeometry = "RectangleGeometry";
 
     static PyObject* _new_RectangleGeometry(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14420,11 +14388,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RenderedEventArgs class --------------------
-    static constexpr const char* const type_name_RenderedEventArgs = "RenderedEventArgs";
 
     static PyObject* _new_RenderedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RenderedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -14515,11 +14483,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RenderingEventArgs class --------------------
-    static constexpr const char* const type_name_RenderingEventArgs = "RenderingEventArgs";
 
     static PyObject* _new_RenderingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RenderingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -14610,7 +14578,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RevealBackgroundBrush class --------------------
-    static constexpr const char* const type_name_RevealBackgroundBrush = "RevealBackgroundBrush";
 
     static PyObject* _new_RevealBackgroundBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14708,7 +14675,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RevealBorderBrush class --------------------
-    static constexpr const char* const type_name_RevealBorderBrush = "RevealBorderBrush";
 
     static PyObject* _new_RevealBorderBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14806,11 +14772,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RevealBrush class --------------------
-    static constexpr const char* const type_name_RevealBrush = "RevealBrush";
 
     static PyObject* _new_RevealBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RevealBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::RevealBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::RevealBrush>::type_name);
         return nullptr;
     }
 
@@ -15191,7 +15157,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- RotateTransform class --------------------
-    static constexpr const char* const type_name_RotateTransform = "RotateTransform";
 
     static PyObject* _new_RotateTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15513,7 +15478,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- ScaleTransform class --------------------
-    static constexpr const char* const type_name_ScaleTransform = "ScaleTransform";
 
     static PyObject* _new_ScaleTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15903,11 +15867,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Shadow class --------------------
-    static constexpr const char* const type_name_Shadow = "Shadow";
 
     static PyObject* _new_Shadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Shadow);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Shadow>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Shadow>::type_name);
         return nullptr;
     }
 
@@ -15978,7 +15942,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- SkewTransform class --------------------
-    static constexpr const char* const type_name_SkewTransform = "SkewTransform";
 
     static PyObject* _new_SkewTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16368,7 +16331,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- SolidColorBrush class --------------------
-    static constexpr const char* const type_name_SolidColorBrush = "SolidColorBrush";
 
     static PyObject* _new_SolidColorBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16569,7 +16531,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- ThemeShadow class --------------------
-    static constexpr const char* const type_name_ThemeShadow = "ThemeShadow";
 
     static PyObject* _new_ThemeShadow(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16687,11 +16648,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TileBrush class --------------------
-    static constexpr const char* const type_name_TileBrush = "TileBrush";
 
     static PyObject* _new_TileBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TileBrush);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::TileBrush>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::TileBrush>::type_name);
         return nullptr;
     }
 
@@ -16986,7 +16947,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TimelineMarker class --------------------
-    static constexpr const char* const type_name_TimelineMarker = "TimelineMarker";
 
     static PyObject* _new_TimelineMarker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17308,7 +17268,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TimelineMarkerCollection class --------------------
-    static constexpr const char* const type_name_TimelineMarkerCollection = "TimelineMarkerCollection";
 
     static PyObject* _new_TimelineMarkerCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17954,7 +17913,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TimelineMarkerRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_TimelineMarkerRoutedEventArgs = "TimelineMarkerRoutedEventArgs";
 
     static PyObject* _new_TimelineMarkerRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18100,11 +18058,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Transform class --------------------
-    static constexpr const char* const type_name_Transform = "Transform";
 
     static PyObject* _new_Transform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Transform);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::Transform>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::Transform>::type_name);
         return nullptr;
     }
 
@@ -18175,7 +18133,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TransformCollection class --------------------
-    static constexpr const char* const type_name_TransformCollection = "TransformCollection";
 
     static PyObject* _new_TransformCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18821,7 +18778,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TransformGroup class --------------------
-    static constexpr const char* const type_name_TransformGroup = "TransformGroup";
 
     static PyObject* _new_TransformGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -19027,7 +18983,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- TranslateTransform class --------------------
-    static constexpr const char* const type_name_TranslateTransform = "TranslateTransform";
 
     static PyObject* _new_TranslateTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -19281,11 +19236,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- VisualTreeHelper class --------------------
-    static constexpr const char* const type_name_VisualTreeHelper = "VisualTreeHelper";
 
     static PyObject* _new_VisualTreeHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VisualTreeHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>::type_name);
         return nullptr;
     }
 
@@ -19605,11 +19560,11 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- XamlCompositionBrushBase class --------------------
-    static constexpr const char* const type_name_XamlCompositionBrushBase = "XamlCompositionBrushBase";
 
     static PyObject* _new_XamlCompositionBrushBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlCompositionBrushBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>::type_name);
         return nullptr;
     }
 
@@ -19878,7 +19833,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- XamlLight class --------------------
-    static constexpr const char* const type_name_XamlLight = "XamlLight";
 
     static PyObject* _new_XamlLight(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -20256,7 +20210,6 @@ namespace py::cpp::Windows::UI::Xaml::Media
     };
 
     // ----- Matrix struct --------------------
-    static constexpr const char* const type_name_Matrix = "Matrix";
 
     PyObject* _new_Matrix(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

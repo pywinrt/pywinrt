@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Devices::Scanners
 {
     // ----- ImageScanner class --------------------
-    static constexpr const char* const type_name_ImageScanner = "ImageScanner";
 
     static PyObject* _new_ImageScanner(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageScanner);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScanner>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScanner>::type_name);
         return nullptr;
     }
 
@@ -374,11 +374,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- ImageScannerAutoConfiguration class --------------------
-    static constexpr const char* const type_name_ImageScannerAutoConfiguration = "ImageScannerAutoConfiguration";
 
     static PyObject* _new_ImageScannerAutoConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageScannerAutoConfiguration);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>::type_name);
         return nullptr;
     }
 
@@ -549,11 +549,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- ImageScannerFeederConfiguration class --------------------
-    static constexpr const char* const type_name_ImageScannerFeederConfiguration = "ImageScannerFeederConfiguration";
 
     static PyObject* _new_ImageScannerFeederConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageScannerFeederConfiguration);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>::type_name);
         return nullptr;
     }
 
@@ -1777,11 +1777,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- ImageScannerFlatbedConfiguration class --------------------
-    static constexpr const char* const type_name_ImageScannerFlatbedConfiguration = "ImageScannerFlatbedConfiguration";
 
     static PyObject* _new_ImageScannerFlatbedConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageScannerFlatbedConfiguration);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>::type_name);
         return nullptr;
     }
 
@@ -2604,11 +2604,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- ImageScannerPreviewResult class --------------------
-    static constexpr const char* const type_name_ImageScannerPreviewResult = "ImageScannerPreviewResult";
 
     static PyObject* _new_ImageScannerPreviewResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageScannerPreviewResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>::type_name);
         return nullptr;
     }
 
@@ -2719,11 +2719,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- ImageScannerScanResult class --------------------
-    static constexpr const char* const type_name_ImageScannerScanResult = "ImageScannerScanResult";
 
     static PyObject* _new_ImageScannerScanResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ImageScannerScanResult);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>::type_name);
         return nullptr;
     }
 
@@ -2814,11 +2814,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- IImageScannerFormatConfiguration interface --------------------
-    static constexpr const char* const type_name_IImageScannerFormatConfiguration = "IImageScannerFormatConfiguration";
 
     static PyObject* _new_IImageScannerFormatConfiguration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IImageScannerFormatConfiguration);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>::type_name);
         return nullptr;
     }
 
@@ -2989,11 +2989,11 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- IImageScannerSourceConfiguration interface --------------------
-    static constexpr const char* const type_name_IImageScannerSourceConfiguration = "IImageScannerSourceConfiguration";
 
     static PyObject* _new_IImageScannerSourceConfiguration(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IImageScannerSourceConfiguration);
+        static_assert(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>::type_name);
         return nullptr;
     }
 
@@ -3816,7 +3816,6 @@ namespace py::cpp::Windows::Devices::Scanners
     };
 
     // ----- ImageScannerResolution struct --------------------
-    static constexpr const char* const type_name_ImageScannerResolution = "ImageScannerResolution";
 
     PyObject* _new_ImageScannerResolution(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

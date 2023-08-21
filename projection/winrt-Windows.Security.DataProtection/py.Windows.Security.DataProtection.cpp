@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::DataProtection
 {
     // ----- UserDataAvailabilityStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_UserDataAvailabilityStateChangedEventArgs = "UserDataAvailabilityStateChangedEventArgs";
 
     static PyObject* _new_UserDataAvailabilityStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataAvailabilityStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -112,11 +112,11 @@ namespace py::cpp::Windows::Security::DataProtection
     };
 
     // ----- UserDataBufferUnprotectResult class --------------------
-    static constexpr const char* const type_name_UserDataBufferUnprotectResult = "UserDataBufferUnprotectResult";
 
     static PyObject* _new_UserDataBufferUnprotectResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataBufferUnprotectResult);
+        static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>::type_name);
         return nullptr;
     }
 
@@ -227,11 +227,11 @@ namespace py::cpp::Windows::Security::DataProtection
     };
 
     // ----- UserDataProtectionManager class --------------------
-    static constexpr const char* const type_name_UserDataProtectionManager = "UserDataProtectionManager";
 
     static PyObject* _new_UserDataProtectionManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataProtectionManager);
+        static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>::type_name);
         return nullptr;
     }
 
@@ -571,11 +571,11 @@ namespace py::cpp::Windows::Security::DataProtection
     };
 
     // ----- UserDataStorageItemProtectionInfo class --------------------
-    static constexpr const char* const type_name_UserDataStorageItemProtectionInfo = "UserDataStorageItemProtectionInfo";
 
     static PyObject* _new_UserDataStorageItemProtectionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UserDataStorageItemProtectionInfo);
+        static_assert(py::py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>::type_name);
         return nullptr;
     }
 

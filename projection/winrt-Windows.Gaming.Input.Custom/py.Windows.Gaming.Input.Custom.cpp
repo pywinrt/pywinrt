@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Gaming::Input::Custom
 {
     // ----- GameControllerFactoryManager class --------------------
-    static constexpr const char* const type_name_GameControllerFactoryManager = "GameControllerFactoryManager";
 
     static PyObject* _new_GameControllerFactoryManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameControllerFactoryManager);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>::type_name);
         return nullptr;
     }
 
@@ -178,11 +178,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- GipFirmwareUpdateResult class --------------------
-    static constexpr const char* const type_name_GipFirmwareUpdateResult = "GipFirmwareUpdateResult";
 
     static PyObject* _new_GipFirmwareUpdateResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GipFirmwareUpdateResult);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>::type_name);
         return nullptr;
     }
 
@@ -313,11 +313,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- GipGameControllerProvider class --------------------
-    static constexpr const char* const type_name_GipGameControllerProvider = "GipGameControllerProvider";
 
     static PyObject* _new_GipGameControllerProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GipGameControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -591,11 +591,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- HidGameControllerProvider class --------------------
-    static constexpr const char* const type_name_HidGameControllerProvider = "HidGameControllerProvider";
 
     static PyObject* _new_HidGameControllerProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HidGameControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -908,11 +908,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- XusbGameControllerProvider class --------------------
-    static constexpr const char* const type_name_XusbGameControllerProvider = "XusbGameControllerProvider";
 
     static PyObject* _new_XusbGameControllerProvider(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XusbGameControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -1117,11 +1117,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- ICustomGameControllerFactory interface --------------------
-    static constexpr const char* const type_name_ICustomGameControllerFactory = "ICustomGameControllerFactory";
 
     static PyObject* _new_ICustomGameControllerFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_ICustomGameControllerFactory);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>::type_name);
         return nullptr;
     }
 
@@ -1290,11 +1290,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- IGameControllerInputSink interface --------------------
-    static constexpr const char* const type_name_IGameControllerInputSink = "IGameControllerInputSink";
 
     static PyObject* _new_IGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGameControllerInputSink);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>::type_name);
         return nullptr;
     }
 
@@ -1431,11 +1431,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- IGameControllerProvider interface --------------------
-    static constexpr const char* const type_name_IGameControllerProvider = "IGameControllerProvider";
 
     static PyObject* _new_IGameControllerProvider(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGameControllerProvider);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>::type_name);
         return nullptr;
     }
 
@@ -1606,11 +1606,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- IGipGameControllerInputSink interface --------------------
-    static constexpr const char* const type_name_IGipGameControllerInputSink = "IGipGameControllerInputSink";
 
     static PyObject* _new_IGipGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IGipGameControllerInputSink);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>::type_name);
         return nullptr;
     }
 
@@ -1819,11 +1819,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- IHidGameControllerInputSink interface --------------------
-    static constexpr const char* const type_name_IHidGameControllerInputSink = "IHidGameControllerInputSink";
 
     static PyObject* _new_IHidGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IHidGameControllerInputSink);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>::type_name);
         return nullptr;
     }
 
@@ -1995,11 +1995,11 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- IXusbGameControllerInputSink interface --------------------
-    static constexpr const char* const type_name_IXusbGameControllerInputSink = "IXusbGameControllerInputSink";
 
     static PyObject* _new_IXusbGameControllerInputSink(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IXusbGameControllerInputSink);
+        static_assert(py::py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>::type_name);
         return nullptr;
     }
 
@@ -2171,7 +2171,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- GameControllerVersionInfo struct --------------------
-    static constexpr const char* const type_name_GameControllerVersionInfo = "GameControllerVersionInfo";
 
     PyObject* _new_GameControllerVersionInfo(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -2376,7 +2375,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     };
 
     // ----- GipFirmwareUpdateProgress struct --------------------
-    static constexpr const char* const type_name_GipFirmwareUpdateProgress = "GipFirmwareUpdateProgress";
 
     PyObject* _new_GipFirmwareUpdateProgress(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

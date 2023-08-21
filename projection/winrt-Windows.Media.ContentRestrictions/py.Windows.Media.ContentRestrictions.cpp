@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::ContentRestrictions
 {
     // ----- ContentRestrictionsBrowsePolicy class --------------------
-    static constexpr const char* const type_name_ContentRestrictionsBrowsePolicy = "ContentRestrictionsBrowsePolicy";
 
     static PyObject* _new_ContentRestrictionsBrowsePolicy(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ContentRestrictionsBrowsePolicy);
+        static_assert(py::py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>::type_name);
         return nullptr;
     }
 
@@ -142,7 +142,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
     };
 
     // ----- RatedContentDescription class --------------------
-    static constexpr const char* const type_name_RatedContentDescription = "RatedContentDescription";
 
     static PyObject* _new_RatedContentDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -484,7 +483,6 @@ namespace py::cpp::Windows::Media::ContentRestrictions
     };
 
     // ----- RatedContentRestrictions class --------------------
-    static constexpr const char* const type_name_RatedContentRestrictions = "RatedContentRestrictions";
 
     static PyObject* _new_RatedContentRestrictions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {

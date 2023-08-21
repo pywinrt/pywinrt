@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Perception::People
 {
     // ----- EyesPose class --------------------
-    static constexpr const char* const type_name_EyesPose = "EyesPose";
 
     static PyObject* _new_EyesPose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EyesPose);
+        static_assert(py::py_type<winrt::Windows::Perception::People::EyesPose>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::People::EyesPose>::type_name);
         return nullptr;
     }
 
@@ -202,11 +202,11 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- HandMeshObserver class --------------------
-    static constexpr const char* const type_name_HandMeshObserver = "HandMeshObserver";
 
     static PyObject* _new_HandMeshObserver(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HandMeshObserver);
+        static_assert(py::py_type<winrt::Windows::Perception::People::HandMeshObserver>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::People::HandMeshObserver>::type_name);
         return nullptr;
     }
 
@@ -462,11 +462,11 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- HandMeshVertexState class --------------------
-    static constexpr const char* const type_name_HandMeshVertexState = "HandMeshVertexState";
 
     static PyObject* _new_HandMeshVertexState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HandMeshVertexState);
+        static_assert(py::py_type<winrt::Windows::Perception::People::HandMeshVertexState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::People::HandMeshVertexState>::type_name);
         return nullptr;
     }
 
@@ -610,11 +610,11 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- HandPose class --------------------
-    static constexpr const char* const type_name_HandPose = "HandPose";
 
     static PyObject* _new_HandPose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HandPose);
+        static_assert(py::py_type<winrt::Windows::Perception::People::HandPose>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::People::HandPose>::type_name);
         return nullptr;
     }
 
@@ -833,11 +833,11 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- HeadPose class --------------------
-    static constexpr const char* const type_name_HeadPose = "HeadPose";
 
     static PyObject* _new_HeadPose(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_HeadPose);
+        static_assert(py::py_type<winrt::Windows::Perception::People::HeadPose>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Perception::People::HeadPose>::type_name);
         return nullptr;
     }
 
@@ -968,7 +968,6 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- HandMeshVertex struct --------------------
-    static constexpr const char* const type_name_HandMeshVertex = "HandMeshVertex";
 
     PyObject* _new_HandMeshVertex(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -1103,7 +1102,6 @@ namespace py::cpp::Windows::Perception::People
     };
 
     // ----- JointPose struct --------------------
-    static constexpr const char* const type_name_JointPose = "JointPose";
 
     PyObject* _new_JointPose(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

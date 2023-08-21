@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Security::Authentication::Identity::Provider
 {
     // ----- SecondaryAuthenticationFactorAuthentication class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorAuthentication = "SecondaryAuthenticationFactorAuthentication";
 
     static PyObject* _new_SecondaryAuthenticationFactorAuthentication(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorAuthentication);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>::type_name);
         return nullptr;
     }
 
@@ -368,11 +368,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     };
 
     // ----- SecondaryAuthenticationFactorAuthenticationResult class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorAuthenticationResult = "SecondaryAuthenticationFactorAuthenticationResult";
 
     static PyObject* _new_SecondaryAuthenticationFactorAuthenticationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorAuthenticationResult);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>::type_name);
         return nullptr;
     }
 
@@ -483,11 +483,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     };
 
     // ----- SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs = "SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs";
 
     static PyObject* _new_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -578,11 +578,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     };
 
     // ----- SecondaryAuthenticationFactorAuthenticationStageInfo class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorAuthenticationStageInfo = "SecondaryAuthenticationFactorAuthenticationStageInfo";
 
     static PyObject* _new_SecondaryAuthenticationFactorAuthenticationStageInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorAuthenticationStageInfo);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>::type_name);
         return nullptr;
     }
 
@@ -713,11 +713,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     };
 
     // ----- SecondaryAuthenticationFactorInfo class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorInfo = "SecondaryAuthenticationFactorInfo";
 
     static PyObject* _new_SecondaryAuthenticationFactorInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorInfo);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>::type_name);
         return nullptr;
     }
 
@@ -940,11 +940,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     };
 
     // ----- SecondaryAuthenticationFactorRegistration class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorRegistration = "SecondaryAuthenticationFactorRegistration";
 
     static PyObject* _new_SecondaryAuthenticationFactorRegistration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorRegistration);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>::type_name);
         return nullptr;
     }
 
@@ -1334,11 +1334,11 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     };
 
     // ----- SecondaryAuthenticationFactorRegistrationResult class --------------------
-    static constexpr const char* const type_name_SecondaryAuthenticationFactorRegistrationResult = "SecondaryAuthenticationFactorRegistrationResult";
 
     static PyObject* _new_SecondaryAuthenticationFactorRegistrationResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SecondaryAuthenticationFactorRegistrationResult);
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>::type_name);
         return nullptr;
     }
 

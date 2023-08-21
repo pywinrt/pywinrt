@@ -7,7 +7,6 @@
 namespace py::cpp::Windows::UI::Xaml
 {
     // ----- AdaptiveTrigger class --------------------
-    static constexpr const char* const type_name_AdaptiveTrigger = "AdaptiveTrigger";
 
     static PyObject* _new_AdaptiveTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -261,7 +260,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Application class --------------------
-    static constexpr const char* const type_name_Application = "Application";
 
     static PyObject* _new_Application(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1335,11 +1333,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ApplicationInitializationCallbackParams class --------------------
-    static constexpr const char* const type_name_ApplicationInitializationCallbackParams = "ApplicationInitializationCallbackParams";
 
     static PyObject* _new_ApplicationInitializationCallbackParams(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ApplicationInitializationCallbackParams);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ApplicationInitializationCallbackParams>::type_name);
         return nullptr;
     }
 
@@ -1410,11 +1408,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- BindingFailedEventArgs class --------------------
-    static constexpr const char* const type_name_BindingFailedEventArgs = "BindingFailedEventArgs";
 
     static PyObject* _new_BindingFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BindingFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::BindingFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::BindingFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1505,7 +1503,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- BringIntoViewOptions class --------------------
-    static constexpr const char* const type_name_BringIntoViewOptions = "BringIntoViewOptions";
 
     static PyObject* _new_BringIntoViewOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1891,11 +1888,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- BringIntoViewRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_BringIntoViewRequestedEventArgs = "BringIntoViewRequestedEventArgs";
 
     static PyObject* _new_BringIntoViewRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_BringIntoViewRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::BringIntoViewRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2294,7 +2291,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- BrushTransition class --------------------
-    static constexpr const char* const type_name_BrushTransition = "BrushTransition";
 
     static PyObject* _new_BrushTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2440,7 +2436,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ColorPaletteResources class --------------------
-    static constexpr const char* const type_name_ColorPaletteResources = "ColorPaletteResources";
 
     static PyObject* _new_ColorPaletteResources(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -3834,11 +3829,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- CornerRadiusHelper class --------------------
-    static constexpr const char* const type_name_CornerRadiusHelper = "CornerRadiusHelper";
 
     static PyObject* _new_CornerRadiusHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CornerRadiusHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::CornerRadiusHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::CornerRadiusHelper>::type_name);
         return nullptr;
     }
 
@@ -3976,11 +3971,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DataContextChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DataContextChangedEventArgs = "DataContextChangedEventArgs";
 
     static PyObject* _new_DataContextChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DataContextChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DataContextChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -4119,7 +4114,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DataTemplate class --------------------
-    static constexpr const char* const type_name_DataTemplate = "DataTemplate";
 
     static PyObject* _new_DataTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4418,7 +4412,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DataTemplateKey class --------------------
-    static constexpr const char* const type_name_DataTemplateKey = "DataTemplateKey";
 
     static PyObject* _new_DataTemplateKey(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -4579,11 +4572,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DebugSettings class --------------------
-    static constexpr const char* const type_name_DebugSettings = "DebugSettings";
 
     static PyObject* _new_DebugSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DebugSettings);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DebugSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DebugSettings>::type_name);
         return nullptr;
     }
 
@@ -4987,11 +4980,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DependencyObject class --------------------
-    static constexpr const char* const type_name_DependencyObject = "DependencyObject";
 
     static PyObject* _new_DependencyObject(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DependencyObject);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DependencyObject>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DependencyObject>::type_name);
         return nullptr;
     }
 
@@ -5312,7 +5305,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DependencyObjectCollection class --------------------
-    static constexpr const char* const type_name_DependencyObjectCollection = "DependencyObjectCollection";
 
     static PyObject* _new_DependencyObjectCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6003,11 +5995,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DependencyProperty class --------------------
-    static constexpr const char* const type_name_DependencyProperty = "DependencyProperty";
 
     static PyObject* _new_DependencyProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DependencyProperty);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DependencyProperty>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DependencyProperty>::type_name);
         return nullptr;
     }
 
@@ -6220,11 +6212,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DependencyPropertyChangedEventArgs class --------------------
-    static constexpr const char* const type_name_DependencyPropertyChangedEventArgs = "DependencyPropertyChangedEventArgs";
 
     static PyObject* _new_DependencyPropertyChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DependencyPropertyChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DependencyPropertyChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6355,7 +6347,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DispatcherTimer class --------------------
-    static constexpr const char* const type_name_DispatcherTimer = "DispatcherTimer";
 
     static PyObject* _new_DispatcherTimer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -6628,11 +6619,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DragEventArgs class --------------------
-    static constexpr const char* const type_name_DragEventArgs = "DragEventArgs";
 
     static PyObject* _new_DragEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DragEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DragEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6989,11 +6980,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DragOperationDeferral class --------------------
-    static constexpr const char* const type_name_DragOperationDeferral = "DragOperationDeferral";
 
     static PyObject* _new_DragOperationDeferral(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DragOperationDeferral);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DragOperationDeferral>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragOperationDeferral>::type_name);
         return nullptr;
     }
 
@@ -7095,11 +7086,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DragStartingEventArgs class --------------------
-    static constexpr const char* const type_name_DragStartingEventArgs = "DragStartingEventArgs";
 
     static PyObject* _new_DragStartingEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DragStartingEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DragStartingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragStartingEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7368,11 +7359,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DragUI class --------------------
-    static constexpr const char* const type_name_DragUI = "DragUI";
 
     static PyObject* _new_DragUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DragUI);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DragUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragUI>::type_name);
         return nullptr;
     }
 
@@ -7584,11 +7575,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DragUIOverride class --------------------
-    static constexpr const char* const type_name_DragUIOverride = "DragUIOverride";
 
     static PyObject* _new_DragUIOverride(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DragUIOverride);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DragUIOverride>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DragUIOverride>::type_name);
         return nullptr;
     }
 
@@ -7992,11 +7983,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DropCompletedEventArgs class --------------------
-    static constexpr const char* const type_name_DropCompletedEventArgs = "DropCompletedEventArgs";
 
     static PyObject* _new_DropCompletedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DropCompletedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DropCompletedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DropCompletedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8087,11 +8078,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- DurationHelper class --------------------
-    static constexpr const char* const type_name_DurationHelper = "DurationHelper";
 
     static PyObject* _new_DurationHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_DurationHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::DurationHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::DurationHelper>::type_name);
         return nullptr;
     }
 
@@ -8418,11 +8409,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- EffectiveViewportChangedEventArgs class --------------------
-    static constexpr const char* const type_name_EffectiveViewportChangedEventArgs = "EffectiveViewportChangedEventArgs";
 
     static PyObject* _new_EffectiveViewportChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EffectiveViewportChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::EffectiveViewportChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8573,7 +8564,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ElementFactoryGetArgs class --------------------
-    static constexpr const char* const type_name_ElementFactoryGetArgs = "ElementFactoryGetArgs";
 
     static PyObject* _new_ElementFactoryGetArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8767,7 +8757,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ElementFactoryRecycleArgs class --------------------
-    static constexpr const char* const type_name_ElementFactoryRecycleArgs = "ElementFactoryRecycleArgs";
 
     static PyObject* _new_ElementFactoryRecycleArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -8961,11 +8950,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ElementSoundPlayer class --------------------
-    static constexpr const char* const type_name_ElementSoundPlayer = "ElementSoundPlayer";
 
     static PyObject* _new_ElementSoundPlayer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ElementSoundPlayer);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::ElementSoundPlayer>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ElementSoundPlayer>::type_name);
         return nullptr;
     }
 
@@ -9215,7 +9204,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- EventTrigger class --------------------
-    static constexpr const char* const type_name_EventTrigger = "EventTrigger";
 
     static PyObject* _new_EventTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9381,11 +9369,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ExceptionRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_ExceptionRoutedEventArgs = "ExceptionRoutedEventArgs";
 
     static PyObject* _new_ExceptionRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ExceptionRoutedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ExceptionRoutedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9476,11 +9464,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- FrameworkElement class --------------------
-    static constexpr const char* const type_name_FrameworkElement = "FrameworkElement";
 
     static PyObject* _new_FrameworkElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameworkElement);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::FrameworkElement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::FrameworkElement>::type_name);
         return nullptr;
     }
 
@@ -12033,11 +12021,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- FrameworkTemplate class --------------------
-    static constexpr const char* const type_name_FrameworkTemplate = "FrameworkTemplate";
 
     static PyObject* _new_FrameworkTemplate(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FrameworkTemplate);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::FrameworkTemplate>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::FrameworkTemplate>::type_name);
         return nullptr;
     }
 
@@ -12108,7 +12096,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- FrameworkView class --------------------
-    static constexpr const char* const type_name_FrameworkView = "FrameworkView";
 
     static PyObject* _new_FrameworkView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12367,7 +12354,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- FrameworkViewSource class --------------------
-    static constexpr const char* const type_name_FrameworkViewSource = "FrameworkViewSource";
 
     static PyObject* _new_FrameworkViewSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -12495,11 +12481,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- GridLengthHelper class --------------------
-    static constexpr const char* const type_name_GridLengthHelper = "GridLengthHelper";
 
     static PyObject* _new_GridLengthHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GridLengthHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::GridLengthHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::GridLengthHelper>::type_name);
         return nullptr;
     }
 
@@ -12804,11 +12790,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- MediaFailedRoutedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaFailedRoutedEventArgs = "MediaFailedRoutedEventArgs";
 
     static PyObject* _new_MediaFailedRoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaFailedRoutedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::MediaFailedRoutedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -12899,11 +12885,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- PointHelper class --------------------
-    static constexpr const char* const type_name_PointHelper = "PointHelper";
 
     static PyObject* _new_PointHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PointHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::PointHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::PointHelper>::type_name);
         return nullptr;
     }
 
@@ -13007,7 +12993,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- PropertyMetadata class --------------------
-    static constexpr const char* const type_name_PropertyMetadata = "PropertyMetadata";
 
     static PyObject* _new_PropertyMetadata(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13216,7 +13201,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- PropertyPath class --------------------
-    static constexpr const char* const type_name_PropertyPath = "PropertyPath";
 
     static PyObject* _new_PropertyPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -13336,11 +13320,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- RectHelper class --------------------
-    static constexpr const char* const type_name_RectHelper = "RectHelper";
 
     static PyObject* _new_RectHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RectHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::RectHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::RectHelper>::type_name);
         return nullptr;
     }
 
@@ -13844,7 +13828,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ResourceDictionary class --------------------
-    static constexpr const char* const type_name_ResourceDictionary = "ResourceDictionary";
 
     static PyObject* _new_ResourceDictionary(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14368,11 +14351,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- RoutedEvent class --------------------
-    static constexpr const char* const type_name_RoutedEvent = "RoutedEvent";
 
     static PyObject* _new_RoutedEvent(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_RoutedEvent);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::RoutedEvent>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::RoutedEvent>::type_name);
         return nullptr;
     }
 
@@ -14443,7 +14426,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- RoutedEventArgs class --------------------
-    static constexpr const char* const type_name_RoutedEventArgs = "RoutedEventArgs";
 
     static PyObject* _new_RoutedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14561,7 +14543,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ScalarTransition class --------------------
-    static constexpr const char* const type_name_ScalarTransition = "ScalarTransition";
 
     static PyObject* _new_ScalarTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14707,7 +14688,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Setter class --------------------
-    static constexpr const char* const type_name_Setter = "Setter";
 
     static PyObject* _new_Setter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -14965,11 +14945,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- SetterBase class --------------------
-    static constexpr const char* const type_name_SetterBase = "SetterBase";
 
     static PyObject* _new_SetterBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SetterBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::SetterBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::SetterBase>::type_name);
         return nullptr;
     }
 
@@ -15060,7 +15040,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- SetterBaseCollection class --------------------
-    static constexpr const char* const type_name_SetterBaseCollection = "SetterBaseCollection";
 
     static PyObject* _new_SetterBaseCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -15726,11 +15705,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- SizeChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SizeChangedEventArgs = "SizeChangedEventArgs";
 
     static PyObject* _new_SizeChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SizeChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::SizeChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::SizeChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -15841,11 +15820,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- SizeHelper class --------------------
-    static constexpr const char* const type_name_SizeHelper = "SizeHelper";
 
     static PyObject* _new_SizeHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SizeHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::SizeHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::SizeHelper>::type_name);
         return nullptr;
     }
 
@@ -16054,7 +16033,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- StateTrigger class --------------------
-    static constexpr const char* const type_name_StateTrigger = "StateTrigger";
 
     static PyObject* _new_StateTrigger(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16240,11 +16218,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- StateTriggerBase class --------------------
-    static constexpr const char* const type_name_StateTriggerBase = "StateTriggerBase";
 
     static PyObject* _new_StateTriggerBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_StateTriggerBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::StateTriggerBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::StateTriggerBase>::type_name);
         return nullptr;
     }
 
@@ -16348,7 +16326,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Style class --------------------
-    static constexpr const char* const type_name_Style = "Style";
 
     static PyObject* _new_Style(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16628,7 +16605,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- TargetPropertyPath class --------------------
-    static constexpr const char* const type_name_TargetPropertyPath = "TargetPropertyPath";
 
     static PyObject* _new_TargetPropertyPath(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -16837,11 +16813,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- ThicknessHelper class --------------------
-    static constexpr const char* const type_name_ThicknessHelper = "ThicknessHelper";
 
     static PyObject* _new_ThicknessHelper(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ThicknessHelper);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::ThicknessHelper>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::ThicknessHelper>::type_name);
         return nullptr;
     }
 
@@ -16979,11 +16955,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- TriggerAction class --------------------
-    static constexpr const char* const type_name_TriggerAction = "TriggerAction";
 
     static PyObject* _new_TriggerAction(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TriggerAction);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::TriggerAction>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::TriggerAction>::type_name);
         return nullptr;
     }
 
@@ -17054,7 +17030,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- TriggerActionCollection class --------------------
-    static constexpr const char* const type_name_TriggerActionCollection = "TriggerActionCollection";
 
     static PyObject* _new_TriggerActionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17700,11 +17675,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- TriggerBase class --------------------
-    static constexpr const char* const type_name_TriggerBase = "TriggerBase";
 
     static PyObject* _new_TriggerBase(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TriggerBase);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::TriggerBase>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::TriggerBase>::type_name);
         return nullptr;
     }
 
@@ -17775,11 +17750,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- TriggerCollection class --------------------
-    static constexpr const char* const type_name_TriggerCollection = "TriggerCollection";
 
     static PyObject* _new_TriggerCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TriggerCollection);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::TriggerCollection>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::TriggerCollection>::type_name);
         return nullptr;
     }
 
@@ -18398,11 +18373,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- UIElement class --------------------
-    static constexpr const char* const type_name_UIElement = "UIElement";
 
     static PyObject* _new_UIElement(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UIElement);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::UIElement>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::UIElement>::type_name);
         return nullptr;
     }
 
@@ -25218,7 +25193,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- UIElementWeakCollection class --------------------
-    static constexpr const char* const type_name_UIElementWeakCollection = "UIElementWeakCollection";
 
     static PyObject* _new_UIElementWeakCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -25864,11 +25838,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- UnhandledExceptionEventArgs class --------------------
-    static constexpr const char* const type_name_UnhandledExceptionEventArgs = "UnhandledExceptionEventArgs";
 
     static PyObject* _new_UnhandledExceptionEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UnhandledExceptionEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::UnhandledExceptionEventArgs>::type_name);
         return nullptr;
     }
 
@@ -26027,7 +26001,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Vector3Transition class --------------------
-    static constexpr const char* const type_name_Vector3Transition = "Vector3Transition";
 
     static PyObject* _new_Vector3Transition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -26221,7 +26194,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- VisualState class --------------------
-    static constexpr const char* const type_name_VisualState = "VisualState";
 
     static PyObject* _new_VisualState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -26427,7 +26399,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- VisualStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_VisualStateChangedEventArgs = "VisualStateChangedEventArgs";
 
     static PyObject* _new_VisualStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -26669,7 +26640,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- VisualStateGroup class --------------------
-    static constexpr const char* const type_name_VisualStateGroup = "VisualStateGroup";
 
     static PyObject* _new_VisualStateGroup(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -26937,7 +26907,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- VisualStateManager class --------------------
-    static constexpr const char* const type_name_VisualStateManager = "VisualStateManager";
 
     static PyObject* _new_VisualStateManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -27316,7 +27285,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- VisualTransition class --------------------
-    static constexpr const char* const type_name_VisualTransition = "VisualTransition";
 
     static PyObject* _new_VisualTransition(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -27654,11 +27622,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Window class --------------------
-    static constexpr const char* const type_name_Window = "Window";
 
     static PyObject* _new_Window(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Window);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::Window>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::Window>::type_name);
         return nullptr;
     }
 
@@ -28212,11 +28180,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- WindowCreatedEventArgs class --------------------
-    static constexpr const char* const type_name_WindowCreatedEventArgs = "WindowCreatedEventArgs";
 
     static PyObject* _new_WindowCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WindowCreatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::WindowCreatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -28307,11 +28275,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- XamlRoot class --------------------
-    static constexpr const char* const type_name_XamlRoot = "XamlRoot";
 
     static PyObject* _new_XamlRoot(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlRoot);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::XamlRoot>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::XamlRoot>::type_name);
         return nullptr;
     }
 
@@ -28527,11 +28495,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- XamlRootChangedEventArgs class --------------------
-    static constexpr const char* const type_name_XamlRootChangedEventArgs = "XamlRootChangedEventArgs";
 
     static PyObject* _new_XamlRootChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_XamlRootChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::XamlRootChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -28602,11 +28570,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- IDataTemplateExtension interface --------------------
-    static constexpr const char* const type_name_IDataTemplateExtension = "IDataTemplateExtension";
 
     static PyObject* _new_IDataTemplateExtension(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IDataTemplateExtension);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::IDataTemplateExtension>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::IDataTemplateExtension>::type_name);
         return nullptr;
     }
 
@@ -28772,11 +28740,11 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- IElementFactory interface --------------------
-    static constexpr const char* const type_name_IElementFactory = "IElementFactory";
 
     static PyObject* _new_IElementFactory(PyTypeObject* /* unused */, PyObject* /* unused */, PyObject* /* unused */) noexcept
     {
-        py::set_invalid_activation_error(type_name_IElementFactory);
+        static_assert(py::py_type<winrt::Windows::UI::Xaml::IElementFactory>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Xaml::IElementFactory>::type_name);
         return nullptr;
     }
 
@@ -28912,7 +28880,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- CornerRadius struct --------------------
-    static constexpr const char* const type_name_CornerRadius = "CornerRadius";
 
     PyObject* _new_CornerRadius(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -29117,7 +29084,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Duration struct --------------------
-    static constexpr const char* const type_name_Duration = "Duration";
 
     PyObject* _new_Duration(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -29252,7 +29218,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- GridLength struct --------------------
-    static constexpr const char* const type_name_GridLength = "GridLength";
 
     PyObject* _new_GridLength(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {
@@ -29387,7 +29352,6 @@ namespace py::cpp::Windows::UI::Xaml
     };
 
     // ----- Thickness struct --------------------
-    static constexpr const char* const type_name_Thickness = "Thickness";
 
     PyObject* _new_Thickness(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

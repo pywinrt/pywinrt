@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Data::Text
 {
     // ----- AlternateWordForm class --------------------
-    static constexpr const char* const type_name_AlternateWordForm = "AlternateWordForm";
 
     static PyObject* _new_AlternateWordForm(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AlternateWordForm);
+        static_assert(py::py_type<winrt::Windows::Data::Text::AlternateWordForm>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::AlternateWordForm>::type_name);
         return nullptr;
     }
 
@@ -142,11 +142,11 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- SelectableWordSegment class --------------------
-    static constexpr const char* const type_name_SelectableWordSegment = "SelectableWordSegment";
 
     static PyObject* _new_SelectableWordSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SelectableWordSegment);
+        static_assert(py::py_type<winrt::Windows::Data::Text::SelectableWordSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::SelectableWordSegment>::type_name);
         return nullptr;
     }
 
@@ -257,7 +257,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- SelectableWordsSegmenter class --------------------
-    static constexpr const char* const type_name_SelectableWordsSegmenter = "SelectableWordsSegmenter";
 
     static PyObject* _new_SelectableWordsSegmenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -477,7 +476,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- SemanticTextQuery class --------------------
-    static constexpr const char* const type_name_SemanticTextQuery = "SemanticTextQuery";
 
     static PyObject* _new_SemanticTextQuery(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -658,7 +656,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- TextConversionGenerator class --------------------
-    static constexpr const char* const type_name_TextConversionGenerator = "TextConversionGenerator";
 
     static PyObject* _new_TextConversionGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -851,11 +848,11 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- TextPhoneme class --------------------
-    static constexpr const char* const type_name_TextPhoneme = "TextPhoneme";
 
     static PyObject* _new_TextPhoneme(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_TextPhoneme);
+        static_assert(py::py_type<winrt::Windows::Data::Text::TextPhoneme>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::TextPhoneme>::type_name);
         return nullptr;
     }
 
@@ -966,7 +963,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- TextPredictionGenerator class --------------------
-    static constexpr const char* const type_name_TextPredictionGenerator = "TextPredictionGenerator";
 
     static PyObject* _new_TextPredictionGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1263,7 +1259,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- TextReverseConversionGenerator class --------------------
-    static constexpr const char* const type_name_TextReverseConversionGenerator = "TextReverseConversionGenerator";
 
     static PyObject* _new_TextReverseConversionGenerator(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1467,11 +1462,11 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- UnicodeCharacters class --------------------
-    static constexpr const char* const type_name_UnicodeCharacters = "UnicodeCharacters";
 
     static PyObject* _new_UnicodeCharacters(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_UnicodeCharacters);
+        static_assert(py::py_type<winrt::Windows::Data::Text::UnicodeCharacters>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::UnicodeCharacters>::type_name);
         return nullptr;
     }
 
@@ -2060,11 +2055,11 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- WordSegment class --------------------
-    static constexpr const char* const type_name_WordSegment = "WordSegment";
 
     static PyObject* _new_WordSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_WordSegment);
+        static_assert(py::py_type<winrt::Windows::Data::Text::WordSegment>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Data::Text::WordSegment>::type_name);
         return nullptr;
     }
 
@@ -2195,7 +2190,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- WordsSegmenter class --------------------
-    static constexpr const char* const type_name_WordsSegmenter = "WordsSegmenter";
 
     static PyObject* _new_WordsSegmenter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2415,7 +2409,6 @@ namespace py::cpp::Windows::Data::Text
     };
 
     // ----- TextSegment struct --------------------
-    static constexpr const char* const type_name_TextSegment = "TextSegment";
 
     PyObject* _new_TextSegment(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

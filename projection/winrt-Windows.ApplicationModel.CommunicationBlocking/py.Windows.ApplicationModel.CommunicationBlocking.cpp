@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 {
     // ----- CommunicationBlockingAccessManager class --------------------
-    static constexpr const char* const type_name_CommunicationBlockingAccessManager = "CommunicationBlockingAccessManager";
 
     static PyObject* _new_CommunicationBlockingAccessManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CommunicationBlockingAccessManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>::type_name);
         return nullptr;
     }
 
@@ -239,11 +239,11 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
     };
 
     // ----- CommunicationBlockingAppManager class --------------------
-    static constexpr const char* const type_name_CommunicationBlockingAppManager = "CommunicationBlockingAppManager";
 
     static PyObject* _new_CommunicationBlockingAppManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CommunicationBlockingAppManager);
+        static_assert(py::py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>::type_name);
         return nullptr;
     }
 

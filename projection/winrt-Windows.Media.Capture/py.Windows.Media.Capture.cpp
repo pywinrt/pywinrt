@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Media::Capture
 {
     // ----- AdvancedCapturedPhoto class --------------------
-    static constexpr const char* const type_name_AdvancedCapturedPhoto = "AdvancedCapturedPhoto";
 
     static PyObject* _new_AdvancedCapturedPhoto(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdvancedCapturedPhoto);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AdvancedCapturedPhoto>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AdvancedCapturedPhoto>::type_name);
         return nullptr;
     }
 
@@ -162,11 +162,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AdvancedPhotoCapture class --------------------
-    static constexpr const char* const type_name_AdvancedPhotoCapture = "AdvancedPhotoCapture";
 
     static PyObject* _new_AdvancedPhotoCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AdvancedPhotoCapture);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AdvancedPhotoCapture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AdvancedPhotoCapture>::type_name);
         return nullptr;
     }
 
@@ -407,11 +407,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastBackgroundService class --------------------
-    static constexpr const char* const type_name_AppBroadcastBackgroundService = "AppBroadcastBackgroundService";
 
     static PyObject* _new_AppBroadcastBackgroundService(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastBackgroundService);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundService>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundService>::type_name);
         return nullptr;
     }
 
@@ -1072,11 +1072,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastBackgroundServiceSignInInfo class --------------------
-    static constexpr const char* const type_name_AppBroadcastBackgroundServiceSignInInfo = "AppBroadcastBackgroundServiceSignInInfo";
 
     static PyObject* _new_AppBroadcastBackgroundServiceSignInInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastBackgroundServiceSignInInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>::type_name);
         return nullptr;
     }
 
@@ -1421,11 +1421,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastBackgroundServiceStreamInfo class --------------------
-    static constexpr const char* const type_name_AppBroadcastBackgroundServiceStreamInfo = "AppBroadcastBackgroundServiceStreamInfo";
 
     static PyObject* _new_AppBroadcastBackgroundServiceStreamInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastBackgroundServiceStreamInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>::type_name);
         return nullptr;
     }
 
@@ -1846,11 +1846,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastCameraCaptureStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastCameraCaptureStateChangedEventArgs = "AppBroadcastCameraCaptureStateChangedEventArgs";
 
     static PyObject* _new_AppBroadcastCameraCaptureStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastCameraCaptureStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -1961,11 +1961,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastGlobalSettings class --------------------
-    static constexpr const char* const type_name_AppBroadcastGlobalSettings = "AppBroadcastGlobalSettings";
 
     static PyObject* _new_AppBroadcastGlobalSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastGlobalSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>::type_name);
         return nullptr;
     }
 
@@ -2596,11 +2596,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastHeartbeatRequestedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastHeartbeatRequestedEventArgs = "AppBroadcastHeartbeatRequestedEventArgs";
 
     static PyObject* _new_AppBroadcastHeartbeatRequestedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastHeartbeatRequestedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2719,11 +2719,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastManager class --------------------
-    static constexpr const char* const type_name_AppBroadcastManager = "AppBroadcastManager";
 
     static PyObject* _new_AppBroadcastManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastManager);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastManager>::type_name);
         return nullptr;
     }
 
@@ -2879,11 +2879,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastMicrophoneCaptureStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastMicrophoneCaptureStateChangedEventArgs = "AppBroadcastMicrophoneCaptureStateChangedEventArgs";
 
     static PyObject* _new_AppBroadcastMicrophoneCaptureStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastMicrophoneCaptureStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -2994,11 +2994,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPlugIn class --------------------
-    static constexpr const char* const type_name_AppBroadcastPlugIn = "AppBroadcastPlugIn";
 
     static PyObject* _new_AppBroadcastPlugIn(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPlugIn);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPlugIn>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPlugIn>::type_name);
         return nullptr;
     }
 
@@ -3149,11 +3149,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPlugInManager class --------------------
-    static constexpr const char* const type_name_AppBroadcastPlugInManager = "AppBroadcastPlugInManager";
 
     static PyObject* _new_AppBroadcastPlugInManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPlugInManager);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInManager>::type_name);
         return nullptr;
     }
 
@@ -3374,11 +3374,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPlugInStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastPlugInStateChangedEventArgs = "AppBroadcastPlugInStateChangedEventArgs";
 
     static PyObject* _new_AppBroadcastPlugInStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPlugInStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3469,11 +3469,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPreview class --------------------
-    static constexpr const char* const type_name_AppBroadcastPreview = "AppBroadcastPreview";
 
     static PyObject* _new_AppBroadcastPreview(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPreview);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreview>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreview>::type_name);
         return nullptr;
     }
 
@@ -3680,11 +3680,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPreviewStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastPreviewStateChangedEventArgs = "AppBroadcastPreviewStateChangedEventArgs";
 
     static PyObject* _new_AppBroadcastPreviewStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPreviewStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -3795,11 +3795,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPreviewStreamReader class --------------------
-    static constexpr const char* const type_name_AppBroadcastPreviewStreamReader = "AppBroadcastPreviewStreamReader";
 
     static PyObject* _new_AppBroadcastPreviewStreamReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPreviewStreamReader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader>::type_name);
         return nullptr;
     }
 
@@ -4045,11 +4045,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPreviewStreamVideoFrame class --------------------
-    static constexpr const char* const type_name_AppBroadcastPreviewStreamVideoFrame = "AppBroadcastPreviewStreamVideoFrame";
 
     static PyObject* _new_AppBroadcastPreviewStreamVideoFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPreviewStreamVideoFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame>::type_name);
         return nullptr;
     }
 
@@ -4160,11 +4160,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastPreviewStreamVideoHeader class --------------------
-    static constexpr const char* const type_name_AppBroadcastPreviewStreamVideoHeader = "AppBroadcastPreviewStreamVideoHeader";
 
     static PyObject* _new_AppBroadcastPreviewStreamVideoHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastPreviewStreamVideoHeader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader>::type_name);
         return nullptr;
     }
 
@@ -4315,11 +4315,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastProviderSettings class --------------------
-    static constexpr const char* const type_name_AppBroadcastProviderSettings = "AppBroadcastProviderSettings";
 
     static PyObject* _new_AppBroadcastProviderSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastProviderSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>::type_name);
         return nullptr;
     }
 
@@ -4726,11 +4726,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastServices class --------------------
-    static constexpr const char* const type_name_AppBroadcastServices = "AppBroadcastServices";
 
     static PyObject* _new_AppBroadcastServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastServices);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastServices>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastServices>::type_name);
         return nullptr;
     }
 
@@ -5195,11 +5195,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastSignInStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastSignInStateChangedEventArgs = "AppBroadcastSignInStateChangedEventArgs";
 
     static PyObject* _new_AppBroadcastSignInStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastSignInStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -5310,11 +5310,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastState class --------------------
-    static constexpr const char* const type_name_AppBroadcastState = "AppBroadcastState";
 
     static PyObject* _new_AppBroadcastState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastState);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastState>::type_name);
         return nullptr;
     }
 
@@ -6169,11 +6169,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastStreamAudioFrame class --------------------
-    static constexpr const char* const type_name_AppBroadcastStreamAudioFrame = "AppBroadcastStreamAudioFrame";
 
     static PyObject* _new_AppBroadcastStreamAudioFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastStreamAudioFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame>::type_name);
         return nullptr;
     }
 
@@ -6284,11 +6284,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastStreamAudioHeader class --------------------
-    static constexpr const char* const type_name_AppBroadcastStreamAudioHeader = "AppBroadcastStreamAudioHeader";
 
     static PyObject* _new_AppBroadcastStreamAudioHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastStreamAudioHeader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader>::type_name);
         return nullptr;
     }
 
@@ -6459,11 +6459,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastStreamReader class --------------------
-    static constexpr const char* const type_name_AppBroadcastStreamReader = "AppBroadcastStreamReader";
 
     static PyObject* _new_AppBroadcastStreamReader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastStreamReader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamReader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamReader>::type_name);
         return nullptr;
     }
 
@@ -6824,11 +6824,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastStreamStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastStreamStateChangedEventArgs = "AppBroadcastStreamStateChangedEventArgs";
 
     static PyObject* _new_AppBroadcastStreamStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastStreamStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -6919,11 +6919,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastStreamVideoFrame class --------------------
-    static constexpr const char* const type_name_AppBroadcastStreamVideoFrame = "AppBroadcastStreamVideoFrame";
 
     static PyObject* _new_AppBroadcastStreamVideoFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastStreamVideoFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame>::type_name);
         return nullptr;
     }
 
@@ -7034,11 +7034,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastStreamVideoHeader class --------------------
-    static constexpr const char* const type_name_AppBroadcastStreamVideoHeader = "AppBroadcastStreamVideoHeader";
 
     static PyObject* _new_AppBroadcastStreamVideoHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastStreamVideoHeader);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader>::type_name);
         return nullptr;
     }
 
@@ -7229,11 +7229,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastTriggerDetails class --------------------
-    static constexpr const char* const type_name_AppBroadcastTriggerDetails = "AppBroadcastTriggerDetails";
 
     static PyObject* _new_AppBroadcastTriggerDetails(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastTriggerDetails);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails>::type_name);
         return nullptr;
     }
 
@@ -7324,11 +7324,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppBroadcastViewerCountChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppBroadcastViewerCountChangedEventArgs = "AppBroadcastViewerCountChangedEventArgs";
 
     static PyObject* _new_AppBroadcastViewerCountChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppBroadcastViewerCountChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -7419,11 +7419,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCapture class --------------------
-    static constexpr const char* const type_name_AppCapture = "AppCapture";
 
     static PyObject* _new_AppCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCapture);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCapture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCapture>::type_name);
         return nullptr;
     }
 
@@ -7641,11 +7641,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureAlternateShortcutKeys class --------------------
-    static constexpr const char* const type_name_AppCaptureAlternateShortcutKeys = "AppCaptureAlternateShortcutKeys";
 
     static PyObject* _new_AppCaptureAlternateShortcutKeys(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureAlternateShortcutKeys);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys>::type_name);
         return nullptr;
     }
 
@@ -8484,11 +8484,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureDurationGeneratedEventArgs class --------------------
-    static constexpr const char* const type_name_AppCaptureDurationGeneratedEventArgs = "AppCaptureDurationGeneratedEventArgs";
 
     static PyObject* _new_AppCaptureDurationGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureDurationGeneratedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8579,11 +8579,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureFileGeneratedEventArgs class --------------------
-    static constexpr const char* const type_name_AppCaptureFileGeneratedEventArgs = "AppCaptureFileGeneratedEventArgs";
 
     static PyObject* _new_AppCaptureFileGeneratedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureFileGeneratedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -8674,11 +8674,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureManager class --------------------
-    static constexpr const char* const type_name_AppCaptureManager = "AppCaptureManager";
 
     static PyObject* _new_AppCaptureManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureManager);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureManager>::type_name);
         return nullptr;
     }
 
@@ -8771,7 +8771,6 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureMetadataWriter class --------------------
-    static constexpr const char* const type_name_AppCaptureMetadataWriter = "AppCaptureMetadataWriter";
 
     static PyObject* _new_AppCaptureMetadataWriter(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -9261,11 +9260,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureMicrophoneCaptureStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppCaptureMicrophoneCaptureStateChangedEventArgs = "AppCaptureMicrophoneCaptureStateChangedEventArgs";
 
     static PyObject* _new_AppCaptureMicrophoneCaptureStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureMicrophoneCaptureStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9376,11 +9375,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureRecordOperation class --------------------
-    static constexpr const char* const type_name_AppCaptureRecordOperation = "AppCaptureRecordOperation";
 
     static PyObject* _new_AppCaptureRecordOperation(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureRecordOperation);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureRecordOperation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureRecordOperation>::type_name);
         return nullptr;
     }
 
@@ -9717,11 +9716,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureRecordingStateChangedEventArgs class --------------------
-    static constexpr const char* const type_name_AppCaptureRecordingStateChangedEventArgs = "AppCaptureRecordingStateChangedEventArgs";
 
     static PyObject* _new_AppCaptureRecordingStateChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureRecordingStateChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -9832,11 +9831,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureServices class --------------------
-    static constexpr const char* const type_name_AppCaptureServices = "AppCaptureServices";
 
     static PyObject* _new_AppCaptureServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureServices);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureServices>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureServices>::type_name);
         return nullptr;
     }
 
@@ -10010,11 +10009,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureSettings class --------------------
-    static constexpr const char* const type_name_AppCaptureSettings = "AppCaptureSettings";
 
     static PyObject* _new_AppCaptureSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureSettings>::type_name);
         return nullptr;
     }
 
@@ -11309,11 +11308,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- AppCaptureState class --------------------
-    static constexpr const char* const type_name_AppCaptureState = "AppCaptureState";
 
     static PyObject* _new_AppCaptureState(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_AppCaptureState);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::AppCaptureState>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::AppCaptureState>::type_name);
         return nullptr;
     }
 
@@ -11633,7 +11632,6 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CameraCaptureUI class --------------------
-    static constexpr const char* const type_name_CameraCaptureUI = "CameraCaptureUI";
 
     static PyObject* _new_CameraCaptureUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -11803,11 +11801,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CameraCaptureUIPhotoCaptureSettings class --------------------
-    static constexpr const char* const type_name_CameraCaptureUIPhotoCaptureSettings = "CameraCaptureUIPhotoCaptureSettings";
 
     static PyObject* _new_CameraCaptureUIPhotoCaptureSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraCaptureUIPhotoCaptureSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings>::type_name);
         return nullptr;
     }
 
@@ -12118,11 +12116,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CameraCaptureUIVideoCaptureSettings class --------------------
-    static constexpr const char* const type_name_CameraCaptureUIVideoCaptureSettings = "CameraCaptureUIVideoCaptureSettings";
 
     static PyObject* _new_CameraCaptureUIVideoCaptureSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraCaptureUIVideoCaptureSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings>::type_name);
         return nullptr;
     }
 
@@ -12385,11 +12383,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CameraOptionsUI class --------------------
-    static constexpr const char* const type_name_CameraOptionsUI = "CameraOptionsUI";
 
     static PyObject* _new_CameraOptionsUI(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CameraOptionsUI);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::CameraOptionsUI>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::CameraOptionsUI>::type_name);
         return nullptr;
     }
 
@@ -12452,11 +12450,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CapturedFrame class --------------------
-    static constexpr const char* const type_name_CapturedFrame = "CapturedFrame";
 
     static PyObject* _new_CapturedFrame(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CapturedFrame);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::CapturedFrame>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::CapturedFrame>::type_name);
         return nullptr;
     }
 
@@ -13031,11 +13029,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CapturedFrameControlValues class --------------------
-    static constexpr const char* const type_name_CapturedFrameControlValues = "CapturedFrameControlValues";
 
     static PyObject* _new_CapturedFrameControlValues(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CapturedFrameControlValues);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::CapturedFrameControlValues>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::CapturedFrameControlValues>::type_name);
         return nullptr;
     }
 
@@ -13386,11 +13384,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- CapturedPhoto class --------------------
-    static constexpr const char* const type_name_CapturedPhoto = "CapturedPhoto";
 
     static PyObject* _new_CapturedPhoto(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_CapturedPhoto);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::CapturedPhoto>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::CapturedPhoto>::type_name);
         return nullptr;
     }
 
@@ -13501,11 +13499,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- GameBarServices class --------------------
-    static constexpr const char* const type_name_GameBarServices = "GameBarServices";
 
     static PyObject* _new_GameBarServices(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameBarServices);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::GameBarServices>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::GameBarServices>::type_name);
         return nullptr;
     }
 
@@ -13783,11 +13781,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- GameBarServicesCommandEventArgs class --------------------
-    static constexpr const char* const type_name_GameBarServicesCommandEventArgs = "GameBarServicesCommandEventArgs";
 
     static PyObject* _new_GameBarServicesCommandEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameBarServicesCommandEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>::type_name);
         return nullptr;
     }
 
@@ -13898,11 +13896,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- GameBarServicesManager class --------------------
-    static constexpr const char* const type_name_GameBarServicesManager = "GameBarServicesManager";
 
     static PyObject* _new_GameBarServicesManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameBarServicesManager);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::GameBarServicesManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::GameBarServicesManager>::type_name);
         return nullptr;
     }
 
@@ -14048,11 +14046,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- GameBarServicesManagerGameBarServicesCreatedEventArgs class --------------------
-    static constexpr const char* const type_name_GameBarServicesManagerGameBarServicesCreatedEventArgs = "GameBarServicesManagerGameBarServicesCreatedEventArgs";
 
     static PyObject* _new_GameBarServicesManagerGameBarServicesCreatedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameBarServicesManagerGameBarServicesCreatedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -14143,11 +14141,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- GameBarServicesTargetInfo class --------------------
-    static constexpr const char* const type_name_GameBarServicesTargetInfo = "GameBarServicesTargetInfo";
 
     static PyObject* _new_GameBarServicesTargetInfo(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_GameBarServicesTargetInfo);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::GameBarServicesTargetInfo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::GameBarServicesTargetInfo>::type_name);
         return nullptr;
     }
 
@@ -14298,11 +14296,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- LowLagMediaRecording class --------------------
-    static constexpr const char* const type_name_LowLagMediaRecording = "LowLagMediaRecording";
 
     static PyObject* _new_LowLagMediaRecording(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLagMediaRecording);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::LowLagMediaRecording>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::LowLagMediaRecording>::type_name);
         return nullptr;
     }
 
@@ -14587,11 +14585,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- LowLagPhotoCapture class --------------------
-    static constexpr const char* const type_name_LowLagPhotoCapture = "LowLagPhotoCapture";
 
     static PyObject* _new_LowLagPhotoCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLagPhotoCapture);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::LowLagPhotoCapture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::LowLagPhotoCapture>::type_name);
         return nullptr;
     }
 
@@ -14722,11 +14720,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- LowLagPhotoSequenceCapture class --------------------
-    static constexpr const char* const type_name_LowLagPhotoSequenceCapture = "LowLagPhotoSequenceCapture";
 
     static PyObject* _new_LowLagPhotoSequenceCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_LowLagPhotoSequenceCapture);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture>::type_name);
         return nullptr;
     }
 
@@ -14932,7 +14930,6 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCapture class --------------------
-    static constexpr const char* const type_name_MediaCapture = "MediaCapture";
 
     static PyObject* _new_MediaCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -17046,11 +17043,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureDeviceExclusiveControlStatusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs = "MediaCaptureDeviceExclusiveControlStatusChangedEventArgs";
 
     static PyObject* _new_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -17161,11 +17158,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureFailedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaCaptureFailedEventArgs = "MediaCaptureFailedEventArgs";
 
     static PyObject* _new_MediaCaptureFailedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureFailedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -17276,11 +17273,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureFocusChangedEventArgs class --------------------
-    static constexpr const char* const type_name_MediaCaptureFocusChangedEventArgs = "MediaCaptureFocusChangedEventArgs";
 
     static PyObject* _new_MediaCaptureFocusChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureFocusChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -17371,7 +17368,6 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureInitializationSettings class --------------------
-    static constexpr const char* const type_name_MediaCaptureInitializationSettings = "MediaCaptureInitializationSettings";
 
     static PyObject* _new_MediaCaptureInitializationSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -18333,11 +18329,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCapturePauseResult class --------------------
-    static constexpr const char* const type_name_MediaCapturePauseResult = "MediaCapturePauseResult";
 
     static PyObject* _new_MediaCapturePauseResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCapturePauseResult);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCapturePauseResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCapturePauseResult>::type_name);
         return nullptr;
     }
 
@@ -18501,11 +18497,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureRelativePanelWatcher class --------------------
-    static constexpr const char* const type_name_MediaCaptureRelativePanelWatcher = "MediaCaptureRelativePanelWatcher";
 
     static PyObject* _new_MediaCaptureRelativePanelWatcher(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureRelativePanelWatcher);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher>::type_name);
         return nullptr;
     }
 
@@ -18756,11 +18752,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureSettings class --------------------
-    static constexpr const char* const type_name_MediaCaptureSettings = "MediaCaptureSettings";
 
     static PyObject* _new_MediaCaptureSettings(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureSettings);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureSettings>::type_name);
         return nullptr;
     }
 
@@ -19111,11 +19107,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureStopResult class --------------------
-    static constexpr const char* const type_name_MediaCaptureStopResult = "MediaCaptureStopResult";
 
     static PyObject* _new_MediaCaptureStopResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureStopResult);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureStopResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureStopResult>::type_name);
         return nullptr;
     }
 
@@ -19279,11 +19275,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureVideoProfile class --------------------
-    static constexpr const char* const type_name_MediaCaptureVideoProfile = "MediaCaptureVideoProfile";
 
     static PyObject* _new_MediaCaptureVideoProfile(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureVideoProfile);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>::type_name);
         return nullptr;
     }
 
@@ -19524,11 +19520,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- MediaCaptureVideoProfileMediaDescription class --------------------
-    static constexpr const char* const type_name_MediaCaptureVideoProfileMediaDescription = "MediaCaptureVideoProfileMediaDescription";
 
     static PyObject* _new_MediaCaptureVideoProfileMediaDescription(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_MediaCaptureVideoProfileMediaDescription);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>::type_name);
         return nullptr;
     }
 
@@ -19739,11 +19735,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- OptionalReferencePhotoCapturedEventArgs class --------------------
-    static constexpr const char* const type_name_OptionalReferencePhotoCapturedEventArgs = "OptionalReferencePhotoCapturedEventArgs";
 
     static PyObject* _new_OptionalReferencePhotoCapturedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_OptionalReferencePhotoCapturedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -19854,11 +19850,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- PhotoCapturedEventArgs class --------------------
-    static constexpr const char* const type_name_PhotoCapturedEventArgs = "PhotoCapturedEventArgs";
 
     static PyObject* _new_PhotoCapturedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoCapturedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -19989,11 +19985,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- PhotoConfirmationCapturedEventArgs class --------------------
-    static constexpr const char* const type_name_PhotoConfirmationCapturedEventArgs = "PhotoConfirmationCapturedEventArgs";
 
     static PyObject* _new_PhotoConfirmationCapturedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PhotoConfirmationCapturedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -20104,11 +20100,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- ScreenCapture class --------------------
-    static constexpr const char* const type_name_ScreenCapture = "ScreenCapture";
 
     static PyObject* _new_ScreenCapture(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_ScreenCapture);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::ScreenCapture>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::ScreenCapture>::type_name);
         return nullptr;
     }
 
@@ -20334,11 +20330,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- SourceSuspensionChangedEventArgs class --------------------
-    static constexpr const char* const type_name_SourceSuspensionChangedEventArgs = "SourceSuspensionChangedEventArgs";
 
     static PyObject* _new_SourceSuspensionChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_SourceSuspensionChangedEventArgs);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>::type_name);
         return nullptr;
     }
 
@@ -20449,11 +20445,11 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- VideoStreamConfiguration class --------------------
-    static constexpr const char* const type_name_VideoStreamConfiguration = "VideoStreamConfiguration";
 
     static PyObject* _new_VideoStreamConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_VideoStreamConfiguration);
+        static_assert(py::py_type<winrt::Windows::Media::Capture::VideoStreamConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Capture::VideoStreamConfiguration>::type_name);
         return nullptr;
     }
 
@@ -20564,7 +20560,6 @@ namespace py::cpp::Windows::Media::Capture
     };
 
     // ----- WhiteBalanceGain struct --------------------
-    static constexpr const char* const type_name_WhiteBalanceGain = "WhiteBalanceGain";
 
     PyObject* _new_WhiteBalanceGain(PyTypeObject* type, PyObject* args, PyObject* kwds)
     {

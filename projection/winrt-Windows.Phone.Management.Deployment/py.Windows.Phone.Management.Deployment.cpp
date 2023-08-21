@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Phone::Management::Deployment
 {
     // ----- Enterprise class --------------------
-    static constexpr const char* const type_name_Enterprise = "Enterprise";
 
     static PyObject* _new_Enterprise(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_Enterprise);
+        static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::Enterprise>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::Enterprise>::type_name);
         return nullptr;
     }
 
@@ -202,11 +202,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     };
 
     // ----- EnterpriseEnrollmentManager class --------------------
-    static constexpr const char* const type_name_EnterpriseEnrollmentManager = "EnterpriseEnrollmentManager";
 
     static PyObject* _new_EnterpriseEnrollmentManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EnterpriseEnrollmentManager);
+        static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>::type_name);
         return nullptr;
     }
 
@@ -390,11 +390,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     };
 
     // ----- EnterpriseEnrollmentResult class --------------------
-    static constexpr const char* const type_name_EnterpriseEnrollmentResult = "EnterpriseEnrollmentResult";
 
     static PyObject* _new_EnterpriseEnrollmentResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_EnterpriseEnrollmentResult);
+        static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>::type_name);
         return nullptr;
     }
 
@@ -505,11 +505,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     };
 
     // ----- InstallationManager class --------------------
-    static constexpr const char* const type_name_InstallationManager = "InstallationManager";
 
     static PyObject* _new_InstallationManager(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_InstallationManager);
+        static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>::type_name);
         return nullptr;
     }
 
@@ -774,11 +774,11 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     };
 
     // ----- PackageInstallResult class --------------------
-    static constexpr const char* const type_name_PackageInstallResult = "PackageInstallResult";
 
     static PyObject* _new_PackageInstallResult(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_PackageInstallResult);
+        static_assert(py::py_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>::type_name);
         return nullptr;
     }
 

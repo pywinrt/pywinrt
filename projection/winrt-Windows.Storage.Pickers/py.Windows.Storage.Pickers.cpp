@@ -7,11 +7,11 @@
 namespace py::cpp::Windows::Storage::Pickers
 {
     // ----- FileExtensionVector class --------------------
-    static constexpr const char* const type_name_FileExtensionVector = "FileExtensionVector";
 
     static PyObject* _new_FileExtensionVector(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FileExtensionVector);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>::type_name);
         return nullptr;
     }
 
@@ -630,7 +630,6 @@ namespace py::cpp::Windows::Storage::Pickers
     };
 
     // ----- FileOpenPicker class --------------------
-    static constexpr const char* const type_name_FileOpenPicker = "FileOpenPicker";
 
     static PyObject* _new_FileOpenPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -1184,11 +1183,11 @@ namespace py::cpp::Windows::Storage::Pickers
     };
 
     // ----- FilePickerFileTypesOrderedMap class --------------------
-    static constexpr const char* const type_name_FilePickerFileTypesOrderedMap = "FilePickerFileTypesOrderedMap";
 
     static PyObject* _new_FilePickerFileTypesOrderedMap(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FilePickerFileTypesOrderedMap);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>::type_name);
         return nullptr;
     }
 
@@ -1597,11 +1596,11 @@ namespace py::cpp::Windows::Storage::Pickers
     };
 
     // ----- FilePickerSelectedFilesArray class --------------------
-    static constexpr const char* const type_name_FilePickerSelectedFilesArray = "FilePickerSelectedFilesArray";
 
     static PyObject* _new_FilePickerSelectedFilesArray(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
-        py::set_invalid_activation_error(type_name_FilePickerSelectedFilesArray);
+        static_assert(py::py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>::type_name);
         return nullptr;
     }
 
@@ -1945,7 +1944,6 @@ namespace py::cpp::Windows::Storage::Pickers
     };
 
     // ----- FileSavePicker class --------------------
-    static constexpr const char* const type_name_FileSavePicker = "FileSavePicker";
 
     static PyObject* _new_FileSavePicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
@@ -2532,7 +2530,6 @@ namespace py::cpp::Windows::Storage::Pickers
     };
 
     // ----- FolderPicker class --------------------
-    static constexpr const char* const type_name_FolderPicker = "FolderPicker";
 
     static PyObject* _new_FolderPicker(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
     {
