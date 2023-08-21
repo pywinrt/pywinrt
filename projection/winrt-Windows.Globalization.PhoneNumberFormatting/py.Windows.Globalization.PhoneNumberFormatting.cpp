@@ -882,18 +882,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_phonenumberformatting(void) n
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhoneNumberFormatter, &type_spec_PhoneNumberFormatter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneNumberFormatter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhoneNumberFormatter, &type_spec_PhoneNumberFormatter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneNumberFormatter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhoneNumberInfo, &type_spec_PhoneNumberInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneNumberInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhoneNumberInfo, &type_spec_PhoneNumberInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneNumberInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -22542,27 +22542,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppBarButtonTemplateSettings, &type_spec_AppBarButtonTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarButtonTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppBarButtonTemplateSettings, &type_spec_AppBarButtonTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarButtonTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppBarTemplateSettings, &type_spec_AppBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppBarTemplateSettings, &type_spec_AppBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonTemplateSettings, &type_spec_AppBarToggleButtonTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarToggleButtonTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonTemplateSettings, &type_spec_AppBarToggleButtonTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarToggleButtonTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22575,36 +22575,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ButtonBase, &type_spec_ButtonBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ButtonBase, &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBase_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CalendarPanel, &type_spec_CalendarPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CalendarPanel, &type_spec_CalendarPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CalendarViewTemplateSettings, &type_spec_CalendarViewTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarViewTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CalendarViewTemplateSettings, &type_spec_CalendarViewTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarViewTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CarouselPanel, &type_spec_CarouselPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CarouselPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CarouselPanel, &type_spec_CarouselPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CarouselPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22617,9 +22617,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ColorPickerSlider, &type_spec_ColorPickerSlider, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPickerSlider, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ColorPickerSlider, &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -22632,72 +22632,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ColorSpectrum, &type_spec_ColorSpectrum, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorSpectrum, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ColorSpectrum, &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorSpectrum, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrum_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ComboBoxTemplateSettings, &type_spec_ComboBoxTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ComboBoxTemplateSettings, &type_spec_ComboBoxTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBar, &type_spec_CommandBarFlyoutCommandBar, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBar, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBar, &type_spec_CommandBarFlyoutCommandBar, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBar, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBarTemplateSettings, &type_spec_CommandBarFlyoutCommandBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CommandBarFlyoutCommandBarTemplateSettings, &type_spec_CommandBarFlyoutCommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommandBarFlyoutCommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CommandBarTemplateSettings, &type_spec_CommandBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommandBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CommandBarTemplateSettings, &type_spec_CommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommandBarTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragCompletedEventArgs, &type_spec_DragCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragCompletedEventArgs, &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragDeltaEventArgs, &type_spec_DragDeltaEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragDeltaEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragDeltaEventArgs, &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragStartedEventArgs, &type_spec_DragStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragStartedEventArgs, &type_spec_DragStartedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragStartedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22710,36 +22710,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlyoutBase, &type_spec_FlyoutBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlyoutBase, &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutBase_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlyoutBaseClosingEventArgs, &type_spec_FlyoutBaseClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutBaseClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlyoutBaseClosingEventArgs, &type_spec_FlyoutBaseClosingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutBaseClosingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlyoutShowOptions, &type_spec_FlyoutShowOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutShowOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlyoutShowOptions, &type_spec_FlyoutShowOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutShowOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GeneratorPositionHelper, &type_spec_GeneratorPositionHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeneratorPositionHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GeneratorPositionHelper, &type_spec_GeneratorPositionHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeneratorPositionHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22752,27 +22752,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridViewItemPresenter, &type_spec_GridViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridViewItemPresenter, &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemPresenter_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridViewItemTemplateSettings, &type_spec_GridViewItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridViewItemTemplateSettings, &type_spec_GridViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ItemsChangedEventArgs, &type_spec_ItemsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ItemsChangedEventArgs, &type_spec_ItemsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemsChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22785,9 +22785,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JumpListItemBackgroundConverter, &type_spec_JumpListItemBackgroundConverter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpListItemBackgroundConverter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JumpListItemBackgroundConverter, &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpListItemBackgroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemBackgroundConverter_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -22800,18 +22800,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JumpListItemForegroundConverter, &type_spec_JumpListItemForegroundConverter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpListItemForegroundConverter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JumpListItemForegroundConverter, &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JumpListItemForegroundConverter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItemForegroundConverter_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LayoutInformation, &type_spec_LayoutInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LayoutInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LayoutInformation, &type_spec_LayoutInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LayoutInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22824,18 +22824,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewItemPresenter, &type_spec_ListViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewItemPresenter, &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemPresenter_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewItemTemplateSettings, &type_spec_ListViewItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewItemTemplateSettings, &type_spec_ListViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22848,45 +22848,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoopingSelector, &type_spec_LoopingSelector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoopingSelector, &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LoopingSelector_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorItem, &type_spec_LoopingSelectorItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorItem, &type_spec_LoopingSelectorItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorPanel, &type_spec_LoopingSelectorPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorPanel, &type_spec_LoopingSelectorPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemTemplateSettings, &type_spec_MenuFlyoutItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutItemTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemTemplateSettings, &type_spec_MenuFlyoutItemTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutItemTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterTemplateSettings, &type_spec_MenuFlyoutPresenterTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterTemplateSettings, &type_spec_MenuFlyoutPresenterTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22899,18 +22899,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NavigationViewItemPresenter, &type_spec_NavigationViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NavigationViewItemPresenter, &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemPresenter_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OrientedVirtualizingPanel, &type_spec_OrientedVirtualizingPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientedVirtualizingPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OrientedVirtualizingPanel, &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22923,36 +22923,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PickerFlyoutBase, &type_spec_PickerFlyoutBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PickerFlyoutBase, &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyoutBase_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PivotHeaderItem, &type_spec_PivotHeaderItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotHeaderItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PivotHeaderItem, &type_spec_PivotHeaderItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotHeaderItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PivotHeaderPanel, &type_spec_PivotHeaderPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotHeaderPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PivotHeaderPanel, &type_spec_PivotHeaderPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotHeaderPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PivotPanel, &type_spec_PivotPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PivotPanel, &type_spec_PivotPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22965,27 +22965,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Popup, &type_spec_Popup, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Popup, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Popup, &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Popup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Popup_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProgressBarTemplateSettings, &type_spec_ProgressBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressBarTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProgressBarTemplateSettings, &type_spec_ProgressBarTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressBarTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProgressRingTemplateSettings, &type_spec_ProgressRingTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressRingTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProgressRingTemplateSettings, &type_spec_ProgressRingTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressRingTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -22998,18 +22998,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RangeBase, &type_spec_RangeBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBase, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RangeBase, &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RangeBaseValueChangedEventArgs, &type_spec_RangeBaseValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBaseValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RangeBaseValueChangedEventArgs, &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -23022,9 +23022,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RepeatButton, &type_spec_RepeatButton, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RepeatButton, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RepeatButton, &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RepeatButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButton_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -23037,18 +23037,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScrollBar, &type_spec_ScrollBar, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollBar, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScrollBar, &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBar_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScrollEventArgs, &type_spec_ScrollEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScrollEventArgs, &type_spec_ScrollEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -23061,9 +23061,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Selector, &type_spec_Selector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Selector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Selector, &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Selector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Selector_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -23076,27 +23076,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SelectorItem, &type_spec_SelectorItem, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorItem, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SelectorItem, &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SettingsFlyoutTemplateSettings, &type_spec_SettingsFlyoutTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsFlyoutTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SettingsFlyoutTemplateSettings, &type_spec_SettingsFlyoutTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsFlyoutTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SplitViewTemplateSettings, &type_spec_SplitViewTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SplitViewTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SplitViewTemplateSettings, &type_spec_SplitViewTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SplitViewTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -23109,9 +23109,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Thumb, &type_spec_Thumb, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Thumb, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Thumb, &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Thumb, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Thumb_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -23124,9 +23124,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TickBar, &type_spec_TickBar, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TickBar, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TickBar, &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TickBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TickBar_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -23139,45 +23139,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToggleButton, &type_spec_ToggleButton, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleButton, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToggleButton, &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButton_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToggleSwitchTemplateSettings, &type_spec_ToggleSwitchTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleSwitchTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToggleSwitchTemplateSettings, &type_spec_ToggleSwitchTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleSwitchTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToolTipTemplateSettings, &type_spec_ToolTipTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToolTipTemplateSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToolTipTemplateSettings, &type_spec_ToolTipTemplateSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToolTipTemplateSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IScrollSnapPointsInfo, &type_spec_IScrollSnapPointsInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IScrollSnapPointsInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IScrollSnapPointsInfo, &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IScrollSnapPointsInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GeneratorPosition, &type_spec_GeneratorPosition, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeneratorPosition, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GeneratorPosition, &type_spec_GeneratorPosition, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeneratorPosition, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

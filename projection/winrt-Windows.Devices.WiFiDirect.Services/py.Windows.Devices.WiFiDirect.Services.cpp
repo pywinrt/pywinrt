@@ -2419,81 +2419,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect_services(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectService, &type_spec_WiFiDirectService, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectService, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectService, &type_spec_WiFiDirectService, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectService, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAdvertiser, &type_spec_WiFiDirectServiceAdvertiser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAdvertiser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAdvertiser, &type_spec_WiFiDirectServiceAdvertiser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAdvertiser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceAutoAcceptSessionConnectedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceProvisioningInfo, &type_spec_WiFiDirectServiceProvisioningInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceProvisioningInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceProvisioningInfo, &type_spec_WiFiDirectServiceProvisioningInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceProvisioningInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceRemotePortAddedEventArgs, &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceRemotePortAddedEventArgs, &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceRemotePortAddedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSession, &type_spec_WiFiDirectServiceSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSession, &type_spec_WiFiDirectServiceSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionDeferredEventArgs, &type_spec_WiFiDirectServiceSessionDeferredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionDeferredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionDeferredEventArgs, &type_spec_WiFiDirectServiceSessionDeferredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionDeferredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequest, &type_spec_WiFiDirectServiceSessionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequest, &type_spec_WiFiDirectServiceSessionRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequestedEventArgs, &type_spec_WiFiDirectServiceSessionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectServiceSessionRequestedEventArgs, &type_spec_WiFiDirectServiceSessionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectServiceSessionRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

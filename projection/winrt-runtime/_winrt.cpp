@@ -283,7 +283,6 @@ namespace py::cpp::_winrt
 
         if (py::register_python_type(
                 module.get(),
-                type_name_Object,
                 &Object_type_spec,
 #if PY_VERSION_HEX < 0x03090000
                 nullptr,
@@ -297,7 +296,6 @@ namespace py::cpp::_winrt
 
         if (py::register_python_type(
                 module.get(),
-                "Array",
                 &Array_type_spec,
 #if PY_VERSION_HEX < 0x03090000
                 &Array_buffer_procs,
@@ -311,7 +309,6 @@ namespace py::cpp::_winrt
 
         if (py::register_python_type(
                 module.get(),
-                "MappingIter",
                 &MappingIter_type_spec,
 #if PY_VERSION_HEX < 0x03090000
                 nullptr,

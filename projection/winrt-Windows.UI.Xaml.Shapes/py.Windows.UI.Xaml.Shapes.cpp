@@ -2382,9 +2382,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Ellipse, &type_spec_Ellipse, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Ellipse, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Ellipse, &type_spec_Ellipse, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Ellipse, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -2397,9 +2397,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Line, &type_spec_Line, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Line, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Line, &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2412,9 +2412,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Path, &type_spec_Path, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Path, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Path, &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2427,9 +2427,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Polygon, &type_spec_Polygon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Polygon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Polygon, &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2442,9 +2442,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Polyline, &type_spec_Polyline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Polyline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Polyline, &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2457,9 +2457,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Rectangle, &type_spec_Rectangle, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rectangle, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Rectangle, &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2472,9 +2472,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Shape, &type_spec_Shape, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Shape, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Shape, &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Meta.get())) == -1)
     #endif
     {
         return nullptr;

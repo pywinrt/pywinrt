@@ -6000,72 +6000,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundDownloader, &type_spec_BackgroundDownloader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundDownloader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundDownloader, &type_spec_BackgroundDownloader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundDownloader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroup, &type_spec_BackgroundTransferCompletionGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroup, &type_spec_BackgroundTransferCompletionGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroupTriggerDetails, &type_spec_BackgroundTransferCompletionGroupTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroupTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferCompletionGroupTriggerDetails, &type_spec_BackgroundTransferCompletionGroupTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferCompletionGroupTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferContentPart, &type_spec_BackgroundTransferContentPart, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferContentPart, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferContentPart, &type_spec_BackgroundTransferContentPart, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferContentPart, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferError, &type_spec_BackgroundTransferError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferError, &type_spec_BackgroundTransferError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferGroup, &type_spec_BackgroundTransferGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferGroup, &type_spec_BackgroundTransferGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferRangesDownloadedEventArgs, &type_spec_BackgroundTransferRangesDownloadedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferRangesDownloadedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferRangesDownloadedEventArgs, &type_spec_BackgroundTransferRangesDownloadedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferRangesDownloadedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundUploader, &type_spec_BackgroundUploader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundUploader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundUploader, &type_spec_BackgroundUploader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundUploader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -6078,108 +6078,108 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_backgroundtransfer(void) noexcep
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContentPrefetcher, &type_spec_ContentPrefetcher, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContentPrefetcher, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContentPrefetcher, &type_spec_ContentPrefetcher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContentPrefetcher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentPrefetcher_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DownloadOperation, &type_spec_DownloadOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DownloadOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DownloadOperation, &type_spec_DownloadOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DownloadOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResponseInformation, &type_spec_ResponseInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResponseInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResponseInformation, &type_spec_ResponseInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResponseInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UnconstrainedTransferRequestResult, &type_spec_UnconstrainedTransferRequestResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnconstrainedTransferRequestResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UnconstrainedTransferRequestResult, &type_spec_UnconstrainedTransferRequestResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnconstrainedTransferRequestResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UploadOperation, &type_spec_UploadOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UploadOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UploadOperation, &type_spec_UploadOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UploadOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferBase, &type_spec_IBackgroundTransferBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferBase, &type_spec_IBackgroundTransferBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferContentPartFactory, &type_spec_IBackgroundTransferContentPartFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferContentPartFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferContentPartFactory, &type_spec_IBackgroundTransferContentPartFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferContentPartFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperation, &type_spec_IBackgroundTransferOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperation, &type_spec_IBackgroundTransferOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperationPriority, &type_spec_IBackgroundTransferOperationPriority, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferOperationPriority, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBackgroundTransferOperationPriority, &type_spec_IBackgroundTransferOperationPriority, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBackgroundTransferOperationPriority, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundDownloadProgress, &type_spec_BackgroundDownloadProgress, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundDownloadProgress, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundDownloadProgress, &type_spec_BackgroundDownloadProgress, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundDownloadProgress, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferFileRange, &type_spec_BackgroundTransferFileRange, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferFileRange, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundTransferFileRange, &type_spec_BackgroundTransferFileRange, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundTransferFileRange, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundUploadProgress, &type_spec_BackgroundUploadProgress, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundUploadProgress, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundUploadProgress, &type_spec_BackgroundUploadProgress, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundUploadProgress, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

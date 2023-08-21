@@ -11796,432 +11796,432 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_devices(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdvancedPhotoCaptureSettings, &type_spec_AdvancedPhotoCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdvancedPhotoCaptureSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdvancedPhotoCaptureSettings, &type_spec_AdvancedPhotoCaptureSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdvancedPhotoCaptureSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdvancedPhotoControl, &type_spec_AdvancedPhotoControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdvancedPhotoControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdvancedPhotoControl, &type_spec_AdvancedPhotoControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdvancedPhotoControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AudioDeviceController, &type_spec_AudioDeviceController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AudioDeviceController, &type_spec_AudioDeviceController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AudioDeviceModule, &type_spec_AudioDeviceModule, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceModule, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AudioDeviceModule, &type_spec_AudioDeviceModule, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceModule, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AudioDeviceModuleNotificationEventArgs, &type_spec_AudioDeviceModuleNotificationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceModuleNotificationEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AudioDeviceModuleNotificationEventArgs, &type_spec_AudioDeviceModuleNotificationEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceModuleNotificationEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AudioDeviceModulesManager, &type_spec_AudioDeviceModulesManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceModulesManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AudioDeviceModulesManager, &type_spec_AudioDeviceModulesManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioDeviceModulesManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CallControl, &type_spec_CallControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CallControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CallControl, &type_spec_CallControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CallControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CameraOcclusionInfo, &type_spec_CameraOcclusionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CameraOcclusionInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CameraOcclusionInfo, &type_spec_CameraOcclusionInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CameraOcclusionInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CameraOcclusionState, &type_spec_CameraOcclusionState, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CameraOcclusionState, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CameraOcclusionState, &type_spec_CameraOcclusionState, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CameraOcclusionState, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CameraOcclusionStateChangedEventArgs, &type_spec_CameraOcclusionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CameraOcclusionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CameraOcclusionStateChangedEventArgs, &type_spec_CameraOcclusionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CameraOcclusionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DefaultAudioCaptureDeviceChangedEventArgs, &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DefaultAudioCaptureDeviceChangedEventArgs, &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DefaultAudioCaptureDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DefaultAudioRenderDeviceChangedEventArgs, &type_spec_DefaultAudioRenderDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DefaultAudioRenderDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DefaultAudioRenderDeviceChangedEventArgs, &type_spec_DefaultAudioRenderDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DefaultAudioRenderDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DialRequestedEventArgs, &type_spec_DialRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DialRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DialRequestedEventArgs, &type_spec_DialRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DialRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DigitalWindowBounds, &type_spec_DigitalWindowBounds, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DigitalWindowBounds, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DigitalWindowBounds, &type_spec_DigitalWindowBounds, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DigitalWindowBounds, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DigitalWindowCapability, &type_spec_DigitalWindowCapability, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DigitalWindowCapability, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DigitalWindowCapability, &type_spec_DigitalWindowCapability, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DigitalWindowCapability, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DigitalWindowControl, &type_spec_DigitalWindowControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DigitalWindowControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DigitalWindowControl, &type_spec_DigitalWindowControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DigitalWindowControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExposureCompensationControl, &type_spec_ExposureCompensationControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExposureCompensationControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExposureCompensationControl, &type_spec_ExposureCompensationControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExposureCompensationControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExposureControl, &type_spec_ExposureControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExposureControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExposureControl, &type_spec_ExposureControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExposureControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExposurePriorityVideoControl, &type_spec_ExposurePriorityVideoControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExposurePriorityVideoControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExposurePriorityVideoControl, &type_spec_ExposurePriorityVideoControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExposurePriorityVideoControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlashControl, &type_spec_FlashControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlashControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlashControl, &type_spec_FlashControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlashControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FocusControl, &type_spec_FocusControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FocusControl, &type_spec_FocusControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FocusSettings, &type_spec_FocusSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FocusSettings, &type_spec_FocusSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HdrVideoControl, &type_spec_HdrVideoControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HdrVideoControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HdrVideoControl, &type_spec_HdrVideoControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HdrVideoControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InfraredTorchControl, &type_spec_InfraredTorchControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InfraredTorchControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InfraredTorchControl, &type_spec_InfraredTorchControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InfraredTorchControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsoSpeedControl, &type_spec_IsoSpeedControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsoSpeedControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsoSpeedControl, &type_spec_IsoSpeedControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsoSpeedControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KeypadPressedEventArgs, &type_spec_KeypadPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeypadPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KeypadPressedEventArgs, &type_spec_KeypadPressedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeypadPressedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LowLagPhotoControl, &type_spec_LowLagPhotoControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLagPhotoControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LowLagPhotoControl, &type_spec_LowLagPhotoControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLagPhotoControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LowLagPhotoSequenceControl, &type_spec_LowLagPhotoSequenceControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLagPhotoSequenceControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LowLagPhotoSequenceControl, &type_spec_LowLagPhotoSequenceControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLagPhotoSequenceControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaDevice, &type_spec_MediaDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaDevice, &type_spec_MediaDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaDeviceControl, &type_spec_MediaDeviceControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaDeviceControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaDeviceControl, &type_spec_MediaDeviceControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaDeviceControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaDeviceControlCapabilities, &type_spec_MediaDeviceControlCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaDeviceControlCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaDeviceControlCapabilities, &type_spec_MediaDeviceControlCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaDeviceControlCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ModuleCommandResult, &type_spec_ModuleCommandResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ModuleCommandResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ModuleCommandResult, &type_spec_ModuleCommandResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ModuleCommandResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OpticalImageStabilizationControl, &type_spec_OpticalImageStabilizationControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OpticalImageStabilizationControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OpticalImageStabilizationControl, &type_spec_OpticalImageStabilizationControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OpticalImageStabilizationControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PanelBasedOptimizationControl, &type_spec_PanelBasedOptimizationControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PanelBasedOptimizationControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PanelBasedOptimizationControl, &type_spec_PanelBasedOptimizationControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PanelBasedOptimizationControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoConfirmationControl, &type_spec_PhotoConfirmationControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoConfirmationControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoConfirmationControl, &type_spec_PhotoConfirmationControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoConfirmationControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RedialRequestedEventArgs, &type_spec_RedialRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RedialRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RedialRequestedEventArgs, &type_spec_RedialRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RedialRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RegionOfInterest, &type_spec_RegionOfInterest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RegionOfInterest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RegionOfInterest, &type_spec_RegionOfInterest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RegionOfInterest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RegionsOfInterestControl, &type_spec_RegionsOfInterestControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RegionsOfInterestControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RegionsOfInterestControl, &type_spec_RegionsOfInterestControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RegionsOfInterestControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneModeControl, &type_spec_SceneModeControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneModeControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneModeControl, &type_spec_SceneModeControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneModeControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TorchControl, &type_spec_TorchControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TorchControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TorchControl, &type_spec_TorchControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TorchControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VideoDeviceController, &type_spec_VideoDeviceController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoDeviceController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VideoDeviceController, &type_spec_VideoDeviceController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoDeviceController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VideoDeviceControllerGetDevicePropertyResult, &type_spec_VideoDeviceControllerGetDevicePropertyResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoDeviceControllerGetDevicePropertyResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VideoDeviceControllerGetDevicePropertyResult, &type_spec_VideoDeviceControllerGetDevicePropertyResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoDeviceControllerGetDevicePropertyResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VideoTemporalDenoisingControl, &type_spec_VideoTemporalDenoisingControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoTemporalDenoisingControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VideoTemporalDenoisingControl, &type_spec_VideoTemporalDenoisingControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoTemporalDenoisingControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WhiteBalanceControl, &type_spec_WhiteBalanceControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WhiteBalanceControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WhiteBalanceControl, &type_spec_WhiteBalanceControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WhiteBalanceControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ZoomControl, &type_spec_ZoomControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ZoomControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ZoomControl, &type_spec_ZoomControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ZoomControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ZoomSettings, &type_spec_ZoomSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ZoomSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ZoomSettings, &type_spec_ZoomSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ZoomSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IDefaultAudioDeviceChangedEventArgs, &type_spec_IDefaultAudioDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IDefaultAudioDeviceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IDefaultAudioDeviceChangedEventArgs, &type_spec_IDefaultAudioDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IDefaultAudioDeviceChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaDeviceController, &type_spec_IMediaDeviceController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaDeviceController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaDeviceController, &type_spec_IMediaDeviceController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaDeviceController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

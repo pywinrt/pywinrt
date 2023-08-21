@@ -1810,90 +1810,90 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_input_preview(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeDevicePreview, &type_spec_GazeDevicePreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDevicePreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeDevicePreview, &type_spec_GazeDevicePreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDevicePreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherAddedPreviewEventArgs, &type_spec_GazeDeviceWatcherAddedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherAddedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherAddedPreviewEventArgs, &type_spec_GazeDeviceWatcherAddedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherAddedPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherPreview, &type_spec_GazeDeviceWatcherPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherPreview, &type_spec_GazeDeviceWatcherPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherRemovedPreviewEventArgs, &type_spec_GazeDeviceWatcherRemovedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherRemovedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherRemovedPreviewEventArgs, &type_spec_GazeDeviceWatcherRemovedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherRemovedPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherUpdatedPreviewEventArgs, &type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeDeviceWatcherUpdatedPreviewEventArgs, &type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeDeviceWatcherUpdatedPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeEnteredPreviewEventArgs, &type_spec_GazeEnteredPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeEnteredPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeEnteredPreviewEventArgs, &type_spec_GazeEnteredPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeEnteredPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeExitedPreviewEventArgs, &type_spec_GazeExitedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeExitedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeExitedPreviewEventArgs, &type_spec_GazeExitedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeExitedPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeInputSourcePreview, &type_spec_GazeInputSourcePreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeInputSourcePreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeInputSourcePreview, &type_spec_GazeInputSourcePreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeInputSourcePreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazeMovedPreviewEventArgs, &type_spec_GazeMovedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeMovedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazeMovedPreviewEventArgs, &type_spec_GazeMovedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazeMovedPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GazePointPreview, &type_spec_GazePointPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazePointPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GazePointPreview, &type_spec_GazePointPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GazePointPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

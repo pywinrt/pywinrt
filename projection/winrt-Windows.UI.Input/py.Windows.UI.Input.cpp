@@ -10241,207 +10241,207 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AttachableInputObject, &type_spec_AttachableInputObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AttachableInputObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AttachableInputObject, &type_spec_AttachableInputObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AttachableInputObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CrossSlidingEventArgs, &type_spec_CrossSlidingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CrossSlidingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CrossSlidingEventArgs, &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CrossSlidingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DraggingEventArgs, &type_spec_DraggingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DraggingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DraggingEventArgs, &type_spec_DraggingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DraggingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EdgeGesture, &type_spec_EdgeGesture, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EdgeGesture, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EdgeGesture, &type_spec_EdgeGesture, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EdgeGesture, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EdgeGestureEventArgs, &type_spec_EdgeGestureEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EdgeGestureEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EdgeGestureEventArgs, &type_spec_EdgeGestureEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EdgeGestureEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GestureRecognizer, &type_spec_GestureRecognizer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GestureRecognizer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GestureRecognizer, &type_spec_GestureRecognizer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GestureRecognizer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HoldingEventArgs, &type_spec_HoldingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HoldingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HoldingEventArgs, &type_spec_HoldingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HoldingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InputActivationListener, &type_spec_InputActivationListener, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InputActivationListener, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InputActivationListener, &type_spec_InputActivationListener, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InputActivationListener, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InputActivationListenerActivationChangedEventArgs, &type_spec_InputActivationListenerActivationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InputActivationListenerActivationChangedEventArgs, &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InputActivationListenerActivationChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KeyboardDeliveryInterceptor, &type_spec_KeyboardDeliveryInterceptor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyboardDeliveryInterceptor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KeyboardDeliveryInterceptor, &type_spec_KeyboardDeliveryInterceptor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyboardDeliveryInterceptor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ManipulationCompletedEventArgs, &type_spec_ManipulationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ManipulationCompletedEventArgs, &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ManipulationInertiaStartingEventArgs, &type_spec_ManipulationInertiaStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ManipulationInertiaStartingEventArgs, &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ManipulationStartedEventArgs, &type_spec_ManipulationStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ManipulationStartedEventArgs, &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationStartedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ManipulationUpdatedEventArgs, &type_spec_ManipulationUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ManipulationUpdatedEventArgs, &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MouseWheelParameters, &type_spec_MouseWheelParameters, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MouseWheelParameters, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MouseWheelParameters, &type_spec_MouseWheelParameters, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MouseWheelParameters, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PointerPoint, &type_spec_PointerPoint, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointerPoint, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PointerPoint, &type_spec_PointerPoint, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointerPoint, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PointerPointProperties, &type_spec_PointerPointProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointerPointProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PointerPointProperties, &type_spec_PointerPointProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointerPointProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PointerVisualizationSettings, &type_spec_PointerVisualizationSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointerVisualizationSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PointerVisualizationSettings, &type_spec_PointerVisualizationSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointerVisualizationSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialController, &type_spec_RadialController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialController, &type_spec_RadialController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonClickedEventArgs, &type_spec_RadialControllerButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonClickedEventArgs, &type_spec_RadialControllerButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonHoldingEventArgs, &type_spec_RadialControllerButtonHoldingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonHoldingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonHoldingEventArgs, &type_spec_RadialControllerButtonHoldingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonHoldingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonPressedEventArgs, &type_spec_RadialControllerButtonPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonPressedEventArgs, &type_spec_RadialControllerButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonReleasedEventArgs, &type_spec_RadialControllerButtonReleasedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonReleasedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerButtonReleasedEventArgs, &type_spec_RadialControllerButtonReleasedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerButtonReleasedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -10454,171 +10454,171 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerConfiguration, &type_spec_RadialControllerConfiguration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerConfiguration, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerConfiguration, &type_spec_RadialControllerConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerConfiguration_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerControlAcquiredEventArgs, &type_spec_RadialControllerControlAcquiredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerControlAcquiredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerControlAcquiredEventArgs, &type_spec_RadialControllerControlAcquiredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerControlAcquiredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerMenu, &type_spec_RadialControllerMenu, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerMenu, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerMenu, &type_spec_RadialControllerMenu, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerMenu, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerMenuItem, &type_spec_RadialControllerMenuItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerMenuItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerMenuItem, &type_spec_RadialControllerMenuItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerMenuItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerRotationChangedEventArgs, &type_spec_RadialControllerRotationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerRotationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerRotationChangedEventArgs, &type_spec_RadialControllerRotationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerRotationChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContact, &type_spec_RadialControllerScreenContact, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContact, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContact, &type_spec_RadialControllerScreenContact, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContact, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactContinuedEventArgs, &type_spec_RadialControllerScreenContactContinuedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactContinuedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactContinuedEventArgs, &type_spec_RadialControllerScreenContactContinuedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactContinuedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactEndedEventArgs, &type_spec_RadialControllerScreenContactEndedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactEndedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactEndedEventArgs, &type_spec_RadialControllerScreenContactEndedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactEndedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactStartedEventArgs, &type_spec_RadialControllerScreenContactStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerScreenContactStartedEventArgs, &type_spec_RadialControllerScreenContactStartedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerScreenContactStartedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RightTappedEventArgs, &type_spec_RightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RightTappedEventArgs, &type_spec_RightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RightTappedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemButtonEventController, &type_spec_SystemButtonEventController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemButtonEventController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemButtonEventController, &type_spec_SystemButtonEventController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemButtonEventController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemFunctionButtonEventArgs, &type_spec_SystemFunctionButtonEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemFunctionButtonEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemFunctionButtonEventArgs, &type_spec_SystemFunctionButtonEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemFunctionButtonEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemFunctionLockChangedEventArgs, &type_spec_SystemFunctionLockChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemFunctionLockChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemFunctionLockChangedEventArgs, &type_spec_SystemFunctionLockChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemFunctionLockChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemFunctionLockIndicatorChangedEventArgs, &type_spec_SystemFunctionLockIndicatorChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemFunctionLockIndicatorChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemFunctionLockIndicatorChangedEventArgs, &type_spec_SystemFunctionLockIndicatorChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemFunctionLockIndicatorChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TappedEventArgs, &type_spec_TappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TappedEventArgs, &type_spec_TappedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IPointerPointTransform, &type_spec_IPointerPointTransform, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPointerPointTransform, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IPointerPointTransform, &type_spec_IPointerPointTransform, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPointerPointTransform, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CrossSlideThresholds, &type_spec_CrossSlideThresholds, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CrossSlideThresholds, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CrossSlideThresholds, &type_spec_CrossSlideThresholds, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CrossSlideThresholds, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ManipulationDelta, &type_spec_ManipulationDelta, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationDelta, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ManipulationDelta, &type_spec_ManipulationDelta, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationDelta, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ManipulationVelocities, &type_spec_ManipulationVelocities, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationVelocities, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ManipulationVelocities, &type_spec_ManipulationVelocities, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ManipulationVelocities, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

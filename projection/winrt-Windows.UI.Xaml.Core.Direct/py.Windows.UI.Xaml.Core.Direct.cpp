@@ -1983,18 +1983,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_core_direct(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XamlDirect, &type_spec_XamlDirect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlDirect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XamlDirect, &type_spec_XamlDirect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlDirect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXamlDirectObject, &type_spec_IXamlDirectObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlDirectObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXamlDirectObject, &type_spec_IXamlDirectObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlDirectObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

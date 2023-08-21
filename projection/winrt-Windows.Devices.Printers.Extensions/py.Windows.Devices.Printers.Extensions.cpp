@@ -1344,81 +1344,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers_extensions(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DWorkflow, &type_spec_Print3DWorkflow, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflow, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DWorkflow, &type_spec_Print3DWorkflow, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflow, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrintRequestedEventArgs, &type_spec_Print3DWorkflowPrintRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrintRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrintRequestedEventArgs, &type_spec_Print3DWorkflowPrintRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrintRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrinterChangedEventArgs, &type_spec_Print3DWorkflowPrinterChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrinterChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DWorkflowPrinterChangedEventArgs, &type_spec_Print3DWorkflowPrinterChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowPrinterChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintExtensionContext, &type_spec_PrintExtensionContext, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintExtensionContext, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintExtensionContext, &type_spec_PrintExtensionContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintExtensionContext, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintNotificationEventDetails, &type_spec_PrintNotificationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintNotificationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintNotificationEventDetails, &type_spec_PrintNotificationEventDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintNotificationEventDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfiguration, &type_spec_PrintTaskConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfiguration, &type_spec_PrintTaskConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequest, &type_spec_PrintTaskConfigurationSaveRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequest, &type_spec_PrintTaskConfigurationSaveRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedDeferral, &type_spec_PrintTaskConfigurationSaveRequestedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedDeferral, &type_spec_PrintTaskConfigurationSaveRequestedDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedEventArgs, &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintTaskConfigurationSaveRequestedEventArgs, &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintTaskConfigurationSaveRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

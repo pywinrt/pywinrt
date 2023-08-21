@@ -580,9 +580,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_provider(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhoneCallOrigin, &type_spec_PhoneCallOrigin, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallOrigin, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhoneCallOrigin, &type_spec_PhoneCallOrigin, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallOrigin, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -595,9 +595,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls_provider(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhoneCallOriginManager, &type_spec_PhoneCallOriginManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallOriginManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhoneCallOriginManager, &type_spec_PhoneCallOriginManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhoneCallOriginManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneCallOriginManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;

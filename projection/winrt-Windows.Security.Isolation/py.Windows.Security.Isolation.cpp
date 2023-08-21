@@ -4024,27 +4024,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironment, &type_spec_IsolatedWindowsEnvironment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironment, &type_spec_IsolatedWindowsEnvironment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateResult, &type_spec_IsolatedWindowsEnvironmentCreateResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentCreateResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateResult, &type_spec_IsolatedWindowsEnvironmentCreateResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentCreateResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentFile, &type_spec_IsolatedWindowsEnvironmentFile, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentFile, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentFile, &type_spec_IsolatedWindowsEnvironmentFile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentFile, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -4057,153 +4057,153 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_isolation(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentHost, &type_spec_IsolatedWindowsEnvironmentHost, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentHost, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentHost, &type_spec_IsolatedWindowsEnvironmentHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_IsolatedWindowsEnvironmentHost_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentLaunchFileResult, &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentLaunchFileResult, &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentLaunchFileResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOptions, &type_spec_IsolatedWindowsEnvironmentOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOptions, &type_spec_IsolatedWindowsEnvironmentOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistration, &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistration, &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationData, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationData, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentOwnerRegistrationResult, &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentOwnerRegistrationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentPostMessageResult, &type_spec_IsolatedWindowsEnvironmentPostMessageResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentPostMessageResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentPostMessageResult, &type_spec_IsolatedWindowsEnvironmentPostMessageResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentPostMessageResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentProcess, &type_spec_IsolatedWindowsEnvironmentProcess, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentProcess, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentProcess, &type_spec_IsolatedWindowsEnvironmentProcess, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentProcess, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileRequestOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileResult, &type_spec_IsolatedWindowsEnvironmentShareFileResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFileResult, &type_spec_IsolatedWindowsEnvironmentShareFileResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFileResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderRequestOptions, &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderRequestOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderResult, &type_spec_IsolatedWindowsEnvironmentShareFolderResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentShareFolderResult, &type_spec_IsolatedWindowsEnvironmentShareFolderResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentShareFolderResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentStartProcessResult, &type_spec_IsolatedWindowsEnvironmentStartProcessResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentStartProcessResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentStartProcessResult, &type_spec_IsolatedWindowsEnvironmentStartProcessResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentStartProcessResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentTelemetryParameters, &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentTelemetryParameters, &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentTelemetryParameters, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentUserInfo, &type_spec_IsolatedWindowsEnvironmentUserInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentUserInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentUserInfo, &type_spec_IsolatedWindowsEnvironmentUserInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentUserInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsHostMessenger, &type_spec_IsolatedWindowsHostMessenger, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsHostMessenger, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsHostMessenger, &type_spec_IsolatedWindowsHostMessenger, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsHostMessenger, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateProgress, &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IsolatedWindowsEnvironmentCreateProgress, &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IsolatedWindowsEnvironmentCreateProgress, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

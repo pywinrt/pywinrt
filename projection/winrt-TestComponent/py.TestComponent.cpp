@@ -4434,45 +4434,45 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TestRunner, &type_spec_TestRunner, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TestRunner, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TestRunner, &type_spec_TestRunner, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TestRunner, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ITests, &type_spec_ITests, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ITests, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ITests, &type_spec_ITests, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ITests, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Blittable, &type_spec_Blittable, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Blittable, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Blittable, &type_spec_Blittable, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Blittable, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Nested, &type_spec_Nested, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Nested, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Nested, &type_spec_Nested, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Nested, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NonBlittable, &type_spec_NonBlittable, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NonBlittable, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NonBlittable, &type_spec_NonBlittable, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NonBlittable, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

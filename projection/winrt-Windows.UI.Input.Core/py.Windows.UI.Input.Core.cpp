@@ -220,9 +220,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadialControllerIndependentInputSource, &type_spec_RadialControllerIndependentInputSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerIndependentInputSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadialControllerIndependentInputSource, &type_spec_RadialControllerIndependentInputSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadialControllerIndependentInputSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

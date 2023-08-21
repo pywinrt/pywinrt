@@ -404,18 +404,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_preview(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpatialGraphInteropFrameOfReferencePreview, &type_spec_SpatialGraphInteropFrameOfReferencePreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropFrameOfReferencePreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpatialGraphInteropFrameOfReferencePreview, &type_spec_SpatialGraphInteropFrameOfReferencePreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropFrameOfReferencePreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpatialGraphInteropPreview, &type_spec_SpatialGraphInteropPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpatialGraphInteropPreview, &type_spec_SpatialGraphInteropPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpatialGraphInteropPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

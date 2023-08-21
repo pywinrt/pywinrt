@@ -8887,252 +8887,252 @@ PyMODINIT_FUNC PyInit__winrt_windows_ai_machinelearning(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ImageFeatureDescriptor, &type_spec_ImageFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ImageFeatureDescriptor, &type_spec_ImageFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageFeatureDescriptor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ImageFeatureValue, &type_spec_ImageFeatureValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageFeatureValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ImageFeatureValue, &type_spec_ImageFeatureValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageFeatureValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LearningModel, &type_spec_LearningModel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LearningModel, &type_spec_LearningModel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LearningModelBinding, &type_spec_LearningModelBinding, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelBinding, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LearningModelBinding, &type_spec_LearningModelBinding, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelBinding, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LearningModelDevice, &type_spec_LearningModelDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LearningModelDevice, &type_spec_LearningModelDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LearningModelEvaluationResult, &type_spec_LearningModelEvaluationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LearningModelEvaluationResult, &type_spec_LearningModelEvaluationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelEvaluationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LearningModelSession, &type_spec_LearningModelSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LearningModelSession, &type_spec_LearningModelSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LearningModelSessionOptions, &type_spec_LearningModelSessionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelSessionOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LearningModelSessionOptions, &type_spec_LearningModelSessionOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LearningModelSessionOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapFeatureDescriptor, &type_spec_MapFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapFeatureDescriptor, &type_spec_MapFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapFeatureDescriptor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SequenceFeatureDescriptor, &type_spec_SequenceFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SequenceFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SequenceFeatureDescriptor, &type_spec_SequenceFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SequenceFeatureDescriptor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorBoolean, &type_spec_TensorBoolean, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorBoolean, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorBoolean, &type_spec_TensorBoolean, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorBoolean, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorDouble, &type_spec_TensorDouble, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorDouble, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorDouble, &type_spec_TensorDouble, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorDouble, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorFeatureDescriptor, &type_spec_TensorFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorFeatureDescriptor, &type_spec_TensorFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorFeatureDescriptor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorFloat, &type_spec_TensorFloat, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorFloat, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorFloat, &type_spec_TensorFloat, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorFloat, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorFloat16Bit, &type_spec_TensorFloat16Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorFloat16Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorFloat16Bit, &type_spec_TensorFloat16Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorFloat16Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorInt16Bit, &type_spec_TensorInt16Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt16Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorInt16Bit, &type_spec_TensorInt16Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt16Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorInt32Bit, &type_spec_TensorInt32Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt32Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorInt32Bit, &type_spec_TensorInt32Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt32Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorInt64Bit, &type_spec_TensorInt64Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt64Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorInt64Bit, &type_spec_TensorInt64Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt64Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorInt8Bit, &type_spec_TensorInt8Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt8Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorInt8Bit, &type_spec_TensorInt8Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorInt8Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorString, &type_spec_TensorString, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorString, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorString, &type_spec_TensorString, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorString, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorUInt16Bit, &type_spec_TensorUInt16Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt16Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorUInt16Bit, &type_spec_TensorUInt16Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt16Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorUInt32Bit, &type_spec_TensorUInt32Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt32Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorUInt32Bit, &type_spec_TensorUInt32Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt32Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorUInt64Bit, &type_spec_TensorUInt64Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt64Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorUInt64Bit, &type_spec_TensorUInt64Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt64Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TensorUInt8Bit, &type_spec_TensorUInt8Bit, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt8Bit, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TensorUInt8Bit, &type_spec_TensorUInt8Bit, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TensorUInt8Bit, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureDescriptor, &type_spec_ILearningModelFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILearningModelFeatureDescriptor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureDescriptor, &type_spec_ILearningModelFeatureDescriptor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILearningModelFeatureDescriptor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureValue, &type_spec_ILearningModelFeatureValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILearningModelFeatureValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ILearningModelFeatureValue, &type_spec_ILearningModelFeatureValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILearningModelFeatureValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ILearningModelOperatorProvider, &type_spec_ILearningModelOperatorProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILearningModelOperatorProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ILearningModelOperatorProvider, &type_spec_ILearningModelOperatorProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILearningModelOperatorProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ITensor, &type_spec_ITensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ITensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ITensor, &type_spec_ITensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ITensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

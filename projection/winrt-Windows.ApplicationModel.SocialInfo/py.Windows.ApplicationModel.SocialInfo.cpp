@@ -2007,54 +2007,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialFeedChildItem, &type_spec_SocialFeedChildItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedChildItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialFeedChildItem, &type_spec_SocialFeedChildItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedChildItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialFeedContent, &type_spec_SocialFeedContent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedContent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialFeedContent, &type_spec_SocialFeedContent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedContent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialFeedItem, &type_spec_SocialFeedItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialFeedItem, &type_spec_SocialFeedItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialFeedSharedItem, &type_spec_SocialFeedSharedItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedSharedItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialFeedSharedItem, &type_spec_SocialFeedSharedItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedSharedItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialItemThumbnail, &type_spec_SocialItemThumbnail, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialItemThumbnail, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialItemThumbnail, &type_spec_SocialItemThumbnail, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialItemThumbnail, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialUserInfo, &type_spec_SocialUserInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialUserInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialUserInfo, &type_spec_SocialUserInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialUserInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

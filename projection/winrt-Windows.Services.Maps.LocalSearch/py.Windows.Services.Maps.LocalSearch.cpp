@@ -1068,63 +1068,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_localsearch(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalCategories, &type_spec_LocalCategories, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalCategories, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalCategories, &type_spec_LocalCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalCategories, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalCategories_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalLocation, &type_spec_LocalLocation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalLocation, &type_spec_LocalLocation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalLocationFinder, &type_spec_LocalLocationFinder, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationFinder, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalLocationFinder, &type_spec_LocalLocationFinder, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationFinder, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalLocationFinderResult, &type_spec_LocalLocationFinderResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationFinderResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalLocationFinderResult, &type_spec_LocalLocationFinderResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationFinderResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalLocationHoursOfOperationItem, &type_spec_LocalLocationHoursOfOperationItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationHoursOfOperationItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalLocationHoursOfOperationItem, &type_spec_LocalLocationHoursOfOperationItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationHoursOfOperationItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalLocationRatingInfo, &type_spec_LocalLocationRatingInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationRatingInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalLocationRatingInfo, &type_spec_LocalLocationRatingInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalLocationRatingInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PlaceInfoHelper, &type_spec_PlaceInfoHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaceInfoHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PlaceInfoHelper, &type_spec_PlaceInfoHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaceInfoHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

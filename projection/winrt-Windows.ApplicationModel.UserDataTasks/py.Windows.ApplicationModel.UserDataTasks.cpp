@@ -3384,99 +3384,99 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdatatasks(void) noexce
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTask, &type_spec_UserDataTask, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTask, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTask, &type_spec_UserDataTask, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTask, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskBatch, &type_spec_UserDataTaskBatch, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskBatch, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskBatch, &type_spec_UserDataTaskBatch, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskBatch, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskList, &type_spec_UserDataTaskList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskList, &type_spec_UserDataTaskList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskListLimitedWriteOperations, &type_spec_UserDataTaskListLimitedWriteOperations, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskListLimitedWriteOperations, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskListLimitedWriteOperations, &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManager, &type_spec_UserDataTaskListSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskListSyncManager, &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskListSyncManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskManager, &type_spec_UserDataTaskManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskManager, &type_spec_UserDataTaskManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskQueryOptions, &type_spec_UserDataTaskQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskQueryOptions, &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskQueryOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskReader, &type_spec_UserDataTaskReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskReader, &type_spec_UserDataTaskReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskRecurrenceProperties, &type_spec_UserDataTaskRecurrenceProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskRecurrenceProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskRecurrenceProperties, &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskRecurrenceProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskRegenerationProperties, &type_spec_UserDataTaskRegenerationProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskRegenerationProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskRegenerationProperties, &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskRegenerationProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataTaskStore, &type_spec_UserDataTaskStore, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskStore, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataTaskStore, &type_spec_UserDataTaskStore, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataTaskStore, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

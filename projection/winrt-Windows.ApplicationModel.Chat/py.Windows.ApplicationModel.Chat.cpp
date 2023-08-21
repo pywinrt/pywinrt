@@ -8668,333 +8668,333 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_chat(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatCapabilities, &type_spec_ChatCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatCapabilities, &type_spec_ChatCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatCapabilitiesManager, &type_spec_ChatCapabilitiesManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatCapabilitiesManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatCapabilitiesManager, &type_spec_ChatCapabilitiesManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatCapabilitiesManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatConversation, &type_spec_ChatConversation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatConversation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatConversation, &type_spec_ChatConversation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatConversation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatConversationReader, &type_spec_ChatConversationReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatConversationReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatConversationReader, &type_spec_ChatConversationReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatConversationReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatConversationThreadingInfo, &type_spec_ChatConversationThreadingInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatConversationThreadingInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatConversationThreadingInfo, &type_spec_ChatConversationThreadingInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatConversationThreadingInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessage, &type_spec_ChatMessage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessage, &type_spec_ChatMessage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageAttachment, &type_spec_ChatMessageAttachment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageAttachment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageAttachment, &type_spec_ChatMessageAttachment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageAttachment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageBlocking, &type_spec_ChatMessageBlocking, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageBlocking, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageBlocking, &type_spec_ChatMessageBlocking, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageBlocking, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageChange, &type_spec_ChatMessageChange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageChange, &type_spec_ChatMessageChange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangeReader, &type_spec_ChatMessageChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangeReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangeReader, &type_spec_ChatMessageChangeReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangeReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangeTracker, &type_spec_ChatMessageChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangeTracker, &type_spec_ChatMessageChangeTracker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangeTracker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangedDeferral, &type_spec_ChatMessageChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangedDeferral, &type_spec_ChatMessageChangedDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangedDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangedEventArgs, &type_spec_ChatMessageChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageChangedEventArgs, &type_spec_ChatMessageChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageManager, &type_spec_ChatMessageManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageManager, &type_spec_ChatMessageManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageNotificationTriggerDetails, &type_spec_ChatMessageNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageNotificationTriggerDetails, &type_spec_ChatMessageNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageReader, &type_spec_ChatMessageReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageReader, &type_spec_ChatMessageReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageStore, &type_spec_ChatMessageStore, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageStore, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageStore, &type_spec_ChatMessageStore, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageStore, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageStoreChangedEventArgs, &type_spec_ChatMessageStoreChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageStoreChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageStoreChangedEventArgs, &type_spec_ChatMessageStoreChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageStoreChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageTransport, &type_spec_ChatMessageTransport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageTransport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageTransport, &type_spec_ChatMessageTransport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageTransport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageTransportConfiguration, &type_spec_ChatMessageTransportConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageTransportConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageTransportConfiguration, &type_spec_ChatMessageTransportConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageTransportConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatMessageValidationResult, &type_spec_ChatMessageValidationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageValidationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatMessageValidationResult, &type_spec_ChatMessageValidationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatMessageValidationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatQueryOptions, &type_spec_ChatQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatQueryOptions, &type_spec_ChatQueryOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatQueryOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatRecipientDeliveryInfo, &type_spec_ChatRecipientDeliveryInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatRecipientDeliveryInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatRecipientDeliveryInfo, &type_spec_ChatRecipientDeliveryInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatRecipientDeliveryInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatSearchReader, &type_spec_ChatSearchReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatSearchReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatSearchReader, &type_spec_ChatSearchReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatSearchReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatSyncConfiguration, &type_spec_ChatSyncConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatSyncConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatSyncConfiguration, &type_spec_ChatSyncConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatSyncConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ChatSyncManager, &type_spec_ChatSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatSyncManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ChatSyncManager, &type_spec_ChatSyncManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ChatSyncManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessage, &type_spec_RcsEndUserMessage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessage, &type_spec_RcsEndUserMessage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAction, &type_spec_RcsEndUserMessageAction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAction, &type_spec_RcsEndUserMessageAction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableEventArgs, &type_spec_RcsEndUserMessageAvailableEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableEventArgs, &type_spec_RcsEndUserMessageAvailableEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTriggerDetails, &type_spec_RcsEndUserMessageAvailableTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageAvailableTriggerDetails, &type_spec_RcsEndUserMessageAvailableTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageAvailableTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageManager, &type_spec_RcsEndUserMessageManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsEndUserMessageManager, &type_spec_RcsEndUserMessageManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsEndUserMessageManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsManager, &type_spec_RcsManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsManager, &type_spec_RcsManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsServiceKindSupportedChangedEventArgs, &type_spec_RcsServiceKindSupportedChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsServiceKindSupportedChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsServiceKindSupportedChangedEventArgs, &type_spec_RcsServiceKindSupportedChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsServiceKindSupportedChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsTransport, &type_spec_RcsTransport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsTransport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsTransport, &type_spec_RcsTransport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsTransport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RcsTransportConfiguration, &type_spec_RcsTransportConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsTransportConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RcsTransportConfiguration, &type_spec_RcsTransportConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RcsTransportConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RemoteParticipantComposingChangedEventArgs, &type_spec_RemoteParticipantComposingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RemoteParticipantComposingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RemoteParticipantComposingChangedEventArgs, &type_spec_RemoteParticipantComposingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RemoteParticipantComposingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IChatItem, &type_spec_IChatItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IChatItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IChatItem, &type_spec_IChatItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IChatItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

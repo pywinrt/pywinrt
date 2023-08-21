@@ -1938,72 +1938,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Matrix3x2, &type_spec_Matrix3x2, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Matrix3x2, &type_spec_Matrix3x2, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Matrix4x4, &type_spec_Matrix4x4, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Matrix4x4, &type_spec_Matrix4x4, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Plane, &type_spec_Plane, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Plane, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Plane, &type_spec_Plane, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Plane, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Quaternion, &type_spec_Quaternion, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Quaternion, &type_spec_Quaternion, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Rational, &type_spec_Rational, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rational, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Rational, &type_spec_Rational, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rational, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector2, &type_spec_Vector2, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector2, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector2, &type_spec_Vector2, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector2, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector3, &type_spec_Vector3, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector3, &type_spec_Vector3, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector4, &type_spec_Vector4, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector4, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector4, &type_spec_Vector4, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector4, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -2797,135 +2797,135 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_search(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalContentSuggestionSettings, &type_spec_LocalContentSuggestionSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalContentSuggestionSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalContentSuggestionSettings, &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalContentSuggestionSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPane, &type_spec_SearchPane, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPane, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPane, &type_spec_SearchPane, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPane, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneQueryChangedEventArgs, &type_spec_SearchPaneQueryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneQueryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneQueryChangedEventArgs, &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneQueryLinguisticDetails, &type_spec_SearchPaneQueryLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneQueryLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneQueryLinguisticDetails, &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneQuerySubmittedEventArgs, &type_spec_SearchPaneQuerySubmittedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneQuerySubmittedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneQuerySubmittedEventArgs, &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneQuerySubmittedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneResultSuggestionChosenEventArgs, &type_spec_SearchPaneResultSuggestionChosenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneResultSuggestionChosenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneResultSuggestionChosenEventArgs, &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneResultSuggestionChosenEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequest, &type_spec_SearchPaneSuggestionsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequest, &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestDeferral, &type_spec_SearchPaneSuggestionsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestDeferral, &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestedEventArgs, &type_spec_SearchPaneSuggestionsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneSuggestionsRequestedEventArgs, &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneSuggestionsRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchPaneVisibilityChangedEventArgs, &type_spec_SearchPaneVisibilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneVisibilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchPaneVisibilityChangedEventArgs, &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchPaneVisibilityChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchQueryLinguisticDetails, &type_spec_SearchQueryLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchQueryLinguisticDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchQueryLinguisticDetails, &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchQueryLinguisticDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchSuggestionCollection, &type_spec_SearchSuggestionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchSuggestionCollection, &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequest, &type_spec_SearchSuggestionsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequest, &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequestDeferral, &type_spec_SearchSuggestionsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchSuggestionsRequestDeferral, &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchSuggestionsRequestDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ISearchPaneQueryChangedEventArgs, &type_spec_ISearchPaneQueryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISearchPaneQueryChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ISearchPaneQueryChangedEventArgs, &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISearchPaneQueryChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

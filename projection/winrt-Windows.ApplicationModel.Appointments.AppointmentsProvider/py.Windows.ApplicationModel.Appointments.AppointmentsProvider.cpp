@@ -994,9 +994,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_appointmentsp
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AddAppointmentOperation, &type_spec_AddAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AddAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AddAppointmentOperation, &type_spec_AddAppointmentOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AddAppointmentOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -1009,27 +1009,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appointments_appointmentsp
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppointmentsProviderLaunchActionVerbs, &type_spec_AppointmentsProviderLaunchActionVerbs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderLaunchActionVerbs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppointmentsProviderLaunchActionVerbs, &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppointmentsProviderLaunchActionVerbs_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RemoveAppointmentOperation, &type_spec_RemoveAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RemoveAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RemoveAppointmentOperation, &type_spec_RemoveAppointmentOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RemoveAppointmentOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ReplaceAppointmentOperation, &type_spec_ReplaceAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ReplaceAppointmentOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ReplaceAppointmentOperation, &type_spec_ReplaceAppointmentOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ReplaceAppointmentOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

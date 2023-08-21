@@ -4418,198 +4418,198 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice_provider(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequest, &type_spec_BarcodeScannerDisableScannerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequest, &type_spec_BarcodeScannerDisableScannerRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequestEventArgs, &type_spec_BarcodeScannerDisableScannerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerDisableScannerRequestEventArgs, &type_spec_BarcodeScannerDisableScannerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerDisableScannerRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequest, &type_spec_BarcodeScannerEnableScannerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequest, &type_spec_BarcodeScannerEnableScannerRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequestEventArgs, &type_spec_BarcodeScannerEnableScannerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerEnableScannerRequestEventArgs, &type_spec_BarcodeScannerEnableScannerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerEnableScannerRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReader, &type_spec_BarcodeScannerFrameReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReader, &type_spec_BarcodeScannerFrameReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReaderFrameArrivedEventArgs, &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerFrameReaderFrameArrivedEventArgs, &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerFrameReaderFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequest, &type_spec_BarcodeScannerGetSymbologyAttributesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequest, &type_spec_BarcodeScannerGetSymbologyAttributesRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerGetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerGetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequest, &type_spec_BarcodeScannerHideVideoPreviewRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequest, &type_spec_BarcodeScannerHideVideoPreviewRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequestEventArgs, &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerHideVideoPreviewRequestEventArgs, &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerHideVideoPreviewRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderConnection, &type_spec_BarcodeScannerProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderConnection, &type_spec_BarcodeScannerProviderConnection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderConnection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderTriggerDetails, &type_spec_BarcodeScannerProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerProviderTriggerDetails, &type_spec_BarcodeScannerProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerProviderTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequest, &type_spec_BarcodeScannerSetActiveSymbologiesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequest, &type_spec_BarcodeScannerSetActiveSymbologiesRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequestEventArgs, &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetActiveSymbologiesRequestEventArgs, &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetActiveSymbologiesRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequest, &type_spec_BarcodeScannerSetSymbologyAttributesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequest, &type_spec_BarcodeScannerSetSymbologyAttributesRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerSetSymbologyAttributesRequestEventArgs, &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerSetSymbologyAttributesRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequest, &type_spec_BarcodeScannerStartSoftwareTriggerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequest, &type_spec_BarcodeScannerStartSoftwareTriggerRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStartSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStartSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequest, &type_spec_BarcodeScannerStopSoftwareTriggerRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequest, &type_spec_BarcodeScannerStopSoftwareTriggerRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStopSoftwareTriggerRequestEventArgs, &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStopSoftwareTriggerRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerVideoFrame, &type_spec_BarcodeScannerVideoFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerVideoFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerVideoFrame, &type_spec_BarcodeScannerVideoFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerVideoFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributesBuilder, &type_spec_BarcodeSymbologyAttributesBuilder, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributesBuilder, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributesBuilder, &type_spec_BarcodeSymbologyAttributesBuilder, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributesBuilder, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

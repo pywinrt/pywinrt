@@ -329,9 +329,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power_diagnostics(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundEnergyDiagnostics, &type_spec_BackgroundEnergyDiagnostics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyDiagnostics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundEnergyDiagnostics, &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyDiagnostics_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -344,9 +344,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power_diagnostics(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ForegroundEnergyDiagnostics, &type_spec_ForegroundEnergyDiagnostics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyDiagnostics, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ForegroundEnergyDiagnostics, &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyDiagnostics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyDiagnostics_Meta.get())) == -1)
     #endif
     {
         return nullptr;

@@ -2557,117 +2557,117 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_custom(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GameControllerFactoryManager, &type_spec_GameControllerFactoryManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GameControllerFactoryManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GameControllerFactoryManager, &type_spec_GameControllerFactoryManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GameControllerFactoryManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateResult, &type_spec_GipFirmwareUpdateResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateResult, &type_spec_GipFirmwareUpdateResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GipGameControllerProvider, &type_spec_GipGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GipGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GipGameControllerProvider, &type_spec_GipGameControllerProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GipGameControllerProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HidGameControllerProvider, &type_spec_HidGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HidGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HidGameControllerProvider, &type_spec_HidGameControllerProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HidGameControllerProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XusbGameControllerProvider, &type_spec_XusbGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XusbGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XusbGameControllerProvider, &type_spec_XusbGameControllerProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XusbGameControllerProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICustomGameControllerFactory, &type_spec_ICustomGameControllerFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICustomGameControllerFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICustomGameControllerFactory, &type_spec_ICustomGameControllerFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICustomGameControllerFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGameControllerInputSink, &type_spec_IGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGameControllerInputSink, &type_spec_IGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameControllerInputSink, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGameControllerProvider, &type_spec_IGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameControllerProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGameControllerProvider, &type_spec_IGameControllerProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameControllerProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGipGameControllerInputSink, &type_spec_IGipGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGipGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGipGameControllerInputSink, &type_spec_IGipGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGipGameControllerInputSink, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IHidGameControllerInputSink, &type_spec_IHidGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IHidGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IHidGameControllerInputSink, &type_spec_IHidGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IHidGameControllerInputSink, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXusbGameControllerInputSink, &type_spec_IXusbGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXusbGameControllerInputSink, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXusbGameControllerInputSink, &type_spec_IXusbGameControllerInputSink, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXusbGameControllerInputSink, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GameControllerVersionInfo, &type_spec_GameControllerVersionInfo, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GameControllerVersionInfo, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GameControllerVersionInfo, &type_spec_GameControllerVersionInfo, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GameControllerVersionInfo, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateProgress, &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GipFirmwareUpdateProgress, &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GipFirmwareUpdateProgress, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

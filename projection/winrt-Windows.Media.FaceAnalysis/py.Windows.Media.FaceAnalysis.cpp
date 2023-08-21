@@ -839,9 +839,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DetectedFace, &type_spec_DetectedFace, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DetectedFace, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DetectedFace, &type_spec_DetectedFace, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DetectedFace, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -854,9 +854,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FaceDetector, &type_spec_FaceDetector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FaceDetector, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FaceDetector, &type_spec_FaceDetector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FaceDetector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -869,9 +869,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FaceTracker, &type_spec_FaceTracker, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FaceTracker, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FaceTracker, &type_spec_FaceTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FaceTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Meta.get())) == -1)
     #endif
     {
         return nullptr;

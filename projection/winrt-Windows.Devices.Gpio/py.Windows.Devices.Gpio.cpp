@@ -2004,63 +2004,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioChangeCounter, &type_spec_GpioChangeCounter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeCounter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioChangeCounter, &type_spec_GpioChangeCounter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeCounter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioChangeReader, &type_spec_GpioChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioChangeReader, &type_spec_GpioChangeReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioController, &type_spec_GpioController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioController, &type_spec_GpioController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioPin, &type_spec_GpioPin, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioPin, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioPin, &type_spec_GpioPin, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioPin, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioPinValueChangedEventArgs, &type_spec_GpioPinValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioPinValueChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioPinValueChangedEventArgs, &type_spec_GpioPinValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioPinValueChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioChangeCount, &type_spec_GpioChangeCount, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeCount, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioChangeCount, &type_spec_GpioChangeCount, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeCount, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GpioChangeRecord, &type_spec_GpioChangeRecord, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeRecord, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GpioChangeRecord, &type_spec_GpioChangeRecord, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GpioChangeRecord, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

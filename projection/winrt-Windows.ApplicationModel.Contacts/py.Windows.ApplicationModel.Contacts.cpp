@@ -15428,207 +15428,207 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AggregateContactManager, &type_spec_AggregateContactManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AggregateContactManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AggregateContactManager, &type_spec_AggregateContactManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AggregateContactManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Contact, &type_spec_Contact, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Contact, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Contact, &type_spec_Contact, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Contact, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAddress, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactAddress, &type_spec_ContactAddress, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactAnnotation, &type_spec_ContactAnnotation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAnnotation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactAnnotation, &type_spec_ContactAnnotation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAnnotation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactAnnotationList, &type_spec_ContactAnnotationList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAnnotationList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactAnnotationList, &type_spec_ContactAnnotationList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAnnotationList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactAnnotationStore, &type_spec_ContactAnnotationStore, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAnnotationStore, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactAnnotationStore, &type_spec_ContactAnnotationStore, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactAnnotationStore, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactBatch, &type_spec_ContactBatch, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactBatch, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactBatch, &type_spec_ContactBatch, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactBatch, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactCardDelayedDataLoader, &type_spec_ContactCardDelayedDataLoader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactCardDelayedDataLoader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactCardDelayedDataLoader, &type_spec_ContactCardDelayedDataLoader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactCardDelayedDataLoader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactCardOptions, &type_spec_ContactCardOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactCardOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactCardOptions, &type_spec_ContactCardOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactCardOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactChange, &type_spec_ContactChange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactChange, &type_spec_ContactChange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactChangeReader, &type_spec_ContactChangeReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangeReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactChangeReader, &type_spec_ContactChangeReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangeReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactChangeTracker, &type_spec_ContactChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangeTracker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactChangeTracker, &type_spec_ContactChangeTracker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangeTracker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactChangedDeferral, &type_spec_ContactChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangedDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactChangedDeferral, &type_spec_ContactChangedDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangedDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactChangedEventArgs, &type_spec_ContactChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactChangedEventArgs, &type_spec_ContactChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactConnectedServiceAccount, &type_spec_ContactConnectedServiceAccount, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactConnectedServiceAccount, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactConnectedServiceAccount, &type_spec_ContactConnectedServiceAccount, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactConnectedServiceAccount, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactDate, &type_spec_ContactDate, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactDate, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactDate, &type_spec_ContactDate, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactDate, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactEmail, &type_spec_ContactEmail, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactEmail, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactEmail, &type_spec_ContactEmail, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactEmail, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactField, &type_spec_ContactField, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactField, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactField, &type_spec_ContactField, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactField, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactFieldFactory, &type_spec_ContactFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactFieldFactory, &type_spec_ContactFieldFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactFieldFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactGroup, &type_spec_ContactGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactGroup, &type_spec_ContactGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactInformation, &type_spec_ContactInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactInstantMessageField, &type_spec_ContactInstantMessageField, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactInstantMessageField, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactInstantMessageField, &type_spec_ContactInstantMessageField, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactInstantMessageField, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactJobInfo, &type_spec_ContactJobInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactJobInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactJobInfo, &type_spec_ContactJobInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactJobInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -15641,54 +15641,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactLaunchActionVerbs, &type_spec_ContactLaunchActionVerbs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactLaunchActionVerbs, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactLaunchActionVerbs, &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactLaunchActionVerbs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactLaunchActionVerbs_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactList, &type_spec_ContactList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactList, &type_spec_ContactList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactListLimitedWriteOperations, &type_spec_ContactListLimitedWriteOperations, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactListLimitedWriteOperations, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactListLimitedWriteOperations, &type_spec_ContactListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactListLimitedWriteOperations, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactListSyncConstraints, &type_spec_ContactListSyncConstraints, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactListSyncConstraints, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactListSyncConstraints, &type_spec_ContactListSyncConstraints, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactListSyncConstraints, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactListSyncManager, &type_spec_ContactListSyncManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactListSyncManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactListSyncManager, &type_spec_ContactListSyncManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactListSyncManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactLocationField, &type_spec_ContactLocationField, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactLocationField, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactLocationField, &type_spec_ContactLocationField, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactLocationField, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -15701,144 +15701,144 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactManager, &type_spec_ContactManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactManager, &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactManagerForUser, &type_spec_ContactManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactManagerForUser, &type_spec_ContactManagerForUser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactManagerForUser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactMatchReason, &type_spec_ContactMatchReason, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactMatchReason, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactMatchReason, &type_spec_ContactMatchReason, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactMatchReason, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactPanel, &type_spec_ContactPanel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPanel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactPanel, &type_spec_ContactPanel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPanel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactPanelClosingEventArgs, &type_spec_ContactPanelClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPanelClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactPanelClosingEventArgs, &type_spec_ContactPanelClosingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPanelClosingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactPanelLaunchFullAppRequestedEventArgs, &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactPanelLaunchFullAppRequestedEventArgs, &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPanelLaunchFullAppRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactPhone, &type_spec_ContactPhone, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPhone, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactPhone, &type_spec_ContactPhone, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPhone, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactPicker, &type_spec_ContactPicker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPicker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactPicker, &type_spec_ContactPicker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactPicker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactQueryOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactQueryOptions, &type_spec_ContactQueryOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactQueryTextSearch, &type_spec_ContactQueryTextSearch, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactQueryTextSearch, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactQueryTextSearch, &type_spec_ContactQueryTextSearch, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactQueryTextSearch, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactReader, &type_spec_ContactReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactReader, &type_spec_ContactReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactSignificantOther, &type_spec_ContactSignificantOther, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactSignificantOther, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactSignificantOther, &type_spec_ContactSignificantOther, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactSignificantOther, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactStore, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactStore, &type_spec_ContactStore, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactStoreNotificationTriggerDetails, &type_spec_ContactStoreNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactStoreNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactStoreNotificationTriggerDetails, &type_spec_ContactStoreNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactStoreNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContactWebsite, &type_spec_ContactWebsite, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactWebsite, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContactWebsite, &type_spec_ContactWebsite, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContactWebsite, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FullContactCardOptions, &type_spec_FullContactCardOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FullContactCardOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FullContactCardOptions, &type_spec_FullContactCardOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FullContactCardOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -15851,63 +15851,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_contacts(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownContactField, &type_spec_KnownContactField, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownContactField, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownContactField, &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownContactField, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactField_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PinnedContactIdsQueryResult, &type_spec_PinnedContactIdsQueryResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PinnedContactIdsQueryResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PinnedContactIdsQueryResult, &type_spec_PinnedContactIdsQueryResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PinnedContactIdsQueryResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PinnedContactManager, &type_spec_PinnedContactManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PinnedContactManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PinnedContactManager, &type_spec_PinnedContactManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PinnedContactManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IContactField, &type_spec_IContactField, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactField, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IContactField, &type_spec_IContactField, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactField, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IContactFieldFactory, &type_spec_IContactFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IContactFieldFactory, &type_spec_IContactFieldFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactFieldFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IContactInstantMessageFieldFactory, &type_spec_IContactInstantMessageFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactInstantMessageFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IContactInstantMessageFieldFactory, &type_spec_IContactInstantMessageFieldFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactInstantMessageFieldFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IContactLocationFieldFactory, &type_spec_IContactLocationFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactLocationFieldFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IContactLocationFieldFactory, &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IContactLocationFieldFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

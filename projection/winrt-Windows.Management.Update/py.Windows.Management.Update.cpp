@@ -4055,144 +4055,144 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_update(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PreviewBuildsManager, &type_spec_PreviewBuildsManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PreviewBuildsManager, &type_spec_PreviewBuildsManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PreviewBuildsState, &type_spec_PreviewBuildsState, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsState, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PreviewBuildsState, &type_spec_PreviewBuildsState, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PreviewBuildsState, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdate, &type_spec_WindowsUpdate, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdate, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdate, &type_spec_WindowsUpdate, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdate, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionCompletedEventArgs, &type_spec_WindowsUpdateActionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionCompletedEventArgs, &type_spec_WindowsUpdateActionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionProgress, &type_spec_WindowsUpdateActionProgress, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionProgress, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionProgress, &type_spec_WindowsUpdateActionProgress, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionProgress, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionResult, &type_spec_WindowsUpdateActionResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateActionResult, &type_spec_WindowsUpdateActionResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateActionResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateAdministrator, &type_spec_WindowsUpdateAdministrator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAdministrator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateAdministrator, &type_spec_WindowsUpdateAdministrator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAdministrator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateApprovalData, &type_spec_WindowsUpdateApprovalData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateApprovalData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateApprovalData, &type_spec_WindowsUpdateApprovalData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateApprovalData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredInfo, &type_spec_WindowsUpdateAttentionRequiredInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredInfo, &type_spec_WindowsUpdateAttentionRequiredInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs, &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateAttentionRequiredReasonChangedEventArgs, &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateAttentionRequiredReasonChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateGetAdministratorResult, &type_spec_WindowsUpdateGetAdministratorResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateGetAdministratorResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateGetAdministratorResult, &type_spec_WindowsUpdateGetAdministratorResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateGetAdministratorResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateItem, &type_spec_WindowsUpdateItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateItem, &type_spec_WindowsUpdateItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateManager, &type_spec_WindowsUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateManager, &type_spec_WindowsUpdateManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateProgressChangedEventArgs, &type_spec_WindowsUpdateProgressChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateProgressChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateProgressChangedEventArgs, &type_spec_WindowsUpdateProgressChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateProgressChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateRestartRequestOptions, &type_spec_WindowsUpdateRestartRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateRestartRequestOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateRestartRequestOptions, &type_spec_WindowsUpdateRestartRequestOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateRestartRequestOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateScanCompletedEventArgs, &type_spec_WindowsUpdateScanCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateScanCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsUpdateScanCompletedEventArgs, &type_spec_WindowsUpdateScanCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsUpdateScanCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

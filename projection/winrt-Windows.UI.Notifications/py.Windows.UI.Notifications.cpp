@@ -8683,45 +8683,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveNotificationText, &type_spec_AdaptiveNotificationText, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveNotificationText, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveNotificationText, &type_spec_AdaptiveNotificationText, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveNotificationText, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BadgeNotification, &type_spec_BadgeNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BadgeNotification, &type_spec_BadgeNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BadgeUpdateManager, &type_spec_BadgeUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BadgeUpdateManager, &type_spec_BadgeUpdateManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeUpdateManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BadgeUpdateManagerForUser, &type_spec_BadgeUpdateManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeUpdateManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BadgeUpdateManagerForUser, &type_spec_BadgeUpdateManagerForUser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeUpdateManagerForUser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BadgeUpdater, &type_spec_BadgeUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BadgeUpdater, &type_spec_BadgeUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BadgeUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -8734,9 +8734,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationHints, &type_spec_KnownAdaptiveNotificationHints, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationHints, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationHints, &type_spec_KnownAdaptiveNotificationHints, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationHints, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationHints_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -8749,9 +8749,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationTextStyles, &type_spec_KnownAdaptiveNotificationTextStyles, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationTextStyles, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownAdaptiveNotificationTextStyles, &type_spec_KnownAdaptiveNotificationTextStyles, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownAdaptiveNotificationTextStyles, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownAdaptiveNotificationTextStyles_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -8764,225 +8764,225 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownNotificationBindings, &type_spec_KnownNotificationBindings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownNotificationBindings, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownNotificationBindings, &type_spec_KnownNotificationBindings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownNotificationBindings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownNotificationBindings_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Notification, &type_spec_Notification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Notification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Notification, &type_spec_Notification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Notification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NotificationBinding, &type_spec_NotificationBinding, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NotificationBinding, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NotificationBinding, &type_spec_NotificationBinding, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NotificationBinding, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NotificationData, &type_spec_NotificationData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NotificationData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NotificationData, &type_spec_NotificationData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NotificationData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NotificationVisual, &type_spec_NotificationVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NotificationVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NotificationVisual, &type_spec_NotificationVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NotificationVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScheduledTileNotification, &type_spec_ScheduledTileNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScheduledTileNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScheduledTileNotification, &type_spec_ScheduledTileNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScheduledTileNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScheduledToastNotification, &type_spec_ScheduledToastNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScheduledToastNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScheduledToastNotification, &type_spec_ScheduledToastNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScheduledToastNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScheduledToastNotificationShowingEventArgs, &type_spec_ScheduledToastNotificationShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScheduledToastNotificationShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScheduledToastNotificationShowingEventArgs, &type_spec_ScheduledToastNotificationShowingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScheduledToastNotificationShowingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ShownTileNotification, &type_spec_ShownTileNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShownTileNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ShownTileNotification, &type_spec_ShownTileNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShownTileNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileFlyoutNotification, &type_spec_TileFlyoutNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileFlyoutNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileFlyoutNotification, &type_spec_TileFlyoutNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileFlyoutNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdateManager, &type_spec_TileFlyoutUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileFlyoutUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdateManager, &type_spec_TileFlyoutUpdateManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileFlyoutUpdateManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdater, &type_spec_TileFlyoutUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileFlyoutUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileFlyoutUpdater, &type_spec_TileFlyoutUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileFlyoutUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileNotification, &type_spec_TileNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileNotification, &type_spec_TileNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileUpdateManager, &type_spec_TileUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileUpdateManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileUpdateManager, &type_spec_TileUpdateManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileUpdateManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileUpdateManagerForUser, &type_spec_TileUpdateManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileUpdateManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileUpdateManagerForUser, &type_spec_TileUpdateManagerForUser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileUpdateManagerForUser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TileUpdater, &type_spec_TileUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TileUpdater, &type_spec_TileUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TileUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastActivatedEventArgs, &type_spec_ToastActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastActivatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastActivatedEventArgs, &type_spec_ToastActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastActivatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastCollection, &type_spec_ToastCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastCollection, &type_spec_ToastCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastCollectionManager, &type_spec_ToastCollectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastCollectionManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastCollectionManager, &type_spec_ToastCollectionManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastCollectionManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastDismissedEventArgs, &type_spec_ToastDismissedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastDismissedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastDismissedEventArgs, &type_spec_ToastDismissedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastDismissedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastFailedEventArgs, &type_spec_ToastFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastFailedEventArgs, &type_spec_ToastFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotification, &type_spec_ToastNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotification, &type_spec_ToastNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotificationActionTriggerDetail, &type_spec_ToastNotificationActionTriggerDetail, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationActionTriggerDetail, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotificationActionTriggerDetail, &type_spec_ToastNotificationActionTriggerDetail, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationActionTriggerDetail, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotificationHistory, &type_spec_ToastNotificationHistory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationHistory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotificationHistory, &type_spec_ToastNotificationHistory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationHistory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTriggerDetail, &type_spec_ToastNotificationHistoryChangedTriggerDetail, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationHistoryChangedTriggerDetail, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotificationHistoryChangedTriggerDetail, &type_spec_ToastNotificationHistoryChangedTriggerDetail, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationHistoryChangedTriggerDetail, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -8995,54 +8995,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_notifications(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotificationManager, &type_spec_ToastNotificationManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotificationManager, &type_spec_ToastNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToastNotificationManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotificationManagerForUser, &type_spec_ToastNotificationManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotificationManagerForUser, &type_spec_ToastNotificationManagerForUser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotificationManagerForUser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToastNotifier, &type_spec_ToastNotifier, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotifier, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToastNotifier, &type_spec_ToastNotifier, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToastNotifier, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserNotification, &type_spec_UserNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserNotification, &type_spec_UserNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserNotificationChangedEventArgs, &type_spec_UserNotificationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserNotificationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserNotificationChangedEventArgs, &type_spec_UserNotificationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserNotificationChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAdaptiveNotificationContent, &type_spec_IAdaptiveNotificationContent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAdaptiveNotificationContent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAdaptiveNotificationContent, &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAdaptiveNotificationContent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

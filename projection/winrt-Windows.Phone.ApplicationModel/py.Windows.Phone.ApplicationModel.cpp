@@ -133,9 +133,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_applicationmodel(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ApplicationProfile, &type_spec_ApplicationProfile, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationProfile, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ApplicationProfile, &type_spec_ApplicationProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationProfile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationProfile_Meta.get())) == -1)
     #endif
     {
         return nullptr;

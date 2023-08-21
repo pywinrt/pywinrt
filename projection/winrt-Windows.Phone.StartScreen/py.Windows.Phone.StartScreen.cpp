@@ -658,18 +658,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_startscreen(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DualSimTile, &type_spec_DualSimTile, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DualSimTile, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DualSimTile, &type_spec_DualSimTile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DualSimTile, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IToastNotificationManagerStatics3, &type_spec_IToastNotificationManagerStatics3, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IToastNotificationManagerStatics3, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IToastNotificationManagerStatics3, &type_spec_IToastNotificationManagerStatics3, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IToastNotificationManagerStatics3, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

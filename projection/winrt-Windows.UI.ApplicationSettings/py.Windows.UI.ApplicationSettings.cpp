@@ -1968,36 +1968,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccountsSettingsPane, &type_spec_AccountsSettingsPane, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPane, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccountsSettingsPane, &type_spec_AccountsSettingsPane, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPane, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneCommandsRequestedEventArgs, &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneCommandsRequestedEventArgs, &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneEventDeferral, &type_spec_AccountsSettingsPaneEventDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneEventDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccountsSettingsPaneEventDeferral, &type_spec_AccountsSettingsPaneEventDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccountsSettingsPaneEventDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CredentialCommand, &type_spec_CredentialCommand, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialCommand, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CredentialCommand, &type_spec_CredentialCommand, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialCommand, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -2010,9 +2010,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SettingsCommand, &type_spec_SettingsCommand, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsCommand, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SettingsCommand, &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsCommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsCommand_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2025,54 +2025,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_applicationsettings(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SettingsPane, &type_spec_SettingsPane, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPane, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SettingsPane, &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SettingsPane_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequest, &type_spec_SettingsPaneCommandsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequest, &type_spec_SettingsPaneCommandsRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequestedEventArgs, &type_spec_SettingsPaneCommandsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SettingsPaneCommandsRequestedEventArgs, &type_spec_SettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsPaneCommandsRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountCommand, &type_spec_WebAccountCommand, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountCommand, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountCommand, &type_spec_WebAccountCommand, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountCommand, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountInvokedArgs, &type_spec_WebAccountInvokedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountInvokedArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountInvokedArgs, &type_spec_WebAccountInvokedArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountInvokedArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderCommand, &type_spec_WebAccountProviderCommand, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderCommand, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderCommand, &type_spec_WebAccountProviderCommand, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderCommand, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

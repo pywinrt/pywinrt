@@ -1817,72 +1817,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noex
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FindAllAccountsResult, &type_spec_FindAllAccountsResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FindAllAccountsResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FindAllAccountsResult, &type_spec_FindAllAccountsResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FindAllAccountsResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountEventArgs, &type_spec_WebAccountEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountEventArgs, &type_spec_WebAccountEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountMonitor, &type_spec_WebAccountMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountMonitor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountMonitor, &type_spec_WebAccountMonitor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountMonitor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAuthenticationCoreManager, &type_spec_WebAuthenticationCoreManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAuthenticationCoreManager, &type_spec_WebAuthenticationCoreManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebProviderError, &type_spec_WebProviderError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebProviderError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebProviderError, &type_spec_WebProviderError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebProviderError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebTokenRequest, &type_spec_WebTokenRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebTokenRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebTokenRequest, &type_spec_WebTokenRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebTokenRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebTokenRequestResult, &type_spec_WebTokenRequestResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebTokenRequestResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebTokenRequestResult, &type_spec_WebTokenRequestResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebTokenRequestResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebTokenResponse, &type_spec_WebTokenResponse, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebTokenResponse, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebTokenResponse, &type_spec_WebTokenResponse, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebTokenResponse, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

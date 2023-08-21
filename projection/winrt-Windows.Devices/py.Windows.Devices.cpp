@@ -569,9 +569,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LowLevelDevicesAggregateProvider, &type_spec_LowLevelDevicesAggregateProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesAggregateProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LowLevelDevicesAggregateProvider, &type_spec_LowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -584,18 +584,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LowLevelDevicesController, &type_spec_LowLevelDevicesController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LowLevelDevicesController, &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LowLevelDevicesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LowLevelDevicesController_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ILowLevelDevicesAggregateProvider, &type_spec_ILowLevelDevicesAggregateProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILowLevelDevicesAggregateProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ILowLevelDevicesAggregateProvider, &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILowLevelDevicesAggregateProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -13322,405 +13322,405 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_playback(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackgroundMediaPlayer, &type_spec_BackgroundMediaPlayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundMediaPlayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundMediaPlayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundMediaPlayer_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackgroundMediaPlayer, &type_spec_BackgroundMediaPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundMediaPlayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackgroundMediaPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundMediaPlayer_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CurrentMediaPlaybackItemChangedEventArgs, &type_spec_CurrentMediaPlaybackItemChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentMediaPlaybackItemChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CurrentMediaPlaybackItemChangedEventArgs, &type_spec_CurrentMediaPlaybackItemChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentMediaPlaybackItemChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreak, &type_spec_MediaBreak, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreak, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreak, &type_spec_MediaBreak, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreak, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreakEndedEventArgs, &type_spec_MediaBreakEndedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakEndedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreakEndedEventArgs, &type_spec_MediaBreakEndedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakEndedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreakManager, &type_spec_MediaBreakManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreakManager, &type_spec_MediaBreakManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreakSchedule, &type_spec_MediaBreakSchedule, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakSchedule, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreakSchedule, &type_spec_MediaBreakSchedule, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakSchedule, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreakSeekedOverEventArgs, &type_spec_MediaBreakSeekedOverEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakSeekedOverEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreakSeekedOverEventArgs, &type_spec_MediaBreakSeekedOverEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakSeekedOverEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreakSkippedEventArgs, &type_spec_MediaBreakSkippedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakSkippedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreakSkippedEventArgs, &type_spec_MediaBreakSkippedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakSkippedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaBreakStartedEventArgs, &type_spec_MediaBreakStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaBreakStartedEventArgs, &type_spec_MediaBreakStartedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaBreakStartedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaItemDisplayProperties, &type_spec_MediaItemDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaItemDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaItemDisplayProperties, &type_spec_MediaItemDisplayProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaItemDisplayProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackAudioTrackList, &type_spec_MediaPlaybackAudioTrackList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackAudioTrackList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackAudioTrackList, &type_spec_MediaPlaybackAudioTrackList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackAudioTrackList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManager, &type_spec_MediaPlaybackCommandManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManager, &type_spec_MediaPlaybackCommandManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerCommandBehavior, &type_spec_MediaPlaybackCommandManagerCommandBehavior, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerCommandBehavior, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerCommandBehavior, &type_spec_MediaPlaybackCommandManagerCommandBehavior, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerCommandBehavior, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerFastForwardReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerFastForwardReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerFastForwardReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerFastForwardReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerFastForwardReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerFastForwardReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerNextReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerNextReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerNextReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerNextReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerNextReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerNextReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPauseReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPauseReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPauseReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPauseReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPauseReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPauseReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPlayReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPlayReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPlayReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPlayReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPlayReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPlayReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPositionReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPositionReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPositionReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPositionReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPositionReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPositionReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPreviousReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPreviousReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPreviousReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerPreviousReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerPreviousReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerPreviousReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerRateReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerRateReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerRateReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerRateReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerRateReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerRateReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerRewindReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerRewindReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerRewindReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerRewindReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerRewindReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerRewindReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerShuffleReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerShuffleReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerShuffleReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackCommandManagerShuffleReceivedEventArgs, &type_spec_MediaPlaybackCommandManagerShuffleReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackCommandManagerShuffleReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItem, &type_spec_MediaPlaybackItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItem, &type_spec_MediaPlaybackItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItemError, &type_spec_MediaPlaybackItemError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItemError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItemError, &type_spec_MediaPlaybackItemError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItemError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItemFailedEventArgs, &type_spec_MediaPlaybackItemFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItemFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItemFailedEventArgs, &type_spec_MediaPlaybackItemFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItemFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItemOpenedEventArgs, &type_spec_MediaPlaybackItemOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItemOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackItemOpenedEventArgs, &type_spec_MediaPlaybackItemOpenedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackItemOpenedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackList, &type_spec_MediaPlaybackList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackList, &type_spec_MediaPlaybackList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSession, &type_spec_MediaPlaybackSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSession, &type_spec_MediaPlaybackSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSessionBufferingStartedEventArgs, &type_spec_MediaPlaybackSessionBufferingStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSessionBufferingStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSessionBufferingStartedEventArgs, &type_spec_MediaPlaybackSessionBufferingStartedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSessionBufferingStartedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSessionOutputDegradationPolicyState, &type_spec_MediaPlaybackSessionOutputDegradationPolicyState, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSessionOutputDegradationPolicyState, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSessionOutputDegradationPolicyState, &type_spec_MediaPlaybackSessionOutputDegradationPolicyState, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSessionOutputDegradationPolicyState, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSphericalVideoProjection, &type_spec_MediaPlaybackSphericalVideoProjection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSphericalVideoProjection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackSphericalVideoProjection, &type_spec_MediaPlaybackSphericalVideoProjection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackSphericalVideoProjection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackTimedMetadataTrackList, &type_spec_MediaPlaybackTimedMetadataTrackList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackTimedMetadataTrackList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackTimedMetadataTrackList, &type_spec_MediaPlaybackTimedMetadataTrackList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackTimedMetadataTrackList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackVideoTrackList, &type_spec_MediaPlaybackVideoTrackList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackVideoTrackList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlaybackVideoTrackList, &type_spec_MediaPlaybackVideoTrackList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlaybackVideoTrackList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlayer, &type_spec_MediaPlayer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlayer, &type_spec_MediaPlayer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlayerDataReceivedEventArgs, &type_spec_MediaPlayerDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlayerDataReceivedEventArgs, &type_spec_MediaPlayerDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlayerFailedEventArgs, &type_spec_MediaPlayerFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlayerFailedEventArgs, &type_spec_MediaPlayerFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlayerRateChangedEventArgs, &type_spec_MediaPlayerRateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerRateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlayerRateChangedEventArgs, &type_spec_MediaPlayerRateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerRateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlayerSurface, &type_spec_MediaPlayerSurface, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerSurface, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlayerSurface, &type_spec_MediaPlayerSurface, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerSurface, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PlaybackMediaMarker, &type_spec_PlaybackMediaMarker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackMediaMarker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PlaybackMediaMarker, &type_spec_PlaybackMediaMarker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackMediaMarker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PlaybackMediaMarkerReachedEventArgs, &type_spec_PlaybackMediaMarkerReachedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackMediaMarkerReachedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PlaybackMediaMarkerReachedEventArgs, &type_spec_PlaybackMediaMarkerReachedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackMediaMarkerReachedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PlaybackMediaMarkerSequence, &type_spec_PlaybackMediaMarkerSequence, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackMediaMarkerSequence, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PlaybackMediaMarkerSequence, &type_spec_PlaybackMediaMarkerSequence, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackMediaMarkerSequence, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TimedMetadataPresentationModeChangedEventArgs, &type_spec_TimedMetadataPresentationModeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimedMetadataPresentationModeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TimedMetadataPresentationModeChangedEventArgs, &type_spec_TimedMetadataPresentationModeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimedMetadataPresentationModeChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaEnginePlaybackSource, &type_spec_IMediaEnginePlaybackSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaEnginePlaybackSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaEnginePlaybackSource, &type_spec_IMediaEnginePlaybackSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaEnginePlaybackSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaPlaybackSource, &type_spec_IMediaPlaybackSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaPlaybackSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaPlaybackSource, &type_spec_IMediaPlaybackSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaPlaybackSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

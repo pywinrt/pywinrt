@@ -6192,72 +6192,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DManager, &type_spec_Print3DManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DManager, &type_spec_Print3DManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DTask, &type_spec_Print3DTask, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTask, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DTask, &type_spec_Print3DTask, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTask, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DTaskCompletedEventArgs, &type_spec_Print3DTaskCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DTaskCompletedEventArgs, &type_spec_Print3DTaskCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DTaskRequest, &type_spec_Print3DTaskRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DTaskRequest, &type_spec_Print3DTaskRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DTaskRequestedEventArgs, &type_spec_Print3DTaskRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DTaskRequestedEventArgs, &type_spec_Print3DTaskRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceChangedEventArgs, &type_spec_Print3DTaskSourceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskSourceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceChangedEventArgs, &type_spec_Print3DTaskSourceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskSourceChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceRequestedArgs, &type_spec_Print3DTaskSourceRequestedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskSourceRequestedArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DTaskSourceRequestedArgs, &type_spec_Print3DTaskSourceRequestedArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DTaskSourceRequestedArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3D3MFPackage, &type_spec_Printing3D3MFPackage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3D3MFPackage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3D3MFPackage, &type_spec_Printing3D3MFPackage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3D3MFPackage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -6270,180 +6270,180 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing3d(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterial, &type_spec_Printing3DBaseMaterial, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterial, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterial, &type_spec_Printing3DBaseMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Printing3DBaseMaterial_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterialGroup, &type_spec_Printing3DBaseMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DBaseMaterialGroup, &type_spec_Printing3DBaseMaterialGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBaseMaterialGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterial, &type_spec_Printing3DColorMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DColorMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterial, &type_spec_Printing3DColorMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DColorMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterialGroup, &type_spec_Printing3DColorMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DColorMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DColorMaterialGroup, &type_spec_Printing3DColorMaterialGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DColorMaterialGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DComponent, &type_spec_Printing3DComponent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DComponent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DComponent, &type_spec_Printing3DComponent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DComponent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DComponentWithMatrix, &type_spec_Printing3DComponentWithMatrix, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DComponentWithMatrix, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DComponentWithMatrix, &type_spec_Printing3DComponentWithMatrix, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DComponentWithMatrix, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterial, &type_spec_Printing3DCompositeMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterial, &type_spec_Printing3DCompositeMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterialGroup, &type_spec_Printing3DCompositeMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DCompositeMaterialGroup, &type_spec_Printing3DCompositeMaterialGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DCompositeMaterialGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DFaceReductionOptions, &type_spec_Printing3DFaceReductionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DFaceReductionOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DFaceReductionOptions, &type_spec_Printing3DFaceReductionOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DFaceReductionOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DMaterial, &type_spec_Printing3DMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DMaterial, &type_spec_Printing3DMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DMesh, &type_spec_Printing3DMesh, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMesh, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DMesh, &type_spec_Printing3DMesh, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMesh, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DMeshVerificationResult, &type_spec_Printing3DMeshVerificationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMeshVerificationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DMeshVerificationResult, &type_spec_Printing3DMeshVerificationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMeshVerificationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DModel, &type_spec_Printing3DModel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DModel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DModel, &type_spec_Printing3DModel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DModel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DModelTexture, &type_spec_Printing3DModelTexture, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DModelTexture, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DModelTexture, &type_spec_Printing3DModelTexture, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DModelTexture, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterial, &type_spec_Printing3DMultiplePropertyMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterial, &type_spec_Printing3DMultiplePropertyMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterialGroup, &type_spec_Printing3DMultiplePropertyMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DMultiplePropertyMaterialGroup, &type_spec_Printing3DMultiplePropertyMaterialGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DMultiplePropertyMaterialGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterial, &type_spec_Printing3DTexture2CoordMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterial, &type_spec_Printing3DTexture2CoordMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterialGroup, &type_spec_Printing3DTexture2CoordMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterialGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DTexture2CoordMaterialGroup, &type_spec_Printing3DTexture2CoordMaterialGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DTexture2CoordMaterialGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DTextureResource, &type_spec_Printing3DTextureResource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DTextureResource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DTextureResource, &type_spec_Printing3DTextureResource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DTextureResource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Printing3DBufferDescription, &type_spec_Printing3DBufferDescription, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBufferDescription, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Printing3DBufferDescription, &type_spec_Printing3DBufferDescription, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Printing3DBufferDescription, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

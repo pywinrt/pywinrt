@@ -2034,81 +2034,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifi(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiAdapter, &type_spec_WiFiAdapter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiAdapter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiAdapter, &type_spec_WiFiAdapter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiAdapter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiAvailableNetwork, &type_spec_WiFiAvailableNetwork, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiAvailableNetwork, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiAvailableNetwork, &type_spec_WiFiAvailableNetwork, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiAvailableNetwork, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiConnectionResult, &type_spec_WiFiConnectionResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiConnectionResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiConnectionResult, &type_spec_WiFiConnectionResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiConnectionResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiNetworkReport, &type_spec_WiFiNetworkReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiNetworkReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiNetworkReport, &type_spec_WiFiNetworkReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiNetworkReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTriggerDetails, &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectTriggerDetails, &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectionResult, &type_spec_WiFiOnDemandHotspotConnectionResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectionResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotConnectionResult, &type_spec_WiFiOnDemandHotspotConnectionResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotConnectionResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetwork, &type_spec_WiFiOnDemandHotspotNetwork, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetwork, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetwork, &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetwork, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetworkProperties, &type_spec_WiFiOnDemandHotspotNetworkProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetworkProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiOnDemandHotspotNetworkProperties, &type_spec_WiFiOnDemandHotspotNetworkProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiOnDemandHotspotNetworkProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiWpsConfigurationResult, &type_spec_WiFiWpsConfigurationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiWpsConfigurationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiWpsConfigurationResult, &type_spec_WiFiWpsConfigurationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiWpsConfigurationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

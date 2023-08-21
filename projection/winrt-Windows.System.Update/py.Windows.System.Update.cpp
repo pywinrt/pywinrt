@@ -1086,18 +1086,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemUpdateItem, &type_spec_SystemUpdateItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemUpdateItem, &type_spec_SystemUpdateItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemUpdateLastErrorInfo, &type_spec_SystemUpdateLastErrorInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateLastErrorInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemUpdateLastErrorInfo, &type_spec_SystemUpdateLastErrorInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateLastErrorInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -1110,9 +1110,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_update(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemUpdateManager, &type_spec_SystemUpdateManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemUpdateManager, &type_spec_SystemUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemUpdateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemUpdateManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;

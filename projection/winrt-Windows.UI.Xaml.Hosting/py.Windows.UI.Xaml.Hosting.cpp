@@ -2945,90 +2945,90 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DesignerAppExitedEventArgs, &type_spec_DesignerAppExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesignerAppExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DesignerAppExitedEventArgs, &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DesignerAppManager, &type_spec_DesignerAppManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesignerAppManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DesignerAppManager, &type_spec_DesignerAppManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesignerAppManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DesignerAppView, &type_spec_DesignerAppView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesignerAppView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DesignerAppView, &type_spec_DesignerAppView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesignerAppView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSource, &type_spec_DesktopWindowXamlSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSource, &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceGotFocusEventArgs, &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceGotFocusEventArgs, &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ElementCompositionPreview, &type_spec_ElementCompositionPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementCompositionPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ElementCompositionPreview, &type_spec_ElementCompositionPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementCompositionPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowsXamlManager, &type_spec_WindowsXamlManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsXamlManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowsXamlManager, &type_spec_WindowsXamlManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowsXamlManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationRequest, &type_spec_XamlSourceFocusNavigationRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationRequest, &type_spec_XamlSourceFocusNavigationRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationResult, &type_spec_XamlSourceFocusNavigationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XamlSourceFocusNavigationResult, &type_spec_XamlSourceFocusNavigationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -3041,36 +3041,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XamlUIPresenter, &type_spec_XamlUIPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlUIPresenter, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XamlUIPresenter, &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost, &type_spec_IXamlUIPresenterHost, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost, &type_spec_IXamlUIPresenterHost, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost2, &type_spec_IXamlUIPresenterHost2, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost2, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost2, &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost3, &type_spec_IXamlUIPresenterHost3, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost3, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXamlUIPresenterHost3, &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -243,9 +243,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_devices_power(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Battery, &type_spec_Battery, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Battery, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Battery, &type_spec_Battery, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Battery, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

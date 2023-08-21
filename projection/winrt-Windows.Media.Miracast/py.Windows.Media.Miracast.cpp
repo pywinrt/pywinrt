@@ -4122,162 +4122,162 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_miracast(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiver, &type_spec_MiracastReceiver, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiver, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiver, &type_spec_MiracastReceiver, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiver, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverApplySettingsResult, &type_spec_MiracastReceiverApplySettingsResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverApplySettingsResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverApplySettingsResult, &type_spec_MiracastReceiverApplySettingsResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverApplySettingsResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverConnection, &type_spec_MiracastReceiverConnection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverConnection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverConnection, &type_spec_MiracastReceiverConnection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverConnection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverConnectionCreatedEventArgs, &type_spec_MiracastReceiverConnectionCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverConnectionCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverConnectionCreatedEventArgs, &type_spec_MiracastReceiverConnectionCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverConnectionCreatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverCursorImageChannel, &type_spec_MiracastReceiverCursorImageChannel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverCursorImageChannel, &type_spec_MiracastReceiverCursorImageChannel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverCursorImageChannelSettings, &type_spec_MiracastReceiverCursorImageChannelSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannelSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverCursorImageChannelSettings, &type_spec_MiracastReceiverCursorImageChannelSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannelSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverDisconnectedEventArgs, &type_spec_MiracastReceiverDisconnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverDisconnectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverDisconnectedEventArgs, &type_spec_MiracastReceiverDisconnectedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverDisconnectedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverGameControllerDevice, &type_spec_MiracastReceiverGameControllerDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverGameControllerDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverGameControllerDevice, &type_spec_MiracastReceiverGameControllerDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverGameControllerDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverInputDevices, &type_spec_MiracastReceiverInputDevices, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverInputDevices, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverInputDevices, &type_spec_MiracastReceiverInputDevices, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverInputDevices, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverKeyboardDevice, &type_spec_MiracastReceiverKeyboardDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverKeyboardDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverKeyboardDevice, &type_spec_MiracastReceiverKeyboardDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverKeyboardDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverMediaSourceCreatedEventArgs, &type_spec_MiracastReceiverMediaSourceCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverMediaSourceCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverMediaSourceCreatedEventArgs, &type_spec_MiracastReceiverMediaSourceCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverMediaSourceCreatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverSession, &type_spec_MiracastReceiverSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverSession, &type_spec_MiracastReceiverSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverSessionStartResult, &type_spec_MiracastReceiverSessionStartResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSessionStartResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverSessionStartResult, &type_spec_MiracastReceiverSessionStartResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSessionStartResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverSettings, &type_spec_MiracastReceiverSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverSettings, &type_spec_MiracastReceiverSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverStatus, &type_spec_MiracastReceiverStatus, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverStatus, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverStatus, &type_spec_MiracastReceiverStatus, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverStatus, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverStreamControl, &type_spec_MiracastReceiverStreamControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverStreamControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverStreamControl, &type_spec_MiracastReceiverStreamControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverStreamControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverVideoStreamSettings, &type_spec_MiracastReceiverVideoStreamSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverVideoStreamSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastReceiverVideoStreamSettings, &type_spec_MiracastReceiverVideoStreamSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverVideoStreamSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MiracastTransmitter, &type_spec_MiracastTransmitter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastTransmitter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MiracastTransmitter, &type_spec_MiracastTransmitter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MiracastTransmitter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

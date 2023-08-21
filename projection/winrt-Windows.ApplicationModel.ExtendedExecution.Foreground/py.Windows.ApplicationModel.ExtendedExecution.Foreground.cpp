@@ -470,18 +470,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_extendedexecution_foregrou
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExtendedExecutionForegroundRevokedEventArgs, &type_spec_ExtendedExecutionForegroundRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExtendedExecutionForegroundRevokedEventArgs, &type_spec_ExtendedExecutionForegroundRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundRevokedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExtendedExecutionForegroundSession, &type_spec_ExtendedExecutionForegroundSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExtendedExecutionForegroundSession, &type_spec_ExtendedExecutionForegroundSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExtendedExecutionForegroundSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

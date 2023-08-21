@@ -254,9 +254,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_resources(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CustomXamlResourceLoader, &type_spec_CustomXamlResourceLoader, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomXamlResourceLoader_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CustomXamlResourceLoader, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomXamlResourceLoader_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CustomXamlResourceLoader, &type_spec_CustomXamlResourceLoader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomXamlResourceLoader_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CustomXamlResourceLoader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomXamlResourceLoader_Meta.get())) == -1)
     #endif
     {
         return nullptr;

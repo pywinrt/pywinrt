@@ -1942,27 +1942,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdAuthenticator, &type_spec_OnlineIdAuthenticator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdAuthenticator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdAuthenticator, &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicket, &type_spec_OnlineIdServiceTicket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicket, &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicketRequest, &type_spec_OnlineIdServiceTicketRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicketRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdServiceTicketRequest, &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -1975,63 +1975,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticator, &type_spec_OnlineIdSystemAuthenticator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticator, &type_spec_OnlineIdSystemAuthenticator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticatorForUser, &type_spec_OnlineIdSystemAuthenticatorForUser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticatorForUser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemAuthenticatorForUser, &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemIdentity, &type_spec_OnlineIdSystemIdentity, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemIdentity, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemIdentity, &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemTicketResult, &type_spec_OnlineIdSystemTicketResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemTicketResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OnlineIdSystemTicketResult, &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SignOutUserOperation, &type_spec_SignOutUserOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SignOutUserOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SignOutUserOperation, &type_spec_SignOutUserOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SignOutUserOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserAuthenticationOperation, &type_spec_UserAuthenticationOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserAuthenticationOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserAuthenticationOperation, &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserIdentity, &type_spec_UserIdentity, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserIdentity, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserIdentity, &type_spec_UserIdentity, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserIdentity, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

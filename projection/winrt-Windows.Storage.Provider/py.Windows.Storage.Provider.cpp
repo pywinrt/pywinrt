@@ -4878,198 +4878,198 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CachedFileUpdater, &type_spec_CachedFileUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CachedFileUpdater, &type_spec_CachedFileUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterUI, &type_spec_CachedFileUpdaterUI, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdaterUI, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CachedFileUpdaterUI, &type_spec_CachedFileUpdaterUI, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdaterUI, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileUpdateRequest, &type_spec_FileUpdateRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileUpdateRequest, &type_spec_FileUpdateRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileUpdateRequestDeferral, &type_spec_FileUpdateRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileUpdateRequestDeferral, &type_spec_FileUpdateRequestDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequestDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileUpdateRequestedEventArgs, &type_spec_FileUpdateRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileUpdateRequestedEventArgs, &type_spec_FileUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderFileTypeInfo, &type_spec_StorageProviderFileTypeInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderFileTypeInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderFileTypeInfo, &type_spec_StorageProviderFileTypeInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderFileTypeInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderGetContentInfoForPathResult, &type_spec_StorageProviderGetContentInfoForPathResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderGetContentInfoForPathResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderGetContentInfoForPathResult, &type_spec_StorageProviderGetContentInfoForPathResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderGetContentInfoForPathResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderGetPathForContentUriResult, &type_spec_StorageProviderGetPathForContentUriResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderGetPathForContentUriResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderGetPathForContentUriResult, &type_spec_StorageProviderGetPathForContentUriResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderGetPathForContentUriResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperties, &type_spec_StorageProviderItemProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperties, &type_spec_StorageProviderItemProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperty, &type_spec_StorageProviderItemProperty, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperty, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderItemProperty, &type_spec_StorageProviderItemProperty, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemProperty, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderItemPropertyDefinition, &type_spec_StorageProviderItemPropertyDefinition, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemPropertyDefinition, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderItemPropertyDefinition, &type_spec_StorageProviderItemPropertyDefinition, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderItemPropertyDefinition, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderMoreInfoUI, &type_spec_StorageProviderMoreInfoUI, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderMoreInfoUI, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderMoreInfoUI, &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderMoreInfoUI, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderQuotaUI, &type_spec_StorageProviderQuotaUI, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderQuotaUI, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderQuotaUI, &type_spec_StorageProviderQuotaUI, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderQuotaUI, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderStatusUI, &type_spec_StorageProviderStatusUI, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderStatusUI, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderStatusUI, &type_spec_StorageProviderStatusUI, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderStatusUI, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootInfo, &type_spec_StorageProviderSyncRootInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootInfo, &type_spec_StorageProviderSyncRootInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootManager, &type_spec_StorageProviderSyncRootManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StorageProviderSyncRootManager, &type_spec_StorageProviderSyncRootManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StorageProviderSyncRootManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStorageProviderItemPropertySource, &type_spec_IStorageProviderItemPropertySource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderItemPropertySource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStorageProviderItemPropertySource, &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderItemPropertySource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStorageProviderPropertyCapabilities, &type_spec_IStorageProviderPropertyCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderPropertyCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStorageProviderPropertyCapabilities, &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISource, &type_spec_IStorageProviderStatusUISource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISource, &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISourceFactory, &type_spec_IStorageProviderStatusUISourceFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISourceFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStorageProviderStatusUISourceFactory, &type_spec_IStorageProviderStatusUISourceFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderStatusUISourceFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStorageProviderUICommand, &type_spec_IStorageProviderUICommand, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderUICommand, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStorageProviderUICommand, &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderUICommand, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStorageProviderUriSource, &type_spec_IStorageProviderUriSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderUriSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStorageProviderUriSource, &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStorageProviderUriSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

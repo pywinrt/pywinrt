@@ -3807,126 +3807,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_streaming_adaptive(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSource, &type_spec_AdaptiveMediaSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSource, &type_spec_AdaptiveMediaSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceAdvancedSettings, &type_spec_AdaptiveMediaSourceAdvancedSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceAdvancedSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceAdvancedSettings, &type_spec_AdaptiveMediaSourceAdvancedSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceAdvancedSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCorrelatedTimes, &type_spec_AdaptiveMediaSourceCorrelatedTimes, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCorrelatedTimes, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCorrelatedTimes, &type_spec_AdaptiveMediaSourceCorrelatedTimes, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCorrelatedTimes, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCreationResult, &type_spec_AdaptiveMediaSourceCreationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCreationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceCreationResult, &type_spec_AdaptiveMediaSourceCreationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceCreationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs, &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnosticAvailableEventArgs, &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnosticAvailableEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnostics, &type_spec_AdaptiveMediaSourceDiagnostics, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnostics, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDiagnostics, &type_spec_AdaptiveMediaSourceDiagnostics, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDiagnostics, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadBitrateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadCompletedEventArgs, &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadCompletedEventArgs, &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadFailedEventArgs, &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadFailedEventArgs, &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedDeferral, &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedDeferral, &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedEventArgs, &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadRequestedEventArgs, &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadResult, &type_spec_AdaptiveMediaSourceDownloadResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadResult, &type_spec_AdaptiveMediaSourceDownloadResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadStatistics, &type_spec_AdaptiveMediaSourceDownloadStatistics, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadStatistics, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourceDownloadStatistics, &type_spec_AdaptiveMediaSourceDownloadStatistics, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourceDownloadStatistics, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

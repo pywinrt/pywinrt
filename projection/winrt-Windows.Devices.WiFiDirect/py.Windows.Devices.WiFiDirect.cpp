@@ -2185,90 +2185,90 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_wifidirect(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectAdvertisement, &type_spec_WiFiDirectAdvertisement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectAdvertisement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectAdvertisement, &type_spec_WiFiDirectAdvertisement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectAdvertisement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectAdvertisementPublisher, &type_spec_WiFiDirectAdvertisementPublisher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectAdvertisementPublisher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectAdvertisementPublisher, &type_spec_WiFiDirectAdvertisementPublisher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectAdvertisementPublisher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, &type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, &type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectAdvertisementPublisherStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionListener, &type_spec_WiFiDirectConnectionListener, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionListener, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionListener, &type_spec_WiFiDirectConnectionListener, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionListener, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionParameters, &type_spec_WiFiDirectConnectionParameters, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionParameters, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionParameters, &type_spec_WiFiDirectConnectionParameters, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionParameters, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionRequest, &type_spec_WiFiDirectConnectionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionRequest, &type_spec_WiFiDirectConnectionRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionRequestedEventArgs, &type_spec_WiFiDirectConnectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectConnectionRequestedEventArgs, &type_spec_WiFiDirectConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectDevice, &type_spec_WiFiDirectDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectDevice, &type_spec_WiFiDirectDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectInformationElement, &type_spec_WiFiDirectInformationElement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectInformationElement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectInformationElement, &type_spec_WiFiDirectInformationElement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectInformationElement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WiFiDirectLegacySettings, &type_spec_WiFiDirectLegacySettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectLegacySettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WiFiDirectLegacySettings, &type_spec_WiFiDirectLegacySettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WiFiDirectLegacySettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

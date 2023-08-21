@@ -1207,45 +1207,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_i2c(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_I2cConnectionSettings, &type_spec_I2cConnectionSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cConnectionSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_I2cConnectionSettings, &type_spec_I2cConnectionSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cConnectionSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_I2cController, &type_spec_I2cController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_I2cController, &type_spec_I2cController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_I2cDevice, &type_spec_I2cDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_I2cDevice, &type_spec_I2cDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_II2cDeviceStatics, &type_spec_II2cDeviceStatics, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_II2cDeviceStatics, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_II2cDeviceStatics, &type_spec_II2cDeviceStatics, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_II2cDeviceStatics, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_I2cTransferResult, &type_spec_I2cTransferResult, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cTransferResult, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_I2cTransferResult, &type_spec_I2cTransferResult, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_I2cTransferResult, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

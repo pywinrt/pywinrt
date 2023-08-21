@@ -2462,9 +2462,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppListEntry, &type_spec_AppListEntry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppListEntry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppListEntry, &type_spec_AppListEntry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppListEntry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -2477,81 +2477,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreApplication, &type_spec_CoreApplication, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreApplication, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreApplication, &type_spec_CoreApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreApplication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreApplication_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreApplicationView, &type_spec_CoreApplicationView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreApplicationView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreApplicationView, &type_spec_CoreApplicationView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreApplicationView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreApplicationViewTitleBar, &type_spec_CoreApplicationViewTitleBar, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreApplicationViewTitleBar, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreApplicationViewTitleBar, &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreApplicationViewTitleBar, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HostedViewClosingEventArgs, &type_spec_HostedViewClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HostedViewClosingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HostedViewClosingEventArgs, &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HostedViewClosingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UnhandledError, &type_spec_UnhandledError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnhandledError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UnhandledError, &type_spec_UnhandledError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnhandledError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UnhandledErrorDetectedEventArgs, &type_spec_UnhandledErrorDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnhandledErrorDetectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UnhandledErrorDetectedEventArgs, &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnhandledErrorDetectedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICoreApplicationUnhandledError, &type_spec_ICoreApplicationUnhandledError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICoreApplicationUnhandledError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICoreApplicationUnhandledError, &type_spec_ICoreApplicationUnhandledError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICoreApplicationUnhandledError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IFrameworkView, &type_spec_IFrameworkView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IFrameworkView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IFrameworkView, &type_spec_IFrameworkView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IFrameworkView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IFrameworkViewSource, &type_spec_IFrameworkViewSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IFrameworkViewSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IFrameworkViewSource, &type_spec_IFrameworkViewSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IFrameworkViewSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

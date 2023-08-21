@@ -1656,99 +1656,99 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ComponentLoadFailedEventArgs, &type_spec_ComponentLoadFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComponentLoadFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ComponentLoadFailedEventArgs, &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComponentLoadFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ComponentRenewal, &type_spec_ComponentRenewal, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComponentRenewal, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ComponentRenewal, &type_spec_ComponentRenewal, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComponentRenewal, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HdcpSession, &type_spec_HdcpSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HdcpSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HdcpSession, &type_spec_HdcpSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HdcpSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaProtectionManager, &type_spec_MediaProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaProtectionManager, &type_spec_MediaProtectionManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProtectionManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaProtectionPMPServer, &type_spec_MediaProtectionPMPServer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProtectionPMPServer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaProtectionPMPServer, &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProtectionPMPServer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaProtectionServiceCompletion, &type_spec_MediaProtectionServiceCompletion, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProtectionServiceCompletion, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaProtectionServiceCompletion, &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProtectionServiceCompletion, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectionCapabilities, &type_spec_ProtectionCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectionCapabilities, &type_spec_ProtectionCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalInformation, &type_spec_RevocationAndRenewalInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RevocationAndRenewalInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalInformation, &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RevocationAndRenewalInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalItem, &type_spec_RevocationAndRenewalItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RevocationAndRenewalItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RevocationAndRenewalItem, &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RevocationAndRenewalItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServiceRequestedEventArgs, &type_spec_ServiceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServiceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServiceRequestedEventArgs, &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServiceRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaProtectionServiceRequest, &type_spec_IMediaProtectionServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaProtectionServiceRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaProtectionServiceRequest, &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaProtectionServiceRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -514,27 +514,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_licensemanagement(vo
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LicenseManager, &type_spec_LicenseManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LicenseManager, &type_spec_LicenseManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LicenseSatisfactionInfo, &type_spec_LicenseSatisfactionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseSatisfactionInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LicenseSatisfactionInfo, &type_spec_LicenseSatisfactionInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseSatisfactionInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LicenseSatisfactionResult, &type_spec_LicenseSatisfactionResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseSatisfactionResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LicenseSatisfactionResult, &type_spec_LicenseSatisfactionResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseSatisfactionResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

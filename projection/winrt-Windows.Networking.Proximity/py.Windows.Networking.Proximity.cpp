@@ -2185,9 +2185,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ConnectionRequestedEventArgs, &type_spec_ConnectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ConnectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ConnectionRequestedEventArgs, &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -2200,54 +2200,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PeerFinder, &type_spec_PeerFinder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerFinder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PeerFinder, &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PeerInformation, &type_spec_PeerInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PeerInformation, &type_spec_PeerInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PeerWatcher, &type_spec_PeerWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerWatcher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PeerWatcher, &type_spec_PeerWatcher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PeerWatcher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximityDevice, &type_spec_ProximityDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximityDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximityDevice, &type_spec_ProximityDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximityDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximityMessage, &type_spec_ProximityMessage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximityMessage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximityMessage, &type_spec_ProximityMessage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximityMessage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TriggeredConnectionStateChangedEventArgs, &type_spec_TriggeredConnectionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggeredConnectionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TriggeredConnectionStateChangedEventArgs, &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

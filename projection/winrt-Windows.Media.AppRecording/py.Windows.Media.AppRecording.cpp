@@ -1124,54 +1124,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_apprecording(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppRecordingManager, &type_spec_AppRecordingManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppRecordingManager, &type_spec_AppRecordingManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppRecordingResult, &type_spec_AppRecordingResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppRecordingResult, &type_spec_AppRecordingResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppRecordingSaveScreenshotResult, &type_spec_AppRecordingSaveScreenshotResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingSaveScreenshotResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppRecordingSaveScreenshotResult, &type_spec_AppRecordingSaveScreenshotResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingSaveScreenshotResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppRecordingSavedScreenshotInfo, &type_spec_AppRecordingSavedScreenshotInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingSavedScreenshotInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppRecordingSavedScreenshotInfo, &type_spec_AppRecordingSavedScreenshotInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingSavedScreenshotInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppRecordingStatus, &type_spec_AppRecordingStatus, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingStatus, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppRecordingStatus, &type_spec_AppRecordingStatus, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingStatus, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppRecordingStatusDetails, &type_spec_AppRecordingStatusDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingStatusDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppRecordingStatusDetails, &type_spec_AppRecordingStatusDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppRecordingStatusDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

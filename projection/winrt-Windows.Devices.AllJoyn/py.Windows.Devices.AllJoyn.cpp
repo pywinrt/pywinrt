@@ -5475,180 +5475,180 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynAboutData, &type_spec_AllJoynAboutData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynAboutData, &type_spec_AllJoynAboutData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynAboutDataView, &type_spec_AllJoynAboutDataView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutDataView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynAboutDataView, &type_spec_AllJoynAboutDataView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutDataView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynAcceptSessionJoinerEventArgs, &type_spec_AllJoynAcceptSessionJoinerEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAcceptSessionJoinerEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynAcceptSessionJoinerEventArgs, &type_spec_AllJoynAcceptSessionJoinerEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAcceptSessionJoinerEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynAuthenticationCompleteEventArgs, &type_spec_AllJoynAuthenticationCompleteEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAuthenticationCompleteEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynAuthenticationCompleteEventArgs, &type_spec_AllJoynAuthenticationCompleteEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynAuthenticationCompleteEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachment, &type_spec_AllJoynBusAttachment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachment, &type_spec_AllJoynBusAttachment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachmentStateChangedEventArgs, &type_spec_AllJoynBusAttachmentStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachmentStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynBusAttachmentStateChangedEventArgs, &type_spec_AllJoynBusAttachmentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachmentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynBusObject, &type_spec_AllJoynBusObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynBusObject, &type_spec_AllJoynBusObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynBusObjectStoppedEventArgs, &type_spec_AllJoynBusObjectStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusObjectStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynBusObjectStoppedEventArgs, &type_spec_AllJoynBusObjectStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynBusObjectStoppedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynCredentials, &type_spec_AllJoynCredentials, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentials, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynCredentials, &type_spec_AllJoynCredentials, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentials, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsRequestedEventArgs, &type_spec_AllJoynCredentialsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentialsRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsRequestedEventArgs, &type_spec_AllJoynCredentialsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentialsRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsVerificationRequestedEventArgs, &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynCredentialsVerificationRequestedEventArgs, &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynMessageInfo, &type_spec_AllJoynMessageInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynMessageInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynMessageInfo, &type_spec_AllJoynMessageInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynMessageInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynProducerStoppedEventArgs, &type_spec_AllJoynProducerStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynProducerStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynProducerStoppedEventArgs, &type_spec_AllJoynProducerStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynProducerStoppedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfo, &type_spec_AllJoynServiceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfo, &type_spec_AllJoynServiceInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfoRemovedEventArgs, &type_spec_AllJoynServiceInfoRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfoRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynServiceInfoRemovedEventArgs, &type_spec_AllJoynServiceInfoRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfoRemovedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynSession, &type_spec_AllJoynSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynSession, &type_spec_AllJoynSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionJoinedEventArgs, &type_spec_AllJoynSessionJoinedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionJoinedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionJoinedEventArgs, &type_spec_AllJoynSessionJoinedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionJoinedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionLostEventArgs, &type_spec_AllJoynSessionLostEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionLostEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionLostEventArgs, &type_spec_AllJoynSessionLostEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionLostEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberAddedEventArgs, &type_spec_AllJoynSessionMemberAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberAddedEventArgs, &type_spec_AllJoynSessionMemberAddedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberAddedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberRemovedEventArgs, &type_spec_AllJoynSessionMemberRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynSessionMemberRemovedEventArgs, &type_spec_AllJoynSessionMemberRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberRemovedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -5661,36 +5661,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynStatus, &type_spec_AllJoynStatus, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynStatus, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynStatus, &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AllJoynWatcherStoppedEventArgs, &type_spec_AllJoynWatcherStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynWatcherStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AllJoynWatcherStoppedEventArgs, &type_spec_AllJoynWatcherStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AllJoynWatcherStoppedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAllJoynAcceptSessionJoiner, &type_spec_IAllJoynAcceptSessionJoiner, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAllJoynAcceptSessionJoiner, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAllJoynAcceptSessionJoiner, &type_spec_IAllJoynAcceptSessionJoiner, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAllJoynAcceptSessionJoiner, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAllJoynProducer, &type_spec_IAllJoynProducer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAllJoynProducer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAllJoynProducer, &type_spec_IAllJoynProducer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAllJoynProducer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

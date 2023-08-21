@@ -1256,27 +1256,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_background(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTriggerDetails, &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherTriggerDetails, &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTriggerDetails, &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherTriggerDetails, &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTriggerDetails, &type_spec_GattCharacteristicNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattCharacteristicNotificationTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GattCharacteristicNotificationTriggerDetails, &type_spec_GattCharacteristicNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattCharacteristicNotificationTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -1289,45 +1289,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_background(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GattServiceProviderConnection, &type_spec_GattServiceProviderConnection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattServiceProviderConnection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GattServiceProviderConnection, &type_spec_GattServiceProviderConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattServiceProviderConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GattServiceProviderConnection_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GattServiceProviderTriggerDetails, &type_spec_GattServiceProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattServiceProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GattServiceProviderTriggerDetails, &type_spec_GattServiceProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GattServiceProviderTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RfcommConnectionTriggerDetails, &type_spec_RfcommConnectionTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RfcommConnectionTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RfcommConnectionTriggerDetails, &type_spec_RfcommConnectionTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RfcommConnectionTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RfcommInboundConnectionInformation, &type_spec_RfcommInboundConnectionInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RfcommInboundConnectionInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RfcommInboundConnectionInformation, &type_spec_RfcommInboundConnectionInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RfcommInboundConnectionInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RfcommOutboundConnectionInformation, &type_spec_RfcommOutboundConnectionInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RfcommOutboundConnectionInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RfcommOutboundConnectionInformation, &type_spec_RfcommOutboundConnectionInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RfcommOutboundConnectionInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

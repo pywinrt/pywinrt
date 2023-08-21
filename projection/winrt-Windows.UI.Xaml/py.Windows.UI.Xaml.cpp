@@ -29644,9 +29644,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveTrigger, &type_spec_AdaptiveTrigger, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveTrigger, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveTrigger, &type_spec_AdaptiveTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveTrigger_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -29659,81 +29659,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Application, &type_spec_Application, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Application, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Application, &type_spec_Application, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Application, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Application_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ApplicationInitializationCallbackParams, &type_spec_ApplicationInitializationCallbackParams, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationInitializationCallbackParams, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ApplicationInitializationCallbackParams, &type_spec_ApplicationInitializationCallbackParams, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationInitializationCallbackParams, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BindingFailedEventArgs, &type_spec_BindingFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BindingFailedEventArgs, &type_spec_BindingFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BringIntoViewOptions, &type_spec_BringIntoViewOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BringIntoViewOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BringIntoViewOptions, &type_spec_BringIntoViewOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BringIntoViewOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BringIntoViewRequestedEventArgs, &type_spec_BringIntoViewRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BringIntoViewRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BringIntoViewRequestedEventArgs, &type_spec_BringIntoViewRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BringIntoViewRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BrushTransition, &type_spec_BrushTransition, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BrushTransition, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BrushTransition, &type_spec_BrushTransition, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BrushTransition, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ColorPaletteResources, &type_spec_ColorPaletteResources, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPaletteResources, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ColorPaletteResources, &type_spec_ColorPaletteResources, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPaletteResources, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CornerRadiusHelper, &type_spec_CornerRadiusHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CornerRadiusHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CornerRadiusHelper, &type_spec_CornerRadiusHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CornerRadiusHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DataContextChangedEventArgs, &type_spec_DataContextChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataContextChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DataContextChangedEventArgs, &type_spec_DataContextChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataContextChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -29746,45 +29746,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DataTemplate, &type_spec_DataTemplate, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataTemplate, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DataTemplate, &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataTemplate, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataTemplate_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DataTemplateKey, &type_spec_DataTemplateKey, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataTemplateKey, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DataTemplateKey, &type_spec_DataTemplateKey, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataTemplateKey, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DebugSettings, &type_spec_DebugSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DebugSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DebugSettings, &type_spec_DebugSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DebugSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DependencyObject, &type_spec_DependencyObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DependencyObject, &type_spec_DependencyObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DependencyObjectCollection, &type_spec_DependencyObjectCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyObjectCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DependencyObjectCollection, &type_spec_DependencyObjectCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyObjectCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -29797,81 +29797,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DependencyProperty, &type_spec_DependencyProperty, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyProperty, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DependencyProperty, &type_spec_DependencyProperty, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyProperty, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DependencyProperty_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DependencyPropertyChangedEventArgs, &type_spec_DependencyPropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyPropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DependencyPropertyChangedEventArgs, &type_spec_DependencyPropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DependencyPropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DispatcherTimer, &type_spec_DispatcherTimer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DispatcherTimer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DispatcherTimer, &type_spec_DispatcherTimer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DispatcherTimer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragEventArgs, &type_spec_DragEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragEventArgs, &type_spec_DragEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragOperationDeferral, &type_spec_DragOperationDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragOperationDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragOperationDeferral, &type_spec_DragOperationDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragOperationDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragStartingEventArgs, &type_spec_DragStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragStartingEventArgs, &type_spec_DragStartingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragStartingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragUI, &type_spec_DragUI, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragUI, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragUI, &type_spec_DragUI, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragUI, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DragUIOverride, &type_spec_DragUIOverride, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragUIOverride, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DragUIOverride, &type_spec_DragUIOverride, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DragUIOverride, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DropCompletedEventArgs, &type_spec_DropCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DropCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DropCompletedEventArgs, &type_spec_DropCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DropCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -29884,36 +29884,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DurationHelper, &type_spec_DurationHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DurationHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DurationHelper, &type_spec_DurationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DurationHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DurationHelper_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EffectiveViewportChangedEventArgs, &type_spec_EffectiveViewportChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EffectiveViewportChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EffectiveViewportChangedEventArgs, &type_spec_EffectiveViewportChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EffectiveViewportChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ElementFactoryGetArgs, &type_spec_ElementFactoryGetArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementFactoryGetArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ElementFactoryGetArgs, &type_spec_ElementFactoryGetArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementFactoryGetArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ElementFactoryRecycleArgs, &type_spec_ElementFactoryRecycleArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementFactoryRecycleArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ElementFactoryRecycleArgs, &type_spec_ElementFactoryRecycleArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementFactoryRecycleArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -29926,27 +29926,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ElementSoundPlayer, &type_spec_ElementSoundPlayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementSoundPlayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ElementSoundPlayer, &type_spec_ElementSoundPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElementSoundPlayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementSoundPlayer_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EventTrigger, &type_spec_EventTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EventTrigger, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EventTrigger, &type_spec_EventTrigger, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EventTrigger, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExceptionRoutedEventArgs, &type_spec_ExceptionRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExceptionRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExceptionRoutedEventArgs, &type_spec_ExceptionRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExceptionRoutedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -29959,36 +29959,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FrameworkElement, &type_spec_FrameworkElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FrameworkElement, &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElement_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FrameworkTemplate, &type_spec_FrameworkTemplate, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkTemplate, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FrameworkTemplate, &type_spec_FrameworkTemplate, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkTemplate, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FrameworkView, &type_spec_FrameworkView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FrameworkView, &type_spec_FrameworkView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FrameworkViewSource, &type_spec_FrameworkViewSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkViewSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FrameworkViewSource, &type_spec_FrameworkViewSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkViewSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30001,45 +30001,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridLengthHelper, &type_spec_GridLengthHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridLengthHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridLengthHelper, &type_spec_GridLengthHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridLengthHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridLengthHelper_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaFailedRoutedEventArgs, &type_spec_MediaFailedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaFailedRoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaFailedRoutedEventArgs, &type_spec_MediaFailedRoutedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaFailedRoutedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PointHelper, &type_spec_PointHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PointHelper, &type_spec_PointHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PropertyMetadata, &type_spec_PropertyMetadata, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyMetadata, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PropertyMetadata, &type_spec_PropertyMetadata, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyMetadata, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PropertyPath, &type_spec_PropertyPath, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyPath, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PropertyPath, &type_spec_PropertyPath, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyPath, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30052,81 +30052,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RectHelper, &type_spec_RectHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RectHelper, &type_spec_RectHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectHelper_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceDictionary, &type_spec_ResourceDictionary, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceDictionary, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceDictionary, &type_spec_ResourceDictionary, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceDictionary, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RoutedEvent, &type_spec_RoutedEvent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RoutedEvent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RoutedEvent, &type_spec_RoutedEvent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RoutedEvent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RoutedEventArgs, &type_spec_RoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RoutedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RoutedEventArgs, &type_spec_RoutedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RoutedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScalarTransition, &type_spec_ScalarTransition, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScalarTransition, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScalarTransition, &type_spec_ScalarTransition, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScalarTransition, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Setter, &type_spec_Setter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Setter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Setter, &type_spec_Setter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Setter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SetterBase, &type_spec_SetterBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SetterBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SetterBase, &type_spec_SetterBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SetterBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SetterBaseCollection, &type_spec_SetterBaseCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SetterBaseCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SetterBaseCollection, &type_spec_SetterBaseCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SetterBaseCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SizeChangedEventArgs, &type_spec_SizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SizeChangedEventArgs, &type_spec_SizeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30139,9 +30139,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SizeHelper, &type_spec_SizeHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SizeHelper, &type_spec_SizeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SizeHelper_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -30154,81 +30154,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StateTrigger, &type_spec_StateTrigger, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StateTrigger, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StateTrigger, &type_spec_StateTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StateTrigger, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StateTrigger_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StateTriggerBase, &type_spec_StateTriggerBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StateTriggerBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StateTriggerBase, &type_spec_StateTriggerBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StateTriggerBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Style, &type_spec_Style, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Style, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Style, &type_spec_Style, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Style, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetPropertyPath, &type_spec_TargetPropertyPath, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetPropertyPath, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetPropertyPath, &type_spec_TargetPropertyPath, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetPropertyPath, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ThicknessHelper, &type_spec_ThicknessHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThicknessHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ThicknessHelper, &type_spec_ThicknessHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThicknessHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TriggerAction, &type_spec_TriggerAction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerAction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TriggerAction, &type_spec_TriggerAction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerAction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TriggerActionCollection, &type_spec_TriggerActionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerActionCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TriggerActionCollection, &type_spec_TriggerActionCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerActionCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TriggerBase, &type_spec_TriggerBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TriggerBase, &type_spec_TriggerBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TriggerCollection, &type_spec_TriggerCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TriggerCollection, &type_spec_TriggerCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TriggerCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30241,63 +30241,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UIElement, &type_spec_UIElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UIElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UIElement, &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UIElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIElement_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UIElementWeakCollection, &type_spec_UIElementWeakCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UIElementWeakCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UIElementWeakCollection, &type_spec_UIElementWeakCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UIElementWeakCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UnhandledExceptionEventArgs, &type_spec_UnhandledExceptionEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnhandledExceptionEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UnhandledExceptionEventArgs, &type_spec_UnhandledExceptionEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnhandledExceptionEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector3Transition, &type_spec_Vector3Transition, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3Transition, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector3Transition, &type_spec_Vector3Transition, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3Transition, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualState, &type_spec_VisualState, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualState, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualState, &type_spec_VisualState, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualState, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualStateChangedEventArgs, &type_spec_VisualStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualStateChangedEventArgs, &type_spec_VisualStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualStateGroup, &type_spec_VisualStateGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualStateGroup, &type_spec_VisualStateGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30310,18 +30310,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualStateManager, &type_spec_VisualStateManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualStateManager, &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualStateManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualStateManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualTransition, &type_spec_VisualTransition, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualTransition, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualTransition, &type_spec_VisualTransition, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualTransition, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30334,90 +30334,90 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Window, &type_spec_Window, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Window, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Window, &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Window, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Window_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowCreatedEventArgs, &type_spec_WindowCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowCreatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowCreatedEventArgs, &type_spec_WindowCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowCreatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XamlRoot, &type_spec_XamlRoot, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlRoot, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XamlRoot, &type_spec_XamlRoot, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlRoot, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XamlRootChangedEventArgs, &type_spec_XamlRootChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlRootChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XamlRootChangedEventArgs, &type_spec_XamlRootChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XamlRootChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IDataTemplateExtension, &type_spec_IDataTemplateExtension, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IDataTemplateExtension, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IDataTemplateExtension, &type_spec_IDataTemplateExtension, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IDataTemplateExtension, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IElementFactory, &type_spec_IElementFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IElementFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IElementFactory, &type_spec_IElementFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IElementFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CornerRadius, &type_spec_CornerRadius, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CornerRadius, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CornerRadius, &type_spec_CornerRadius, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CornerRadius, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Duration, &type_spec_Duration, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Duration, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Duration, &type_spec_Duration, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Duration, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridLength, &type_spec_GridLength, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridLength, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridLength, &type_spec_GridLength, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridLength, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Thickness, &type_spec_Thickness, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Thickness, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Thickness, &type_spec_Thickness, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Thickness, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

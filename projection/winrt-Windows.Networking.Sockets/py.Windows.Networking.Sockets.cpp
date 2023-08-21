@@ -10609,135 +10609,135 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ControlChannelTrigger, &type_spec_ControlChannelTrigger, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ControlChannelTrigger, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ControlChannelTrigger, &type_spec_ControlChannelTrigger, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ControlChannelTrigger, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DatagramSocket, &type_spec_DatagramSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DatagramSocket, &type_spec_DatagramSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DatagramSocketControl, &type_spec_DatagramSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocketControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DatagramSocketControl, &type_spec_DatagramSocketControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocketControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DatagramSocketInformation, &type_spec_DatagramSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DatagramSocketInformation, &type_spec_DatagramSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DatagramSocketMessageReceivedEventArgs, &type_spec_DatagramSocketMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocketMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DatagramSocketMessageReceivedEventArgs, &type_spec_DatagramSocketMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatagramSocketMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MessageWebSocket, &type_spec_MessageWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MessageWebSocket, &type_spec_MessageWebSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MessageWebSocketControl, &type_spec_MessageWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MessageWebSocketControl, &type_spec_MessageWebSocketControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocketControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MessageWebSocketInformation, &type_spec_MessageWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MessageWebSocketInformation, &type_spec_MessageWebSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MessageWebSocketMessageReceivedEventArgs, &type_spec_MessageWebSocketMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocketMessageReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MessageWebSocketMessageReceivedEventArgs, &type_spec_MessageWebSocketMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageWebSocketMessageReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocket, &type_spec_ServerMessageWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerMessageWebSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocket, &type_spec_ServerMessageWebSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerMessageWebSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketControl, &type_spec_ServerMessageWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketControl, &type_spec_ServerMessageWebSocketControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketInformation, &type_spec_ServerMessageWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServerMessageWebSocketInformation, &type_spec_ServerMessageWebSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerMessageWebSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocket, &type_spec_ServerStreamWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerStreamWebSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocket, &type_spec_ServerStreamWebSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerStreamWebSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocketInformation, &type_spec_ServerStreamWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerStreamWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServerStreamWebSocketInformation, &type_spec_ServerStreamWebSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServerStreamWebSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocketActivityContext, &type_spec_SocketActivityContext, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityContext, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocketActivityContext, &type_spec_SocketActivityContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityContext, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -10750,234 +10750,234 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_sockets(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocketActivityInformation, &type_spec_SocketActivityInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityInformation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocketActivityInformation, &type_spec_SocketActivityInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SocketActivityInformation_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocketActivityTriggerDetails, &type_spec_SocketActivityTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocketActivityTriggerDetails, &type_spec_SocketActivityTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketActivityTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocketError, &type_spec_SocketError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocketError, &type_spec_SocketError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocketError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocket, &type_spec_StreamSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocket, &type_spec_StreamSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocketControl, &type_spec_StreamSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocketControl, &type_spec_StreamSocketControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocketInformation, &type_spec_StreamSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocketInformation, &type_spec_StreamSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocketListener, &type_spec_StreamSocketListener, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListener, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocketListener, &type_spec_StreamSocketListener, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListener, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocketListenerConnectionReceivedEventArgs, &type_spec_StreamSocketListenerConnectionReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListenerConnectionReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocketListenerConnectionReceivedEventArgs, &type_spec_StreamSocketListenerConnectionReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListenerConnectionReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocketListenerControl, &type_spec_StreamSocketListenerControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListenerControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocketListenerControl, &type_spec_StreamSocketListenerControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListenerControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamSocketListenerInformation, &type_spec_StreamSocketListenerInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListenerInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamSocketListenerInformation, &type_spec_StreamSocketListenerInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamSocketListenerInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamWebSocket, &type_spec_StreamWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamWebSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamWebSocket, &type_spec_StreamWebSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamWebSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamWebSocketControl, &type_spec_StreamWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamWebSocketControl, &type_spec_StreamWebSocketControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamWebSocketControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreamWebSocketInformation, &type_spec_StreamWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreamWebSocketInformation, &type_spec_StreamWebSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreamWebSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebSocketClosedEventArgs, &type_spec_WebSocketClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebSocketClosedEventArgs, &type_spec_WebSocketClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebSocketError, &type_spec_WebSocketError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebSocketError, &type_spec_WebSocketError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebSocketKeepAlive, &type_spec_WebSocketKeepAlive, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketKeepAlive, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebSocketKeepAlive, &type_spec_WebSocketKeepAlive, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketKeepAlive, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebSocketServerCustomValidationRequestedEventArgs, &type_spec_WebSocketServerCustomValidationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketServerCustomValidationRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebSocketServerCustomValidationRequestedEventArgs, &type_spec_WebSocketServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebSocketServerCustomValidationRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerEventDetails, &type_spec_IControlChannelTriggerEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IControlChannelTriggerEventDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerEventDetails, &type_spec_IControlChannelTriggerEventDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IControlChannelTriggerEventDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerResetEventDetails, &type_spec_IControlChannelTriggerResetEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IControlChannelTriggerResetEventDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IControlChannelTriggerResetEventDetails, &type_spec_IControlChannelTriggerResetEventDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IControlChannelTriggerResetEventDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebSocket, &type_spec_IWebSocket, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocket, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebSocket, &type_spec_IWebSocket, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocket, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebSocketControl, &type_spec_IWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketControl, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebSocketControl, &type_spec_IWebSocketControl, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketControl, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebSocketControl2, &type_spec_IWebSocketControl2, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketControl2, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebSocketControl2, &type_spec_IWebSocketControl2, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketControl2, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebSocketInformation, &type_spec_IWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebSocketInformation, &type_spec_IWebSocketInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebSocketInformation2, &type_spec_IWebSocketInformation2, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketInformation2, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebSocketInformation2, &type_spec_IWebSocketInformation2, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebSocketInformation2, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BandwidthStatistics, &type_spec_BandwidthStatistics, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BandwidthStatistics, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BandwidthStatistics, &type_spec_BandwidthStatistics, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BandwidthStatistics, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RoundTripTimeStatistics, &type_spec_RoundTripTimeStatistics, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RoundTripTimeStatistics, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RoundTripTimeStatistics, &type_spec_RoundTripTimeStatistics, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RoundTripTimeStatistics, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

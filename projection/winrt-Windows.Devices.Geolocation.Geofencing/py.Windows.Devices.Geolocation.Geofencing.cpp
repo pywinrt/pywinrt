@@ -802,9 +802,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexce
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Geofence, &type_spec_Geofence, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Geofence, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Geofence, &type_spec_Geofence, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Geofence, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -817,18 +817,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_geofencing(void) noexce
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GeofenceMonitor, &type_spec_GeofenceMonitor, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeofenceMonitor_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeofenceMonitor, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeofenceMonitor_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GeofenceMonitor, &type_spec_GeofenceMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeofenceMonitor_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeofenceMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeofenceMonitor_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GeofenceStateChangeReport, &type_spec_GeofenceStateChangeReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeofenceStateChangeReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GeofenceStateChangeReport, &type_spec_GeofenceStateChangeReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeofenceStateChangeReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

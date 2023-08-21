@@ -4605,153 +4605,153 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_scenes(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneBoundingBox, &type_spec_SceneBoundingBox, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneBoundingBox, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneBoundingBox, &type_spec_SceneBoundingBox, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneComponent, &type_spec_SceneComponent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneComponent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneComponent, &type_spec_SceneComponent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneComponent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneComponentCollection, &type_spec_SceneComponentCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneComponentCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneComponentCollection, &type_spec_SceneComponentCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneComponentCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneMaterial, &type_spec_SceneMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneMaterial, &type_spec_SceneMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneMaterialInput, &type_spec_SceneMaterialInput, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMaterialInput, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneMaterialInput, &type_spec_SceneMaterialInput, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMaterialInput, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneMesh, &type_spec_SceneMesh, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMesh, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneMesh, &type_spec_SceneMesh, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMesh, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneMeshMaterialAttributeMap, &type_spec_SceneMeshMaterialAttributeMap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMeshMaterialAttributeMap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneMeshMaterialAttributeMap, &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneMeshRendererComponent, &type_spec_SceneMeshRendererComponent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneMeshRendererComponent, &type_spec_SceneMeshRendererComponent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneMetallicRoughnessMaterial, &type_spec_SceneMetallicRoughnessMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneMetallicRoughnessMaterial, &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneModelTransform, &type_spec_SceneModelTransform, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneModelTransform, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneModelTransform, &type_spec_SceneModelTransform, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneModelTransform, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneNode, &type_spec_SceneNode, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneNode, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneNode, &type_spec_SceneNode, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneNode, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneNodeCollection, &type_spec_SceneNodeCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneNodeCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneNodeCollection, &type_spec_SceneNodeCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneNodeCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneObject, &type_spec_SceneObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneObject, &type_spec_SceneObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScenePbrMaterial, &type_spec_ScenePbrMaterial, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScenePbrMaterial, &type_spec_ScenePbrMaterial, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneRendererComponent, &type_spec_SceneRendererComponent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneRendererComponent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneRendererComponent, &type_spec_SceneRendererComponent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneSurfaceMaterialInput, &type_spec_SceneSurfaceMaterialInput, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneSurfaceMaterialInput, &type_spec_SceneSurfaceMaterialInput, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SceneVisual, &type_spec_SceneVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SceneVisual, &type_spec_SceneVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SceneVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

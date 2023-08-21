@@ -4232,153 +4232,153 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentAddress, &type_spec_PaymentAddress, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAddress, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentAddress, &type_spec_PaymentAddress, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAddress, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentCanMakePaymentResult, &type_spec_PaymentCanMakePaymentResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentCanMakePaymentResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentCanMakePaymentResult, &type_spec_PaymentCanMakePaymentResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentCanMakePaymentResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentCurrencyAmount, &type_spec_PaymentCurrencyAmount, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentCurrencyAmount, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentCurrencyAmount, &type_spec_PaymentCurrencyAmount, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentCurrencyAmount, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentDetails, &type_spec_PaymentDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentDetails, &type_spec_PaymentDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentDetailsModifier, &type_spec_PaymentDetailsModifier, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentDetailsModifier, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentDetailsModifier, &type_spec_PaymentDetailsModifier, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentDetailsModifier, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentItem, &type_spec_PaymentItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentItem, &type_spec_PaymentItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentMediator, &type_spec_PaymentMediator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentMediator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentMediator, &type_spec_PaymentMediator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentMediator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentMerchantInfo, &type_spec_PaymentMerchantInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentMerchantInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentMerchantInfo, &type_spec_PaymentMerchantInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentMerchantInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentMethodData, &type_spec_PaymentMethodData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentMethodData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentMethodData, &type_spec_PaymentMethodData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentMethodData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentOptions, &type_spec_PaymentOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentOptions, &type_spec_PaymentOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentRequest, &type_spec_PaymentRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentRequest, &type_spec_PaymentRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentRequestChangedArgs, &type_spec_PaymentRequestChangedArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequestChangedArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentRequestChangedArgs, &type_spec_PaymentRequestChangedArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequestChangedArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentRequestChangedResult, &type_spec_PaymentRequestChangedResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequestChangedResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentRequestChangedResult, &type_spec_PaymentRequestChangedResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequestChangedResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentRequestSubmitResult, &type_spec_PaymentRequestSubmitResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequestSubmitResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentRequestSubmitResult, &type_spec_PaymentRequestSubmitResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentRequestSubmitResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentResponse, &type_spec_PaymentResponse, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentResponse, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentResponse, &type_spec_PaymentResponse, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentResponse, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentShippingOption, &type_spec_PaymentShippingOption, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentShippingOption, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentShippingOption, &type_spec_PaymentShippingOption, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentShippingOption, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentToken, &type_spec_PaymentToken, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentToken, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentToken, &type_spec_PaymentToken, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentToken, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

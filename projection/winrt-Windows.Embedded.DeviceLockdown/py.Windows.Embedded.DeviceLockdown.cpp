@@ -306,18 +306,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_embedded_devicelockdown(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfile, &type_spec_DeviceLockdownProfile, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceLockdownProfile, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfile, &type_spec_DeviceLockdownProfile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceLockdownProfile, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfileInformation, &type_spec_DeviceLockdownProfileInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceLockdownProfileInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceLockdownProfileInformation, &type_spec_DeviceLockdownProfileInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceLockdownProfileInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

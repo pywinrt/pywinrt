@@ -2449,18 +2449,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemacc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceAccountConfiguration, &type_spec_DeviceAccountConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceAccountConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceAccountConfiguration, &type_spec_DeviceAccountConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceAccountConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataAccountSystemAccessManager, &type_spec_UserDataAccountSystemAccessManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountSystemAccessManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataAccountSystemAccessManager, &type_spec_UserDataAccountSystemAccessManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountSystemAccessManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

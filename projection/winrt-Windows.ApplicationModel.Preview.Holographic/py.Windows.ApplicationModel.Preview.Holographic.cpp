@@ -344,18 +344,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_preview_holographic(void) 
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicApplicationPreview, &type_spec_HolographicApplicationPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicApplicationPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicApplicationPreview, &type_spec_HolographicApplicationPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicApplicationPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicKeyboardPlacementOverridePreview, &type_spec_HolographicKeyboardPlacementOverridePreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicKeyboardPlacementOverridePreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicKeyboardPlacementOverridePreview, &type_spec_HolographicKeyboardPlacementOverridePreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicKeyboardPlacementOverridePreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

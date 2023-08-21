@@ -410,16 +410,14 @@ struct py_type<%>
         // workaround for https://bugs.python.org/issue40724
         w.write("#if PY_VERSION_HEX < 0x03090000\n");
         w.write(
-            "if (py::register_python_type(module.get(), type_name_@, &type_spec_@, %, %, %) == -1)\n",
-            type.TypeName(),
+            "if (py::register_python_type(module.get(), &type_spec_@, %, %, %) == -1)\n",
             type.TypeName(),
             buffer_procs,
             bind<write_type_base>(type),
             metaclass);
         w.write("#else\n");
         w.write(
-            "if (py::register_python_type(module.get(), type_name_@, &type_spec_@, %, %) == -1)\n",
-            type.TypeName(),
+            "if (py::register_python_type(module.get(), &type_spec_@, %, %) == -1)\n",
             type.TypeName(),
             bind<write_type_base>(type),
             metaclass);

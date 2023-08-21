@@ -1413,45 +1413,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_popups(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MessageDialog, &type_spec_MessageDialog, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageDialog, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MessageDialog, &type_spec_MessageDialog, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MessageDialog, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PopupMenu, &type_spec_PopupMenu, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PopupMenu, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PopupMenu, &type_spec_PopupMenu, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PopupMenu, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UICommand, &type_spec_UICommand, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UICommand, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UICommand, &type_spec_UICommand, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UICommand, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UICommandSeparator, &type_spec_UICommandSeparator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UICommandSeparator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UICommandSeparator, &type_spec_UICommandSeparator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UICommandSeparator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IUICommand, &type_spec_IUICommand, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IUICommand, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IUICommand, &type_spec_IUICommand, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IUICommand, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

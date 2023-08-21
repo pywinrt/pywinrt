@@ -18663,45 +18663,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CustomMapTileDataSource, &type_spec_CustomMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CustomMapTileDataSource, &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpMapTileDataSource, &type_spec_HttpMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpMapTileDataSource, &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LocalMapTileDataSource, &type_spec_LocalMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LocalMapTileDataSource, &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapActualCameraChangedEventArgs, &type_spec_MapActualCameraChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapActualCameraChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapActualCameraChangedEventArgs, &type_spec_MapActualCameraChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapActualCameraChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapActualCameraChangingEventArgs, &type_spec_MapActualCameraChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapActualCameraChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapActualCameraChangingEventArgs, &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -18714,27 +18714,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapBillboard, &type_spec_MapBillboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapBillboard, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapBillboard, &type_spec_MapBillboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapBillboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapCamera, &type_spec_MapCamera, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapCamera, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapCamera, &type_spec_MapCamera, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapCamera, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapContextRequestedEventArgs, &type_spec_MapContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapContextRequestedEventArgs, &type_spec_MapContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -18747,108 +18747,108 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControl, &type_spec_MapControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControl, &type_spec_MapControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkClickEventArgs, &type_spec_MapControlBusinessLandmarkClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkClickEventArgs, &type_spec_MapControlBusinessLandmarkClickEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkClickEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerEnteredEventArgs, &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerEnteredEventArgs, &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerExitedEventArgs, &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkPointerExitedEventArgs, &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkRightTappedEventArgs, &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlBusinessLandmarkRightTappedEventArgs, &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlBusinessLandmarkRightTappedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlDataHelper, &type_spec_MapControlDataHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlDataHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlDataHelper, &type_spec_MapControlDataHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlDataHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureClickEventArgs, &type_spec_MapControlTransitFeatureClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureClickEventArgs, &type_spec_MapControlTransitFeatureClickEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureClickEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerEnteredEventArgs, &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerEnteredEventArgs, &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerExitedEventArgs, &type_spec_MapControlTransitFeaturePointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeaturePointerExitedEventArgs, &type_spec_MapControlTransitFeaturePointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeaturePointerExitedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureRightTappedEventArgs, &type_spec_MapControlTransitFeatureRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlTransitFeatureRightTappedEventArgs, &type_spec_MapControlTransitFeatureRightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlTransitFeatureRightTappedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapCustomExperience, &type_spec_MapCustomExperience, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapCustomExperience, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapCustomExperience, &type_spec_MapCustomExperience, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapCustomExperience, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapCustomExperienceChangedEventArgs, &type_spec_MapCustomExperienceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapCustomExperienceChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapCustomExperienceChangedEventArgs, &type_spec_MapCustomExperienceChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapCustomExperienceChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -18861,9 +18861,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElement, &type_spec_MapElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElement, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElement, &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -18876,36 +18876,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElement3D, &type_spec_MapElement3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElement3D, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElement3D, &type_spec_MapElement3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElement3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementClickEventArgs, &type_spec_MapElementClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementClickEventArgs, &type_spec_MapElementClickEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementClickEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementPointerEnteredEventArgs, &type_spec_MapElementPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementPointerEnteredEventArgs, &type_spec_MapElementPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementPointerExitedEventArgs, &type_spec_MapElementPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementPointerExitedEventArgs, &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -18918,45 +18918,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementsLayer, &type_spec_MapElementsLayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementsLayer, &type_spec_MapElementsLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerClickEventArgs, &type_spec_MapElementsLayerClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerClickEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerClickEventArgs, &type_spec_MapElementsLayerClickEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerClickEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerContextRequestedEventArgs, &type_spec_MapElementsLayerContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerContextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerContextRequestedEventArgs, &type_spec_MapElementsLayerContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerContextRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerEnteredEventArgs, &type_spec_MapElementsLayerPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerEnteredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerEnteredEventArgs, &type_spec_MapElementsLayerPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerEnteredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerExitedEventArgs, &type_spec_MapElementsLayerPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerExitedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapElementsLayerPointerExitedEventArgs, &type_spec_MapElementsLayerPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapElementsLayerPointerExitedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -18969,18 +18969,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapIcon, &type_spec_MapIcon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapIcon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapIcon, &type_spec_MapIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapInputEventArgs, &type_spec_MapInputEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapInputEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapInputEventArgs, &type_spec_MapInputEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapInputEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -18993,9 +18993,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapItemsControl, &type_spec_MapItemsControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapItemsControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapItemsControl, &type_spec_MapItemsControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapItemsControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -19008,18 +19008,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapLayer, &type_spec_MapLayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapLayer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapLayer, &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapModel3D, &type_spec_MapModel3D, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapModel3D, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapModel3D, &type_spec_MapModel3D, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapModel3D, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -19032,9 +19032,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapPolygon, &type_spec_MapPolygon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapPolygon, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapPolygon, &type_spec_MapPolygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapPolygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -19047,45 +19047,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapPolyline, &type_spec_MapPolyline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapPolyline, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapPolyline, &type_spec_MapPolyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapPolyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapRightTappedEventArgs, &type_spec_MapRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapRightTappedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapRightTappedEventArgs, &type_spec_MapRightTappedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapRightTappedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapRouteView, &type_spec_MapRouteView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapRouteView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapRouteView, &type_spec_MapRouteView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapRouteView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapScene, &type_spec_MapScene, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapScene, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapScene, &type_spec_MapScene, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapScene, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapStyleSheet, &type_spec_MapStyleSheet, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapStyleSheet, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapStyleSheet, &type_spec_MapStyleSheet, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapStyleSheet, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -19098,9 +19098,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntries, &type_spec_MapStyleSheetEntries, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapStyleSheetEntries, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntries, &type_spec_MapStyleSheetEntries, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapStyleSheetEntries, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntries_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -19113,54 +19113,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntryStates, &type_spec_MapStyleSheetEntryStates, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapStyleSheetEntryStates, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapStyleSheetEntryStates, &type_spec_MapStyleSheetEntryStates, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapStyleSheetEntryStates, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheetEntryStates_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTargetCameraChangedEventArgs, &type_spec_MapTargetCameraChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTargetCameraChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTargetCameraChangedEventArgs, &type_spec_MapTargetCameraChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTargetCameraChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequest, &type_spec_MapTileBitmapRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileBitmapRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequest, &type_spec_MapTileBitmapRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileBitmapRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestDeferral, &type_spec_MapTileBitmapRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestDeferral, &type_spec_MapTileBitmapRequestDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestedEventArgs, &type_spec_MapTileBitmapRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileBitmapRequestedEventArgs, &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileDataSource, &type_spec_MapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileDataSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileDataSource, &type_spec_MapTileDataSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -19173,63 +19173,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileSource, &type_spec_MapTileSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileSource, &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileUriRequest, &type_spec_MapTileUriRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileUriRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileUriRequest, &type_spec_MapTileUriRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileUriRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileUriRequestDeferral, &type_spec_MapTileUriRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileUriRequestDeferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileUriRequestDeferral, &type_spec_MapTileUriRequestDeferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileUriRequestDeferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapTileUriRequestedEventArgs, &type_spec_MapTileUriRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileUriRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapTileUriRequestedEventArgs, &type_spec_MapTileUriRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapTileUriRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreetsideExperience, &type_spec_StreetsideExperience, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreetsideExperience, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreetsideExperience, &type_spec_StreetsideExperience, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreetsideExperience, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StreetsidePanorama, &type_spec_StreetsidePanorama, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreetsidePanorama, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StreetsidePanorama, &type_spec_StreetsidePanorama, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StreetsidePanorama, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapZoomLevelRange, &type_spec_MapZoomLevelRange, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapZoomLevelRange, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapZoomLevelRange, &type_spec_MapZoomLevelRange, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapZoomLevelRange, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

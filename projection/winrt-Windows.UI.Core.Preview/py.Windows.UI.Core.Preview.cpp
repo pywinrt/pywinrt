@@ -463,27 +463,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_core_preview(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreAppWindowPreview, &type_spec_CoreAppWindowPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreAppWindowPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreAppWindowPreview, &type_spec_CoreAppWindowPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreAppWindowPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemNavigationCloseRequestedPreviewEventArgs, &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemNavigationCloseRequestedPreviewEventArgs, &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemNavigationCloseRequestedPreviewEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemNavigationManagerPreview, &type_spec_SystemNavigationManagerPreview, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManagerPreview, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemNavigationManagerPreview, &type_spec_SystemNavigationManagerPreview, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemNavigationManagerPreview, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

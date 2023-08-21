@@ -5669,9 +5669,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ArcadeStick, &type_spec_ArcadeStick, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ArcadeStick, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ArcadeStick, &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ArcadeStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcadeStick_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -5684,9 +5684,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlightStick, &type_spec_FlightStick, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlightStick, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlightStick, &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlightStick, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlightStick_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -5699,18 +5699,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Gamepad, &type_spec_Gamepad, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Gamepad, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Gamepad, &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Gamepad, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Gamepad_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Headset, &type_spec_Headset, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Headset, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Headset, &type_spec_Headset, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Headset, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -5723,9 +5723,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RacingWheel, &type_spec_RacingWheel, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RacingWheel, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RacingWheel, &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RacingWheel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RacingWheel_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -5738,9 +5738,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RawGameController, &type_spec_RawGameController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawGameController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RawGameController, &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawGameController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RawGameController_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -5753,81 +5753,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UINavigationController, &type_spec_UINavigationController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UINavigationController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UINavigationController, &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UINavigationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UINavigationController_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGameController, &type_spec_IGameController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGameController, &type_spec_IGameController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGameControllerBatteryInfo, &type_spec_IGameControllerBatteryInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameControllerBatteryInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGameControllerBatteryInfo, &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGameControllerBatteryInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ArcadeStickReading, &type_spec_ArcadeStickReading, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ArcadeStickReading, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ArcadeStickReading, &type_spec_ArcadeStickReading, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ArcadeStickReading, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlightStickReading, &type_spec_FlightStickReading, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlightStickReading, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlightStickReading, &type_spec_FlightStickReading, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlightStickReading, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GamepadReading, &type_spec_GamepadReading, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GamepadReading, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GamepadReading, &type_spec_GamepadReading, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GamepadReading, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GamepadVibration, &type_spec_GamepadVibration, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GamepadVibration, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GamepadVibration, &type_spec_GamepadVibration, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GamepadVibration, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RacingWheelReading, &type_spec_RacingWheelReading, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RacingWheelReading, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RacingWheelReading, &type_spec_RacingWheelReading, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RacingWheelReading, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UINavigationReading, &type_spec_UINavigationReading, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UINavigationReading, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UINavigationReading, &type_spec_UINavigationReading, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UINavigationReading, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

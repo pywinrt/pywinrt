@@ -4752,45 +4752,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NamedResource, &type_spec_NamedResource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NamedResource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NamedResource, &type_spec_NamedResource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NamedResource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceCandidate, &type_spec_ResourceCandidate, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceCandidate, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceCandidate, &type_spec_ResourceCandidate, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceCandidate, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceCandidateVectorView, &type_spec_ResourceCandidateVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceCandidateVectorView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceCandidateVectorView, &type_spec_ResourceCandidateVectorView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceCandidateVectorView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceContext, &type_spec_ResourceContext, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceContext, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceContext, &type_spec_ResourceContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceContext, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceContextLanguagesVectorView, &type_spec_ResourceContextLanguagesVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceContextLanguagesVectorView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceContextLanguagesVectorView, &type_spec_ResourceContextLanguagesVectorView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceContextLanguagesVectorView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -4803,90 +4803,90 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceManager, &type_spec_ResourceManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceManager, &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceMap, &type_spec_ResourceMap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceMap, &type_spec_ResourceMap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceMapIterator, &type_spec_ResourceMapIterator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMapIterator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceMapIterator, &type_spec_ResourceMapIterator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMapIterator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceMapMapView, &type_spec_ResourceMapMapView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMapMapView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceMapMapView, &type_spec_ResourceMapMapView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMapMapView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceMapMapViewIterator, &type_spec_ResourceMapMapViewIterator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMapMapViewIterator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceMapMapViewIterator, &type_spec_ResourceMapMapViewIterator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceMapMapViewIterator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceQualifier, &type_spec_ResourceQualifier, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifier, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceQualifier, &type_spec_ResourceQualifier, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifier, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceQualifierMapView, &type_spec_ResourceQualifierMapView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierMapView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceQualifierMapView, &type_spec_ResourceQualifierMapView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierMapView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceQualifierObservableMap, &type_spec_ResourceQualifierObservableMap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierObservableMap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceQualifierObservableMap, &type_spec_ResourceQualifierObservableMap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierObservableMap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceQualifierVectorView, &type_spec_ResourceQualifierVectorView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierVectorView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceQualifierVectorView, &type_spec_ResourceQualifierVectorView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierVectorView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceLayoutInfo, &type_spec_ResourceLayoutInfo, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceLayoutInfo, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceLayoutInfo, &type_spec_ResourceLayoutInfo, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceLayoutInfo, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -743,45 +743,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_provider(
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataAccountPartnerAccountInfo, &type_spec_UserDataAccountPartnerAccountInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountPartnerAccountInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataAccountPartnerAccountInfo, &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountPartnerAccountInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderAddAccountOperation, &type_spec_UserDataAccountProviderAddAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderAddAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderAddAccountOperation, &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderResolveErrorsOperation, &type_spec_UserDataAccountProviderResolveErrorsOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderResolveErrorsOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderResolveErrorsOperation, &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderResolveErrorsOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderSettingsOperation, &type_spec_UserDataAccountProviderSettingsOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderSettingsOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataAccountProviderSettingsOperation, &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderSettingsOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IUserDataAccountProviderOperation, &type_spec_IUserDataAccountProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IUserDataAccountProviderOperation, &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

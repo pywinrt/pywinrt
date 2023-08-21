@@ -3814,126 +3814,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BufferProtectUnprotectResult, &type_spec_BufferProtectUnprotectResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BufferProtectUnprotectResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BufferProtectUnprotectResult, &type_spec_BufferProtectUnprotectResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BufferProtectUnprotectResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DataProtectionInfo, &type_spec_DataProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DataProtectionInfo, &type_spec_DataProtectionInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataProtectionInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DataProtectionManager, &type_spec_DataProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DataProtectionManager, &type_spec_DataProtectionManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DataProtectionManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileProtectionInfo, &type_spec_FileProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileProtectionInfo, &type_spec_FileProtectionInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileProtectionInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileProtectionManager, &type_spec_FileProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileProtectionManager, &type_spec_FileProtectionManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileProtectionManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileRevocationManager, &type_spec_FileRevocationManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileRevocationManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileRevocationManager, &type_spec_FileRevocationManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileRevocationManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FileUnprotectOptions, &type_spec_FileUnprotectOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUnprotectOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FileUnprotectOptions, &type_spec_FileUnprotectOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FileUnprotectOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectedAccessResumedEventArgs, &type_spec_ProtectedAccessResumedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedAccessResumedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectedAccessResumedEventArgs, &type_spec_ProtectedAccessResumedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedAccessResumedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectedAccessSuspendingEventArgs, &type_spec_ProtectedAccessSuspendingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedAccessSuspendingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectedAccessSuspendingEventArgs, &type_spec_ProtectedAccessSuspendingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedAccessSuspendingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectedContainerExportResult, &type_spec_ProtectedContainerExportResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedContainerExportResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectedContainerExportResult, &type_spec_ProtectedContainerExportResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedContainerExportResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectedContainerImportResult, &type_spec_ProtectedContainerImportResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedContainerImportResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectedContainerImportResult, &type_spec_ProtectedContainerImportResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedContainerImportResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectedContentRevokedEventArgs, &type_spec_ProtectedContentRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedContentRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectedContentRevokedEventArgs, &type_spec_ProtectedContentRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedContentRevokedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectedFileCreateResult, &type_spec_ProtectedFileCreateResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedFileCreateResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectedFileCreateResult, &type_spec_ProtectedFileCreateResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectedFileCreateResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectionPolicyAuditInfo, &type_spec_ProtectionPolicyAuditInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionPolicyAuditInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectionPolicyAuditInfo, &type_spec_ProtectionPolicyAuditInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionPolicyAuditInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -3946,18 +3946,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_enterprisedata(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProtectionPolicyManager, &type_spec_ProtectionPolicyManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionPolicyManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProtectionPolicyManager, &type_spec_ProtectionPolicyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProtectionPolicyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProtectionPolicyManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ThreadNetworkContext, &type_spec_ThreadNetworkContext, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThreadNetworkContext, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ThreadNetworkContext, &type_spec_ThreadNetworkContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThreadNetworkContext, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

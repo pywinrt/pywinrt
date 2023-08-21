@@ -1152,54 +1152,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_pushnotifications(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannel, &type_spec_PushNotificationChannel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannel, &type_spec_PushNotificationChannel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManager, &type_spec_PushNotificationChannelManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManager, &type_spec_PushNotificationChannelManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManagerForUser, &type_spec_PushNotificationChannelManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManagerForUser, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannelManagerForUser, &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelManagerForUser, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannelsRevokedEventArgs, &type_spec_PushNotificationChannelsRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelsRevokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PushNotificationChannelsRevokedEventArgs, &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationChannelsRevokedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PushNotificationReceivedEventArgs, &type_spec_PushNotificationReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PushNotificationReceivedEventArgs, &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PushNotificationReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RawNotification, &type_spec_RawNotification, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawNotification, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RawNotification, &type_spec_RawNotification, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawNotification, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

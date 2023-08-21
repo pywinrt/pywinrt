@@ -2627,126 +2627,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_targetedcontent(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentAction, &type_spec_TargetedContentAction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentAction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentAction, &type_spec_TargetedContentAction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentAction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentAvailabilityChangedEventArgs, &type_spec_TargetedContentAvailabilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentAvailabilityChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentAvailabilityChangedEventArgs, &type_spec_TargetedContentAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentAvailabilityChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentChangedEventArgs, &type_spec_TargetedContentChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentChangedEventArgs, &type_spec_TargetedContentChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentCollection, &type_spec_TargetedContentCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentCollection, &type_spec_TargetedContentCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentContainer, &type_spec_TargetedContentContainer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentContainer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentContainer, &type_spec_TargetedContentContainer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentContainer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentFile, &type_spec_TargetedContentFile, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentFile, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentFile, &type_spec_TargetedContentFile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentFile, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentImage, &type_spec_TargetedContentImage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentImage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentImage, &type_spec_TargetedContentImage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentImage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentItem, &type_spec_TargetedContentItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentItem, &type_spec_TargetedContentItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentItemState, &type_spec_TargetedContentItemState, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentItemState, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentItemState, &type_spec_TargetedContentItemState, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentItemState, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentObject, &type_spec_TargetedContentObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentObject, &type_spec_TargetedContentObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentStateChangedEventArgs, &type_spec_TargetedContentStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentStateChangedEventArgs, &type_spec_TargetedContentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentSubscription, &type_spec_TargetedContentSubscription, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentSubscription, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentSubscription, &type_spec_TargetedContentSubscription, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentSubscription, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentSubscriptionOptions, &type_spec_TargetedContentSubscriptionOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentSubscriptionOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentSubscriptionOptions, &type_spec_TargetedContentSubscriptionOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentSubscriptionOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TargetedContentValue, &type_spec_TargetedContentValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TargetedContentValue, &type_spec_TargetedContentValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TargetedContentValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

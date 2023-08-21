@@ -2132,36 +2132,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_atompub(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AtomPubClient, &type_spec_AtomPubClient, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AtomPubClient, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AtomPubClient, &type_spec_AtomPubClient, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AtomPubClient, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceCollection, &type_spec_ResourceCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceCollection, &type_spec_ResourceCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ServiceDocument, &type_spec_ServiceDocument, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServiceDocument, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ServiceDocument, &type_spec_ServiceDocument, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ServiceDocument, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Workspace, &type_spec_Workspace, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Workspace, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Workspace, &type_spec_Workspace, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Workspace, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

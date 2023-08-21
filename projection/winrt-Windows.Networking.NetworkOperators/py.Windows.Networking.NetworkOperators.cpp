@@ -16120,45 +16120,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESim, &type_spec_ESim, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESim, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESim, &type_spec_ESim, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESim, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimAddedEventArgs, &type_spec_ESimAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimAddedEventArgs, &type_spec_ESimAddedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimAddedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimDiscoverEvent, &type_spec_ESimDiscoverEvent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimDiscoverEvent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimDiscoverEvent, &type_spec_ESimDiscoverEvent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimDiscoverEvent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimDiscoverResult, &type_spec_ESimDiscoverResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimDiscoverResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimDiscoverResult, &type_spec_ESimDiscoverResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimDiscoverResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimDownloadProfileMetadataResult, &type_spec_ESimDownloadProfileMetadataResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimDownloadProfileMetadataResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimDownloadProfileMetadataResult, &type_spec_ESimDownloadProfileMetadataResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimDownloadProfileMetadataResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -16171,126 +16171,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimManager, &type_spec_ESimManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimManager, &type_spec_ESimManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ESimManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimOperationResult, &type_spec_ESimOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimOperationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimOperationResult, &type_spec_ESimOperationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimOperationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimPolicy, &type_spec_ESimPolicy, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimPolicy, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimPolicy, &type_spec_ESimPolicy, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimPolicy, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimProfile, &type_spec_ESimProfile, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfile, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimProfile, &type_spec_ESimProfile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfile, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimProfileMetadata, &type_spec_ESimProfileMetadata, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfileMetadata, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimProfileMetadata, &type_spec_ESimProfileMetadata, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfileMetadata, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimProfilePolicy, &type_spec_ESimProfilePolicy, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfilePolicy, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimProfilePolicy, &type_spec_ESimProfilePolicy, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfilePolicy, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimRemovedEventArgs, &type_spec_ESimRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimRemovedEventArgs, &type_spec_ESimRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimRemovedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimServiceInfo, &type_spec_ESimServiceInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimServiceInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimServiceInfo, &type_spec_ESimServiceInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimServiceInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimUpdatedEventArgs, &type_spec_ESimUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimUpdatedEventArgs, &type_spec_ESimUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimWatcher, &type_spec_ESimWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimWatcher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimWatcher, &type_spec_ESimWatcher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimWatcher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FdnAccessManager, &type_spec_FdnAccessManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FdnAccessManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FdnAccessManager, &type_spec_FdnAccessManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FdnAccessManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationContext, &type_spec_HotspotAuthenticationContext, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HotspotAuthenticationContext, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationContext, &type_spec_HotspotAuthenticationContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HotspotAuthenticationContext, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationEventDetails, &type_spec_HotspotAuthenticationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HotspotAuthenticationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HotspotAuthenticationEventDetails, &type_spec_HotspotAuthenticationEventDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HotspotAuthenticationEventDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HotspotCredentialsAuthenticationResult, &type_spec_HotspotCredentialsAuthenticationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HotspotCredentialsAuthenticationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HotspotCredentialsAuthenticationResult, &type_spec_HotspotCredentialsAuthenticationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HotspotCredentialsAuthenticationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -16303,9 +16303,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownCSimFilePaths, &type_spec_KnownCSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownCSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownCSimFilePaths, &type_spec_KnownCSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownCSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCSimFilePaths_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -16318,9 +16318,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownRuimFilePaths, &type_spec_KnownRuimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownRuimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownRuimFilePaths, &type_spec_KnownRuimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownRuimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRuimFilePaths_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -16333,9 +16333,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownSimFilePaths, &type_spec_KnownSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownSimFilePaths, &type_spec_KnownSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownSimFilePaths_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -16348,9 +16348,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownUSimFilePaths, &type_spec_KnownUSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownUSimFilePaths, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownUSimFilePaths, &type_spec_KnownUSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownUSimFilePaths, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownUSimFilePaths_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -16363,549 +16363,549 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccount, &type_spec_MobileBroadbandAccount, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccount, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccount, &type_spec_MobileBroadbandAccount, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccount, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MobileBroadbandAccount_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountEventArgs, &type_spec_MobileBroadbandAccountEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountEventArgs, &type_spec_MobileBroadbandAccountEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountUpdatedEventArgs, &type_spec_MobileBroadbandAccountUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountUpdatedEventArgs, &type_spec_MobileBroadbandAccountUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountWatcher, &type_spec_MobileBroadbandAccountWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountWatcher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAccountWatcher, &type_spec_MobileBroadbandAccountWatcher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAccountWatcher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAntennaSar, &type_spec_MobileBroadbandAntennaSar, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAntennaSar, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandAntennaSar, &type_spec_MobileBroadbandAntennaSar, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandAntennaSar, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellCdma, &type_spec_MobileBroadbandCellCdma, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellCdma, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellCdma, &type_spec_MobileBroadbandCellCdma, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellCdma, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellGsm, &type_spec_MobileBroadbandCellGsm, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellGsm, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellGsm, &type_spec_MobileBroadbandCellGsm, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellGsm, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellLte, &type_spec_MobileBroadbandCellLte, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellLte, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellLte, &type_spec_MobileBroadbandCellLte, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellLte, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellNR, &type_spec_MobileBroadbandCellNR, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellNR, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellNR, &type_spec_MobileBroadbandCellNR, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellNR, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellTdscdma, &type_spec_MobileBroadbandCellTdscdma, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellTdscdma, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellTdscdma, &type_spec_MobileBroadbandCellTdscdma, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellTdscdma, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellUmts, &type_spec_MobileBroadbandCellUmts, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellUmts, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellUmts, &type_spec_MobileBroadbandCellUmts, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellUmts, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellsInfo, &type_spec_MobileBroadbandCellsInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellsInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCellsInfo, &type_spec_MobileBroadbandCellsInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCellsInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCurrentSlotIndexChangedEventArgs, &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandCurrentSlotIndexChangedEventArgs, &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandCurrentSlotIndexChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceInformation, &type_spec_MobileBroadbandDeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceInformation, &type_spec_MobileBroadbandDeviceInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceService, &type_spec_MobileBroadbandDeviceService, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceService, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceService, &type_spec_MobileBroadbandDeviceService, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceService, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandResult, &type_spec_MobileBroadbandDeviceServiceCommandResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandResult, &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandSession, &type_spec_MobileBroadbandDeviceServiceCommandSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceCommandSession, &type_spec_MobileBroadbandDeviceServiceCommandSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataReceivedEventArgs, &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataReceivedEventArgs, &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataSession, &type_spec_MobileBroadbandDeviceServiceDataSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceDataSession, &type_spec_MobileBroadbandDeviceServiceDataSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceDataSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceInformation, &type_spec_MobileBroadbandDeviceServiceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceInformation, &type_spec_MobileBroadbandDeviceServiceInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceTriggerDetails, &type_spec_MobileBroadbandDeviceServiceTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandDeviceServiceTriggerDetails, &type_spec_MobileBroadbandDeviceServiceTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandModem, &type_spec_MobileBroadbandModem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandModem, &type_spec_MobileBroadbandModem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemConfiguration, &type_spec_MobileBroadbandModemConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModemConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemConfiguration, &type_spec_MobileBroadbandModemConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModemConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemIsolation, &type_spec_MobileBroadbandModemIsolation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModemIsolation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandModemIsolation, &type_spec_MobileBroadbandModemIsolation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandModemIsolation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetwork, &type_spec_MobileBroadbandNetwork, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandNetwork, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetwork, &type_spec_MobileBroadbandNetwork, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandNetwork, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChange, &type_spec_MobileBroadbandNetworkRegistrationStateChange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChange, &type_spec_MobileBroadbandNetworkRegistrationStateChange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPco, &type_spec_MobileBroadbandPco, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPco, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPco, &type_spec_MobileBroadbandPco, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPco, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTriggerDetails, &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPcoDataChangeTriggerDetails, &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPcoDataChangeTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPin, &type_spec_MobileBroadbandPin, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPin, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPin, &type_spec_MobileBroadbandPin, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPin, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChange, &type_spec_MobileBroadbandPinLockStateChange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChange, &type_spec_MobileBroadbandPinLockStateChange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTriggerDetails, &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinLockStateChangeTriggerDetails, &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinLockStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinManager, &type_spec_MobileBroadbandPinManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinManager, &type_spec_MobileBroadbandPinManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinOperationResult, &type_spec_MobileBroadbandPinOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinOperationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandPinOperationResult, &type_spec_MobileBroadbandPinOperationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandPinOperationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChange, &type_spec_MobileBroadbandRadioStateChange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChange, &type_spec_MobileBroadbandRadioStateChange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTriggerDetails, &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandRadioStateChangeTriggerDetails, &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandRadioStateChangeTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSarManager, &type_spec_MobileBroadbandSarManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSarManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSarManager, &type_spec_MobileBroadbandSarManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSarManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfo, &type_spec_MobileBroadbandSlotInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfo, &type_spec_MobileBroadbandSlotInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfoChangedEventArgs, &type_spec_MobileBroadbandSlotInfoChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfoChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotInfoChangedEventArgs, &type_spec_MobileBroadbandSlotInfoChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotInfoChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotManager, &type_spec_MobileBroadbandSlotManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandSlotManager, &type_spec_MobileBroadbandSlotManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandSlotManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandTransmissionStateChangedEventArgs, &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandTransmissionStateChangedEventArgs, &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandTransmissionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUicc, &type_spec_MobileBroadbandUicc, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUicc, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUicc, &type_spec_MobileBroadbandUicc, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUicc, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccApp, &type_spec_MobileBroadbandUiccApp, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccApp, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccApp, &type_spec_MobileBroadbandUiccApp, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccApp, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppReadRecordResult, &type_spec_MobileBroadbandUiccAppReadRecordResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppReadRecordResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppReadRecordResult, &type_spec_MobileBroadbandUiccAppReadRecordResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppReadRecordResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppRecordDetailsResult, &type_spec_MobileBroadbandUiccAppRecordDetailsResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppRecordDetailsResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppRecordDetailsResult, &type_spec_MobileBroadbandUiccAppRecordDetailsResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppRecordDetailsResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppsResult, &type_spec_MobileBroadbandUiccAppsResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppsResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MobileBroadbandUiccAppsResult, &type_spec_MobileBroadbandUiccAppsResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MobileBroadbandUiccAppsResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTriggerDetails, &type_spec_NetworkOperatorDataUsageTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorDataUsageTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorDataUsageTriggerDetails, &type_spec_NetworkOperatorDataUsageTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorDataUsageTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorNotificationEventDetails, &type_spec_NetworkOperatorNotificationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorNotificationEventDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorNotificationEventDetails, &type_spec_NetworkOperatorNotificationEventDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorNotificationEventDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringAccessPointConfiguration, &type_spec_NetworkOperatorTetheringAccessPointConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringAccessPointConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringAccessPointConfiguration, &type_spec_NetworkOperatorTetheringAccessPointConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringAccessPointConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringClient, &type_spec_NetworkOperatorTetheringClient, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringClient, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringClient, &type_spec_NetworkOperatorTetheringClient, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringClient, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringManager, &type_spec_NetworkOperatorTetheringManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringManager, &type_spec_NetworkOperatorTetheringManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringOperationResult, &type_spec_NetworkOperatorTetheringOperationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringOperationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NetworkOperatorTetheringOperationResult, &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProvisionFromXmlDocumentResults, &type_spec_ProvisionFromXmlDocumentResults, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProvisionFromXmlDocumentResults, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProvisionFromXmlDocumentResults, &type_spec_ProvisionFromXmlDocumentResults, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProvisionFromXmlDocumentResults, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProvisionedProfile, &type_spec_ProvisionedProfile, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProvisionedProfile, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProvisionedProfile, &type_spec_ProvisionedProfile, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProvisionedProfile, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProvisioningAgent, &type_spec_ProvisioningAgent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProvisioningAgent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProvisioningAgent, &type_spec_ProvisioningAgent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProvisioningAgent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTriggerDetails, &type_spec_TetheringEntitlementCheckTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TetheringEntitlementCheckTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TetheringEntitlementCheckTriggerDetails, &type_spec_TetheringEntitlementCheckTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TetheringEntitlementCheckTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UssdMessage, &type_spec_UssdMessage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UssdMessage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UssdMessage, &type_spec_UssdMessage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UssdMessage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UssdReply, &type_spec_UssdReply, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UssdReply, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UssdReply, &type_spec_UssdReply, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UssdReply, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UssdSession, &type_spec_UssdSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UssdSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UssdSession, &type_spec_UssdSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UssdSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ESimProfileInstallProgress, &type_spec_ESimProfileInstallProgress, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfileInstallProgress, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ESimProfileInstallProgress, &type_spec_ESimProfileInstallProgress, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ESimProfileInstallProgress, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProfileUsage, &type_spec_ProfileUsage, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProfileUsage, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProfileUsage, &type_spec_ProfileUsage, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProfileUsage, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

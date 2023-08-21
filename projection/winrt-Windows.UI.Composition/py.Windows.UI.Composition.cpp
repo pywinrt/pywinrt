@@ -29722,9 +29722,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AmbientLight, &type_spec_AmbientLight, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AmbientLight, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AmbientLight, &type_spec_AmbientLight, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AmbientLight, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -29737,387 +29737,387 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AnimationController, &type_spec_AnimationController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AnimationController, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AnimationController, &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AnimationPropertyInfo, &type_spec_AnimationPropertyInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AnimationPropertyInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AnimationPropertyInfo, &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BackEasingFunction, &type_spec_BackEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BackEasingFunction, &type_spec_BackEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BackEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BooleanKeyFrameAnimation, &type_spec_BooleanKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BooleanKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BooleanKeyFrameAnimation, &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BounceEasingFunction, &type_spec_BounceEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BounceEasingFunction, &type_spec_BounceEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BounceScalarNaturalMotionAnimation, &type_spec_BounceScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BounceScalarNaturalMotionAnimation, &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BounceVector2NaturalMotionAnimation, &type_spec_BounceVector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceVector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BounceVector2NaturalMotionAnimation, &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BounceVector3NaturalMotionAnimation, &type_spec_BounceVector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceVector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BounceVector3NaturalMotionAnimation, &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CircleEasingFunction, &type_spec_CircleEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CircleEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CircleEasingFunction, &type_spec_CircleEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CircleEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ColorKeyFrameAnimation, &type_spec_ColorKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ColorKeyFrameAnimation, &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionAnimation, &type_spec_CompositionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionAnimation, &type_spec_CompositionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionAnimationGroup, &type_spec_CompositionAnimationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionAnimationGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionAnimationGroup, &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionBackdropBrush, &type_spec_CompositionBackdropBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionBackdropBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionBackdropBrush, &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionBatchCompletedEventArgs, &type_spec_CompositionBatchCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionBatchCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionBatchCompletedEventArgs, &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionBrush, &type_spec_CompositionBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionBrush, &type_spec_CompositionBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionCapabilities, &type_spec_CompositionCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionCapabilities, &type_spec_CompositionCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionClip, &type_spec_CompositionClip, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionClip, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionClip, &type_spec_CompositionClip, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionClip, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionColorBrush, &type_spec_CompositionColorBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionColorBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionColorBrush, &type_spec_CompositionColorBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionColorBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStop, &type_spec_CompositionColorGradientStop, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionColorGradientStop, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStop, &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStopCollection, &type_spec_CompositionColorGradientStopCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionColorGradientStopCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionColorGradientStopCollection, &type_spec_CompositionColorGradientStopCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionColorGradientStopCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionCommitBatch, &type_spec_CompositionCommitBatch, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionCommitBatch, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionCommitBatch, &type_spec_CompositionCommitBatch, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionCommitBatch, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionContainerShape, &type_spec_CompositionContainerShape, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionContainerShape, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionContainerShape, &type_spec_CompositionContainerShape, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionContainerShape, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionDrawingSurface, &type_spec_CompositionDrawingSurface, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionDrawingSurface, &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionEasingFunction, &type_spec_CompositionEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionEasingFunction, &type_spec_CompositionEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionEffectBrush, &type_spec_CompositionEffectBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEffectBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionEffectBrush, &type_spec_CompositionEffectBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEffectBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionEffectFactory, &type_spec_CompositionEffectFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEffectFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionEffectFactory, &type_spec_CompositionEffectFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEffectFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionEffectSourceParameter, &type_spec_CompositionEffectSourceParameter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEffectSourceParameter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionEffectSourceParameter, &type_spec_CompositionEffectSourceParameter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEffectSourceParameter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionEllipseGeometry, &type_spec_CompositionEllipseGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEllipseGeometry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionEllipseGeometry, &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionGeometricClip, &type_spec_CompositionGeometricClip, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGeometricClip, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionGeometricClip, &type_spec_CompositionGeometricClip, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGeometricClip, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionGeometry, &type_spec_CompositionGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGeometry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionGeometry, &type_spec_CompositionGeometry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGeometry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionGradientBrush, &type_spec_CompositionGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionGradientBrush, &type_spec_CompositionGradientBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionGraphicsDevice, &type_spec_CompositionGraphicsDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGraphicsDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionGraphicsDevice, &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionLight, &type_spec_CompositionLight, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionLight, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionLight, &type_spec_CompositionLight, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionLight, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionLineGeometry, &type_spec_CompositionLineGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionLineGeometry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionLineGeometry, &type_spec_CompositionLineGeometry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionLineGeometry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionLinearGradientBrush, &type_spec_CompositionLinearGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionLinearGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionLinearGradientBrush, &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionMaskBrush, &type_spec_CompositionMaskBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionMaskBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionMaskBrush, &type_spec_CompositionMaskBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionMaskBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionMipmapSurface, &type_spec_CompositionMipmapSurface, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionMipmapSurface, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionMipmapSurface, &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionNineGridBrush, &type_spec_CompositionNineGridBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionNineGridBrush, &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionObject, &type_spec_CompositionObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionObject, &type_spec_CompositionObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionPath, &type_spec_CompositionPath, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionPath, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionPath, &type_spec_CompositionPath, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionPath, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionPathGeometry, &type_spec_CompositionPathGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionPathGeometry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionPathGeometry, &type_spec_CompositionPathGeometry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionPathGeometry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadow, &type_spec_CompositionProjectedShadow, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadow, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadow, &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCaster, &type_spec_CompositionProjectedShadowCaster, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCaster, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCaster, &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30130,171 +30130,171 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCasterCollection, &type_spec_CompositionProjectedShadowCasterCollection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowCasterCollection, &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiver, &type_spec_CompositionProjectedShadowReceiver, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiver, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiver, &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiverUnorderedCollection, &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionProjectedShadowReceiverUnorderedCollection, &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionPropertySet, &type_spec_CompositionPropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionPropertySet, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionPropertySet, &type_spec_CompositionPropertySet, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionPropertySet, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionRadialGradientBrush, &type_spec_CompositionRadialGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionRadialGradientBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionRadialGradientBrush, &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionRectangleGeometry, &type_spec_CompositionRectangleGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionRectangleGeometry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionRectangleGeometry, &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionRoundedRectangleGeometry, &type_spec_CompositionRoundedRectangleGeometry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionRoundedRectangleGeometry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionRoundedRectangleGeometry, &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionScopedBatch, &type_spec_CompositionScopedBatch, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionScopedBatch, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionScopedBatch, &type_spec_CompositionScopedBatch, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionScopedBatch, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionShadow, &type_spec_CompositionShadow, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionShadow, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionShadow, &type_spec_CompositionShadow, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionShadow, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionShape, &type_spec_CompositionShape, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionShape, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionShape, &type_spec_CompositionShape, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionShape, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionShapeCollection, &type_spec_CompositionShapeCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionShapeCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionShapeCollection, &type_spec_CompositionShapeCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionShapeCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionSpriteShape, &type_spec_CompositionSpriteShape, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionSpriteShape, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionSpriteShape, &type_spec_CompositionSpriteShape, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionSpriteShape, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionStrokeDashArray, &type_spec_CompositionStrokeDashArray, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionStrokeDashArray, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionStrokeDashArray, &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionSurfaceBrush, &type_spec_CompositionSurfaceBrush, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionSurfaceBrush, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionSurfaceBrush, &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionTarget, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionTarget, &type_spec_CompositionTarget, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionTarget, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionTransform, &type_spec_CompositionTransform, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionTransform, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionTransform, &type_spec_CompositionTransform, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionTransform, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionViewBox, &type_spec_CompositionViewBox, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionViewBox, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionViewBox, &type_spec_CompositionViewBox, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionViewBox, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionVirtualDrawingSurface, &type_spec_CompositionVirtualDrawingSurface, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionVirtualDrawingSurface, &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompositionVisualSurface, &type_spec_CompositionVisualSurface, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionVisualSurface, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompositionVisualSurface, &type_spec_CompositionVisualSurface, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompositionVisualSurface, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -30307,441 +30307,441 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Compositor, &type_spec_Compositor, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Compositor, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Compositor, &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Compositor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Compositor_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ContainerVisual, &type_spec_ContainerVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContainerVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ContainerVisual, &type_spec_ContainerVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ContainerVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CubicBezierEasingFunction, &type_spec_CubicBezierEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CubicBezierEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CubicBezierEasingFunction, &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DelegatedInkTrailVisual, &type_spec_DelegatedInkTrailVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DelegatedInkTrailVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DelegatedInkTrailVisual, &type_spec_DelegatedInkTrailVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DelegatedInkTrailVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DistantLight, &type_spec_DistantLight, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DistantLight, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DistantLight, &type_spec_DistantLight, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DistantLight, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DropShadow, &type_spec_DropShadow, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DropShadow, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DropShadow, &type_spec_DropShadow, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DropShadow, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ElasticEasingFunction, &type_spec_ElasticEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElasticEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ElasticEasingFunction, &type_spec_ElasticEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ElasticEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExponentialEasingFunction, &type_spec_ExponentialEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExponentialEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExponentialEasingFunction, &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ExpressionAnimation, &type_spec_ExpressionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExpressionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ExpressionAnimation, &type_spec_ExpressionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ExpressionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ImplicitAnimationCollection, &type_spec_ImplicitAnimationCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImplicitAnimationCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ImplicitAnimationCollection, &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InitialValueExpressionCollection, &type_spec_InitialValueExpressionCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InitialValueExpressionCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InitialValueExpressionCollection, &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InsetClip, &type_spec_InsetClip, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InsetClip, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InsetClip, &type_spec_InsetClip, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InsetClip, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KeyFrameAnimation, &type_spec_KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KeyFrameAnimation, &type_spec_KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LayerVisual, &type_spec_LayerVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LayerVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LayerVisual, &type_spec_LayerVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LayerVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LinearEasingFunction, &type_spec_LinearEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LinearEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LinearEasingFunction, &type_spec_LinearEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LinearEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NaturalMotionAnimation, &type_spec_NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NaturalMotionAnimation, &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PathKeyFrameAnimation, &type_spec_PathKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PathKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PathKeyFrameAnimation, &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PointLight, &type_spec_PointLight, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointLight, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PointLight, &type_spec_PointLight, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointLight, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PowerEasingFunction, &type_spec_PowerEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PowerEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PowerEasingFunction, &type_spec_PowerEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PowerEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_QuaternionKeyFrameAnimation, &type_spec_QuaternionKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_QuaternionKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_QuaternionKeyFrameAnimation, &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RectangleClip, &type_spec_RectangleClip, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectangleClip, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RectangleClip, &type_spec_RectangleClip, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectangleClip, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RedirectVisual, &type_spec_RedirectVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RedirectVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RedirectVisual, &type_spec_RedirectVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RedirectVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RenderingDeviceReplacedEventArgs, &type_spec_RenderingDeviceReplacedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RenderingDeviceReplacedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RenderingDeviceReplacedEventArgs, &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScalarKeyFrameAnimation, &type_spec_ScalarKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScalarKeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScalarKeyFrameAnimation, &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScalarNaturalMotionAnimation, &type_spec_ScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScalarNaturalMotionAnimation, &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ShapeVisual, &type_spec_ShapeVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShapeVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ShapeVisual, &type_spec_ShapeVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShapeVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SineEasingFunction, &type_spec_SineEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SineEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SineEasingFunction, &type_spec_SineEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SineEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpotLight, &type_spec_SpotLight, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpotLight, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpotLight, &type_spec_SpotLight, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpotLight, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpringScalarNaturalMotionAnimation, &type_spec_SpringScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpringScalarNaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpringScalarNaturalMotionAnimation, &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpringVector2NaturalMotionAnimation, &type_spec_SpringVector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpringVector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpringVector2NaturalMotionAnimation, &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpringVector3NaturalMotionAnimation, &type_spec_SpringVector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpringVector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpringVector3NaturalMotionAnimation, &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpriteVisual, &type_spec_SpriteVisual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpriteVisual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpriteVisual, &type_spec_SpriteVisual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpriteVisual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_StepEasingFunction, &type_spec_StepEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StepEasingFunction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_StepEasingFunction, &type_spec_StepEasingFunction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_StepEasingFunction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector2KeyFrameAnimation, &type_spec_Vector2KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector2KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector2KeyFrameAnimation, &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector2NaturalMotionAnimation, &type_spec_Vector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector2NaturalMotionAnimation, &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector3KeyFrameAnimation, &type_spec_Vector3KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector3KeyFrameAnimation, &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector3NaturalMotionAnimation, &type_spec_Vector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector3NaturalMotionAnimation, &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Vector4KeyFrameAnimation, &type_spec_Vector4KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector4KeyFrameAnimation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Vector4KeyFrameAnimation, &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Visual, &type_spec_Visual, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Visual, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Visual, &type_spec_Visual, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Visual, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualCollection, &type_spec_VisualCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualCollection, &type_spec_VisualCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VisualUnorderedCollection, &type_spec_VisualUnorderedCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualUnorderedCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VisualUnorderedCollection, &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAnimationObject, &type_spec_IAnimationObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAnimationObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAnimationObject, &type_spec_IAnimationObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAnimationObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICompositionAnimationBase, &type_spec_ICompositionAnimationBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionAnimationBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICompositionAnimationBase, &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionAnimationBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICompositionSupportsSystemBackdrop, &type_spec_ICompositionSupportsSystemBackdrop, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionSupportsSystemBackdrop, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICompositionSupportsSystemBackdrop, &type_spec_ICompositionSupportsSystemBackdrop, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionSupportsSystemBackdrop, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICompositionSurface, &type_spec_ICompositionSurface, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionSurface, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICompositionSurface, &type_spec_ICompositionSurface, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionSurface, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICompositionSurfaceFacade, &type_spec_ICompositionSurfaceFacade, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionSurfaceFacade, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICompositionSurfaceFacade, &type_spec_ICompositionSurfaceFacade, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICompositionSurfaceFacade, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IVisualElement, &type_spec_IVisualElement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IVisualElement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IVisualElement, &type_spec_IVisualElement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IVisualElement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IVisualElement2, &type_spec_IVisualElement2, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IVisualElement2, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IVisualElement2, &type_spec_IVisualElement2, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IVisualElement2, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InkTrailPoint, &type_spec_InkTrailPoint, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InkTrailPoint, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InkTrailPoint, &type_spec_InkTrailPoint, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InkTrailPoint, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

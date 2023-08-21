@@ -2426,108 +2426,108 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception_provider(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_KnownPerceptionFrameKind, &type_spec_KnownPerceptionFrameKind, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameKind, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_KnownPerceptionFrameKind, &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameKind, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameKind_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionControlGroup, &type_spec_PerceptionControlGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionControlGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionControlGroup, &type_spec_PerceptionControlGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionControlGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionCorrelation, &type_spec_PerceptionCorrelation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionCorrelation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionCorrelation, &type_spec_PerceptionCorrelation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionCorrelation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionCorrelationGroup, &type_spec_PerceptionCorrelationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionCorrelationGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionCorrelationGroup, &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionCorrelationGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionFaceAuthenticationGroup, &type_spec_PerceptionFaceAuthenticationGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFaceAuthenticationGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionFaceAuthenticationGroup, &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFaceAuthenticationGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionFrame, &type_spec_PerceptionFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionFrame, &type_spec_PerceptionFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderInfo, &type_spec_PerceptionFrameProviderInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderInfo, &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderManagerService, &type_spec_PerceptionFrameProviderManagerService, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderManagerService, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionFrameProviderManagerService, &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameProviderManagerService, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionPropertyChangeRequest, &type_spec_PerceptionPropertyChangeRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionPropertyChangeRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionPropertyChangeRequest, &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionPropertyChangeRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionVideoFrameAllocator, &type_spec_PerceptionVideoFrameAllocator, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionVideoFrameAllocator, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionVideoFrameAllocator, &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionVideoFrameAllocator, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProvider, &type_spec_IPerceptionFrameProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPerceptionFrameProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProvider, &type_spec_IPerceptionFrameProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPerceptionFrameProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProviderManager, &type_spec_IPerceptionFrameProviderManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPerceptionFrameProviderManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IPerceptionFrameProviderManager, &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPerceptionFrameProviderManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

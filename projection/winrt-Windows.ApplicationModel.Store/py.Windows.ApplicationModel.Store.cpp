@@ -2622,9 +2622,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CurrentApp, &type_spec_CurrentApp, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentApp, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CurrentApp, &type_spec_CurrentApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -2637,72 +2637,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CurrentAppSimulator, &type_spec_CurrentAppSimulator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentAppSimulator, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CurrentAppSimulator, &type_spec_CurrentAppSimulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentAppSimulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LicenseInformation, &type_spec_LicenseInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LicenseInformation, &type_spec_LicenseInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LicenseInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListingInformation, &type_spec_ListingInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListingInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListingInformation, &type_spec_ListingInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListingInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProductLicense, &type_spec_ProductLicense, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProductLicense, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProductLicense, &type_spec_ProductLicense, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProductLicense, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProductListing, &type_spec_ProductListing, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProductListing, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProductListing, &type_spec_ProductListing, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProductListing, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProductPurchaseDisplayProperties, &type_spec_ProductPurchaseDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProductPurchaseDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProductPurchaseDisplayProperties, &type_spec_ProductPurchaseDisplayProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProductPurchaseDisplayProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PurchaseResults, &type_spec_PurchaseResults, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PurchaseResults, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PurchaseResults, &type_spec_PurchaseResults, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PurchaseResults, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UnfulfilledConsumable, &type_spec_UnfulfilledConsumable, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnfulfilledConsumable, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UnfulfilledConsumable, &type_spec_UnfulfilledConsumable, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnfulfilledConsumable, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

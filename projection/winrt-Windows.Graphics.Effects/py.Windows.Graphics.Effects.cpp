@@ -251,18 +251,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_effects(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGraphicsEffect, &type_spec_IGraphicsEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGraphicsEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGraphicsEffect, &type_spec_IGraphicsEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGraphicsEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGraphicsEffectSource, &type_spec_IGraphicsEffectSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGraphicsEffectSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGraphicsEffectSource, &type_spec_IGraphicsEffectSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGraphicsEffectSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

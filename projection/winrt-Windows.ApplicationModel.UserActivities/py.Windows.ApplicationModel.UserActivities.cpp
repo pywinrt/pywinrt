@@ -2574,99 +2574,99 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivity, &type_spec_UserActivity, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivity, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivity, &type_spec_UserActivity, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivity, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityAttribution, &type_spec_UserActivityAttribution, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityAttribution, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityAttribution, &type_spec_UserActivityAttribution, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityAttribution, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityChannel, &type_spec_UserActivityChannel, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityChannel, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityChannel, &type_spec_UserActivityChannel, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityChannel, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityContentInfo, &type_spec_UserActivityContentInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityContentInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityContentInfo, &type_spec_UserActivityContentInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityContentInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityRequest, &type_spec_UserActivityRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityRequest, &type_spec_UserActivityRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityRequestManager, &type_spec_UserActivityRequestManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityRequestManager, &type_spec_UserActivityRequestManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityRequestedEventArgs, &type_spec_UserActivityRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityRequestedEventArgs, &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivitySession, &type_spec_UserActivitySession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivitySession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivitySession, &type_spec_UserActivitySession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivitySession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivitySessionHistoryItem, &type_spec_UserActivitySessionHistoryItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivitySessionHistoryItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivitySessionHistoryItem, &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserActivityVisualElements, &type_spec_UserActivityVisualElements, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityVisualElements, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserActivityVisualElements, &type_spec_UserActivityVisualElements, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserActivityVisualElements, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IUserActivityContentInfo, &type_spec_IUserActivityContentInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IUserActivityContentInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IUserActivityContentInfo, &type_spec_IUserActivityContentInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IUserActivityContentInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

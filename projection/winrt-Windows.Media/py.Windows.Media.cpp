@@ -7591,36 +7591,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AudioBuffer, &type_spec_AudioBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioBuffer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AudioBuffer, &type_spec_AudioBuffer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioBuffer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AudioFrame, &type_spec_AudioFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AudioFrame, &type_spec_AudioFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AudioFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutoRepeatModeChangeRequestedEventArgs, &type_spec_AutoRepeatModeChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutoRepeatModeChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutoRepeatModeChangeRequestedEventArgs, &type_spec_AutoRepeatModeChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutoRepeatModeChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ImageDisplayProperties, &type_spec_ImageDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ImageDisplayProperties, &type_spec_ImageDisplayProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageDisplayProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -7633,18 +7633,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaControl, &type_spec_MediaControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaControl, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaControl, &type_spec_MediaControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaControl_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaExtensionManager, &type_spec_MediaExtensionManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaExtensionManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaExtensionManager, &type_spec_MediaExtensionManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaExtensionManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -7657,126 +7657,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaMarkerTypes, &type_spec_MediaMarkerTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaMarkerTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaMarkerTypes, &type_spec_MediaMarkerTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaMarkerTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaMarkerTypes_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaProcessingTriggerDetails, &type_spec_MediaProcessingTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProcessingTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaProcessingTriggerDetails, &type_spec_MediaProcessingTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaProcessingTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaTimelineController, &type_spec_MediaTimelineController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTimelineController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaTimelineController, &type_spec_MediaTimelineController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTimelineController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaTimelineControllerFailedEventArgs, &type_spec_MediaTimelineControllerFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTimelineControllerFailedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaTimelineControllerFailedEventArgs, &type_spec_MediaTimelineControllerFailedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTimelineControllerFailedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MusicDisplayProperties, &type_spec_MusicDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MusicDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MusicDisplayProperties, &type_spec_MusicDisplayProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MusicDisplayProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PlaybackPositionChangeRequestedEventArgs, &type_spec_PlaybackPositionChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackPositionChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PlaybackPositionChangeRequestedEventArgs, &type_spec_PlaybackPositionChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackPositionChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PlaybackRateChangeRequestedEventArgs, &type_spec_PlaybackRateChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackRateChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PlaybackRateChangeRequestedEventArgs, &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PlaybackRateChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ShuffleEnabledChangeRequestedEventArgs, &type_spec_ShuffleEnabledChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShuffleEnabledChangeRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ShuffleEnabledChangeRequestedEventArgs, &type_spec_ShuffleEnabledChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShuffleEnabledChangeRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControls, &type_spec_SystemMediaTransportControls, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControls, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControls, &type_spec_SystemMediaTransportControls, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControls, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsButtonPressedEventArgs, &type_spec_SystemMediaTransportControlsButtonPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsButtonPressedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsButtonPressedEventArgs, &type_spec_SystemMediaTransportControlsButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsButtonPressedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsDisplayUpdater, &type_spec_SystemMediaTransportControlsDisplayUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsDisplayUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsDisplayUpdater, &type_spec_SystemMediaTransportControlsDisplayUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsDisplayUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsPropertyChangedEventArgs, &type_spec_SystemMediaTransportControlsPropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsPropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsPropertyChangedEventArgs, &type_spec_SystemMediaTransportControlsPropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsPropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsTimelineProperties, &type_spec_SystemMediaTransportControlsTimelineProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsTimelineProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SystemMediaTransportControlsTimelineProperties, &type_spec_SystemMediaTransportControlsTimelineProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SystemMediaTransportControlsTimelineProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VideoDisplayProperties, &type_spec_VideoDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoDisplayProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VideoDisplayProperties, &type_spec_VideoDisplayProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoDisplayProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -7789,63 +7789,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_media(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VideoEffects, &type_spec_VideoEffects, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoEffects, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VideoEffects, &type_spec_VideoEffects, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoEffects, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VideoEffects_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VideoFrame, &type_spec_VideoFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VideoFrame, &type_spec_VideoFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VideoFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaExtension, &type_spec_IMediaExtension, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaExtension, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaExtension, &type_spec_IMediaExtension, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaExtension, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaFrame, &type_spec_IMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaFrame, &type_spec_IMediaFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaMarker, &type_spec_IMediaMarker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaMarker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaMarker, &type_spec_IMediaMarker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaMarker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMediaMarkers, &type_spec_IMediaMarkers, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaMarkers, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMediaMarkers, &type_spec_IMediaMarkers, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMediaMarkers, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaTimeRange, &type_spec_MediaTimeRange, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTimeRange, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaTimeRange, &type_spec_MediaTimeRange, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTimeRange, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

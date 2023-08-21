@@ -3152,45 +3152,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_json(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JsonArray, &type_spec_JsonArray, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonArray, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JsonArray, &type_spec_JsonArray, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonArray, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JsonError, &type_spec_JsonError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JsonError, &type_spec_JsonError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JsonObject, &type_spec_JsonObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JsonObject, &type_spec_JsonObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JsonValue, &type_spec_JsonValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JsonValue, &type_spec_JsonValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JsonValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IJsonValue, &type_spec_IJsonValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IJsonValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IJsonValue, &type_spec_IJsonValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IJsonValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

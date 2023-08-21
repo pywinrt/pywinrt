@@ -527,18 +527,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authorization_appcapabilityaccess(
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppCapability, &type_spec_AppCapability, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppCapability, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppCapability, &type_spec_AppCapability, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppCapability, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppCapabilityAccessChangedEventArgs, &type_spec_AppCapabilityAccessChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppCapabilityAccessChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppCapabilityAccessChangedEventArgs, &type_spec_AppCapabilityAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppCapabilityAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

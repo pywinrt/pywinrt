@@ -1877,81 +1877,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_webui_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBar, &type_spec_WebUICommandBar, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBar, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBar, &type_spec_WebUICommandBar, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBar, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarBitmapIcon, &type_spec_WebUICommandBarBitmapIcon, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarBitmapIcon, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarBitmapIcon, &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarBitmapIcon, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarConfirmationButton, &type_spec_WebUICommandBarConfirmationButton, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarConfirmationButton, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarConfirmationButton, &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarConfirmationButton, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarIconButton, &type_spec_WebUICommandBarIconButton, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarIconButton, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarIconButton, &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarIconButton, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarItemInvokedEventArgs, &type_spec_WebUICommandBarItemInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarItemInvokedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarItemInvokedEventArgs, &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarItemInvokedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarSizeChangedEventArgs, &type_spec_WebUICommandBarSizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarSizeChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarSizeChangedEventArgs, &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarSizeChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarSymbolIcon, &type_spec_WebUICommandBarSymbolIcon, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarSymbolIcon, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebUICommandBarSymbolIcon, &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebUICommandBarSymbolIcon, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebUICommandBarElement, &type_spec_IWebUICommandBarElement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebUICommandBarElement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebUICommandBarElement, &type_spec_IWebUICommandBarElement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebUICommandBarElement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebUICommandBarIcon, &type_spec_IWebUICommandBarIcon, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebUICommandBarIcon, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebUICommandBarIcon, &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebUICommandBarIcon, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

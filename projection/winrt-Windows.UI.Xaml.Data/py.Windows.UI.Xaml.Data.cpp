@@ -4728,45 +4728,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Binding, &type_spec_Binding, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Binding, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Binding, &type_spec_Binding, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BindingBase, &type_spec_BindingBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BindingBase, &type_spec_BindingBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BindingExpression, &type_spec_BindingExpression, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingExpression, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BindingExpression, &type_spec_BindingExpression, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BindingExpressionBase, &type_spec_BindingExpressionBase, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingExpressionBase, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BindingExpressionBase, &type_spec_BindingExpressionBase, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingExpressionBase, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BindingOperations, &type_spec_BindingOperations, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingOperations, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BindingOperations, &type_spec_BindingOperations, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -4779,144 +4779,144 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CollectionViewSource, &type_spec_CollectionViewSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CollectionViewSource, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CollectionViewSource, &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CurrentChangingEventArgs, &type_spec_CurrentChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CurrentChangingEventArgs, &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ItemIndexRange, &type_spec_ItemIndexRange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemIndexRange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ItemIndexRange, &type_spec_ItemIndexRange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PropertyChangedEventArgs, &type_spec_PropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PropertyChangedEventArgs, &type_spec_PropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RelativeSource, &type_spec_RelativeSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RelativeSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RelativeSource, &type_spec_RelativeSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICollectionView, &type_spec_ICollectionView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICollectionView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICollectionView, &type_spec_ICollectionView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICollectionView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICollectionViewFactory, &type_spec_ICollectionViewFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICollectionViewFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICollectionViewFactory, &type_spec_ICollectionViewFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICollectionViewFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICollectionViewGroup, &type_spec_ICollectionViewGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICollectionViewGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICollectionViewGroup, &type_spec_ICollectionViewGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICollectionViewGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICustomProperty, &type_spec_ICustomProperty, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICustomProperty, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICustomProperty, &type_spec_ICustomProperty, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICustomProperty, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICustomPropertyProvider, &type_spec_ICustomPropertyProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICustomPropertyProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICustomPropertyProvider, &type_spec_ICustomPropertyProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICustomPropertyProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IItemsRangeInfo, &type_spec_IItemsRangeInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IItemsRangeInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IItemsRangeInfo, &type_spec_IItemsRangeInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IItemsRangeInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_INotifyPropertyChanged, &type_spec_INotifyPropertyChanged, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_INotifyPropertyChanged, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_INotifyPropertyChanged, &type_spec_INotifyPropertyChanged, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_INotifyPropertyChanged, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ISelectionInfo, &type_spec_ISelectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISelectionInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ISelectionInfo, &type_spec_ISelectionInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISelectionInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ISupportIncrementalLoading, &type_spec_ISupportIncrementalLoading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISupportIncrementalLoading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ISupportIncrementalLoading, &type_spec_ISupportIncrementalLoading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISupportIncrementalLoading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IValueConverter, &type_spec_IValueConverter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IValueConverter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IValueConverter, &type_spec_IValueConverter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IValueConverter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoadMoreItemsResult, &type_spec_LoadMoreItemsResult, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoadMoreItemsResult, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoadMoreItemsResult, &type_spec_LoadMoreItemsResult, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoadMoreItemsResult, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -174,7 +174,6 @@ static PyObject* PyType_FromMetaclass(
  * Adds a Python type to a Python module.
  *
  * @param module The module to add the type to.
- * @param type_name A valid Python identifier.
  * @param type_spec The Python type spec.
  * @param base_type The base type, a tuple of base types or nullptr to use the base
  * slot.
@@ -184,7 +183,6 @@ static PyObject* PyType_FromMetaclass(
 
 int py::register_python_type(
     PyObject* module,
-    const char* const type_name,
     PyType_Spec* type_spec,
 #if PY_VERSION_HEX < 0x03090000
     PyBufferProcs* buffer_procs,
@@ -202,10 +200,11 @@ int py::register_python_type(
 
 #if PY_VERSION_HEX < 0x03090000
     // workaround for https://bugs.python.org/issue40724
-    type_object->tp_as_buffer = buffer_procs;
+    reinterpret_cast<PyTypeObject*>(type_object.get())->tp_as_buffer = buffer_procs;
 #endif
 
-    if (PyModule_AddObjectRef(module, type_name, type_object.get()) == -1)
+    if (PyModule_AddType(module, reinterpret_cast<PyTypeObject*>(type_object.get()))
+        == -1)
     {
         return -1;
     }

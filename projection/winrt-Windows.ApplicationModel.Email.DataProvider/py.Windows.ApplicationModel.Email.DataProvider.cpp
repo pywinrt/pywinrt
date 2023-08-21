@@ -5857,288 +5857,288 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email_dataprovider(void) n
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailDataProviderConnection, &type_spec_EmailDataProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailDataProviderConnection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailDataProviderConnection, &type_spec_EmailDataProviderConnection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailDataProviderConnection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailDataProviderTriggerDetails, &type_spec_EmailDataProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailDataProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailDataProviderTriggerDetails, &type_spec_EmailDataProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailDataProviderTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequest, &type_spec_EmailMailboxCreateFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequest, &type_spec_EmailMailboxCreateFolderRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequestEventArgs, &type_spec_EmailMailboxCreateFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxCreateFolderRequestEventArgs, &type_spec_EmailMailboxCreateFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequest, &type_spec_EmailMailboxDeleteFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequest, &type_spec_EmailMailboxDeleteFolderRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequestEventArgs, &type_spec_EmailMailboxDeleteFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDeleteFolderRequestEventArgs, &type_spec_EmailMailboxDeleteFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequest, &type_spec_EmailMailboxDownloadAttachmentRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequest, &type_spec_EmailMailboxDownloadAttachmentRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequestEventArgs, &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadAttachmentRequestEventArgs, &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequest, &type_spec_EmailMailboxDownloadMessageRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequest, &type_spec_EmailMailboxDownloadMessageRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequestEventArgs, &type_spec_EmailMailboxDownloadMessageRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxDownloadMessageRequestEventArgs, &type_spec_EmailMailboxDownloadMessageRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequest, &type_spec_EmailMailboxEmptyFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequest, &type_spec_EmailMailboxEmptyFolderRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequestEventArgs, &type_spec_EmailMailboxEmptyFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxEmptyFolderRequestEventArgs, &type_spec_EmailMailboxEmptyFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequest, &type_spec_EmailMailboxForwardMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequest, &type_spec_EmailMailboxForwardMeetingRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequestEventArgs, &type_spec_EmailMailboxForwardMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxForwardMeetingRequestEventArgs, &type_spec_EmailMailboxForwardMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequest, &type_spec_EmailMailboxGetAutoReplySettingsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequest, &type_spec_EmailMailboxGetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxGetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequest, &type_spec_EmailMailboxMoveFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequest, &type_spec_EmailMailboxMoveFolderRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequestEventArgs, &type_spec_EmailMailboxMoveFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxMoveFolderRequestEventArgs, &type_spec_EmailMailboxMoveFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequest, &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequest, &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequest, &type_spec_EmailMailboxResolveRecipientsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequest, &type_spec_EmailMailboxResolveRecipientsRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequestEventArgs, &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxResolveRecipientsRequestEventArgs, &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequest, &type_spec_EmailMailboxServerSearchReadBatchRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequest, &type_spec_EmailMailboxServerSearchReadBatchRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequestEventArgs, &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxServerSearchReadBatchRequestEventArgs, &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequest, &type_spec_EmailMailboxSetAutoReplySettingsRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequest, &type_spec_EmailMailboxSetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSetAutoReplySettingsRequestEventArgs, &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequest, &type_spec_EmailMailboxSyncManagerSyncRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequest, &type_spec_EmailMailboxSyncManagerSyncRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequestEventArgs, &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxSyncManagerSyncRequestEventArgs, &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequest, &type_spec_EmailMailboxUpdateMeetingResponseRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequest, &type_spec_EmailMailboxUpdateMeetingResponseRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequestEventArgs, &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxUpdateMeetingResponseRequestEventArgs, &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequest, &type_spec_EmailMailboxValidateCertificatesRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequest, &type_spec_EmailMailboxValidateCertificatesRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequestEventArgs, &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EmailMailboxValidateCertificatesRequestEventArgs, &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

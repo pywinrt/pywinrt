@@ -6349,18 +6349,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapBuffer, &type_spec_BitmapBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapBuffer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapBuffer, &type_spec_BitmapBuffer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapBuffer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapCodecInformation, &type_spec_BitmapCodecInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapCodecInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapCodecInformation, &type_spec_BitmapCodecInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapCodecInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -6373,9 +6373,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapDecoder, &type_spec_BitmapDecoder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapDecoder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapDecoder, &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapDecoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapDecoder_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -6388,144 +6388,144 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_imaging(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapEncoder, &type_spec_BitmapEncoder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapEncoder, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapEncoder, &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapEncoder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapEncoder_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapFrame, &type_spec_BitmapFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapFrame, &type_spec_BitmapFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapProperties, &type_spec_BitmapProperties, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapProperties, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapProperties, &type_spec_BitmapProperties, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapProperties, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapPropertiesView, &type_spec_BitmapPropertiesView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapPropertiesView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapPropertiesView, &type_spec_BitmapPropertiesView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapPropertiesView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapPropertySet, &type_spec_BitmapPropertySet, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapPropertySet, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapPropertySet, &type_spec_BitmapPropertySet, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapPropertySet, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapTransform, &type_spec_BitmapTransform, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapTransform, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapTransform, &type_spec_BitmapTransform, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapTransform, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapTypedValue, &type_spec_BitmapTypedValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapTypedValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapTypedValue, &type_spec_BitmapTypedValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapTypedValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ImageStream, &type_spec_ImageStream, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageStream, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ImageStream, &type_spec_ImageStream, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageStream, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PixelDataProvider, &type_spec_PixelDataProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PixelDataProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PixelDataProvider, &type_spec_PixelDataProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PixelDataProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SoftwareBitmap, &type_spec_SoftwareBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SoftwareBitmap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SoftwareBitmap, &type_spec_SoftwareBitmap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SoftwareBitmap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBitmapFrame, &type_spec_IBitmapFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBitmapFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBitmapFrame, &type_spec_IBitmapFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBitmapFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBitmapFrameWithSoftwareBitmap, &type_spec_IBitmapFrameWithSoftwareBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBitmapFrameWithSoftwareBitmap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBitmapFrameWithSoftwareBitmap, &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBitmapFrameWithSoftwareBitmap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IBitmapPropertiesView, &type_spec_IBitmapPropertiesView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBitmapPropertiesView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IBitmapPropertiesView, &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IBitmapPropertiesView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapBounds, &type_spec_BitmapBounds, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapBounds, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapBounds, &type_spec_BitmapBounds, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapBounds, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapPlaneDescription, &type_spec_BitmapPlaneDescription, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapPlaneDescription, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapPlaneDescription, &type_spec_BitmapPlaneDescription, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapPlaneDescription, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BitmapSize, &type_spec_BitmapSize, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapSize, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BitmapSize, &type_spec_BitmapSize, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BitmapSize, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

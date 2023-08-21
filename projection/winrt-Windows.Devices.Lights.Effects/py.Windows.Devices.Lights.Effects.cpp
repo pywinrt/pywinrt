@@ -3170,81 +3170,81 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_lights_effects(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayBitmapEffect, &type_spec_LampArrayBitmapEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayBitmapEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayBitmapEffect, &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayBitmapEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayBitmapRequestedEventArgs, &type_spec_LampArrayBitmapRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayBitmapRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayBitmapRequestedEventArgs, &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayBitmapRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayBlinkEffect, &type_spec_LampArrayBlinkEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayBlinkEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayBlinkEffect, &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayBlinkEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayColorRampEffect, &type_spec_LampArrayColorRampEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayColorRampEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayColorRampEffect, &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayColorRampEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayCustomEffect, &type_spec_LampArrayCustomEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayCustomEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayCustomEffect, &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayCustomEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayEffectPlaylist, &type_spec_LampArrayEffectPlaylist, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayEffectPlaylist, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayEffectPlaylist, &type_spec_LampArrayEffectPlaylist, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayEffectPlaylist, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArraySolidEffect, &type_spec_LampArraySolidEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArraySolidEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArraySolidEffect, &type_spec_LampArraySolidEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArraySolidEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LampArrayUpdateRequestedEventArgs, &type_spec_LampArrayUpdateRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayUpdateRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LampArrayUpdateRequestedEventArgs, &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LampArrayUpdateRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ILampArrayEffect, &type_spec_ILampArrayEffect, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILampArrayEffect, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ILampArrayEffect, &type_spec_ILampArrayEffect, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ILampArrayEffect, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

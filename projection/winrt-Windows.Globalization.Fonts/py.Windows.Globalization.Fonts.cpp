@@ -548,18 +548,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_fonts(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LanguageFont, &type_spec_LanguageFont, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LanguageFont, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LanguageFont, &type_spec_LanguageFont, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LanguageFont, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LanguageFontGroup, &type_spec_LanguageFontGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LanguageFontGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LanguageFontGroup, &type_spec_LanguageFontGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LanguageFontGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

@@ -1128,27 +1128,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_exchangeactivesyncprovisioning(voi
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EasClientDeviceInformation, &type_spec_EasClientDeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EasClientDeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EasClientDeviceInformation, &type_spec_EasClientDeviceInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EasClientDeviceInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EasClientSecurityPolicy, &type_spec_EasClientSecurityPolicy, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EasClientSecurityPolicy, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EasClientSecurityPolicy, &type_spec_EasClientSecurityPolicy, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EasClientSecurityPolicy, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EasComplianceResults, &type_spec_EasComplianceResults, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EasComplianceResults, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EasComplianceResults, &type_spec_EasComplianceResults, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EasComplianceResults, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

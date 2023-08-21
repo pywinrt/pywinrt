@@ -4213,126 +4213,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_import(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportDeleteImportedItemsFromSourceResult, &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportDeleteImportedItemsFromSourceResult, &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportDeleteImportedItemsFromSourceResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportFindItemsResult, &type_spec_PhotoImportFindItemsResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportFindItemsResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportFindItemsResult, &type_spec_PhotoImportFindItemsResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportFindItemsResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportImportItemsResult, &type_spec_PhotoImportImportItemsResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportImportItemsResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportImportItemsResult, &type_spec_PhotoImportImportItemsResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportImportItemsResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportItem, &type_spec_PhotoImportItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportItem, &type_spec_PhotoImportItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportItemImportedEventArgs, &type_spec_PhotoImportItemImportedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportItemImportedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportItemImportedEventArgs, &type_spec_PhotoImportItemImportedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportItemImportedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportManager, &type_spec_PhotoImportManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportManager, &type_spec_PhotoImportManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportOperation, &type_spec_PhotoImportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportOperation, &type_spec_PhotoImportOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportSelectionChangedEventArgs, &type_spec_PhotoImportSelectionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSelectionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportSelectionChangedEventArgs, &type_spec_PhotoImportSelectionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSelectionChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportSession, &type_spec_PhotoImportSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportSession, &type_spec_PhotoImportSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportSidecar, &type_spec_PhotoImportSidecar, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSidecar, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportSidecar, &type_spec_PhotoImportSidecar, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSidecar, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportSource, &type_spec_PhotoImportSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportSource, &type_spec_PhotoImportSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportStorageMedium, &type_spec_PhotoImportStorageMedium, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportStorageMedium, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportStorageMedium, &type_spec_PhotoImportStorageMedium, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportStorageMedium, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportVideoSegment, &type_spec_PhotoImportVideoSegment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportVideoSegment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportVideoSegment, &type_spec_PhotoImportVideoSegment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportVideoSegment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PhotoImportProgress, &type_spec_PhotoImportProgress, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportProgress, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PhotoImportProgress, &type_spec_PhotoImportProgress, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PhotoImportProgress, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

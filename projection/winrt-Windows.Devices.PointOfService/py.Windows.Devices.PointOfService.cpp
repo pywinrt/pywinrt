@@ -26038,63 +26038,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScanner, &type_spec_BarcodeScanner, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScanner, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScanner, &type_spec_BarcodeScanner, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScanner, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerCapabilities, &type_spec_BarcodeScannerCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerCapabilities, &type_spec_BarcodeScannerCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerDataReceivedEventArgs, &type_spec_BarcodeScannerDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerDataReceivedEventArgs, &type_spec_BarcodeScannerDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerErrorOccurredEventArgs, &type_spec_BarcodeScannerErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerErrorOccurredEventArgs, &type_spec_BarcodeScannerErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerImagePreviewReceivedEventArgs, &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerImagePreviewReceivedEventArgs, &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerImagePreviewReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerReport, &type_spec_BarcodeScannerReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerReport, &type_spec_BarcodeScannerReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStatusUpdatedEventArgs, &type_spec_BarcodeScannerStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeScannerStatusUpdatedEventArgs, &type_spec_BarcodeScannerStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -26107,225 +26107,225 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeSymbologies, &type_spec_BarcodeSymbologies, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologies, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeSymbologies, &type_spec_BarcodeSymbologies, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologies, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BarcodeSymbologies_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributes, &type_spec_BarcodeSymbologyAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributes, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarcodeSymbologyAttributes, &type_spec_BarcodeSymbologyAttributes, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarcodeSymbologyAttributes, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawer, &type_spec_CashDrawer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawer, &type_spec_CashDrawer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerCapabilities, &type_spec_CashDrawerCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerCapabilities, &type_spec_CashDrawerCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerCloseAlarm, &type_spec_CashDrawerCloseAlarm, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerCloseAlarm, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerCloseAlarm, &type_spec_CashDrawerCloseAlarm, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerCloseAlarm, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerClosedEventArgs, &type_spec_CashDrawerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerClosedEventArgs, &type_spec_CashDrawerClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerEventSource, &type_spec_CashDrawerEventSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerEventSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerEventSource, &type_spec_CashDrawerEventSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerEventSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerOpenedEventArgs, &type_spec_CashDrawerOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerOpenedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerOpenedEventArgs, &type_spec_CashDrawerOpenedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerOpenedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerStatus, &type_spec_CashDrawerStatus, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerStatus, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerStatus, &type_spec_CashDrawerStatus, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerStatus, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CashDrawerStatusUpdatedEventArgs, &type_spec_CashDrawerStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CashDrawerStatusUpdatedEventArgs, &type_spec_CashDrawerStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CashDrawerStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScanner, &type_spec_ClaimedBarcodeScanner, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScanner, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScanner, &type_spec_ClaimedBarcodeScanner, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScanner, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScannerClosedEventArgs, &type_spec_ClaimedBarcodeScannerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScannerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedBarcodeScannerClosedEventArgs, &type_spec_ClaimedBarcodeScannerClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedBarcodeScannerClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawer, &type_spec_ClaimedCashDrawer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedCashDrawer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawer, &type_spec_ClaimedCashDrawer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedCashDrawer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawerClosedEventArgs, &type_spec_ClaimedCashDrawerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedCashDrawerClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedCashDrawerClosedEventArgs, &type_spec_ClaimedCashDrawerClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedCashDrawerClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedJournalPrinter, &type_spec_ClaimedJournalPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedJournalPrinter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedJournalPrinter, &type_spec_ClaimedJournalPrinter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedJournalPrinter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplay, &type_spec_ClaimedLineDisplay, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedLineDisplay, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplay, &type_spec_ClaimedLineDisplay, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedLineDisplay, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplayClosedEventArgs, &type_spec_ClaimedLineDisplayClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedLineDisplayClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedLineDisplayClosedEventArgs, &type_spec_ClaimedLineDisplayClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedLineDisplayClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReader, &type_spec_ClaimedMagneticStripeReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReader, &type_spec_ClaimedMagneticStripeReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReaderClosedEventArgs, &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedMagneticStripeReaderClosedEventArgs, &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedMagneticStripeReaderClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinter, &type_spec_ClaimedPosPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedPosPrinter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinter, &type_spec_ClaimedPosPrinter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedPosPrinter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinterClosedEventArgs, &type_spec_ClaimedPosPrinterClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedPosPrinterClosedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedPosPrinterClosedEventArgs, &type_spec_ClaimedPosPrinterClosedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedPosPrinterClosedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedReceiptPrinter, &type_spec_ClaimedReceiptPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedReceiptPrinter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedReceiptPrinter, &type_spec_ClaimedReceiptPrinter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedReceiptPrinter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClaimedSlipPrinter, &type_spec_ClaimedSlipPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedSlipPrinter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClaimedSlipPrinter, &type_spec_ClaimedSlipPrinter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClaimedSlipPrinter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JournalPrintJob, &type_spec_JournalPrintJob, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JournalPrintJob, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JournalPrintJob, &type_spec_JournalPrintJob, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JournalPrintJob, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JournalPrinterCapabilities, &type_spec_JournalPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JournalPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JournalPrinterCapabilities, &type_spec_JournalPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JournalPrinterCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -26338,135 +26338,135 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplay, &type_spec_LineDisplay, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplay, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplay, &type_spec_LineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplay, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineDisplay_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayAttributes, &type_spec_LineDisplayAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayAttributes, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayAttributes, &type_spec_LineDisplayAttributes, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayAttributes, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayCapabilities, &type_spec_LineDisplayCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayCapabilities, &type_spec_LineDisplayCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayCursor, &type_spec_LineDisplayCursor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCursor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayCursor, &type_spec_LineDisplayCursor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCursor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayCursorAttributes, &type_spec_LineDisplayCursorAttributes, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCursorAttributes, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayCursorAttributes, &type_spec_LineDisplayCursorAttributes, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCursorAttributes, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayCustomGlyphs, &type_spec_LineDisplayCustomGlyphs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCustomGlyphs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayCustomGlyphs, &type_spec_LineDisplayCustomGlyphs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayCustomGlyphs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayMarquee, &type_spec_LineDisplayMarquee, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayMarquee, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayMarquee, &type_spec_LineDisplayMarquee, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayMarquee, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayStatisticsCategorySelector, &type_spec_LineDisplayStatisticsCategorySelector, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayStatisticsCategorySelector, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayStatisticsCategorySelector, &type_spec_LineDisplayStatisticsCategorySelector, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayStatisticsCategorySelector, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayStatusUpdatedEventArgs, &type_spec_LineDisplayStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayStatusUpdatedEventArgs, &type_spec_LineDisplayStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayStoredBitmap, &type_spec_LineDisplayStoredBitmap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayStoredBitmap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayStoredBitmap, &type_spec_LineDisplayStoredBitmap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayStoredBitmap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LineDisplayWindow, &type_spec_LineDisplayWindow, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayWindow, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LineDisplayWindow, &type_spec_LineDisplayWindow, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LineDisplayWindow, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReader, &type_spec_MagneticStripeReader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReader, &type_spec_MagneticStripeReader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderAamvaCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderAamvaCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderAamvaCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderBankCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderBankCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderBankCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCapabilities, &type_spec_MagneticStripeReaderCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCapabilities, &type_spec_MagneticStripeReaderCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -26479,9 +26479,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCardTypes, &type_spec_MagneticStripeReaderCardTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCardTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderCardTypes, &type_spec_MagneticStripeReaderCardTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderCardTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderCardTypes_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -26494,72 +26494,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderEncryptionAlgorithms, &type_spec_MagneticStripeReaderEncryptionAlgorithms, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderEncryptionAlgorithms, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderEncryptionAlgorithms, &type_spec_MagneticStripeReaderEncryptionAlgorithms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderEncryptionAlgorithms, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MagneticStripeReaderEncryptionAlgorithms_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderErrorOccurredEventArgs, &type_spec_MagneticStripeReaderErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderErrorOccurredEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderErrorOccurredEventArgs, &type_spec_MagneticStripeReaderErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderReport, &type_spec_MagneticStripeReaderReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderReport, &type_spec_MagneticStripeReaderReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderStatusUpdatedEventArgs, &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderStatusUpdatedEventArgs, &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderTrackData, &type_spec_MagneticStripeReaderTrackData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderTrackData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderTrackData, &type_spec_MagneticStripeReaderTrackData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderTrackData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinter, &type_spec_PosPrinter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinter, &type_spec_PosPrinter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterCapabilities, &type_spec_PosPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterCapabilities, &type_spec_PosPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -26572,162 +26572,162 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_pointofservice(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterCharacterSetIds, &type_spec_PosPrinterCharacterSetIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterCharacterSetIds, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterCharacterSetIds, &type_spec_PosPrinterCharacterSetIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterCharacterSetIds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PosPrinterCharacterSetIds_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterFontProperty, &type_spec_PosPrinterFontProperty, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterFontProperty, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterFontProperty, &type_spec_PosPrinterFontProperty, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterFontProperty, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterPrintOptions, &type_spec_PosPrinterPrintOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterPrintOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterPrintOptions, &type_spec_PosPrinterPrintOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterPrintOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterReleaseDeviceRequestedEventArgs, &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterReleaseDeviceRequestedEventArgs, &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterReleaseDeviceRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterStatus, &type_spec_PosPrinterStatus, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterStatus, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterStatus, &type_spec_PosPrinterStatus, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterStatus, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PosPrinterStatusUpdatedEventArgs, &type_spec_PosPrinterStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterStatusUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PosPrinterStatusUpdatedEventArgs, &type_spec_PosPrinterStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PosPrinterStatusUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ReceiptPrintJob, &type_spec_ReceiptPrintJob, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ReceiptPrintJob, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ReceiptPrintJob, &type_spec_ReceiptPrintJob, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ReceiptPrintJob, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ReceiptPrinterCapabilities, &type_spec_ReceiptPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ReceiptPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ReceiptPrinterCapabilities, &type_spec_ReceiptPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ReceiptPrinterCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SlipPrintJob, &type_spec_SlipPrintJob, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SlipPrintJob, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SlipPrintJob, &type_spec_SlipPrintJob, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SlipPrintJob, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SlipPrinterCapabilities, &type_spec_SlipPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SlipPrinterCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SlipPrinterCapabilities, &type_spec_SlipPrinterCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SlipPrinterCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UnifiedPosErrorData, &type_spec_UnifiedPosErrorData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnifiedPosErrorData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UnifiedPosErrorData, &type_spec_UnifiedPosErrorData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UnifiedPosErrorData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICashDrawerEventSourceEventArgs, &type_spec_ICashDrawerEventSourceEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICashDrawerEventSourceEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICashDrawerEventSourceEventArgs, &type_spec_ICashDrawerEventSourceEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICashDrawerEventSourceEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICommonClaimedPosPrinterStation, &type_spec_ICommonClaimedPosPrinterStation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICommonClaimedPosPrinterStation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICommonClaimedPosPrinterStation, &type_spec_ICommonClaimedPosPrinterStation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICommonClaimedPosPrinterStation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICommonPosPrintStationCapabilities, &type_spec_ICommonPosPrintStationCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICommonPosPrintStationCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICommonPosPrintStationCapabilities, &type_spec_ICommonPosPrintStationCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICommonPosPrintStationCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ICommonReceiptSlipCapabilities, &type_spec_ICommonReceiptSlipCapabilities, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICommonReceiptSlipCapabilities, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ICommonReceiptSlipCapabilities, &type_spec_ICommonReceiptSlipCapabilities, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ICommonReceiptSlipCapabilities, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IPosPrinterJob, &type_spec_IPosPrinterJob, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPosPrinterJob, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IPosPrinterJob, &type_spec_IPosPrinterJob, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPosPrinterJob, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IReceiptOrSlipJob, &type_spec_IReceiptOrSlipJob, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IReceiptOrSlipJob, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IReceiptOrSlipJob, &type_spec_IReceiptOrSlipJob, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IReceiptOrSlipJob, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SizeUInt32, &type_spec_SizeUInt32, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeUInt32, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SizeUInt32, &type_spec_SizeUInt32, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeUInt32, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

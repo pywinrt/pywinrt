@@ -657,18 +657,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EndpointPair, &type_spec_EndpointPair, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EndpointPair, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EndpointPair, &type_spec_EndpointPair, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EndpointPair, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HostName, &type_spec_HostName, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HostName, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HostName, &type_spec_HostName, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HostName, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

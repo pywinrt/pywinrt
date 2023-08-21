@@ -838,54 +838,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGeometrySource2D, &type_spec_IGeometrySource2D, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGeometrySource2D, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGeometrySource2D, &type_spec_IGeometrySource2D, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGeometrySource2D, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DisplayAdapterId, &type_spec_DisplayAdapterId, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DisplayAdapterId, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DisplayAdapterId, &type_spec_DisplayAdapterId, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DisplayAdapterId, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DisplayId, &type_spec_DisplayId, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DisplayId, &type_spec_DisplayId, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PointInt32, &type_spec_PointInt32, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointInt32, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PointInt32, &type_spec_PointInt32, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PointInt32, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RectInt32, &type_spec_RectInt32, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectInt32, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RectInt32, &type_spec_RectInt32, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RectInt32, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SizeInt32, &type_spec_SizeInt32, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeInt32, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SizeInt32, &type_spec_SizeInt32, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SizeInt32, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

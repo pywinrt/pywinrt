@@ -7469,9 +7469,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Deferral, &type_spec_Deferral, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Deferral, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Deferral, &type_spec_Deferral, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Deferral, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -7484,225 +7484,225 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GuidHelper, &type_spec_GuidHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GuidHelper, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GuidHelper, &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GuidHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidHelper_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MemoryBuffer, &type_spec_MemoryBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MemoryBuffer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MemoryBuffer, &type_spec_MemoryBuffer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MemoryBuffer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PropertyValue, &type_spec_PropertyValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PropertyValue, &type_spec_PropertyValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PropertyValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Uri, &type_spec_Uri, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Uri, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Uri, &type_spec_Uri, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Uri, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoder, &type_spec_WwwFormUrlDecoder, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoder, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoder, &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoder, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoderEntry, &type_spec_WwwFormUrlDecoderEntry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoderEntry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WwwFormUrlDecoderEntry, &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAsyncAction, &type_spec_IAsyncAction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncAction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAsyncAction, &type_spec_IAsyncAction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncAction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAsyncActionWithProgress, &type_spec_IAsyncActionWithProgress, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncActionWithProgress, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAsyncActionWithProgress, &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncActionWithProgress, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAsyncInfo, &type_spec_IAsyncInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAsyncInfo, &type_spec_IAsyncInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAsyncOperationWithProgress, &type_spec_IAsyncOperationWithProgress, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncOperationWithProgress, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAsyncOperationWithProgress, &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncOperationWithProgress, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAsyncOperation, &type_spec_IAsyncOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAsyncOperation, &type_spec_IAsyncOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAsyncOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IClosable, &type_spec_IClosable, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IClosable, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IClosable, &type_spec_IClosable, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IClosable, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IGetActivationFactory, &type_spec_IGetActivationFactory, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGetActivationFactory, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IGetActivationFactory, &type_spec_IGetActivationFactory, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IGetActivationFactory, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMemoryBuffer, &type_spec_IMemoryBuffer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMemoryBuffer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMemoryBuffer, &type_spec_IMemoryBuffer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMemoryBuffer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IMemoryBufferReference, &type_spec_IMemoryBufferReference, &_PyBufferProcs_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMemoryBufferReference, &_PyBufferProcs_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IMemoryBufferReference, &type_spec_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IMemoryBufferReference, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IPropertyValue, &type_spec_IPropertyValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPropertyValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IPropertyValue, &type_spec_IPropertyValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IPropertyValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IReferenceArray, &type_spec_IReferenceArray, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IReferenceArray, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IReferenceArray, &type_spec_IReferenceArray, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IReferenceArray, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IReference, &type_spec_IReference, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IReference, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IReference, &type_spec_IReference, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IReference, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IStringable, &type_spec_IStringable, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStringable, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IStringable, &type_spec_IStringable, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IStringable, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWwwFormUrlDecoderEntry, &type_spec_IWwwFormUrlDecoderEntry, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWwwFormUrlDecoderEntry, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWwwFormUrlDecoderEntry, &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWwwFormUrlDecoderEntry, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EventRegistrationToken, &type_spec_EventRegistrationToken, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EventRegistrationToken, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EventRegistrationToken, &type_spec_EventRegistrationToken, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EventRegistrationToken, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HResult, &type_spec_HResult, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HResult, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HResult, &type_spec_HResult, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HResult, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Point, &type_spec_Point, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Point, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Point, &type_spec_Point, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Point, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Rect, &type_spec_Rect, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rect, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Rect, &type_spec_Rect, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Rect, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Size, &type_spec_Size, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Size, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Size, &type_spec_Size, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Size, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

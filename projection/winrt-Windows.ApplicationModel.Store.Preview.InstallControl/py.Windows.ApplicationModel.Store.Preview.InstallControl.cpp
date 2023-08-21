@@ -3748,63 +3748,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store_preview_installcontr
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppInstallItem, &type_spec_AppInstallItem, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallItem, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppInstallItem, &type_spec_AppInstallItem, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallItem, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppInstallManager, &type_spec_AppInstallManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppInstallManager, &type_spec_AppInstallManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppInstallManagerItemEventArgs, &type_spec_AppInstallManagerItemEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallManagerItemEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppInstallManagerItemEventArgs, &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallManagerItemEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppInstallOptions, &type_spec_AppInstallOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppInstallOptions, &type_spec_AppInstallOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppInstallStatus, &type_spec_AppInstallStatus, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallStatus, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppInstallStatus, &type_spec_AppInstallStatus, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppInstallStatus, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppUpdateOptions, &type_spec_AppUpdateOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppUpdateOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppUpdateOptions, &type_spec_AppUpdateOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppUpdateOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GetEntitlementResult, &type_spec_GetEntitlementResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GetEntitlementResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GetEntitlementResult, &type_spec_GetEntitlementResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GetEntitlementResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

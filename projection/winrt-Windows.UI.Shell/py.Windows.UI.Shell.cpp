@@ -4138,18 +4138,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveCardBuilder, &type_spec_AdaptiveCardBuilder, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveCardBuilder, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveCardBuilder, &type_spec_AdaptiveCardBuilder, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveCardBuilder, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FocusSession, &type_spec_FocusSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FocusSession, &type_spec_FocusSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -4162,144 +4162,144 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FocusSessionManager, &type_spec_FocusSessionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSessionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FocusSessionManager, &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SecurityAppManager, &type_spec_SecurityAppManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SecurityAppManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SecurityAppManager, &type_spec_SecurityAppManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SecurityAppManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ShareWindowCommandEventArgs, &type_spec_ShareWindowCommandEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ShareWindowCommandEventArgs, &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ShareWindowCommandSource, &type_spec_ShareWindowCommandSource, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandSource, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ShareWindowCommandSource, &type_spec_ShareWindowCommandSource, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandSource, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TaskbarManager, &type_spec_TaskbarManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TaskbarManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TaskbarManager, &type_spec_TaskbarManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TaskbarManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTab, &type_spec_WindowTab, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTab, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTab, &type_spec_WindowTab, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTab, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabCloseRequestedEventArgs, &type_spec_WindowTabCloseRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabCloseRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabCloseRequestedEventArgs, &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabCollection, &type_spec_WindowTabCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabCollection, &type_spec_WindowTabCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabGroup, &type_spec_WindowTabGroup, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabGroup, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabGroup, &type_spec_WindowTabGroup, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabGroup, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabIcon, &type_spec_WindowTabIcon, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabIcon, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabIcon, &type_spec_WindowTabIcon, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabIcon, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabManager, &type_spec_WindowTabManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabManager, &type_spec_WindowTabManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabSwitchRequestedEventArgs, &type_spec_WindowTabSwitchRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabSwitchRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabSwitchRequestedEventArgs, &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabTearOutRequestedEventArgs, &type_spec_WindowTabTearOutRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabTearOutRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabTearOutRequestedEventArgs, &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WindowTabThumbnailRequestedEventArgs, &type_spec_WindowTabThumbnailRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabThumbnailRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WindowTabThumbnailRequestedEventArgs, &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAdaptiveCard, &type_spec_IAdaptiveCard, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAdaptiveCard, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAdaptiveCard, &type_spec_IAdaptiveCard, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAdaptiveCard, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IAdaptiveCardBuilderStatics, &type_spec_IAdaptiveCardBuilderStatics, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAdaptiveCardBuilderStatics, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IAdaptiveCardBuilderStatics, &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

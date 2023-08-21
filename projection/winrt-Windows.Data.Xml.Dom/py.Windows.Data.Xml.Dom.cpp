@@ -17261,189 +17261,189 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_xml_dom(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DtdEntity, &type_spec_DtdEntity, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DtdEntity, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DtdEntity, &type_spec_DtdEntity, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DtdEntity, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DtdNotation, &type_spec_DtdNotation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DtdNotation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DtdNotation, &type_spec_DtdNotation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DtdNotation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlAttribute, &type_spec_XmlAttribute, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlAttribute, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlAttribute, &type_spec_XmlAttribute, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlAttribute, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlCDataSection, &type_spec_XmlCDataSection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlCDataSection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlCDataSection, &type_spec_XmlCDataSection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlCDataSection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlComment, &type_spec_XmlComment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlComment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlComment, &type_spec_XmlComment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlComment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlDocument, &type_spec_XmlDocument, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDocument, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlDocument, &type_spec_XmlDocument, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDocument, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlDocumentFragment, &type_spec_XmlDocumentFragment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDocumentFragment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlDocumentFragment, &type_spec_XmlDocumentFragment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDocumentFragment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlDocumentType, &type_spec_XmlDocumentType, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDocumentType, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlDocumentType, &type_spec_XmlDocumentType, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDocumentType, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlDomImplementation, &type_spec_XmlDomImplementation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDomImplementation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlDomImplementation, &type_spec_XmlDomImplementation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlDomImplementation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlElement, &type_spec_XmlElement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlElement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlElement, &type_spec_XmlElement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlElement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlEntityReference, &type_spec_XmlEntityReference, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlEntityReference, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlEntityReference, &type_spec_XmlEntityReference, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlEntityReference, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlLoadSettings, &type_spec_XmlLoadSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlLoadSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlLoadSettings, &type_spec_XmlLoadSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlLoadSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlNamedNodeMap, &type_spec_XmlNamedNodeMap, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlNamedNodeMap, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlNamedNodeMap, &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlNamedNodeMap, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlNodeList, &type_spec_XmlNodeList, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlNodeList, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlNodeList, &type_spec_XmlNodeList, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlNodeList, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlProcessingInstruction, &type_spec_XmlProcessingInstruction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlProcessingInstruction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlProcessingInstruction, &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlProcessingInstruction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_XmlText, &type_spec_XmlText, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlText, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_XmlText, &type_spec_XmlText, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_XmlText, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXmlCharacterData, &type_spec_IXmlCharacterData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlCharacterData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXmlCharacterData, &type_spec_IXmlCharacterData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlCharacterData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXmlNode, &type_spec_IXmlNode, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlNode, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXmlNode, &type_spec_IXmlNode, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlNode, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXmlNodeSelector, &type_spec_IXmlNodeSelector, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlNodeSelector, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXmlNodeSelector, &type_spec_IXmlNodeSelector, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlNodeSelector, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXmlNodeSerializer, &type_spec_IXmlNodeSerializer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlNodeSerializer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXmlNodeSerializer, &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlNodeSerializer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IXmlText, &type_spec_IXmlText, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlText, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IXmlText, &type_spec_IXmlText, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IXmlText, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

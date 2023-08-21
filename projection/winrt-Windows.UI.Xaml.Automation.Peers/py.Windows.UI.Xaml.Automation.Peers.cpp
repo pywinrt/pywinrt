@@ -16404,45 +16404,45 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppBarAutomationPeer, &type_spec_AppBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppBarAutomationPeer, &type_spec_AppBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppBarButtonAutomationPeer, &type_spec_AppBarButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppBarButtonAutomationPeer, &type_spec_AppBarButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonAutomationPeer, &type_spec_AppBarToggleButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarToggleButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppBarToggleButtonAutomationPeer, &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutoSuggestBoxAutomationPeer, &type_spec_AutoSuggestBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutoSuggestBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutoSuggestBoxAutomationPeer, &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutomationPeer, &type_spec_AutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutomationPeer, &type_spec_AutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -16455,774 +16455,774 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation_peers(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutomationPeerAnnotation, &type_spec_AutomationPeerAnnotation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutomationPeerAnnotation, &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ButtonAutomationPeer, &type_spec_ButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ButtonAutomationPeer, &type_spec_ButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ButtonBaseAutomationPeer, &type_spec_ButtonBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ButtonBaseAutomationPeer, &type_spec_ButtonBaseAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ButtonBaseAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CalendarDatePickerAutomationPeer, &type_spec_CalendarDatePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarDatePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CalendarDatePickerAutomationPeer, &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CaptureElementAutomationPeer, &type_spec_CaptureElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CaptureElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CaptureElementAutomationPeer, &type_spec_CaptureElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CaptureElementAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CheckBoxAutomationPeer, &type_spec_CheckBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CheckBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CheckBoxAutomationPeer, &type_spec_CheckBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CheckBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ColorPickerSliderAutomationPeer, &type_spec_ColorPickerSliderAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPickerSliderAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ColorPickerSliderAutomationPeer, &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ColorSpectrumAutomationPeer, &type_spec_ColorSpectrumAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorSpectrumAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ColorSpectrumAutomationPeer, &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ComboBoxAutomationPeer, &type_spec_ComboBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ComboBoxAutomationPeer, &type_spec_ComboBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ComboBoxItemAutomationPeer, &type_spec_ComboBoxItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ComboBoxItemAutomationPeer, &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ComboBoxItemDataAutomationPeer, &type_spec_ComboBoxItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ComboBoxItemDataAutomationPeer, &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DatePickerAutomationPeer, &type_spec_DatePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DatePickerAutomationPeer, &type_spec_DatePickerAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DatePickerFlyoutPresenterAutomationPeer, &type_spec_DatePickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatePickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DatePickerFlyoutPresenterAutomationPeer, &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlipViewAutomationPeer, &type_spec_FlipViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlipViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlipViewAutomationPeer, &type_spec_FlipViewAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlipViewAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlipViewItemAutomationPeer, &type_spec_FlipViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlipViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlipViewItemAutomationPeer, &type_spec_FlipViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlipViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlipViewItemDataAutomationPeer, &type_spec_FlipViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlipViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlipViewItemDataAutomationPeer, &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FlyoutPresenterAutomationPeer, &type_spec_FlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FlyoutPresenterAutomationPeer, &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_FrameworkElementAutomationPeer, &type_spec_FrameworkElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_FrameworkElementAutomationPeer, &type_spec_FrameworkElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_FrameworkElementAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridViewAutomationPeer, &type_spec_GridViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridViewAutomationPeer, &type_spec_GridViewAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridViewHeaderItemAutomationPeer, &type_spec_GridViewHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridViewHeaderItemAutomationPeer, &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridViewItemAutomationPeer, &type_spec_GridViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridViewItemAutomationPeer, &type_spec_GridViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GridViewItemDataAutomationPeer, &type_spec_GridViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GridViewItemDataAutomationPeer, &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GroupItemAutomationPeer, &type_spec_GroupItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GroupItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GroupItemAutomationPeer, &type_spec_GroupItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GroupItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HubAutomationPeer, &type_spec_HubAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HubAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HubAutomationPeer, &type_spec_HubAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HubAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HubSectionAutomationPeer, &type_spec_HubSectionAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HubSectionAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HubSectionAutomationPeer, &type_spec_HubSectionAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HubSectionAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HyperlinkButtonAutomationPeer, &type_spec_HyperlinkButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HyperlinkButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HyperlinkButtonAutomationPeer, &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ImageAutomationPeer, &type_spec_ImageAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ImageAutomationPeer, &type_spec_ImageAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ImageAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InkToolbarAutomationPeer, &type_spec_InkToolbarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InkToolbarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InkToolbarAutomationPeer, &type_spec_InkToolbarAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InkToolbarAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ItemAutomationPeer, &type_spec_ItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ItemAutomationPeer, &type_spec_ItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ItemsControlAutomationPeer, &type_spec_ItemsControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemsControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ItemsControlAutomationPeer, &type_spec_ItemsControlAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ItemsControlAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListBoxAutomationPeer, &type_spec_ListBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListBoxAutomationPeer, &type_spec_ListBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListBoxItemAutomationPeer, &type_spec_ListBoxItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListBoxItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListBoxItemAutomationPeer, &type_spec_ListBoxItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListBoxItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListBoxItemDataAutomationPeer, &type_spec_ListBoxItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListBoxItemDataAutomationPeer, &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListPickerFlyoutPresenterAutomationPeer, &type_spec_ListPickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListPickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListPickerFlyoutPresenterAutomationPeer, &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewAutomationPeer, &type_spec_ListViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewAutomationPeer, &type_spec_ListViewAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewBaseAutomationPeer, &type_spec_ListViewBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewBaseAutomationPeer, &type_spec_ListViewBaseAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewBaseAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewBaseHeaderItemAutomationPeer, &type_spec_ListViewBaseHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewBaseHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewBaseHeaderItemAutomationPeer, &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewHeaderItemAutomationPeer, &type_spec_ListViewHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewHeaderItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewHeaderItemAutomationPeer, &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewItemAutomationPeer, &type_spec_ListViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewItemAutomationPeer, &type_spec_ListViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ListViewItemDataAutomationPeer, &type_spec_ListViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ListViewItemDataAutomationPeer, &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorAutomationPeer, &type_spec_LoopingSelectorAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorAutomationPeer, &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemAutomationPeer, &type_spec_LoopingSelectorItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemAutomationPeer, &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemDataAutomationPeer, &type_spec_LoopingSelectorItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LoopingSelectorItemDataAutomationPeer, &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MapControlAutomationPeer, &type_spec_MapControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MapControlAutomationPeer, &type_spec_MapControlAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MapControlAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaElementAutomationPeer, &type_spec_MediaElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaElementAutomationPeer, &type_spec_MediaElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaElementAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaPlayerElementAutomationPeer, &type_spec_MediaPlayerElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerElementAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaPlayerElementAutomationPeer, &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MediaTransportControlsAutomationPeer, &type_spec_MediaTransportControlsAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTransportControlsAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MediaTransportControlsAutomationPeer, &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MenuBarAutomationPeer, &type_spec_MenuBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MenuBarAutomationPeer, &type_spec_MenuBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuBarAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MenuBarItemAutomationPeer, &type_spec_MenuBarItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuBarItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MenuBarItemAutomationPeer, &type_spec_MenuBarItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuBarItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemAutomationPeer, &type_spec_MenuFlyoutItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutItemAutomationPeer, &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterAutomationPeer, &type_spec_MenuFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MenuFlyoutPresenterAutomationPeer, &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NavigationViewItemAutomationPeer, &type_spec_NavigationViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NavigationViewItemAutomationPeer, &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PasswordBoxAutomationPeer, &type_spec_PasswordBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PasswordBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PasswordBoxAutomationPeer, &type_spec_PasswordBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PasswordBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PersonPictureAutomationPeer, &type_spec_PersonPictureAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PersonPictureAutomationPeer, &type_spec_PersonPictureAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PickerFlyoutPresenterAutomationPeer, &type_spec_PickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PickerFlyoutPresenterAutomationPeer, &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PivotAutomationPeer, &type_spec_PivotAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PivotAutomationPeer, &type_spec_PivotAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PivotItemAutomationPeer, &type_spec_PivotItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PivotItemAutomationPeer, &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PivotItemDataAutomationPeer, &type_spec_PivotItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotItemDataAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PivotItemDataAutomationPeer, &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProgressBarAutomationPeer, &type_spec_ProgressBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProgressBarAutomationPeer, &type_spec_ProgressBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressBarAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProgressRingAutomationPeer, &type_spec_ProgressRingAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressRingAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProgressRingAutomationPeer, &type_spec_ProgressRingAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProgressRingAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RadioButtonAutomationPeer, &type_spec_RadioButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadioButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RadioButtonAutomationPeer, &type_spec_RadioButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RadioButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RangeBaseAutomationPeer, &type_spec_RangeBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBaseAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RangeBaseAutomationPeer, &type_spec_RangeBaseAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RangeBaseAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RatingControlAutomationPeer, &type_spec_RatingControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RatingControlAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RatingControlAutomationPeer, &type_spec_RatingControlAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RatingControlAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RepeatButtonAutomationPeer, &type_spec_RepeatButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RepeatButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RepeatButtonAutomationPeer, &type_spec_RepeatButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RepeatButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RichEditBoxAutomationPeer, &type_spec_RichEditBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RichEditBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RichEditBoxAutomationPeer, &type_spec_RichEditBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RichEditBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RichTextBlockAutomationPeer, &type_spec_RichTextBlockAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RichTextBlockAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RichTextBlockAutomationPeer, &type_spec_RichTextBlockAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RichTextBlockAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RichTextBlockOverflowAutomationPeer, &type_spec_RichTextBlockOverflowAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RichTextBlockOverflowAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RichTextBlockOverflowAutomationPeer, &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScrollBarAutomationPeer, &type_spec_ScrollBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollBarAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScrollBarAutomationPeer, &type_spec_ScrollBarAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollBarAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScrollViewerAutomationPeer, &type_spec_ScrollViewerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollViewerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScrollViewerAutomationPeer, &type_spec_ScrollViewerAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScrollViewerAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SearchBoxAutomationPeer, &type_spec_SearchBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SearchBoxAutomationPeer, &type_spec_SearchBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SearchBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SelectorAutomationPeer, &type_spec_SelectorAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SelectorAutomationPeer, &type_spec_SelectorAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SelectorItemAutomationPeer, &type_spec_SelectorItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SelectorItemAutomationPeer, &type_spec_SelectorItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SelectorItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SemanticZoomAutomationPeer, &type_spec_SemanticZoomAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SemanticZoomAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SemanticZoomAutomationPeer, &type_spec_SemanticZoomAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SemanticZoomAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SettingsFlyoutAutomationPeer, &type_spec_SettingsFlyoutAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsFlyoutAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SettingsFlyoutAutomationPeer, &type_spec_SettingsFlyoutAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SettingsFlyoutAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SliderAutomationPeer, &type_spec_SliderAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SliderAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SliderAutomationPeer, &type_spec_SliderAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SliderAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TextBlockAutomationPeer, &type_spec_TextBlockAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextBlockAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TextBlockAutomationPeer, &type_spec_TextBlockAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextBlockAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TextBoxAutomationPeer, &type_spec_TextBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextBoxAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TextBoxAutomationPeer, &type_spec_TextBoxAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TextBoxAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ThumbAutomationPeer, &type_spec_ThumbAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThumbAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ThumbAutomationPeer, &type_spec_ThumbAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ThumbAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TimePickerAutomationPeer, &type_spec_TimePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimePickerAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TimePickerAutomationPeer, &type_spec_TimePickerAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimePickerAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TimePickerFlyoutPresenterAutomationPeer, &type_spec_TimePickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimePickerFlyoutPresenterAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TimePickerFlyoutPresenterAutomationPeer, &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToggleButtonAutomationPeer, &type_spec_ToggleButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToggleButtonAutomationPeer, &type_spec_ToggleButtonAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToggleMenuFlyoutItemAutomationPeer, &type_spec_ToggleMenuFlyoutItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleMenuFlyoutItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToggleMenuFlyoutItemAutomationPeer, &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ToggleSwitchAutomationPeer, &type_spec_ToggleSwitchAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleSwitchAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ToggleSwitchAutomationPeer, &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TreeViewItemAutomationPeer, &type_spec_TreeViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TreeViewItemAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TreeViewItemAutomationPeer, &type_spec_TreeViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TreeViewItemAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_TreeViewListAutomationPeer, &type_spec_TreeViewListAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_TreeViewListAutomationPeer, &type_spec_TreeViewListAutomationPeer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_RawElementProviderRuntimeId, &type_spec_RawElementProviderRuntimeId, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawElementProviderRuntimeId, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_RawElementProviderRuntimeId, &type_spec_RawElementProviderRuntimeId, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_RawElementProviderRuntimeId, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

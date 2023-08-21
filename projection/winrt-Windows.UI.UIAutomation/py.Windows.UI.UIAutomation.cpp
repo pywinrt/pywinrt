@@ -493,36 +493,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_uiautomation(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutomationConnection, &type_spec_AutomationConnection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationConnection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutomationConnection, &type_spec_AutomationConnection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationConnection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutomationConnectionBoundObject, &type_spec_AutomationConnectionBoundObject, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationConnectionBoundObject, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutomationConnectionBoundObject, &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationConnectionBoundObject, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutomationElement, &type_spec_AutomationElement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationElement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutomationElement, &type_spec_AutomationElement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationElement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AutomationTextRange, &type_spec_AutomationTextRange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationTextRange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AutomationTextRange, &type_spec_AutomationTextRange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AutomationTextRange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

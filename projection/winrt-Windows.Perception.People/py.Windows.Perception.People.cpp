@@ -1354,63 +1354,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_people(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EyesPose, &type_spec_EyesPose, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EyesPose, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EyesPose, &type_spec_EyesPose, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EyesPose, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HandMeshObserver, &type_spec_HandMeshObserver, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandMeshObserver, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HandMeshObserver, &type_spec_HandMeshObserver, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandMeshObserver, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HandMeshVertexState, &type_spec_HandMeshVertexState, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandMeshVertexState, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HandMeshVertexState, &type_spec_HandMeshVertexState, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandMeshVertexState, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HandPose, &type_spec_HandPose, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandPose, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HandPose, &type_spec_HandPose, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandPose, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HeadPose, &type_spec_HeadPose, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HeadPose, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HeadPose, &type_spec_HeadPose, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HeadPose, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HandMeshVertex, &type_spec_HandMeshVertex, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandMeshVertex, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HandMeshVertex, &type_spec_HandMeshVertex, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HandMeshVertex, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JointPose, &type_spec_JointPose, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JointPose, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JointPose, &type_spec_JointPose, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JointPose, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

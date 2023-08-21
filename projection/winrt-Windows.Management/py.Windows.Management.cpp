@@ -894,18 +894,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_management(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MdmAlert, &type_spec_MdmAlert, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmAlert, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MdmAlert, &type_spec_MdmAlert, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmAlert, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MdmSession, &type_spec_MdmSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MdmSession, &type_spec_MdmSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -918,9 +918,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_management(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MdmSessionManager, &type_spec_MdmSessionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmSessionManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MdmSessionManager, &type_spec_MdmSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MdmSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MdmSessionManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;

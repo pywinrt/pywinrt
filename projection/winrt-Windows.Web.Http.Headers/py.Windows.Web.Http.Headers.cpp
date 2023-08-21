@@ -17901,297 +17901,297 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_http_headers(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpCacheDirectiveHeaderValueCollection, &type_spec_HttpCacheDirectiveHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCacheDirectiveHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpCacheDirectiveHeaderValueCollection, &type_spec_HttpCacheDirectiveHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCacheDirectiveHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValue, &type_spec_HttpChallengeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValue, &type_spec_HttpChallengeHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValueCollection, &type_spec_HttpChallengeHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpChallengeHeaderValueCollection, &type_spec_HttpChallengeHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpChallengeHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValue, &type_spec_HttpConnectionOptionHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValue, &type_spec_HttpConnectionOptionHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValueCollection, &type_spec_HttpConnectionOptionHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpConnectionOptionHeaderValueCollection, &type_spec_HttpConnectionOptionHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpConnectionOptionHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValue, &type_spec_HttpContentCodingHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValue, &type_spec_HttpContentCodingHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValueCollection, &type_spec_HttpContentCodingHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingHeaderValueCollection, &type_spec_HttpContentCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValue, &type_spec_HttpContentCodingWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValue, &type_spec_HttpContentCodingWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValueCollection, &type_spec_HttpContentCodingWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentCodingWithQualityHeaderValueCollection, &type_spec_HttpContentCodingWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentCodingWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentDispositionHeaderValue, &type_spec_HttpContentDispositionHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentDispositionHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentDispositionHeaderValue, &type_spec_HttpContentDispositionHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentDispositionHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentHeaderCollection, &type_spec_HttpContentHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentHeaderCollection, &type_spec_HttpContentHeaderCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentHeaderCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpContentRangeHeaderValue, &type_spec_HttpContentRangeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentRangeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpContentRangeHeaderValue, &type_spec_HttpContentRangeHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpContentRangeHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValue, &type_spec_HttpCookiePairHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValue, &type_spec_HttpCookiePairHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValueCollection, &type_spec_HttpCookiePairHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpCookiePairHeaderValueCollection, &type_spec_HttpCookiePairHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCookiePairHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpCredentialsHeaderValue, &type_spec_HttpCredentialsHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCredentialsHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpCredentialsHeaderValue, &type_spec_HttpCredentialsHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpCredentialsHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpDateOrDeltaHeaderValue, &type_spec_HttpDateOrDeltaHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpDateOrDeltaHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpDateOrDeltaHeaderValue, &type_spec_HttpDateOrDeltaHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpDateOrDeltaHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValue, &type_spec_HttpExpectationHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValue, &type_spec_HttpExpectationHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValueCollection, &type_spec_HttpExpectationHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpExpectationHeaderValueCollection, &type_spec_HttpExpectationHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpExpectationHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpLanguageHeaderValueCollection, &type_spec_HttpLanguageHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpLanguageHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpLanguageHeaderValueCollection, &type_spec_HttpLanguageHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpLanguageHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValue, &type_spec_HttpLanguageRangeWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValue, &type_spec_HttpLanguageRangeWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValueCollection, &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpLanguageRangeWithQualityHeaderValueCollection, &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpLanguageRangeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpMediaTypeHeaderValue, &type_spec_HttpMediaTypeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpMediaTypeHeaderValue, &type_spec_HttpMediaTypeHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValue, &type_spec_HttpMediaTypeWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValue, &type_spec_HttpMediaTypeWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValueCollection, &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpMediaTypeWithQualityHeaderValueCollection, &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMediaTypeWithQualityHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpMethodHeaderValueCollection, &type_spec_HttpMethodHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMethodHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpMethodHeaderValueCollection, &type_spec_HttpMethodHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpMethodHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpNameValueHeaderValue, &type_spec_HttpNameValueHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpNameValueHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpNameValueHeaderValue, &type_spec_HttpNameValueHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpNameValueHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpProductHeaderValue, &type_spec_HttpProductHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpProductHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpProductHeaderValue, &type_spec_HttpProductHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpProductHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValue, &type_spec_HttpProductInfoHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValue, &type_spec_HttpProductInfoHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValueCollection, &type_spec_HttpProductInfoHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpProductInfoHeaderValueCollection, &type_spec_HttpProductInfoHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpProductInfoHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpRequestHeaderCollection, &type_spec_HttpRequestHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpRequestHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpRequestHeaderCollection, &type_spec_HttpRequestHeaderCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpRequestHeaderCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpResponseHeaderCollection, &type_spec_HttpResponseHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpResponseHeaderCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpResponseHeaderCollection, &type_spec_HttpResponseHeaderCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpResponseHeaderCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValue, &type_spec_HttpTransferCodingHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValue, &type_spec_HttpTransferCodingHeaderValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValueCollection, &type_spec_HttpTransferCodingHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValueCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HttpTransferCodingHeaderValueCollection, &type_spec_HttpTransferCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HttpTransferCodingHeaderValueCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

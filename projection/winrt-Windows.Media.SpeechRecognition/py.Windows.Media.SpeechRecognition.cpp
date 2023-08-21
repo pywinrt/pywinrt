@@ -4277,117 +4277,117 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionCompletedEventArgs, &type_spec_SpeechContinuousRecognitionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionCompletedEventArgs, &type_spec_SpeechContinuousRecognitionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionResultGeneratedEventArgs, &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionResultGeneratedEventArgs, &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionSession, &type_spec_SpeechContinuousRecognitionSession, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionSession, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechContinuousRecognitionSession, &type_spec_SpeechContinuousRecognitionSession, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionSession, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionCompilationResult, &type_spec_SpeechRecognitionCompilationResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionCompilationResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionCompilationResult, &type_spec_SpeechRecognitionCompilationResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionCompilationResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionGrammarFileConstraint, &type_spec_SpeechRecognitionGrammarFileConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionGrammarFileConstraint, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionGrammarFileConstraint, &type_spec_SpeechRecognitionGrammarFileConstraint, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionGrammarFileConstraint, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesis, &type_spec_SpeechRecognitionHypothesis, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesis, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesis, &type_spec_SpeechRecognitionHypothesis, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesis, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesisGeneratedEventArgs, &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionHypothesisGeneratedEventArgs, &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionListConstraint, &type_spec_SpeechRecognitionListConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionListConstraint, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionListConstraint, &type_spec_SpeechRecognitionListConstraint, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionListConstraint, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionQualityDegradingEventArgs, &type_spec_SpeechRecognitionQualityDegradingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionQualityDegradingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionQualityDegradingEventArgs, &type_spec_SpeechRecognitionQualityDegradingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionQualityDegradingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionResult, &type_spec_SpeechRecognitionResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionResult, &type_spec_SpeechRecognitionResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionSemanticInterpretation, &type_spec_SpeechRecognitionSemanticInterpretation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionSemanticInterpretation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionSemanticInterpretation, &type_spec_SpeechRecognitionSemanticInterpretation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionSemanticInterpretation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionTopicConstraint, &type_spec_SpeechRecognitionTopicConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionTopicConstraint, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionTopicConstraint, &type_spec_SpeechRecognitionTopicConstraint, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionTopicConstraint, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionVoiceCommandDefinitionConstraint, &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognitionVoiceCommandDefinitionConstraint, &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -4400,36 +4400,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizer, &type_spec_SpeechRecognizer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizer, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizer, &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizerStateChangedEventArgs, &type_spec_SpeechRecognizerStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizerStateChangedEventArgs, &type_spec_SpeechRecognizerStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizerTimeouts, &type_spec_SpeechRecognizerTimeouts, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerTimeouts, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizerTimeouts, &type_spec_SpeechRecognizerTimeouts, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerTimeouts, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizerUIOptions, &type_spec_SpeechRecognizerUIOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerUIOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SpeechRecognizerUIOptions, &type_spec_SpeechRecognizerUIOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerUIOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -4442,27 +4442,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VoiceCommandManager, &type_spec_VoiceCommandManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VoiceCommandManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VoiceCommandManager, &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_VoiceCommandSet, &type_spec_VoiceCommandSet, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VoiceCommandSet, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_VoiceCommandSet, &type_spec_VoiceCommandSet, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_VoiceCommandSet, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ISpeechRecognitionConstraint, &type_spec_ISpeechRecognitionConstraint, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISpeechRecognitionConstraint, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ISpeechRecognitionConstraint, &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

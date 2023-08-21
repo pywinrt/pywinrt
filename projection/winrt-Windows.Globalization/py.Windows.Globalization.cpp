@@ -8825,18 +8825,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ApplicationLanguages, &type_spec_ApplicationLanguages, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationLanguages, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ApplicationLanguages, &type_spec_ApplicationLanguages, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ApplicationLanguages, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationLanguages_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Calendar, &type_spec_Calendar, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Calendar, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Calendar, &type_spec_Calendar, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Calendar, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -8849,9 +8849,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CalendarIdentifiers, &type_spec_CalendarIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CalendarIdentifiers, &type_spec_CalendarIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CalendarIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarIdentifiers_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -8864,18 +8864,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ClockIdentifiers, &type_spec_ClockIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClockIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ClockIdentifiers, &type_spec_ClockIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ClockIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClockIdentifiers_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CurrencyAmount, &type_spec_CurrencyAmount, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrencyAmount, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CurrencyAmount, &type_spec_CurrencyAmount, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrencyAmount, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -8888,36 +8888,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CurrencyIdentifiers, &type_spec_CurrencyIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrencyIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CurrencyIdentifiers, &type_spec_CurrencyIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CurrencyIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrencyIdentifiers_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GeographicRegion, &type_spec_GeographicRegion, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeographicRegion, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GeographicRegion, &type_spec_GeographicRegion, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GeographicRegion, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JapanesePhoneme, &type_spec_JapanesePhoneme, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JapanesePhoneme, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JapanesePhoneme, &type_spec_JapanesePhoneme, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JapanesePhoneme, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_JapanesePhoneticAnalyzer, &type_spec_JapanesePhoneticAnalyzer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JapanesePhoneticAnalyzer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_JapanesePhoneticAnalyzer, &type_spec_JapanesePhoneticAnalyzer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_JapanesePhoneticAnalyzer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -8930,9 +8930,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Language, &type_spec_Language, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Language, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Language, &type_spec_Language, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Language, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Language_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -8945,9 +8945,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NumeralSystemIdentifiers, &type_spec_NumeralSystemIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NumeralSystemIdentifiers, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NumeralSystemIdentifiers, &type_spec_NumeralSystemIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NumeralSystemIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumeralSystemIdentifiers_Meta.get())) == -1)
     #endif
     {
         return nullptr;

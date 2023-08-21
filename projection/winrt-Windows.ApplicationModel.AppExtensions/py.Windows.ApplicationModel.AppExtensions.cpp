@@ -1317,63 +1317,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_appextensions(void) noexce
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtension, &type_spec_AppExtension, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtension, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtension, &type_spec_AppExtension, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtension, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtensionCatalog, &type_spec_AppExtensionCatalog, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionCatalog, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtensionCatalog, &type_spec_AppExtensionCatalog, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionCatalog, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageInstalledEventArgs, &type_spec_AppExtensionPackageInstalledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageInstalledEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageInstalledEventArgs, &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageInstalledEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageStatusChangedEventArgs, &type_spec_AppExtensionPackageStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageStatusChangedEventArgs, &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUninstallingEventArgs, &type_spec_AppExtensionPackageUninstallingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUninstallingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUninstallingEventArgs, &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUninstallingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatedEventArgs, &type_spec_AppExtensionPackageUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatedEventArgs, &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatingEventArgs, &type_spec_AppExtensionPackageUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AppExtensionPackageUpdatingEventArgs, &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AppExtensionPackageUpdatingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

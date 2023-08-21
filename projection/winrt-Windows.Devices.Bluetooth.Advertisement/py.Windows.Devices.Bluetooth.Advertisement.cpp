@@ -3264,27 +3264,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_advertisement(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisement, &type_spec_BluetoothLEAdvertisement, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisement, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisement, &type_spec_BluetoothLEAdvertisement, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisement, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementBytePattern, &type_spec_BluetoothLEAdvertisementBytePattern, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementBytePattern, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementBytePattern, &type_spec_BluetoothLEAdvertisementBytePattern, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementBytePattern, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementDataSection, &type_spec_BluetoothLEAdvertisementDataSection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementDataSection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementDataSection, &type_spec_BluetoothLEAdvertisementDataSection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementDataSection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -3297,72 +3297,72 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_advertisement(void) noexc
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementDataTypes, &type_spec_BluetoothLEAdvertisementDataTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAdvertisementDataTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementDataTypes, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAdvertisementDataTypes_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementDataTypes, &type_spec_BluetoothLEAdvertisementDataTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAdvertisementDataTypes_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementDataTypes, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BluetoothLEAdvertisementDataTypes_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementFilter, &type_spec_BluetoothLEAdvertisementFilter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementFilter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementFilter, &type_spec_BluetoothLEAdvertisementFilter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementFilter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisher, &type_spec_BluetoothLEAdvertisementPublisher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisher, &type_spec_BluetoothLEAdvertisementPublisher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, &type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, &type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementPublisherStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementReceivedEventArgs, &type_spec_BluetoothLEAdvertisementReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementReceivedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementReceivedEventArgs, &type_spec_BluetoothLEAdvertisementReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementReceivedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcher, &type_spec_BluetoothLEAdvertisementWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcher, &type_spec_BluetoothLEAdvertisementWatcher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherStoppedEventArgs, &type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEAdvertisementWatcherStoppedEventArgs, &type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEAdvertisementWatcherStoppedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BluetoothLEManufacturerData, &type_spec_BluetoothLEManufacturerData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEManufacturerData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BluetoothLEManufacturerData, &type_spec_BluetoothLEManufacturerData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BluetoothLEManufacturerData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

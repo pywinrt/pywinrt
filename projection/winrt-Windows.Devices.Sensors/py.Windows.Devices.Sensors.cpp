@@ -14262,594 +14262,594 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Accelerometer, &type_spec_Accelerometer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Accelerometer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Accelerometer, &type_spec_Accelerometer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Accelerometer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccelerometerDataThreshold, &type_spec_AccelerometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccelerometerDataThreshold, &type_spec_AccelerometerDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccelerometerReading, &type_spec_AccelerometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccelerometerReading, &type_spec_AccelerometerReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccelerometerReadingChangedEventArgs, &type_spec_AccelerometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccelerometerReadingChangedEventArgs, &type_spec_AccelerometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AccelerometerShakenEventArgs, &type_spec_AccelerometerShakenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerShakenEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AccelerometerShakenEventArgs, &type_spec_AccelerometerShakenEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AccelerometerShakenEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ActivitySensor, &type_spec_ActivitySensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ActivitySensor, &type_spec_ActivitySensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ActivitySensorReading, &type_spec_ActivitySensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ActivitySensorReading, &type_spec_ActivitySensorReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangeReport, &type_spec_ActivitySensorReadingChangeReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangeReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangeReport, &type_spec_ActivitySensorReadingChangeReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangeReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangedEventArgs, &type_spec_ActivitySensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ActivitySensorReadingChangedEventArgs, &type_spec_ActivitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ActivitySensorTriggerDetails, &type_spec_ActivitySensorTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ActivitySensorTriggerDetails, &type_spec_ActivitySensorTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ActivitySensorTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AdaptiveDimmingOptions, &type_spec_AdaptiveDimmingOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveDimmingOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AdaptiveDimmingOptions, &type_spec_AdaptiveDimmingOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AdaptiveDimmingOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Altimeter, &type_spec_Altimeter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Altimeter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Altimeter, &type_spec_Altimeter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Altimeter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AltimeterReading, &type_spec_AltimeterReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AltimeterReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AltimeterReading, &type_spec_AltimeterReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AltimeterReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_AltimeterReadingChangedEventArgs, &type_spec_AltimeterReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AltimeterReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_AltimeterReadingChangedEventArgs, &type_spec_AltimeterReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_AltimeterReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Barometer, &type_spec_Barometer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Barometer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Barometer, &type_spec_Barometer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Barometer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarometerDataThreshold, &type_spec_BarometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarometerDataThreshold, &type_spec_BarometerDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarometerDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarometerReading, &type_spec_BarometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarometerReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarometerReading, &type_spec_BarometerReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarometerReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_BarometerReadingChangedEventArgs, &type_spec_BarometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_BarometerReadingChangedEventArgs, &type_spec_BarometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_BarometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Compass, &type_spec_Compass, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Compass, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Compass, &type_spec_Compass, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Compass, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompassDataThreshold, &type_spec_CompassDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompassDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompassDataThreshold, &type_spec_CompassDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompassDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompassReading, &type_spec_CompassReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompassReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompassReading, &type_spec_CompassReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompassReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CompassReadingChangedEventArgs, &type_spec_CompassReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompassReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CompassReadingChangedEventArgs, &type_spec_CompassReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CompassReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Gyrometer, &type_spec_Gyrometer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Gyrometer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Gyrometer, &type_spec_Gyrometer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Gyrometer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GyrometerDataThreshold, &type_spec_GyrometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GyrometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GyrometerDataThreshold, &type_spec_GyrometerDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GyrometerDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GyrometerReading, &type_spec_GyrometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GyrometerReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GyrometerReading, &type_spec_GyrometerReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GyrometerReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_GyrometerReadingChangedEventArgs, &type_spec_GyrometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GyrometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_GyrometerReadingChangedEventArgs, &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HingeAngleReading, &type_spec_HingeAngleReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HingeAngleReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HingeAngleReading, &type_spec_HingeAngleReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HingeAngleReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HingeAngleSensor, &type_spec_HingeAngleSensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HingeAngleSensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HingeAngleSensor, &type_spec_HingeAngleSensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HingeAngleSensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HingeAngleSensorReadingChangedEventArgs, &type_spec_HingeAngleSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HingeAngleSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HingeAngleSensorReadingChangedEventArgs, &type_spec_HingeAngleSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HingeAngleSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HumanPresenceFeatures, &type_spec_HumanPresenceFeatures, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceFeatures, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HumanPresenceFeatures, &type_spec_HumanPresenceFeatures, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceFeatures, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSensor, &type_spec_HumanPresenceSensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSensor, &type_spec_HumanPresenceSensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReading, &type_spec_HumanPresenceSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReading, &type_spec_HumanPresenceSensorReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReadingChangedEventArgs, &type_spec_HumanPresenceSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSensorReadingChangedEventArgs, &type_spec_HumanPresenceSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSettings, &type_spec_HumanPresenceSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HumanPresenceSettings, &type_spec_HumanPresenceSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HumanPresenceSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Inclinometer, &type_spec_Inclinometer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Inclinometer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Inclinometer, &type_spec_Inclinometer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Inclinometer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InclinometerDataThreshold, &type_spec_InclinometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InclinometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InclinometerDataThreshold, &type_spec_InclinometerDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InclinometerDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InclinometerReading, &type_spec_InclinometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InclinometerReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InclinometerReading, &type_spec_InclinometerReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InclinometerReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InclinometerReadingChangedEventArgs, &type_spec_InclinometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InclinometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InclinometerReadingChangedEventArgs, &type_spec_InclinometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InclinometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LightSensor, &type_spec_LightSensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LightSensor, &type_spec_LightSensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LightSensorDataThreshold, &type_spec_LightSensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LightSensorDataThreshold, &type_spec_LightSensorDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensorDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LightSensorReading, &type_spec_LightSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensorReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LightSensorReading, &type_spec_LightSensorReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensorReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LightSensorReadingChangedEventArgs, &type_spec_LightSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LightSensorReadingChangedEventArgs, &type_spec_LightSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LightSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_LockOnLeaveOptions, &type_spec_LockOnLeaveOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LockOnLeaveOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_LockOnLeaveOptions, &type_spec_LockOnLeaveOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_LockOnLeaveOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Magnetometer, &type_spec_Magnetometer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Magnetometer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Magnetometer, &type_spec_Magnetometer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Magnetometer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagnetometerDataThreshold, &type_spec_MagnetometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagnetometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagnetometerDataThreshold, &type_spec_MagnetometerDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagnetometerDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagnetometerReading, &type_spec_MagnetometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagnetometerReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagnetometerReading, &type_spec_MagnetometerReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagnetometerReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_MagnetometerReadingChangedEventArgs, &type_spec_MagnetometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagnetometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_MagnetometerReadingChangedEventArgs, &type_spec_MagnetometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_MagnetometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OrientationSensor, &type_spec_OrientationSensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientationSensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OrientationSensor, &type_spec_OrientationSensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientationSensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OrientationSensorReading, &type_spec_OrientationSensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientationSensorReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OrientationSensorReading, &type_spec_OrientationSensorReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientationSensorReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_OrientationSensorReadingChangedEventArgs, &type_spec_OrientationSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientationSensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_OrientationSensorReadingChangedEventArgs, &type_spec_OrientationSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_OrientationSensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Pedometer, &type_spec_Pedometer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Pedometer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Pedometer, &type_spec_Pedometer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Pedometer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PedometerDataThreshold, &type_spec_PedometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PedometerDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PedometerDataThreshold, &type_spec_PedometerDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PedometerDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PedometerReading, &type_spec_PedometerReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PedometerReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PedometerReading, &type_spec_PedometerReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PedometerReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PedometerReadingChangedEventArgs, &type_spec_PedometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PedometerReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PedometerReadingChangedEventArgs, &type_spec_PedometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PedometerReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximitySensor, &type_spec_ProximitySensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximitySensor, &type_spec_ProximitySensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximitySensorDataThreshold, &type_spec_ProximitySensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximitySensorDataThreshold, &type_spec_ProximitySensorDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximitySensorDisplayOnOffController, &type_spec_ProximitySensorDisplayOnOffController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorDisplayOnOffController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximitySensorDisplayOnOffController, &type_spec_ProximitySensorDisplayOnOffController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorDisplayOnOffController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximitySensorReading, &type_spec_ProximitySensorReading, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorReading, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximitySensorReading, &type_spec_ProximitySensorReading, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorReading, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ProximitySensorReadingChangedEventArgs, &type_spec_ProximitySensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorReadingChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ProximitySensorReadingChangedEventArgs, &type_spec_ProximitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ProximitySensorReadingChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SensorDataThresholdTriggerDetails, &type_spec_SensorDataThresholdTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SensorDataThresholdTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SensorDataThresholdTriggerDetails, &type_spec_SensorDataThresholdTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SensorDataThresholdTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SensorQuaternion, &type_spec_SensorQuaternion, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SensorQuaternion, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SensorQuaternion, &type_spec_SensorQuaternion, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SensorQuaternion, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SensorRotationMatrix, &type_spec_SensorRotationMatrix, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SensorRotationMatrix, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SensorRotationMatrix, &type_spec_SensorRotationMatrix, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SensorRotationMatrix, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensor, &type_spec_SimpleOrientationSensor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SimpleOrientationSensor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensor, &type_spec_SimpleOrientationSensor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SimpleOrientationSensor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensorOrientationChangedEventArgs, &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SimpleOrientationSensorOrientationChangedEventArgs, &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SimpleOrientationSensorOrientationChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WakeOnApproachOptions, &type_spec_WakeOnApproachOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WakeOnApproachOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WakeOnApproachOptions, &type_spec_WakeOnApproachOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WakeOnApproachOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ISensorDataThreshold, &type_spec_ISensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISensorDataThreshold, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ISensorDataThreshold, &type_spec_ISensorDataThreshold, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ISensorDataThreshold, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

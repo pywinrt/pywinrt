@@ -955,9 +955,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Enterprise, &type_spec_Enterprise, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Enterprise, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Enterprise, &type_spec_Enterprise, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Enterprise, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -970,36 +970,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_management_deployment(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EnterpriseEnrollmentManager, &type_spec_EnterpriseEnrollmentManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EnterpriseEnrollmentManager, &type_spec_EnterpriseEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EnterpriseEnrollmentManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EnterpriseEnrollmentResult, &type_spec_EnterpriseEnrollmentResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EnterpriseEnrollmentResult, &type_spec_EnterpriseEnrollmentResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnterpriseEnrollmentResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_InstallationManager, &type_spec_InstallationManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InstallationManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_InstallationManager, &type_spec_InstallationManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_InstallationManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PackageInstallResult, &type_spec_PackageInstallResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PackageInstallResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PackageInstallResult, &type_spec_PackageInstallResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PackageInstallResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

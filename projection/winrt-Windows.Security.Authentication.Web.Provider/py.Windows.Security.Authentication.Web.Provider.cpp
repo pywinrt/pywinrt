@@ -4041,171 +4041,171 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_provider(void) 
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountClientView, &type_spec_WebAccountClientView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountClientView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountClientView, &type_spec_WebAccountClientView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountClientView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountManager, &type_spec_WebAccountManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountManager, &type_spec_WebAccountManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderAddAccountOperation, &type_spec_WebAccountProviderAddAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderAddAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderAddAccountOperation, &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderAddAccountOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderDeleteAccountOperation, &type_spec_WebAccountProviderDeleteAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderDeleteAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderDeleteAccountOperation, &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderDeleteAccountOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderGetTokenSilentOperation, &type_spec_WebAccountProviderGetTokenSilentOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderGetTokenSilentOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderGetTokenSilentOperation, &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderGetTokenSilentOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderManageAccountOperation, &type_spec_WebAccountProviderManageAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderManageAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderManageAccountOperation, &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderManageAccountOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderRequestTokenOperation, &type_spec_WebAccountProviderRequestTokenOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderRequestTokenOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderRequestTokenOperation, &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderRequestTokenOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderRetrieveCookiesOperation, &type_spec_WebAccountProviderRetrieveCookiesOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderRetrieveCookiesOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderRetrieveCookiesOperation, &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderRetrieveCookiesOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderSignOutAccountOperation, &type_spec_WebAccountProviderSignOutAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderSignOutAccountOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderSignOutAccountOperation, &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderSignOutAccountOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderTriggerDetails, &type_spec_WebAccountProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebAccountProviderTriggerDetails, &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebProviderTokenRequest, &type_spec_WebProviderTokenRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebProviderTokenRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebProviderTokenRequest, &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebProviderTokenRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_WebProviderTokenResponse, &type_spec_WebProviderTokenResponse, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebProviderTokenResponse, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_WebProviderTokenResponse, &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_WebProviderTokenResponse, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderBaseReportOperation, &type_spec_IWebAccountProviderBaseReportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderBaseReportOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderBaseReportOperation, &type_spec_IWebAccountProviderBaseReportOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderBaseReportOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderOperation, &type_spec_IWebAccountProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderOperation, &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderSilentReportOperation, &type_spec_IWebAccountProviderSilentReportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderSilentReportOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderSilentReportOperation, &type_spec_IWebAccountProviderSilentReportOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderSilentReportOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects, &type_spec_IWebAccountProviderTokenObjects, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects, &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects2, &type_spec_IWebAccountProviderTokenObjects2, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects2, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenObjects2, &type_spec_IWebAccountProviderTokenObjects2, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenObjects2, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenOperation, &type_spec_IWebAccountProviderTokenOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderTokenOperation, &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderTokenOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderUIReportOperation, &type_spec_IWebAccountProviderUIReportOperation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderUIReportOperation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IWebAccountProviderUIReportOperation, &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderUIReportOperation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

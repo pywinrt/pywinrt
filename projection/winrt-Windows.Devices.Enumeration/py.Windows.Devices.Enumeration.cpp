@@ -5115,198 +5115,198 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceAccessChangedEventArgs, &type_spec_DeviceAccessChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceAccessChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceAccessChangedEventArgs, &type_spec_DeviceAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceAccessChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceAccessInformation, &type_spec_DeviceAccessInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceAccessInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceAccessInformation, &type_spec_DeviceAccessInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceAccessInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceConnectionChangeTriggerDetails, &type_spec_DeviceConnectionChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceConnectionChangeTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceConnectionChangeTriggerDetails, &type_spec_DeviceConnectionChangeTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceConnectionChangeTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceDisconnectButtonClickedEventArgs, &type_spec_DeviceDisconnectButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceDisconnectButtonClickedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceDisconnectButtonClickedEventArgs, &type_spec_DeviceDisconnectButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceDisconnectButtonClickedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceInformation, &type_spec_DeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceInformation, &type_spec_DeviceInformation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceInformationCollection, &type_spec_DeviceInformationCollection, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationCollection, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceInformationCollection, &type_spec_DeviceInformationCollection, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationCollection, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceInformationCustomPairing, &type_spec_DeviceInformationCustomPairing, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationCustomPairing, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceInformationCustomPairing, &type_spec_DeviceInformationCustomPairing, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationCustomPairing, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceInformationPairing, &type_spec_DeviceInformationPairing, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationPairing, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceInformationPairing, &type_spec_DeviceInformationPairing, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationPairing, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceInformationUpdate, &type_spec_DeviceInformationUpdate, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationUpdate, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceInformationUpdate, &type_spec_DeviceInformationUpdate, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceInformationUpdate, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DevicePairingRequestedEventArgs, &type_spec_DevicePairingRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePairingRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DevicePairingRequestedEventArgs, &type_spec_DevicePairingRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePairingRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DevicePairingResult, &type_spec_DevicePairingResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePairingResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DevicePairingResult, &type_spec_DevicePairingResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePairingResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DevicePicker, &type_spec_DevicePicker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePicker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DevicePicker, &type_spec_DevicePicker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePicker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DevicePickerAppearance, &type_spec_DevicePickerAppearance, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePickerAppearance, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DevicePickerAppearance, &type_spec_DevicePickerAppearance, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePickerAppearance, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DevicePickerFilter, &type_spec_DevicePickerFilter, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePickerFilter, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DevicePickerFilter, &type_spec_DevicePickerFilter, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DevicePickerFilter, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceSelectedEventArgs, &type_spec_DeviceSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceSelectedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceSelectedEventArgs, &type_spec_DeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceSelectedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceThumbnail, &type_spec_DeviceThumbnail, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceThumbnail, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceThumbnail, &type_spec_DeviceThumbnail, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceThumbnail, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceUnpairingResult, &type_spec_DeviceUnpairingResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceUnpairingResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceUnpairingResult, &type_spec_DeviceUnpairingResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceUnpairingResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceWatcher, &type_spec_DeviceWatcher, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceWatcher, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceWatcher, &type_spec_DeviceWatcher, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceWatcher, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceWatcherEvent, &type_spec_DeviceWatcherEvent, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceWatcherEvent, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceWatcherEvent, &type_spec_DeviceWatcherEvent, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceWatcherEvent, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_DeviceWatcherTriggerDetails, &type_spec_DeviceWatcherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceWatcherTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_DeviceWatcherTriggerDetails, &type_spec_DeviceWatcherTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_DeviceWatcherTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_EnclosureLocation, &type_spec_EnclosureLocation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnclosureLocation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_EnclosureLocation, &type_spec_EnclosureLocation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_EnclosureLocation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IDevicePairingSettings, &type_spec_IDevicePairingSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IDevicePairingSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IDevicePairingSettings, &type_spec_IDevicePairingSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IDevicePairingSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

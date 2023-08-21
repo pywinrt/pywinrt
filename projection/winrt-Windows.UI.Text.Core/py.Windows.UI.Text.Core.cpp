@@ -3471,99 +3471,99 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextCompositionCompletedEventArgs, &type_spec_CoreTextCompositionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextCompositionCompletedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextCompositionCompletedEventArgs, &type_spec_CoreTextCompositionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextCompositionCompletedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextCompositionSegment, &type_spec_CoreTextCompositionSegment, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextCompositionSegment, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextCompositionSegment, &type_spec_CoreTextCompositionSegment, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextCompositionSegment, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextCompositionStartedEventArgs, &type_spec_CoreTextCompositionStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextCompositionStartedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextCompositionStartedEventArgs, &type_spec_CoreTextCompositionStartedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextCompositionStartedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextEditContext, &type_spec_CoreTextEditContext, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextEditContext, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextEditContext, &type_spec_CoreTextEditContext, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextEditContext, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextFormatUpdatingEventArgs, &type_spec_CoreTextFormatUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextFormatUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextFormatUpdatingEventArgs, &type_spec_CoreTextFormatUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextFormatUpdatingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextLayoutBounds, &type_spec_CoreTextLayoutBounds, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextLayoutBounds, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextLayoutBounds, &type_spec_CoreTextLayoutBounds, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextLayoutBounds, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequest, &type_spec_CoreTextLayoutRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequest, &type_spec_CoreTextLayoutRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequestedEventArgs, &type_spec_CoreTextLayoutRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextLayoutRequestedEventArgs, &type_spec_CoreTextLayoutRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextLayoutRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequest, &type_spec_CoreTextSelectionRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequest, &type_spec_CoreTextSelectionRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequestedEventArgs, &type_spec_CoreTextSelectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextSelectionRequestedEventArgs, &type_spec_CoreTextSelectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextSelectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextSelectionUpdatingEventArgs, &type_spec_CoreTextSelectionUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextSelectionUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextSelectionUpdatingEventArgs, &type_spec_CoreTextSelectionUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextSelectionUpdatingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -3576,54 +3576,54 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_text_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextServicesConstants, &type_spec_CoreTextServicesConstants, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesConstants, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextServicesConstants, &type_spec_CoreTextServicesConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesConstants, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreTextServicesConstants_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextServicesManager, &type_spec_CoreTextServicesManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextServicesManager, &type_spec_CoreTextServicesManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextServicesManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextTextRequest, &type_spec_CoreTextTextRequest, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextTextRequest, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextTextRequest, &type_spec_CoreTextTextRequest, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextTextRequest, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextTextRequestedEventArgs, &type_spec_CoreTextTextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextTextRequestedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextTextRequestedEventArgs, &type_spec_CoreTextTextRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextTextRequestedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextTextUpdatingEventArgs, &type_spec_CoreTextTextUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextTextUpdatingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextTextUpdatingEventArgs, &type_spec_CoreTextTextUpdatingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextTextUpdatingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreTextRange, &type_spec_CoreTextRange, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextRange, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreTextRange, &type_spec_CoreTextRange, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreTextRange, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

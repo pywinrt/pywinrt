@@ -4019,108 +4019,108 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_printers(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppAttributeError, &type_spec_IppAttributeError, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppAttributeError, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppAttributeError, &type_spec_IppAttributeError, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppAttributeError, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppAttributeValue, &type_spec_IppAttributeValue, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppAttributeValue, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppAttributeValue, &type_spec_IppAttributeValue, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppAttributeValue, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppIntegerRange, &type_spec_IppIntegerRange, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppIntegerRange, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppIntegerRange, &type_spec_IppIntegerRange, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppIntegerRange, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppPrintDevice, &type_spec_IppPrintDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppPrintDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppPrintDevice, &type_spec_IppPrintDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppPrintDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppResolution, &type_spec_IppResolution, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppResolution, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppResolution, &type_spec_IppResolution, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppResolution, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppSetAttributesResult, &type_spec_IppSetAttributesResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppSetAttributesResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppSetAttributesResult, &type_spec_IppSetAttributesResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppSetAttributesResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_IppTextWithLanguage, &type_spec_IppTextWithLanguage, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppTextWithLanguage, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_IppTextWithLanguage, &type_spec_IppTextWithLanguage, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_IppTextWithLanguage, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PageConfigurationSettings, &type_spec_PageConfigurationSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PageConfigurationSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PageConfigurationSettings, &type_spec_PageConfigurationSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PageConfigurationSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PdlPassthroughProvider, &type_spec_PdlPassthroughProvider, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PdlPassthroughProvider, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PdlPassthroughProvider, &type_spec_PdlPassthroughProvider, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PdlPassthroughProvider, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PdlPassthroughTarget, &type_spec_PdlPassthroughTarget, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PdlPassthroughTarget, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PdlPassthroughTarget, &type_spec_PdlPassthroughTarget, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PdlPassthroughTarget, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_Print3DDevice, &type_spec_Print3DDevice, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DDevice, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_Print3DDevice, &type_spec_Print3DDevice, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_Print3DDevice, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PrintSchema, &type_spec_PrintSchema, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintSchema, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PrintSchema, &type_spec_PrintSchema, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PrintSchema, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

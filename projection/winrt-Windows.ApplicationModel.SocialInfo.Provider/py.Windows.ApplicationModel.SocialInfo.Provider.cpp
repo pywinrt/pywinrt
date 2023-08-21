@@ -735,27 +735,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo_provider(void) 
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialDashboardItemUpdater, &type_spec_SocialDashboardItemUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialDashboardItemUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialDashboardItemUpdater, &type_spec_SocialDashboardItemUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialDashboardItemUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialFeedUpdater, &type_spec_SocialFeedUpdater, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedUpdater, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialFeedUpdater, &type_spec_SocialFeedUpdater, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialFeedUpdater, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_SocialInfoProviderManager, &type_spec_SocialInfoProviderManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialInfoProviderManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_SocialInfoProviderManager, &type_spec_SocialInfoProviderManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_SocialInfoProviderManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

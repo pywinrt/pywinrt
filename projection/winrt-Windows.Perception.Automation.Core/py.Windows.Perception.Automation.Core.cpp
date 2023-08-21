@@ -120,9 +120,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_automation_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CorePerceptionAutomation, &type_spec_CorePerceptionAutomation, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CorePerceptionAutomation, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CorePerceptionAutomation, &type_spec_CorePerceptionAutomation, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CorePerceptionAutomation, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

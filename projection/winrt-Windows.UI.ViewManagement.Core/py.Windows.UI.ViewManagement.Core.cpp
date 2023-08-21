@@ -2329,99 +2329,99 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement_core(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputView, &type_spec_CoreFrameworkInputView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputView, &type_spec_CoreFrameworkInputView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewAnimationStartingEventArgs, &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewAnimationStartingEventArgs, &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs, &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreFrameworkInputViewOcclusionsChangedEventArgs, &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreFrameworkInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputView, &type_spec_CoreInputView, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputView, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputView, &type_spec_CoreInputView, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputView, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputViewAnimationStartingEventArgs, &type_spec_CoreInputViewAnimationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewAnimationStartingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputViewAnimationStartingEventArgs, &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewAnimationStartingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputViewHidingEventArgs, &type_spec_CoreInputViewHidingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewHidingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputViewHidingEventArgs, &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewHidingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusion, &type_spec_CoreInputViewOcclusion, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusion, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusion, &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusion, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusionsChangedEventArgs, &type_spec_CoreInputViewOcclusionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusionsChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputViewOcclusionsChangedEventArgs, &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewOcclusionsChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputViewShowingEventArgs, &type_spec_CoreInputViewShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewShowingEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputViewShowingEventArgs, &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewShowingEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CoreInputViewTransferringXYFocusEventArgs, &type_spec_CoreInputViewTransferringXYFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewTransferringXYFocusEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CoreInputViewTransferringXYFocusEventArgs, &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CoreInputViewTransferringXYFocusEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UISettingsController, &type_spec_UISettingsController, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UISettingsController, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UISettingsController, &type_spec_UISettingsController, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UISettingsController, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

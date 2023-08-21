@@ -286,18 +286,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionTimestamp, &type_spec_PerceptionTimestamp, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionTimestamp, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionTimestamp, &type_spec_PerceptionTimestamp, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionTimestamp, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PerceptionTimestampHelper, &type_spec_PerceptionTimestampHelper, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionTimestampHelper, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PerceptionTimestampHelper, &type_spec_PerceptionTimestampHelper, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PerceptionTimestampHelper, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

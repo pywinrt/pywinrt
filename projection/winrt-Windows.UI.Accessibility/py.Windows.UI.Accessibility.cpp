@@ -331,18 +331,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_accessibility(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScreenReaderPositionChangedEventArgs, &type_spec_ScreenReaderPositionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScreenReaderPositionChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScreenReaderPositionChangedEventArgs, &type_spec_ScreenReaderPositionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScreenReaderPositionChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ScreenReaderService, &type_spec_ScreenReaderService, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScreenReaderService, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ScreenReaderService, &type_spec_ScreenReaderService, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ScreenReaderService, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

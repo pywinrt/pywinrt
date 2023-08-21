@@ -322,7 +322,6 @@ namespace py
 
     int register_python_type(
         PyObject* module,
-        const char* const type_name,
         PyType_Spec* type_spec,
 #if PY_VERSION_HEX < 0x03090000
         PyBufferProcs* buffer_procs,
@@ -402,7 +401,6 @@ namespace py
 
     inline int register_python_type(
         PyObject* module,
-        const char* const type_name,
         PyType_Spec* type_spec,
 #if PY_VERSION_HEX < 0x03090000
         PyBufferProcs* buffer_procs,
@@ -413,7 +411,6 @@ namespace py
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->register_python_type);
         return (*PyWinRT_API->register_python_type)(
             module,
-            type_name,
             type_spec,
 #if PY_VERSION_HEX < 0x03090000
             buffer_procs,

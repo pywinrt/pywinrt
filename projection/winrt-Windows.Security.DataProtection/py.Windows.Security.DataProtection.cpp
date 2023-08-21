@@ -712,36 +712,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_dataprotection(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataAvailabilityStateChangedEventArgs, &type_spec_UserDataAvailabilityStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAvailabilityStateChangedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataAvailabilityStateChangedEventArgs, &type_spec_UserDataAvailabilityStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataAvailabilityStateChangedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataBufferUnprotectResult, &type_spec_UserDataBufferUnprotectResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataBufferUnprotectResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataBufferUnprotectResult, &type_spec_UserDataBufferUnprotectResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataBufferUnprotectResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataProtectionManager, &type_spec_UserDataProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataProtectionManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataProtectionManager, &type_spec_UserDataProtectionManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataProtectionManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserDataStorageItemProtectionInfo, &type_spec_UserDataStorageItemProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataStorageItemProtectionInfo, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserDataStorageItemProtectionInfo, &type_spec_UserDataStorageItemProtectionInfo, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserDataStorageItemProtectionInfo, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

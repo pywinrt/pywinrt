@@ -851,9 +851,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTriggerDetails, &type_spec_PaymentAppCanMakePaymentTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTriggerDetails, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentAppCanMakePaymentTriggerDetails, &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAppCanMakePaymentTriggerDetails, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -866,27 +866,27 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_payments_provider(void) no
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentAppManager, &type_spec_PaymentAppManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAppManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentAppManager, &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaymentAppManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentTransaction, &type_spec_PaymentTransaction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentTransaction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentTransaction, &type_spec_PaymentTransaction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentTransaction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_PaymentTransactionAcceptResult, &type_spec_PaymentTransactionAcceptResult, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentTransactionAcceptResult, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_PaymentTransactionAcceptResult, &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_PaymentTransactionAcceptResult, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

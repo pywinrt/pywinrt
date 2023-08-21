@@ -426,9 +426,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAccessManager, &type_spec_CommunicationBlockingAccessManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAccessManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAccessManager, &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAccessManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;
@@ -441,9 +441,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_communicationblocking(void
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAppManager, &type_spec_CommunicationBlockingAppManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppManager, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CommunicationBlockingAppManager, &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CommunicationBlockingAppManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommunicationBlockingAppManager_Meta.get())) == -1)
     #endif
     {
         return nullptr;

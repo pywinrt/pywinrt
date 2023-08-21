@@ -5085,126 +5085,126 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicCamera, &type_spec_HolographicCamera, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCamera, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicCamera, &type_spec_HolographicCamera, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCamera, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicCameraPose, &type_spec_HolographicCameraPose, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCameraPose, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicCameraPose, &type_spec_HolographicCameraPose, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCameraPose, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicCameraRenderingParameters, &type_spec_HolographicCameraRenderingParameters, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCameraRenderingParameters, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicCameraRenderingParameters, &type_spec_HolographicCameraRenderingParameters, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCameraRenderingParameters, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicCameraViewportParameters, &type_spec_HolographicCameraViewportParameters, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCameraViewportParameters, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicCameraViewportParameters, &type_spec_HolographicCameraViewportParameters, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicCameraViewportParameters, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicDisplay, &type_spec_HolographicDisplay, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicDisplay, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicDisplay, &type_spec_HolographicDisplay, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicDisplay, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFrame, &type_spec_HolographicFrame, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrame, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFrame, &type_spec_HolographicFrame, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrame, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFramePrediction, &type_spec_HolographicFramePrediction, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFramePrediction, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFramePrediction, &type_spec_HolographicFramePrediction, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFramePrediction, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationMonitor, &type_spec_HolographicFramePresentationMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFramePresentationMonitor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationMonitor, &type_spec_HolographicFramePresentationMonitor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFramePresentationMonitor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationReport, &type_spec_HolographicFramePresentationReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFramePresentationReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFramePresentationReport, &type_spec_HolographicFramePresentationReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFramePresentationReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFrameRenderingReport, &type_spec_HolographicFrameRenderingReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameRenderingReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFrameRenderingReport, &type_spec_HolographicFrameRenderingReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameRenderingReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutMonitor, &type_spec_HolographicFrameScanoutMonitor, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutMonitor, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutMonitor, &type_spec_HolographicFrameScanoutMonitor, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutMonitor, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutReport, &type_spec_HolographicFrameScanoutReport, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutReport, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFrameScanoutReport, &type_spec_HolographicFrameScanoutReport, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameScanoutReport, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicQuadLayer, &type_spec_HolographicQuadLayer, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicQuadLayer, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicQuadLayer, &type_spec_HolographicQuadLayer, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicQuadLayer, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicQuadLayerUpdateParameters, &type_spec_HolographicQuadLayerUpdateParameters, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicQuadLayerUpdateParameters, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicQuadLayerUpdateParameters, &type_spec_HolographicQuadLayerUpdateParameters, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicQuadLayerUpdateParameters, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
@@ -5217,63 +5217,63 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_holographic(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicSpace, &type_spec_HolographicSpace, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpace, nullptr, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicSpace, &type_spec_HolographicSpace, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpace, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HolographicSpace_Meta.get())) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraAddedEventArgs, &type_spec_HolographicSpaceCameraAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraAddedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraAddedEventArgs, &type_spec_HolographicSpaceCameraAddedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraAddedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraRemovedEventArgs, &type_spec_HolographicSpaceCameraRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraRemovedEventArgs, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicSpaceCameraRemovedEventArgs, &type_spec_HolographicSpaceCameraRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicSpaceCameraRemovedEventArgs, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicViewConfiguration, &type_spec_HolographicViewConfiguration, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicViewConfiguration, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicViewConfiguration, &type_spec_HolographicViewConfiguration, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicViewConfiguration, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicAdapterId, &type_spec_HolographicAdapterId, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicAdapterId, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicAdapterId, &type_spec_HolographicAdapterId, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicAdapterId, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicFrameId, &type_spec_HolographicFrameId, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameId, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicFrameId, &type_spec_HolographicFrameId, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicFrameId, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_HolographicStereoTransform, &type_spec_HolographicStereoTransform, nullptr, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicStereoTransform, nullptr, nullptr, nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_HolographicStereoTransform, &type_spec_HolographicStereoTransform, nullptr, nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_HolographicStereoTransform, nullptr, nullptr) == -1)
     #endif
     {
         return nullptr;

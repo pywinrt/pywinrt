@@ -1051,36 +1051,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_credentials_ui(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CredentialPicker, &type_spec_CredentialPicker, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialPicker, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CredentialPicker, &type_spec_CredentialPicker, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialPicker, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CredentialPickerOptions, &type_spec_CredentialPickerOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialPickerOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CredentialPickerOptions, &type_spec_CredentialPickerOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialPickerOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CredentialPickerResults, &type_spec_CredentialPickerResults, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialPickerResults, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CredentialPickerResults, &type_spec_CredentialPickerResults, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CredentialPickerResults, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_UserConsentVerifier, &type_spec_UserConsentVerifier, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserConsentVerifier, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_UserConsentVerifier, &type_spec_UserConsentVerifier, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_UserConsentVerifier, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

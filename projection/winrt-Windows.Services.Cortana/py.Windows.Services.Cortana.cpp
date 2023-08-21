@@ -1027,36 +1027,36 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_cortana(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CortanaActionableInsights, &type_spec_CortanaActionableInsights, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaActionableInsights, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CortanaActionableInsights, &type_spec_CortanaActionableInsights, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaActionableInsights, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CortanaActionableInsightsOptions, &type_spec_CortanaActionableInsightsOptions, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaActionableInsightsOptions, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CortanaActionableInsightsOptions, &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaActionableInsightsOptions, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CortanaPermissionsManager, &type_spec_CortanaPermissionsManager, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaPermissionsManager, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CortanaPermissionsManager, &type_spec_CortanaPermissionsManager, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaPermissionsManager, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_CortanaSettings, &type_spec_CortanaSettings, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaSettings, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_CortanaSettings, &type_spec_CortanaSettings, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_CortanaSettings, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

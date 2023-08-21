@@ -544,18 +544,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_policies(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NamedPolicy, &type_spec_NamedPolicy, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NamedPolicy, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NamedPolicy, &type_spec_NamedPolicy, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NamedPolicy, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_NamedPolicyData, &type_spec_NamedPolicyData, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NamedPolicyData, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_NamedPolicyData, &type_spec_NamedPolicyData, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_NamedPolicyData, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;

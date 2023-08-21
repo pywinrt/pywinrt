@@ -426,9 +426,9 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources(void) noexcept
     }
 
     #if PY_VERSION_HEX < 0x03090000
-    if (py::register_python_type(module.get(), type_name_ResourceLoader, &type_spec_ResourceLoader, nullptr, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceLoader, nullptr, object_bases.get(), nullptr) == -1)
     #else
-    if (py::register_python_type(module.get(), type_name_ResourceLoader, &type_spec_ResourceLoader, object_bases.get(), nullptr) == -1)
+    if (py::register_python_type(module.get(), &type_spec_ResourceLoader, object_bases.get(), nullptr) == -1)
     #endif
     {
         return nullptr;
