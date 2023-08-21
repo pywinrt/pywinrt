@@ -5798,6 +5798,16 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static void _dealloc_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BitmapBounds_get_X(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self, void* /*unused*/) noexcept
@@ -6002,6 +6012,16 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static void _dealloc_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BitmapPlaneDescription_get_StartIndex(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self, void* /*unused*/) noexcept
@@ -6204,6 +6224,16 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     static void _dealloc_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BitmapSize_get_Width(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self, void* /*unused*/) noexcept

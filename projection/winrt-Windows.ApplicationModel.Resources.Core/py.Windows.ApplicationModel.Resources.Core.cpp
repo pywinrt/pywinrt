@@ -4510,6 +4510,16 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     static void _dealloc_ResourceLayoutInfo(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* ResourceLayoutInfo_get_MajorVersion(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self, void* /*unused*/) noexcept

@@ -6034,6 +6034,16 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static void _dealloc_Printing3DBufferDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Printing3DBufferDescription_get_Format(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self, void* /*unused*/) noexcept

@@ -20110,6 +20110,16 @@ namespace py::cpp::Windows::Media::Core
 
     static void _dealloc_MseTimeRange(py::wrapper::Windows::Media::Core::MseTimeRange* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* MseTimeRange_get_Start(py::wrapper::Windows::Media::Core::MseTimeRange* self, void* /*unused*/) noexcept
@@ -20244,6 +20254,16 @@ namespace py::cpp::Windows::Media::Core
 
     static void _dealloc_TimedTextDouble(py::wrapper::Windows::Media::Core::TimedTextDouble* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TimedTextDouble_get_Value(py::wrapper::Windows::Media::Core::TimedTextDouble* self, void* /*unused*/) noexcept
@@ -20381,6 +20401,16 @@ namespace py::cpp::Windows::Media::Core
 
     static void _dealloc_TimedTextPadding(py::wrapper::Windows::Media::Core::TimedTextPadding* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TimedTextPadding_get_Before(py::wrapper::Windows::Media::Core::TimedTextPadding* self, void* /*unused*/) noexcept
@@ -20618,6 +20648,16 @@ namespace py::cpp::Windows::Media::Core
 
     static void _dealloc_TimedTextPoint(py::wrapper::Windows::Media::Core::TimedTextPoint* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TimedTextPoint_get_X(py::wrapper::Windows::Media::Core::TimedTextPoint* self, void* /*unused*/) noexcept
@@ -20787,6 +20827,16 @@ namespace py::cpp::Windows::Media::Core
 
     static void _dealloc_TimedTextSize(py::wrapper::Windows::Media::Core::TimedTextSize* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TimedTextSize_get_Height(py::wrapper::Windows::Media::Core::TimedTextSize* self, void* /*unused*/) noexcept

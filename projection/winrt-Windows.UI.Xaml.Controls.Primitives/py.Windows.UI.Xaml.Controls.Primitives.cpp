@@ -22379,6 +22379,16 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     static void _dealloc_GeneratorPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* GeneratorPosition_get_Index(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self, void* /*unused*/) noexcept

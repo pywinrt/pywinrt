@@ -4710,6 +4710,16 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static void _dealloc_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HolographicAdapterId_get_LowPart(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self, void* /*unused*/) noexcept
@@ -4843,6 +4853,16 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static void _dealloc_HolographicFrameId(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HolographicFrameId_get_Value(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self, void* /*unused*/) noexcept
@@ -4943,6 +4963,16 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     static void _dealloc_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HolographicStereoTransform_get_Left(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self, void* /*unused*/) noexcept

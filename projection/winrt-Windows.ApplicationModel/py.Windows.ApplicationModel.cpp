@@ -7780,6 +7780,16 @@ namespace py::cpp::Windows::ApplicationModel
 
     static void _dealloc_PackageInstallProgress(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* PackageInstallProgress_get_PercentComplete(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self, void* /*unused*/) noexcept
@@ -7882,6 +7892,16 @@ namespace py::cpp::Windows::ApplicationModel
 
     static void _dealloc_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* PackageVersion_get_Major(py::wrapper::Windows::ApplicationModel::PackageVersion* self, void* /*unused*/) noexcept

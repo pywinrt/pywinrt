@@ -19,6 +19,7 @@
 - Fixed compiler warning about converting `Py_ssize_t` in `ComArray`.
 - Fixed `NotImplementedError` for delegates with `array_view`.
 - Fixed possible crash due to not checking return value of `convert()` in some places.
+- Fixed memory leak in wrapped struct types.
 
 ### Removed
 - Removed generation of base/core files.

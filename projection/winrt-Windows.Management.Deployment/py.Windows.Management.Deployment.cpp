@@ -7941,6 +7941,16 @@ namespace py::cpp::Windows::Management::Deployment
 
     static void _dealloc_DeploymentProgress(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* DeploymentProgress_get_state(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self, void* /*unused*/) noexcept

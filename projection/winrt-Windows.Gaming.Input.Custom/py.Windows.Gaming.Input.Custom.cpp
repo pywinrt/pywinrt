@@ -2215,6 +2215,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static void _dealloc_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* GameControllerVersionInfo_get_Major(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self, void* /*unused*/) noexcept
@@ -2417,6 +2427,16 @@ namespace py::cpp::Windows::Gaming::Input::Custom
 
     static void _dealloc_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* GipFirmwareUpdateProgress_get_PercentCompleted(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self, void* /*unused*/) noexcept

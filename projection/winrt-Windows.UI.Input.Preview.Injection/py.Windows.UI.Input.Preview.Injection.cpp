@@ -2368,6 +2368,16 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static void _dealloc_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* InjectedInputPoint_get_PositionX(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self, void* /*unused*/) noexcept
@@ -2505,6 +2515,16 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static void _dealloc_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* InjectedInputPointerInfo_get_PointerId(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self, void* /*unused*/) noexcept
@@ -2743,6 +2763,16 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
 
     static void _dealloc_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* InjectedInputRectangle_get_Left(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self, void* /*unused*/) noexcept

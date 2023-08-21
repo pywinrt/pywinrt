@@ -2277,6 +2277,16 @@ namespace py::cpp::Windows::Storage::AccessCache
 
     static void _dealloc_AccessListEntry(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* AccessListEntry_get_Token(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self, void* /*unused*/) noexcept

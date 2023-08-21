@@ -4841,6 +4841,16 @@ namespace py::cpp::Windows::Storage::Search
 
     static void _dealloc_SortEntry(py::wrapper::Windows::Storage::Search::SortEntry* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SortEntry_get_PropertyName(py::wrapper::Windows::Storage::Search::SortEntry* self, void* /*unused*/) noexcept

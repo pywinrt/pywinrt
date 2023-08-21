@@ -356,6 +356,16 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static void _dealloc_Direct3DMultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Direct3DMultisampleDescription_get_Count(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self, void* /*unused*/) noexcept
@@ -492,6 +502,16 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     static void _dealloc_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Direct3DSurfaceDescription_get_Width(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self, void* /*unused*/) noexcept

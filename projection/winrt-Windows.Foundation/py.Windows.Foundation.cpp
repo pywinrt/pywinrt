@@ -6784,6 +6784,16 @@ namespace py::cpp::Windows::Foundation
 
     static void _dealloc_EventRegistrationToken(py::wrapper::Windows::Foundation::EventRegistrationToken* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* EventRegistrationToken_get_Value(py::wrapper::Windows::Foundation::EventRegistrationToken* self, void* /*unused*/) noexcept
@@ -6884,6 +6894,16 @@ namespace py::cpp::Windows::Foundation
 
     static void _dealloc_HResult(py::wrapper::Windows::Foundation::HResult* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HResult_get_Value(py::wrapper::Windows::Foundation::HResult* self, void* /*unused*/) noexcept
@@ -6984,6 +7004,16 @@ namespace py::cpp::Windows::Foundation
 
     static void _dealloc_Point(py::wrapper::Windows::Foundation::Point* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Point_get_X(py::wrapper::Windows::Foundation::Point* self, void* /*unused*/) noexcept
@@ -7120,6 +7150,16 @@ namespace py::cpp::Windows::Foundation
 
     static void _dealloc_Rect(py::wrapper::Windows::Foundation::Rect* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Rect_get_X(py::wrapper::Windows::Foundation::Rect* self, void* /*unused*/) noexcept
@@ -7322,6 +7362,16 @@ namespace py::cpp::Windows::Foundation
 
     static void _dealloc_Size(py::wrapper::Windows::Foundation::Size* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Size_get_Width(py::wrapper::Windows::Foundation::Size* self, void* /*unused*/) noexcept

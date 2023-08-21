@@ -2129,6 +2129,16 @@ namespace py::cpp::Windows::Devices::Input
 
     static void _dealloc_MouseDelta(py::wrapper::Windows::Devices::Input::MouseDelta* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* MouseDelta_get_X(py::wrapper::Windows::Devices::Input::MouseDelta* self, void* /*unused*/) noexcept
@@ -2269,6 +2279,16 @@ namespace py::cpp::Windows::Devices::Input
 
     static void _dealloc_PointerDeviceUsage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* PointerDeviceUsage_get_UsagePage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self, void* /*unused*/) noexcept

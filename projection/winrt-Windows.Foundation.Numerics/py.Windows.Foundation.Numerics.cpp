@@ -53,6 +53,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Matrix3x2(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Matrix3x2_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, void* /*unused*/) noexcept
@@ -337,6 +347,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Matrix4x4(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Matrix4x4_get_M11(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, void* /*unused*/) noexcept
@@ -947,6 +967,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Plane(py::wrapper::Windows::Foundation::Numerics::Plane* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Plane_get_Normal(py::wrapper::Windows::Foundation::Numerics::Plane* self, void* /*unused*/) noexcept
@@ -1083,6 +1113,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Quaternion_get_X(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, void* /*unused*/) noexcept
@@ -1285,6 +1325,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Rational(py::wrapper::Windows::Foundation::Numerics::Rational* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Rational_get_Numerator(py::wrapper::Windows::Foundation::Numerics::Rational* self, void* /*unused*/) noexcept
@@ -1419,6 +1469,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Vector2_get_X(py::wrapper::Windows::Foundation::Numerics::Vector2* self, void* /*unused*/) noexcept
@@ -1554,6 +1614,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Vector3_get_X(py::wrapper::Windows::Foundation::Numerics::Vector3* self, void* /*unused*/) noexcept
@@ -1724,6 +1794,16 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static void _dealloc_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Vector4_get_X(py::wrapper::Windows::Foundation::Numerics::Vector4* self, void* /*unused*/) noexcept

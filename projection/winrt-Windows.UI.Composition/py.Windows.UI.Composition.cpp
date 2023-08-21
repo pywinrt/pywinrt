@@ -29580,6 +29580,16 @@ namespace py::cpp::Windows::UI::Composition
 
     static void _dealloc_InkTrailPoint(py::wrapper::Windows::UI::Composition::InkTrailPoint* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* InkTrailPoint_get_Point(py::wrapper::Windows::UI::Composition::InkTrailPoint* self, void* /*unused*/) noexcept

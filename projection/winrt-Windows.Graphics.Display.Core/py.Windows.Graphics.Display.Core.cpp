@@ -701,6 +701,16 @@ namespace py::cpp::Windows::Graphics::Display::Core
 
     static void _dealloc_HdmiDisplayHdr2086Metadata(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HdmiDisplayHdr2086Metadata_get_RedPrimaryX(py::wrapper::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata* self, void* /*unused*/) noexcept

@@ -5097,6 +5097,16 @@ namespace py::cpp::Windows::Networking::Connectivity
 
     static void _dealloc_NetworkUsageStates(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* NetworkUsageStates_get_Roaming(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self, void* /*unused*/) noexcept

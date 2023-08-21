@@ -3576,6 +3576,16 @@ namespace py::cpp::Windows::Devices::Geolocation
 
     static void _dealloc_BasicGeoposition(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BasicGeoposition_get_Latitude(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self, void* /*unused*/) noexcept

@@ -4333,6 +4333,16 @@ namespace py::cpp::Windows::Graphics::Printing
 
     static void _dealloc_PrintPageDescription(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* PrintPageDescription_get_PageSize(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self, void* /*unused*/) noexcept

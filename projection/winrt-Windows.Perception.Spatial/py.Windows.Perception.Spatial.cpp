@@ -3952,6 +3952,16 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static void _dealloc_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SpatialBoundingBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self, void* /*unused*/) noexcept
@@ -4090,6 +4100,16 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static void _dealloc_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SpatialBoundingFrustum_get_Near(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self, void* /*unused*/) noexcept
@@ -4361,6 +4381,16 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static void _dealloc_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SpatialBoundingOrientedBox_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self, void* /*unused*/) noexcept
@@ -4529,6 +4559,16 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static void _dealloc_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SpatialBoundingSphere_get_Center(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self, void* /*unused*/) noexcept
@@ -4663,6 +4703,16 @@ namespace py::cpp::Windows::Perception::Spatial
 
     static void _dealloc_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SpatialRay_get_Origin(py::wrapper::Windows::Perception::Spatial::SpatialRay* self, void* /*unused*/) noexcept

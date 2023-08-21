@@ -10121,6 +10121,16 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static void _dealloc_BandwidthStatistics(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BandwidthStatistics_get_OutboundBitsPerSecond(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self, void* /*unused*/) noexcept
@@ -10393,6 +10403,16 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static void _dealloc_RoundTripTimeStatistics(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* RoundTripTimeStatistics_get_Variance(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self, void* /*unused*/) noexcept

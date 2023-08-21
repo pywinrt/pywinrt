@@ -1725,6 +1725,16 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     static void _dealloc_TypeName(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TypeName_get_Name(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self, void* /*unused*/) noexcept

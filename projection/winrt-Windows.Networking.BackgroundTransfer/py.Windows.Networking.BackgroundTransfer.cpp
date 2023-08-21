@@ -5310,6 +5310,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static void _dealloc_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BackgroundDownloadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self, void* /*unused*/) noexcept
@@ -5546,6 +5556,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static void _dealloc_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BackgroundTransferFileRange_get_Offset(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self, void* /*unused*/) noexcept
@@ -5685,6 +5705,16 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
 
     static void _dealloc_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* BackgroundUploadProgress_get_BytesReceived(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self, void* /*unused*/) noexcept

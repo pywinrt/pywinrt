@@ -581,7 +581,6 @@ static PyModuleDef module_def
             type.TypeName(),
             bind<write_pywrapper_type>(type));
 
-        if (category == category::class_type || category == category::interface_type)
         {
             writer::indent_guard g{w};
 

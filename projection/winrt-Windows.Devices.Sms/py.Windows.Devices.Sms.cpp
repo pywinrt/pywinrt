@@ -8973,6 +8973,16 @@ namespace py::cpp::Windows::Devices::Sms
 
     static void _dealloc_SmsEncodedLength(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SmsEncodedLength_get_SegmentCount(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self, void* /*unused*/) noexcept

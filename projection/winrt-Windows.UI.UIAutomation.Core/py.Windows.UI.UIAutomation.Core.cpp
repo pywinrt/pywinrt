@@ -1766,6 +1766,16 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static void _dealloc_AutomationAnnotationTypeRegistration(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* AutomationAnnotationTypeRegistration_get_LocalId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self, void* /*unused*/) noexcept
@@ -1865,6 +1875,16 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     static void _dealloc_AutomationRemoteOperationOperandId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* AutomationRemoteOperationOperandId_get_Value(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self, void* /*unused*/) noexcept

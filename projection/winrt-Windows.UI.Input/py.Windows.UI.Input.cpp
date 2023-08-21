@@ -9658,6 +9658,16 @@ namespace py::cpp::Windows::UI::Input
 
     static void _dealloc_CrossSlideThresholds(py::wrapper::Windows::UI::Input::CrossSlideThresholds* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* CrossSlideThresholds_get_SelectionStart(py::wrapper::Windows::UI::Input::CrossSlideThresholds* self, void* /*unused*/) noexcept
@@ -9862,6 +9872,16 @@ namespace py::cpp::Windows::UI::Input
 
     static void _dealloc_ManipulationDelta(py::wrapper::Windows::UI::Input::ManipulationDelta* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* ManipulationDelta_get_Translation(py::wrapper::Windows::UI::Input::ManipulationDelta* self, void* /*unused*/) noexcept
@@ -10065,6 +10085,16 @@ namespace py::cpp::Windows::UI::Input
 
     static void _dealloc_ManipulationVelocities(py::wrapper::Windows::UI::Input::ManipulationVelocities* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* ManipulationVelocities_get_Linear(py::wrapper::Windows::UI::Input::ManipulationVelocities* self, void* /*unused*/) noexcept

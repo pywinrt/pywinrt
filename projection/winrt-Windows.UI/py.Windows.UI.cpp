@@ -3278,6 +3278,16 @@ namespace py::cpp::Windows::UI
 
     static void _dealloc_Color(py::wrapper::Windows::UI::Color* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Color_get_A(py::wrapper::Windows::UI::Color* self, void* /*unused*/) noexcept
@@ -3479,6 +3489,16 @@ namespace py::cpp::Windows::UI
 
     static void _dealloc_WindowId(py::wrapper::Windows::UI::WindowId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* WindowId_get_Value(py::wrapper::Windows::UI::WindowId* self, void* /*unused*/) noexcept

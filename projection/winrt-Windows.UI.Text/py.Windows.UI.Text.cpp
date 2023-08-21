@@ -10765,6 +10765,16 @@ namespace py::cpp::Windows::UI::Text
 
     static void _dealloc_FontWeight(py::wrapper::Windows::UI::Text::FontWeight* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* FontWeight_get_Weight(py::wrapper::Windows::UI::Text::FontWeight* self, void* /*unused*/) noexcept

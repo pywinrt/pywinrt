@@ -1728,6 +1728,16 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static void _dealloc_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* GpioChangeCount_get_Count(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self, void* /*unused*/) noexcept
@@ -1862,6 +1872,16 @@ namespace py::cpp::Windows::Devices::Gpio
 
     static void _dealloc_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* GpioChangeRecord_get_RelativeTime(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self, void* /*unused*/) noexcept

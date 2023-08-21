@@ -1067,6 +1067,16 @@ namespace py::cpp::Windows::Devices::I2c
 
     static void _dealloc_I2cTransferResult(py::wrapper::Windows::Devices::I2c::I2cTransferResult* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* I2cTransferResult_get_Status(py::wrapper::Windows::Devices::I2c::I2cTransferResult* self, void* /*unused*/) noexcept

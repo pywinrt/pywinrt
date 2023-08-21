@@ -28924,6 +28924,16 @@ namespace py::cpp::Windows::UI::Xaml
 
     static void _dealloc_CornerRadius(py::wrapper::Windows::UI::Xaml::CornerRadius* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* CornerRadius_get_TopLeft(py::wrapper::Windows::UI::Xaml::CornerRadius* self, void* /*unused*/) noexcept
@@ -29126,6 +29136,16 @@ namespace py::cpp::Windows::UI::Xaml
 
     static void _dealloc_Duration(py::wrapper::Windows::UI::Xaml::Duration* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Duration_get_TimeSpan(py::wrapper::Windows::UI::Xaml::Duration* self, void* /*unused*/) noexcept
@@ -29260,6 +29280,16 @@ namespace py::cpp::Windows::UI::Xaml
 
     static void _dealloc_GridLength(py::wrapper::Windows::UI::Xaml::GridLength* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* GridLength_get_Value(py::wrapper::Windows::UI::Xaml::GridLength* self, void* /*unused*/) noexcept
@@ -29396,6 +29426,16 @@ namespace py::cpp::Windows::UI::Xaml
 
     static void _dealloc_Thickness(py::wrapper::Windows::UI::Xaml::Thickness* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Thickness_get_Left(py::wrapper::Windows::UI::Xaml::Thickness* self, void* /*unused*/) noexcept

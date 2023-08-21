@@ -1010,6 +1010,16 @@ namespace py::cpp::Windows::Perception::People
 
     static void _dealloc_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HandMeshVertex_get_Position(py::wrapper::Windows::Perception::People::HandMeshVertex* self, void* /*unused*/) noexcept
@@ -1146,6 +1156,16 @@ namespace py::cpp::Windows::Perception::People
 
     static void _dealloc_JointPose(py::wrapper::Windows::Perception::People::JointPose* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* JointPose_get_Orientation(py::wrapper::Windows::Perception::People::JointPose* self, void* /*unused*/) noexcept

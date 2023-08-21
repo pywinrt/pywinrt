@@ -11489,6 +11489,16 @@ namespace py::cpp::Windows::UI::Core
 
     static void _dealloc_CorePhysicalKeyStatus(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* CorePhysicalKeyStatus_get_RepeatCount(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self, void* /*unused*/) noexcept
@@ -11759,6 +11769,16 @@ namespace py::cpp::Windows::UI::Core
 
     static void _dealloc_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* CoreProximityEvaluation_get_Score(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self, void* /*unused*/) noexcept

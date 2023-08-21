@@ -8361,6 +8361,16 @@ namespace py::cpp::Windows::Web::Syndication
 
     static void _dealloc_RetrievalProgress(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* RetrievalProgress_get_BytesRetrieved(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self, void* /*unused*/) noexcept
@@ -8497,6 +8507,16 @@ namespace py::cpp::Windows::Web::Syndication
 
     static void _dealloc_TransferProgress(py::wrapper::Windows::Web::Syndication::TransferProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TransferProgress_get_BytesSent(py::wrapper::Windows::Web::Syndication::TransferProgress* self, void* /*unused*/) noexcept

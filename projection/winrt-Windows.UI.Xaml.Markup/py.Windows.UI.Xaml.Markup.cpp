@@ -3318,6 +3318,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
     static void _dealloc_XamlBinaryWriterErrorInformation(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* XamlBinaryWriterErrorInformation_get_InputStreamIndex(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self, void* /*unused*/) noexcept
@@ -3486,6 +3496,16 @@ namespace py::cpp::Windows::UI::Xaml::Markup
 
     static void _dealloc_XmlnsDefinition(py::wrapper::Windows::UI::Xaml::Markup::XmlnsDefinition* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* XmlnsDefinition_get_XmlNamespace(py::wrapper::Windows::UI::Xaml::Markup::XmlnsDefinition* self, void* /*unused*/) noexcept

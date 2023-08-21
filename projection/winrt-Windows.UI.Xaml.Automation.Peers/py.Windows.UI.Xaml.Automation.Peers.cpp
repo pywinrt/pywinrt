@@ -16187,6 +16187,16 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
     static void _dealloc_RawElementProviderRuntimeId(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* RawElementProviderRuntimeId_get_Part1(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self, void* /*unused*/) noexcept

@@ -3683,6 +3683,16 @@ namespace py::cpp::TestComponent
 
     static void _dealloc_Blittable(py::wrapper::TestComponent::Blittable* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Blittable_get_A(py::wrapper::TestComponent::Blittable* self, void* /*unused*/) noexcept
@@ -4089,6 +4099,16 @@ namespace py::cpp::TestComponent
 
     static void _dealloc_Nested(py::wrapper::TestComponent::Nested* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* Nested_get_Blittable(py::wrapper::TestComponent::Nested* self, void* /*unused*/) noexcept
@@ -4225,6 +4245,16 @@ namespace py::cpp::TestComponent
 
     static void _dealloc_NonBlittable(py::wrapper::TestComponent::NonBlittable* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* NonBlittable_get_A(py::wrapper::TestComponent::NonBlittable* self, void* /*unused*/) noexcept

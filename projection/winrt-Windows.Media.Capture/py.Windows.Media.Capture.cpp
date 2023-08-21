@@ -20603,6 +20603,16 @@ namespace py::cpp::Windows::Media::Capture
 
     static void _dealloc_WhiteBalanceGain(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* WhiteBalanceGain_get_R(py::wrapper::Windows::Media::Capture::WhiteBalanceGain* self, void* /*unused*/) noexcept

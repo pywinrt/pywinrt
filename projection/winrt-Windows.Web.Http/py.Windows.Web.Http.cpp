@@ -7594,6 +7594,16 @@ namespace py::cpp::Windows::Web::Http
 
     static void _dealloc_HttpProgress(py::wrapper::Windows::Web::Http::HttpProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* HttpProgress_get_Stage(py::wrapper::Windows::Web::Http::HttpProgress* self, void* /*unused*/) noexcept

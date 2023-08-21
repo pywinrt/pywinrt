@@ -5700,6 +5700,16 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     static void _dealloc_DisplayPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* DisplayPresentationRate_get_VerticalSyncRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self, void* /*unused*/) noexcept

@@ -3972,6 +3972,16 @@ namespace py::cpp::Windows::Media::Import
 
     static void _dealloc_PhotoImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* PhotoImportProgress_get_ItemsImported(py::wrapper::Windows::Media::Import::PhotoImportProgress* self, void* /*unused*/) noexcept

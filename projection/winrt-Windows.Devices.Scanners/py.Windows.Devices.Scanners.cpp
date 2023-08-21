@@ -3858,6 +3858,16 @@ namespace py::cpp::Windows::Devices::Scanners
 
     static void _dealloc_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* ImageScannerResolution_get_DpiX(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self, void* /*unused*/) noexcept

@@ -13340,6 +13340,16 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
     static void _dealloc_TextRange(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* TextRange_get_StartIndex(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self, void* /*unused*/) noexcept

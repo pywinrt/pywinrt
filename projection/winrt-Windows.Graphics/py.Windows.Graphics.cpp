@@ -124,6 +124,16 @@ namespace py::cpp::Windows::Graphics
 
     static void _dealloc_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* DisplayAdapterId_get_LowPart(py::wrapper::Windows::Graphics::DisplayAdapterId* self, void* /*unused*/) noexcept
@@ -257,6 +267,16 @@ namespace py::cpp::Windows::Graphics
 
     static void _dealloc_DisplayId(py::wrapper::Windows::Graphics::DisplayId* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* DisplayId_get_Value(py::wrapper::Windows::Graphics::DisplayId* self, void* /*unused*/) noexcept
@@ -357,6 +377,16 @@ namespace py::cpp::Windows::Graphics
 
     static void _dealloc_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* PointInt32_get_X(py::wrapper::Windows::Graphics::PointInt32* self, void* /*unused*/) noexcept
@@ -493,6 +523,16 @@ namespace py::cpp::Windows::Graphics
 
     static void _dealloc_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* RectInt32_get_X(py::wrapper::Windows::Graphics::RectInt32* self, void* /*unused*/) noexcept
@@ -695,6 +735,16 @@ namespace py::cpp::Windows::Graphics
 
     static void _dealloc_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SizeInt32_get_Width(py::wrapper::Windows::Graphics::SizeInt32* self, void* /*unused*/) noexcept

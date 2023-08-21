@@ -25896,6 +25896,16 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static void _dealloc_SizeUInt32(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self) noexcept
     {
+        auto tp = Py_TYPE(self);
+
+        if (PyType_IS_GC(tp))
+        {
+            PyObject_GC_UnTrack(self);
+        }
+
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
     }
 
     static PyObject* SizeUInt32_get_Width(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self, void* /*unused*/) noexcept
