@@ -654,10 +654,8 @@ namespace py
             return nullptr;
         }
 
-        // PyObject_New doesn't call type's constructor, so manually initialize the
-        // wrapper's fields
-        std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
-        py_instance->obj = instance;
+        // call C++ constructors on memory allocated from CPython heap
+        std::construct_at(&py_instance->obj, instance);
 
         return reinterpret_cast<PyObject*>(py_instance);
     }
@@ -686,11 +684,9 @@ namespace py
             return nullptr;
         }
 
-        // PyObject_New doesn't call type's constructor, so manually initialize the
-        // wrapper's fields
         py_instance->get_unknown = &winrt_wrapper<T>::fetch_unknown;
-        std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
-        py_instance->obj = instance;
+        // call C++ constructors on memory allocated from CPython heap
+        std::construct_at(&py_instance->obj, instance);
 
         return reinterpret_cast<PyObject*>(py_instance);
     }
@@ -720,11 +716,10 @@ namespace py
             return nullptr;
         }
 
-        // PyObject_New doesn't call type's constructor, so manually initialize the
-        // wrapper's fields
         py_instance->get_unknown
             = &winrt_pinterface_wrapper<typename ptype::abstract>::fetch_unknown;
-        std::memset(&(py_instance->obj), 0, sizeof(py_instance->obj));
+        // call C++ constructors on memory allocated from CPython heap
+        std::construct_at(&py_instance->obj);
         py_instance->obj = std::make_unique<typename ptype::concrete>(instance);
 
         return reinterpret_cast<PyObject*>(py_instance);

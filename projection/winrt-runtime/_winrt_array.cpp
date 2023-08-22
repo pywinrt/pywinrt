@@ -32,7 +32,7 @@ namespace py::cpp::_winrt
         }
 
         // call C++ constructors on memory allocated from CPython heap
-        new (&self->array) std::unique_ptr<py::Array>{};
+        std::construct_at(&self->array);
 
         return self;
     }
