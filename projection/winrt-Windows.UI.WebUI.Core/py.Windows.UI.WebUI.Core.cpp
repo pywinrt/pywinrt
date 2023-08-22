@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBar(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -643,12 +637,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBarBitmapIcon(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarBitmapIcon* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -788,12 +776,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBarConfirmationButton(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarConfirmationButton* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -978,12 +960,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBarIconButton(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarIconButton* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1338,12 +1314,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBarItemInvokedEventArgs(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarItemInvokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1433,12 +1403,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBarSizeChangedEventArgs(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSizeChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1565,12 +1529,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_WebUICommandBarSymbolIcon(py::wrapper::Windows::UI::WebUI::Core::WebUICommandBarSymbolIcon* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1688,12 +1646,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_IWebUICommandBarElement(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1763,12 +1715,6 @@ namespace py::cpp::Windows::UI::WebUI::Core
     static void _dealloc_IWebUICommandBarIcon(py::wrapper::Windows::UI::WebUI::Core::IWebUICommandBarIcon* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

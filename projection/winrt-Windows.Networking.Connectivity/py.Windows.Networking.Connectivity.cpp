@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_AttributedNetworkUsage(py::wrapper::Windows::Networking::Connectivity::AttributedNetworkUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -215,12 +209,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_CellularApnContext(py::wrapper::Windows::Networking::Connectivity::CellularApnContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -626,12 +614,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ConnectionCost(py::wrapper::Windows::Networking::Connectivity::ConnectionCost* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -801,12 +783,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ConnectionProfile(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1512,12 +1488,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ConnectionProfileFilter(py::wrapper::Windows::Networking::Connectivity::ConnectionProfileFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2039,12 +2009,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ConnectionSession(py::wrapper::Windows::Networking::Connectivity::ConnectionSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2187,12 +2151,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ConnectivityInterval(py::wrapper::Windows::Networking::Connectivity::ConnectivityInterval* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2434,12 +2392,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_DataPlanStatus(py::wrapper::Windows::Networking::Connectivity::DataPlanStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2629,12 +2581,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_DataPlanUsage(py::wrapper::Windows::Networking::Connectivity::DataPlanUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2744,12 +2690,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_DataUsage(py::wrapper::Windows::Networking::Connectivity::DataUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2859,12 +2799,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_IPInformation(py::wrapper::Windows::Networking::Connectivity::IPInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2974,12 +2908,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_LanIdentifier(py::wrapper::Windows::Networking::Connectivity::LanIdentifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3109,12 +3037,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_LanIdentifierData(py::wrapper::Windows::Networking::Connectivity::LanIdentifierData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3224,12 +3146,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_NetworkAdapter(py::wrapper::Windows::Networking::Connectivity::NetworkAdapter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3725,12 +3641,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_NetworkItem(py::wrapper::Windows::Networking::Connectivity::NetworkItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3850,12 +3760,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_NetworkSecuritySettings(py::wrapper::Windows::Networking::Connectivity::NetworkSecuritySettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3965,12 +3869,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_NetworkStateChangeEventDetails(py::wrapper::Windows::Networking::Connectivity::NetworkStateChangeEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4200,12 +4098,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_NetworkUsage(py::wrapper::Windows::Networking::Connectivity::NetworkUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4335,12 +4227,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ProviderNetworkUsage(py::wrapper::Windows::Networking::Connectivity::ProviderNetworkUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4470,12 +4356,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_ProxyConfiguration(py::wrapper::Windows::Networking::Connectivity::ProxyConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4611,12 +4491,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_RoutePolicy(py::wrapper::Windows::Networking::Connectivity::RoutePolicy* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4746,12 +4620,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_WlanConnectionProfileDetails(py::wrapper::Windows::Networking::Connectivity::WlanConnectionProfileDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4851,12 +4719,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_WwanConnectionProfileDetails(py::wrapper::Windows::Networking::Connectivity::WwanConnectionProfileDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5098,12 +4960,6 @@ namespace py::cpp::Windows::Networking::Connectivity
     static void _dealloc_NetworkUsageStates(py::wrapper::Windows::Networking::Connectivity::NetworkUsageStates* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

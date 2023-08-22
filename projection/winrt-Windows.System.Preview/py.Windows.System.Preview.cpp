@@ -18,12 +18,6 @@ namespace py::cpp::Windows::System::Preview
     static void _dealloc_TwoPanelHingedDevicePosturePreview(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -198,12 +192,6 @@ namespace py::cpp::Windows::System::Preview
     static void _dealloc_TwoPanelHingedDevicePosturePreviewReading(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -393,12 +381,6 @@ namespace py::cpp::Windows::System::Preview
     static void _dealloc_TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(py::wrapper::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

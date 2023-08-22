@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScanner(py::wrapper::Windows::Devices::PointOfService::BarcodeScanner* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -581,12 +575,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScannerCapabilities(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -776,12 +764,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScannerDataReceivedEventArgs(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -871,12 +853,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScannerErrorOccurredEventArgs(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerErrorOccurredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1006,12 +982,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScannerImagePreviewReceivedEventArgs(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerImagePreviewReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1127,12 +1097,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScannerReport(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1262,12 +1226,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeScannerStatusUpdatedEventArgs(py::wrapper::Windows::Devices::PointOfService::BarcodeScannerStatusUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3343,12 +3301,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_BarcodeSymbologyAttributes(py::wrapper::Windows::Devices::PointOfService::BarcodeSymbologyAttributes* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3718,12 +3670,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawer(py::wrapper::Windows::Devices::PointOfService::CashDrawer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4197,12 +4143,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerCapabilities(py::wrapper::Windows::Devices::PointOfService::CashDrawerCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4392,12 +4332,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerCloseAlarm(py::wrapper::Windows::Devices::PointOfService::CashDrawerCloseAlarm* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4734,12 +4668,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerClosedEventArgs(py::wrapper::Windows::Devices::PointOfService::CashDrawerClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4829,12 +4757,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerEventSource(py::wrapper::Windows::Devices::PointOfService::CashDrawerEventSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4994,12 +4916,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerOpenedEventArgs(py::wrapper::Windows::Devices::PointOfService::CashDrawerOpenedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5089,12 +5005,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerStatus(py::wrapper::Windows::Devices::PointOfService::CashDrawerStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5204,12 +5114,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_CashDrawerStatusUpdatedEventArgs(py::wrapper::Windows::Devices::PointOfService::CashDrawerStatusUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5299,12 +5203,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedBarcodeScanner(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScanner* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6331,12 +6229,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedBarcodeScannerClosedEventArgs(py::wrapper::Windows::Devices::PointOfService::ClaimedBarcodeScannerClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6406,12 +6298,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedCashDrawer(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6888,12 +6774,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedCashDrawerClosedEventArgs(py::wrapper::Windows::Devices::PointOfService::ClaimedCashDrawerClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6963,12 +6843,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedJournalPrinter(py::wrapper::Windows::Devices::PointOfService::ClaimedJournalPrinter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7500,12 +7374,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedLineDisplay(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8445,12 +8313,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedLineDisplayClosedEventArgs(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplayClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8520,12 +8382,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedMagneticStripeReader(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9533,12 +9389,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedMagneticStripeReaderClosedEventArgs(py::wrapper::Windows::Devices::PointOfService::ClaimedMagneticStripeReaderClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9608,12 +9458,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedPosPrinter(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10244,12 +10088,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedPosPrinterClosedEventArgs(py::wrapper::Windows::Devices::PointOfService::ClaimedPosPrinterClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10319,12 +10157,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedReceiptPrinter(py::wrapper::Windows::Devices::PointOfService::ClaimedReceiptPrinter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10956,12 +10788,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ClaimedSlipPrinter(py::wrapper::Windows::Devices::PointOfService::ClaimedSlipPrinter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11792,12 +11618,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_JournalPrintJob(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12070,12 +11890,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_JournalPrinterCapabilities(py::wrapper::Windows::Devices::PointOfService::JournalPrinterCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12525,12 +12339,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplay(py::wrapper::Windows::Devices::PointOfService::LineDisplay* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13005,12 +12813,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayAttributes(py::wrapper::Windows::Devices::PointOfService::LineDisplayAttributes* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13416,12 +13218,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayCapabilities(py::wrapper::Windows::Devices::PointOfService::LineDisplayCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13851,12 +13647,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayCursor(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14128,12 +13918,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayCursorAttributes(py::wrapper::Windows::Devices::PointOfService::LineDisplayCursorAttributes* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14395,12 +14179,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayCustomGlyphs(py::wrapper::Windows::Devices::PointOfService::LineDisplayCustomGlyphs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14543,12 +14321,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayMarquee(py::wrapper::Windows::Devices::PointOfService::LineDisplayMarquee* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14824,12 +14596,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayStatisticsCategorySelector(py::wrapper::Windows::Devices::PointOfService::LineDisplayStatisticsCategorySelector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14959,12 +14725,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayStatusUpdatedEventArgs(py::wrapper::Windows::Devices::PointOfService::LineDisplayStatusUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15054,12 +14814,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayStoredBitmap(py::wrapper::Windows::Devices::PointOfService::LineDisplayStoredBitmap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15179,12 +14933,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_LineDisplayWindow(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15777,12 +15525,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReader(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16266,12 +16008,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderAamvaCardDataReceivedEventArgs(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderAamvaCardDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16721,12 +16457,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderBankCardDataReceivedEventArgs(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderBankCardDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16976,12 +16706,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderCapabilities(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17519,12 +17243,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderErrorOccurredEventArgs(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderErrorOccurredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17714,12 +17432,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderReport(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17969,12 +17681,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderStatusUpdatedEventArgs(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderStatusUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18084,12 +17790,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderTrackData(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderTrackData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18219,12 +17919,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs(py::wrapper::Windows::Devices::PointOfService::MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18314,12 +18008,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinter(py::wrapper::Windows::Devices::PointOfService::PosPrinter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18845,12 +18533,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinterCapabilities(py::wrapper::Windows::Devices::PointOfService::PosPrinterCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19234,12 +18916,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinterFontProperty(py::wrapper::Windows::Devices::PointOfService::PosPrinterFontProperty* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19391,12 +19067,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinterPrintOptions(py::wrapper::Windows::Devices::PointOfService::PosPrinterPrintOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20090,12 +19760,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinterReleaseDeviceRequestedEventArgs(py::wrapper::Windows::Devices::PointOfService::PosPrinterReleaseDeviceRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20165,12 +19829,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinterStatus(py::wrapper::Windows::Devices::PointOfService::PosPrinterStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20280,12 +19938,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_PosPrinterStatusUpdatedEventArgs(py::wrapper::Windows::Devices::PointOfService::PosPrinterStatusUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20375,12 +20027,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ReceiptPrintJob(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21247,12 +20893,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ReceiptPrinterCapabilities(py::wrapper::Windows::Devices::PointOfService::ReceiptPrinterCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21942,12 +21582,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_SlipPrintJob(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22698,12 +22332,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_SlipPrinterCapabilities(py::wrapper::Windows::Devices::PointOfService::SlipPrinterCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23400,12 +23028,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_UnifiedPosErrorData(py::wrapper::Windows::Devices::PointOfService::UnifiedPosErrorData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23555,12 +23177,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ICashDrawerEventSourceEventArgs(py::wrapper::Windows::Devices::PointOfService::ICashDrawerEventSourceEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23650,12 +23266,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ICommonClaimedPosPrinterStation(py::wrapper::Windows::Devices::PointOfService::ICommonClaimedPosPrinterStation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -24157,12 +23767,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ICommonPosPrintStationCapabilities(py::wrapper::Windows::Devices::PointOfService::ICommonPosPrintStationCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -24492,12 +24096,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_ICommonReceiptSlipCapabilities(py::wrapper::Windows::Devices::PointOfService::ICommonReceiptSlipCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25007,12 +24605,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_IPosPrinterJob(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25197,12 +24789,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_IReceiptOrSlipJob(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25897,12 +25483,6 @@ namespace py::cpp::Windows::Devices::PointOfService
     static void _dealloc_SizeUInt32(py::wrapper::Windows::Devices::PointOfService::SizeUInt32* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Web::UI::Interop
     static void _dealloc_WebViewControl(py::wrapper::Windows::Web::UI::Interop::WebViewControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1940,12 +1934,6 @@ namespace py::cpp::Windows::Web::UI::Interop
     static void _dealloc_WebViewControlAcceleratorKeyPressedEventArgs(py::wrapper::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2143,12 +2131,6 @@ namespace py::cpp::Windows::Web::UI::Interop
     static void _dealloc_WebViewControlMoveFocusRequestedEventArgs(py::wrapper::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2275,12 +2257,6 @@ namespace py::cpp::Windows::Web::UI::Interop
     static void _dealloc_WebViewControlProcess(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcess* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2571,12 +2547,6 @@ namespace py::cpp::Windows::Web::UI::Interop
     static void _dealloc_WebViewControlProcessOptions(py::wrapper::Windows::Web::UI::Interop::WebViewControlProcessOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

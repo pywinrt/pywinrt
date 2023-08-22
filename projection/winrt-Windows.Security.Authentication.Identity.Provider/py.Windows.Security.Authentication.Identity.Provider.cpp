@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorAuthentication(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -379,12 +373,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorAuthenticationResult(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -494,12 +482,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -589,12 +571,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorAuthenticationStageInfo(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -724,12 +700,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorInfo(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -951,12 +921,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorRegistration(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1345,12 +1309,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
     static void _dealloc_SecondaryAuthenticationFactorRegistrationResult(py::wrapper::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

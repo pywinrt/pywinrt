@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static void _dealloc_PhoneCallBlockedTriggerDetails(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallBlockedTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static void _dealloc_PhoneCallOriginDataRequestTriggerDetails(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneCallOriginDataRequestTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -268,12 +256,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static void _dealloc_PhoneIncomingCallDismissedTriggerDetails(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallDismissedTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -463,12 +445,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static void _dealloc_PhoneIncomingCallNotificationTriggerDetails(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneIncomingCallNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -578,12 +554,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static void _dealloc_PhoneLineChangedTriggerDetails(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneLineChangedTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -725,12 +695,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Background
     static void _dealloc_PhoneNewVoicemailMessageTriggerDetails(py::wrapper::Windows::ApplicationModel::Calls::Background::PhoneNewVoicemailMessageTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

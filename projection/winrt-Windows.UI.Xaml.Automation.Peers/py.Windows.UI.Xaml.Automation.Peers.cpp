@@ -42,12 +42,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_AppBarAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -490,12 +484,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_AppBarButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -671,12 +659,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_AppBarToggleButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -770,12 +752,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_AutoSuggestBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -876,12 +852,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_AutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4194,12 +4164,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_AutomationPeerAnnotation(py::wrapper::Windows::UI::Xaml::Automation::Peers::AutomationPeerAnnotation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4449,12 +4413,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4555,12 +4513,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ButtonBaseAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4654,12 +4606,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_CalendarDatePickerAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4857,12 +4803,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_CaptureElementAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::CaptureElementAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4956,12 +4896,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_CheckBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5055,12 +4989,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ColorPickerSliderAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5154,12 +5082,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ColorSpectrumAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5253,12 +5175,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ComboBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5723,12 +5639,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ComboBoxItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5823,12 +5733,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ComboBoxItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5953,12 +5857,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_DatePickerAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::DatePickerAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6028,12 +5926,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_DatePickerFlyoutPresenterAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6127,12 +6019,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_FlipViewAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlipViewAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6226,12 +6112,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_FlipViewItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6326,12 +6206,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_FlipViewItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6456,12 +6330,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_FlyoutPresenterAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6555,12 +6423,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_FrameworkElementAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6738,12 +6600,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_GridViewAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6837,12 +6693,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_GridViewHeaderItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6936,12 +6786,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_GridViewItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7036,12 +6880,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_GridViewItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7166,12 +7004,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_GroupItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::GroupItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7265,12 +7097,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_HubAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::HubAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7364,12 +7190,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_HubSectionAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7494,12 +7314,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_HyperlinkButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7624,12 +7438,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ImageAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ImageAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7699,12 +7507,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_InkToolbarAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::InkToolbarAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7799,12 +7601,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7969,12 +7765,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ItemsControlAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8166,12 +7956,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8265,12 +8049,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListBoxItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8365,12 +8143,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListBoxItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8471,12 +8243,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListPickerFlyoutPresenterAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8570,12 +8336,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListViewAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8669,12 +8429,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListViewBaseAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8784,12 +8538,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListViewBaseHeaderItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8883,12 +8631,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListViewHeaderItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8982,12 +8724,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListViewItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9082,12 +8818,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ListViewItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9188,12 +8918,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_LoopingSelectorAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9637,12 +9361,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_LoopingSelectorItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9876,12 +9594,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_LoopingSelectorItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9982,12 +9694,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MapControlAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MapControlAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10576,12 +10282,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MediaElementAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MediaElementAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10675,12 +10375,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MediaPlayerElementAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10774,12 +10468,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MediaTransportControlsAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10873,12 +10561,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MenuBarAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuBarAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10972,12 +10654,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MenuBarItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11184,12 +10860,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MenuFlyoutItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11314,12 +10984,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_MenuFlyoutPresenterAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11413,12 +11077,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_NavigationViewItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11512,12 +11170,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_PasswordBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11611,12 +11263,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_PersonPictureAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11686,12 +11332,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_PickerFlyoutPresenterAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11785,12 +11425,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_PivotAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::PivotAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12142,12 +11776,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_PivotItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::PivotItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12242,12 +11870,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_PivotItemDataAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12536,12 +12158,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ProgressBarAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12635,12 +12251,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ProgressRingAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12734,12 +12344,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RadioButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12966,12 +12570,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RangeBaseAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13218,12 +12816,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RatingControlAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RatingControlAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13317,12 +12909,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RepeatButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13447,12 +13033,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RichEditBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13546,12 +13126,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RichTextBlockAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13645,12 +13219,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RichTextBlockOverflowAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13744,12 +13312,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ScrollBarAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13843,12 +13405,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ScrollViewerAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14130,12 +13686,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_SearchBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::SearchBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14229,12 +13779,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_SelectorAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14399,12 +13943,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_SelectorItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14631,12 +14169,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_SemanticZoomAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14781,12 +14313,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_SettingsFlyoutAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::SettingsFlyoutAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14880,12 +14406,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_SliderAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::SliderAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14979,12 +14499,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_TextBlockAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::TextBlockAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15078,12 +14592,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_TextBoxAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::TextBoxAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15177,12 +14685,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ThumbAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ThumbAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15276,12 +14778,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_TimePickerAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::TimePickerAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15351,12 +14847,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_TimePickerFlyoutPresenterAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15450,12 +14940,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ToggleButtonAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15600,12 +15084,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ToggleMenuFlyoutItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15750,12 +15228,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_ToggleSwitchAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15900,12 +15372,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_TreeViewItemAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16081,12 +15547,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_TreeViewListAutomationPeer(py::wrapper::Windows::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16188,12 +15648,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
     static void _dealloc_RawElementProviderRuntimeId(py::wrapper::Windows::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

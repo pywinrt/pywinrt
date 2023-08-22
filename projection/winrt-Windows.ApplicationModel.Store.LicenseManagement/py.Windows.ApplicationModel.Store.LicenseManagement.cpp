@@ -149,12 +149,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     static void _dealloc_LicenseSatisfactionInfo(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -364,12 +358,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::LicenseManagement
     static void _dealloc_LicenseSatisfactionResult(py::wrapper::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -55,12 +55,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputGamepadInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -488,12 +482,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputKeyboardInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -729,12 +717,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputMouseInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1066,12 +1048,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputPenInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1499,12 +1475,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputTouchInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1814,12 +1784,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InputInjector(py::wrapper::Windows::UI::Input::Preview::Injection::InputInjector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2369,12 +2333,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputPoint(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPoint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2516,12 +2474,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputPointerInfo(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2764,12 +2716,6 @@ namespace py::cpp::Windows::UI::Input::Preview::Injection
     static void _dealloc_InjectedInputRectangle(py::wrapper::Windows::UI::Input::Preview::Injection::InjectedInputRectangle* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

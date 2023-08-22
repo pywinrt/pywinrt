@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static void _dealloc_CoreDragDropManager(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -216,12 +210,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static void _dealloc_CoreDragInfo(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -393,12 +381,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static void _dealloc_CoreDragOperation(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -702,12 +684,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static void _dealloc_CoreDragUIOverride(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1055,12 +1031,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static void _dealloc_CoreDropOperationTargetRequestedEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1163,12 +1133,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::DragDrop::Core
     static void _dealloc_ICoreDropOperationTarget(py::wrapper::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

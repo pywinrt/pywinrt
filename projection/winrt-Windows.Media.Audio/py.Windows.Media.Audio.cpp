@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioDeviceInputNode(py::wrapper::Windows::Media::Audio::AudioDeviceInputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -589,12 +583,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioDeviceOutputNode(py::wrapper::Windows::Media::Audio::AudioDeviceOutputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1080,12 +1068,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioFileInputNode(py::wrapper::Windows::Media::Audio::AudioFileInputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1961,12 +1943,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioFileOutputNode(py::wrapper::Windows::Media::Audio::AudioFileOutputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2454,12 +2430,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioFrameCompletedEventArgs(py::wrapper::Windows::Media::Audio::AudioFrameCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2549,12 +2519,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioFrameInputNode(py::wrapper::Windows::Media::Audio::AudioFrameInputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3322,12 +3286,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioFrameOutputNode(py::wrapper::Windows::Media::Audio::AudioFrameOutputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3775,12 +3733,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioGraph(py::wrapper::Windows::Media::Audio::AudioGraph* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4792,12 +4744,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioGraphBatchUpdater(py::wrapper::Windows::Media::Audio::AudioGraphBatchUpdater* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4920,12 +4866,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioGraphConnection(py::wrapper::Windows::Media::Audio::AudioGraphConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5087,12 +5027,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioGraphSettings(py::wrapper::Windows::Media::Audio::AudioGraphSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5498,12 +5432,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioGraphUnrecoverableErrorOccurredEventArgs(py::wrapper::Windows::Media::Audio::AudioGraphUnrecoverableErrorOccurredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5632,12 +5560,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioNodeEmitter(py::wrapper::Windows::Media::Audio::AudioNodeEmitter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6103,12 +6025,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioNodeEmitterConeProperties(py::wrapper::Windows::Media::Audio::AudioNodeEmitterConeProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6238,12 +6154,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioNodeEmitterDecayModel(py::wrapper::Windows::Media::Audio::AudioNodeEmitterDecayModel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6461,12 +6371,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioNodeEmitterNaturalDecayModelProperties(py::wrapper::Windows::Media::Audio::AudioNodeEmitterNaturalDecayModelProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6576,12 +6480,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioNodeEmitterShape(py::wrapper::Windows::Media::Audio::AudioNodeEmitterShape* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6777,12 +6675,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioNodeListener(py::wrapper::Windows::Media::Audio::AudioNodeListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7044,12 +6936,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioPlaybackConnection(py::wrapper::Windows::Media::Audio::AudioPlaybackConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7440,12 +7326,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioPlaybackConnectionOpenResult(py::wrapper::Windows::Media::Audio::AudioPlaybackConnectionOpenResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7555,12 +7435,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioStateMonitor(py::wrapper::Windows::Media::Audio::AudioStateMonitor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7903,12 +7777,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_AudioSubmixNode(py::wrapper::Windows::Media::Audio::AudioSubmixNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8454,12 +8322,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_CreateAudioDeviceInputNodeResult(py::wrapper::Windows::Media::Audio::CreateAudioDeviceInputNodeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8589,12 +8451,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_CreateAudioDeviceOutputNodeResult(py::wrapper::Windows::Media::Audio::CreateAudioDeviceOutputNodeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8724,12 +8580,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_CreateAudioFileInputNodeResult(py::wrapper::Windows::Media::Audio::CreateAudioFileInputNodeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8859,12 +8709,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_CreateAudioFileOutputNodeResult(py::wrapper::Windows::Media::Audio::CreateAudioFileOutputNodeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8994,12 +8838,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_CreateAudioGraphResult(py::wrapper::Windows::Media::Audio::CreateAudioGraphResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9129,12 +8967,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_CreateMediaSourceAudioInputNodeResult(py::wrapper::Windows::Media::Audio::CreateMediaSourceAudioInputNodeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9288,12 +9120,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_EchoEffectDefinition(py::wrapper::Windows::Media::Audio::EchoEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9547,12 +9373,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_EqualizerBand(py::wrapper::Windows::Media::Audio::EqualizerBand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9790,12 +9610,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_EqualizerEffectDefinition(py::wrapper::Windows::Media::Audio::EqualizerEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9925,12 +9739,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_FrameInputNodeQuantumStartedEventArgs(py::wrapper::Windows::Media::Audio::FrameInputNodeQuantumStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10044,12 +9852,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_LimiterEffectDefinition(py::wrapper::Windows::Media::Audio::LimiterEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10255,12 +10057,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_MediaSourceAudioInputNode(py::wrapper::Windows::Media::Audio::MediaSourceAudioInputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11160,12 +10956,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_ReverbEffectDefinition(py::wrapper::Windows::Media::Audio::ReverbEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12379,12 +12169,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_SetDefaultSpatialAudioFormatResult(py::wrapper::Windows::Media::Audio::SetDefaultSpatialAudioFormatResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12474,12 +12258,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_SpatialAudioDeviceConfiguration(py::wrapper::Windows::Media::Audio::SpatialAudioDeviceConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12770,12 +12548,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_SpatialAudioFormatConfiguration(py::wrapper::Windows::Media::Audio::SpatialAudioFormatConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13181,12 +12953,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_IAudioInputNode(py::wrapper::Windows::Media::Audio::IAudioInputNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13712,12 +13478,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_IAudioInputNode2(py::wrapper::Windows::Media::Audio::IAudioInputNode2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14263,12 +14023,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_IAudioNode(py::wrapper::Windows::Media::Audio::IAudioNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14686,12 +14440,6 @@ namespace py::cpp::Windows::Media::Audio
     static void _dealloc_IAudioNodeWithListener(py::wrapper::Windows::Media::Audio::IAudioNodeWithListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

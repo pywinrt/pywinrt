@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Input::Core
     static void _dealloc_RadialControllerIndependentInputSource(py::wrapper::Windows::UI::Input::Core::RadialControllerIndependentInputSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

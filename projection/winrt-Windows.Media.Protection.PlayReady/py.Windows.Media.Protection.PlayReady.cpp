@@ -44,12 +44,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDClient(py::wrapper::Windows::Media::Protection::PlayReady::NDClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -499,12 +493,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDCustomData(py::wrapper::Windows::Media::Protection::PlayReady::NDCustomData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -636,12 +624,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDDownloadEngineNotifier(py::wrapper::Windows::Media::Protection::PlayReady::NDDownloadEngineNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -930,12 +912,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDLicenseFetchDescriptor(py::wrapper::Windows::Media::Protection::PlayReady::NDLicenseFetchDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1115,12 +1091,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDStorageFileHelper(py::wrapper::Windows::Media::Protection::PlayReady::NDStorageFileHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1244,12 +1214,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDStreamParserNotifier(py::wrapper::Windows::Media::Protection::PlayReady::NDStreamParserNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1484,12 +1448,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_NDTCPMessenger(py::wrapper::Windows::Media::Protection::PlayReady::NDTCPMessenger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1781,12 +1739,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyContentHeader(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyContentHeader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2172,12 +2124,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyDomain(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomain* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2371,12 +2317,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyDomainIterable(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2490,12 +2430,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyDomainIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2717,12 +2651,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyDomainJoinServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainJoinServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3236,12 +3164,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyDomainLeaveServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyDomainLeaveServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3707,12 +3629,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyITADataGenerator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyITADataGenerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3839,12 +3755,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyIndividualizationServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyIndividualizationServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4192,12 +4102,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyLicense(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicense* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4521,12 +4425,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyLicenseAcquisitionServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseAcquisitionServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5061,12 +4959,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyLicenseIterable(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5180,12 +5072,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyLicenseIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5475,12 +5361,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyLicenseSession(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyLicenseSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5668,12 +5548,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyMeteringReportServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyMeteringReportServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6091,12 +5965,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadyRevocationServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadyRevocationServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6468,12 +6336,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadySecureStopIterable(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6587,12 +6449,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadySecureStopIterator(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6832,12 +6688,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadySecureStopServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySecureStopServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7285,12 +7135,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_PlayReadySoapMessage(py::wrapper::Windows::Media::Protection::PlayReady::PlayReadySoapMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7827,12 +7671,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDClosedCaptionDataReceivedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDClosedCaptionDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7962,12 +7800,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDCustomData(py::wrapper::Windows::Media::Protection::PlayReady::INDCustomData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8077,12 +7909,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDDownloadEngine(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngine* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8392,12 +8218,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDDownloadEngineNotifier(py::wrapper::Windows::Media::Protection::PlayReady::INDDownloadEngineNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8660,12 +8480,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDLicenseFetchCompletedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8755,12 +8569,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDLicenseFetchDescriptor(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8918,12 +8726,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDLicenseFetchResult(py::wrapper::Windows::Media::Protection::PlayReady::INDLicenseFetchResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9013,12 +8815,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDMessenger(py::wrapper::Windows::Media::Protection::PlayReady::INDMessenger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9224,12 +9020,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDProximityDetectionCompletedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDProximityDetectionCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9319,12 +9109,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDRegistrationCompletedEventArgs(py::wrapper::Windows::Media::Protection::PlayReady::INDRegistrationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9482,12 +9266,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDSendResult(py::wrapper::Windows::Media::Protection::PlayReady::INDSendResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9577,12 +9355,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDStartResult(py::wrapper::Windows::Media::Protection::PlayReady::INDStartResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9672,12 +9444,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDStorageFileHelper(py::wrapper::Windows::Media::Protection::PlayReady::INDStorageFileHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9779,12 +9545,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDStreamParser(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10014,12 +9774,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDStreamParserNotifier(py::wrapper::Windows::Media::Protection::PlayReady::INDStreamParserNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10229,12 +9983,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_INDTransmitterProperties(py::wrapper::Windows::Media::Protection::PlayReady::INDTransmitterProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10524,12 +10272,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadyDomain(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyDomain* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10699,12 +10441,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadyLicense(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicense* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10926,12 +10662,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadyLicenseAcquisitionServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseAcquisitionServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11375,12 +11105,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadyLicenseSession(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11513,12 +11237,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadyLicenseSession2(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyLicenseSession2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11684,12 +11402,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadySecureStopServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadySecureStopServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12137,12 +11849,6 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     static void _dealloc_IPlayReadyServiceRequest(py::wrapper::Windows::Media::Protection::PlayReady::IPlayReadyServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

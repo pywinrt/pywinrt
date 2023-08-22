@@ -281,12 +281,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_ErrorDetails(py::wrapper::Windows::Foundation::Diagnostics::ErrorDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -472,12 +466,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_FileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -783,12 +771,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LogFileGeneratedEventArgs(py::wrapper::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -920,12 +902,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LoggingActivity(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1514,12 +1490,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2187,12 +2157,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LoggingChannelOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannelOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2332,12 +2296,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LoggingFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5555,12 +5513,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LoggingOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5942,12 +5894,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_LoggingSession(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6233,12 +6179,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_RuntimeBrokerErrorSettings(py::wrapper::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6371,12 +6311,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_TracingStatusChangedEventArgs(py::wrapper::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6486,12 +6420,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_IErrorReportingSettings(py::wrapper::Windows::Foundation::Diagnostics::IErrorReportingSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6624,12 +6552,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_IFileLoggingSession(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6935,12 +6857,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_ILoggingChannel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7280,12 +7196,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_ILoggingSession(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7549,12 +7459,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static void _dealloc_ILoggingTarget(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     static void _dealloc_MicrosoftAccountMultiFactorAuthenticationManager(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -439,12 +433,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     static void _dealloc_MicrosoftAccountMultiFactorGetSessionsResult(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorGetSessionsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -554,12 +542,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     static void _dealloc_MicrosoftAccountMultiFactorOneTimeCodedInfo(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorOneTimeCodedInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -709,12 +691,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     static void _dealloc_MicrosoftAccountMultiFactorSessionInfo(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -924,12 +900,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     static void _dealloc_MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

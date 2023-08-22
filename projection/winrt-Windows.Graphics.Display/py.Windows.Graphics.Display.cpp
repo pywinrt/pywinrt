@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_AdvancedColorInfo(py::wrapper::Windows::Graphics::Display::AdvancedColorInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -337,12 +331,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_BrightnessOverride(py::wrapper::Windows::Graphics::Display::BrightnessOverride* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -861,12 +849,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_BrightnessOverrideSettings(py::wrapper::Windows::Graphics::Display::BrightnessOverrideSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1072,12 +1054,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_ColorOverrideSettings(py::wrapper::Windows::Graphics::Display::ColorOverrideSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1199,12 +1175,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_DisplayEnhancementOverride(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverride* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1667,12 +1637,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_DisplayEnhancementOverrideCapabilities(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1812,12 +1776,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_DisplayEnhancementOverrideCapabilitiesChangedEventArgs(py::wrapper::Windows::Graphics::Display::DisplayEnhancementOverrideCapabilitiesChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1907,12 +1865,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_DisplayInformation(py::wrapper::Windows::Graphics::Display::DisplayInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3075,12 +3027,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_DisplayServices(py::wrapper::Windows::Graphics::Display::DisplayServices* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3213,12 +3159,6 @@ namespace py::cpp::Windows::Graphics::Display
     static void _dealloc_NitRange(py::wrapper::Windows::Graphics::Display::NitRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

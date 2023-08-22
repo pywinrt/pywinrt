@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_ContactAddress(py::wrapper::Windows::Phone::PersonalInformation::ContactAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -355,12 +349,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_ContactChangeRecord(py::wrapper::Windows::Phone::PersonalInformation::ContactChangeRecord* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -532,12 +520,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_ContactInformation(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1063,12 +1045,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_ContactQueryOptions(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1206,12 +1182,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_ContactQueryResult(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1392,12 +1362,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_ContactStore(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2634,12 +2598,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_StoredContact(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3339,12 +3297,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_IContactInformation(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3816,12 +3768,6 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static void _dealloc_IContactInformation2(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

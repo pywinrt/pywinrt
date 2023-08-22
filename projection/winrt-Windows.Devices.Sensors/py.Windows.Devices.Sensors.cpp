@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Accelerometer(py::wrapper::Windows::Devices::Sensors::Accelerometer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -571,12 +565,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AccelerometerDataThreshold(py::wrapper::Windows::Devices::Sensors::AccelerometerDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -790,12 +778,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AccelerometerReading(py::wrapper::Windows::Devices::Sensors::AccelerometerReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -985,12 +967,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AccelerometerReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1080,12 +1056,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AccelerometerShakenEventArgs(py::wrapper::Windows::Devices::Sensors::AccelerometerShakenEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1175,12 +1145,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ActivitySensor(py::wrapper::Windows::Devices::Sensors::ActivitySensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1570,12 +1534,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ActivitySensorReading(py::wrapper::Windows::Devices::Sensors::ActivitySensorReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1705,12 +1663,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ActivitySensorReadingChangeReport(py::wrapper::Windows::Devices::Sensors::ActivitySensorReadingChangeReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1800,12 +1752,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ActivitySensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1895,12 +1841,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ActivitySensorTriggerDetails(py::wrapper::Windows::Devices::Sensors::ActivitySensorTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2000,12 +1940,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AdaptiveDimmingOptions(py::wrapper::Windows::Devices::Sensors::AdaptiveDimmingOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2123,12 +2057,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Altimeter(py::wrapper::Windows::Devices::Sensors::Altimeter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2459,12 +2387,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AltimeterReading(py::wrapper::Windows::Devices::Sensors::AltimeterReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2614,12 +2536,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_AltimeterReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2709,12 +2625,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Barometer(py::wrapper::Windows::Devices::Sensors::Barometer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3127,12 +3037,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_BarometerDataThreshold(py::wrapper::Windows::Devices::Sensors::BarometerDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3250,12 +3154,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_BarometerReading(py::wrapper::Windows::Devices::Sensors::BarometerReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3405,12 +3303,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_BarometerReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::BarometerReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3500,12 +3392,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Compass(py::wrapper::Windows::Devices::Sensors::Compass* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3966,12 +3852,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_CompassDataThreshold(py::wrapper::Windows::Devices::Sensors::CompassDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4089,12 +3969,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_CompassReading(py::wrapper::Windows::Devices::Sensors::CompassReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4284,12 +4158,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_CompassReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::CompassReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4379,12 +4247,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Gyrometer(py::wrapper::Windows::Devices::Sensors::Gyrometer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4845,12 +4707,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_GyrometerDataThreshold(py::wrapper::Windows::Devices::Sensors::GyrometerDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5064,12 +4920,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_GyrometerReading(py::wrapper::Windows::Devices::Sensors::GyrometerReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5259,12 +5109,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_GyrometerReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5354,12 +5198,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HingeAngleReading(py::wrapper::Windows::Devices::Sensors::HingeAngleReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5489,12 +5327,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HingeAngleSensor(py::wrapper::Windows::Devices::Sensors::HingeAngleSensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5852,12 +5684,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HingeAngleSensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5947,12 +5773,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HumanPresenceFeatures(py::wrapper::Windows::Devices::Sensors::HumanPresenceFeatures* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6142,12 +5962,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HumanPresenceSensor(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6546,12 +6360,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HumanPresenceSensorReading(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6701,12 +6509,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HumanPresenceSensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6796,12 +6598,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_HumanPresenceSettings(py::wrapper::Windows::Devices::Sensors::HumanPresenceSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7579,12 +7375,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Inclinometer(py::wrapper::Windows::Devices::Sensors::Inclinometer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8117,12 +7907,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_InclinometerDataThreshold(py::wrapper::Windows::Devices::Sensors::InclinometerDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8336,12 +8120,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_InclinometerReading(py::wrapper::Windows::Devices::Sensors::InclinometerReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8551,12 +8329,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_InclinometerReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8646,12 +8418,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_LightSensor(py::wrapper::Windows::Devices::Sensors::LightSensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9064,12 +8830,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_LightSensorDataThreshold(py::wrapper::Windows::Devices::Sensors::LightSensorDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9235,12 +8995,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_LightSensorReading(py::wrapper::Windows::Devices::Sensors::LightSensorReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9390,12 +9144,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_LightSensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9485,12 +9233,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_LockOnLeaveOptions(py::wrapper::Windows::Devices::Sensors::LockOnLeaveOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9608,12 +9350,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Magnetometer(py::wrapper::Windows::Devices::Sensors::Magnetometer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10074,12 +9810,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_MagnetometerDataThreshold(py::wrapper::Windows::Devices::Sensors::MagnetometerDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10293,12 +10023,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_MagnetometerReading(py::wrapper::Windows::Devices::Sensors::MagnetometerReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10508,12 +10232,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_MagnetometerReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10603,12 +10321,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_OrientationSensor(py::wrapper::Windows::Devices::Sensors::OrientationSensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11163,12 +10875,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_OrientationSensorReading(py::wrapper::Windows::Devices::Sensors::OrientationSensorReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11358,12 +11064,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_OrientationSensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11453,12 +11153,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_Pedometer(py::wrapper::Windows::Devices::Sensors::Pedometer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11913,12 +11607,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_PedometerDataThreshold(py::wrapper::Windows::Devices::Sensors::PedometerDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11988,12 +11676,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_PedometerReading(py::wrapper::Windows::Devices::Sensors::PedometerReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12143,12 +11825,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_PedometerReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::PedometerReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12238,12 +11914,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ProximitySensor(py::wrapper::Windows::Devices::Sensors::ProximitySensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12596,12 +12266,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ProximitySensorDataThreshold(py::wrapper::Windows::Devices::Sensors::ProximitySensorDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12671,12 +12335,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ProximitySensorDisplayOnOffController(py::wrapper::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12799,12 +12457,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ProximitySensorReading(py::wrapper::Windows::Devices::Sensors::ProximitySensorReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12934,12 +12586,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ProximitySensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13029,12 +12675,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_SensorDataThresholdTriggerDetails(py::wrapper::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13144,12 +12784,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_SensorQuaternion(py::wrapper::Windows::Devices::Sensors::SensorQuaternion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13299,12 +12933,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_SensorRotationMatrix(py::wrapper::Windows::Devices::Sensors::SensorRotationMatrix* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13554,12 +13182,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_SimpleOrientationSensor(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13864,12 +13486,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_SimpleOrientationSensorOrientationChangedEventArgs(py::wrapper::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13979,12 +13595,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_WakeOnApproachOptions(py::wrapper::Windows::Devices::Sensors::WakeOnApproachOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14150,12 +13760,6 @@ namespace py::cpp::Windows::Devices::Sensors
     static void _dealloc_ISensorDataThreshold(py::wrapper::Windows::Devices::Sensors::ISensorDataThreshold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

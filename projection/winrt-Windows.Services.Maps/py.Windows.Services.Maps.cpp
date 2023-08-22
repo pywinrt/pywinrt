@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_EnhancedWaypoint(py::wrapper::Windows::Services::Maps::EnhancedWaypoint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -158,12 +152,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_ManeuverWarning(py::wrapper::Windows::Services::Maps::ManeuverWarning* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -273,12 +261,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapAddress(py::wrapper::Windows::Services::Maps::MapAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -668,12 +650,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapLocation(py::wrapper::Windows::Services::Maps::MapLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -965,12 +941,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapLocationFinderResult(py::wrapper::Windows::Services::Maps::MapLocationFinderResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1176,12 +1146,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapRoute(py::wrapper::Windows::Services::Maps::MapRoute* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1493,12 +1457,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapRouteDrivingOptions(py::wrapper::Windows::Services::Maps::MapRouteDrivingOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2160,12 +2118,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapRouteFinderResult(py::wrapper::Windows::Services::Maps::MapRouteFinderResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2295,12 +2247,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapRouteLeg(py::wrapper::Windows::Services::Maps::MapRouteLeg* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2510,12 +2456,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_MapRouteManeuver(py::wrapper::Windows::Services::Maps::MapRouteManeuver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2963,12 +2903,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_PlaceInfo(py::wrapper::Windows::Services::Maps::PlaceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3427,12 +3361,6 @@ namespace py::cpp::Windows::Services::Maps
     static void _dealloc_PlaceInfoCreateOptions(py::wrapper::Windows::Services::Maps::PlaceInfoCreateOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

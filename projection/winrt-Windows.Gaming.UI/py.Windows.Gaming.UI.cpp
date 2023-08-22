@@ -202,12 +202,6 @@ namespace py::cpp::Windows::Gaming::UI
     static void _dealloc_GameChatMessageReceivedEventArgs(py::wrapper::Windows::Gaming::UI::GameChatMessageReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -377,12 +371,6 @@ namespace py::cpp::Windows::Gaming::UI
     static void _dealloc_GameChatOverlay(py::wrapper::Windows::Gaming::UI::GameChatOverlay* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -587,12 +575,6 @@ namespace py::cpp::Windows::Gaming::UI
     static void _dealloc_GameChatOverlayMessageSource(py::wrapper::Windows::Gaming::UI::GameChatOverlayMessageSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -740,12 +722,6 @@ namespace py::cpp::Windows::Gaming::UI
     static void _dealloc_GameUIProviderActivatedEventArgs(py::wrapper::Windows::Gaming::UI::GameUIProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

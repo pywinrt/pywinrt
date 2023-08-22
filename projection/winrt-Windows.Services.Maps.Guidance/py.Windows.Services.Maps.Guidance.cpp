@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceAudioNotificationRequestedEventArgs(py::wrapper::Windows::Services::Maps::Guidance::GuidanceAudioNotificationRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceLaneInfo(py::wrapper::Windows::Services::Maps::Guidance::GuidanceLaneInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -268,12 +256,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceManeuver(py::wrapper::Windows::Services::Maps::Guidance::GuidanceManeuver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -583,12 +565,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceMapMatchedCoordinate(py::wrapper::Windows::Services::Maps::Guidance::GuidanceMapMatchedCoordinate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -758,12 +734,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceNavigator(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1718,12 +1688,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceReroutedEventArgs(py::wrapper::Windows::Services::Maps::Guidance::GuidanceReroutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1813,12 +1777,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceRoadSegment(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSegment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2088,12 +2046,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceRoadSignpost(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoadSignpost* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2263,12 +2215,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceRoute(py::wrapper::Windows::Services::Maps::Guidance::GuidanceRoute* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2552,12 +2498,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceTelemetryCollector(py::wrapper::Windows::Services::Maps::Guidance::GuidanceTelemetryCollector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2832,12 +2772,6 @@ namespace py::cpp::Windows::Services::Maps::Guidance
     static void _dealloc_GuidanceUpdatedEventArgs(py::wrapper::Windows::Services::Maps::Guidance::GuidanceUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

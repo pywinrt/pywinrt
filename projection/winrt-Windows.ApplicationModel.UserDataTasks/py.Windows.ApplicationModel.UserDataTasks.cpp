@@ -40,12 +40,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTask(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -751,12 +745,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskBatch(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -846,12 +834,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskList(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1401,12 +1383,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskListLimitedWriteOperations(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1604,12 +1580,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskListSyncManager(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1898,12 +1868,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskManager(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2109,12 +2073,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskQueryOptions(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2280,12 +2238,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskReader(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2407,12 +2359,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskRecurrenceProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2888,12 +2834,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskRegenerationProperties(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3155,12 +3095,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks
     static void _dealloc_UserDataTaskStore(py::wrapper::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

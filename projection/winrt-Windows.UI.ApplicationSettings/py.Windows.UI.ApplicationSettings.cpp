@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_AccountsSettingsPane(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPane* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -323,12 +317,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_AccountsSettingsPaneCommandsRequestedEventArgs(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -576,12 +564,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_AccountsSettingsPaneEventDeferral(py::wrapper::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -722,12 +704,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_CredentialCommand(py::wrapper::Windows::UI::ApplicationSettings::CredentialCommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -863,12 +839,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_SettingsCommand(py::wrapper::Windows::UI::ApplicationSettings::SettingsCommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1122,12 +1092,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_SettingsPane(py::wrapper::Windows::UI::ApplicationSettings::SettingsPane* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1343,12 +1307,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_SettingsPaneCommandsRequest(py::wrapper::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1438,12 +1396,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_SettingsPaneCommandsRequestedEventArgs(py::wrapper::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1559,12 +1511,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_WebAccountCommand(py::wrapper::Windows::UI::ApplicationSettings::WebAccountCommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1694,12 +1640,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_WebAccountInvokedArgs(py::wrapper::Windows::UI::ApplicationSettings::WebAccountInvokedArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1814,12 +1754,6 @@ namespace py::cpp::Windows::UI::ApplicationSettings
     static void _dealloc_WebAccountProviderCommand(py::wrapper::Windows::UI::ApplicationSettings::WebAccountProviderCommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

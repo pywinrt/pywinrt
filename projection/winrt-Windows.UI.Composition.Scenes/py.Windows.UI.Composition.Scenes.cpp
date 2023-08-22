@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneBoundingBox(py::wrapper::Windows::UI::Composition::Scenes::SceneBoundingBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -193,12 +187,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneComponent(py::wrapper::Windows::UI::Composition::Scenes::SceneComponent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -288,12 +276,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneComponentCollection(py::wrapper::Windows::UI::Composition::Scenes::SceneComponentCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -911,12 +893,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneMaterial(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -986,12 +962,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneMaterialInput(py::wrapper::Windows::UI::Composition::Scenes::SceneMaterialInput* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1061,12 +1031,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneMesh(py::wrapper::Windows::UI::Composition::Scenes::SceneMesh* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1271,12 +1235,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneMeshMaterialAttributeMap(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshMaterialAttributeMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1684,12 +1642,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneMeshRendererComponent(py::wrapper::Windows::UI::Composition::Scenes::SceneMeshRendererComponent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1907,12 +1859,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneMetallicRoughnessMaterial(py::wrapper::Windows::UI::Composition::Scenes::SceneMetallicRoughnessMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2254,12 +2200,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneModelTransform(py::wrapper::Windows::UI::Composition::Scenes::SceneModelTransform* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2617,12 +2557,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneNode(py::wrapper::Windows::UI::Composition::Scenes::SceneNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2836,12 +2770,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneNodeCollection(py::wrapper::Windows::UI::Composition::Scenes::SceneNodeCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3459,12 +3387,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneObject(py::wrapper::Windows::UI::Composition::Scenes::SceneObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3534,12 +3456,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_ScenePbrMaterial(py::wrapper::Windows::UI::Composition::Scenes::ScenePbrMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4041,12 +3957,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneRendererComponent(py::wrapper::Windows::UI::Composition::Scenes::SceneRendererComponent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4116,12 +4026,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneSurfaceMaterialInput(py::wrapper::Windows::UI::Composition::Scenes::SceneSurfaceMaterialInput* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4415,12 +4319,6 @@ namespace py::cpp::Windows::UI::Composition::Scenes
     static void _dealloc_SceneVisual(py::wrapper::Windows::UI::Composition::Scenes::SceneVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

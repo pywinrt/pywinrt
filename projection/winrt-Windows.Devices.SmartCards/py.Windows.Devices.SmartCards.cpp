@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_CardAddedEventArgs(py::wrapper::Windows::Devices::SmartCards::CardAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_CardRemovedEventArgs(py::wrapper::Windows::Devices::SmartCards::CardRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -302,12 +290,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCard(py::wrapper::Windows::Devices::SmartCards::SmartCard* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -527,12 +509,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardAppletIdGroup(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1018,12 +994,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardAppletIdGroupRegistration(py::wrapper::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1294,12 +1264,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardAutomaticResponseApdu(py::wrapper::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1753,12 +1717,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardChallengeContext(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2021,12 +1979,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardConnection(py::wrapper::Windows::Devices::SmartCards::SmartCardConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2181,12 +2133,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramGenerator(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2821,12 +2767,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2958,12 +2898,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3095,12 +3029,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3232,12 +3160,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramMaterialCharacteristics(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3489,12 +3411,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramMaterialPackageCharacteristics(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3644,12 +3560,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramMaterialPossessionProof(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3781,12 +3691,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramPlacementStep(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4310,12 +4214,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramStorageKeyCharacteristics(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4465,12 +4363,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardCryptogramStorageKeyInfo(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4700,12 +4592,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardEmulator(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5140,12 +5026,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardEmulatorApduReceivedEventArgs(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5403,12 +5283,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardEmulatorConnectionDeactivatedEventArgs(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5518,12 +5392,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardEmulatorConnectionProperties(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5655,12 +5523,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardPinPolicy(py::wrapper::Windows::Devices::SmartCards::SmartCardPinPolicy* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6018,12 +5880,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardPinResetDeferral(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6124,12 +5980,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardPinResetRequest(py::wrapper::Windows::Devices::SmartCards::SmartCardPinResetRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6302,12 +6152,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardProvisioning(py::wrapper::Windows::Devices::SmartCards::SmartCardProvisioning* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6757,12 +6601,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardReader(py::wrapper::Windows::Devices::SmartCards::SmartCardReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7124,12 +6962,6 @@ namespace py::cpp::Windows::Devices::SmartCards
     static void _dealloc_SmartCardTriggerDetails(py::wrapper::Windows::Devices::SmartCards::SmartCardTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

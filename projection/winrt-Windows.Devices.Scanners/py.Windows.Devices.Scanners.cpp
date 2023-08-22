@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScanner(py::wrapper::Windows::Devices::Scanners::ImageScanner* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -385,12 +379,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScannerAutoConfiguration(py::wrapper::Windows::Devices::Scanners::ImageScannerAutoConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -560,12 +548,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScannerFeederConfiguration(py::wrapper::Windows::Devices::Scanners::ImageScannerFeederConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1788,12 +1770,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScannerFlatbedConfiguration(py::wrapper::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2615,12 +2591,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScannerPreviewResult(py::wrapper::Windows::Devices::Scanners::ImageScannerPreviewResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2730,12 +2700,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScannerScanResult(py::wrapper::Windows::Devices::Scanners::ImageScannerScanResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2825,12 +2789,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_IImageScannerFormatConfiguration(py::wrapper::Windows::Devices::Scanners::IImageScannerFormatConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3000,12 +2958,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_IImageScannerSourceConfiguration(py::wrapper::Windows::Devices::Scanners::IImageScannerSourceConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3859,12 +3811,6 @@ namespace py::cpp::Windows::Devices::Scanners
     static void _dealloc_ImageScannerResolution(py::wrapper::Windows::Devices::Scanners::ImageScannerResolution* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

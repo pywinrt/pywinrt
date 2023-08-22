@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommand(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandCompletedEventArgs(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -248,12 +236,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandConfirmationResult(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandConfirmationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -365,12 +347,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandContentTile(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -824,12 +800,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandDefinition(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1078,12 +1048,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandDisambiguationResult(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandDisambiguationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1173,12 +1137,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandResponse(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1560,12 +1518,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandServiceConnection(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandServiceConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1976,12 +1928,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static void _dealloc_VoiceCommandUserMessage(py::wrapper::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

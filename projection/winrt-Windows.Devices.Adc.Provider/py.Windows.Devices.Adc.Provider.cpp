@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     static void _dealloc_IAdcControllerProvider(py::wrapper::Windows::Devices::Adc::Provider::IAdcControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -351,12 +345,6 @@ namespace py::cpp::Windows::Devices::Adc::Provider
     static void _dealloc_IAdcProvider(py::wrapper::Windows::Devices::Adc::Provider::IAdcProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

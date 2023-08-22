@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportDeleteImportedItemsFromSourceResult(py::wrapper::Windows::Media::Import::PhotoImportDeleteImportedItemsFromSourceResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -353,12 +347,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportFindItemsResult(py::wrapper::Windows::Media::Import::PhotoImportFindItemsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1187,12 +1175,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportImportItemsResult(py::wrapper::Windows::Media::Import::PhotoImportImportItemsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1552,12 +1534,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportItem(py::wrapper::Windows::Media::Import::PhotoImportItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1915,12 +1891,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportItemImportedEventArgs(py::wrapper::Windows::Media::Import::PhotoImportItemImportedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2134,12 +2104,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportOperation(py::wrapper::Windows::Media::Import::PhotoImportOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2309,12 +2273,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportSelectionChangedEventArgs(py::wrapper::Windows::Media::Import::PhotoImportSelectionChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2404,12 +2362,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportSession(py::wrapper::Windows::Media::Import::PhotoImportSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2893,12 +2845,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportSidecar(py::wrapper::Windows::Media::Import::PhotoImportSidecar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3028,12 +2974,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportSource(py::wrapper::Windows::Media::Import::PhotoImportSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3517,12 +3457,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportStorageMedium(py::wrapper::Windows::Media::Import::PhotoImportStorageMedium* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3763,12 +3697,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportVideoSegment(py::wrapper::Windows::Media::Import::PhotoImportVideoSegment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3973,12 +3901,6 @@ namespace py::cpp::Windows::Media::Import
     static void _dealloc_PhotoImportProgress(py::wrapper::Windows::Media::Import::PhotoImportProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

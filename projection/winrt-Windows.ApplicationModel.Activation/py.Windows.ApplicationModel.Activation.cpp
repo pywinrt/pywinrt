@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_AppointmentsProviderAddAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderAddAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -213,12 +207,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_AppointmentsProviderRemoveAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderRemoveAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -408,12 +396,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_AppointmentsProviderReplaceAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderReplaceAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -603,12 +585,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -838,12 +814,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_AppointmentsProviderShowTimeFrameActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::AppointmentsProviderShowTimeFrameActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1053,12 +1023,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_BackgroundActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::BackgroundActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1148,12 +1112,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_BarcodeScannerPreviewActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::BarcodeScannerPreviewActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1323,12 +1281,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_CachedFileUpdaterActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::CachedFileUpdaterActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1498,12 +1450,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_CameraSettingsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::CameraSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1673,12 +1619,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_CommandLineActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1848,12 +1788,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_CommandLineActivationOperation(py::wrapper::Windows::ApplicationModel::Activation::CommandLineActivationOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2041,12 +1975,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2256,12 +2184,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactMapActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactMapActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2451,12 +2373,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactMessageActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactMessageActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2666,12 +2582,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactPanelActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactPanelActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2861,12 +2771,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactPickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactPickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3016,12 +2920,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactPostActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactPostActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3231,12 +3129,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ContactVideoCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ContactVideoCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3446,12 +3338,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_DeviceActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::DeviceActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3681,12 +3567,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_DevicePairingActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::DevicePairingActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3856,12 +3736,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_DialReceiverActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::DialReceiverActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4111,12 +3985,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_FileActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::FileActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4386,12 +4254,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_FileOpenPickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4581,12 +4443,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_FileOpenPickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::FileOpenPickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4776,12 +4632,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_FileSavePickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4991,12 +4841,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_FileSavePickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::FileSavePickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5186,12 +5030,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_FolderPickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::FolderPickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5381,12 +5219,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_LaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::LaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5656,12 +5488,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_LockScreenActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::LockScreenActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5831,12 +5657,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_LockScreenCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::LockScreenCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6066,12 +5886,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_LockScreenComponentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::LockScreenComponentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6201,12 +6015,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_PhoneCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::PhoneCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6376,12 +6184,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_PickerReturnedActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::PickerReturnedActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6531,12 +6333,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_Print3DWorkflowActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::Print3DWorkflowActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6686,12 +6482,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_PrintTaskSettingsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::PrintTaskSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6841,12 +6631,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ProtocolActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ProtocolActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7096,12 +6880,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ProtocolForResultsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ProtocolForResultsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7371,12 +7149,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_RestrictedLaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::RestrictedLaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7546,12 +7318,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_SearchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::SearchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7801,12 +7567,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ShareTargetActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ShareTargetActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7976,12 +7736,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_SplashScreen(py::wrapper::Windows::ApplicationModel::Activation::SplashScreen* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8116,12 +7870,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_StartupTaskActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::StartupTaskActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8291,12 +8039,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_TileActivatedInfo(py::wrapper::Windows::ApplicationModel::Activation::TileActivatedInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8386,12 +8128,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ToastNotificationActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ToastNotificationActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8601,12 +8337,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_UserDataAccountProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::UserDataAccountProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8756,12 +8486,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_VoiceCommandActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::VoiceCommandActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8931,12 +8655,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_WalletActionActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::WalletActionActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9126,12 +8844,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_WebAccountProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::WebAccountProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9301,12 +9013,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_WebAuthenticationBrokerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::WebAuthenticationBrokerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9476,12 +9182,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9611,12 +9311,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IActivatedEventArgsWithUser(py::wrapper::Windows::ApplicationModel::Activation::IActivatedEventArgsWithUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9766,12 +9460,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IApplicationViewActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IApplicationViewActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9921,12 +9609,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IAppointmentsProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10076,12 +9758,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IAppointmentsProviderAddAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderAddAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10251,12 +9927,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IAppointmentsProviderRemoveAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderRemoveAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10426,12 +10096,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IAppointmentsProviderReplaceAppointmentActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderReplaceAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10601,12 +10265,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10816,12 +10474,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IAppointmentsProviderShowTimeFrameActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IAppointmentsProviderShowTimeFrameActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11011,12 +10663,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IBackgroundActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IBackgroundActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11106,12 +10752,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IBarcodeScannerPreviewActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IBarcodeScannerPreviewActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11261,12 +10901,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ICachedFileUpdaterActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ICachedFileUpdaterActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11416,12 +11050,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ICameraSettingsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ICameraSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11591,12 +11219,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ICommandLineActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ICommandLineActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11746,12 +11368,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11901,12 +11517,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12116,12 +11726,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactMapActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactMapActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12311,12 +11915,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactMessageActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactMessageActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12526,12 +12124,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactPanelActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactPanelActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12641,12 +12233,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactPickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactPickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12796,12 +12382,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactPostActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactPostActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13011,12 +12591,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactVideoCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactVideoCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13226,12 +12800,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContactsProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContactsProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13381,12 +12949,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IContinuationActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IContinuationActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13536,12 +13098,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IDeviceActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IDeviceActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13711,12 +13267,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IDevicePairingActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IDevicePairingActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13866,12 +13416,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IDialReceiverActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IDialReceiverActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14061,12 +13605,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14236,12 +13774,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileActivatedEventArgsWithCallerPackageFamilyName(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithCallerPackageFamilyName* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14391,12 +13923,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileActivatedEventArgsWithNeighboringFiles(py::wrapper::Windows::ApplicationModel::Activation::IFileActivatedEventArgsWithNeighboringFiles* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14586,12 +14112,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileOpenPickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14741,12 +14261,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileOpenPickerActivatedEventArgs2(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerActivatedEventArgs2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14836,12 +14350,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileOpenPickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileOpenPickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15011,12 +14519,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileSavePickerActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15166,12 +14668,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileSavePickerActivatedEventArgs2(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerActivatedEventArgs2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15281,12 +14777,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFileSavePickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFileSavePickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15456,12 +14946,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IFolderPickerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IFolderPickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15631,12 +15115,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ILaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15806,12 +15284,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ILaunchActivatedEventArgs2(py::wrapper::Windows::ApplicationModel::Activation::ILaunchActivatedEventArgs2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16001,12 +15473,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ILockScreenActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16156,12 +15622,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ILockScreenCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ILockScreenCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16351,12 +15811,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IPhoneCallActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPhoneCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16506,12 +15960,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IPickerReturnedActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPickerReturnedActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16661,12 +16109,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IPrelaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPrelaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16816,12 +16258,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IPrint3DWorkflowActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPrint3DWorkflowActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16971,12 +16407,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IPrintTaskSettingsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IPrintTaskSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17126,12 +16556,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IProtocolActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17281,12 +16705,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData(py::wrapper::Windows::ApplicationModel::Activation::IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17456,12 +16874,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IProtocolForResultsActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IProtocolForResultsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17611,12 +17023,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IRestrictedLaunchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IRestrictedLaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17766,12 +17172,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ISearchActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17941,12 +17341,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_ISearchActivatedEventArgsWithLinguisticDetails(py::wrapper::Windows::ApplicationModel::Activation::ISearchActivatedEventArgsWithLinguisticDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18036,12 +17430,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IShareTargetActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IShareTargetActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18191,12 +17579,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IStartupTaskActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IStartupTaskActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18346,12 +17728,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IToastNotificationActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IToastNotificationActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18521,12 +17897,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IUserDataAccountProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IUserDataAccountProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18676,12 +18046,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IViewSwitcherProvider(py::wrapper::Windows::ApplicationModel::Activation::IViewSwitcherProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18831,12 +18195,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IVoiceCommandActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IVoiceCommandActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18986,12 +18344,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IWalletActionActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IWalletActionActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19181,12 +18533,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IWebAccountProviderActivatedEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IWebAccountProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19336,12 +18682,6 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     static void _dealloc_IWebAuthenticationBrokerContinuationEventArgs(py::wrapper::Windows::ApplicationModel::Activation::IWebAuthenticationBrokerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

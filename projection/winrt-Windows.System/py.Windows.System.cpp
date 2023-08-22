@@ -18,12 +18,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppActivationResult(py::wrapper::Windows::System::AppActivationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -133,12 +127,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppDiagnosticInfo(py::wrapper::Windows::System::AppDiagnosticInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -490,12 +478,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppDiagnosticInfoWatcher(py::wrapper::Windows::System::AppDiagnosticInfoWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -827,12 +809,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppDiagnosticInfoWatcherEventArgs(py::wrapper::Windows::System::AppDiagnosticInfoWatcherEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -922,12 +898,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppExecutionStateChangeResult(py::wrapper::Windows::System::AppExecutionStateChangeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1017,12 +987,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppMemoryReport(py::wrapper::Windows::System::AppMemoryReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1192,12 +1156,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppMemoryUsageLimitChangingEventArgs(py::wrapper::Windows::System::AppMemoryUsageLimitChangingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1307,12 +1265,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupBackgroundTaskReport(py::wrapper::Windows::System::AppResourceGroupBackgroundTaskReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1462,12 +1414,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupInfo(py::wrapper::Windows::System::AppResourceGroupInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1787,12 +1733,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupInfoWatcher(py::wrapper::Windows::System::AppResourceGroupInfoWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2169,12 +2109,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupInfoWatcherEventArgs(py::wrapper::Windows::System::AppResourceGroupInfoWatcherEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2284,12 +2218,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(py::wrapper::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2399,12 +2327,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupMemoryReport(py::wrapper::Windows::System::AppResourceGroupMemoryReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2554,12 +2476,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppResourceGroupStateReport(py::wrapper::Windows::System::AppResourceGroupStateReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2706,12 +2622,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppUriHandlerHost(py::wrapper::Windows::System::AppUriHandlerHost* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2877,12 +2787,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppUriHandlerRegistration(py::wrapper::Windows::System::AppUriHandlerRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3137,12 +3041,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_AppUriHandlerRegistrationManager(py::wrapper::Windows::System::AppUriHandlerRegistrationManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3478,12 +3376,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_DispatcherQueue(py::wrapper::Windows::System::DispatcherQueue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3776,12 +3668,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_DispatcherQueueController(py::wrapper::Windows::System::DispatcherQueueController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3931,12 +3817,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_DispatcherQueueShutdownStartingEventArgs(py::wrapper::Windows::System::DispatcherQueueShutdownStartingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4036,12 +3916,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_DispatcherQueueTimer(py::wrapper::Windows::System::DispatcherQueueTimer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4356,12 +4230,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_FolderLauncherOptions(py::wrapper::Windows::System::FolderLauncherOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4753,12 +4621,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_LaunchUriResult(py::wrapper::Windows::System::LaunchUriResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5681,12 +5543,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_LauncherOptions(py::wrapper::Windows::System::LauncherOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6304,12 +6160,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_LauncherUIOptions(py::wrapper::Windows::System::LauncherUIOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6995,12 +6845,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_ProcessLauncherOptions(py::wrapper::Windows::System::ProcessLauncherOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7262,12 +7106,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_ProcessLauncherResult(py::wrapper::Windows::System::ProcessLauncherResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7357,12 +7195,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_ProcessMemoryReport(py::wrapper::Windows::System::ProcessMemoryReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7472,12 +7304,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_ProtocolForResultsOperation(py::wrapper::Windows::System::ProtocolForResultsOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7714,12 +7540,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_RemoteLauncherOptions(py::wrapper::Windows::System::RemoteLauncherOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8222,12 +8042,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_User(py::wrapper::Windows::System::User* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8648,12 +8462,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_UserAuthenticationStatusChangeDeferral(py::wrapper::Windows::System::UserAuthenticationStatusChangeDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8754,12 +8562,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_UserAuthenticationStatusChangingEventArgs(py::wrapper::Windows::System::UserAuthenticationStatusChangingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8919,12 +8721,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_UserChangedEventArgs(py::wrapper::Windows::System::UserChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9145,12 +8941,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_UserDeviceAssociationChangedEventArgs(py::wrapper::Windows::System::UserDeviceAssociationChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9302,12 +9092,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_UserPicker(py::wrapper::Windows::System::UserPicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9533,12 +9317,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_UserWatcher(py::wrapper::Windows::System::UserWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10005,12 +9783,6 @@ namespace py::cpp::Windows::System
     static void _dealloc_ILauncherViewOptions(py::wrapper::Windows::System::ILauncherViewOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

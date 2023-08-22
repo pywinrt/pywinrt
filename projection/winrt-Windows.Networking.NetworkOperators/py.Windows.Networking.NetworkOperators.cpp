@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESim(py::wrapper::Windows::Networking::NetworkOperators::ESim* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -504,12 +498,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimAddedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::ESimAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -599,12 +587,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimDiscoverEvent(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverEvent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -714,12 +696,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimDiscoverResult(py::wrapper::Windows::Networking::NetworkOperators::ESimDiscoverResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -869,12 +845,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimDownloadProfileMetadataResult(py::wrapper::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1133,12 +1103,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimOperationResult(py::wrapper::Windows::Networking::NetworkOperators::ESimOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1228,12 +1192,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimPolicy(py::wrapper::Windows::Networking::NetworkOperators::ESimPolicy* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1323,12 +1281,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimProfile(py::wrapper::Windows::Networking::NetworkOperators::ESimProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1650,12 +1602,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimProfileMetadata(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2020,12 +1966,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimProfilePolicy(py::wrapper::Windows::Networking::NetworkOperators::ESimProfilePolicy* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2155,12 +2095,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimRemovedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::ESimRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2250,12 +2184,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimServiceInfo(py::wrapper::Windows::Networking::NetworkOperators::ESimServiceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2365,12 +2293,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimUpdatedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2460,12 +2382,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimWatcher(py::wrapper::Windows::Networking::NetworkOperators::ESimWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2908,12 +2824,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_HotspotAuthenticationContext(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3297,12 +3207,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_HotspotAuthenticationEventDetails(py::wrapper::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3392,12 +3296,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_HotspotCredentialsAuthenticationResult(py::wrapper::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4063,12 +3961,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandAccount(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4360,12 +4252,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandAccountEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4455,12 +4341,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandAccountUpdatedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4612,12 +4492,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandAccountWatcher(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5019,12 +4893,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandAntennaSar(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5134,12 +5002,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellCdma(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5369,12 +5231,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellGsm(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5584,12 +5440,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellLte(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellLte* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5819,12 +5669,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellNR(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellNR* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6074,12 +5918,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellTdscdma(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6309,12 +6147,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellUmts(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6544,12 +6376,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCellsInfo(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6859,12 +6685,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandCurrentSlotIndexChangedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6954,12 +6774,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceInformation(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7449,12 +7263,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceService(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7624,12 +7432,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceServiceCommandResult(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7739,12 +7541,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceServiceCommandSession(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7911,12 +7707,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceServiceDataReceivedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8006,12 +7796,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceServiceDataSession(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8189,12 +7973,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceServiceInformation(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8324,12 +8102,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandDeviceServiceTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8479,12 +8251,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandModem(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9141,12 +8907,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandModemConfiguration(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9321,12 +9081,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandModemIsolation(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9523,12 +9277,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandNetwork(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetwork* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9889,12 +9637,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandNetworkRegistrationStateChange(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10004,12 +9746,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandNetworkRegistrationStateChangeTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10099,12 +9835,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPco(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPco* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10234,12 +9964,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPcoDataChangeTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10329,12 +10053,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPin(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPin* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10706,12 +10424,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPinLockStateChange(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10841,12 +10553,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPinLockStateChangeTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10936,12 +10642,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPinManager(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11063,12 +10763,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandPinOperationResult(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11178,12 +10872,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandRadioStateChange(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11293,12 +10981,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandRadioStateChangeTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11388,12 +11070,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandSarManager(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSarManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11854,12 +11530,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandSlotInfo(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11989,12 +11659,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandSlotInfoChangedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12084,12 +11748,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandSlotManager(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12353,12 +12011,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandTransmissionStateChangedEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12448,12 +12100,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandUicc(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUicc* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12573,12 +12219,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandUiccApp(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12753,12 +12393,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandUiccAppReadRecordResult(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12868,12 +12502,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandUiccAppRecordDetailsResult(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13063,12 +12691,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_MobileBroadbandUiccAppsResult(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13178,12 +12800,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_NetworkOperatorDataUsageTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13273,12 +12889,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_NetworkOperatorNotificationEventDetails(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13524,12 +13134,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_NetworkOperatorTetheringAccessPointConfiguration(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13807,12 +13411,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_NetworkOperatorTetheringClient(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13922,12 +13520,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_NetworkOperatorTetheringManager(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14510,12 +14102,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_NetworkOperatorTetheringOperationResult(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14625,12 +14211,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ProvisionFromXmlDocumentResults(py::wrapper::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14740,12 +14320,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ProvisionedProfile(py::wrapper::Windows::Networking::NetworkOperators::ProvisionedProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14903,12 +14477,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ProvisioningAgent(py::wrapper::Windows::Networking::NetworkOperators::ProvisioningAgent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15075,12 +14643,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_TetheringEntitlementCheckTriggerDetails(py::wrapper::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15258,12 +14820,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_UssdMessage(py::wrapper::Windows::Networking::NetworkOperators::UssdMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15492,12 +15048,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_UssdReply(py::wrapper::Windows::Networking::NetworkOperators::UssdReply* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15607,12 +15157,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_UssdSession(py::wrapper::Windows::Networking::NetworkOperators::UssdSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15841,12 +15385,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ESimProfileInstallProgress(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileInstallProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15985,12 +15523,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static void _dealloc_ProfileUsage(py::wrapper::Windows::Networking::NetworkOperators::ProfileUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

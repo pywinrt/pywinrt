@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeDevicePreview(py::wrapper::Windows::Devices::Input::Preview::GazeDevicePreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -269,12 +263,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeDeviceWatcherAddedPreviewEventArgs(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherAddedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -364,12 +352,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeDeviceWatcherPreview(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -681,12 +663,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeDeviceWatcherRemovedPreviewEventArgs(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherRemovedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -776,12 +752,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeDeviceWatcherUpdatedPreviewEventArgs(py::wrapper::Windows::Devices::Input::Preview::GazeDeviceWatcherUpdatedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -871,12 +841,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeEnteredPreviewEventArgs(py::wrapper::Windows::Devices::Input::Preview::GazeEnteredPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1014,12 +978,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeExitedPreviewEventArgs(py::wrapper::Windows::Devices::Input::Preview::GazeExitedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1157,12 +1115,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeInputSourcePreview(py::wrapper::Windows::Devices::Input::Preview::GazeInputSourcePreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1427,12 +1379,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazeMovedPreviewEventArgs(py::wrapper::Windows::Devices::Input::Preview::GazeMovedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1600,12 +1546,6 @@ namespace py::cpp::Windows::Devices::Input::Preview
     static void _dealloc_GazePointPreview(py::wrapper::Windows::Devices::Input::Preview::GazePointPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

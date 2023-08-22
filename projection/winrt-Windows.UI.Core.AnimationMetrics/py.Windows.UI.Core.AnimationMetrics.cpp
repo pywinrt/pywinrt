@@ -43,12 +43,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static void _dealloc_AnimationDescription(py::wrapper::Windows::UI::Core::AnimationMetrics::AnimationDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -218,12 +212,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static void _dealloc_OpacityAnimation(py::wrapper::Windows::UI::Core::AnimationMetrics::OpacityAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -433,12 +421,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static void _dealloc_PropertyAnimation(py::wrapper::Windows::UI::Core::AnimationMetrics::PropertyAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -608,12 +590,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static void _dealloc_ScaleAnimation(py::wrapper::Windows::UI::Core::AnimationMetrics::ScaleAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -883,12 +859,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static void _dealloc_TranslationAnimation(py::wrapper::Windows::UI::Core::AnimationMetrics::TranslationAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1058,12 +1028,6 @@ namespace py::cpp::Windows::UI::Core::AnimationMetrics
     static void _dealloc_IPropertyAnimation(py::wrapper::Windows::UI::Core::AnimationMetrics::IPropertyAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_AudioMediaFrame(py::wrapper::Windows::Media::Capture::Frames::AudioMediaFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -163,12 +157,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_BufferMediaFrame(py::wrapper::Windows::Media::Capture::Frames::BufferMediaFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -278,12 +266,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_DepthMediaFrame(py::wrapper::Windows::Media::Capture::Frames::DepthMediaFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -486,12 +468,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_DepthMediaFrameFormat(py::wrapper::Windows::Media::Capture::Frames::DepthMediaFrameFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -601,12 +577,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_InfraredMediaFrame(py::wrapper::Windows::Media::Capture::Frames::InfraredMediaFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -736,12 +706,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameArrivedEventArgs(py::wrapper::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -811,12 +775,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameFormat(py::wrapper::Windows::Media::Capture::Frames::MediaFrameFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1006,12 +964,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1317,12 +1269,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MediaFrameReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1625,12 +1571,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameSource(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1889,12 +1829,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameSourceController(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2135,12 +2069,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameSourceGetPropertyResult(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2250,12 +2178,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameSourceGroup(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2477,12 +2399,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MediaFrameSourceInfo(py::wrapper::Windows::Media::Capture::Frames::MediaFrameSourceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2784,12 +2700,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MultiSourceMediaFrameArrivedEventArgs(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2859,12 +2769,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MultiSourceMediaFrameReader(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3170,12 +3074,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_MultiSourceMediaFrameReference(py::wrapper::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3330,12 +3228,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_VideoMediaFrame(py::wrapper::Windows::Media::Capture::Frames::VideoMediaFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3575,12 +3467,6 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static void _dealloc_VideoMediaFrameFormat(py::wrapper::Windows::Media::Capture::Frames::VideoMediaFrameFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

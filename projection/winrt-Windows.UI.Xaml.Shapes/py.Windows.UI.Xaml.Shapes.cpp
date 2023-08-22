@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Ellipse(py::wrapper::Windows::UI::Xaml::Shapes::Ellipse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -137,12 +131,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Line(py::wrapper::Windows::UI::Xaml::Shapes::Line* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -526,12 +514,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Path(py::wrapper::Windows::UI::Xaml::Shapes::Path* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -711,12 +693,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Polygon(py::wrapper::Windows::UI::Xaml::Shapes::Polygon* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -964,12 +940,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Polyline(py::wrapper::Windows::UI::Xaml::Shapes::Polyline* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1217,12 +1187,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Rectangle(py::wrapper::Windows::UI::Xaml::Shapes::Rectangle* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1448,12 +1412,6 @@ namespace py::cpp::Windows::UI::Xaml::Shapes
     static void _dealloc_Shape(py::wrapper::Windows::UI::Xaml::Shapes::Shape* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapBuffer(py::wrapper::Windows::Graphics::Imaging::BitmapBuffer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -238,12 +232,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapCodecInformation(py::wrapper::Windows::Graphics::Imaging::BitmapCodecInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -393,12 +381,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapDecoder(py::wrapper::Windows::Graphics::Imaging::BitmapDecoder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1212,12 +1194,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapEncoder(py::wrapper::Windows::Graphics::Imaging::BitmapEncoder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1973,12 +1949,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapFrame(py::wrapper::Windows::Graphics::Imaging::BitmapFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2387,12 +2357,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapProperties(py::wrapper::Windows::Graphics::Imaging::BitmapProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2526,12 +2490,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapPropertiesView(py::wrapper::Windows::Graphics::Imaging::BitmapPropertiesView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2655,12 +2613,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapPropertySet(py::wrapper::Windows::Graphics::Imaging::BitmapPropertySet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3090,12 +3042,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapTransform(py::wrapper::Windows::Graphics::Imaging::BitmapTransform* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3478,12 +3424,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapTypedValue(py::wrapper::Windows::Graphics::Imaging::BitmapTypedValue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3593,12 +3533,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_ImageStream(py::wrapper::Windows::Graphics::Imaging::ImageStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4072,12 +4006,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_PixelDataProvider(py::wrapper::Windows::Graphics::Imaging::PixelDataProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4221,12 +4149,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_SoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::SoftwareBitmap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4905,12 +4827,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_IBitmapFrame(py::wrapper::Windows::Graphics::Imaging::IBitmapFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5244,12 +5160,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_IBitmapFrameWithSoftwareBitmap(py::wrapper::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5658,12 +5568,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_IBitmapPropertiesView(py::wrapper::Windows::Graphics::Imaging::IBitmapPropertiesView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5799,12 +5703,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapBounds(py::wrapper::Windows::Graphics::Imaging::BitmapBounds* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6013,12 +5911,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapPlaneDescription(py::wrapper::Windows::Graphics::Imaging::BitmapPlaneDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6225,12 +6117,6 @@ namespace py::cpp::Windows::Graphics::Imaging
     static void _dealloc_BitmapSize(py::wrapper::Windows::Graphics::Imaging::BitmapSize* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

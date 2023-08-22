@@ -1889,12 +1889,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_AlarmNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2192,12 +2186,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_AppNotificationInfo(py::wrapper::Windows::Phone::Notification::Management::AppNotificationInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2307,12 +2295,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_BinaryId(py::wrapper::Windows::Phone::Notification::Management::BinaryId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2422,12 +2404,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_CalendarChangedNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2665,12 +2641,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_CortanaTileNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3068,12 +3038,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_EmailAccountInfo(py::wrapper::Windows::Phone::Notification::Management::EmailAccountInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3183,12 +3147,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_EmailFolderInfo(py::wrapper::Windows::Phone::Notification::Management::EmailFolderInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3298,12 +3256,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_EmailNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3641,12 +3593,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_EmailReadNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3924,12 +3870,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_MediaControlsTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::MediaControlsTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4167,12 +4107,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_MediaMetadata(py::wrapper::Windows::Phone::Notification::Management::MediaMetadata* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4382,12 +4316,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_PhoneCallDetails(py::wrapper::Windows::Phone::Notification::Management::PhoneCallDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4697,12 +4625,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_PhoneLineDetails(py::wrapper::Windows::Phone::Notification::Management::PhoneLineDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4912,12 +4834,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_PhoneNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5175,12 +5091,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_ReminderNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5538,12 +5448,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_SpeedDialEntry(py::wrapper::Windows::Phone::Notification::Management::SpeedDialEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5673,12 +5577,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_TextResponse(py::wrapper::Windows::Phone::Notification::Management::TextResponse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5788,12 +5686,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_ToastNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6111,12 +6003,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_VolumeInfo(py::wrapper::Windows::Phone::Notification::Management::VolumeInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6286,12 +6172,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
     static void _dealloc_IAccessoryNotificationTriggerDetails(py::wrapper::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

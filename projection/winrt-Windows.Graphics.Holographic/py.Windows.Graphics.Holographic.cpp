@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicCamera(py::wrapper::Windows::Graphics::Holographic::HolographicCamera* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -523,12 +517,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicCameraPose(py::wrapper::Windows::Graphics::Holographic::HolographicCameraPose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -895,12 +883,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicCameraRenderingParameters(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1268,12 +1250,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicCameraViewportParameters(py::wrapper::Windows::Graphics::Holographic::HolographicCameraViewportParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1383,12 +1359,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicDisplay(py::wrapper::Windows::Graphics::Holographic::HolographicDisplay* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1660,12 +1630,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFrame(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2011,12 +1975,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFramePrediction(py::wrapper::Windows::Graphics::Holographic::HolographicFramePrediction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2126,12 +2084,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFramePresentationMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationMonitor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2284,12 +2236,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFramePresentationReport(py::wrapper::Windows::Graphics::Holographic::HolographicFramePresentationReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2459,12 +2405,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFrameRenderingReport(py::wrapper::Windows::Graphics::Holographic::HolographicFrameRenderingReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2634,12 +2574,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFrameScanoutMonitor(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2792,12 +2726,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFrameScanoutReport(py::wrapper::Windows::Graphics::Holographic::HolographicFrameScanoutReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3007,12 +2935,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicQuadLayer(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3175,12 +3097,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicQuadLayerUpdateParameters(py::wrapper::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3498,12 +3414,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicSpace(py::wrapper::Windows::Graphics::Holographic::HolographicSpace* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4096,12 +4006,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicSpaceCameraAddedEventArgs(py::wrapper::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4221,12 +4125,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicSpaceCameraRemovedEventArgs(py::wrapper::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4316,12 +4214,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicViewConfiguration(py::wrapper::Windows::Graphics::Holographic::HolographicViewConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4711,12 +4603,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicAdapterId(py::wrapper::Windows::Graphics::Holographic::HolographicAdapterId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4854,12 +4740,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicFrameId(py::wrapper::Windows::Graphics::Holographic::HolographicFrameId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4964,12 +4844,6 @@ namespace py::cpp::Windows::Graphics::Holographic
     static void _dealloc_HolographicStereoTransform(py::wrapper::Windows::Graphics::Holographic::HolographicStereoTransform* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

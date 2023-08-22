@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ActivationSignalDetectionConfiguration(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -941,12 +935,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ActivationSignalDetectionConfigurationCreationResult(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1056,12 +1044,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ActivationSignalDetector(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1795,12 +1777,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ConversationalAgentDetectorManager(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2098,12 +2074,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ConversationalAgentSession(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3386,12 +3356,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ConversationalAgentSessionInterruptedEventArgs(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3461,12 +3425,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ConversationalAgentSignal(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3864,12 +3822,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ConversationalAgentSignalDetectedEventArgs(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3939,12 +3891,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_ConversationalAgentSystemStateChangedEventArgs(py::wrapper::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4034,12 +3980,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_DetectionConfigurationAvailabilityChangedEventArgs(py::wrapper::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4129,12 +4069,6 @@ namespace py::cpp::Windows::ApplicationModel::ConversationalAgent
     static void _dealloc_DetectionConfigurationAvailabilityInfo(py::wrapper::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

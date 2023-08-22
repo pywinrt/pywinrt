@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_CurrentTimeChangeRequestedEventArgs(py::wrapper::Windows::Media::PlayTo::CurrentTimeChangeRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_MuteChangeRequestedEventArgs(py::wrapper::Windows::Media::PlayTo::MuteChangeRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -208,12 +196,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToConnection(py::wrapper::Windows::Media::PlayTo::PlayToConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -438,12 +420,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToConnectionErrorEventArgs(py::wrapper::Windows::Media::PlayTo::PlayToConnectionErrorEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -553,12 +529,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToConnectionStateChangedEventArgs(py::wrapper::Windows::Media::PlayTo::PlayToConnectionStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -668,12 +638,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToConnectionTransferredEventArgs(py::wrapper::Windows::Media::PlayTo::PlayToConnectionTransferredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -783,12 +747,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToManager(py::wrapper::Windows::Media::PlayTo::PlayToManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1079,12 +1037,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToReceiver(py::wrapper::Windows::Media::PlayTo::PlayToReceiver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2212,12 +2164,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToSource(py::wrapper::Windows::Media::PlayTo::PlayToSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2434,12 +2380,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToSourceDeferral(py::wrapper::Windows::Media::PlayTo::PlayToSourceDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2540,12 +2480,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToSourceRequest(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2731,12 +2665,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToSourceRequestedEventArgs(py::wrapper::Windows::Media::PlayTo::PlayToSourceRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2826,12 +2754,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlayToSourceSelectedEventArgs(py::wrapper::Windows::Media::PlayTo::PlayToSourceSelectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3001,12 +2923,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_PlaybackRateChangeRequestedEventArgs(py::wrapper::Windows::Media::PlayTo::PlaybackRateChangeRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3096,12 +3012,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_SourceChangeRequestedEventArgs(py::wrapper::Windows::Media::PlayTo::SourceChangeRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3371,12 +3281,6 @@ namespace py::cpp::Windows::Media::PlayTo
     static void _dealloc_VolumeChangeRequestedEventArgs(py::wrapper::Windows::Media::PlayTo::VolumeChangeRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

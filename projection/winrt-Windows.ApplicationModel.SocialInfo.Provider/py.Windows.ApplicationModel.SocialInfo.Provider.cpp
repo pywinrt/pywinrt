@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
     static void _dealloc_SocialDashboardItemUpdater(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -307,12 +301,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo::Provider
     static void _dealloc_SocialFeedUpdater(py::wrapper::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

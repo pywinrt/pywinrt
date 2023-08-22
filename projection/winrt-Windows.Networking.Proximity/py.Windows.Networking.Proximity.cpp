@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Networking::Proximity
     static void _dealloc_ConnectionRequestedEventArgs(py::wrapper::Windows::Networking::Proximity::ConnectionRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -724,12 +718,6 @@ namespace py::cpp::Windows::Networking::Proximity
     static void _dealloc_PeerInformation(py::wrapper::Windows::Networking::Proximity::PeerInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -899,12 +887,6 @@ namespace py::cpp::Windows::Networking::Proximity
     static void _dealloc_PeerWatcher(py::wrapper::Windows::Networking::Proximity::PeerWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1281,12 +1263,6 @@ namespace py::cpp::Windows::Networking::Proximity
     static void _dealloc_ProximityDevice(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1860,12 +1836,6 @@ namespace py::cpp::Windows::Networking::Proximity
     static void _dealloc_ProximityMessage(py::wrapper::Windows::Networking::Proximity::ProximityMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2015,12 +1985,6 @@ namespace py::cpp::Windows::Networking::Proximity
     static void _dealloc_TriggeredConnectionStateChangedEventArgs(py::wrapper::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

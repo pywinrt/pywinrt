@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynAboutData(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -585,12 +579,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynAboutDataView(py::wrapper::Windows::Devices::AllJoyn::AllJoynAboutDataView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1065,12 +1053,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynAcceptSessionJoinerEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1271,12 +1253,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynAuthenticationCompleteEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1443,12 +1419,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynBusAttachment(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2097,12 +2067,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynBusAttachmentStateChangedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2265,12 +2229,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynBusObject(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2544,12 +2502,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynBusObjectStoppedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2639,12 +2591,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynCredentials(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentials* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2878,12 +2824,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynCredentialsRequestedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3063,12 +3003,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynCredentialsVerificationRequestedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3343,12 +3277,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynMessageInfo(py::wrapper::Windows::Devices::AllJoyn::AllJoynMessageInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3462,12 +3390,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynProducerStoppedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3583,12 +3505,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynServiceInfo(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3774,12 +3690,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynServiceInfoRemovedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3869,12 +3779,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynSession(py::wrapper::Windows::Devices::AllJoyn::AllJoynSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4228,12 +4132,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynSessionJoinedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4347,12 +4245,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynSessionLostEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4466,12 +4358,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynSessionMemberAddedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4585,12 +4471,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynSessionMemberRemovedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5118,12 +4998,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_AllJoynWatcherStoppedEventArgs(py::wrapper::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5213,12 +5087,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_IAllJoynAcceptSessionJoiner(py::wrapper::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5319,12 +5187,6 @@ namespace py::cpp::Windows::Devices::AllJoyn
     static void _dealloc_IAllJoynProducer(py::wrapper::Windows::Devices::AllJoyn::IAllJoynProducer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialApp(py::wrapper::Windows::Media::DialProtocol::DialApp* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -205,12 +199,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialAppStateDetails(py::wrapper::Windows::Media::DialProtocol::DialAppStateDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -320,12 +308,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialDevice(py::wrapper::Windows::Media::DialProtocol::DialDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -605,12 +587,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialDevicePicker(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1028,12 +1004,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialDevicePickerFilter(py::wrapper::Windows::Media::DialProtocol::DialDevicePickerFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1123,12 +1093,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialDeviceSelectedEventArgs(py::wrapper::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1218,12 +1182,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialDisconnectButtonClickedEventArgs(py::wrapper::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1313,12 +1271,6 @@ namespace py::cpp::Windows::Media::DialProtocol
     static void _dealloc_DialReceiverApp(py::wrapper::Windows::Media::DialProtocol::DialReceiverApp* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

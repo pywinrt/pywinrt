@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_AlternateWordForm(py::wrapper::Windows::Data::Text::AlternateWordForm* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_SelectableWordSegment(py::wrapper::Windows::Data::Text::SelectableWordSegment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -292,12 +280,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_SelectableWordsSegmenter(py::wrapper::Windows::Data::Text::SelectableWordsSegmenter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -527,12 +509,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_SemanticTextQuery(py::wrapper::Windows::Data::Text::SemanticTextQuery* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -691,12 +667,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_TextConversionGenerator(py::wrapper::Windows::Data::Text::TextConversionGenerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -859,12 +829,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_TextPhoneme(py::wrapper::Windows::Data::Text::TextPhoneme* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -998,12 +962,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_TextPredictionGenerator(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1294,12 +1252,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_TextReverseConversionGenerator(py::wrapper::Windows::Data::Text::TextReverseConversionGenerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2066,12 +2018,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_WordSegment(py::wrapper::Windows::Data::Text::WordSegment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2225,12 +2171,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_WordsSegmenter(py::wrapper::Windows::Data::Text::WordsSegmenter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2452,12 +2392,6 @@ namespace py::cpp::Windows::Data::Text
     static void _dealloc_TextSegment(py::wrapper::Windows::Data::Text::TextSegment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

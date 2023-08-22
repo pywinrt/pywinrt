@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static void _dealloc_NotePlacementChangedPreviewEventArgs(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static void _dealloc_NoteVisibilityChangedPreviewEventArgs(py::wrapper::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -228,12 +216,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static void _dealloc_NotesWindowManagerPreview(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -881,12 +863,6 @@ namespace py::cpp::Windows::ApplicationModel::Preview::Notes
     static void _dealloc_NotesWindowManagerPreviewShowNoteOptions(py::wrapper::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

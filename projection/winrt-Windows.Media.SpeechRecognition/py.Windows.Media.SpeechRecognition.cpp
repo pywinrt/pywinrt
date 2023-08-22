@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechContinuousRecognitionCompletedEventArgs(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechContinuousRecognitionResultGeneratedEventArgs(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -208,12 +196,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechContinuousRecognitionSession(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -592,12 +574,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionCompilationResult(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -727,12 +703,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionGrammarFileConstraint(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -986,12 +956,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionHypothesis(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1081,12 +1045,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionHypothesisGeneratedEventArgs(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1216,12 +1174,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionListConstraint(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1475,12 +1427,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionQualityDegradingEventArgs(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1570,12 +1516,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionResult(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1857,12 +1797,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionSemanticInterpretation(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1994,12 +1928,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionTopicConstraint(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2273,12 +2201,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognitionVoiceCommandDefinitionConstraint(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2549,12 +2471,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognizer(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3164,12 +3080,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognizerStateChangedEventArgs(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3259,12 +3169,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognizerTimeouts(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3478,12 +3382,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_SpeechRecognizerUIOptions(py::wrapper::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3851,12 +3749,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_VoiceCommandSet(py::wrapper::Windows::Media::SpeechRecognition::VoiceCommandSet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3999,12 +3891,6 @@ namespace py::cpp::Windows::Media::SpeechRecognition
     static void _dealloc_ISpeechRecognitionConstraint(py::wrapper::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

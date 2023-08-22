@@ -40,12 +40,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_LocalContentSuggestionSettings(py::wrapper::Windows::ApplicationModel::Search::LocalContentSuggestionSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -251,12 +245,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPane(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -981,12 +969,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneQueryChangedEventArgs(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1116,12 +1098,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneQueryLinguisticDetails(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1251,12 +1227,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneQuerySubmittedEventArgs(py::wrapper::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1386,12 +1356,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneResultSuggestionChosenEventArgs(py::wrapper::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1481,12 +1445,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneSuggestionsRequest(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1626,12 +1584,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneSuggestionsRequestDeferral(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1732,12 +1684,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneSuggestionsRequestedEventArgs(py::wrapper::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1887,12 +1833,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchPaneVisibilityChangedEventArgs(py::wrapper::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2008,12 +1948,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchQueryLinguisticDetails(py::wrapper::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2143,12 +2077,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchSuggestionCollection(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2374,12 +2302,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchSuggestionsRequest(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2519,12 +2441,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_SearchSuggestionsRequestDeferral(py::wrapper::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2625,12 +2541,6 @@ namespace py::cpp::Windows::ApplicationModel::Search
     static void _dealloc_ISearchPaneQueryChangedEventArgs(py::wrapper::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

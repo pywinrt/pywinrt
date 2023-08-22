@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_CompositionConditionalValue(py::wrapper::Windows::UI::Composition::Interactions::CompositionConditionalValue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -221,12 +215,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_CompositionInteractionSourceCollection(py::wrapper::Windows::UI::Composition::Interactions::CompositionInteractionSourceCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -457,12 +445,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionSourceConfiguration(py::wrapper::Windows::UI::Composition::Interactions::InteractionSourceConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -676,12 +658,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTracker(py::wrapper::Windows::UI::Composition::Interactions::InteractionTracker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1929,12 +1905,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerCustomAnimationStateEnteredArgs(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2044,12 +2014,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerIdleStateEnteredArgs(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2159,12 +2123,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerInertiaModifier(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2234,12 +2192,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerInertiaMotion(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaMotion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2437,12 +2389,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerInertiaNaturalMotion(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2640,12 +2586,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerInertiaRestingValue(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2843,12 +2783,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerInertiaStateEnteredArgs(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3098,12 +3032,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerInteractingStateEnteredArgs(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3213,12 +3141,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerRequestIgnoredArgs(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3308,12 +3230,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerValuesChangedArgs(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3443,12 +3359,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerVector2InertiaModifier(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3518,12 +3428,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_InteractionTrackerVector2InertiaNaturalMotion(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3721,12 +3625,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_VisualInteractionSource(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4650,12 +4548,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_ICompositionInteractionSource(py::wrapper::Windows::UI::Composition::Interactions::ICompositionInteractionSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4725,12 +4617,6 @@ namespace py::cpp::Windows::UI::Composition::Interactions
     static void _dealloc_IInteractionTrackerOwner(py::wrapper::Windows::UI::Composition::Interactions::IInteractionTrackerOwner* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

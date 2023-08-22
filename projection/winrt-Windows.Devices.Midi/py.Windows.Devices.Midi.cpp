@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiActiveSensingMessage(py::wrapper::Windows::Devices::Midi::MidiActiveSensingMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -200,12 +194,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiChannelPressureMessage(py::wrapper::Windows::Devices::Midi::MidiChannelPressureMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -397,12 +385,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiContinueMessage(py::wrapper::Windows::Devices::Midi::MidiContinueMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -558,12 +540,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiControlChangeMessage(py::wrapper::Windows::Devices::Midi::MidiControlChangeMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -753,12 +729,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiInPort(py::wrapper::Windows::Devices::Midi::MidiInPort* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1008,12 +978,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiMessageReceivedEventArgs(py::wrapper::Windows::Devices::Midi::MidiMessageReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1129,12 +1093,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiNoteOffMessage(py::wrapper::Windows::Devices::Midi::MidiNoteOffMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1350,12 +1308,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiNoteOnMessage(py::wrapper::Windows::Devices::Midi::MidiNoteOnMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1545,12 +1497,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiOutPort(py::wrapper::Windows::Devices::Midi::MidiOutPort* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1846,12 +1792,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiPitchBendChangeMessage(py::wrapper::Windows::Devices::Midi::MidiPitchBendChangeMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2047,12 +1987,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiPolyphonicKeyPressureMessage(py::wrapper::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2267,12 +2201,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiProgramChangeMessage(py::wrapper::Windows::Devices::Midi::MidiProgramChangeMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2466,12 +2394,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiSongPositionPointerMessage(py::wrapper::Windows::Devices::Midi::MidiSongPositionPointerMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2645,12 +2567,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiSongSelectMessage(py::wrapper::Windows::Devices::Midi::MidiSongSelectMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2822,12 +2738,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiStartMessage(py::wrapper::Windows::Devices::Midi::MidiStartMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2979,12 +2889,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiStopMessage(py::wrapper::Windows::Devices::Midi::MidiStopMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3114,12 +3018,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiSynthesizer(py::wrapper::Windows::Devices::Midi::MidiSynthesizer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3502,12 +3400,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiSystemExclusiveMessage(py::wrapper::Windows::Devices::Midi::MidiSystemExclusiveMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3659,12 +3551,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiSystemResetMessage(py::wrapper::Windows::Devices::Midi::MidiSystemResetMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3819,12 +3705,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiTimeCodeMessage(py::wrapper::Windows::Devices::Midi::MidiTimeCodeMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4016,12 +3896,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiTimingClockMessage(py::wrapper::Windows::Devices::Midi::MidiTimingClockMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4173,12 +4047,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_MidiTuneRequestMessage(py::wrapper::Windows::Devices::Midi::MidiTuneRequestMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4308,12 +4176,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_IMidiMessage(py::wrapper::Windows::Devices::Midi::IMidiMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4443,12 +4305,6 @@ namespace py::cpp::Windows::Devices::Midi
     static void _dealloc_IMidiOutPort(py::wrapper::Windows::Devices::Midi::IMidiOutPort* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

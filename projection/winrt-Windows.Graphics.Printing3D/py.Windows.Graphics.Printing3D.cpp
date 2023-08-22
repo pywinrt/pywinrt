@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DManager(py::wrapper::Windows::Graphics::Printing3D::Print3DManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -198,12 +192,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DTask(py::wrapper::Windows::Graphics::Printing3D::Print3DTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -428,12 +416,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DTaskCompletedEventArgs(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -543,12 +525,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DTaskRequest(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -652,12 +628,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DTaskRequestedEventArgs(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -747,12 +717,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DTaskSourceChangedEventArgs(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -842,12 +806,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Print3DTaskSourceRequestedArgs(py::wrapper::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -972,12 +930,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3D3MFPackage(py::wrapper::Windows::Graphics::Printing3D::Printing3D3MFPackage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1407,12 +1359,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DBaseMaterial(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1662,12 +1608,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DBaseMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1799,12 +1739,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DColorMaterial(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1994,12 +1928,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DColorMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2131,12 +2059,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DComponent(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2488,12 +2410,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DComponentWithMatrix(py::wrapper::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2681,12 +2597,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DCompositeMaterial(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2800,12 +2710,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DCompositeMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3005,12 +2909,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DFaceReductionOptions(py::wrapper::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3246,12 +3144,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DMaterial(py::wrapper::Windows::Graphics::Printing3D::Printing3DMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3443,12 +3335,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DMesh(py::wrapper::Windows::Graphics::Printing3D::Printing3DMesh* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4130,12 +4016,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DMeshVerificationResult(py::wrapper::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4287,12 +4167,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DModel(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4887,12 +4761,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DModelTexture(py::wrapper::Windows::Graphics::Printing3D::Printing3DModelTexture* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5128,12 +4996,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DMultiplePropertyMaterial(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5247,12 +5109,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DMultiplePropertyMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5404,12 +5260,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DTexture2CoordMaterial(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5647,12 +5497,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DTexture2CoordMaterialGroup(py::wrapper::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5832,12 +5676,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DTextureResource(py::wrapper::Windows::Graphics::Printing3D::Printing3DTextureResource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6035,12 +5873,6 @@ namespace py::cpp::Windows::Graphics::Printing3D
     static void _dealloc_Printing3DBufferDescription(py::wrapper::Windows::Graphics::Printing3D::Printing3DBufferDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

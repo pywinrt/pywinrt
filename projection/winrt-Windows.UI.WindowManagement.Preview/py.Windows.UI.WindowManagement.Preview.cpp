@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::WindowManagement::Preview
     static void _dealloc_WindowManagementPreview(py::wrapper::Windows::UI::WindowManagement::Preview::WindowManagementPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

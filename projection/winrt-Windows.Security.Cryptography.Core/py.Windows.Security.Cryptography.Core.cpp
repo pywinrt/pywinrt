@@ -492,12 +492,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_AsymmetricKeyAlgorithmProvider(py::wrapper::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1262,12 +1256,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_CryptographicHash(py::wrapper::Windows::Security::Cryptography::Core::CryptographicHash* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1400,12 +1388,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_CryptographicKey(py::wrapper::Windows::Security::Cryptography::Core::CryptographicKey* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2569,12 +2551,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_EncryptedAndAuthenticatedData(py::wrapper::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2838,12 +2814,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_HashAlgorithmProvider(py::wrapper::Windows::Security::Cryptography::Core::HashAlgorithmProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3501,12 +3471,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_KeyDerivationAlgorithmProvider(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3660,12 +3624,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_KeyDerivationParameters(py::wrapper::Windows::Security::Cryptography::Core::KeyDerivationParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4159,12 +4117,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_MacAlgorithmProvider(py::wrapper::Windows::Security::Cryptography::Core::MacAlgorithmProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4906,12 +4858,6 @@ namespace py::cpp::Windows::Security::Cryptography::Core
     static void _dealloc_SymmetricKeyAlgorithmProvider(py::wrapper::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

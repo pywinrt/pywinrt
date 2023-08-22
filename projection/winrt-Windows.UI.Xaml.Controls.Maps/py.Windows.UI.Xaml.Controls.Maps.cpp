@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_CustomMapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -197,12 +191,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_HttpMapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -470,12 +458,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_LocalMapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -660,12 +642,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapActualCameraChangedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -797,12 +773,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapActualCameraChangingEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -936,12 +906,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapBillboard(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapBillboard* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1379,12 +1343,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapCamera(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCamera* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1716,12 +1674,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapContextRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1873,12 +1825,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControl(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6390,12 +6336,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlBusinessLandmarkClickEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6507,12 +6447,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlBusinessLandmarkPointerEnteredEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6624,12 +6558,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlBusinessLandmarkPointerExitedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6741,12 +6669,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlBusinessLandmarkRightTappedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6860,12 +6782,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlDataHelper(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7349,12 +7265,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlTransitFeatureClickEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7506,12 +7416,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlTransitFeaturePointerEnteredEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7663,12 +7567,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlTransitFeaturePointerExitedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7820,12 +7718,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapControlTransitFeatureRightTappedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7977,12 +7869,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapCustomExperience(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8074,12 +7960,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapCustomExperienceChangedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8171,12 +8051,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElement(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8764,12 +8638,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElement3D(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement3D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9269,12 +9137,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementClickEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9426,12 +9288,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementPointerEnteredEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9583,12 +9439,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementPointerExitedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9740,12 +9590,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementsLayer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10105,12 +9949,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementsLayerClickEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10262,12 +10100,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementsLayerContextRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10419,12 +10251,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementsLayerPointerEnteredEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10576,12 +10402,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapElementsLayerPointerExitedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10733,12 +10553,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapIcon(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapIcon* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11170,12 +10984,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapInputEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11307,12 +11115,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapItemsControl(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapItemsControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11600,12 +11402,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapLayer(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11921,12 +11717,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapModel3D(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12071,12 +11861,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapPolygon(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolygon* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12508,12 +12292,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapPolyline(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapPolyline* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12857,12 +12635,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapRightTappedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12996,12 +12768,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapRouteView(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13187,12 +12953,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapScene(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapScene* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13577,12 +13337,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapStyleSheet(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapStyleSheet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15411,12 +15165,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTargetCameraChangedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15548,12 +15296,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileBitmapRequest(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15723,12 +15465,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileBitmapRequestDeferral(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15851,12 +15587,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileBitmapRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16048,12 +15778,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileDataSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16211,12 +15935,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileSource(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17413,12 +17131,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileUriRequest(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17588,12 +17300,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileUriRequestDeferral(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17716,12 +17422,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapTileUriRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17933,12 +17633,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_StreetsideExperience(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsideExperience* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18296,12 +17990,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_StreetsidePanorama(py::wrapper::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18476,12 +18164,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     static void _dealloc_MapZoomLevelRange(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

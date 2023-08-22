@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_AppDisplayInfo(py::wrapper::Windows::ApplicationModel::AppDisplayInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -165,12 +159,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_AppInfo(py::wrapper::Windows::ApplicationModel::AppInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -485,12 +473,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_AppInstallerInfo(py::wrapper::Windows::ApplicationModel::AppInstallerInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -880,12 +862,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_AppInstance(py::wrapper::Windows::ApplicationModel::AppInstance* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1348,12 +1324,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_EnteredBackgroundEventArgs(py::wrapper::Windows::ApplicationModel::EnteredBackgroundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1477,12 +1447,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_FindRelatedPackagesOptions(py::wrapper::Windows::ApplicationModel::FindRelatedPackagesOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1792,12 +1756,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_FullTrustProcessLaunchResult(py::wrapper::Windows::ApplicationModel::FullTrustProcessLaunchResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2109,12 +2067,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_LeavingBackgroundEventArgs(py::wrapper::Windows::ApplicationModel::LeavingBackgroundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2214,12 +2166,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_LimitedAccessFeatureRequestResult(py::wrapper::Windows::ApplicationModel::LimitedAccessFeatureRequestResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2417,12 +2363,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_Package(py::wrapper::Windows::ApplicationModel::Package* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3536,12 +3476,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageCatalog(py::wrapper::Windows::ApplicationModel::PackageCatalog* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4103,12 +4037,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageCatalogAddOptionalPackageResult(py::wrapper::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4218,12 +4146,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageCatalogAddResourcePackageResult(py::wrapper::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4353,12 +4275,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageCatalogRemoveOptionalPackagesResult(py::wrapper::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4468,12 +4384,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageCatalogRemoveResourcePackagesResult(py::wrapper::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4583,12 +4493,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageContentGroup(py::wrapper::Windows::ApplicationModel::PackageContentGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4778,12 +4682,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageContentGroupStagingEventArgs(py::wrapper::Windows::ApplicationModel::PackageContentGroupStagingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4993,12 +4891,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageId(py::wrapper::Windows::ApplicationModel::PackageId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5268,12 +5160,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageInstallingEventArgs(py::wrapper::Windows::ApplicationModel::PackageInstallingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5443,12 +5329,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageStagingEventArgs(py::wrapper::Windows::ApplicationModel::PackageStagingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5618,12 +5498,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageStatus(py::wrapper::Windows::ApplicationModel::PackageStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5963,12 +5837,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageStatusChangedEventArgs(py::wrapper::Windows::ApplicationModel::PackageStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6058,12 +5926,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageUninstallingEventArgs(py::wrapper::Windows::ApplicationModel::PackageUninstallingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6233,12 +6095,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageUpdateAvailabilityResult(py::wrapper::Windows::ApplicationModel::PackageUpdateAvailabilityResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6348,12 +6204,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageUpdatingEventArgs(py::wrapper::Windows::ApplicationModel::PackageUpdatingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6543,12 +6393,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_StartupTask(py::wrapper::Windows::ApplicationModel::StartupTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6781,12 +6625,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_SuspendingDeferral(py::wrapper::Windows::ApplicationModel::SuspendingDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6887,12 +6725,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_SuspendingEventArgs(py::wrapper::Windows::ApplicationModel::SuspendingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6982,12 +6814,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_SuspendingOperation(py::wrapper::Windows::ApplicationModel::SuspendingOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7107,12 +6933,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_IEnteredBackgroundEventArgs(py::wrapper::Windows::ApplicationModel::IEnteredBackgroundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7212,12 +7032,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_ILeavingBackgroundEventArgs(py::wrapper::Windows::ApplicationModel::ILeavingBackgroundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7317,12 +7131,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_IPackageCatalogStatics2(py::wrapper::Windows::ApplicationModel::IPackageCatalogStatics2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7424,12 +7232,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_ISuspendingDeferral(py::wrapper::Windows::ApplicationModel::ISuspendingDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7530,12 +7332,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_ISuspendingEventArgs(py::wrapper::Windows::ApplicationModel::ISuspendingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7625,12 +7421,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_ISuspendingOperation(py::wrapper::Windows::ApplicationModel::ISuspendingOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7781,12 +7571,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageInstallProgress(py::wrapper::Windows::ApplicationModel::PackageInstallProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7893,12 +7677,6 @@ namespace py::cpp::Windows::ApplicationModel
     static void _dealloc_PackageVersion(py::wrapper::Windows::ApplicationModel::PackageVersion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

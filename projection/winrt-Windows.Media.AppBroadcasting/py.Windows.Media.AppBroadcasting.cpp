@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     static void _dealloc_AppBroadcastingMonitor(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingMonitor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -180,12 +174,6 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     static void _dealloc_AppBroadcastingStatus(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -295,12 +283,6 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     static void _dealloc_AppBroadcastingStatusDetails(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -530,12 +512,6 @@ namespace py::cpp::Windows::Media::AppBroadcasting
     static void _dealloc_AppBroadcastingUI(py::wrapper::Windows::Media::AppBroadcasting::AppBroadcastingUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

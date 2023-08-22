@@ -232,12 +232,6 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static void _dealloc_LocalLocation(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -576,12 +570,6 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static void _dealloc_LocalLocationFinderResult(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -691,12 +679,6 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static void _dealloc_LocalLocationHoursOfOperationItem(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -826,12 +808,6 @@ namespace py::cpp::Windows::Services::Maps::LocalSearch
     static void _dealloc_LocalLocationRatingInfo(py::wrapper::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

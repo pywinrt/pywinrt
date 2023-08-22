@@ -84,12 +84,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceClosedEventArgs(py::wrapper::Windows::ApplicationModel::AppService::AppServiceClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -201,12 +195,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceConnection(py::wrapper::Windows::ApplicationModel::AppService::AppServiceConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -691,12 +679,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceDeferral(py::wrapper::Windows::ApplicationModel::AppService::AppServiceDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -797,12 +779,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceRequest(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -924,12 +900,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceRequestReceivedEventArgs(py::wrapper::Windows::ApplicationModel::AppService::AppServiceRequestReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1049,12 +1019,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceResponse(py::wrapper::Windows::ApplicationModel::AppService::AppServiceResponse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1164,12 +1128,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_AppServiceTriggerDetails(py::wrapper::Windows::ApplicationModel::AppService::AppServiceTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1371,12 +1329,6 @@ namespace py::cpp::Windows::ApplicationModel::AppService
     static void _dealloc_StatelessAppServiceResponse(py::wrapper::Windows::ApplicationModel::AppService::StatelessAppServiceResponse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

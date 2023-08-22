@@ -1036,12 +1036,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrame(py::wrapper::Windows::Devices::Perception::PerceptionColorFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1184,12 +1178,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrameArrivedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1309,12 +1297,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1580,12 +1562,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrameSource(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2509,12 +2485,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrameSourceAddedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2604,12 +2574,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrameSourceRemovedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2699,12 +2663,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionColorFrameSourceWatcher(py::wrapper::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3036,12 +2994,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionControlSession(py::wrapper::Windows::Devices::Perception::PerceptionControlSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3242,12 +3194,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthCorrelatedCameraIntrinsics(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3452,12 +3398,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthCorrelatedCoordinateMapper(py::wrapper::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3662,12 +3602,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrame(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3810,12 +3744,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrameArrivedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3935,12 +3863,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4206,12 +4128,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrameSource(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5135,12 +5051,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrameSourceAddedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5230,12 +5140,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrameSourceRemovedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5325,12 +5229,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionDepthFrameSourceWatcher(py::wrapper::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5662,12 +5560,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionFrameSourcePropertiesChangedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5777,12 +5669,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionFrameSourcePropertyChangeResult(py::wrapper::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5892,12 +5778,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrame(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6040,12 +5920,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrameArrivedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6165,12 +6039,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrameReader(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6436,12 +6304,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrameSource(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7365,12 +7227,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrameSourceAddedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7460,12 +7316,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrameSourceRemovedEventArgs(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7555,12 +7405,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionInfraredFrameSourceWatcher(py::wrapper::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7892,12 +7736,6 @@ namespace py::cpp::Windows::Devices::Perception
     static void _dealloc_PerceptionVideoProfile(py::wrapper::Windows::Devices::Perception::PerceptionVideoProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

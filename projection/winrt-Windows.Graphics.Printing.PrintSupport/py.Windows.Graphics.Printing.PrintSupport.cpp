@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportExtensionSession(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -279,12 +273,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportExtensionTriggerDetails(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -374,12 +362,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportPrintDeviceCapabilitiesChangedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -691,12 +673,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportPrintDeviceCapabilitiesUpdatePolicy(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -852,12 +828,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportPrintTicketElement(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1023,12 +993,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportPrintTicketValidationRequestedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1181,12 +1145,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportPrinterSelectedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1473,12 +1431,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportSessionInfo(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1588,12 +1540,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportSettingsActivatedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1793,12 +1739,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
     static void _dealloc_PrintSupportSettingsUISession(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

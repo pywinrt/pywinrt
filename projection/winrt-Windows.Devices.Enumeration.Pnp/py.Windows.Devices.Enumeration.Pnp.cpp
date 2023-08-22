@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     static void _dealloc_PnpObject(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -330,12 +324,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     static void _dealloc_PnpObjectCollection(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -678,12 +666,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     static void _dealloc_PnpObjectUpdate(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -813,12 +795,6 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     static void _dealloc_PnpObjectWatcher(py::wrapper::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

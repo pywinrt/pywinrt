@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_AccessibilitySettings(py::wrapper::Windows::UI::ViewManagement::AccessibilitySettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -200,12 +194,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ActivationViewSwitcher(py::wrapper::Windows::UI::ViewManagement::ActivationViewSwitcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -360,12 +348,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ApplicationView(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1711,12 +1693,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ApplicationViewConsolidatedEventArgs(py::wrapper::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1826,12 +1802,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ApplicationViewScaling(py::wrapper::Windows::UI::ViewManagement::ApplicationViewScaling* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2309,12 +2279,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ApplicationViewTitleBar(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTitleBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2982,12 +2946,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ApplicationViewTransferContext(py::wrapper::Windows::UI::ViewManagement::ApplicationViewTransferContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3145,12 +3103,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_InputPane(py::wrapper::Windows::UI::ViewManagement::InputPane* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3500,12 +3452,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_InputPaneVisibilityEventArgs(py::wrapper::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3970,12 +3916,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_StatusBar(py::wrapper::Windows::UI::ViewManagement::StatusBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4409,12 +4349,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_StatusBarProgressIndicator(py::wrapper::Windows::UI::ViewManagement::StatusBarProgressIndicator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4662,12 +4596,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_UISettings(py::wrapper::Windows::UI::ViewManagement::UISettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5371,12 +5299,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_UISettingsAnimationsEnabledChangedEventArgs(py::wrapper::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5446,12 +5368,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_UISettingsAutoHideScrollBarsChangedEventArgs(py::wrapper::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5521,12 +5437,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_UISettingsMessageDurationChangedEventArgs(py::wrapper::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5596,12 +5506,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_UIViewSettings(py::wrapper::Windows::UI::ViewManagement::UIViewSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5721,12 +5625,6 @@ namespace py::cpp::Windows::UI::ViewManagement
     static void _dealloc_ViewModePreferences(py::wrapper::Windows::UI::ViewManagement::ViewModePreferences* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

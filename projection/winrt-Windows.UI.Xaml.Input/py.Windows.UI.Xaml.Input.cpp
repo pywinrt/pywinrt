@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_AccessKeyDisplayDismissedEventArgs(py::wrapper::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -137,12 +131,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_AccessKeyDisplayRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -254,12 +242,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_AccessKeyInvokedEventArgs(py::wrapper::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -377,12 +359,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_AccessKeyManager(py::wrapper::Windows::UI::Xaml::Input::AccessKeyManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -610,12 +586,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_CanExecuteRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -753,12 +723,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_CharacterReceivedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::CharacterReceivedRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -938,12 +902,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ContextRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ContextRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1128,12 +1086,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_DoubleTappedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::DoubleTappedRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1303,12 +1255,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ExecuteRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1420,12 +1366,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_FindNextElementOptions(py::wrapper::Windows::UI::Xaml::Input::FindNextElementOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1687,12 +1627,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_FocusManager(py::wrapper::Windows::UI::Xaml::Input::FocusManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2301,12 +2235,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_FocusManagerGotFocusEventArgs(py::wrapper::Windows::UI::Xaml::Input::FocusManagerGotFocusEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2416,12 +2344,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_FocusManagerLostFocusEventArgs(py::wrapper::Windows::UI::Xaml::Input::FocusManagerLostFocusEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2531,12 +2453,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_FocusMovementResult(py::wrapper::Windows::UI::Xaml::Input::FocusMovementResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2626,12 +2542,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_GettingFocusEventArgs(py::wrapper::Windows::UI::Xaml::Input::GettingFocusEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3029,12 +2939,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_HoldingRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::HoldingRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3224,12 +3128,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_InertiaExpansionBehavior(py::wrapper::Windows::UI::Xaml::Input::InertiaExpansionBehavior* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3395,12 +3293,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_InertiaRotationBehavior(py::wrapper::Windows::UI::Xaml::Input::InertiaRotationBehavior* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3566,12 +3458,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_InertiaTranslationBehavior(py::wrapper::Windows::UI::Xaml::Input::InertiaTranslationBehavior* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3759,12 +3645,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_InputScope(py::wrapper::Windows::UI::Xaml::Input::InputScope* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3891,12 +3771,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_InputScopeName(py::wrapper::Windows::UI::Xaml::Input::InputScopeName* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4014,12 +3888,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_KeyRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::KeyRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4239,12 +4107,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_KeyboardAccelerator(py::wrapper::Windows::UI::Xaml::Input::KeyboardAccelerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4651,12 +4513,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_KeyboardAcceleratorInvokedEventArgs(py::wrapper::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4814,12 +4670,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_LosingFocusEventArgs(py::wrapper::Windows::UI::Xaml::Input::LosingFocusEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5217,12 +5067,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ManipulationCompletedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ManipulationCompletedRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5482,12 +5326,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ManipulationDeltaRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ManipulationDeltaRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5798,12 +5636,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ManipulationInertiaStartingRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ManipulationInertiaStartingRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6203,12 +6035,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ManipulationPivot(py::wrapper::Windows::UI::Xaml::Input::ManipulationPivot* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6396,12 +6222,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ManipulationStartedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6652,12 +6472,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ManipulationStartingRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::ManipulationStartingRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6919,12 +6733,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_NoFocusCandidateFoundEventArgs(py::wrapper::Windows::UI::Xaml::Input::NoFocusCandidateFoundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7082,12 +6890,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_Pointer(py::wrapper::Windows::UI::Xaml::Input::Pointer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7237,12 +7039,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_PointerRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::PointerRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7484,12 +7280,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ProcessKeyboardAcceleratorEventArgs(py::wrapper::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7669,12 +7459,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_RightTappedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::RightTappedRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7881,12 +7665,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_StandardUICommand(py::wrapper::Windows::UI::Xaml::Input::StandardUICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8066,12 +7844,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_TappedRoutedEventArgs(py::wrapper::Windows::UI::Xaml::Input::TappedRoutedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8263,12 +8035,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_XamlUICommand(py::wrapper::Windows::UI::Xaml::Input::XamlUICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8969,12 +8735,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
     static void _dealloc_ICommand(py::wrapper::Windows::UI::Xaml::Input::ICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

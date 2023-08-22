@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentAction(py::wrapper::Windows::Services::TargetedContent::TargetedContentAction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -123,12 +117,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentAvailabilityChangedEventArgs(py::wrapper::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -228,12 +216,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentChangedEventArgs(py::wrapper::Windows::Services::TargetedContent::TargetedContentChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -353,12 +335,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentCollection(py::wrapper::Windows::Services::TargetedContent::TargetedContentCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -594,12 +570,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentContainer(py::wrapper::Windows::Services::TargetedContent::TargetedContentContainer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -813,12 +783,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentFile(py::wrapper::Windows::Services::TargetedContent::TargetedContentFile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -918,12 +882,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentImage(py::wrapper::Windows::Services::TargetedContent::TargetedContentImage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1063,12 +1021,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentItem(py::wrapper::Windows::Services::TargetedContent::TargetedContentItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1284,12 +1236,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentItemState(py::wrapper::Windows::Services::TargetedContent::TargetedContentItemState* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1399,12 +1345,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentObject(py::wrapper::Windows::Services::TargetedContent::TargetedContentObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1554,12 +1494,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentStateChangedEventArgs(py::wrapper::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1659,12 +1593,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentSubscription(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1983,12 +1911,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentSubscriptionOptions(py::wrapper::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2197,12 +2119,6 @@ namespace py::cpp::Windows::Services::TargetedContent
     static void _dealloc_TargetedContentValue(py::wrapper::Windows::Services::TargetedContent::TargetedContentValue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

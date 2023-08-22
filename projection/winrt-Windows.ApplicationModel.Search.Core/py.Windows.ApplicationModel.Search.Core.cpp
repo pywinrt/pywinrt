@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static void _dealloc_RequestingFocusOnKeyboardInputEventArgs(py::wrapper::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -93,12 +87,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static void _dealloc_SearchSuggestion(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -310,12 +298,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static void _dealloc_SearchSuggestionManager(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -788,12 +770,6 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
     static void _dealloc_SearchSuggestionsRequestedEventArgs(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

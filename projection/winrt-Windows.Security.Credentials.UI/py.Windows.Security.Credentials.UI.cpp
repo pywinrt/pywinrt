@@ -149,12 +149,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
     static void _dealloc_CredentialPickerOptions(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -704,12 +698,6 @@ namespace py::cpp::Windows::Security::Credentials::UI
     static void _dealloc_CredentialPickerResults(py::wrapper::Windows::Security::Credentials::UI::CredentialPickerResults* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

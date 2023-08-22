@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_AmbientLight(py::wrapper::Windows::UI::Composition::AmbientLight* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -189,12 +183,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_AnimationController(py::wrapper::Windows::UI::Composition::AnimationController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -530,12 +518,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_AnimationPropertyInfo(py::wrapper::Windows::UI::Composition::AnimationPropertyInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -713,12 +695,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_BackEasingFunction(py::wrapper::Windows::UI::Composition::BackEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -828,12 +804,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_BooleanKeyFrameAnimation(py::wrapper::Windows::UI::Composition::BooleanKeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -937,12 +907,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_BounceEasingFunction(py::wrapper::Windows::UI::Composition::BounceEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1072,12 +1036,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_BounceScalarNaturalMotionAnimation(py::wrapper::Windows::UI::Composition::BounceScalarNaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1243,12 +1201,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_BounceVector2NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::BounceVector2NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1414,12 +1366,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_BounceVector3NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::BounceVector3NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1585,12 +1531,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CircleEasingFunction(py::wrapper::Windows::UI::Composition::CircleEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1680,12 +1620,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ColorKeyFrameAnimation(py::wrapper::Windows::UI::Composition::ColorKeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1860,12 +1794,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionAnimation(py::wrapper::Windows::UI::Composition::CompositionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2441,12 +2369,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionAnimationGroup(py::wrapper::Windows::UI::Composition::CompositionAnimationGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2677,12 +2599,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionBackdropBrush(py::wrapper::Windows::UI::Composition::CompositionBackdropBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2752,12 +2668,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionBatchCompletedEventArgs(py::wrapper::Windows::UI::Composition::CompositionBatchCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2827,12 +2737,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionBrush(py::wrapper::Windows::UI::Composition::CompositionBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2902,12 +2806,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionCapabilities(py::wrapper::Windows::UI::Composition::CompositionCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3112,12 +3010,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionClip(py::wrapper::Windows::UI::Composition::CompositionClip* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3523,12 +3415,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionColorBrush(py::wrapper::Windows::UI::Composition::CompositionColorBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3646,12 +3532,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionColorGradientStop(py::wrapper::Windows::UI::Composition::CompositionColorGradientStop* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3817,12 +3697,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionColorGradientStopCollection(py::wrapper::Windows::UI::Composition::CompositionColorGradientStopCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4440,12 +4314,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionCommitBatch(py::wrapper::Windows::UI::Composition::CompositionCommitBatch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4600,12 +4468,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionContainerShape(py::wrapper::Windows::UI::Composition::CompositionContainerShape* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4695,12 +4557,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionDrawingSurface(py::wrapper::Windows::UI::Composition::CompositionDrawingSurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4995,12 +4851,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionEasingFunction(py::wrapper::Windows::UI::Composition::CompositionEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5427,12 +5277,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionEffectBrush(py::wrapper::Windows::UI::Composition::CompositionEffectBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5568,12 +5412,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionEffectFactory(py::wrapper::Windows::UI::Composition::CompositionEffectFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5737,12 +5575,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionEffectSourceParameter(py::wrapper::Windows::UI::Composition::CompositionEffectSourceParameter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5832,12 +5664,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionEllipseGeometry(py::wrapper::Windows::UI::Composition::CompositionEllipseGeometry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6003,12 +5829,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionGeometricClip(py::wrapper::Windows::UI::Composition::CompositionGeometricClip* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6174,12 +5994,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionGeometry(py::wrapper::Windows::UI::Composition::CompositionGeometry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6393,12 +6207,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionGradientBrush(py::wrapper::Windows::UI::Composition::CompositionGradientBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6968,12 +6776,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionGraphicsDevice(py::wrapper::Windows::UI::Composition::CompositionGraphicsDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7291,12 +7093,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionLight(py::wrapper::Windows::UI::Composition::CompositionLight* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7454,12 +7250,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionLineGeometry(py::wrapper::Windows::UI::Composition::CompositionLineGeometry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7625,12 +7415,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionLinearGradientBrush(py::wrapper::Windows::UI::Composition::CompositionLinearGradientBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7796,12 +7580,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionMaskBrush(py::wrapper::Windows::UI::Composition::CompositionMaskBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7967,12 +7745,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionMipmapSurface(py::wrapper::Windows::UI::Composition::CompositionMipmapSurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8154,12 +7926,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionNineGridBrush(py::wrapper::Windows::UI::Composition::CompositionNineGridBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8823,12 +8589,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionObject(py::wrapper::Windows::UI::Composition::CompositionObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9442,12 +9202,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionPath(py::wrapper::Windows::UI::Composition::CompositionPath* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9517,12 +9271,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionPathGeometry(py::wrapper::Windows::UI::Composition::CompositionPathGeometry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9640,12 +9388,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionProjectedShadow(py::wrapper::Windows::UI::Composition::CompositionProjectedShadow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9947,12 +9689,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionProjectedShadowCaster(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowCaster* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10118,12 +9854,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionProjectedShadowCasterCollection(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowCasterCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10495,12 +10225,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionProjectedShadowReceiver(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowReceiver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10618,12 +10342,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionProjectedShadowReceiverUnorderedCollection(py::wrapper::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10854,12 +10572,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionPropertySet(py::wrapper::Windows::UI::Composition::CompositionPropertySet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11640,12 +11352,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionRadialGradientBrush(py::wrapper::Windows::UI::Composition::CompositionRadialGradientBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11859,12 +11565,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionRectangleGeometry(py::wrapper::Windows::UI::Composition::CompositionRectangleGeometry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12030,12 +11730,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionRoundedRectangleGeometry(py::wrapper::Windows::UI::Composition::CompositionRoundedRectangleGeometry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12249,12 +11943,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionScopedBatch(py::wrapper::Windows::UI::Composition::CompositionScopedBatch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12502,12 +12190,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionShadow(py::wrapper::Windows::UI::Composition::CompositionShadow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12577,12 +12259,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionShape(py::wrapper::Windows::UI::Composition::CompositionShape* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12940,12 +12616,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionShapeCollection(py::wrapper::Windows::UI::Composition::CompositionShapeCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13563,12 +13233,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionSpriteShape(py::wrapper::Windows::UI::Composition::CompositionSpriteShape* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14186,12 +13850,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionStrokeDashArray(py::wrapper::Windows::UI::Composition::CompositionStrokeDashArray* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14809,12 +14467,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionSurfaceBrush(py::wrapper::Windows::UI::Composition::CompositionSurfaceBrush* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15508,12 +15160,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionTarget(py::wrapper::Windows::UI::Composition::CompositionTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15631,12 +15277,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionTransform(py::wrapper::Windows::UI::Composition::CompositionTransform* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15706,12 +15346,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionViewBox(py::wrapper::Windows::UI::Composition::CompositionViewBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16021,12 +15655,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionVirtualDrawingSurface(py::wrapper::Windows::UI::Composition::CompositionVirtualDrawingSurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16129,12 +15757,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CompositionVisualSurface(py::wrapper::Windows::UI::Composition::CompositionVisualSurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16370,12 +15992,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Compositor(py::wrapper::Windows::UI::Composition::Compositor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18848,12 +18464,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ContainerVisual(py::wrapper::Windows::UI::Composition::ContainerVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18943,12 +18553,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_CubicBezierEasingFunction(py::wrapper::Windows::UI::Composition::CubicBezierEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19058,12 +18662,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_DelegatedInkTrailVisual(py::wrapper::Windows::UI::Composition::DelegatedInkTrailVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19329,12 +18927,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_DistantLight(py::wrapper::Windows::UI::Composition::DistantLight* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19596,12 +19188,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_DropShadow(py::wrapper::Windows::UI::Composition::DropShadow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19959,12 +19545,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ElasticEasingFunction(py::wrapper::Windows::UI::Composition::ElasticEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20094,12 +19674,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ExponentialEasingFunction(py::wrapper::Windows::UI::Composition::ExponentialEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20209,12 +19783,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ExpressionAnimation(py::wrapper::Windows::UI::Composition::ExpressionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20332,12 +19900,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ImplicitAnimationCollection(py::wrapper::Windows::UI::Composition::ImplicitAnimationCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20745,12 +20307,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_InitialValueExpressionCollection(py::wrapper::Windows::UI::Composition::InitialValueExpressionCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21158,12 +20714,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_InsetClip(py::wrapper::Windows::UI::Composition::InsetClip* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21425,12 +20975,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_KeyFrameAnimation(py::wrapper::Windows::UI::Composition::KeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21913,12 +21457,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_LayerVisual(py::wrapper::Windows::UI::Composition::LayerVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22084,12 +21622,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_LinearEasingFunction(py::wrapper::Windows::UI::Composition::LinearEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22159,12 +21691,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22378,12 +21904,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_PathKeyFrameAnimation(py::wrapper::Windows::UI::Composition::PathKeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22510,12 +22030,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_PointLight(py::wrapper::Windows::UI::Composition::PointLight* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23017,12 +22531,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_PowerEasingFunction(py::wrapper::Windows::UI::Composition::PowerEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23132,12 +22640,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_QuaternionKeyFrameAnimation(py::wrapper::Windows::UI::Composition::QuaternionKeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23264,12 +22766,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_RectangleClip(py::wrapper::Windows::UI::Composition::RectangleClip* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23723,12 +23219,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_RedirectVisual(py::wrapper::Windows::UI::Composition::RedirectVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23846,12 +23336,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_RenderingDeviceReplacedEventArgs(py::wrapper::Windows::UI::Composition::RenderingDeviceReplacedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -23941,12 +23425,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ScalarKeyFrameAnimation(py::wrapper::Windows::UI::Composition::ScalarKeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -24073,12 +23551,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ScalarNaturalMotionAnimation(py::wrapper::Windows::UI::Composition::ScalarNaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -24292,12 +23764,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ShapeVisual(py::wrapper::Windows::UI::Composition::ShapeVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -24435,12 +23901,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_SineEasingFunction(py::wrapper::Windows::UI::Composition::SineEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -24530,12 +23990,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_SpotLight(py::wrapper::Windows::UI::Composition::SpotLight* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25373,12 +24827,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_SpringScalarNaturalMotionAnimation(py::wrapper::Windows::UI::Composition::SpringScalarNaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25544,12 +24992,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_SpringVector2NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::SpringVector2NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25715,12 +25157,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_SpringVector3NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::SpringVector3NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -25886,12 +25322,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_SpriteVisual(py::wrapper::Windows::UI::Composition::SpriteVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -26057,12 +25487,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_StepEasingFunction(py::wrapper::Windows::UI::Composition::StepEasingFunction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -26372,12 +25796,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Vector2KeyFrameAnimation(py::wrapper::Windows::UI::Composition::Vector2KeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -26504,12 +25922,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Vector2NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::Vector2NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -26723,12 +26135,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Vector3KeyFrameAnimation(py::wrapper::Windows::UI::Composition::Vector3KeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -26855,12 +26261,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Vector3NaturalMotionAnimation(py::wrapper::Windows::UI::Composition::Vector3NaturalMotionAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -27074,12 +26474,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Vector4KeyFrameAnimation(py::wrapper::Windows::UI::Composition::Vector4KeyFrameAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -27206,12 +26600,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_Visual(py::wrapper::Windows::UI::Composition::Visual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -28309,12 +27697,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_VisualCollection(py::wrapper::Windows::UI::Composition::VisualCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -28646,12 +28028,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_VisualUnorderedCollection(py::wrapper::Windows::UI::Composition::VisualUnorderedCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -28882,12 +28258,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_IAnimationObject(py::wrapper::Windows::UI::Composition::IAnimationObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -28991,12 +28361,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ICompositionAnimationBase(py::wrapper::Windows::UI::Composition::ICompositionAnimationBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -29066,12 +28430,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ICompositionSupportsSystemBackdrop(py::wrapper::Windows::UI::Composition::ICompositionSupportsSystemBackdrop* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -29189,12 +28547,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ICompositionSurface(py::wrapper::Windows::UI::Composition::ICompositionSurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -29264,12 +28616,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_ICompositionSurfaceFacade(py::wrapper::Windows::UI::Composition::ICompositionSurfaceFacade* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -29369,12 +28715,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_IVisualElement(py::wrapper::Windows::UI::Composition::IVisualElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -29444,12 +28784,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_IVisualElement2(py::wrapper::Windows::UI::Composition::IVisualElement2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -29581,12 +28915,6 @@ namespace py::cpp::Windows::UI::Composition
     static void _dealloc_InkTrailPoint(py::wrapper::Windows::UI::Composition::InkTrailPoint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

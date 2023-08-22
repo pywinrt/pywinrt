@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Composition::Effects
     static void _dealloc_SceneLightingEffect(py::wrapper::Windows::UI::Composition::Effects::SceneLightingEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

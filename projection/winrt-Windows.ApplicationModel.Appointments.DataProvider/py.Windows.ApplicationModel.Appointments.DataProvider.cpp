@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarCancelMeetingRequest(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -273,12 +267,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarCancelMeetingRequestEventArgs(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -398,12 +386,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarCreateOrUpdateAppointmentRequest(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -615,12 +597,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -740,12 +716,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarForwardMeetingRequest(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1015,12 +985,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarForwardMeetingRequestEventArgs(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1140,12 +1104,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarProposeNewTimeForMeetingRequest(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1415,12 +1373,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1540,12 +1492,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarSyncManagerSyncRequest(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1695,12 +1641,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarSyncManagerSyncRequestEventArgs(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1820,12 +1760,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarUpdateMeetingResponseRequest(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2095,12 +2029,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentCalendarUpdateMeetingResponseRequestEventArgs(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2220,12 +2148,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentDataProviderConnection(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2596,12 +2518,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::DataProvider
     static void _dealloc_AppointmentDataProviderTriggerDetails(py::wrapper::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

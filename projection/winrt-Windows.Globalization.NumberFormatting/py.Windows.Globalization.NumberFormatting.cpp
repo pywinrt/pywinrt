@@ -59,12 +59,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_CurrencyFormatter(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -989,12 +983,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_DecimalFormatter(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1774,12 +1762,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_IncrementNumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::IncrementNumberRounder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2174,12 +2156,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_NumeralSystemTranslator(py::wrapper::Windows::Globalization::NumberFormatting::NumeralSystemTranslator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2407,12 +2383,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_PercentFormatter(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3208,12 +3178,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_PermilleFormatter(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3993,12 +3957,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_SignificantDigitsNumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4356,12 +4314,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_INumberFormatter(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4463,12 +4415,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_INumberFormatter2(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4634,12 +4580,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_INumberFormatterOptions(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatterOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5029,12 +4969,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_INumberParser(py::wrapper::Windows::Globalization::NumberFormatting::INumberParser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5200,12 +5134,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_INumberRounder(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5467,12 +5395,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_INumberRounderOption(py::wrapper::Windows::Globalization::NumberFormatting::INumberRounderOption* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5590,12 +5512,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_ISignedZeroOption(py::wrapper::Windows::Globalization::NumberFormatting::ISignedZeroOption* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5713,12 +5629,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     static void _dealloc_ISignificantDigitsOption(py::wrapper::Windows::Globalization::NumberFormatting::ISignificantDigitsOption* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

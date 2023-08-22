@@ -40,12 +40,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static void _dealloc_SocialFeedChildItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -339,12 +333,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static void _dealloc_SocialFeedContent(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -580,12 +568,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static void _dealloc_SocialFeedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1141,12 +1123,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static void _dealloc_SocialFeedSharedItem(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1450,12 +1426,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static void _dealloc_SocialItemThumbnail(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1701,12 +1671,6 @@ namespace py::cpp::Windows::ApplicationModel::SocialInfo
     static void _dealloc_SocialUserInfo(py::wrapper::Windows::ApplicationModel::SocialInfo::SocialUserInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

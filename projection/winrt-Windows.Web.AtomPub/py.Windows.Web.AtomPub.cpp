@@ -55,12 +55,6 @@ namespace py::cpp::Windows::Web::AtomPub
     static void _dealloc_AtomPubClient(py::wrapper::Windows::Web::AtomPub::AtomPubClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -795,12 +789,6 @@ namespace py::cpp::Windows::Web::AtomPub
     static void _dealloc_ResourceCollection(py::wrapper::Windows::Web::AtomPub::ResourceCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1262,12 +1250,6 @@ namespace py::cpp::Windows::Web::AtomPub
     static void _dealloc_ServiceDocument(py::wrapper::Windows::Web::AtomPub::ServiceDocument* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1669,12 +1651,6 @@ namespace py::cpp::Windows::Web::AtomPub
     static void _dealloc_Workspace(py::wrapper::Windows::Web::AtomPub::Workspace* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

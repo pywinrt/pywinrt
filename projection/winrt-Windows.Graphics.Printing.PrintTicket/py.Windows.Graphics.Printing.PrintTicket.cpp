@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_PrintTicketCapabilities(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -519,12 +513,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_PrintTicketFeature(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -810,12 +798,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_PrintTicketOption(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketOption* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1097,12 +1079,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_PrintTicketParameterDefinition(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1312,12 +1288,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_PrintTicketParameterInitializer(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1495,12 +1465,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_PrintTicketValue(py::wrapper::Windows::Graphics::Printing::PrintTicket::PrintTicketValue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1650,12 +1614,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_WorkflowPrintTicket(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2341,12 +2299,6 @@ namespace py::cpp::Windows::Graphics::Printing::PrintTicket
     static void _dealloc_WorkflowPrintTicketValidationResult(py::wrapper::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

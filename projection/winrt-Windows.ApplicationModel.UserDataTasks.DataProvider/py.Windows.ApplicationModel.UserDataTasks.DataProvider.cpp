@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskDataProviderConnection(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -349,12 +343,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskDataProviderTriggerDetails(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskDataProviderTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -444,12 +432,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListCompleteTaskRequest(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -621,12 +603,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListCompleteTaskRequestEventArgs(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCompleteTaskRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -746,12 +722,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListCreateOrUpdateTaskRequest(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -923,12 +893,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListCreateOrUpdateTaskRequestEventArgs(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListCreateOrUpdateTaskRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1048,12 +1012,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListDeleteTaskRequest(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1223,12 +1181,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListDeleteTaskRequestEventArgs(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListDeleteTaskRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1348,12 +1300,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListSkipOccurrenceRequest(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1523,12 +1469,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListSkipOccurrenceRequestEventArgs(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSkipOccurrenceRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1648,12 +1588,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListSyncManagerSyncRequest(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1803,12 +1737,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataTasks::DataProvider
     static void _dealloc_UserDataTaskListSyncManagerSyncRequestEventArgs(py::wrapper::Windows::ApplicationModel::UserDataTasks::DataProvider::UserDataTaskListSyncManagerSyncRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

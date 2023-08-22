@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Globalization::Collation
     static void _dealloc_CharacterGrouping(py::wrapper::Windows::Globalization::Collation::CharacterGrouping* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -170,12 +164,6 @@ namespace py::cpp::Windows::Globalization::Collation
     static void _dealloc_CharacterGroupings(py::wrapper::Windows::Globalization::Collation::CharacterGroupings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

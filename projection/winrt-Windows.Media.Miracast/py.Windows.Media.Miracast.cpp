@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiver(py::wrapper::Windows::Media::Miracast::MiracastReceiver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -502,12 +496,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverApplySettingsResult(py::wrapper::Windows::Media::Miracast::MiracastReceiverApplySettingsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -617,12 +605,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverConnection(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1002,12 +984,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverConnectionCreatedEventArgs(py::wrapper::Windows::Media::Miracast::MiracastReceiverConnectionCreatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1147,12 +1123,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverCursorImageChannel(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1392,12 +1362,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverCursorImageChannelSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiverCursorImageChannelSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1563,12 +1527,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverDisconnectedEventArgs(py::wrapper::Windows::Media::Miracast::MiracastReceiverDisconnectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1658,12 +1616,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverGameControllerDevice(py::wrapper::Windows::Media::Miracast::MiracastReceiverGameControllerDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1914,12 +1866,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverInputDevices(py::wrapper::Windows::Media::Miracast::MiracastReceiverInputDevices* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2029,12 +1975,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverKeyboardDevice(py::wrapper::Windows::Media::Miracast::MiracastReceiverKeyboardDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2237,12 +2177,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverMediaSourceCreatedEventArgs(py::wrapper::Windows::Media::Miracast::MiracastReceiverMediaSourceCreatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2402,12 +2336,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverSession(py::wrapper::Windows::Media::Miracast::MiracastReceiverSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2821,12 +2749,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverSessionStartResult(py::wrapper::Windows::Media::Miracast::MiracastReceiverSessionStartResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2936,12 +2858,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiverSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3251,12 +3167,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverStatus(py::wrapper::Windows::Media::Miracast::MiracastReceiverStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3426,12 +3336,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverStreamControl(py::wrapper::Windows::Media::Miracast::MiracastReceiverStreamControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3674,12 +3578,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastReceiverVideoStreamSettings(py::wrapper::Windows::Media::Miracast::MiracastReceiverVideoStreamSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3845,12 +3743,6 @@ namespace py::cpp::Windows::Media::Miracast
     static void _dealloc_MiracastTransmitter(py::wrapper::Windows::Media::Miracast::MiracastTransmitter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

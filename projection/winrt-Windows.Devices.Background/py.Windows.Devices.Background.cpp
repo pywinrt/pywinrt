@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Background
     static void _dealloc_DeviceServicingDetails(py::wrapper::Windows::Devices::Background::DeviceServicingDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::Devices::Background
     static void _dealloc_DeviceUseDetails(py::wrapper::Windows::Devices::Background::DeviceUseDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

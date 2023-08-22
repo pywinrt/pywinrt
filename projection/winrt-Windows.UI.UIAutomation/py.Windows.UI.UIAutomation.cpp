@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::UIAutomation
     static void _dealloc_AutomationConnection(py::wrapper::Windows::UI::UIAutomation::AutomationConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::UI::UIAutomation
     static void _dealloc_AutomationConnectionBoundObject(py::wrapper::Windows::UI::UIAutomation::AutomationConnectionBoundObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -248,12 +236,6 @@ namespace py::cpp::Windows::UI::UIAutomation
     static void _dealloc_AutomationElement(py::wrapper::Windows::UI::UIAutomation::AutomationElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -383,12 +365,6 @@ namespace py::cpp::Windows::UI::UIAutomation
     static void _dealloc_AutomationTextRange(py::wrapper::Windows::UI::UIAutomation::AutomationTextRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

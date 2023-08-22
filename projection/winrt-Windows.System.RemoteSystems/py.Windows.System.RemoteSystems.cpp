@@ -152,12 +152,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystem(py::wrapper::Windows::System::RemoteSystems::RemoteSystem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -676,12 +670,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemAddedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -771,12 +759,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemApp(py::wrapper::Windows::System::RemoteSystems::RemoteSystemApp* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -986,12 +968,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemAppRegistration(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAppRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1217,12 +1193,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemAuthorizationKindFilter(py::wrapper::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1312,12 +1282,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemConnectionInfo(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1463,12 +1427,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemConnectionRequest(py::wrapper::Windows::System::RemoteSystems::RemoteSystemConnectionRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1719,12 +1677,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemDiscoveryTypeFilter(py::wrapper::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1814,12 +1766,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemEnumerationCompletedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1913,12 +1859,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemKindFilter(py::wrapper::Windows::System::RemoteSystems::RemoteSystemKindFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2222,12 +2162,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemRemovedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2317,12 +2251,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSession(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2642,12 +2570,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionAddedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2777,12 +2699,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionController(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2959,12 +2875,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionCreationResult(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3074,12 +2984,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionDisconnectedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3169,12 +3073,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionInfo(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3314,12 +3212,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionInvitation(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3451,12 +3343,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionInvitationListener(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3571,12 +3457,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionInvitationReceivedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3666,12 +3546,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionJoinRequest(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3792,12 +3666,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionJoinRequestedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3917,12 +3785,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionJoinResult(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4074,12 +3936,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionMessageChannel(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4334,12 +4190,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionOptions(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4457,12 +4307,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionParticipant(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipant* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4582,12 +4426,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionParticipantAddedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4677,12 +4515,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionParticipantRemovedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4772,12 +4604,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionParticipantWatcher(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5064,12 +4890,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionRemovedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5159,12 +4979,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionUpdatedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5254,12 +5068,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionValueSetReceivedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5369,12 +5177,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemSessionWatcher(py::wrapper::Windows::System::RemoteSystems::RemoteSystemSessionWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5685,12 +5487,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemStatusTypeFilter(py::wrapper::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5780,12 +5576,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemUpdatedEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5875,12 +5665,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemWatcher(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6257,12 +6041,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemWatcherErrorOccurredEventArgs(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6376,12 +6154,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_RemoteSystemWebAccountFilter(py::wrapper::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6471,12 +6243,6 @@ namespace py::cpp::Windows::System::RemoteSystems
     static void _dealloc_IRemoteSystemFilter(py::wrapper::Windows::System::RemoteSystems::IRemoteSystemFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

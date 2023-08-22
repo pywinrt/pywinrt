@@ -585,14 +585,6 @@ static PyModuleDef module_def
             writer::indent_guard g{w};
 
             w.write("auto tp = Py_TYPE(self);\n");
-
-            w.write("\nif (PyType_IS_GC(tp))\n{\n");
-            {
-                writer::indent_guard g{w};
-                w.write("PyObject_GC_UnTrack(self);\n");
-            }
-            w.write("}\n\n");
-
             w.write("std::destroy_at(&self->obj);\n");
 
             if (is_ptype(type))

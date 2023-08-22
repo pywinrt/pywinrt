@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialAnchor(py::wrapper::Windows::Perception::Spatial::SpatialAnchor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -273,12 +267,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialAnchorExportSufficiency(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExportSufficiency* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -408,12 +396,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialAnchorExporter(py::wrapper::Windows::Perception::Spatial::SpatialAnchorExporter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -674,12 +656,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialAnchorRawCoordinateSystemAdjustedEventArgs(py::wrapper::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -769,12 +745,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialAnchorStore(py::wrapper::Windows::Perception::Spatial::SpatialAnchorStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1100,12 +1070,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialBoundingVolume(py::wrapper::Windows::Perception::Spatial::SpatialBoundingVolume* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1307,12 +1271,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialCoordinateSystem(py::wrapper::Windows::Perception::Spatial::SpatialCoordinateSystem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1454,12 +1412,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialEntity(py::wrapper::Windows::Perception::Spatial::SpatialEntity* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1589,12 +1541,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialEntityAddedEventArgs(py::wrapper::Windows::Perception::Spatial::SpatialEntityAddedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1684,12 +1630,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialEntityRemovedEventArgs(py::wrapper::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1779,12 +1719,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialEntityStore(py::wrapper::Windows::Perception::Spatial::SpatialEntityStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2020,12 +1954,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialEntityUpdatedEventArgs(py::wrapper::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2115,12 +2043,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialEntityWatcher(py::wrapper::Windows::Perception::Spatial::SpatialEntityWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2452,12 +2374,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialLocation(py::wrapper::Windows::Perception::Spatial::SpatialLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2687,12 +2603,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialLocator(py::wrapper::Windows::Perception::Spatial::SpatialLocator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3121,12 +3031,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialLocatorAttachedFrameOfReference(py::wrapper::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3389,12 +3293,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialLocatorPositionalTrackingDeactivatingEventArgs(py::wrapper::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3512,12 +3410,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialStageFrameOfReference(py::wrapper::Windows::Perception::Spatial::SpatialStageFrameOfReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3826,12 +3718,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialStationaryFrameOfReference(py::wrapper::Windows::Perception::Spatial::SpatialStationaryFrameOfReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3953,12 +3839,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialBoundingBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4101,12 +3981,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialBoundingFrustum(py::wrapper::Windows::Perception::Spatial::SpatialBoundingFrustum* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4382,12 +4256,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialBoundingOrientedBox(py::wrapper::Windows::Perception::Spatial::SpatialBoundingOrientedBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4560,12 +4428,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialBoundingSphere(py::wrapper::Windows::Perception::Spatial::SpatialBoundingSphere* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4704,12 +4566,6 @@ namespace py::cpp::Windows::Perception::Spatial
     static void _dealloc_SpatialRay(py::wrapper::Windows::Perception::Spatial::SpatialRay* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

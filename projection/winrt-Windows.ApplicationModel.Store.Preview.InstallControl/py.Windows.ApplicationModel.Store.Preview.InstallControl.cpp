@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_AppInstallItem(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -799,12 +793,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_AppInstallManager(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2227,12 +2215,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_AppInstallManagerItemEventArgs(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManagerItemEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2344,12 +2326,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_AppInstallOptions(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3139,12 +3115,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_AppInstallStatus(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3396,12 +3366,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_AppUpdateOptions(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3615,12 +3579,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     static void _dealloc_GetEntitlementResult(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

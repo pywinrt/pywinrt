@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IRawElementProviderSimple(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -93,12 +87,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IAnnotationProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -268,12 +256,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ICustomNavigationProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -375,12 +357,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IDockProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDockProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -503,12 +479,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IDragProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDragProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -668,12 +638,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IDropTargetProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -783,12 +747,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IExpandCollapseProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -940,12 +898,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IGridItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridItemProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1115,12 +1067,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IGridProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IGridProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1263,12 +1209,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IInvokeProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IInvokeProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1369,12 +1309,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IItemContainerProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1478,12 +1412,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IMultipleViewProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1668,12 +1596,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IObjectModelProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1773,12 +1695,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IRangeValueProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2001,12 +1917,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IScrollItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2107,12 +2017,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IScrollProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IScrollProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2370,12 +2274,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ISelectionItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2578,12 +2476,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ISelectionProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISelectionProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2723,12 +2615,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ISpreadsheetItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2878,12 +2764,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ISpreadsheetProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2985,12 +2865,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IStylesProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IStylesProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3200,12 +3074,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ISynchronizedInputProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3339,12 +3207,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITableItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableItemProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3474,12 +3336,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITableProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITableProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3629,12 +3485,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITextChildProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextChildProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3744,12 +3594,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITextEditProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextEditProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4043,12 +3887,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITextProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4282,12 +4120,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITextProvider2(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextProvider2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4597,12 +4429,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITextRangeProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5260,12 +5086,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITextRangeProvider2(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5954,12 +5774,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IToggleProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IToggleProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6080,12 +5894,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITransformProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6316,12 +6124,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_ITransformProvider2(py::wrapper::Windows::UI::Xaml::Automation::Provider::ITransformProvider2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6698,12 +6500,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IValueProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IValueProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6846,12 +6642,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IVirtualizedItemProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6952,12 +6742,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Provider
     static void _dealloc_IWindowProvider(py::wrapper::Windows::UI::Xaml::Automation::Provider::IWindowProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

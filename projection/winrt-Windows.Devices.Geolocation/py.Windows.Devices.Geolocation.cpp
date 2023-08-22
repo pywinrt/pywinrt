@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_CivicAddress(py::wrapper::Windows::Devices::Geolocation::CivicAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -253,12 +247,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_GeoboundingBox(py::wrapper::Windows::Devices::Geolocation::GeoboundingBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -623,12 +611,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geocircle(py::wrapper::Windows::Devices::Geolocation::Geocircle* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -798,12 +780,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geocoordinate(py::wrapper::Windows::Devices::Geolocation::Geocoordinate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1133,12 +1109,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_GeocoordinateSatelliteData(py::wrapper::Windows::Devices::Geolocation::GeocoordinateSatelliteData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1330,12 +1300,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geolocator(py::wrapper::Windows::Devices::Geolocation::Geolocator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2011,12 +1975,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geopath(py::wrapper::Windows::Devices::Geolocation::Geopath* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2223,12 +2181,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geopoint(py::wrapper::Windows::Devices::Geolocation::Geopoint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2378,12 +2330,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geoposition(py::wrapper::Windows::Devices::Geolocation::Geoposition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2513,12 +2459,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_Geovisit(py::wrapper::Windows::Devices::Geolocation::Geovisit* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2670,12 +2610,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_GeovisitMonitor(py::wrapper::Windows::Devices::Geolocation::GeovisitMonitor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2904,12 +2838,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_GeovisitStateChangedEventArgs(py::wrapper::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2999,12 +2927,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_GeovisitTriggerDetails(py::wrapper::Windows::Devices::Geolocation::GeovisitTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3104,12 +3026,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_PositionChangedEventArgs(py::wrapper::Windows::Devices::Geolocation::PositionChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3199,12 +3115,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_StatusChangedEventArgs(py::wrapper::Windows::Devices::Geolocation::StatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3294,12 +3204,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_VenueData(py::wrapper::Windows::Devices::Geolocation::VenueData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3409,12 +3313,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_IGeoshape(py::wrapper::Windows::Devices::Geolocation::IGeoshape* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3577,12 +3475,6 @@ namespace py::cpp::Windows::Devices::Geolocation
     static void _dealloc_BasicGeoposition(py::wrapper::Windows::Devices::Geolocation::BasicGeoposition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

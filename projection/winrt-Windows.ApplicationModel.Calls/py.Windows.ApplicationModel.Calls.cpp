@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_CallAnswerEventArgs(py::wrapper::Windows::ApplicationModel::Calls::CallAnswerEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_CallRejectEventArgs(py::wrapper::Windows::ApplicationModel::Calls::CallRejectEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -208,12 +196,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_CallStateChangeEventArgs(py::wrapper::Windows::ApplicationModel::Calls::CallStateChangeEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -303,12 +285,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_LockScreenCallEndCallDeferral(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -409,12 +385,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_LockScreenCallEndRequestedEventArgs(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -534,12 +504,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_LockScreenCallUI(py::wrapper::Windows::ApplicationModel::Calls::LockScreenCallUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -778,12 +742,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_MuteChangeEventArgs(py::wrapper::Windows::ApplicationModel::Calls::MuteChangeEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -873,12 +831,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCall(py::wrapper::Windows::ApplicationModel::Calls::PhoneCall* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1997,12 +1949,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallHistoryEntry(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2918,12 +2864,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallHistoryEntryAddress(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3207,12 +3147,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallHistoryEntryQueryOptions(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3350,12 +3284,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallHistoryEntryReader(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3553,12 +3481,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallHistoryManagerForUser(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3680,12 +3602,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallHistoryStore(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4121,12 +4037,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallInfo(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4550,12 +4460,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallStore(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4717,12 +4621,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallVideoCapabilities(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4878,12 +4776,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneCallsResult(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5015,12 +4907,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneDialOptions(py::wrapper::Windows::ApplicationModel::Calls::PhoneDialOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5378,12 +5264,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLine(py::wrapper::Windows::ApplicationModel::Calls::PhoneLine* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6048,12 +5928,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLineCellularDetails(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineCellularDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6235,12 +6109,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLineConfiguration(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6350,12 +6218,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLineDialResult(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineDialResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6465,12 +6327,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLineTransportDevice(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineTransportDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7040,12 +6896,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLineWatcher(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7422,12 +7272,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneLineWatcherEventArgs(py::wrapper::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7517,12 +7361,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_PhoneVoicemail(py::wrapper::Windows::ApplicationModel::Calls::PhoneVoicemail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7682,12 +7520,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_VoipCallCoordinator(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8263,12 +8095,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static void _dealloc_VoipPhoneCall(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -46,12 +46,6 @@ namespace py::cpp::Windows::Devices
     static void _dealloc_LowLevelDevicesAggregateProvider(py::wrapper::Windows::Devices::LowLevelDevicesAggregateProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -221,12 +215,6 @@ namespace py::cpp::Windows::Devices
     static void _dealloc_LowLevelDevicesController(py::wrapper::Windows::Devices::LowLevelDevicesController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -358,12 +346,6 @@ namespace py::cpp::Windows::Devices
     static void _dealloc_ILowLevelDevicesAggregateProvider(py::wrapper::Windows::Devices::ILowLevelDevicesAggregateProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

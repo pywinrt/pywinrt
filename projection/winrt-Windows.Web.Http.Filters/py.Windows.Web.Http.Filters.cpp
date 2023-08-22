@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     static void _dealloc_HttpBaseProtocolFilter(py::wrapper::Windows::Web::Http::Filters::HttpBaseProtocolFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -868,12 +862,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     static void _dealloc_HttpCacheControl(py::wrapper::Windows::Web::Http::Filters::HttpCacheControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1039,12 +1027,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     static void _dealloc_HttpServerCustomValidationRequestedEventArgs(py::wrapper::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1275,12 +1257,6 @@ namespace py::cpp::Windows::Web::Http::Filters
     static void _dealloc_IHttpFilter(py::wrapper::Windows::Web::Http::Filters::IHttpFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingConnection(py::wrapper::Windows::Media::Casting::CastingConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -386,12 +380,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingConnectionErrorOccurredEventArgs(py::wrapper::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -501,12 +489,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingDevice(py::wrapper::Windows::Media::Casting::CastingDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -846,12 +828,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingDevicePicker(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1137,12 +1113,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingDevicePickerFilter(py::wrapper::Windows::Media::Casting::CastingDevicePickerFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1376,12 +1346,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingDeviceSelectedEventArgs(py::wrapper::Windows::Media::Casting::CastingDeviceSelectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1471,12 +1435,6 @@ namespace py::cpp::Windows::Media::Casting
     static void _dealloc_CastingSource(py::wrapper::Windows::Media::Casting::CastingSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

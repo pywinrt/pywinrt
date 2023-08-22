@@ -18,12 +18,6 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     static void _dealloc_OemSupportInfo(py::wrapper::Windows::System::Profile::SystemManufacturers::OemSupportInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -227,12 +221,6 @@ namespace py::cpp::Windows::System::Profile::SystemManufacturers
     static void _dealloc_SystemSupportDeviceInfo(py::wrapper::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

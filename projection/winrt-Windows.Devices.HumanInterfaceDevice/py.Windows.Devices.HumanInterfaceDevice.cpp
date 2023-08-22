@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidBooleanControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -221,12 +215,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidBooleanControlDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -436,12 +424,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidCollection(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -591,12 +573,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidDevice(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1285,12 +1261,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidFeatureReport(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidFeatureReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1558,12 +1528,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidInputReport(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1843,12 +1807,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidInputReportReceivedEventArgs(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1938,12 +1896,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidNumericControl(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2209,12 +2161,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidNumericControlDescription(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2604,12 +2550,6 @@ namespace py::cpp::Windows::Devices::HumanInterfaceDevice
     static void _dealloc_HidOutputReport(py::wrapper::Windows::Devices::HumanInterfaceDevice::HidOutputReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

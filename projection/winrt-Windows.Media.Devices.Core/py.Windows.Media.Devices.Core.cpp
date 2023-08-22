@@ -47,12 +47,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_CameraIntrinsics(py::wrapper::Windows::Media::Devices::Core::CameraIntrinsics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -526,12 +520,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_DepthCorrelatedCoordinateMapper(py::wrapper::Windows::Media::Devices::Core::DepthCorrelatedCoordinateMapper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -792,12 +780,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameControlCapabilities(py::wrapper::Windows::Media::Devices::Core::FrameControlCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1009,12 +991,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameController(py::wrapper::Windows::Media::Devices::Core::FrameController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1232,12 +1208,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameExposureCapabilities(py::wrapper::Windows::Media::Devices::Core::FrameExposureCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1387,12 +1357,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameExposureCompensationCapabilities(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1542,12 +1506,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameExposureCompensationControl(py::wrapper::Windows::Media::Devices::Core::FrameExposureCompensationControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1665,12 +1623,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameExposureControl(py::wrapper::Windows::Media::Devices::Core::FrameExposureControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1836,12 +1788,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameFlashCapabilities(py::wrapper::Windows::Media::Devices::Core::FrameFlashCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1971,12 +1917,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameFlashControl(py::wrapper::Windows::Media::Devices::Core::FrameFlashControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2238,12 +2178,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameFocusCapabilities(py::wrapper::Windows::Media::Devices::Core::FrameFocusCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2393,12 +2327,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameFocusControl(py::wrapper::Windows::Media::Devices::Core::FrameFocusControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2516,12 +2444,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameIsoSpeedCapabilities(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2671,12 +2593,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_FrameIsoSpeedControl(py::wrapper::Windows::Media::Devices::Core::FrameIsoSpeedControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2842,12 +2758,6 @@ namespace py::cpp::Windows::Media::Devices::Core
     static void _dealloc_VariablePhotoSequenceController(py::wrapper::Windows::Media::Devices::Core::VariablePhotoSequenceController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

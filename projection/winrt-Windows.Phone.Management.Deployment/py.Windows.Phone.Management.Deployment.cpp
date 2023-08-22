@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     static void _dealloc_Enterprise(py::wrapper::Windows::Phone::Management::Deployment::Enterprise* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -401,12 +395,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     static void _dealloc_EnterpriseEnrollmentResult(py::wrapper::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -785,12 +773,6 @@ namespace py::cpp::Windows::Phone::Management::Deployment
     static void _dealloc_PackageInstallResult(py::wrapper::Windows::Phone::Management::Deployment::PackageInstallResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

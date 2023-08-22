@@ -302,12 +302,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     static void _dealloc_GameListEntry(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -684,12 +678,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     static void _dealloc_GameModeConfiguration(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1193,12 +1181,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     static void _dealloc_GameModeUserConfiguration(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameModeUserConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1348,12 +1330,6 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
     static void _dealloc_IGameListEntry(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::IGameListEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

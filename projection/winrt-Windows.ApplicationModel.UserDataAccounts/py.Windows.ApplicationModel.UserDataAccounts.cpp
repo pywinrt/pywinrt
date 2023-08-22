@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     static void _dealloc_UserDataAccount(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -965,12 +959,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     static void _dealloc_UserDataAccountManagerForUser(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1092,12 +1080,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     static void _dealloc_UserDataAccountStore(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1349,12 +1331,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts
     static void _dealloc_UserDataAccountStoreChangedEventArgs(py::wrapper::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

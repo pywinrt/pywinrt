@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     static void _dealloc_CustomSensor(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -388,12 +382,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     static void _dealloc_CustomSensorReading(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensorReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -523,12 +511,6 @@ namespace py::cpp::Windows::Devices::Sensors::Custom
     static void _dealloc_CustomSensorReadingChangedEventArgs(py::wrapper::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

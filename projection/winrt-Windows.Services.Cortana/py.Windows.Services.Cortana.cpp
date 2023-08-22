@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Services::Cortana
     static void _dealloc_CortanaActionableInsights(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -386,12 +380,6 @@ namespace py::cpp::Windows::Services::Cortana
     static void _dealloc_CortanaActionableInsightsOptions(py::wrapper::Windows::Services::Cortana::CortanaActionableInsightsOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -557,12 +545,6 @@ namespace py::cpp::Windows::Services::Cortana
     static void _dealloc_CortanaPermissionsManager(py::wrapper::Windows::Services::Cortana::CortanaPermissionsManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -788,12 +770,6 @@ namespace py::cpp::Windows::Services::Cortana
     static void _dealloc_CortanaSettings(py::wrapper::Windows::Services::Cortana::CortanaSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

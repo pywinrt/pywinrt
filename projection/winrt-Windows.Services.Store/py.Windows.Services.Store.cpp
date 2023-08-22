@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreAcquireLicenseResult(py::wrapper::Windows::Services::Store::StoreAcquireLicenseResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -133,12 +127,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreAppLicense(py::wrapper::Windows::Services::Store::StoreAppLicense* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -408,12 +396,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreAvailability(py::wrapper::Windows::Services::Store::StoreAvailability* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -613,12 +595,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreCanAcquireLicenseResult(py::wrapper::Windows::Services::Store::StoreCanAcquireLicenseResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -748,12 +724,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreCollectionData(py::wrapper::Windows::Services::Store::StoreCollectionData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -983,12 +953,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreConsumableResult(py::wrapper::Windows::Services::Store::StoreConsumableResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1138,12 +1102,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreContext(py::wrapper::Windows::Services::Store::StoreContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2510,12 +2468,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreImage(py::wrapper::Windows::Services::Store::StoreImage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2685,12 +2637,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreLicense(py::wrapper::Windows::Services::Store::StoreLicense* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2882,12 +2828,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePackageInstallOptions(py::wrapper::Windows::Services::Store::StorePackageInstallOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3005,12 +2945,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePackageLicense(py::wrapper::Windows::Services::Store::StorePackageLicense* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3249,12 +3183,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePackageUpdate(py::wrapper::Windows::Services::Store::StorePackageUpdate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3364,12 +3292,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePackageUpdateResult(py::wrapper::Windows::Services::Store::StorePackageUpdateResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3499,12 +3421,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePrice(py::wrapper::Windows::Services::Store::StorePrice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3754,12 +3670,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreProduct(py::wrapper::Windows::Services::Store::StoreProduct* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4231,12 +4141,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreProductOptions(py::wrapper::Windows::Services::Store::StoreProductOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4326,12 +4230,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreProductPagedQueryResult(py::wrapper::Windows::Services::Store::StoreProductPagedQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4491,12 +4389,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreProductQueryResult(py::wrapper::Windows::Services::Store::StoreProductQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4606,12 +4498,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreProductResult(py::wrapper::Windows::Services::Store::StoreProductResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4758,12 +4644,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePurchaseProperties(py::wrapper::Windows::Services::Store::StorePurchaseProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4929,12 +4809,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePurchaseResult(py::wrapper::Windows::Services::Store::StorePurchaseResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5044,12 +4918,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreQueueItem(py::wrapper::Windows::Services::Store::StoreQueueItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5389,12 +5257,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreQueueItemCompletedEventArgs(py::wrapper::Windows::Services::Store::StoreQueueItemCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5484,12 +5346,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreQueueItemStatus(py::wrapper::Windows::Services::Store::StoreQueueItemStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5639,12 +5495,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreRateAndReviewResult(py::wrapper::Windows::Services::Store::StoreRateAndReviewResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5862,12 +5712,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreSendRequestResult(py::wrapper::Windows::Services::Store::StoreSendRequestResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5997,12 +5841,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreSku(py::wrapper::Windows::Services::Store::StoreSku* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6472,12 +6310,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreSubscriptionInfo(py::wrapper::Windows::Services::Store::StoreSubscriptionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6647,12 +6479,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreUninstallStorePackageResult(py::wrapper::Windows::Services::Store::StoreUninstallStorePackageResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6762,12 +6588,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StoreVideo(py::wrapper::Windows::Services::Store::StoreVideo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6993,12 +6813,6 @@ namespace py::cpp::Windows::Services::Store
     static void _dealloc_StorePackageUpdateStatus(py::wrapper::Windows::Services::Store::StorePackageUpdateStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

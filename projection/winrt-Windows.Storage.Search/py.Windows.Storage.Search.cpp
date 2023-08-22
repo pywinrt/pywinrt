@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_ContentIndexer(py::wrapper::Windows::Storage::Search::ContentIndexer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -432,12 +426,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_ContentIndexerQuery(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -681,12 +669,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_IndexableContent(py::wrapper::Windows::Storage::Search::IndexableContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -973,12 +955,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_QueryOptions(py::wrapper::Windows::Storage::Search::QueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1520,12 +1496,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_SortEntryVector(py::wrapper::Windows::Storage::Search::SortEntryVector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2143,12 +2113,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_StorageFileQueryResult(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2536,12 +2500,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_StorageFolderQueryResult(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2897,12 +2855,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_StorageItemQueryResult(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3258,12 +3210,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_StorageLibraryChangeTrackerTriggerDetails(py::wrapper::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3373,12 +3319,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_StorageLibraryContentChangedTriggerDetails(py::wrapper::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3522,12 +3462,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_ValueAndLanguage(py::wrapper::Windows::Storage::Search::ValueAndLanguage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3693,12 +3627,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_IIndexableContent(py::wrapper::Windows::Storage::Search::IIndexableContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3932,12 +3860,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_IStorageFolderQueryOperations(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4500,12 +4422,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_IStorageQueryResultBase(py::wrapper::Windows::Storage::Search::IStorageQueryResultBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4842,12 +4758,6 @@ namespace py::cpp::Windows::Storage::Search
     static void _dealloc_SortEntry(py::wrapper::Windows::Storage::Search::SortEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

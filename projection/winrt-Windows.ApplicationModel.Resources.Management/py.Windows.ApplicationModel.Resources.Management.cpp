@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     static void _dealloc_IndexedResourceCandidate(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -225,12 +219,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     static void _dealloc_IndexedResourceQualifier(py::wrapper::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -380,12 +368,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Management
     static void _dealloc_ResourceIndexer(py::wrapper::Windows::ApplicationModel::Resources::Management::ResourceIndexer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

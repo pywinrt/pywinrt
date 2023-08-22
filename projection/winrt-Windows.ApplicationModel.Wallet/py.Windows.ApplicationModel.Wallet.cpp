@@ -58,12 +58,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletBarcode(py::wrapper::Windows::ApplicationModel::Wallet::WalletBarcode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -228,12 +222,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletItem(py::wrapper::Windows::ApplicationModel::Wallet::WalletItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1552,12 +1540,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletItemCustomProperty(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemCustomProperty* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1867,12 +1849,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletItemStore(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2319,12 +2295,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletRelevantLocation(py::wrapper::Windows::ApplicationModel::Wallet::WalletRelevantLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2512,12 +2482,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletTransaction(py::wrapper::Windows::ApplicationModel::Wallet::WalletTransaction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2899,12 +2863,6 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
     static void _dealloc_WalletVerb(py::wrapper::Windows::ApplicationModel::Wallet::WalletVerb* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

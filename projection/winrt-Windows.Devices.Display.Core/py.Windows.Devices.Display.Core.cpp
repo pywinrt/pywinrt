@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayAdapter(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -285,12 +279,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayDevice(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -625,12 +613,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayFence(py::wrapper::Windows::Devices::Display::Core::DisplayFence* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -700,12 +682,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayManager(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1386,12 +1362,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayManagerChangedEventArgs(py::wrapper::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1539,12 +1509,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayManagerDisabledEventArgs(py::wrapper::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1692,12 +1656,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayManagerEnabledEventArgs(py::wrapper::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1845,12 +1803,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayManagerPathsFailedOrInvalidatedEventArgs(py::wrapper::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1998,12 +1950,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayManagerResultWithState(py::wrapper::Windows::Devices::Display::Core::DisplayManagerResultWithState* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2133,12 +2079,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayModeInfo(py::wrapper::Windows::Devices::Display::Core::DisplayModeInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2432,12 +2372,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayPath(py::wrapper::Windows::Devices::Display::Core::DisplayPath* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3161,12 +3095,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayPrimaryDescription(py::wrapper::Windows::Devices::Display::Core::DisplayPrimaryDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3414,12 +3342,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayScanout(py::wrapper::Windows::Devices::Display::Core::DisplayScanout* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3489,12 +3411,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplaySource(py::wrapper::Windows::Devices::Display::Core::DisplaySource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3701,12 +3617,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayState(py::wrapper::Windows::Devices::Display::Core::DisplayState* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4153,12 +4063,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayStateOperationResult(py::wrapper::Windows::Devices::Display::Core::DisplayStateOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4268,12 +4172,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplaySurface(py::wrapper::Windows::Devices::Display::Core::DisplaySurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4343,12 +4241,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayTarget(py::wrapper::Windows::Devices::Display::Core::DisplayTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4732,12 +4624,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayTask(py::wrapper::Windows::Devices::Display::Core::DisplayTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4908,12 +4794,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayTaskPool(py::wrapper::Windows::Devices::Display::Core::DisplayTaskPool* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5078,12 +4958,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayTaskResult(py::wrapper::Windows::Devices::Display::Core::DisplayTaskResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5213,12 +5087,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayView(py::wrapper::Windows::Devices::Display::Core::DisplayView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5437,12 +5305,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayWireFormat(py::wrapper::Windows::Devices::Display::Core::DisplayWireFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5701,12 +5563,6 @@ namespace py::cpp::Windows::Devices::Display::Core
     static void _dealloc_DisplayPresentationRate(py::wrapper::Windows::Devices::Display::Core::DisplayPresentationRate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

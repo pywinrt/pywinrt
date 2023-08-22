@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_JumpList(py::wrapper::Windows::UI::StartScreen::JumpList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -251,12 +245,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_JumpListItem(py::wrapper::Windows::UI::StartScreen::JumpListItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -738,12 +726,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_SecondaryTile(py::wrapper::Windows::UI::StartScreen::SecondaryTile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1898,12 +1880,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_SecondaryTileVisualElements(py::wrapper::Windows::UI::StartScreen::SecondaryTileVisualElements* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2569,12 +2545,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_StartScreenManager(py::wrapper::Windows::UI::StartScreen::StartScreenManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2886,12 +2856,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_TileMixedRealityModel(py::wrapper::Windows::UI::StartScreen::TileMixedRealityModel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3105,12 +3069,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_VisualElementsRequest(py::wrapper::Windows::UI::StartScreen::VisualElementsRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3270,12 +3228,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_VisualElementsRequestDeferral(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3376,12 +3328,6 @@ namespace py::cpp::Windows::UI::StartScreen
     static void _dealloc_VisualElementsRequestedEventArgs(py::wrapper::Windows::UI::StartScreen::VisualElementsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

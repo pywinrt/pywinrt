@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static void _dealloc_SpeechSynthesisStream(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesisStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -559,12 +553,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static void _dealloc_SpeechSynthesizer(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -911,12 +899,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static void _dealloc_SpeechSynthesizerOptions(py::wrapper::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1322,12 +1304,6 @@ namespace py::cpp::Windows::Media::SpeechSynthesis
     static void _dealloc_VoiceInformation(py::wrapper::Windows::Media::SpeechSynthesis::VoiceInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

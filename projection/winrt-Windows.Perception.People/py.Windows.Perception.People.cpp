@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_EyesPose(py::wrapper::Windows::Perception::People::EyesPose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -213,12 +207,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_HandMeshObserver(py::wrapper::Windows::Perception::People::HandMeshObserver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -473,12 +461,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_HandMeshVertexState(py::wrapper::Windows::Perception::People::HandMeshVertexState* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -621,12 +603,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_HandPose(py::wrapper::Windows::Perception::People::HandPose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -844,12 +820,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_HeadPose(py::wrapper::Windows::Perception::People::HeadPose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1011,12 +981,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_HandMeshVertex(py::wrapper::Windows::Perception::People::HandMeshVertex* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1157,12 +1121,6 @@ namespace py::cpp::Windows::Perception::People
     static void _dealloc_JointPose(py::wrapper::Windows::Perception::People::JointPose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

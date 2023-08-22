@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static void _dealloc_HttpDiagnosticProvider(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -322,12 +316,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static void _dealloc_HttpDiagnosticProviderRequestResponseCompletedEventArgs(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -537,12 +525,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static void _dealloc_HttpDiagnosticProviderRequestResponseTimestamps(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -792,12 +774,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static void _dealloc_HttpDiagnosticProviderRequestSentEventArgs(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1007,12 +983,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static void _dealloc_HttpDiagnosticProviderResponseReceivedEventArgs(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1142,12 +1112,6 @@ namespace py::cpp::Windows::Web::Http::Diagnostics
     static void _dealloc_HttpDiagnosticSourceLocation(py::wrapper::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_BasicProperties(py::wrapper::Windows::Storage::FileProperties::BasicProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -235,12 +229,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_DocumentProperties(py::wrapper::Windows::Storage::FileProperties::DocumentProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -660,12 +648,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_ImageProperties(py::wrapper::Windows::Storage::FileProperties::ImageProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1197,12 +1179,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_MusicProperties(py::wrapper::Windows::Storage::FileProperties::MusicProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1926,12 +1902,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_StorageItemContentProperties(py::wrapper::Windows::Storage::FileProperties::StorageItemContentProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2203,12 +2173,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_StorageItemThumbnail(py::wrapper::Windows::Storage::FileProperties::StorageItemThumbnail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2762,12 +2726,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_VideoProperties(py::wrapper::Windows::Storage::FileProperties::VideoProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3379,12 +3337,6 @@ namespace py::cpp::Windows::Storage::FileProperties
     static void _dealloc_IStorageItemExtraProperties(py::wrapper::Windows::Storage::FileProperties::IStorageItemExtraProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveDeviceAddress(py::wrapper::Windows::Networking::XboxLive::XboxLiveDeviceAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -496,12 +490,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveEndpointPair(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPair* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -920,12 +908,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveEndpointPairCreationResult(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1075,12 +1057,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveEndpointPairStateChangedEventArgs(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1190,12 +1166,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveEndpointPairTemplate(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1632,12 +1602,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveInboundEndpointPairCreatedEventArgs(py::wrapper::Windows::Networking::XboxLive::XboxLiveInboundEndpointPairCreatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1749,12 +1713,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveQualityOfServiceMeasurement(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMeasurement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2499,12 +2457,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveQualityOfServiceMetricResult(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServiceMetricResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2654,12 +2606,6 @@ namespace py::cpp::Windows::Networking::XboxLive
     static void _dealloc_XboxLiveQualityOfServicePrivatePayloadResult(py::wrapper::Windows::Networking::XboxLive::XboxLiveQualityOfServicePrivatePayloadResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

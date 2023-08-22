@@ -73,12 +73,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailAttachment(py::wrapper::Windows::ApplicationModel::Email::EmailAttachment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -572,12 +566,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailConversation(py::wrapper::Windows::ApplicationModel::Email::EmailConversation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -957,12 +945,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailConversationBatch(py::wrapper::Windows::ApplicationModel::Email::EmailConversationBatch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1072,12 +1054,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailConversationReader(py::wrapper::Windows::ApplicationModel::Email::EmailConversationReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1177,12 +1153,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailFolder(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1931,12 +1901,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailIrmInfo(py::wrapper::Windows::ApplicationModel::Email::EmailIrmInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2621,12 +2585,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailIrmTemplate(py::wrapper::Windows::ApplicationModel::Email::EmailIrmTemplate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2840,12 +2798,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailItemCounts(py::wrapper::Windows::ApplicationModel::Email::EmailItemCounts* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2995,12 +2947,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailbox(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4719,12 +4665,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxAction(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4834,12 +4774,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxAutoReply(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReply* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5027,12 +4961,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxAutoReplySettings(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5354,12 +5282,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxCapabilities(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6101,12 +6023,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxChange(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6256,12 +6172,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxChangeReader(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6425,12 +6335,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxChangeTracker(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangeTracker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6612,12 +6516,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxChangedDeferral(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6718,12 +6616,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxChangedEventArgs(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6823,12 +6715,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxCreateFolderResult(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6938,12 +6824,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxPolicies(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxPolicies* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7301,12 +7181,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMailboxSyncManager(py::wrapper::Windows::ApplicationModel::Email::EmailMailboxSyncManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7725,12 +7599,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailManagerForUser(py::wrapper::Windows::ApplicationModel::Email::EmailManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7906,12 +7774,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMeetingInfo(py::wrapper::Windows::ApplicationModel::Email::EmailMeetingInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8647,12 +8509,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMessage(py::wrapper::Windows::ApplicationModel::Email::EmailMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10116,12 +9972,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMessageBatch(py::wrapper::Windows::ApplicationModel::Email::EmailMessageBatch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10231,12 +10081,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailMessageReader(py::wrapper::Windows::ApplicationModel::Email::EmailMessageReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10389,12 +10233,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailQueryOptions(py::wrapper::Windows::ApplicationModel::Email::EmailQueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10648,12 +10486,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailQueryTextSearch(py::wrapper::Windows::ApplicationModel::Email::EmailQueryTextSearch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10920,12 +10752,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailRecipient(py::wrapper::Windows::ApplicationModel::Email::EmailRecipient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11113,12 +10939,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailRecipientResolutionResult(py::wrapper::Windows::ApplicationModel::Email::EmailRecipientResolutionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11289,12 +11109,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailStore(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11677,12 +11491,6 @@ namespace py::cpp::Windows::ApplicationModel::Email
     static void _dealloc_EmailStoreNotificationTriggerDetails(py::wrapper::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

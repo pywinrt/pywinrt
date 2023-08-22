@@ -42,12 +42,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioChangeCounter(py::wrapper::Windows::Devices::Gpio::GpioChangeCounter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -400,12 +394,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioChangeReader(py::wrapper::Windows::Devices::Gpio::GpioChangeReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -891,12 +879,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioController(py::wrapper::Windows::Devices::Gpio::GpioController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1183,12 +1165,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioPin(py::wrapper::Windows::Devices::Gpio::GpioPin* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1602,12 +1578,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioPinValueChangedEventArgs(py::wrapper::Windows::Devices::Gpio::GpioPinValueChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1729,12 +1699,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioChangeCount(py::wrapper::Windows::Devices::Gpio::GpioChangeCount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1873,12 +1837,6 @@ namespace py::cpp::Windows::Devices::Gpio
     static void _dealloc_GpioChangeRecord(py::wrapper::Windows::Devices::Gpio::GpioChangeRecord* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

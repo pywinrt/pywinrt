@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_AcceleratorKeyEventArgs(py::wrapper::Windows::UI::Core::AcceleratorKeyEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -221,12 +215,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_AutomationProviderRequestedEventArgs(py::wrapper::Windows::UI::Core::AutomationProviderRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -392,12 +380,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_BackRequestedEventArgs(py::wrapper::Windows::UI::Core::BackRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -515,12 +497,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CharacterReceivedEventArgs(py::wrapper::Windows::UI::Core::CharacterReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -678,12 +654,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ClosestInteractiveBoundsRequestedEventArgs(py::wrapper::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -841,12 +811,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreAcceleratorKeys(py::wrapper::Windows::UI::Core::CoreAcceleratorKeys* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -961,12 +925,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreComponentInputSource(py::wrapper::Windows::UI::Core::CoreComponentInputSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2056,12 +2014,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreCursor(py::wrapper::Windows::UI::Core::CoreCursor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2171,12 +2123,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreDispatcher(py::wrapper::Windows::UI::Core::CoreDispatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2603,12 +2549,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreIndependentInputSource(py::wrapper::Windows::UI::Core::CoreIndependentInputSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3411,12 +3351,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreIndependentInputSourceController(py::wrapper::Windows::UI::Core::CoreIndependentInputSourceController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3775,12 +3709,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreWindow(py::wrapper::Windows::UI::Core::CoreWindow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5522,12 +5450,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreWindowDialog(py::wrapper::Windows::UI::Core::CoreWindowDialog* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5972,12 +5894,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreWindowEventArgs(py::wrapper::Windows::UI::Core::CoreWindowEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6135,12 +6051,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreWindowFlyout(py::wrapper::Windows::UI::Core::CoreWindowFlyout* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6537,12 +6447,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreWindowPopupShowingEventArgs(py::wrapper::Windows::UI::Core::CoreWindowPopupShowingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6645,12 +6549,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreWindowResizeManager(py::wrapper::Windows::UI::Core::CoreWindowResizeManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6829,12 +6727,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_IdleDispatchedHandlerArgs(py::wrapper::Windows::UI::Core::IdleDispatchedHandlerArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6924,12 +6816,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_InputEnabledEventArgs(py::wrapper::Windows::UI::Core::InputEnabledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7067,12 +6953,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_KeyEventArgs(py::wrapper::Windows::UI::Core::KeyEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7250,12 +7130,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_PointerEventArgs(py::wrapper::Windows::UI::Core::PointerEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7443,12 +7317,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_SystemNavigationManager(py::wrapper::Windows::UI::Core::SystemNavigationManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7641,12 +7509,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_TouchHitTestingEventArgs(py::wrapper::Windows::UI::Core::TouchHitTestingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7884,12 +7746,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_VisibilityChangedEventArgs(py::wrapper::Windows::UI::Core::VisibilityChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8027,12 +7883,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_WindowActivatedEventArgs(py::wrapper::Windows::UI::Core::WindowActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8170,12 +8020,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_WindowSizeChangedEventArgs(py::wrapper::Windows::UI::Core::WindowSizeChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8313,12 +8157,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICoreAcceleratorKeys(py::wrapper::Windows::UI::Core::ICoreAcceleratorKeys* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8433,12 +8271,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICoreInputSourceBase(py::wrapper::Windows::UI::Core::ICoreInputSourceBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8621,12 +8453,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICorePointerInputSource(py::wrapper::Windows::UI::Core::ICorePointerInputSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9161,12 +8987,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICorePointerInputSource2(py::wrapper::Windows::UI::Core::ICorePointerInputSource2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9721,12 +9541,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICorePointerRedirector(py::wrapper::Windows::UI::Core::ICorePointerRedirector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9931,12 +9745,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICoreWindow(py::wrapper::Windows::UI::Core::ICoreWindow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11223,12 +11031,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_ICoreWindowEventArgs(py::wrapper::Windows::UI::Core::ICoreWindowEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11346,12 +11148,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_IInitializeWithCoreWindow(py::wrapper::Windows::UI::Core::IInitializeWithCoreWindow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11490,12 +11286,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CorePhysicalKeyStatus(py::wrapper::Windows::UI::Core::CorePhysicalKeyStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11770,12 +11560,6 @@ namespace py::cpp::Windows::UI::Core
     static void _dealloc_CoreProximityEvaluation(py::wrapper::Windows::UI::Core::CoreProximityEvaluation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

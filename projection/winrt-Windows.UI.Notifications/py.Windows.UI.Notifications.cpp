@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_AdaptiveNotificationText(py::wrapper::Windows::UI::Notifications::AdaptiveNotificationText* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -275,12 +269,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_BadgeNotification(py::wrapper::Windows::UI::Notifications::BadgeNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -598,12 +586,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_BadgeUpdateManagerForUser(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -775,12 +757,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_BadgeUpdater(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1706,12 +1682,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_Notification(py::wrapper::Windows::UI::Notifications::Notification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1877,12 +1847,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_NotificationBinding(py::wrapper::Windows::UI::Notifications::NotificationBinding* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2151,12 +2115,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_NotificationData(py::wrapper::Windows::UI::Notifications::NotificationData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2294,12 +2252,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_NotificationVisual(py::wrapper::Windows::UI::Notifications::NotificationVisual* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2494,12 +2446,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ScheduledTileNotification(py::wrapper::Windows::UI::Notifications::ScheduledTileNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2796,12 +2742,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ScheduledToastNotification(py::wrapper::Windows::UI::Notifications::ScheduledToastNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3287,12 +3227,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ScheduledToastNotificationShowingEventArgs(py::wrapper::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3460,12 +3394,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ShownTileNotification(py::wrapper::Windows::UI::Notifications::ShownTileNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3579,12 +3507,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_TileFlyoutNotification(py::wrapper::Windows::UI::Notifications::TileFlyoutNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3870,12 +3792,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_TileFlyoutUpdater(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4141,12 +4057,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_TileNotification(py::wrapper::Windows::UI::Notifications::TileNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4512,12 +4422,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_TileUpdateManagerForUser(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4701,12 +4605,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_TileUpdater(py::wrapper::Windows::UI::Notifications::TileUpdater* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5233,12 +5131,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastActivatedEventArgs(py::wrapper::Windows::UI::Notifications::ToastActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5375,12 +5267,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastCollection(py::wrapper::Windows::UI::Notifications::ToastCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5614,12 +5500,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastCollectionManager(py::wrapper::Windows::UI::Notifications::ToastCollectionManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5885,12 +5765,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastDismissedEventArgs(py::wrapper::Windows::UI::Notifications::ToastDismissedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5980,12 +5854,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastFailedEventArgs(py::wrapper::Windows::UI::Notifications::ToastFailedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6099,12 +5967,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastNotification(py::wrapper::Windows::UI::Notifications::ToastNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6761,12 +6623,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastNotificationActionTriggerDetail(py::wrapper::Windows::UI::Notifications::ToastNotificationActionTriggerDetail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6876,12 +6732,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastNotificationHistory(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7186,12 +7036,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastNotificationHistoryChangedTriggerDetail(py::wrapper::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7552,12 +7396,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastNotificationManagerForUser(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7896,12 +7734,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_ToastNotifier(py::wrapper::Windows::UI::Notifications::ToastNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8253,12 +8085,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_UserNotification(py::wrapper::Windows::UI::Notifications::UserNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8408,12 +8234,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_UserNotificationChangedEventArgs(py::wrapper::Windows::UI::Notifications::UserNotificationChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8523,12 +8343,6 @@ namespace py::cpp::Windows::UI::Notifications
     static void _dealloc_IAdaptiveNotificationContent(py::wrapper::Windows::UI::Notifications::IAdaptiveNotificationContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

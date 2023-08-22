@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_AudioEncodingProperties(py::wrapper::Windows::Media::MediaProperties::AudioEncodingProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -777,12 +771,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_ContainerEncodingProperties(py::wrapper::Windows::Media::MediaProperties::ContainerEncodingProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1246,12 +1234,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_ImageEncodingProperties(py::wrapper::Windows::Media::MediaProperties::ImageEncodingProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1739,12 +1721,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_MediaEncodingProfile(py::wrapper::Windows::Media::MediaProperties::MediaEncodingProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3647,12 +3623,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_MediaPropertySet(py::wrapper::Windows::Media::MediaProperties::MediaPropertySet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4060,12 +4030,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_MediaRatio(py::wrapper::Windows::Media::MediaProperties::MediaRatio* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4407,12 +4371,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_TimedMetadataEncodingProperties(py::wrapper::Windows::Media::MediaProperties::TimedMetadataEncodingProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4818,12 +4776,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_VideoEncodingProperties(py::wrapper::Windows::Media::MediaProperties::VideoEncodingProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5479,12 +5431,6 @@ namespace py::cpp::Windows::Media::MediaProperties
     static void _dealloc_IMediaEncodingProperties(py::wrapper::Windows::Media::MediaProperties::IMediaEncodingProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

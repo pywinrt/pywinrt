@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_DeleteSmsMessageOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessageOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -300,12 +294,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_DeleteSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::DeleteSmsMessagesOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -582,12 +570,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_GetSmsDeviceOperation(py::wrapper::Windows::Devices::Sms::GetSmsDeviceOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -863,12 +845,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_GetSmsMessageOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessageOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1144,12 +1120,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_GetSmsMessagesOperation(py::wrapper::Windows::Devices::Sms::GetSmsMessagesOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1473,12 +1443,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SendSmsMessageOperation(py::wrapper::Windows::Devices::Sms::SendSmsMessageOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1777,12 +1741,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsAppMessage(py::wrapper::Windows::Devices::Sms::SmsAppMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2494,12 +2452,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsBinaryMessage(py::wrapper::Windows::Devices::Sms::SmsBinaryMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2720,12 +2672,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsBroadcastMessage(py::wrapper::Windows::Devices::Sms::SmsBroadcastMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3095,12 +3041,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsDevice(py::wrapper::Windows::Devices::Sms::SmsDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3528,12 +3468,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsDevice2(py::wrapper::Windows::Devices::Sms::SmsDevice2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3984,12 +3918,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsDeviceMessageStore(py::wrapper::Windows::Devices::Sms::SmsDeviceMessageStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4231,12 +4159,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsFilterRule(py::wrapper::Windows::Devices::Sms::SmsFilterRule* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4618,12 +4540,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsFilterRules(py::wrapper::Windows::Devices::Sms::SmsFilterRules* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4733,12 +4649,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsMessageReceivedEventArgs(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4848,12 +4758,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsMessageReceivedTriggerDetails(py::wrapper::Windows::Devices::Sms::SmsMessageReceivedTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5125,12 +5029,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsMessageRegistration(py::wrapper::Windows::Devices::Sms::SmsMessageRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5369,12 +5267,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsReceivedEventDetails(py::wrapper::Windows::Devices::Sms::SmsReceivedEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5524,12 +5416,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsSendMessageResult(py::wrapper::Windows::Devices::Sms::SmsSendMessageResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5739,12 +5625,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsStatusMessage(py::wrapper::Windows::Devices::Sms::SmsStatusMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6076,12 +5956,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsTextMessage(py::wrapper::Windows::Devices::Sms::SmsTextMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6582,12 +6456,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsTextMessage2(py::wrapper::Windows::Devices::Sms::SmsTextMessage2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7125,12 +6993,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsVoicemailMessage(py::wrapper::Windows::Devices::Sms::SmsVoicemailMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7380,12 +7242,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsWapMessage(py::wrapper::Windows::Devices::Sms::SmsWapMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7695,12 +7551,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_ISmsBinaryMessage(py::wrapper::Windows::Devices::Sms::ISmsBinaryMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7921,12 +7771,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_ISmsDevice(py::wrapper::Windows::Devices::Sms::ISmsDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8230,12 +8074,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_ISmsMessage(py::wrapper::Windows::Devices::Sms::ISmsMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8345,12 +8183,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_ISmsMessageBase(py::wrapper::Windows::Devices::Sms::ISmsMessageBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8520,12 +8352,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_ISmsTextMessage(py::wrapper::Windows::Devices::Sms::ISmsTextMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8974,12 +8800,6 @@ namespace py::cpp::Windows::Devices::Sms
     static void _dealloc_SmsEncodedLength(py::wrapper::Windows::Devices::Sms::SmsEncodedLength* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

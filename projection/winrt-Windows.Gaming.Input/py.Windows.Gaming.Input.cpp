@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_ArcadeStick(py::wrapper::Windows::Gaming::Input::ArcadeStick* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -542,12 +536,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_FlightStick(py::wrapper::Windows::Gaming::Input::FlightStick* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1086,12 +1074,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_Gamepad(py::wrapper::Windows::Gaming::Input::Gamepad* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1658,12 +1640,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_Headset(py::wrapper::Windows::Gaming::Input::Headset* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1803,12 +1779,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_RacingWheel(py::wrapper::Windows::Gaming::Input::RacingWheel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2447,12 +2417,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_RawGameController(py::wrapper::Windows::Gaming::Input::RawGameController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3187,12 +3151,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_UINavigationController(py::wrapper::Windows::Gaming::Input::UINavigationController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3743,12 +3701,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_IGameController(py::wrapper::Windows::Gaming::Input::IGameController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4013,12 +3965,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_IGameControllerBatteryInfo(py::wrapper::Windows::Gaming::Input::IGameControllerBatteryInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4150,12 +4096,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_ArcadeStickReading(py::wrapper::Windows::Gaming::Input::ArcadeStickReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4299,12 +4239,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_FlightStickReading(py::wrapper::Windows::Gaming::Input::FlightStickReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4619,12 +4553,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_GamepadReading(py::wrapper::Windows::Gaming::Input::GamepadReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4969,12 +4897,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_GamepadVibration(py::wrapper::Windows::Gaming::Input::GamepadVibration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5187,12 +5109,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_RacingWheelReading(py::wrapper::Windows::Gaming::Input::RacingWheelReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5536,12 +5452,6 @@ namespace py::cpp::Windows::Gaming::Input
     static void _dealloc_UINavigationReading(py::wrapper::Windows::Gaming::Input::UINavigationReading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

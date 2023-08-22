@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Capture
     static void _dealloc_Direct3D11CaptureFrame(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -206,12 +200,6 @@ namespace py::cpp::Windows::Graphics::Capture
     static void _dealloc_Direct3D11CaptureFramePool(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFramePool* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -633,12 +621,6 @@ namespace py::cpp::Windows::Graphics::Capture
     static void _dealloc_GraphicsCaptureItem(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -911,12 +893,6 @@ namespace py::cpp::Windows::Graphics::Capture
     static void _dealloc_GraphicsCapturePicker(py::wrapper::Windows::Graphics::Capture::GraphicsCapturePicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1016,12 +992,6 @@ namespace py::cpp::Windows::Graphics::Capture
     static void _dealloc_GraphicsCaptureSession(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

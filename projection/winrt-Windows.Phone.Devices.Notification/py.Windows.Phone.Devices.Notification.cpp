@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Phone::Devices::Notification
     static void _dealloc_VibrationDevice(py::wrapper::Windows::Phone::Devices::Notification::VibrationDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

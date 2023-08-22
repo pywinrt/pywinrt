@@ -42,12 +42,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ActivitySensorTrigger(py::wrapper::Windows::ApplicationModel::Background::ActivitySensorTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -315,12 +309,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_AppBroadcastTrigger(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -438,12 +426,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_AppBroadcastTriggerProviderInfo(py::wrapper::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -823,12 +805,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ApplicationTrigger(py::wrapper::Windows::ApplicationModel::Background::ApplicationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -948,12 +924,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ApplicationTriggerDetails(py::wrapper::Windows::ApplicationModel::Background::ApplicationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1065,12 +1035,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_AppointmentStoreNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1464,12 +1428,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BackgroundTaskBuilder(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1908,12 +1866,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BackgroundTaskCompletedEventArgs(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2034,12 +1986,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BackgroundTaskDeferral(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2140,12 +2086,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BackgroundTaskProgressEventArgs(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2255,12 +2195,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BackgroundTaskRegistration(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2665,12 +2599,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BackgroundTaskRegistrationGroup(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2941,12 +2869,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BluetoothLEAdvertisementPublisherTrigger(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3250,12 +3172,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_BluetoothLEAdvertisementWatcherTrigger(py::wrapper::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3571,12 +3487,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_CachedFileUpdaterTrigger(py::wrapper::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3646,12 +3556,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_CachedFileUpdaterTriggerDetails(py::wrapper::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3803,12 +3707,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ChatMessageNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3900,12 +3798,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ChatMessageReceivedNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3997,12 +3889,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_CommunicationBlockingAppSetAsActiveTrigger(py::wrapper::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4094,12 +3980,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ContactStoreNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4206,12 +4086,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ContentPrefetchTrigger(py::wrapper::Windows::ApplicationModel::Background::ContentPrefetchTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4323,12 +4197,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ConversationalAgentTrigger(py::wrapper::Windows::ApplicationModel::Background::ConversationalAgentTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4423,12 +4291,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_CustomSystemEventTrigger(py::wrapper::Windows::ApplicationModel::Background::CustomSystemEventTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4538,12 +4400,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_DeviceConnectionChangeTrigger(py::wrapper::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4758,12 +4614,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_DeviceManufacturerNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4895,12 +4745,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_DeviceServicingTrigger(py::wrapper::Windows::ApplicationModel::Background::DeviceServicingTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5047,12 +4891,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_DeviceUseTrigger(py::wrapper::Windows::ApplicationModel::Background::DeviceUseTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5175,12 +5013,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_DeviceWatcherTrigger(py::wrapper::Windows::ApplicationModel::Background::DeviceWatcherTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5272,12 +5104,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_EmailStoreNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5387,12 +5213,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_GattCharacteristicNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5502,12 +5322,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_GattServiceProviderTrigger(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5698,12 +5512,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_GattServiceProviderTriggerResult(py::wrapper::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5835,12 +5643,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_GeovisitTrigger(py::wrapper::Windows::ApplicationModel::Background::GeovisitTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5982,12 +5784,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_LocationTrigger(py::wrapper::Windows::ApplicationModel::Background::LocationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6102,12 +5898,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MaintenanceTrigger(py::wrapper::Windows::ApplicationModel::Background::MaintenanceTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6239,12 +6029,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MediaProcessingTrigger(py::wrapper::Windows::ApplicationModel::Background::MediaProcessingTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6386,12 +6170,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MobileBroadbandDeviceServiceNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6483,12 +6261,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MobileBroadbandPcoDataChangeTrigger(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6580,12 +6352,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MobileBroadbandPinLockStateChangeTrigger(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6677,12 +6443,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MobileBroadbandRadioStateChangeTrigger(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6774,12 +6534,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_MobileBroadbandRegistrationStateChangeTrigger(py::wrapper::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6871,12 +6625,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_NetworkOperatorDataUsageTrigger(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6968,12 +6716,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_NetworkOperatorHotspotAuthenticationTrigger(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7067,12 +6809,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_NetworkOperatorNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7184,12 +6920,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_PaymentAppCanMakePaymentTrigger(py::wrapper::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7284,12 +7014,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_PhoneTrigger(py::wrapper::Windows::ApplicationModel::Background::PhoneTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7436,12 +7160,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_PushNotificationTrigger(py::wrapper::Windows::ApplicationModel::Background::PushNotificationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7533,12 +7251,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_RcsEndUserMessageAvailableTrigger(py::wrapper::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7630,12 +7342,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_RfcommConnectionTrigger(py::wrapper::Windows::ApplicationModel::Background::RfcommConnectionTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7911,12 +7617,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SecondaryAuthenticationFactorAuthenticationTrigger(py::wrapper::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8010,12 +7710,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SensorDataThresholdTrigger(py::wrapper::Windows::ApplicationModel::Background::SensorDataThresholdTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8109,12 +7803,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SmartCardTrigger(py::wrapper::Windows::ApplicationModel::Background::SmartCardTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8228,12 +7916,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SmsMessageReceivedTrigger(py::wrapper::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8325,12 +8007,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SocketActivityTrigger(py::wrapper::Windows::ApplicationModel::Background::SocketActivityTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8444,12 +8120,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_StorageLibraryChangeTrackerTrigger(py::wrapper::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8519,12 +8189,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_StorageLibraryContentChangedTrigger(py::wrapper::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8682,12 +8346,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SystemCondition(py::wrapper::Windows::ApplicationModel::Background::SystemCondition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8802,12 +8460,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_SystemTrigger(py::wrapper::Windows::ApplicationModel::Background::SystemTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8939,12 +8591,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_TetheringEntitlementCheckTrigger(py::wrapper::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9039,12 +8685,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_TimeTrigger(py::wrapper::Windows::ApplicationModel::Background::TimeTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9191,12 +8831,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ToastNotificationActionTrigger(py::wrapper::Windows::ApplicationModel::Background::ToastNotificationActionTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9303,12 +8937,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_ToastNotificationHistoryChangedTrigger(py::wrapper::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9402,12 +9030,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_UserNotificationChangedTrigger(py::wrapper::Windows::ApplicationModel::Background::UserNotificationChangedTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9499,12 +9121,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_WiFiOnDemandHotspotConnectTrigger(py::wrapper::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9596,12 +9212,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_WiFiOnDemandHotspotUpdateMetadataTrigger(py::wrapper::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9671,12 +9281,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundCondition(py::wrapper::Windows::ApplicationModel::Background::IBackgroundCondition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9746,12 +9350,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTask(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9854,12 +9452,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTaskInstance(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10132,12 +9724,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTaskInstance2(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10442,12 +10028,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTaskInstance4(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskInstance4* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10740,12 +10320,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTaskRegistration(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10978,12 +10552,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTaskRegistration2(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11236,12 +10804,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTaskRegistration3(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11494,12 +11056,6 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static void _dealloc_IBackgroundTrigger(py::wrapper::Windows::ApplicationModel::Background::IBackgroundTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

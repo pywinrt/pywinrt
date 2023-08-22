@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Ocr
     static void _dealloc_OcrEngine(py::wrapper::Windows::Media::Ocr::OcrEngine* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -299,12 +293,6 @@ namespace py::cpp::Windows::Media::Ocr
     static void _dealloc_OcrLine(py::wrapper::Windows::Media::Ocr::OcrLine* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -414,12 +402,6 @@ namespace py::cpp::Windows::Media::Ocr
     static void _dealloc_OcrResult(py::wrapper::Windows::Media::Ocr::OcrResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -549,12 +531,6 @@ namespace py::cpp::Windows::Media::Ocr
     static void _dealloc_OcrWord(py::wrapper::Windows::Media::Ocr::OcrWord* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

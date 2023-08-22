@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattCharacteristic(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2427,12 +2421,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattCharacteristicsResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristicsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2562,12 +2550,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattClientNotificationResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattClientNotificationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2717,12 +2699,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattDescriptor(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3200,12 +3176,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattDescriptorsResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptorsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3335,12 +3305,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattDeviceService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4272,12 +4236,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattDeviceServicesResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceServicesResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4407,12 +4365,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalCharacteristic(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4905,12 +4857,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalCharacteristicParameters(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5240,12 +5186,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalCharacteristicResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristicResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5355,12 +5295,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalDescriptor(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5622,12 +5556,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalDescriptorParameters(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5841,12 +5769,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalDescriptorResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalDescriptorResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5956,12 +5878,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattLocalService(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalService* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6104,12 +6020,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattPresentationFormat(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattPresentationFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7343,12 +7253,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattReadClientCharacteristicConfigurationDescriptorResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadClientCharacteristicConfigurationDescriptorResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7478,12 +7382,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattReadRequest(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7724,12 +7622,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattReadRequestedEventArgs(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7879,12 +7771,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattReadResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReadResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8036,12 +7922,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattReliableWriteTransaction(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattReliableWriteTransaction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8205,12 +8085,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattRequestStateChangedEventArgs(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattRequestStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8320,12 +8194,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattServiceProvider(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8595,12 +8463,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattServiceProviderAdvertisementStatusChangedEventArgs(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisementStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8732,12 +8594,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattServiceProviderAdvertisingParameters(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderAdvertisingParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8951,12 +8807,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattServiceProviderResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProviderResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9560,12 +9410,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattSession(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9938,12 +9782,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattSessionStatusChangedEventArgs(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSessionStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10053,12 +9891,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattSubscribedClient(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattSubscribedClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10213,12 +10045,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattValueChangedEventArgs(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattValueChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10328,12 +10154,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattWriteRequest(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10592,12 +10412,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattWriteRequestedEventArgs(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10747,12 +10561,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static void _dealloc_GattWriteResult(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

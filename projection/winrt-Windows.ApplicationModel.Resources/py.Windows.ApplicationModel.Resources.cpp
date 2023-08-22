@@ -55,12 +55,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources
     static void _dealloc_ResourceLoader(py::wrapper::Windows::ApplicationModel::Resources::ResourceLoader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

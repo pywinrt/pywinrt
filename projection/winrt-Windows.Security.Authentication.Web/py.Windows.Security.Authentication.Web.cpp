@@ -269,12 +269,6 @@ namespace py::cpp::Windows::Security::Authentication::Web
     static void _dealloc_WebAuthenticationResult(py::wrapper::Windows::Security::Authentication::Web::WebAuthenticationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

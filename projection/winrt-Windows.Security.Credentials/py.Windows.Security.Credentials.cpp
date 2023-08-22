@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_KeyCredential(py::wrapper::Windows::Security::Credentials::KeyCredential* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -225,12 +219,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_KeyCredentialAttestationResult(py::wrapper::Windows::Security::Credentials::KeyCredentialAttestationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -551,12 +539,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_KeyCredentialOperationResult(py::wrapper::Windows::Security::Credentials::KeyCredentialOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -666,12 +648,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_KeyCredentialRetrievalResult(py::wrapper::Windows::Security::Credentials::KeyCredentialRetrievalResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -820,12 +796,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_PasswordCredential(py::wrapper::Windows::Security::Credentials::PasswordCredential* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1112,12 +1082,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_PasswordCredentialPropertyStore(py::wrapper::Windows::Security::Credentials::PasswordCredentialPropertyStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1592,12 +1556,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_PasswordVault(py::wrapper::Windows::Security::Credentials::PasswordVault* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1886,12 +1844,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_WebAccount(py::wrapper::Windows::Security::Credentials::WebAccount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2169,12 +2121,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_WebAccountProvider(py::wrapper::Windows::Security::Credentials::WebAccountProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2384,12 +2330,6 @@ namespace py::cpp::Windows::Security::Credentials
     static void _dealloc_IWebAccount(py::wrapper::Windows::Security::Credentials::IWebAccount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

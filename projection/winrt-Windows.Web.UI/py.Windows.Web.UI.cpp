@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlContentLoadingEventArgs(py::wrapper::Windows::Web::UI::WebViewControlContentLoadingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlDOMContentLoadedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -208,12 +196,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlDeferredPermissionRequest(py::wrapper::Windows::Web::UI::WebViewControlDeferredPermissionRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -405,12 +387,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlLongRunningScriptDetectedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -548,12 +524,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlNavigationCompletedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -683,12 +653,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlNavigationStartingEventArgs(py::wrapper::Windows::Web::UI::WebViewControlNavigationStartingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -826,12 +790,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlNewWindowRequestedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1067,12 +1025,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlPermissionRequest(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1315,12 +1267,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlPermissionRequestedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1410,12 +1356,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlScriptNotifyEventArgs(py::wrapper::Windows::Web::UI::WebViewControlScriptNotifyEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1525,12 +1465,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlSettings(py::wrapper::Windows::Web::UI::WebViewControlSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1744,12 +1678,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1887,12 +1815,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlUnviewableContentIdentifiedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2022,12 +1944,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_WebViewControlWebResourceRequestedEventArgs(py::wrapper::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2195,12 +2111,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_IWebViewControl(py::wrapper::Windows::Web::UI::IWebViewControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3676,12 +3586,6 @@ namespace py::cpp::Windows::Web::UI
     static void _dealloc_IWebViewControl2(py::wrapper::Windows::Web::UI::IWebViewControl2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

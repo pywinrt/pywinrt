@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     static void _dealloc_RfcommDeviceService(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -538,12 +532,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     static void _dealloc_RfcommDeviceServicesResult(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -653,12 +641,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     static void _dealloc_RfcommServiceId(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1012,12 +994,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     static void _dealloc_RfcommServiceProvider(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -42,12 +42,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static void _dealloc_GpioPinProviderValueChangedEventArgs(py::wrapper::Windows::Devices::Gpio::Provider::GpioPinProviderValueChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -137,12 +131,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static void _dealloc_IGpioControllerProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -265,12 +253,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static void _dealloc_IGpioPinProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioPinProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -631,12 +613,6 @@ namespace py::cpp::Windows::Devices::Gpio::Provider
     static void _dealloc_IGpioProvider(py::wrapper::Windows::Devices::Gpio::Provider::IGpioProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -43,12 +43,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     static void _dealloc_CoreIncrementalInkStroke(py::wrapper::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -240,12 +234,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     static void _dealloc_CoreInkIndependentInputSource(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -752,12 +740,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     static void _dealloc_CoreInkPresenterHost(py::wrapper::Windows::UI::Input::Inking::Core::CoreInkPresenterHost* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -895,12 +877,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     static void _dealloc_CoreWetStrokeUpdateEventArgs(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1058,12 +1034,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Core
     static void _dealloc_CoreWetStrokeUpdateSource(py::wrapper::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

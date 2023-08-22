@@ -55,12 +55,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_BitmapImage(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapImage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -835,12 +829,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_BitmapSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1075,12 +1063,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_DownloadProgressEventArgs(py::wrapper::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1220,12 +1202,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_RenderTargetBitmap(py::wrapper::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1501,12 +1477,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_SoftwareBitmapSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1703,12 +1673,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_SurfaceImageSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1815,12 +1779,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_SvgImageSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2236,12 +2194,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_SvgImageSourceFailedEventArgs(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2331,12 +2283,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_SvgImageSourceOpenedEventArgs(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2448,12 +2394,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_VirtualSurfaceImageSource(py::wrapper::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2548,12 +2488,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_WriteableBitmap(py::wrapper::Windows::UI::Xaml::Media::Imaging::WriteableBitmap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2674,12 +2608,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
     static void _dealloc_XamlRenderingBackgroundTask(py::wrapper::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

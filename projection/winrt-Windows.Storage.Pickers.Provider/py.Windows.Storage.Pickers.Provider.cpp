@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_FileOpenPickerUI(py::wrapper::Windows::Storage::Pickers::Provider::FileOpenPickerUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -421,12 +415,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_FileRemovedEventArgs(py::wrapper::Windows::Storage::Pickers::Provider::FileRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -516,12 +504,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_FileSavePickerUI(py::wrapper::Windows::Storage::Pickers::Provider::FileSavePickerUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -821,12 +803,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_PickerClosingDeferral(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -927,12 +903,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_PickerClosingEventArgs(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1042,12 +1012,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_PickerClosingOperation(py::wrapper::Windows::Storage::Pickers::Provider::PickerClosingOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1167,12 +1131,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_TargetFileRequest(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1320,12 +1278,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_TargetFileRequestDeferral(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1426,12 +1378,6 @@ namespace py::cpp::Windows::Storage::Pickers::Provider
     static void _dealloc_TargetFileRequestedEventArgs(py::wrapper::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

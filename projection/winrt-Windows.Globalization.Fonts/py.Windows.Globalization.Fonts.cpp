@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Globalization::Fonts
     static void _dealloc_LanguageFont(py::wrapper::Windows::Globalization::Fonts::LanguageFont* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -217,12 +211,6 @@ namespace py::cpp::Windows::Globalization::Fonts
     static void _dealloc_LanguageFontGroup(py::wrapper::Windows::Globalization::Fonts::LanguageFontGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

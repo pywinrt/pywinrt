@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Adc
     static void _dealloc_AdcChannel(py::wrapper::Windows::Devices::Adc::AdcChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -226,12 +220,6 @@ namespace py::cpp::Windows::Devices::Adc
     static void _dealloc_AdcController(py::wrapper::Windows::Devices::Adc::AdcController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

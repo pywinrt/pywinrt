@@ -42,12 +42,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_Certificate(py::wrapper::Windows::Security::Cryptography::Certificates::Certificate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -638,12 +632,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CertificateChain(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateChain* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1041,12 +1029,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CertificateExtension(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateExtension* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1315,12 +1297,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CertificateKeyUsages(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateKeyUsages* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1796,12 +1772,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CertificateQuery(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateQuery* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2249,12 +2219,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CertificateRequestProperties(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateRequestProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3200,12 +3164,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CertificateStore(py::wrapper::Windows::Security::Cryptography::Certificates::CertificateStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3591,12 +3549,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_ChainBuildingParameters(py::wrapper::Windows::Security::Cryptography::Certificates::ChainBuildingParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3968,12 +3920,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_ChainValidationParameters(py::wrapper::Windows::Security::Cryptography::Certificates::ChainValidationParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4163,12 +4109,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CmsAttachedSignature(py::wrapper::Windows::Security::Cryptography::Certificates::CmsAttachedSignature* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4386,12 +4326,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CmsDetachedSignature(py::wrapper::Windows::Security::Cryptography::Certificates::CmsDetachedSignature* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4589,12 +4523,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CmsSignerInfo(py::wrapper::Windows::Security::Cryptography::Certificates::CmsSignerInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4780,12 +4708,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_CmsTimestampInfo(py::wrapper::Windows::Security::Cryptography::Certificates::CmsTimestampInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5444,12 +5366,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_PfxImportParameters(py::wrapper::Windows::Security::Cryptography::Certificates::PfxImportParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5991,12 +5907,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_SubjectAlternativeNameInfo(py::wrapper::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6326,12 +6236,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_UserCertificateEnrollmentManager(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6551,12 +6455,6 @@ namespace py::cpp::Windows::Security::Cryptography::Certificates
     static void _dealloc_UserCertificateStore(py::wrapper::Windows::Security::Cryptography::Certificates::UserCertificateStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

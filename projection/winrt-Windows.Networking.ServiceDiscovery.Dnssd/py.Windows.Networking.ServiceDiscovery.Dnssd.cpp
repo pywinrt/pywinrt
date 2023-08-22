@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     static void _dealloc_DnssdRegistrationResult(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -245,12 +239,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     static void _dealloc_DnssdServiceInstance(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -730,12 +718,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     static void _dealloc_DnssdServiceInstanceCollection(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1078,12 +1060,6 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     static void _dealloc_DnssdServiceWatcher(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     static void _dealloc_EasClientDeviceInformation(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -297,12 +291,6 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     static void _dealloc_EasClientSecurityPolicy(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -816,12 +804,6 @@ namespace py::cpp::Windows::Security::ExchangeActiveSyncProvisioning
     static void _dealloc_EasComplianceResults(py::wrapper::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

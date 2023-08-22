@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnAppId(py::wrapper::Windows::Networking::Vpn::VpnAppId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -214,12 +208,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnChannel(py::wrapper::Windows::Networking::Vpn::VpnChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1505,12 +1493,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnChannelActivityEventArgs(py::wrapper::Windows::Networking::Vpn::VpnChannelActivityEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1600,12 +1582,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnChannelActivityStateChangedArgs(py::wrapper::Windows::Networking::Vpn::VpnChannelActivityStateChangedArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1695,12 +1671,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnChannelConfiguration(py::wrapper::Windows::Networking::Vpn::VpnChannelConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1850,12 +1820,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCredential(py::wrapper::Windows::Networking::Vpn::VpnCredential* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2027,12 +1991,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomCheckBox(py::wrapper::Windows::Networking::Vpn::VpnCustomCheckBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2336,12 +2294,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomComboBox(py::wrapper::Windows::Networking::Vpn::VpnCustomComboBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2645,12 +2597,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomEditBox(py::wrapper::Windows::Networking::Vpn::VpnCustomEditBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3002,12 +2948,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomErrorBox(py::wrapper::Windows::Networking::Vpn::VpnCustomErrorBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3243,12 +3183,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomPromptBooleanInput(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptBooleanInput* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3552,12 +3486,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomPromptOptionSelector(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptOptionSelector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3833,12 +3761,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomPromptText(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptText* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4122,12 +4044,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomPromptTextInput(py::wrapper::Windows::Networking::Vpn::VpnCustomPromptTextInput* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4479,12 +4395,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnCustomTextBox(py::wrapper::Windows::Networking::Vpn::VpnCustomTextBox* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4768,12 +4678,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnDomainNameAssignment(py::wrapper::Windows::Networking::Vpn::VpnDomainNameAssignment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4938,12 +4842,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnDomainNameInfo(py::wrapper::Windows::Networking::Vpn::VpnDomainNameInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5169,12 +5067,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnForegroundActivatedEventArgs(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5384,12 +5276,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnForegroundActivationOperation(py::wrapper::Windows::Networking::Vpn::VpnForegroundActivationOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5516,12 +5402,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnInterfaceId(py::wrapper::Windows::Networking::Vpn::VpnInterfaceId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5652,12 +5532,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnManagementAgent(py::wrapper::Windows::Networking::Vpn::VpnManagementAgent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6036,12 +5910,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnNamespaceAssignment(py::wrapper::Windows::Networking::Vpn::VpnNamespaceAssignment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6233,12 +6101,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnNamespaceInfo(py::wrapper::Windows::Networking::Vpn::VpnNamespaceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6474,12 +6336,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnNativeProfile(py::wrapper::Windows::Networking::Vpn::VpnNativeProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7127,12 +6983,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnPacketBuffer(py::wrapper::Windows::Networking::Vpn::VpnPacketBuffer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7386,12 +7236,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnPacketBufferList(py::wrapper::Windows::Networking::Vpn::VpnPacketBufferList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7730,12 +7574,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnPickedCredential(py::wrapper::Windows::Networking::Vpn::VpnPickedCredential* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7887,12 +7725,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnPlugInProfile(py::wrapper::Windows::Networking::Vpn::VpnPlugInProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8395,12 +8227,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnRoute(py::wrapper::Windows::Networking::Vpn::VpnRoute* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8588,12 +8414,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnRouteAssignment(py::wrapper::Windows::Networking::Vpn::VpnRouteAssignment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8903,12 +8723,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnSystemHealth(py::wrapper::Windows::Networking::Vpn::VpnSystemHealth* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9022,12 +8836,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnTrafficFilter(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9363,12 +9171,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_VpnTrafficFilterAssignment(py::wrapper::Windows::Networking::Vpn::VpnTrafficFilterAssignment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9554,12 +9356,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnChannelStatics(py::wrapper::Windows::Networking::Vpn::IVpnChannelStatics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9663,12 +9459,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnCredential(py::wrapper::Windows::Networking::Vpn::IVpnCredential* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9818,12 +9608,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnCustomPrompt(py::wrapper::Windows::Networking::Vpn::IVpnCustomPrompt* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10037,12 +9821,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnCustomPromptElement(py::wrapper::Windows::Networking::Vpn::IVpnCustomPromptElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10256,12 +10034,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnDomainNameInfoFactory(py::wrapper::Windows::Networking::Vpn::IVpnDomainNameInfoFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10366,12 +10138,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnInterfaceIdFactory(py::wrapper::Windows::Networking::Vpn::IVpnInterfaceIdFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10473,12 +10239,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnNamespaceInfoFactory(py::wrapper::Windows::Networking::Vpn::IVpnNamespaceInfoFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10582,12 +10342,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnPacketBufferFactory(py::wrapper::Windows::Networking::Vpn::IVpnPacketBufferFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10691,12 +10445,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnPlugIn(py::wrapper::Windows::Networking::Vpn::IVpnPlugIn* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10943,12 +10691,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnProfile(py::wrapper::Windows::Networking::Vpn::IVpnProfile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11242,12 +10984,6 @@ namespace py::cpp::Windows::Networking::Vpn
     static void _dealloc_IVpnRouteFactory(py::wrapper::Windows::Networking::Vpn::IVpnRouteFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

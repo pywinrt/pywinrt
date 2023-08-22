@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
     static void _dealloc_ExtendedExecutionRevokedEventArgs(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -135,12 +129,6 @@ namespace py::cpp::Windows::ApplicationModel::ExtendedExecution
     static void _dealloc_ExtendedExecutionSession(py::wrapper::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

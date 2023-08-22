@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_DtdEntity(py::wrapper::Windows::Data::Xml::Dom::DtdEntity* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -920,12 +914,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_DtdNotation(py::wrapper::Windows::Data::Xml::Dom::DtdNotation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1802,12 +1790,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlAttribute(py::wrapper::Windows::Data::Xml::Dom::XmlAttribute* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2732,12 +2714,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlCDataSection(py::wrapper::Windows::Data::Xml::Dom::XmlCDataSection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3843,12 +3819,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlComment(py::wrapper::Windows::Data::Xml::Dom::XmlComment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4944,12 +4914,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlDocument(py::wrapper::Windows::Data::Xml::Dom::XmlDocument* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6532,12 +6496,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlDocumentFragment(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentFragment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7374,12 +7332,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlDocumentType(py::wrapper::Windows::Data::Xml::Dom::XmlDocumentType* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8276,12 +8228,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlDomImplementation(py::wrapper::Windows::Data::Xml::Dom::XmlDomImplementation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8384,12 +8330,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlElement(py::wrapper::Windows::Data::Xml::Dom::XmlElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9640,12 +9580,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlEntityReference(py::wrapper::Windows::Data::Xml::Dom::XmlEntityReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10504,12 +10438,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlLoadSettings(py::wrapper::Windows::Data::Xml::Dom::XmlLoadSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10819,12 +10747,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlNamedNodeMap(py::wrapper::Windows::Data::Xml::Dom::XmlNamedNodeMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11413,12 +11335,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlNodeList(py::wrapper::Windows::Data::Xml::Dom::XmlNodeList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11813,12 +11729,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlProcessingInstruction(py::wrapper::Windows::Data::Xml::Dom::XmlProcessingInstruction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12723,12 +12633,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_XmlText(py::wrapper::Windows::Data::Xml::Dom::XmlText* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13834,12 +13738,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_IXmlCharacterData(py::wrapper::Windows::Data::Xml::Dom::IXmlCharacterData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14913,12 +14811,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_IXmlNode(py::wrapper::Windows::Data::Xml::Dom::IXmlNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15755,12 +15647,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_IXmlNodeSelector(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSelector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15960,12 +15846,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_IXmlNodeSerializer(py::wrapper::Windows::Data::Xml::Dom::IXmlNodeSerializer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16113,12 +15993,6 @@ namespace py::cpp::Windows::Data::Xml::Dom
     static void _dealloc_IXmlText(py::wrapper::Windows::Data::Xml::Dom::IXmlText* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

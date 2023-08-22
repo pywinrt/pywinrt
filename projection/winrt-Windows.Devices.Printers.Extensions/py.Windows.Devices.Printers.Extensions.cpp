@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_Print3DWorkflow(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -281,12 +275,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_Print3DWorkflowPrintRequestedEventArgs(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -475,12 +463,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_Print3DWorkflowPrinterChangedEventArgs(py::wrapper::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -636,12 +618,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_PrintNotificationEventDetails(py::wrapper::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -779,12 +755,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_PrintTaskConfiguration(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -919,12 +889,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_PrintTaskConfigurationSaveRequest(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1108,12 +1072,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_PrintTaskConfigurationSaveRequestedDeferral(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1214,12 +1172,6 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
     static void _dealloc_PrintTaskConfigurationSaveRequestedEventArgs(py::wrapper::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

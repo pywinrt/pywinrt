@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     static void _dealloc_OfflineMapPackage(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -344,12 +338,6 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     static void _dealloc_OfflineMapPackageQueryResult(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -459,12 +447,6 @@ namespace py::cpp::Windows::Services::Maps::OfflineMaps
     static void _dealloc_OfflineMapPackageStartDownloadResult(py::wrapper::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

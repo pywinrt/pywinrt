@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     static void _dealloc_ErrorReceivedEventArgs(py::wrapper::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     static void _dealloc_PinChangedEventArgs(py::wrapper::Windows::Devices::SerialCommunication::PinChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -208,12 +196,6 @@ namespace py::cpp::Windows::Devices::SerialCommunication
     static void _dealloc_SerialDevice(py::wrapper::Windows::Devices::SerialCommunication::SerialDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

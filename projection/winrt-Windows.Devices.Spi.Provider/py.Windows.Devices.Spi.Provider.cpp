@@ -42,12 +42,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static void _dealloc_ProviderSpiConnectionSettings(py::wrapper::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -357,12 +351,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static void _dealloc_ISpiControllerProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -464,12 +452,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static void _dealloc_ISpiDeviceProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiDeviceProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -766,12 +748,6 @@ namespace py::cpp::Windows::Devices::Spi::Provider
     static void _dealloc_ISpiProvider(py::wrapper::Windows::Devices::Spi::Provider::ISpiProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

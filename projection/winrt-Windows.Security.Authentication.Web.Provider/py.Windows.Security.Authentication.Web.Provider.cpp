@@ -60,12 +60,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountClientView(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountClientView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -975,12 +969,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderAddAccountOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderAddAccountOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1101,12 +1089,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderDeleteAccountOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderDeleteAccountOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1280,12 +1262,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderGetTokenSilentOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1579,12 +1555,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderManageAccountOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderManageAccountOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1725,12 +1695,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderRequestTokenOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRequestTokenOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2003,12 +1967,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderRetrieveCookiesOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderRetrieveCookiesOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2270,12 +2228,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderSignOutAccountOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderSignOutAccountOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2489,12 +2441,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebAccountProviderTriggerDetails(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2604,12 +2550,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebProviderTokenRequest(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2921,12 +2861,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_WebProviderTokenResponse(py::wrapper::Windows::Security::Authentication::Web::Provider::WebProviderTokenResponse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3016,12 +2950,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderBaseReportOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderBaseReportOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3155,12 +3083,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3250,12 +3172,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderSilentReportOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3441,12 +3357,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderTokenObjects(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3536,12 +3446,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderTokenObjects2(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenObjects2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3651,12 +3555,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderTokenOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderTokenOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3834,12 +3732,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static void _dealloc_IWebAccountProviderUIReportOperation(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderUIReportOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

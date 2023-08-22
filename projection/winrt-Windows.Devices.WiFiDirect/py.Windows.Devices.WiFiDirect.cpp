@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectAdvertisement(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -299,12 +293,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectAdvertisementPublisher(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -521,12 +509,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectAdvertisementPublisherStatusChangedEventArgs(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectAdvertisementPublisherStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -658,12 +640,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectConnectionListener(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -800,12 +776,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectConnectionParameters(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1023,12 +993,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectConnectionRequest(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1171,12 +1135,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectConnectionRequestedEventArgs(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectConnectionRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1276,12 +1234,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectDevice(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1644,12 +1596,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectInformationElement(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectInformationElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1927,12 +1873,6 @@ namespace py::cpp::Windows::Devices::WiFiDirect
     static void _dealloc_WiFiDirectLegacySettings(py::wrapper::Windows::Devices::WiFiDirect::WiFiDirectLegacySettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

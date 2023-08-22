@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_AttachableInputObject(py::wrapper::Windows::UI::Input::AttachableInputObject* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -146,12 +140,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_CrossSlidingEventArgs(py::wrapper::Windows::UI::Input::CrossSlidingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -301,12 +289,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_DraggingEventArgs(py::wrapper::Windows::UI::Input::DraggingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -456,12 +438,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_EdgeGesture(py::wrapper::Windows::UI::Input::EdgeGesture* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -696,12 +672,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_EdgeGestureEventArgs(py::wrapper::Windows::UI::Input::EdgeGestureEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -813,12 +783,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_GestureRecognizer(py::wrapper::Windows::UI::Input::GestureRecognizer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2685,12 +2649,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_HoldingEventArgs(py::wrapper::Windows::UI::Input::HoldingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2860,12 +2818,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_InputActivationListener(py::wrapper::Windows::UI::Input::InputActivationListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3000,12 +2952,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_InputActivationListenerActivationChangedEventArgs(py::wrapper::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3095,12 +3041,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_KeyboardDeliveryInterceptor(py::wrapper::Windows::UI::Input::KeyboardDeliveryInterceptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3338,12 +3278,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_ManipulationCompletedEventArgs(py::wrapper::Windows::UI::Input::ManipulationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3533,12 +3467,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_ManipulationInertiaStartingEventArgs(py::wrapper::Windows::UI::Input::ManipulationInertiaStartingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3728,12 +3656,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_ManipulationStartedEventArgs(py::wrapper::Windows::UI::Input::ManipulationStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3883,12 +3805,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_ManipulationUpdatedEventArgs(py::wrapper::Windows::UI::Input::ManipulationUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4098,12 +4014,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_MouseWheelParameters(py::wrapper::Windows::UI::Input::MouseWheelParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4365,12 +4275,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_PointerPoint(py::wrapper::Windows::UI::Input::PointerPoint* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4706,12 +4610,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_PointerPointProperties(py::wrapper::Windows::UI::Input::PointerPointProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5307,12 +5205,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_PointerVisualizationSettings(py::wrapper::Windows::UI::Input::PointerVisualizationSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5508,12 +5400,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialController(py::wrapper::Windows::UI::Input::RadialController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6209,12 +6095,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerButtonClickedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerButtonClickedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6324,12 +6204,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerButtonHoldingEventArgs(py::wrapper::Windows::UI::Input::RadialControllerButtonHoldingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6439,12 +6313,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerButtonPressedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerButtonPressedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6554,12 +6422,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerButtonReleasedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerButtonReleasedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6669,12 +6531,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerConfiguration(py::wrapper::Windows::UI::Input::RadialControllerConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7070,12 +6926,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerControlAcquiredEventArgs(py::wrapper::Windows::UI::Input::RadialControllerControlAcquiredEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7205,12 +7055,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerMenu(py::wrapper::Windows::UI::Input::RadialControllerMenu* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7441,12 +7285,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerMenuItem(py::wrapper::Windows::UI::Input::RadialControllerMenuItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7752,12 +7590,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerRotationChangedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerRotationChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7907,12 +7739,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerScreenContact(py::wrapper::Windows::UI::Input::RadialControllerScreenContact* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8022,12 +7848,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerScreenContactContinuedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8157,12 +7977,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerScreenContactEndedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8272,12 +8086,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RadialControllerScreenContactStartedEventArgs(py::wrapper::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8407,12 +8215,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_RightTappedEventArgs(py::wrapper::Windows::UI::Input::RightTappedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8542,12 +8344,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_SystemButtonEventController(py::wrapper::Windows::UI::Input::SystemButtonEventController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8829,12 +8625,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_SystemFunctionButtonEventArgs(py::wrapper::Windows::UI::Input::SystemFunctionButtonEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8972,12 +8762,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_SystemFunctionLockChangedEventArgs(py::wrapper::Windows::UI::Input::SystemFunctionLockChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9135,12 +8919,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_SystemFunctionLockIndicatorChangedEventArgs(py::wrapper::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9298,12 +9076,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_TappedEventArgs(py::wrapper::Windows::UI::Input::TappedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9453,12 +9225,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_IPointerPointTransform(py::wrapper::Windows::UI::Input::IPointerPointTransform* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9659,12 +9425,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_CrossSlideThresholds(py::wrapper::Windows::UI::Input::CrossSlideThresholds* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9873,12 +9633,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_ManipulationDelta(py::wrapper::Windows::UI::Input::ManipulationDelta* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10086,12 +9840,6 @@ namespace py::cpp::Windows::UI::Input
     static void _dealloc_ManipulationVelocities(py::wrapper::Windows::UI::Input::ManipulationVelocities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

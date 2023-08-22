@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_ActivatedDeferral(py::wrapper::Windows::UI::WebUI::ActivatedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -124,12 +118,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_ActivatedOperation(py::wrapper::Windows::UI::WebUI::ActivatedOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -229,12 +217,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_BackgroundActivatedEventArgs(py::wrapper::Windows::UI::WebUI::BackgroundActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -324,12 +306,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_EnteredBackgroundEventArgs(py::wrapper::Windows::UI::WebUI::EnteredBackgroundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -429,12 +405,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_HtmlPrintDocumentSource(py::wrapper::Windows::UI::WebUI::HtmlPrintDocumentSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -993,12 +963,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_LeavingBackgroundEventArgs(py::wrapper::Windows::UI::WebUI::LeavingBackgroundEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1098,12 +1062,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_NewWebUIViewCreatedEventArgs(py::wrapper::Windows::UI::WebUI::NewWebUIViewCreatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1263,12 +1221,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_SuspendingDeferral(py::wrapper::Windows::UI::WebUI::SuspendingDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1369,12 +1321,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_SuspendingEventArgs(py::wrapper::Windows::UI::WebUI::SuspendingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1464,12 +1410,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_SuspendingOperation(py::wrapper::Windows::UI::WebUI::SuspendingOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2081,12 +2021,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIAppointmentsProviderAddAppointmentActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderAddAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2296,12 +2230,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2511,12 +2439,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2726,12 +2648,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2981,12 +2897,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3290,12 +3200,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIBackgroundTaskInstanceRuntimeClass(py::wrapper::Windows::UI::WebUI::WebUIBackgroundTaskInstanceRuntimeClass* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3616,12 +3520,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIBarcodeScannerPreviewActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIBarcodeScannerPreviewActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3811,12 +3709,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUICachedFileUpdaterActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUICachedFileUpdaterActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4006,12 +3898,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUICameraSettingsActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUICameraSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4201,12 +4087,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUICommandLineActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUICommandLineActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4396,12 +4276,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactCallActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4631,12 +4505,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactMapActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactMapActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4846,12 +4714,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactMessageActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactMessageActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5081,12 +4943,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactPanelActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactPanelActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5296,12 +5152,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactPickerActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactPickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5471,12 +5321,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactPostActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactPostActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5706,12 +5550,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIContactVideoCallActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIContactVideoCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5941,12 +5779,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIDeviceActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIDeviceActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6176,12 +6008,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIDevicePairingActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIDevicePairingActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6371,12 +6197,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIDialReceiverActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIDialReceiverActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6626,12 +6446,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIFileActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIFileActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6881,12 +6695,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIFileOpenPickerActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7096,12 +6904,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIFileOpenPickerContinuationEventArgs(py::wrapper::Windows::UI::WebUI::WebUIFileOpenPickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7311,12 +7113,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIFileSavePickerActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7546,12 +7342,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIFileSavePickerContinuationEventArgs(py::wrapper::Windows::UI::WebUI::WebUIFileSavePickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7761,12 +7551,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIFolderPickerContinuationEventArgs(py::wrapper::Windows::UI::WebUI::WebUIFolderPickerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7976,12 +7760,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUILaunchActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUILaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8251,12 +8029,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUILockScreenActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUILockScreenActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8466,12 +8238,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUILockScreenCallActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUILockScreenCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8701,12 +8467,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUILockScreenComponentActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUILockScreenComponentActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8856,12 +8616,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUINavigatedDeferral(py::wrapper::Windows::UI::WebUI::WebUINavigatedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8962,12 +8716,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUINavigatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUINavigatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9057,12 +8805,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUINavigatedOperation(py::wrapper::Windows::UI::WebUI::WebUINavigatedOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9162,12 +8904,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIPhoneCallActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIPhoneCallActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9357,12 +9093,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIPrint3DWorkflowActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIPrint3DWorkflowActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9532,12 +9262,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIPrintTaskSettingsActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIPrintTaskSettingsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9707,12 +9431,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIPrintWorkflowForegroundTaskActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIPrintWorkflowForegroundTaskActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9862,12 +9580,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIProtocolActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIProtocolActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10117,12 +9829,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIProtocolForResultsActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIProtocolForResultsActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10392,12 +10098,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIRestrictedLaunchActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIRestrictedLaunchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10587,12 +10287,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUISearchActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUISearchActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10822,12 +10516,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIShareTargetActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIShareTargetActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11017,12 +10705,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIStartupTaskActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIStartupTaskActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11212,12 +10894,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIToastNotificationActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIToastNotificationActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11427,12 +11103,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIUserDataAccountProviderActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIUserDataAccountProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11602,12 +11272,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIView(py::wrapper::Windows::UI::WebUI::WebUIView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13324,12 +12988,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIVoiceCommandActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIVoiceCommandActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13519,12 +13177,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIWalletActionActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIWalletActionActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13734,12 +13386,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIWebAccountProviderActivatedEventArgs(py::wrapper::Windows::UI::WebUI::WebUIWebAccountProviderActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13929,12 +13575,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_WebUIWebAuthenticationBrokerContinuationEventArgs(py::wrapper::Windows::UI::WebUI::WebUIWebAuthenticationBrokerContinuationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14124,12 +13764,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_IActivatedEventArgsDeferral(py::wrapper::Windows::UI::WebUI::IActivatedEventArgsDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14219,12 +13853,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_IWebUIBackgroundTaskInstance(py::wrapper::Windows::UI::WebUI::IWebUIBackgroundTaskInstance* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14342,12 +13970,6 @@ namespace py::cpp::Windows::UI::WebUI
     static void _dealloc_IWebUINavigatedEventArgs(py::wrapper::Windows::UI::WebUI::IWebUINavigatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

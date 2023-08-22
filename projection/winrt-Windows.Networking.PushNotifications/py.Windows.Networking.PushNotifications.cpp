@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     static void _dealloc_PushNotificationChannel(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -432,12 +426,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     static void _dealloc_PushNotificationChannelManagerForUser(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -664,12 +652,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     static void _dealloc_PushNotificationChannelsRevokedEventArgs(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -739,12 +721,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     static void _dealloc_PushNotificationReceivedEventArgs(py::wrapper::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -962,12 +938,6 @@ namespace py::cpp::Windows::Networking::PushNotifications
     static void _dealloc_RawNotification(py::wrapper::Windows::Networking::PushNotifications::RawNotification* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

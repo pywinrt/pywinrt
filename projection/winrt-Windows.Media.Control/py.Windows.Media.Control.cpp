@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_CurrentSessionChangedEventArgs(py::wrapper::Windows::Media::Control::CurrentSessionChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -93,12 +87,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_GlobalSystemMediaTransportControlsSession(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -871,12 +859,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_GlobalSystemMediaTransportControlsSessionManager(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1126,12 +1108,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_GlobalSystemMediaTransportControlsSessionMediaProperties(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1401,12 +1377,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_GlobalSystemMediaTransportControlsSessionPlaybackControls(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1776,12 +1746,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_GlobalSystemMediaTransportControlsSessionPlaybackInfo(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1971,12 +1935,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_GlobalSystemMediaTransportControlsSessionTimelineProperties(py::wrapper::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2166,12 +2124,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_MediaPropertiesChangedEventArgs(py::wrapper::Windows::Media::Control::MediaPropertiesChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2241,12 +2193,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_PlaybackInfoChangedEventArgs(py::wrapper::Windows::Media::Control::PlaybackInfoChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2316,12 +2262,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_SessionsChangedEventArgs(py::wrapper::Windows::Media::Control::SessionsChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2391,12 +2331,6 @@ namespace py::cpp::Windows::Media::Control
     static void _dealloc_TimelinePropertiesChangedEventArgs(py::wrapper::Windows::Media::Control::TimelinePropertiesChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

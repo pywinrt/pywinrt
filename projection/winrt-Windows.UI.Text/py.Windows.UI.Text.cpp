@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_ContentLinkInfo(py::wrapper::Windows::UI::Text::ContentLinkInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -355,12 +349,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_FontWeights(py::wrapper::Windows::UI::Text::FontWeights* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -670,12 +658,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_RichEditTextDocument(py::wrapper::Windows::UI::Text::RichEditTextDocument* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1779,12 +1761,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_RichEditTextRange(py::wrapper::Windows::UI::Text::RichEditTextRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3679,12 +3655,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_ITextCharacterFormat(py::wrapper::Windows::UI::Text::ITextCharacterFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4973,12 +4943,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_ITextDocument(py::wrapper::Windows::UI::Text::ITextDocument* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5850,12 +5814,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_ITextParagraphFormat(py::wrapper::Windows::UI::Text::ITextParagraphFormat* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7156,12 +7114,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_ITextRange(py::wrapper::Windows::UI::Text::ITextRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8794,12 +8746,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_ITextSelection(py::wrapper::Windows::UI::Text::ITextSelection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10766,12 +10712,6 @@ namespace py::cpp::Windows::UI::Text
     static void _dealloc_FontWeight(py::wrapper::Windows::UI::Text::FontWeight* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

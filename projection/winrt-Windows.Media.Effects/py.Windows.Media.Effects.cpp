@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_AudioCaptureEffectsManager(py::wrapper::Windows::Media::Effects::AudioCaptureEffectsManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -168,12 +162,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_AudioEffect(py::wrapper::Windows::Media::Effects::AudioEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -303,12 +291,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_AudioEffectDefinition(py::wrapper::Windows::Media::Effects::AudioEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -562,12 +544,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_AudioRenderEffectsManager(py::wrapper::Windows::Media::Effects::AudioRenderEffectsManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -783,12 +759,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_CompositeVideoFrameContext(py::wrapper::Windows::Media::Effects::CompositeVideoFrameContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -950,12 +920,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_ProcessAudioFrameContext(py::wrapper::Windows::Media::Effects::ProcessAudioFrameContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1065,12 +1029,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_ProcessVideoFrameContext(py::wrapper::Windows::Media::Effects::ProcessVideoFrameContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1202,12 +1160,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_SlowMotionEffectDefinition(py::wrapper::Windows::Media::Effects::SlowMotionEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1405,12 +1357,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_VideoCompositorDefinition(py::wrapper::Windows::Media::Effects::VideoCompositorDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1560,12 +1506,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_VideoEffectDefinition(py::wrapper::Windows::Media::Effects::VideoEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1697,12 +1637,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_VideoTransformEffectDefinition(py::wrapper::Windows::Media::Effects::VideoTransformEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2120,12 +2054,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_VideoTransformSphericalProjection(py::wrapper::Windows::Media::Effects::VideoTransformSphericalProjection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2435,12 +2363,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_IAudioEffectDefinition(py::wrapper::Windows::Media::Effects::IAudioEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2550,12 +2472,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_IBasicAudioEffect(py::wrapper::Windows::Media::Effects::IBasicAudioEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2828,12 +2744,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_IBasicVideoEffect(py::wrapper::Windows::Media::Effects::IBasicVideoEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3147,12 +3057,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_IVideoCompositor(py::wrapper::Windows::Media::Effects::IVideoCompositor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3406,12 +3310,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_IVideoCompositorDefinition(py::wrapper::Windows::Media::Effects::IVideoCompositorDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3521,12 +3419,6 @@ namespace py::cpp::Windows::Media::Effects
     static void _dealloc_IVideoEffectDefinition(py::wrapper::Windows::Media::Effects::IVideoEffectDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

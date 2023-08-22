@@ -18,12 +18,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_ImageVariableDescriptorPreview(py::wrapper::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -233,12 +227,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_InferencingOptionsPreview(py::wrapper::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -572,12 +560,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_LearningModelBindingPreview(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -964,12 +946,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_LearningModelDescriptionPreview(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1199,12 +1175,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_LearningModelEvaluationResultPreview(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1314,12 +1284,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_LearningModelPreview(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1587,12 +1551,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_LearningModelVariableDescriptorPreview(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1742,12 +1700,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_MapVariableDescriptorPreview(py::wrapper::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1977,12 +1929,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_SequenceVariableDescriptorPreview(py::wrapper::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2152,12 +2098,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_TensorVariableDescriptorPreview(py::wrapper::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2347,12 +2287,6 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
     static void _dealloc_ILearningModelVariableDescriptorPreview(py::wrapper::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     static void _dealloc_ContactPickerUI(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -316,12 +310,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::Provider
     static void _dealloc_ContactRemovedEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

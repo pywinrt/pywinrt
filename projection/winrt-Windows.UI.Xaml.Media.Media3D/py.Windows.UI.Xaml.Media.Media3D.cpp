@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     static void _dealloc_CompositeTransform3D(py::wrapper::Windows::UI::Xaml::Media::Media3D::CompositeTransform3D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -951,12 +945,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     static void _dealloc_Matrix3DHelper(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3DHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1264,12 +1252,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     static void _dealloc_PerspectiveTransform3D(py::wrapper::Windows::UI::Xaml::Media::Media3D::PerspectiveTransform3D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1563,12 +1545,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     static void _dealloc_Transform3D(py::wrapper::Windows::UI::Xaml::Media::Media3D::Transform3D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1684,12 +1660,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
     static void _dealloc_Matrix3D(py::wrapper::Windows::UI::Xaml::Media::Media3D::Matrix3D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics
     static void _dealloc_IGeometrySource2D(py::wrapper::Windows::Graphics::IGeometrySource2D* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -125,12 +119,6 @@ namespace py::cpp::Windows::Graphics
     static void _dealloc_DisplayAdapterId(py::wrapper::Windows::Graphics::DisplayAdapterId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -268,12 +256,6 @@ namespace py::cpp::Windows::Graphics
     static void _dealloc_DisplayId(py::wrapper::Windows::Graphics::DisplayId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -378,12 +360,6 @@ namespace py::cpp::Windows::Graphics
     static void _dealloc_PointInt32(py::wrapper::Windows::Graphics::PointInt32* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -524,12 +500,6 @@ namespace py::cpp::Windows::Graphics
     static void _dealloc_RectInt32(py::wrapper::Windows::Graphics::RectInt32* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -736,12 +706,6 @@ namespace py::cpp::Windows::Graphics
     static void _dealloc_SizeInt32(py::wrapper::Windows::Graphics::SizeInt32* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

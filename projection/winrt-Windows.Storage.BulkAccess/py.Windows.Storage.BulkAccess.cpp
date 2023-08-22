@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     static void _dealloc_FileInformation(py::wrapper::Windows::Storage::BulkAccess::FileInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1301,12 +1295,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     static void _dealloc_FileInformationFactory(py::wrapper::Windows::Storage::BulkAccess::FileInformationFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1619,12 +1607,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     static void _dealloc_FolderInformation(py::wrapper::Windows::Storage::BulkAccess::FolderInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3167,12 +3149,6 @@ namespace py::cpp::Windows::Storage::BulkAccess
     static void _dealloc_IStorageItemInformation(py::wrapper::Windows::Storage::BulkAccess::IStorageItemInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

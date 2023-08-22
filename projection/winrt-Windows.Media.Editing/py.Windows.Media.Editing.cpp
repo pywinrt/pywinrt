@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Editing
     static void _dealloc_BackgroundAudioTrack(py::wrapper::Windows::Media::Editing::BackgroundAudioTrack* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -489,12 +483,6 @@ namespace py::cpp::Windows::Media::Editing
     static void _dealloc_EmbeddedAudioTrack(py::wrapper::Windows::Media::Editing::EmbeddedAudioTrack* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -594,12 +582,6 @@ namespace py::cpp::Windows::Media::Editing
     static void _dealloc_MediaClip(py::wrapper::Windows::Media::Editing::MediaClip* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1234,12 +1216,6 @@ namespace py::cpp::Windows::Media::Editing
     static void _dealloc_MediaComposition(py::wrapper::Windows::Media::Editing::MediaComposition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1802,12 +1778,6 @@ namespace py::cpp::Windows::Media::Editing
     static void _dealloc_MediaOverlay(py::wrapper::Windows::Media::Editing::MediaOverlay* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2156,12 +2126,6 @@ namespace py::cpp::Windows::Media::Editing
     static void _dealloc_MediaOverlayLayer(py::wrapper::Windows::Media::Editing::MediaOverlayLayer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

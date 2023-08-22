@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisement(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -374,12 +368,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementBytePattern(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -631,12 +619,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementDataSection(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1318,12 +1300,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementFilter(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1498,12 +1474,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementPublisher(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1912,12 +1882,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementPublisherStatusChangedEventArgs(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2047,12 +2011,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementReceivedEventArgs(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2399,12 +2357,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementWatcher(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2918,12 +2870,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEAdvertisementWatcherStoppedEventArgs(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3051,12 +2997,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static void _dealloc_BluetoothLEManufacturerData(py::wrapper::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

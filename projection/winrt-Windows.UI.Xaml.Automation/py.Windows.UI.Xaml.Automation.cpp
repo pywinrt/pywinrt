@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_AnnotationPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::AnnotationPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -266,12 +260,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_AutomationAnnotation(py::wrapper::Windows::UI::Xaml::Automation::AutomationAnnotation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -497,12 +485,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_AutomationElementIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::AutomationElementIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1372,12 +1354,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_AutomationProperties(py::wrapper::Windows::UI::Xaml::Automation::AutomationProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3791,12 +3767,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_AutomationProperty(py::wrapper::Windows::UI::Xaml::Automation::AutomationProperty* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3866,12 +3836,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_DockPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::DockPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3981,12 +3945,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_DragPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::DragPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4156,12 +4114,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_DropTargetPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::DropTargetPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4291,12 +4243,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_ExpandCollapsePatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4406,12 +4352,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_GridItemPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::GridItemPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4601,12 +4541,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_GridPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::GridPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4736,12 +4670,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_MultipleViewPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::MultipleViewPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4871,12 +4799,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_RangeValuePatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::RangeValuePatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5086,12 +5008,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_ScrollPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::ScrollPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5321,12 +5237,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_SelectionItemPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::SelectionItemPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5456,12 +5366,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_SelectionPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::SelectionPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5611,12 +5515,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_SpreadsheetItemPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5726,12 +5624,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_StylesPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::StylesPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5961,12 +5853,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_TableItemPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::TableItemPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6096,12 +5982,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_TablePatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::TablePatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6251,12 +6131,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_TogglePatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::TogglePatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6366,12 +6240,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_TransformPattern2Identifiers(py::wrapper::Windows::UI::Xaml::Automation::TransformPattern2Identifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6541,12 +6409,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_TransformPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::TransformPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6696,12 +6558,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_ValuePatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::ValuePatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6831,12 +6687,6 @@ namespace py::cpp::Windows::UI::Xaml::Automation
     static void _dealloc_WindowPatternIdentifiers(py::wrapper::Windows::UI::Xaml::Automation::WindowPatternIdentifiers* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -159,12 +159,6 @@ namespace py::cpp::Windows::Globalization::DateTimeFormatting
     static void _dealloc_DateTimeFormatter(py::wrapper::Windows::Globalization::DateTimeFormatting::DateTimeFormatter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

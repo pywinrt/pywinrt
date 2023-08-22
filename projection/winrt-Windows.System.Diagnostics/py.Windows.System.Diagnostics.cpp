@@ -18,12 +18,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_DiagnosticActionResult(py::wrapper::Windows::System::Diagnostics::DiagnosticActionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -133,12 +127,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_DiagnosticInvoker(py::wrapper::Windows::System::Diagnostics::DiagnosticInvoker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -374,12 +362,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessCpuUsage(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -479,12 +461,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessCpuUsageReport(py::wrapper::Windows::System::Diagnostics::ProcessCpuUsageReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -594,12 +570,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessDiagnosticInfo(py::wrapper::Windows::System::Diagnostics::ProcessDiagnosticInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -951,12 +921,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessDiskUsage(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1056,12 +1020,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessDiskUsageReport(py::wrapper::Windows::System::Diagnostics::ProcessDiskUsageReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1251,12 +1209,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessMemoryUsage(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1356,12 +1308,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_ProcessMemoryUsageReport(py::wrapper::Windows::System::Diagnostics::ProcessMemoryUsageReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1671,12 +1617,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_SystemCpuUsage(py::wrapper::Windows::System::Diagnostics::SystemCpuUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1776,12 +1716,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_SystemCpuUsageReport(py::wrapper::Windows::System::Diagnostics::SystemCpuUsageReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1911,12 +1845,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_SystemDiagnosticInfo(py::wrapper::Windows::System::Diagnostics::SystemDiagnosticInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2128,12 +2056,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_SystemMemoryUsage(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2233,12 +2155,6 @@ namespace py::cpp::Windows::System::Diagnostics
     static void _dealloc_SystemMemoryUsageReport(py::wrapper::Windows::System::Diagnostics::SystemMemoryUsageReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

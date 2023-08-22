@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactDataProviderConnection(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -304,12 +298,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactDataProviderTriggerDetails(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -399,12 +387,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListCreateOrUpdateContactRequest(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -576,12 +558,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListCreateOrUpdateContactRequestEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -701,12 +677,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListDeleteContactRequest(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -876,12 +846,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListDeleteContactRequestEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1001,12 +965,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListServerSearchReadBatchRequest(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1250,12 +1208,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListServerSearchReadBatchRequestEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1375,12 +1327,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListSyncManagerSyncRequest(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1530,12 +1476,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts::DataProvider
     static void _dealloc_ContactListSyncManagerSyncRequestEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

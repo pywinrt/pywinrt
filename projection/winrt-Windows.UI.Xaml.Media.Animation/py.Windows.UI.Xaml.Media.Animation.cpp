@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_AddDeleteThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -137,12 +131,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_BackEase(py::wrapper::Windows::UI::Xaml::Media::Animation::BackEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -322,12 +310,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_BasicConnectedAnimationConfiguration(py::wrapper::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -419,12 +401,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_BeginStoryboard(py::wrapper::Windows::UI::Xaml::Media::Animation::BeginStoryboard* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -604,12 +580,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_BounceEase(py::wrapper::Windows::UI::Xaml::Media::Animation::BounceEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -857,12 +827,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_CircleEase(py::wrapper::Windows::UI::Xaml::Media::Animation::CircleEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -954,12 +918,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ColorAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1411,12 +1369,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ColorAnimationUsingKeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1594,12 +1546,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ColorKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1847,12 +1793,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ColorKeyFrameCollection(py::wrapper::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2492,12 +2432,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_CommonNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2741,12 +2675,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ConnectedAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3075,12 +3003,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ConnectedAnimationConfiguration(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3150,12 +3072,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ConnectedAnimationService(py::wrapper::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3438,12 +3354,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ContentThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::ContentThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3691,12 +3601,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ContinuumNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4134,12 +4038,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_CubicEase(py::wrapper::Windows::UI::Xaml::Media::Animation::CubicEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4231,12 +4129,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DirectConnectedAnimationConfiguration(py::wrapper::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4328,12 +4220,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DiscreteColorKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4425,12 +4311,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DiscreteDoubleKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4522,12 +4402,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DiscreteObjectKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4619,12 +4493,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DiscretePointKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4716,12 +4584,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DoubleAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5173,12 +5035,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DoubleAnimationUsingKeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5356,12 +5212,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DoubleKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5609,12 +5459,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DoubleKeyFrameCollection(py::wrapper::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6254,12 +6098,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DragItemThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6439,12 +6277,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DragOverThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6760,12 +6592,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DrillInNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6857,12 +6683,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DrillInThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7246,12 +7066,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DrillOutThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7635,12 +7449,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_DropTargetItemThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7820,12 +7628,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EasingColorKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8005,12 +7807,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EasingDoubleKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8168,12 +7964,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EasingFunctionBase(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingFunctionBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8385,12 +8175,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EasingPointKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8570,12 +8354,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EdgeUIThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8755,12 +8533,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ElasticEase(py::wrapper::Windows::UI::Xaml::Media::Animation::ElasticEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9008,12 +8780,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EntranceNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9211,12 +8977,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_EntranceThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9532,12 +9292,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ExponentialEase(py::wrapper::Windows::UI::Xaml::Media::Animation::ExponentialEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9717,12 +9471,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_FadeInThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9902,12 +9650,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_FadeOutThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10087,12 +9829,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_GravityConnectedAnimationConfiguration(py::wrapper::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10232,12 +9968,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_KeySpline(py::wrapper::Windows::UI::Xaml::Media::Animation::KeySpline* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10403,12 +10133,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_KeyTimeHelper(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTimeHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10532,12 +10256,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_LinearColorKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10629,12 +10347,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_LinearDoubleKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10726,12 +10438,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_LinearPointKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10823,12 +10529,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_NavigationThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10986,12 +10686,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_NavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11146,12 +10840,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ObjectAnimationUsingKeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11329,12 +11017,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ObjectKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11582,12 +11264,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ObjectKeyFrameCollection(py::wrapper::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12227,12 +11903,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PaneThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::PaneThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12412,12 +12082,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PointAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12869,12 +12533,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PointAnimationUsingKeyFrames(py::wrapper::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13052,12 +12710,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PointKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13305,12 +12957,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PointKeyFrameCollection(py::wrapper::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13950,12 +13596,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PointerDownThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14135,12 +13775,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PointerUpThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14320,12 +13954,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PopInThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14641,12 +14269,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PopOutThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14826,12 +14448,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PopupThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::PopupThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15079,12 +14695,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_PowerEase(py::wrapper::Windows::UI::Xaml::Media::Animation::PowerEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15264,12 +14874,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_QuadraticEase(py::wrapper::Windows::UI::Xaml::Media::Animation::QuadraticEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15361,12 +14965,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_QuarticEase(py::wrapper::Windows::UI::Xaml::Media::Animation::QuarticEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15458,12 +15056,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_QuinticEase(py::wrapper::Windows::UI::Xaml::Media::Animation::QuinticEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15555,12 +15147,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_ReorderThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15630,12 +15216,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_RepeatBehaviorHelper(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15928,12 +15508,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_RepositionThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16249,12 +15823,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_RepositionThemeTransition(py::wrapper::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16434,12 +16002,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SineEase(py::wrapper::Windows::UI::Xaml::Media::Animation::SineEase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16531,12 +16093,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SlideNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16716,12 +16272,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SplineColorKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16901,12 +16451,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SplineDoubleKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17086,12 +16630,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SplinePointKeyFrame(py::wrapper::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17271,12 +16809,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SplitCloseThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18136,12 +17668,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SplitOpenThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19001,12 +18527,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_Storyboard(py::wrapper::Windows::UI::Xaml::Media::Animation::Storyboard* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19625,12 +19145,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SuppressNavigationTransitionInfo(py::wrapper::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19722,12 +19236,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SwipeBackThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20043,12 +19551,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_SwipeHintThemeAnimation(py::wrapper::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20342,12 +19844,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_Timeline(py::wrapper::Windows::UI::Xaml::Media::Animation::Timeline* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20954,12 +20450,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_TimelineCollection(py::wrapper::Windows::UI::Xaml::Media::Animation::TimelineCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21577,12 +21067,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_Transition(py::wrapper::Windows::UI::Xaml::Media::Animation::Transition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21674,12 +21158,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_TransitionCollection(py::wrapper::Windows::UI::Xaml::Media::Animation::TransitionCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22328,12 +21806,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_KeyTime(py::wrapper::Windows::UI::Xaml::Media::Animation::KeyTime* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22439,12 +21911,6 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
     static void _dealloc_RepeatBehavior(py::wrapper::Windows::UI::Xaml::Media::Animation::RepeatBehavior* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

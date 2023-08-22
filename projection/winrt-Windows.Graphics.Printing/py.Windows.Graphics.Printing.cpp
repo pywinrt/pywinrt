@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintManager(py::wrapper::Windows::Graphics::Printing::PrintManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -250,12 +244,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintPageInfo(py::wrapper::Windows::Graphics::Printing::PrintPageInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -605,12 +593,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintPageRange(py::wrapper::Windows::Graphics::Printing::PrintPageRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -720,12 +702,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintPageRangeOptions(py::wrapper::Windows::Graphics::Printing::PrintPageRangeOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -939,12 +915,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTask(py::wrapper::Windows::Graphics::Printing::PrintTask* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1398,12 +1368,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskCompletedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintTaskCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1493,12 +1457,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskOptions(py::wrapper::Windows::Graphics::Printing::PrintTaskOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2308,12 +2266,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskProgressingEventArgs(py::wrapper::Windows::Graphics::Printing::PrintTaskProgressingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2403,12 +2355,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskRequest(py::wrapper::Windows::Graphics::Printing::PrintTaskRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2561,12 +2507,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskRequestedDeferral(py::wrapper::Windows::Graphics::Printing::PrintTaskRequestedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2667,12 +2607,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskRequestedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintTaskRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2762,12 +2696,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskSourceRequestedArgs(py::wrapper::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2920,12 +2848,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintTaskSourceRequestedDeferral(py::wrapper::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3380,12 +3302,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_IPrintDocumentSource(py::wrapper::Windows::Graphics::Printing::IPrintDocumentSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3455,12 +3371,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_IPrintTaskOptionsCore(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3562,12 +3472,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_IPrintTaskOptionsCoreProperties(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4205,12 +4109,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_IPrintTaskOptionsCoreUIConfiguration(py::wrapper::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4334,12 +4232,6 @@ namespace py::cpp::Windows::Graphics::Printing
     static void _dealloc_PrintPageDescription(py::wrapper::Windows::Graphics::Printing::PrintPageDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -40,12 +40,6 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     static void _dealloc_PhoneCallOrigin(py::wrapper::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

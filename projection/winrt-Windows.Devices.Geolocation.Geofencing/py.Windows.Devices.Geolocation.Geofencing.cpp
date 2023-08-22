@@ -101,12 +101,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     static void _dealloc_Geofence(py::wrapper::Windows::Devices::Geolocation::Geofencing::Geofence* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -316,12 +310,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     static void _dealloc_GeofenceMonitor(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -611,12 +599,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Geofencing
     static void _dealloc_GeofenceStateChangeReport(py::wrapper::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

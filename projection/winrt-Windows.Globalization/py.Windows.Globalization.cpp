@@ -258,12 +258,6 @@ namespace py::cpp::Windows::Globalization
     static void _dealloc_Calendar(py::wrapper::Windows::Globalization::Calendar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3464,12 +3458,6 @@ namespace py::cpp::Windows::Globalization
     static void _dealloc_CurrencyAmount(py::wrapper::Windows::Globalization::CurrencyAmount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6910,12 +6898,6 @@ namespace py::cpp::Windows::Globalization
     static void _dealloc_GeographicRegion(py::wrapper::Windows::Globalization::GeographicRegion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7157,12 +7139,6 @@ namespace py::cpp::Windows::Globalization
     static void _dealloc_JapanesePhoneme(py::wrapper::Windows::Globalization::JapanesePhoneme* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7403,12 +7379,6 @@ namespace py::cpp::Windows::Globalization
     static void _dealloc_Language(py::wrapper::Windows::Globalization::Language* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

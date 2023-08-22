@@ -144,12 +144,6 @@ namespace py::cpp::Windows::System::Profile
     static void _dealloc_AnalyticsVersionInfo(py::wrapper::Windows::System::Profile::AnalyticsVersionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -485,12 +479,6 @@ namespace py::cpp::Windows::System::Profile
     static void _dealloc_HardwareToken(py::wrapper::Windows::System::Profile::HardwareToken* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1668,12 +1656,6 @@ namespace py::cpp::Windows::System::Profile
     static void _dealloc_SystemIdentificationInfo(py::wrapper::Windows::System::Profile::SystemIdentificationInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1902,12 +1884,6 @@ namespace py::cpp::Windows::System::Profile
     static void _dealloc_UnsupportedAppRequirement(py::wrapper::Windows::System::Profile::UnsupportedAppRequirement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

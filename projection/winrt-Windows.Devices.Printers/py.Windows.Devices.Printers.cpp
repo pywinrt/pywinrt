@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppAttributeError(py::wrapper::Windows::Devices::Printers::IppAttributeError* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -163,12 +157,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppAttributeValue(py::wrapper::Windows::Devices::Printers::IppAttributeValue* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2065,12 +2053,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppIntegerRange(py::wrapper::Windows::Devices::Printers::IppIntegerRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2180,12 +2162,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppPrintDevice(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2697,12 +2673,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppResolution(py::wrapper::Windows::Devices::Printers::IppResolution* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2832,12 +2802,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppSetAttributesResult(py::wrapper::Windows::Devices::Printers::IppSetAttributesResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2972,12 +2936,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_IppTextWithLanguage(py::wrapper::Windows::Devices::Printers::IppTextWithLanguage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3109,12 +3067,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_PageConfigurationSettings(py::wrapper::Windows::Devices::Printers::PageConfigurationSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3280,12 +3232,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_PdlPassthroughProvider(py::wrapper::Windows::Devices::Printers::PdlPassthroughProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3445,12 +3391,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_PdlPassthroughTarget(py::wrapper::Windows::Devices::Printers::PdlPassthroughTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3654,12 +3594,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_Print3DDevice(py::wrapper::Windows::Devices::Printers::Print3DDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3811,12 +3745,6 @@ namespace py::cpp::Windows::Devices::Printers
     static void _dealloc_PrintSchema(py::wrapper::Windows::Devices::Printers::PrintSchema* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatCapabilities(py::wrapper::Windows::ApplicationModel::Chat::ChatCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -333,12 +327,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatConversation(py::wrapper::Windows::ApplicationModel::Chat::ChatConversation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -927,12 +915,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatConversationReader(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1074,12 +1056,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatConversationThreadingInfo(py::wrapper::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1383,12 +1359,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessage(py::wrapper::Windows::ApplicationModel::Chat::ChatMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2623,12 +2593,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageAttachment(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageAttachment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3101,12 +3065,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageChange(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3216,12 +3174,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageChangeReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3385,12 +3337,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageChangeTracker(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangeTracker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3552,12 +3498,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageChangedDeferral(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3658,12 +3598,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageChangedEventArgs(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4012,12 +3946,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageNotificationTriggerDetails(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4187,12 +4115,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageReader(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4312,12 +4234,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageStore(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5232,12 +5148,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageStoreChangedEventArgs(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5347,12 +5257,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageTransport(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5572,12 +5476,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageTransportConfiguration(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5747,12 +5645,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatMessageValidationResult(py::wrapper::Windows::ApplicationModel::Chat::ChatMessageValidationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5924,12 +5816,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatQueryOptions(py::wrapper::Windows::ApplicationModel::Chat::ChatQueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6069,12 +5955,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatRecipientDeliveryInfo(py::wrapper::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6388,12 +6268,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatSearchReader(py::wrapper::Windows::ApplicationModel::Chat::ChatSearchReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6513,12 +6387,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatSyncConfiguration(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6684,12 +6552,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_ChatSyncManager(py::wrapper::Windows::ApplicationModel::Chat::ChatSyncManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6936,12 +6798,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsEndUserMessage(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7176,12 +7032,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsEndUserMessageAction(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7271,12 +7121,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsEndUserMessageAvailableEventArgs(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7386,12 +7230,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsEndUserMessageAvailableTriggerDetails(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7501,12 +7339,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsEndUserMessageManager(py::wrapper::Windows::ApplicationModel::Chat::RcsEndUserMessageManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7824,12 +7656,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsServiceKindSupportedChangedEventArgs(py::wrapper::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7919,12 +7745,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsTransport(py::wrapper::Windows::ApplicationModel::Chat::RcsTransport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8203,12 +8023,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RcsTransportConfiguration(py::wrapper::Windows::ApplicationModel::Chat::RcsTransportConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8398,12 +8212,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_RemoteParticipantComposingChangedEventArgs(py::wrapper::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8533,12 +8341,6 @@ namespace py::cpp::Windows::ApplicationModel::Chat
     static void _dealloc_IChatItem(py::wrapper::Windows::ApplicationModel::Chat::IChatItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

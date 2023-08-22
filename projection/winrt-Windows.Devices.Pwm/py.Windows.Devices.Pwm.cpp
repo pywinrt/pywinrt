@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Pwm
     static void _dealloc_PwmController(py::wrapper::Windows::Devices::Pwm::PwmController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -381,12 +375,6 @@ namespace py::cpp::Windows::Devices::Pwm
     static void _dealloc_PwmPin(py::wrapper::Windows::Devices::Pwm::PwmPin* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

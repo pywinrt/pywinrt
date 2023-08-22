@@ -402,11 +402,6 @@ namespace py::cpp::_winrt
     {
         PyTypeObject* tp = Py_TYPE(self);
 
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->array);
         tp->tp_free(self);
         Py_DECREF(tp);

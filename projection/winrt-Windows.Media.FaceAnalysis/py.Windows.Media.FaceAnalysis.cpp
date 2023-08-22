@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     static void _dealloc_DetectedFace(py::wrapper::Windows::Media::FaceAnalysis::DetectedFace* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     static void _dealloc_FaceDetector(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -469,12 +457,6 @@ namespace py::cpp::Windows::Media::FaceAnalysis
     static void _dealloc_FaceTracker(py::wrapper::Windows::Media::FaceAnalysis::FaceTracker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

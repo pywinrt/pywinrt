@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     static void _dealloc_FrameNavigationOptions(py::wrapper::Windows::UI::Xaml::Navigation::FrameNavigationOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -211,12 +205,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     static void _dealloc_NavigatingCancelEventArgs(py::wrapper::Windows::UI::Xaml::Navigation::NavigatingCancelEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -414,12 +402,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     static void _dealloc_NavigationEventArgs(py::wrapper::Windows::UI::Xaml::Navigation::NavigationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -637,12 +619,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     static void _dealloc_NavigationFailedEventArgs(py::wrapper::Windows::UI::Xaml::Navigation::NavigationFailedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -826,12 +802,6 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
     static void _dealloc_PageStackEntry(py::wrapper::Windows::UI::Xaml::Navigation::PageStackEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

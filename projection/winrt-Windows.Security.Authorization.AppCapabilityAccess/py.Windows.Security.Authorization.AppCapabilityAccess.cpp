@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
     static void _dealloc_AppCapability(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapability* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -417,12 +411,6 @@ namespace py::cpp::Windows::Security::Authorization::AppCapabilityAccess
     static void _dealloc_AppCapabilityAccessChangedEventArgs(py::wrapper::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

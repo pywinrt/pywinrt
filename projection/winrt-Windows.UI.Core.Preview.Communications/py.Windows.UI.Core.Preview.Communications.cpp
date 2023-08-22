@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     static void _dealloc_PreviewTeamCleanupRequestedEventArgs(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -123,12 +117,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     static void _dealloc_PreviewTeamCommandInvokedEventArgs(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -240,12 +228,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     static void _dealloc_PreviewTeamDeviceCredentials(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -375,12 +357,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     static void _dealloc_PreviewTeamEndMeetingRequestedEventArgs(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -480,12 +456,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     static void _dealloc_PreviewTeamJoinMeetingRequestedEventArgs(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -605,12 +575,6 @@ namespace py::cpp::Windows::UI::Core::Preview::Communications
     static void _dealloc_PreviewTeamView(py::wrapper::Windows::UI::Core::Preview::Communications::PreviewTeamView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

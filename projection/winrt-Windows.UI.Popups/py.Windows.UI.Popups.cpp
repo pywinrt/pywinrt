@@ -58,12 +58,6 @@ namespace py::cpp::Windows::UI::Popups
     static void _dealloc_MessageDialog(py::wrapper::Windows::UI::Popups::MessageDialog* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -445,12 +439,6 @@ namespace py::cpp::Windows::UI::Popups
     static void _dealloc_PopupMenu(py::wrapper::Windows::UI::Popups::PopupMenu* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -695,12 +683,6 @@ namespace py::cpp::Windows::UI::Popups
     static void _dealloc_UICommand(py::wrapper::Windows::UI::Popups::UICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -936,12 +918,6 @@ namespace py::cpp::Windows::UI::Popups
     static void _dealloc_UICommandSeparator(py::wrapper::Windows::UI::Popups::UICommandSeparator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1155,12 +1131,6 @@ namespace py::cpp::Windows::UI::Popups
     static void _dealloc_IUICommand(py::wrapper::Windows::UI::Popups::IUICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

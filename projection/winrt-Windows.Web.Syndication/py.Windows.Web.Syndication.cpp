@@ -57,12 +57,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationAttribute(py::wrapper::Windows::Web::Syndication::SyndicationAttribute* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -330,12 +324,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationCategory(py::wrapper::Windows::Web::Syndication::SyndicationCategory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -898,12 +886,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationClient(py::wrapper::Windows::Web::Syndication::SyndicationClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1332,12 +1314,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationContent(py::wrapper::Windows::Web::Syndication::SyndicationContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2016,12 +1992,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationFeed(py::wrapper::Windows::Web::Syndication::SyndicationFeed* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3090,12 +3060,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationGenerator(py::wrapper::Windows::Web::Syndication::SyndicationGenerator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3660,12 +3624,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationItem(py::wrapper::Windows::Web::Syndication::SyndicationItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4761,12 +4719,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationLink(py::wrapper::Windows::Web::Syndication::SyndicationLink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5475,12 +5427,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationNode(py::wrapper::Windows::Web::Syndication::SyndicationNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5916,12 +5862,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationPerson(py::wrapper::Windows::Web::Syndication::SyndicationPerson* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6500,12 +6440,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_SyndicationText(py::wrapper::Windows::Web::Syndication::SyndicationText* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7031,12 +6965,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_ISyndicationClient(py::wrapper::Windows::Web::Syndication::ISyndicationClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7412,12 +7340,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_ISyndicationNode(py::wrapper::Windows::Web::Syndication::ISyndicationNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7799,12 +7721,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_ISyndicationText(py::wrapper::Windows::Web::Syndication::ISyndicationText* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8362,12 +8278,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_RetrievalProgress(py::wrapper::Windows::Web::Syndication::RetrievalProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8508,12 +8418,6 @@ namespace py::cpp::Windows::Web::Syndication
     static void _dealloc_TransferProgress(py::wrapper::Windows::Web::Syndication::TransferProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

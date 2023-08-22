@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static void _dealloc_SpatialSurfaceInfo(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -218,12 +212,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static void _dealloc_SpatialSurfaceMesh(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -413,12 +401,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static void _dealloc_SpatialSurfaceMeshBuffer(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -590,12 +572,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static void _dealloc_SpatialSurfaceMeshOptions(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -959,12 +935,6 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
     static void _dealloc_SpatialSurfaceObserver(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

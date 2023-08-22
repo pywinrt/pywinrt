@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Management
     static void _dealloc_MdmAlert(py::wrapper::Windows::Management::MdmAlert* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -423,12 +417,6 @@ namespace py::cpp::Windows::Management
     static void _dealloc_MdmSession(py::wrapper::Windows::Management::MdmSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

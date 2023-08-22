@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerDisableScannerRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -194,12 +188,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerDisableScannerRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerDisableScannerRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -319,12 +307,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerEnableScannerRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -495,12 +477,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerEnableScannerRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerEnableScannerRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -620,12 +596,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerFrameReader(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -903,12 +873,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerFrameReaderFrameArrivedEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerFrameReaderFrameArrivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1008,12 +972,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerGetSymbologyAttributesRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1206,12 +1164,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerGetSymbologyAttributesRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerGetSymbologyAttributesRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1331,12 +1283,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerHideVideoPreviewRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1507,12 +1453,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerHideVideoPreviewRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerHideVideoPreviewRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1632,12 +1572,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerProviderConnection(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2544,12 +2478,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerProviderTriggerDetails(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerProviderTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2639,12 +2567,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerSetActiveSymbologiesRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2835,12 +2757,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerSetActiveSymbologiesRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetActiveSymbologiesRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2960,12 +2876,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerSetSymbologyAttributesRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3176,12 +3086,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerSetSymbologyAttributesRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerSetSymbologyAttributesRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3301,12 +3205,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerStartSoftwareTriggerRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3477,12 +3375,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerStartSoftwareTriggerRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStartSoftwareTriggerRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3602,12 +3494,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerStopSoftwareTriggerRequest(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3778,12 +3664,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerStopSoftwareTriggerRequestEventArgs(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerStopSoftwareTriggerRequestEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3903,12 +3783,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeScannerVideoFrame(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeScannerVideoFrame* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4133,12 +4007,6 @@ namespace py::cpp::Windows::Devices::PointOfService::Provider
     static void _dealloc_BarcodeSymbologyAttributesBuilder(py::wrapper::Windows::Devices::PointOfService::Provider::BarcodeSymbologyAttributesBuilder* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

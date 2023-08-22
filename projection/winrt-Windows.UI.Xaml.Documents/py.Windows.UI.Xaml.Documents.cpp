@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Block(py::wrapper::Windows::UI::Xaml::Documents::Block* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -453,12 +447,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_BlockCollection(py::wrapper::Windows::UI::Xaml::Documents::BlockCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1098,12 +1086,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Bold(py::wrapper::Windows::UI::Xaml::Documents::Bold* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1195,12 +1177,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_ContactContentLinkProvider(py::wrapper::Windows::UI::Xaml::Documents::ContactContentLinkProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1292,12 +1268,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_ContentLink(py::wrapper::Windows::UI::Xaml::Documents::ContentLink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2526,12 +2496,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_ContentLinkInvokedEventArgs(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2669,12 +2633,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_ContentLinkProvider(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2766,12 +2724,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_ContentLinkProviderCollection(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProviderCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3411,12 +3363,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Glyphs(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4208,12 +4154,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Hyperlink(py::wrapper::Windows::UI::Xaml::Documents::Hyperlink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5394,12 +5334,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_HyperlinkClickEventArgs(py::wrapper::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5469,12 +5403,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Inline(py::wrapper::Windows::UI::Xaml::Documents::Inline* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5544,12 +5472,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_InlineCollection(py::wrapper::Windows::UI::Xaml::Documents::InlineCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6189,12 +6111,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_InlineUIContainer(py::wrapper::Windows::UI::Xaml::Documents::InlineUIContainer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6334,12 +6250,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Italic(py::wrapper::Windows::UI::Xaml::Documents::Italic* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6431,12 +6341,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_LineBreak(py::wrapper::Windows::UI::Xaml::Documents::LineBreak* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6528,12 +6432,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Paragraph(py::wrapper::Windows::UI::Xaml::Documents::Paragraph* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6733,12 +6631,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_PlaceContentLinkProvider(py::wrapper::Windows::UI::Xaml::Documents::PlaceContentLinkProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6830,12 +6722,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Run(py::wrapper::Windows::UI::Xaml::Documents::Run* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7063,12 +6949,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Span(py::wrapper::Windows::UI::Xaml::Documents::Span* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7186,12 +7066,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_TextElement(py::wrapper::Windows::UI::Xaml::Documents::TextElement* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8873,12 +8747,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_TextHighlighter(py::wrapper::Windows::UI::Xaml::Documents::TextHighlighter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9124,12 +8992,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_TextHighlighterBase(py::wrapper::Windows::UI::Xaml::Documents::TextHighlighterBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9199,12 +9061,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_TextPointer(py::wrapper::Windows::UI::Xaml::Documents::TextPointer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9419,12 +9275,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Typography(py::wrapper::Windows::UI::Xaml::Documents::Typography* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13234,12 +13084,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_Underline(py::wrapper::Windows::UI::Xaml::Documents::Underline* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13341,12 +13185,6 @@ namespace py::cpp::Windows::UI::Xaml::Documents
     static void _dealloc_TextRange(py::wrapper::Windows::UI::Xaml::Documents::TextRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

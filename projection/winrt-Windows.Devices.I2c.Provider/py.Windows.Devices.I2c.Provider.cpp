@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     static void _dealloc_ProviderI2cConnectionSettings(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cConnectionSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -237,12 +231,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     static void _dealloc_II2cControllerProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -344,12 +332,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     static void _dealloc_II2cDeviceProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cDeviceProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -689,12 +671,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     static void _dealloc_II2cProvider(py::wrapper::Windows::Devices::I2c::Provider::II2cProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -826,12 +802,6 @@ namespace py::cpp::Windows::Devices::I2c::Provider
     static void _dealloc_ProviderI2cTransferResult(py::wrapper::Windows::Devices::I2c::Provider::ProviderI2cTransferResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

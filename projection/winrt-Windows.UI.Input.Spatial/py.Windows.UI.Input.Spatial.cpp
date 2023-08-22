@@ -42,12 +42,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialGestureRecognizer(py::wrapper::Windows::UI::Input::Spatial::SpatialGestureRecognizer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -863,12 +857,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialHoldCanceledEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldCanceledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -958,12 +946,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialHoldCompletedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1053,12 +1035,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialHoldStartedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialHoldStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1180,12 +1156,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteraction(py::wrapper::Windows::UI::Input::Spatial::SpatialInteraction* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1275,12 +1245,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionController(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionController* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1530,12 +1494,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionControllerProperties(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionControllerProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1745,12 +1703,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionDetectedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionDetectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1912,12 +1864,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionManager(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2351,12 +2297,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionSource(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2658,12 +2598,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionSourceEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2773,12 +2707,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionSourceLocation(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2968,12 +2896,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionSourceProperties(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3127,12 +3049,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialInteractionSourceState(py::wrapper::Windows::UI::Input::Spatial::SpatialInteractionSourceState* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3444,12 +3360,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialManipulationCanceledEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCanceledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3539,12 +3449,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialManipulationCompletedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3666,12 +3570,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialManipulationDelta(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationDelta* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3761,12 +3659,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialManipulationStartedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3888,12 +3780,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialManipulationUpdatedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialManipulationUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4015,12 +3901,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialNavigationCanceledEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCanceledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4110,12 +3990,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialNavigationCompletedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4225,12 +4099,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialNavigationStartedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4412,12 +4280,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialNavigationUpdatedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialNavigationUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4527,12 +4389,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialPointerInteractionSourcePose(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerInteractionSourcePose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4702,12 +4558,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialPointerPose(py::wrapper::Windows::UI::Input::Spatial::SpatialPointerPose* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4922,12 +4772,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialRecognitionEndedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionEndedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5017,12 +4861,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialRecognitionStartedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialRecognitionStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5176,12 +5014,6 @@ namespace py::cpp::Windows::UI::Input::Spatial
     static void _dealloc_SpatialTappedEventArgs(py::wrapper::Windows::UI::Input::Spatial::SpatialTappedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

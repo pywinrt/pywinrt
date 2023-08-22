@@ -42,12 +42,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static void _dealloc_ConditionForceEffect(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConditionForceEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -328,12 +322,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static void _dealloc_ConstantForceEffect(py::wrapper::Windows::Gaming::Input::ForceFeedback::ConstantForceEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -608,12 +596,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static void _dealloc_ForceFeedbackMotor(py::wrapper::Windows::Gaming::Input::ForceFeedback::ForceFeedbackMotor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1062,12 +1044,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static void _dealloc_PeriodicForceEffect(py::wrapper::Windows::Gaming::Input::ForceFeedback::PeriodicForceEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1390,12 +1366,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static void _dealloc_RampForceEffect(py::wrapper::Windows::Gaming::Input::ForceFeedback::RampForceEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1672,12 +1642,6 @@ namespace py::cpp::Windows::Gaming::Input::ForceFeedback
     static void _dealloc_IForceFeedbackEffect(py::wrapper::Windows::Gaming::Input::ForceFeedback::IForceFeedbackEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

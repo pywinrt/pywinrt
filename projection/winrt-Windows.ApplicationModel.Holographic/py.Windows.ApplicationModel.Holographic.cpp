@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
     static void _dealloc_HolographicKeyboard(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

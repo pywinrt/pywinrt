@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Phone::StartScreen
     static void _dealloc_DualSimTile(py::wrapper::Windows::Phone::StartScreen::DualSimTile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -515,12 +509,6 @@ namespace py::cpp::Windows::Phone::StartScreen
     static void _dealloc_IToastNotificationManagerStatics3(py::wrapper::Windows::Phone::StartScreen::IToastNotificationManagerStatics3* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

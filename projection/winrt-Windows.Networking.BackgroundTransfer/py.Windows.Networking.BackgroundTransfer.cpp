@@ -55,12 +55,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundDownloader(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -889,12 +883,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundTransferCompletionGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1035,12 +1023,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundTransferCompletionGroupTriggerDetails(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferCompletionGroupTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1203,12 +1185,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundTransferContentPart(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferContentPart* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1444,12 +1420,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundTransferGroup(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1619,12 +1589,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundTransferRangesDownloadedEventArgs(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferRangesDownloadedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1801,12 +1765,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundUploader(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2804,12 +2762,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_DownloadOperation(py::wrapper::Windows::Networking::BackgroundTransfer::DownloadOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3618,12 +3570,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_ResponseInformation(py::wrapper::Windows::Networking::BackgroundTransfer::ResponseInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3773,12 +3719,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_UnconstrainedTransferRequestResult(py::wrapper::Windows::Networking::BackgroundTransfer::UnconstrainedTransferRequestResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3868,12 +3808,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_UploadOperation(py::wrapper::Windows::Networking::BackgroundTransfer::UploadOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4399,12 +4333,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_IBackgroundTransferBase(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4748,12 +4676,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_IBackgroundTransferContentPartFactory(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferContentPartFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4888,12 +4810,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_IBackgroundTransferOperation(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5153,12 +5069,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_IBackgroundTransferOperationPriority(py::wrapper::Windows::Networking::BackgroundTransfer::IBackgroundTransferOperationPriority* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5311,12 +5221,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundDownloadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundDownloadProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5557,12 +5461,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundTransferFileRange(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundTransferFileRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5706,12 +5604,6 @@ namespace py::cpp::Windows::Networking::BackgroundTransfer
     static void _dealloc_BackgroundUploadProgress(py::wrapper::Windows::Networking::BackgroundTransfer::BackgroundUploadProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Accessibility
     static void _dealloc_ScreenReaderPositionChangedEventArgs(py::wrapper::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -155,12 +149,6 @@ namespace py::cpp::Windows::UI::Accessibility
     static void _dealloc_ScreenReaderService(py::wrapper::Windows::UI::Accessibility::ScreenReaderService* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

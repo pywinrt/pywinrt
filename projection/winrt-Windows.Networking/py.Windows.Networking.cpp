@@ -45,12 +45,6 @@ namespace py::cpp::Windows::Networking
     static void _dealloc_EndpointPair(py::wrapper::Windows::Networking::EndpointPair* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -336,12 +330,6 @@ namespace py::cpp::Windows::Networking
     static void _dealloc_HostName(py::wrapper::Windows::Networking::HostName* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

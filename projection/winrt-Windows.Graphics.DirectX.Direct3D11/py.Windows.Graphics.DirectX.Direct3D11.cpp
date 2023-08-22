@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static void _dealloc_IDirect3DDevice(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -177,12 +171,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static void _dealloc_IDirect3DSurface(py::wrapper::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -357,12 +345,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static void _dealloc_Direct3DMultisampleDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -503,12 +485,6 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static void _dealloc_Direct3DSurfaceDescription(py::wrapper::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

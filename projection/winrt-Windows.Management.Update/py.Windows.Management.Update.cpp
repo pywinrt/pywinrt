@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_PreviewBuildsManager(py::wrapper::Windows::Management::Update::PreviewBuildsManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -261,12 +255,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_PreviewBuildsState(py::wrapper::Windows::Management::Update::PreviewBuildsState* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -356,12 +344,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdate(py::wrapper::Windows::Management::Update::WindowsUpdate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -934,12 +916,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateActionCompletedEventArgs(py::wrapper::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1089,12 +1065,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateActionProgress(py::wrapper::Windows::Management::Update::WindowsUpdateActionProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1204,12 +1174,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateActionResult(py::wrapper::Windows::Management::Update::WindowsUpdateActionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1359,12 +1323,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateAdministrator(py::wrapper::Windows::Management::Update::WindowsUpdateAdministrator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1844,12 +1802,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateApprovalData(py::wrapper::Windows::Management::Update::WindowsUpdateApprovalData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2159,12 +2111,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateAttentionRequiredInfo(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2274,12 +2220,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateAttentionRequiredReasonChangedEventArgs(py::wrapper::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2389,12 +2329,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateGetAdministratorResult(py::wrapper::Windows::Management::Update::WindowsUpdateGetAdministratorResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2504,12 +2438,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateItem(py::wrapper::Windows::Management::Update::WindowsUpdateItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2763,12 +2691,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateManager(py::wrapper::Windows::Management::Update::WindowsUpdateManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3295,12 +3217,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateProgressChangedEventArgs(py::wrapper::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3451,12 +3367,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateRestartRequestOptions(py::wrapper::Windows::Management::Update::WindowsUpdateRestartRequestOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3862,12 +3772,6 @@ namespace py::cpp::Windows::Management::Update
     static void _dealloc_WindowsUpdateScanCompletedEventArgs(py::wrapper::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

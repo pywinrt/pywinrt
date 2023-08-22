@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static void _dealloc_DeliveryOptimizationSettings(py::wrapper::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1084,12 +1078,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static void _dealloc_StoreHardwareManufacturerInfo(py::wrapper::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1336,12 +1324,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static void _dealloc_StorePreviewProductInfo(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1511,12 +1493,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static void _dealloc_StorePreviewPurchaseResults(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1606,12 +1582,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     static void _dealloc_StorePreviewSkuInfo(py::wrapper::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

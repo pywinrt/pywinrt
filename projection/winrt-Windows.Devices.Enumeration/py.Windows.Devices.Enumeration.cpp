@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceAccessChangedEventArgs(py::wrapper::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -133,12 +127,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceAccessInformation(py::wrapper::Windows::Devices::Enumeration::DeviceAccessInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -369,12 +357,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceConnectionChangeTriggerDetails(py::wrapper::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -464,12 +446,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceDisconnectButtonClickedEventArgs(py::wrapper::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -559,12 +535,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceInformation(py::wrapper::Windows::Devices::Enumeration::DeviceInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1180,12 +1150,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceInformationCollection(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1528,12 +1492,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceInformationCustomPairing(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1723,12 +1681,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceInformationPairing(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2044,12 +1996,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceInformationUpdate(py::wrapper::Windows::Devices::Enumeration::DeviceInformationUpdate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2179,12 +2125,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DevicePairingRequestedEventArgs(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2429,12 +2369,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DevicePairingResult(py::wrapper::Windows::Devices::Enumeration::DevicePairingResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2566,12 +2500,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DevicePicker(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3010,12 +2938,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DevicePickerAppearance(py::wrapper::Windows::Devices::Enumeration::DevicePickerAppearance* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3421,12 +3343,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DevicePickerFilter(py::wrapper::Windows::Devices::Enumeration::DevicePickerFilter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3536,12 +3452,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceSelectedEventArgs(py::wrapper::Windows::Devices::Enumeration::DeviceSelectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3631,12 +3541,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceThumbnail(py::wrapper::Windows::Devices::Enumeration::DeviceThumbnail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4110,12 +4014,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceUnpairingResult(py::wrapper::Windows::Devices::Enumeration::DeviceUnpairingResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4205,12 +4103,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceWatcher(py::wrapper::Windows::Devices::Enumeration::DeviceWatcher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4619,12 +4511,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceWatcherEvent(py::wrapper::Windows::Devices::Enumeration::DeviceWatcherEvent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4754,12 +4640,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_DeviceWatcherTriggerDetails(py::wrapper::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4849,12 +4729,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_EnclosureLocation(py::wrapper::Windows::Devices::Enumeration::EnclosureLocation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5004,12 +4878,6 @@ namespace py::cpp::Windows::Devices::Enumeration
     static void _dealloc_IDevicePairingSettings(py::wrapper::Windows::Devices::Enumeration::IDevicePairingSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

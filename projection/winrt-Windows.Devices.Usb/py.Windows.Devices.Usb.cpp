@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbBulkInEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbBulkInEndpointDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbBulkInPipe(py::wrapper::Windows::Devices::Usb::UsbBulkInPipe* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -397,12 +385,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbBulkOutEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -532,12 +514,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbBulkOutPipe(py::wrapper::Windows::Devices::Usb::UsbBulkOutPipe* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -725,12 +701,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbConfiguration(py::wrapper::Windows::Devices::Usb::UsbConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -860,12 +830,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbConfigurationDescriptor(py::wrapper::Windows::Devices::Usb::UsbConfigurationDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1114,12 +1078,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbControlRequestType(py::wrapper::Windows::Devices::Usb::UsbControlRequestType* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1381,12 +1339,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbDescriptor(py::wrapper::Windows::Devices::Usb::UsbDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1529,12 +1481,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbDevice(py::wrapper::Windows::Devices::Usb::UsbDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1984,12 +1930,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbDeviceClass(py::wrapper::Windows::Devices::Usb::UsbDeviceClass* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2203,12 +2143,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbDeviceClasses(py::wrapper::Windows::Devices::Usb::UsbDeviceClasses* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2478,12 +2412,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbDeviceDescriptor(py::wrapper::Windows::Devices::Usb::UsbDeviceDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2673,12 +2601,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbEndpointDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2965,12 +2887,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterface(py::wrapper::Windows::Devices::Usb::UsbInterface* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3180,12 +3096,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterfaceDescriptor(py::wrapper::Windows::Devices::Usb::UsbInterfaceDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3432,12 +3342,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterfaceSetting(py::wrapper::Windows::Devices::Usb::UsbInterfaceSetting* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3677,12 +3581,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterruptInEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3832,12 +3730,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterruptInEventArgs(py::wrapper::Windows::Devices::Usb::UsbInterruptInEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3927,12 +3819,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterruptInPipe(py::wrapper::Windows::Devices::Usb::UsbInterruptInPipe* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4097,12 +3983,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterruptOutEndpointDescriptor(py::wrapper::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4252,12 +4132,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbInterruptOutPipe(py::wrapper::Windows::Devices::Usb::UsbInterruptOutPipe* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4482,12 +4356,6 @@ namespace py::cpp::Windows::Devices::Usb
     static void _dealloc_UsbSetupPacket(py::wrapper::Windows::Devices::Usb::UsbSetupPacket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

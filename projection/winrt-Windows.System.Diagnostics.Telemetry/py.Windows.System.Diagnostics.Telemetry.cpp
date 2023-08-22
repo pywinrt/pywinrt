@@ -105,12 +105,6 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     static void _dealloc_PlatformTelemetryRegistrationResult(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -222,12 +216,6 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
     static void _dealloc_PlatformTelemetryRegistrationSettings(py::wrapper::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_NamedResource(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -233,12 +227,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceCandidate(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -520,12 +508,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceCandidateVectorView(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -890,12 +872,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceContext(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1381,12 +1357,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceContextLanguagesVectorView(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1729,12 +1699,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceManager(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2068,12 +2032,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceMap(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2477,12 +2435,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceMapIterator(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2682,12 +2634,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceMapMapView(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2986,12 +2932,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceMapMapViewIterator(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3191,12 +3131,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceQualifier(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3366,12 +3300,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceQualifierMapView(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3670,12 +3598,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceQualifierObservableMap(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4128,12 +4050,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceQualifierVectorView(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4511,12 +4427,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static void _dealloc_ResourceLayoutInfo(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

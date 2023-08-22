@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiAdapter(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -495,12 +489,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiAvailableNetwork(py::wrapper::Windows::Devices::WiFi::WiFiAvailableNetwork* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -790,12 +778,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiConnectionResult(py::wrapper::Windows::Devices::WiFi::WiFiConnectionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -885,12 +867,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiNetworkReport(py::wrapper::Windows::Devices::WiFi::WiFiNetworkReport* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1000,12 +976,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiOnDemandHotspotConnectTriggerDetails(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1188,12 +1158,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiOnDemandHotspotConnectionResult(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1283,12 +1247,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiOnDemandHotspotNetwork(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1473,12 +1431,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiOnDemandHotspotNetworkProperties(py::wrapper::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1884,12 +1836,6 @@ namespace py::cpp::Windows::Devices::WiFi
     static void _dealloc_WiFiWpsConfigurationResult(py::wrapper::Windows::Devices::WiFi::WiFiWpsConfigurationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

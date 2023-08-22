@@ -18,12 +18,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     static void _dealloc_DevicePortalConnection(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -349,12 +343,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     static void _dealloc_DevicePortalConnectionClosedEventArgs(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -444,12 +432,6 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
     static void _dealloc_DevicePortalConnectionRequestReceivedEventArgs(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

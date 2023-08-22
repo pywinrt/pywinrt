@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Lights
     static void _dealloc_Lamp(py::wrapper::Windows::Devices::Lights::Lamp* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -467,12 +461,6 @@ namespace py::cpp::Windows::Devices::Lights
     static void _dealloc_LampArray(py::wrapper::Windows::Devices::Lights::LampArray* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1298,12 +1286,6 @@ namespace py::cpp::Windows::Devices::Lights
     static void _dealloc_LampAvailabilityChangedEventArgs(py::wrapper::Windows::Devices::Lights::LampAvailabilityChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1393,12 +1375,6 @@ namespace py::cpp::Windows::Devices::Lights
     static void _dealloc_LampInfo(py::wrapper::Windows::Devices::Lights::LampInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

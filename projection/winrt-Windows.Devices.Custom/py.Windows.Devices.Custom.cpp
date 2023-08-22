@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Custom
     static void _dealloc_CustomDevice(py::wrapper::Windows::Devices::Custom::CustomDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -294,12 +288,6 @@ namespace py::cpp::Windows::Devices::Custom
     static void _dealloc_IOControlCode(py::wrapper::Windows::Devices::Custom::IOControlCode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -543,12 +531,6 @@ namespace py::cpp::Windows::Devices::Custom
     static void _dealloc_IIOControlCode(py::wrapper::Windows::Devices::Custom::IIOControlCode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

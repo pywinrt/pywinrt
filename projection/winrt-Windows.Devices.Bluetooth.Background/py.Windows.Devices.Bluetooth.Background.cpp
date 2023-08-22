@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_BluetoothLEAdvertisementPublisherTriggerDetails(py::wrapper::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_BluetoothLEAdvertisementWatcherTriggerDetails(py::wrapper::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -288,12 +276,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_GattCharacteristicNotificationTriggerDetails(py::wrapper::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -463,12 +445,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_GattServiceProviderConnection(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -649,12 +625,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_GattServiceProviderTriggerDetails(py::wrapper::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -744,12 +714,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_RfcommConnectionTriggerDetails(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -879,12 +843,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_RfcommInboundConnectionInformation(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1098,12 +1056,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static void _dealloc_RfcommOutboundConnectionInformation(py::wrapper::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

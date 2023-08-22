@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Phone::UI::Input
     static void _dealloc_BackPressedEventArgs(py::wrapper::Windows::Phone::UI::Input::BackPressedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -141,12 +135,6 @@ namespace py::cpp::Windows::Phone::UI::Input
     static void _dealloc_CameraEventArgs(py::wrapper::Windows::Phone::UI::Input::CameraEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

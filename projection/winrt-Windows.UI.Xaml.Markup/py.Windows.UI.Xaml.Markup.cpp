@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_MarkupExtension(py::wrapper::Windows::UI::Xaml::Markup::MarkupExtension* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -145,12 +139,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_XamlBinaryWriter(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -254,12 +242,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_XamlBindingHelper(py::wrapper::Windows::UI::Xaml::Markup::XamlBindingHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1129,12 +1111,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_XamlMarkupHelper(py::wrapper::Windows::UI::Xaml::Markup::XamlMarkupHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1237,12 +1213,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_XamlReader(py::wrapper::Windows::UI::Xaml::Markup::XamlReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1376,12 +1346,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IComponentConnector(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1485,12 +1449,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IComponentConnector2(py::wrapper::Windows::UI::Xaml::Markup::IComponentConnector2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1593,12 +1551,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IDataTemplateComponent(py::wrapper::Windows::UI::Xaml::Markup::IDataTemplateComponent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1741,12 +1693,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IXamlBindScopeDiagnostics(py::wrapper::Windows::UI::Xaml::Markup::IXamlBindScopeDiagnostics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1850,12 +1796,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IXamlMember(py::wrapper::Windows::UI::Xaml::Markup::IXamlMember* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2111,12 +2051,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IXamlMetadataProvider(py::wrapper::Windows::UI::Xaml::Markup::IXamlMetadataProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2248,12 +2182,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IXamlType(py::wrapper::Windows::UI::Xaml::Markup::IXamlType* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2757,12 +2685,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_IXamlType2(py::wrapper::Windows::UI::Xaml::Markup::IXamlType2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3319,12 +3241,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_XamlBinaryWriterErrorInformation(py::wrapper::Windows::UI::Xaml::Markup::XamlBinaryWriterErrorInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3497,12 +3413,6 @@ namespace py::cpp::Windows::UI::Xaml::Markup
     static void _dealloc_XmlnsDefinition(py::wrapper::Windows::UI::Xaml::Markup::XmlnsDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

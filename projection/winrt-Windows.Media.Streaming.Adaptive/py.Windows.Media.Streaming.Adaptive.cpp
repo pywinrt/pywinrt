@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSource(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1031,12 +1025,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceAdvancedSettings(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceAdvancedSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1250,12 +1238,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceCorrelatedTimes(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCorrelatedTimes* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1385,12 +1367,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceCreationResult(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceCreationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1540,12 +1516,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDiagnosticAvailableEventArgs(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnosticAvailableEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1855,12 +1825,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDiagnostics(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDiagnostics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1975,12 +1939,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadBitrateChangedEventArgs(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadBitrateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2110,12 +2068,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadCompletedEventArgs(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2385,12 +2337,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadFailedEventArgs(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadFailedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2680,12 +2626,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadRequestedDeferral(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2786,12 +2726,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadRequestedEventArgs(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3071,12 +3005,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadResult(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3482,12 +3410,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourceDownloadStatistics(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourceDownloadStatistics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3637,12 +3559,6 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
     static void _dealloc_AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(py::wrapper::Windows::Media::Streaming::Adaptive::AdaptiveMediaSourcePlaybackBitrateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

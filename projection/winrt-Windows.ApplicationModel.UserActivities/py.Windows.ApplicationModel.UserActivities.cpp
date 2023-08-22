@@ -42,12 +42,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivity(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivity* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -688,12 +682,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityAttribution(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityAttribution* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -907,12 +895,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityChannel(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityChannel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1266,12 +1248,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityContentInfo(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityContentInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1403,12 +1379,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityRequest(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1511,12 +1481,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityRequestManager(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1661,12 +1625,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityRequestedEventArgs(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1786,12 +1744,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivitySession(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1934,12 +1886,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivitySessionHistoryItem(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2069,12 +2015,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_UserActivityVisualElements(py::wrapper::Windows::ApplicationModel::UserActivities::UserActivityVisualElements* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2432,12 +2372,6 @@ namespace py::cpp::Windows::ApplicationModel::UserActivities
     static void _dealloc_IUserActivityContentInfo(py::wrapper::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironment(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -689,12 +683,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentCreateResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -857,12 +845,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentFile(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1137,12 +1119,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentLaunchFileResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1294,12 +1270,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentOptions(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2093,12 +2063,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentOwnerRegistrationData(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2248,12 +2212,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentOwnerRegistrationResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2363,12 +2321,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentPostMessageResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2478,12 +2430,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentProcess(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2709,12 +2655,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentShareFileRequestOptions(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2832,12 +2772,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentShareFileResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2989,12 +2923,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentShareFolderRequestOptions(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3112,12 +3040,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentShareFolderResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3227,12 +3149,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentStartProcessResult(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3384,12 +3300,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentTelemetryParameters(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3507,12 +3417,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentUserInfo(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3881,12 +3785,6 @@ namespace py::cpp::Windows::Security::Isolation
     static void _dealloc_IsolatedWindowsEnvironmentCreateProgress(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

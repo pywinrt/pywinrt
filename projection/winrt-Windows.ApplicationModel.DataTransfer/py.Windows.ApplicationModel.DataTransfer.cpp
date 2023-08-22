@@ -596,12 +596,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ClipboardContentOptions(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -807,12 +801,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ClipboardHistoryChangedEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -882,12 +870,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ClipboardHistoryItem(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1017,12 +999,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ClipboardHistoryItemsResult(py::wrapper::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1154,12 +1130,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataPackage(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1881,12 +1851,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataPackagePropertySet(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2890,12 +2854,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataPackagePropertySetView(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3474,12 +3432,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataPackageView(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4109,12 +4061,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataProviderDeferral(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4215,12 +4161,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataProviderRequest(py::wrapper::Windows::ApplicationModel::DataTransfer::DataProviderRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4393,12 +4333,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataRequest(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4599,12 +4533,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataRequestDeferral(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4705,12 +4633,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataRequestedEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4800,12 +4722,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_DataTransferManager(py::wrapper::Windows::ApplicationModel::DataTransfer::DataTransferManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5220,12 +5136,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_OperationCompletedEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5335,12 +5245,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ShareCompletedEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5457,12 +5361,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ShareProvider(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5640,12 +5538,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ShareProviderOperation(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProviderOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5786,12 +5678,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ShareProvidersRequestedEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5931,12 +5817,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ShareTargetInfo(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTargetInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6068,12 +5948,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_ShareUIOptions(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareUIOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6604,12 +6478,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static void _dealloc_TargetApplicationChosenEventArgs(py::wrapper::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

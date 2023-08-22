@@ -189,12 +189,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_GipFirmwareUpdateResult(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -324,12 +318,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_GipGameControllerProvider(py::wrapper::Windows::Gaming::Input::Custom::GipGameControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -602,12 +590,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_HidGameControllerProvider(py::wrapper::Windows::Gaming::Input::Custom::HidGameControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -919,12 +901,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_XusbGameControllerProvider(py::wrapper::Windows::Gaming::Input::Custom::XusbGameControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1128,12 +1104,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_ICustomGameControllerFactory(py::wrapper::Windows::Gaming::Input::Custom::ICustomGameControllerFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1301,12 +1271,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_IGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerInputSink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1442,12 +1406,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_IGameControllerProvider(py::wrapper::Windows::Gaming::Input::Custom::IGameControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1617,12 +1575,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_IGipGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IGipGameControllerInputSink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1830,12 +1782,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_IHidGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IHidGameControllerInputSink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2006,12 +1952,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_IXusbGameControllerInputSink(py::wrapper::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2216,12 +2156,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_GameControllerVersionInfo(py::wrapper::Windows::Gaming::Input::Custom::GameControllerVersionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2428,12 +2362,6 @@ namespace py::cpp::Windows::Gaming::Input::Custom
     static void _dealloc_GipFirmwareUpdateProgress(py::wrapper::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

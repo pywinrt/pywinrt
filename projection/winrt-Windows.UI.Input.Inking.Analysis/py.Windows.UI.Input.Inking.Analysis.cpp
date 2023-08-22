@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisInkBullet(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkBullet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -263,12 +257,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisInkDrawing(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkDrawing* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -548,12 +536,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisInkWord(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisInkWord* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -813,12 +795,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisLine(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisLine* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1078,12 +1054,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisListItem(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisListItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1323,12 +1293,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisNode(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1548,12 +1512,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisParagraph(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisParagraph* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1793,12 +1751,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisResult(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1888,12 +1840,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisRoot(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisRoot* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2165,12 +2111,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalysisWritingRegion(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalysisWritingRegion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2432,12 +2372,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_InkAnalyzer(py::wrapper::Windows::UI::Input::Inking::Analysis::InkAnalyzer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2807,12 +2741,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_IInkAnalysisNode(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalysisNode* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3032,12 +2960,6 @@ namespace py::cpp::Windows::UI::Input::Inking::Analysis
     static void _dealloc_IInkAnalyzerFactory(py::wrapper::Windows::UI::Input::Inking::Analysis::IInkAnalyzerFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

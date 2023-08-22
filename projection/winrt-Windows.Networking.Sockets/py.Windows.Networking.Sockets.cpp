@@ -60,12 +60,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_ControlChannelTrigger(py::wrapper::Windows::Networking::Sockets::ControlChannelTrigger* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -503,12 +497,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_DatagramSocket(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1179,12 +1167,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_DatagramSocketControl(py::wrapper::Windows::Networking::Sockets::DatagramSocketControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1494,12 +1476,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_DatagramSocketInformation(py::wrapper::Windows::Networking::Sockets::DatagramSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1649,12 +1625,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_DatagramSocketMessageReceivedEventArgs(py::wrapper::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1866,12 +1836,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_MessageWebSocket(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2341,12 +2305,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_MessageWebSocketControl(py::wrapper::Windows::Networking::Sockets::MessageWebSocketControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2860,12 +2818,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_MessageWebSocketInformation(py::wrapper::Windows::Networking::Sockets::MessageWebSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3075,12 +3027,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_MessageWebSocketMessageReceivedEventArgs(py::wrapper::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3250,12 +3196,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_ServerMessageWebSocket(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3550,12 +3490,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_ServerMessageWebSocketControl(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocketControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3673,12 +3607,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_ServerMessageWebSocketInformation(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3808,12 +3736,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_ServerStreamWebSocket(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4063,12 +3985,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_ServerStreamWebSocketInformation(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4222,12 +4138,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_SocketActivityContext(py::wrapper::Windows::Networking::Sockets::SocketActivityContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4317,12 +4227,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_SocketActivityInformation(py::wrapper::Windows::Networking::Sockets::SocketActivityInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4572,12 +4476,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_SocketActivityTriggerDetails(py::wrapper::Windows::Networking::Sockets::SocketActivityTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4775,12 +4673,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocket(py::wrapper::Windows::Networking::Sockets::StreamSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5332,12 +5224,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocketControl(py::wrapper::Windows::Networking::Sockets::StreamSocketControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5811,12 +5697,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocketInformation(py::wrapper::Windows::Networking::Sockets::StreamSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6188,12 +6068,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocketListener(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6649,12 +6523,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocketListenerConnectionReceivedEventArgs(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6744,12 +6612,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocketListenerControl(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7059,12 +6921,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamSocketListenerInformation(py::wrapper::Windows::Networking::Sockets::StreamSocketListenerInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7176,12 +7032,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamWebSocket(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7562,12 +7412,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamWebSocketControl(py::wrapper::Windows::Networking::Sockets::StreamWebSocketControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7985,12 +7829,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_StreamWebSocketInformation(py::wrapper::Windows::Networking::Sockets::StreamWebSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8200,12 +8038,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_WebSocketClosedEventArgs(py::wrapper::Windows::Networking::Sockets::WebSocketClosedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8403,12 +8235,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_WebSocketKeepAlive(py::wrapper::Windows::Networking::Sockets::WebSocketKeepAlive* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8511,12 +8337,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_WebSocketServerCustomValidationRequestedEventArgs(py::wrapper::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8727,12 +8547,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IControlChannelTriggerEventDetails(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8822,12 +8636,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IControlChannelTriggerResetEventDetails(py::wrapper::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8957,12 +8765,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IWebSocket(py::wrapper::Windows::Networking::Sockets::IWebSocket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9238,12 +9040,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IWebSocketControl(py::wrapper::Windows::Networking::Sockets::IWebSocketControl* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9477,12 +9273,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IWebSocketControl2(py::wrapper::Windows::Networking::Sockets::IWebSocketControl2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9736,12 +9526,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IWebSocketInformation(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9871,12 +9655,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_IWebSocketInformation2(py::wrapper::Windows::Networking::Sockets::IWebSocketInformation2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10122,12 +9900,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_BandwidthStatistics(py::wrapper::Windows::Networking::Sockets::BandwidthStatistics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10404,12 +10176,6 @@ namespace py::cpp::Windows::Networking::Sockets
     static void _dealloc_RoundTripTimeStatistics(py::wrapper::Windows::Networking::Sockets::RoundTripTimeStatistics* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

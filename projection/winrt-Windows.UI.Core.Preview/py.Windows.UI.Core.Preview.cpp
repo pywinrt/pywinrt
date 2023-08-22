@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Core::Preview
     static void _dealloc_CoreAppWindowPreview(py::wrapper::Windows::UI::Core::Preview::CoreAppWindowPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -125,12 +119,6 @@ namespace py::cpp::Windows::UI::Core::Preview
     static void _dealloc_SystemNavigationCloseRequestedPreviewEventArgs(py::wrapper::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -278,12 +266,6 @@ namespace py::cpp::Windows::UI::Core::Preview
     static void _dealloc_SystemNavigationManagerPreview(py::wrapper::Windows::UI::Core::Preview::SystemNavigationManagerPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

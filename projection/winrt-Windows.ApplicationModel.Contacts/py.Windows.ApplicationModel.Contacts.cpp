@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_AggregateContactManager(py::wrapper::Windows::ApplicationModel::Contacts::AggregateContactManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -279,12 +273,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_Contact(py::wrapper::Windows::ApplicationModel::Contacts::Contact* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1680,12 +1668,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactAddress(py::wrapper::Windows::ApplicationModel::Contacts::ContactAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2113,12 +2095,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactAnnotation(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2460,12 +2436,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactAnnotationList(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2783,12 +2753,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactAnnotationStore(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3130,12 +3094,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactBatch(py::wrapper::Windows::ApplicationModel::Contacts::ContactBatch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3245,12 +3203,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactCardDelayedDataLoader(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3428,12 +3380,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactCardOptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactCardOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3619,12 +3565,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactChange(py::wrapper::Windows::ApplicationModel::Contacts::ContactChange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3734,12 +3674,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactChangeReader(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3903,12 +3837,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactChangeTracker(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangeTracker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4090,12 +4018,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactChangedDeferral(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangedDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4196,12 +4118,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactChangedEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::ContactChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4323,12 +4239,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactConnectedServiceAccount(py::wrapper::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4516,12 +4426,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactDate(py::wrapper::Windows::ApplicationModel::Contacts::ContactDate* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4853,12 +4757,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactEmail(py::wrapper::Windows::ApplicationModel::Contacts::ContactEmail* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5132,12 +5030,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactField(py::wrapper::Windows::ApplicationModel::Contacts::ContactField* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5309,12 +5201,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5618,12 +5504,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactGroup(py::wrapper::Windows::ApplicationModel::Contacts::ContactGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5693,12 +5573,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactInformation(py::wrapper::Windows::ApplicationModel::Contacts::ContactInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6009,12 +5883,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactInstantMessageField(py::wrapper::Windows::ApplicationModel::Contacts::ContactInstantMessageField* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6266,12 +6134,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactJobInfo(py::wrapper::Windows::ApplicationModel::Contacts::ContactJobInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6879,12 +6741,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactList(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7709,12 +7565,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactListLimitedWriteOperations(py::wrapper::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7848,12 +7698,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactListSyncConstraints(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncConstraints* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9267,12 +9111,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactListSyncManager(py::wrapper::Windows::ApplicationModel::Contacts::ContactListSyncManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9622,12 +9460,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactLocationField(py::wrapper::Windows::ApplicationModel::Contacts::ContactLocationField* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10538,12 +10370,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactManagerForUser(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -10912,12 +10738,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactMatchReason(py::wrapper::Windows::ApplicationModel::Contacts::ContactMatchReason* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11047,12 +10867,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactPanel(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11291,12 +11105,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactPanelClosingEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11396,12 +11204,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactPanelLaunchFullAppRequestedEventArgs(py::wrapper::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11541,12 +11343,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactPhone(py::wrapper::Windows::ApplicationModel::Contacts::ContactPhone* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -11782,12 +11578,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactPicker(py::wrapper::Windows::ApplicationModel::Contacts::ContactPicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12248,12 +12038,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactQueryOptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12527,12 +12311,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactQueryTextSearch(py::wrapper::Windows::ApplicationModel::Contacts::ContactQueryTextSearch* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12746,12 +12524,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactReader(py::wrapper::Windows::ApplicationModel::Contacts::ContactReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -12905,12 +12677,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactSignificantOther(py::wrapper::Windows::ApplicationModel::Contacts::ContactSignificantOther* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13124,12 +12890,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactStore(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13593,12 +13353,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactStoreNotificationTriggerDetails(py::wrapper::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13690,12 +13444,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_ContactWebsite(py::wrapper::Windows::ApplicationModel::Contacts::ContactWebsite* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13931,12 +13679,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_FullContactCardOptions(py::wrapper::Windows::ApplicationModel::Contacts::FullContactCardOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14252,12 +13994,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_PinnedContactIdsQueryResult(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14347,12 +14083,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_PinnedContactManager(py::wrapper::Windows::ApplicationModel::Contacts::PinnedContactManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14761,12 +14491,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_IContactField(py::wrapper::Windows::ApplicationModel::Contacts::IContactField* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14916,12 +14640,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_IContactFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15069,12 +14787,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_IContactInstantMessageFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15221,12 +14933,6 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     static void _dealloc_IContactLocationFieldFactory(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

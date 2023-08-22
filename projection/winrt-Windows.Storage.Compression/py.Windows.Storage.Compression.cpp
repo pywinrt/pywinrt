@@ -59,12 +59,6 @@ namespace py::cpp::Windows::Storage::Compression
     static void _dealloc_Compressor(py::wrapper::Windows::Storage::Compression::Compressor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -333,12 +327,6 @@ namespace py::cpp::Windows::Storage::Compression
     static void _dealloc_Decompressor(py::wrapper::Windows::Storage::Compression::Decompressor* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

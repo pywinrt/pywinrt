@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_DesignerAppExitedEventArgs(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppExitedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -137,12 +131,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_DesignerAppManager(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -397,12 +385,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_DesignerAppView(py::wrapper::Windows::UI::Xaml::Hosting::DesignerAppView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -660,12 +642,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_DesktopWindowXamlSource(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -978,12 +954,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_DesktopWindowXamlSourceGotFocusEventArgs(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1073,12 +1043,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_DesktopWindowXamlSourceTakeFocusRequestedEventArgs(py::wrapper::Windows::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1168,12 +1132,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_ElementCompositionPreview(py::wrapper::Windows::UI::Xaml::Hosting::ElementCompositionPreview* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1573,12 +1531,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_WindowsXamlManager(py::wrapper::Windows::UI::Xaml::Hosting::WindowsXamlManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1788,12 +1740,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_XamlSourceFocusNavigationRequest(py::wrapper::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1947,12 +1893,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_XamlSourceFocusNavigationResult(py::wrapper::Windows::UI::Xaml::Hosting::XamlSourceFocusNavigationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2042,12 +1982,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_XamlUIPresenter(py::wrapper::Windows::UI::Xaml::Hosting::XamlUIPresenter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2585,12 +2519,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_IXamlUIPresenterHost(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2692,12 +2620,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_IXamlUIPresenterHost2(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost2* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2797,12 +2719,6 @@ namespace py::cpp::Windows::UI::Xaml::Hosting
     static void _dealloc_IXamlUIPresenterHost3(py::wrapper::Windows::UI::Xaml::Hosting::IXamlUIPresenterHost3* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

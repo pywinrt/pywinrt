@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static void _dealloc_UserDataAccountPartnerAccountInfo(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountPartnerAccountInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -153,12 +147,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static void _dealloc_UserDataAccountProviderAddAccountOperation(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderAddAccountOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -321,12 +309,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static void _dealloc_UserDataAccountProviderResolveErrorsOperation(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderResolveErrorsOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -467,12 +449,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static void _dealloc_UserDataAccountProviderSettingsOperation(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::UserDataAccountProviderSettingsOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -613,12 +589,6 @@ namespace py::cpp::Windows::ApplicationModel::UserDataAccounts::Provider
     static void _dealloc_IUserDataAccountProviderOperation(py::wrapper::Windows::ApplicationModel::UserDataAccounts::Provider::IUserDataAccountProviderOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

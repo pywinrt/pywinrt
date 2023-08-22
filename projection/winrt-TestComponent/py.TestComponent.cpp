@@ -268,12 +268,6 @@ namespace py::cpp::TestComponent
     static void _dealloc_ITests(py::wrapper::TestComponent::ITests* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3684,12 +3678,6 @@ namespace py::cpp::TestComponent
     static void _dealloc_Blittable(py::wrapper::TestComponent::Blittable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4100,12 +4088,6 @@ namespace py::cpp::TestComponent
     static void _dealloc_Nested(py::wrapper::TestComponent::Nested* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4246,12 +4228,6 @@ namespace py::cpp::TestComponent
     static void _dealloc_NonBlittable(py::wrapper::TestComponent::NonBlittable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

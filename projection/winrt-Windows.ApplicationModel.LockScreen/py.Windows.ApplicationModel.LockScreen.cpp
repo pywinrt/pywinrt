@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     static void _dealloc_LockApplicationHost(py::wrapper::Windows::ApplicationModel::LockScreen::LockApplicationHost* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -199,12 +193,6 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     static void _dealloc_LockScreenBadge(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenBadge* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -385,12 +373,6 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     static void _dealloc_LockScreenInfo(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -720,12 +702,6 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     static void _dealloc_LockScreenUnlockingDeferral(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -826,12 +802,6 @@ namespace py::cpp::Windows::ApplicationModel::LockScreen
     static void _dealloc_LockScreenUnlockingEventArgs(py::wrapper::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

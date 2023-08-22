@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_BufferProtectUnprotectResult(py::wrapper::Windows::Security::EnterpriseData::BufferProtectUnprotectResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -133,12 +127,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_DataProtectionInfo(py::wrapper::Windows::Security::EnterpriseData::DataProtectionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -478,12 +466,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_FileProtectionInfo(py::wrapper::Windows::Security::EnterpriseData::FileProtectionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1202,12 +1184,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_FileUnprotectOptions(py::wrapper::Windows::Security::EnterpriseData::FileUnprotectOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1325,12 +1301,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectedAccessResumedEventArgs(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1420,12 +1390,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectedAccessSuspendingEventArgs(py::wrapper::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1565,12 +1529,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectedContainerExportResult(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerExportResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1680,12 +1638,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectedContainerImportResult(py::wrapper::Windows::Security::EnterpriseData::ProtectedContainerImportResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1795,12 +1747,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectedContentRevokedEventArgs(py::wrapper::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1890,12 +1836,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectedFileCreateResult(py::wrapper::Windows::Security::EnterpriseData::ProtectedFileCreateResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2068,12 +2008,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectionPolicyAuditInfo(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2335,12 +2269,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ProtectionPolicyManager(py::wrapper::Windows::Security::EnterpriseData::ProtectionPolicyManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3649,12 +3577,6 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static void _dealloc_ThreadNetworkContext(py::wrapper::Windows::Security::EnterpriseData::ThreadNetworkContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

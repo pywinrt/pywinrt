@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_PropertySet(py::wrapper::Windows::Foundation::Collections::PropertySet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -520,12 +514,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_StringMap(py::wrapper::Windows::Foundation::Collections::StringMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1000,12 +988,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_ValueSet(py::wrapper::Windows::Foundation::Collections::ValueSet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1458,12 +1440,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IIterable(py::wrapper::Windows::Foundation::Collections::IIterable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -1523,12 +1499,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -1624,12 +1594,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IKeyValuePair(py::wrapper::Windows::Foundation::Collections::IKeyValuePair* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -1701,12 +1665,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IMapChangedEventArgs(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -1778,12 +1736,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -1891,12 +1843,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -2028,12 +1974,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -2189,12 +2129,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -2380,12 +2314,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IPropertySet(py::wrapper::Windows::Foundation::Collections::IPropertySet* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2838,12 +2766,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IVectorChangedEventArgs(py::wrapper::Windows::Foundation::Collections::IVectorChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2953,12 +2875,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);
@@ -3066,12 +2982,6 @@ namespace py::cpp::Windows::Foundation::Collections
     static void _dealloc_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         std::destroy_at(&self->impl);
         tp->tp_free(self);

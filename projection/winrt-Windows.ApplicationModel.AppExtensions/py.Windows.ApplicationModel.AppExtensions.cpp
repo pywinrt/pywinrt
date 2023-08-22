@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtension(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -273,12 +267,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtensionCatalog(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -667,12 +655,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtensionPackageInstalledEventArgs(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -802,12 +784,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtensionPackageStatusChangedEventArgs(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -917,12 +893,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtensionPackageUninstallingEventArgs(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1032,12 +1002,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtensionPackageUpdatedEventArgs(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1167,12 +1131,6 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     static void _dealloc_AppExtensionPackageUpdatingEventArgs(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

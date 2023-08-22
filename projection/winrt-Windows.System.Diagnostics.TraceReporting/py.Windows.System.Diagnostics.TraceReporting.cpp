@@ -319,12 +319,6 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     static void _dealloc_PlatformDiagnosticTraceInfo(py::wrapper::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -514,12 +508,6 @@ namespace py::cpp::Windows::System::Diagnostics::TraceReporting
     static void _dealloc_PlatformDiagnosticTraceRuntimeInfo(py::wrapper::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

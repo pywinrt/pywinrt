@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_ComponentLoadFailedEventArgs(py::wrapper::Windows::Media::Protection::ComponentLoadFailedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -221,12 +215,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_HdcpSession(py::wrapper::Windows::Media::Protection::HdcpSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -510,12 +498,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_MediaProtectionManager(py::wrapper::Windows::Media::Protection::MediaProtectionManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -764,12 +746,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_MediaProtectionPMPServer(py::wrapper::Windows::Media::Protection::MediaProtectionPMPServer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -859,12 +835,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_MediaProtectionServiceCompletion(py::wrapper::Windows::Media::Protection::MediaProtectionServiceCompletion* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -989,12 +959,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_ProtectionCapabilities(py::wrapper::Windows::Media::Protection::ProtectionCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1097,12 +1061,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_RevocationAndRenewalInformation(py::wrapper::Windows::Media::Protection::RevocationAndRenewalInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1192,12 +1150,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_RevocationAndRenewalItem(py::wrapper::Windows::Media::Protection::RevocationAndRenewalItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1367,12 +1319,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_ServiceRequestedEventArgs(py::wrapper::Windows::Media::Protection::ServiceRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1502,12 +1448,6 @@ namespace py::cpp::Windows::Media::Protection
     static void _dealloc_IMediaProtectionServiceRequest(py::wrapper::Windows::Media::Protection::IMediaProtectionServiceRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

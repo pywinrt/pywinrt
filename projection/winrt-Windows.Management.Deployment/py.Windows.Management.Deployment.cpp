@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_AddPackageOptions(py::wrapper::Windows::Management::Deployment::AddPackageOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -887,12 +881,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_AppInstallerManager(py::wrapper::Windows::Management::Deployment::AppInstallerManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1145,12 +1133,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_AutoUpdateSettingsOptions(py::wrapper::Windows::Management::Deployment::AutoUpdateSettingsOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1786,12 +1768,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_CreateSharedPackageContainerOptions(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1977,12 +1953,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_CreateSharedPackageContainerResult(py::wrapper::Windows::Management::Deployment::CreateSharedPackageContainerResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2134,12 +2104,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_DeleteSharedPackageContainerOptions(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2305,12 +2269,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_DeleteSharedPackageContainerResult(py::wrapper::Windows::Management::Deployment::DeleteSharedPackageContainerResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2420,12 +2378,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_DeploymentResult(py::wrapper::Windows::Management::Deployment::DeploymentResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2597,12 +2549,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_FindSharedPackageContainerOptions(py::wrapper::Windows::Management::Deployment::FindSharedPackageContainerOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2790,12 +2736,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_PackageAllUserProvisioningOptions(py::wrapper::Windows::Management::Deployment::PackageAllUserProvisioningOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2927,12 +2867,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_PackageManager(py::wrapper::Windows::Management::Deployment::PackageManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4818,12 +4752,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_PackageManagerDebugSettings(py::wrapper::Windows::Management::Deployment::PackageManagerDebugSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4950,12 +4878,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_PackageUserInformation(py::wrapper::Windows::Management::Deployment::PackageUserInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5065,12 +4987,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_PackageVolume(py::wrapper::Windows::Management::Deployment::PackageVolume* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5716,12 +5632,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_RegisterPackageOptions(py::wrapper::Windows::Management::Deployment::RegisterPackageOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6331,12 +6241,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_SharedPackageContainer(py::wrapper::Windows::Management::Deployment::SharedPackageContainer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6539,12 +6443,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_SharedPackageContainerManager(py::wrapper::Windows::Management::Deployment::SharedPackageContainerManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6878,12 +6776,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_SharedPackageContainerMember(py::wrapper::Windows::Management::Deployment::SharedPackageContainerMember* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6995,12 +6887,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_StagePackageOptions(py::wrapper::Windows::Management::Deployment::StagePackageOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7624,12 +7510,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_UpdateSharedPackageContainerOptions(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7795,12 +7675,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_UpdateSharedPackageContainerResult(py::wrapper::Windows::Management::Deployment::UpdateSharedPackageContainerResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7942,12 +7816,6 @@ namespace py::cpp::Windows::Management::Deployment
     static void _dealloc_DeploymentProgress(py::wrapper::Windows::Management::Deployment::DeploymentProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

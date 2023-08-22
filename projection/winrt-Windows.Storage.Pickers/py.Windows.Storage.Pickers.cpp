@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Storage::Pickers
     static void _dealloc_FileExtensionVector(py::wrapper::Windows::Storage::Pickers::FileExtensionVector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -663,12 +657,6 @@ namespace py::cpp::Windows::Storage::Pickers
     static void _dealloc_FileOpenPicker(py::wrapper::Windows::Storage::Pickers::FileOpenPicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1194,12 +1182,6 @@ namespace py::cpp::Windows::Storage::Pickers
     static void _dealloc_FilePickerFileTypesOrderedMap(py::wrapper::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1607,12 +1589,6 @@ namespace py::cpp::Windows::Storage::Pickers
     static void _dealloc_FilePickerSelectedFilesArray(py::wrapper::Windows::Storage::Pickers::FilePickerSelectedFilesArray* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1977,12 +1953,6 @@ namespace py::cpp::Windows::Storage::Pickers
     static void _dealloc_FileSavePicker(py::wrapper::Windows::Storage::Pickers::FileSavePicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2563,12 +2533,6 @@ namespace py::cpp::Windows::Storage::Pickers
     static void _dealloc_FolderPicker(py::wrapper::Windows::Storage::Pickers::FolderPicker* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

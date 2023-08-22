@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_AutomationRemoteOperationResult(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -338,12 +332,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_CoreAutomationRemoteOperation(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -612,12 +600,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_CoreAutomationRemoteOperationContext(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -816,12 +798,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_RemoteAutomationClientSession(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1097,12 +1073,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_RemoteAutomationConnectionRequestedEventArgs(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1212,12 +1182,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_RemoteAutomationDisconnectedEventArgs(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1374,12 +1338,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_RemoteAutomationWindow(py::wrapper::Windows::UI::UIAutomation::Core::RemoteAutomationWindow* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1499,12 +1457,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_ICoreAutomationConnectionBoundObjectProvider(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1594,12 +1546,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_ICoreAutomationRemoteOperationExtensionProvider(py::wrapper::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1767,12 +1713,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_AutomationAnnotationTypeRegistration(py::wrapper::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1876,12 +1816,6 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static void _dealloc_AutomationRemoteOperationOperandId(py::wrapper::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

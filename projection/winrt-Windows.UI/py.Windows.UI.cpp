@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI
     static void _dealloc_ColorHelper(py::wrapper::Windows::UI::ColorHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -160,12 +154,6 @@ namespace py::cpp::Windows::UI
     static void _dealloc_Colors(py::wrapper::Windows::UI::Colors* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3075,12 +3063,6 @@ namespace py::cpp::Windows::UI
     static void _dealloc_UIContentRoot(py::wrapper::Windows::UI::UIContentRoot* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3170,12 +3152,6 @@ namespace py::cpp::Windows::UI
     static void _dealloc_UIContext(py::wrapper::Windows::UI::UIContext* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3279,12 +3255,6 @@ namespace py::cpp::Windows::UI
     static void _dealloc_Color(py::wrapper::Windows::UI::Color* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3490,12 +3460,6 @@ namespace py::cpp::Windows::UI
     static void _dealloc_WindowId(py::wrapper::Windows::UI::WindowId* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

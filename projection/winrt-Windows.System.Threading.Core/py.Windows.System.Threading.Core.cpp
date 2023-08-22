@@ -75,12 +75,6 @@ namespace py::cpp::Windows::System::Threading::Core
     static void _dealloc_PreallocatedWorkItem(py::wrapper::Windows::System::Threading::Core::PreallocatedWorkItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -180,12 +174,6 @@ namespace py::cpp::Windows::System::Threading::Core
     static void _dealloc_SignalNotifier(py::wrapper::Windows::System::Threading::Core::SignalNotifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

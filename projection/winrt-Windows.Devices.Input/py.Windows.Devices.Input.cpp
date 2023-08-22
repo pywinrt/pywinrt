@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_KeyboardCapabilities(py::wrapper::Windows::Devices::Input::KeyboardCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -157,12 +151,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_MouseCapabilities(py::wrapper::Windows::Devices::Input::MouseCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -332,12 +320,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_MouseDevice(py::wrapper::Windows::Devices::Input::MouseDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -482,12 +464,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_MouseEventArgs(py::wrapper::Windows::Devices::Input::MouseEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -577,12 +553,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenButtonListener(py::wrapper::Windows::Devices::Input::PenButtonListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -892,12 +862,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenDevice(py::wrapper::Windows::Devices::Input::PenDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1039,12 +1003,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenDockListener(py::wrapper::Windows::Devices::Input::PenDockListener* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1309,12 +1267,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenDockedEventArgs(py::wrapper::Windows::Devices::Input::PenDockedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1384,12 +1336,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenTailButtonClickedEventArgs(py::wrapper::Windows::Devices::Input::PenTailButtonClickedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1459,12 +1405,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenTailButtonDoubleClickedEventArgs(py::wrapper::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1534,12 +1474,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenTailButtonLongPressedEventArgs(py::wrapper::Windows::Devices::Input::PenTailButtonLongPressedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1609,12 +1543,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PenUndockedEventArgs(py::wrapper::Windows::Devices::Input::PenUndockedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1684,12 +1612,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PointerDevice(py::wrapper::Windows::Devices::Input::PointerDevice* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1983,12 +1905,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_TouchCapabilities(py::wrapper::Windows::Devices::Input::TouchCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2130,12 +2046,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_MouseDelta(py::wrapper::Windows::Devices::Input::MouseDelta* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2280,12 +2190,6 @@ namespace py::cpp::Windows::Devices::Input
     static void _dealloc_PointerDeviceUsage(py::wrapper::Windows::Devices::Input::PointerDeviceUsage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity
     static void _dealloc_EnterpriseKeyCredentialRegistrationInfo(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -193,12 +187,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity
     static void _dealloc_EnterpriseKeyCredentialRegistrationManager(py::wrapper::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

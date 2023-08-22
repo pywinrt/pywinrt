@@ -18,12 +18,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_AppBarButtonTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -113,12 +107,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_AppBarTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -388,12 +376,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_AppBarToggleButtonTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -483,12 +465,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ButtonBase(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -929,12 +905,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_CalendarPanel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1004,12 +974,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_CalendarViewTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1401,12 +1365,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_CarouselPanel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2442,12 +2400,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ColorPickerSlider(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2627,12 +2579,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ColorSpectrum(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3447,12 +3393,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ComboBoxTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3644,12 +3584,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_CommandBarFlyoutCommandBar(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3739,12 +3673,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_CommandBarFlyoutCommandBarTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4214,12 +4142,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_CommandBarTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4555,12 +4477,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_DragCompletedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4715,12 +4631,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_DragDeltaEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4855,12 +4765,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_DragStartedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4970,12 +4874,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_FlyoutBase(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6346,12 +6244,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_FlyoutBaseClosingEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6491,12 +6383,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_FlyoutShowOptions(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6758,12 +6644,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_GeneratorPositionHelper(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6888,12 +6768,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_GridViewItemPresenter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8479,12 +8353,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_GridViewItemTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8574,12 +8442,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ItemsChangedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8771,12 +8633,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_JumpListItemBackgroundConverter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9094,12 +8950,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_JumpListItemForegroundConverter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9395,12 +9245,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_LayoutInformation(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LayoutInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -9588,12 +9432,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ListViewItemPresenter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13695,12 +13533,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ListViewItemTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -13790,12 +13622,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_LoopingSelector(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14406,12 +14232,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_LoopingSelectorItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14481,12 +14301,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_LoopingSelectorPanel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14765,12 +14579,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_MenuFlyoutItemTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14860,12 +14668,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_MenuFlyoutPresenterTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -14977,12 +14779,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_NavigationViewItemPresenter(py::wrapper::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -15140,12 +14936,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_OrientedVirtualizingPanel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16205,12 +15995,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_PickerFlyoutBase(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16469,12 +16253,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_PivotHeaderItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16566,12 +16344,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_PivotHeaderPanel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotHeaderPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16663,12 +16435,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_PivotPanel(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotPanel* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -16969,12 +16735,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_Popup(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Popup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -17919,12 +17679,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ProgressBarTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18134,12 +17888,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ProgressRingTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18269,12 +18017,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_RangeBase(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18851,12 +18593,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_RangeBaseValueChangedEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -18988,12 +18724,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_RepeatButton(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RepeatButton* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19241,12 +18971,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ScrollBar(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19607,12 +19331,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ScrollEventArgs(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -19722,12 +19440,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_Selector(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20234,12 +19946,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_SelectorItem(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SelectorItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20397,12 +20103,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_SettingsFlyoutTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20592,12 +20292,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_SplitViewTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -20809,12 +20503,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_Thumb(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Thumb* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21132,12 +20820,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_TickBar(py::wrapper::Windows::UI::Xaml::Controls::Primitives::TickBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21317,12 +20999,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ToggleButton(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21714,12 +21390,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ToggleSwitchTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -21949,12 +21619,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_ToolTipTemplateSettings(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22064,12 +21728,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_IScrollSnapPointsInfo(py::wrapper::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -22380,12 +22038,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static void _dealloc_GeneratorPosition(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Media::AppRecording
     static void _dealloc_AppRecordingManager(py::wrapper::Windows::Media::AppRecording::AppRecordingManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -274,12 +268,6 @@ namespace py::cpp::Windows::Media::AppRecording
     static void _dealloc_AppRecordingResult(py::wrapper::Windows::Media::AppRecording::AppRecordingResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -429,12 +417,6 @@ namespace py::cpp::Windows::Media::AppRecording
     static void _dealloc_AppRecordingSaveScreenshotResult(py::wrapper::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -564,12 +546,6 @@ namespace py::cpp::Windows::Media::AppRecording
     static void _dealloc_AppRecordingSavedScreenshotInfo(py::wrapper::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -679,12 +655,6 @@ namespace py::cpp::Windows::Media::AppRecording
     static void _dealloc_AppRecordingStatus(py::wrapper::Windows::Media::AppRecording::AppRecordingStatus* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -834,12 +804,6 @@ namespace py::cpp::Windows::Media::AppRecording
     static void _dealloc_AppRecordingStatusDetails(py::wrapper::Windows::Media::AppRecording::AppRecordingStatusDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

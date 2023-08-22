@@ -42,12 +42,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_Buffer(py::wrapper::Windows::Storage::Streams::Buffer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -294,12 +288,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_DataReader(py::wrapper::Windows::Storage::Streams::DataReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1197,12 +1185,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_DataReaderLoadOperation(py::wrapper::Windows::Storage::Streams::DataReaderLoadOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1515,12 +1497,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_DataWriter(py::wrapper::Windows::Storage::Streams::DataWriter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2461,12 +2437,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_DataWriterStoreOperation(py::wrapper::Windows::Storage::Streams::DataWriterStoreOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2742,12 +2712,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_FileInputStream(py::wrapper::Windows::Storage::Streams::FileInputStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2904,12 +2868,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_FileOutputStream(py::wrapper::Windows::Storage::Streams::FileOutputStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3094,12 +3052,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_FileRandomAccessStream(py::wrapper::Windows::Storage::Streams::FileRandomAccessStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3799,12 +3751,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_InMemoryRandomAccessStream(py::wrapper::Windows::Storage::Streams::InMemoryRandomAccessStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4258,12 +4204,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_InputStreamOverStream(py::wrapper::Windows::Storage::Streams::InputStreamOverStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4420,12 +4360,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_OutputStreamOverStream(py::wrapper::Windows::Storage::Streams::OutputStreamOverStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4732,12 +4666,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_RandomAccessStreamOverStream(py::wrapper::Windows::Storage::Streams::RandomAccessStreamOverStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5191,12 +5119,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_RandomAccessStreamReference(py::wrapper::Windows::Storage::Streams::RandomAccessStreamReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5392,12 +5314,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IBuffer(py::wrapper::Windows::Storage::Streams::IBuffer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5556,12 +5472,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IContentTypeProvider(py::wrapper::Windows::Storage::Streams::IContentTypeProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5651,12 +5561,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IDataReader(py::wrapper::Windows::Storage::Streams::IDataReader* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6469,12 +6373,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IDataWriter(py::wrapper::Windows::Storage::Streams::IDataWriter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7362,12 +7260,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IInputStream(py::wrapper::Windows::Storage::Streams::IInputStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7524,12 +7416,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IInputStreamReference(py::wrapper::Windows::Storage::Streams::IInputStreamReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7629,12 +7515,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IOutputStream(py::wrapper::Windows::Storage::Streams::IOutputStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7819,12 +7699,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IPropertySetSerializer(py::wrapper::Windows::Storage::Streams::IPropertySetSerializer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7960,12 +7834,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IRandomAccessStream(py::wrapper::Windows::Storage::Streams::IRandomAccessStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8419,12 +8287,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IRandomAccessStreamReference(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamReference* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -8524,12 +8386,6 @@ namespace py::cpp::Windows::Storage::Streams
     static void _dealloc_IRandomAccessStreamWithContentType(py::wrapper::Windows::Storage::Streams::IRandomAccessStreamWithContentType* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

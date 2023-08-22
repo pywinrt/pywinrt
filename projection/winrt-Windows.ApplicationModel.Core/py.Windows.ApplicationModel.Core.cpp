@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_AppListEntry(py::wrapper::Windows::ApplicationModel::Core::AppListEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1022,12 +1016,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_CoreApplicationView(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1347,12 +1335,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_CoreApplicationViewTitleBar(py::wrapper::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1640,12 +1622,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_HostedViewClosingEventArgs(py::wrapper::Windows::ApplicationModel::Core::HostedViewClosingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1745,12 +1721,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_UnhandledError(py::wrapper::Windows::ApplicationModel::Core::UnhandledError* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1871,12 +1841,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_UnhandledErrorDetectedEventArgs(py::wrapper::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1966,12 +1930,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_ICoreApplicationUnhandledError(py::wrapper::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2086,12 +2044,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_IFrameworkView(py::wrapper::Windows::ApplicationModel::Core::IFrameworkView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2322,12 +2274,6 @@ namespace py::cpp::Windows::ApplicationModel::Core
     static void _dealloc_IFrameworkViewSource(py::wrapper::Windows::ApplicationModel::Core::IFrameworkViewSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

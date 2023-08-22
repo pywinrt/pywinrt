@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     static void _dealloc_IPwmControllerProvider(py::wrapper::Windows::Devices::Pwm::Provider::IPwmControllerProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -372,12 +366,6 @@ namespace py::cpp::Windows::Devices::Pwm::Provider
     static void _dealloc_IPwmProvider(py::wrapper::Windows::Devices::Pwm::Provider::IPwmProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

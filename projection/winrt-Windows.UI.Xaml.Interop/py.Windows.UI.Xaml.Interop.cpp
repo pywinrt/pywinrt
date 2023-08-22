@@ -46,12 +46,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_NotifyCollectionChangedEventArgs(py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -221,12 +215,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_IBindableIterable(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterable* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -326,12 +314,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_IBindableIterator(py::wrapper::Windows::UI::Xaml::Interop::IBindableIterator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -471,12 +453,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_IBindableObservableVector(py::wrapper::Windows::UI::Xaml::Interop::IBindableObservableVector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -944,12 +920,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_IBindableVector(py::wrapper::Windows::UI::Xaml::Interop::IBindableVector* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1372,12 +1342,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_IBindableVectorView(py::wrapper::Windows::UI::Xaml::Interop::IBindableVectorView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1574,12 +1538,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_INotifyCollectionChanged(py::wrapper::Windows::UI::Xaml::Interop::INotifyCollectionChanged* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1726,12 +1684,6 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static void _dealloc_TypeName(py::wrapper::Windows::UI::Xaml::Interop::TypeName* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveBlobGetResult(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -133,12 +127,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveBlobInfo(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -248,12 +236,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveBlobInfoGetResult(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -363,12 +345,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveBlobInfoQuery(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -519,12 +495,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveContainer(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainer* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -798,12 +768,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveContainerInfo(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -973,12 +937,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveContainerInfoGetResult(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1088,12 +1046,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveContainerInfoQuery(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1244,12 +1196,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveOperationResult(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1339,12 +1285,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveProvider(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1664,12 +1604,6 @@ namespace py::cpp::Windows::Gaming::XboxLive::Storage
     static void _dealloc_GameSaveProviderGetResult(py::wrapper::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Security::DataProtection
     static void _dealloc_UserDataAvailabilityStateChangedEventArgs(py::wrapper::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -123,12 +117,6 @@ namespace py::cpp::Windows::Security::DataProtection
     static void _dealloc_UserDataBufferUnprotectResult(py::wrapper::Windows::Security::DataProtection::UserDataBufferUnprotectResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -238,12 +226,6 @@ namespace py::cpp::Windows::Security::DataProtection
     static void _dealloc_UserDataProtectionManager(py::wrapper::Windows::Security::DataProtection::UserDataProtectionManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -582,12 +564,6 @@ namespace py::cpp::Windows::Security::DataProtection
     static void _dealloc_UserDataStorageItemProtectionInfo(py::wrapper::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

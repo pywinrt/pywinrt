@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Devices::Geolocation::Provider
     static void _dealloc_GeolocationProvider(py::wrapper::Windows::Devices::Geolocation::Provider::GeolocationProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

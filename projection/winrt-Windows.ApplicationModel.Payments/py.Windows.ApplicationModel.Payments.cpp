@@ -40,12 +40,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentAddress(py::wrapper::Windows::ApplicationModel::Payments::PaymentAddress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -687,12 +681,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentCanMakePaymentResult(py::wrapper::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -824,12 +812,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentCurrencyAmount(py::wrapper::Windows::ApplicationModel::Payments::PaymentCurrencyAmount* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1096,12 +1078,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentDetails(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1423,12 +1399,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentDetailsModifier(py::wrapper::Windows::ApplicationModel::Payments::PaymentDetailsModifier* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1603,12 +1573,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentItem(py::wrapper::Windows::ApplicationModel::Payments::PaymentItem* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1844,12 +1808,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentMediator(py::wrapper::Windows::ApplicationModel::Payments::PaymentMediator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2071,12 +2029,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentMerchantInfo(py::wrapper::Windows::ApplicationModel::Payments::PaymentMerchantInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2226,12 +2178,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentMethodData(py::wrapper::Windows::ApplicationModel::Payments::PaymentMethodData* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2363,12 +2309,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentOptions(py::wrapper::Windows::ApplicationModel::Payments::PaymentOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2757,12 +2697,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentRequest(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2932,12 +2866,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentRequestChangedArgs(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3140,12 +3068,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentRequestChangedResult(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestChangedResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3359,12 +3281,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentRequestSubmitResult(py::wrapper::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3474,12 +3390,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentResponse(py::wrapper::Windows::ApplicationModel::Payments::PaymentResponse* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3761,12 +3671,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentShippingOption(py::wrapper::Windows::ApplicationModel::Payments::PaymentShippingOption* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4068,12 +3972,6 @@ namespace py::cpp::Windows::ApplicationModel::Payments
     static void _dealloc_PaymentToken(py::wrapper::Windows::ApplicationModel::Payments::PaymentToken* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

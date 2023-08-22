@@ -124,12 +124,6 @@ namespace py::cpp::Windows::System::UserProfile
     static void _dealloc_AdvertisingManagerForUser(py::wrapper::Windows::System::UserProfile::AdvertisingManagerForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -239,12 +233,6 @@ namespace py::cpp::Windows::System::UserProfile
     static void _dealloc_AssignedAccessSettings(py::wrapper::Windows::System::UserProfile::AssignedAccessSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -436,12 +424,6 @@ namespace py::cpp::Windows::System::UserProfile
     static void _dealloc_DiagnosticsSettings(py::wrapper::Windows::System::UserProfile::DiagnosticsSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -613,12 +595,6 @@ namespace py::cpp::Windows::System::UserProfile
     static void _dealloc_FirstSignInSettings(py::wrapper::Windows::System::UserProfile::FirstSignInSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1217,12 +1193,6 @@ namespace py::cpp::Windows::System::UserProfile
     static void _dealloc_GlobalizationPreferencesForUser(py::wrapper::Windows::System::UserProfile::GlobalizationPreferencesForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2145,12 +2115,6 @@ namespace py::cpp::Windows::System::UserProfile
     static void _dealloc_UserProfilePersonalizationSettings(py::wrapper::Windows::System::UserProfile::UserProfilePersonalizationSettings* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

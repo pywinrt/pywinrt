@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     static void _dealloc_AccessListEntryView(py::wrapper::Windows::Storage::AccessCache::AccessListEntryView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -366,12 +360,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     static void _dealloc_ItemRemovedEventArgs(py::wrapper::Windows::Storage::AccessCache::ItemRemovedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -619,12 +607,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     static void _dealloc_StorageItemAccessList(py::wrapper::Windows::Storage::AccessCache::StorageItemAccessList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1131,12 +1113,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     static void _dealloc_StorageItemMostRecentlyUsedList(py::wrapper::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1734,12 +1710,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     static void _dealloc_IStorageItemAccessList(py::wrapper::Windows::Storage::AccessCache::IStorageItemAccessList* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2278,12 +2248,6 @@ namespace py::cpp::Windows::Storage::AccessCache
     static void _dealloc_AccessListEntry(py::wrapper::Windows::Storage::AccessCache::AccessListEntry* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

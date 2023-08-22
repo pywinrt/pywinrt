@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowBackgroundSession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -234,12 +228,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowBackgroundSetupRequestedEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -420,12 +408,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowConfiguration(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -588,12 +570,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowForegroundSession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -804,12 +780,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowForegroundSetupRequestedEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -959,12 +929,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowJobActivatedEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1134,12 +1098,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowJobBackgroundSession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1350,12 +1308,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowJobNotificationEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1495,12 +1447,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowJobStartingEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1671,12 +1617,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowJobTriggerDetails(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1766,12 +1706,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowJobUISession(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2006,12 +1940,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowObjectModelSourceFileContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2081,12 +2009,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowObjectModelTargetPackage(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2156,12 +2078,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowPdlConverter(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2288,12 +2204,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowPdlDataAvailableEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2453,12 +2363,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowPdlModificationRequestedEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2816,12 +2720,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowPdlSourceContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2971,12 +2869,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowPdlTargetStream(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3109,12 +3001,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowPrinterJob(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3412,12 +3298,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowSourceContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3577,12 +3457,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowSpoolStreamContent(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3682,12 +3556,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowStreamTarget(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3787,12 +3655,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowSubmittedEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3944,12 +3806,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowSubmittedOperation(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4092,12 +3948,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowTarget(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4207,12 +4057,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowTriggerDetails(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4302,12 +4146,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowUIActivatedEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4477,12 +4315,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowUILauncher(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4612,12 +4444,6 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static void _dealloc_PrintWorkflowXpsDataAvailableEventArgs(py::wrapper::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

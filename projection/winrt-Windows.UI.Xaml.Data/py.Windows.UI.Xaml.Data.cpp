@@ -40,12 +40,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_Binding(py::wrapper::Windows::UI::Xaml::Data::Binding* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -665,12 +659,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_BindingBase(py::wrapper::Windows::UI::Xaml::Data::BindingBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -740,12 +728,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_BindingExpression(py::wrapper::Windows::UI::Xaml::Data::BindingExpression* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -886,12 +868,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_BindingExpressionBase(py::wrapper::Windows::UI::Xaml::Data::BindingExpressionBase* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -961,12 +937,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_BindingOperations(py::wrapper::Windows::UI::Xaml::Data::BindingOperations* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1093,12 +1063,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_CollectionViewSource(py::wrapper::Windows::UI::Xaml::Data::CollectionViewSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1469,12 +1433,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_CurrentChangingEventArgs(py::wrapper::Windows::UI::Xaml::Data::CurrentChangingEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1637,12 +1595,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ItemIndexRange(py::wrapper::Windows::UI::Xaml::Data::ItemIndexRange* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1796,12 +1748,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_PropertyChangedEventArgs(py::wrapper::Windows::UI::Xaml::Data::PropertyChangedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1913,12 +1859,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_RelativeSource(py::wrapper::Windows::UI::Xaml::Data::RelativeSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2036,12 +1976,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ICollectionView(py::wrapper::Windows::UI::Xaml::Data::ICollectionView* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3130,12 +3064,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ICollectionViewFactory(py::wrapper::Windows::UI::Xaml::Data::ICollectionViewFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3235,12 +3163,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ICollectionViewGroup(py::wrapper::Windows::UI::Xaml::Data::ICollectionViewGroup* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3350,12 +3272,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ICustomProperty(py::wrapper::Windows::UI::Xaml::Data::ICustomProperty* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3639,12 +3555,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ICustomPropertyProvider(py::wrapper::Windows::UI::Xaml::Data::ICustomPropertyProvider* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3829,12 +3739,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_IItemsRangeInfo(py::wrapper::Windows::UI::Xaml::Data::IItemsRangeInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3991,12 +3895,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_INotifyPropertyChanged(py::wrapper::Windows::UI::Xaml::Data::INotifyPropertyChanged* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4111,12 +4009,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ISelectionInfo(py::wrapper::Windows::UI::Xaml::Data::ISelectionInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4314,12 +4206,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_ISupportIncrementalLoading(py::wrapper::Windows::UI::Xaml::Data::ISupportIncrementalLoading* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4441,12 +4327,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_IValueConverter(py::wrapper::Windows::UI::Xaml::Data::IValueConverter* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4617,12 +4497,6 @@ namespace py::cpp::Windows::UI::Xaml::Data
     static void _dealloc_LoadMoreItemsResult(py::wrapper::Windows::UI::Xaml::Data::LoadMoreItemsResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

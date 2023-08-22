@@ -43,12 +43,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayBitmapEffect(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -375,12 +369,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayBitmapRequestedEventArgs(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -528,12 +516,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayBlinkEffect(py::wrapper::Windows::Devices::Lights::Effects::LampArrayBlinkEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1060,12 +1042,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayColorRampEffect(py::wrapper::Windows::Devices::Lights::Effects::LampArrayColorRampEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1400,12 +1376,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayCustomEffect(py::wrapper::Windows::Devices::Lights::Effects::LampArrayCustomEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1686,12 +1656,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayEffectPlaylist(py::wrapper::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2461,12 +2425,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArraySolidEffect(py::wrapper::Windows::Devices::Lights::Effects::LampArraySolidEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2776,12 +2734,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_LampArrayUpdateRequestedEventArgs(py::wrapper::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3006,12 +2958,6 @@ namespace py::cpp::Windows::Devices::Lights::Effects
     static void _dealloc_ILampArrayEffect(py::wrapper::Windows::Devices::Lights::Effects::ILampArrayEffect* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

@@ -18,12 +18,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     static void _dealloc_AddAppointmentOperation(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -415,12 +409,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     static void _dealloc_RemoveAppointmentOperation(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -676,12 +664,6 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     static void _dealloc_ReplaceAppointmentOperation(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

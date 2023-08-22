@@ -18,12 +18,6 @@ namespace py::cpp::Windows::Data::Pdf
     static void _dealloc_PdfDocument(py::wrapper::Windows::Data::Pdf::PdfDocument* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -271,12 +265,6 @@ namespace py::cpp::Windows::Data::Pdf
     static void _dealloc_PdfPage(py::wrapper::Windows::Data::Pdf::PdfPage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -582,12 +570,6 @@ namespace py::cpp::Windows::Data::Pdf
     static void _dealloc_PdfPageDimensions(py::wrapper::Windows::Data::Pdf::PdfPageDimensions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -779,12 +761,6 @@ namespace py::cpp::Windows::Data::Pdf
     static void _dealloc_PdfPageRenderOptions(py::wrapper::Windows::Data::Pdf::PdfPageRenderOptions* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

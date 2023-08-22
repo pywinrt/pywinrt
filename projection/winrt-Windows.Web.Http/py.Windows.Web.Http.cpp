@@ -59,12 +59,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpBufferContent(py::wrapper::Windows::Web::Http::HttpBufferContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -484,12 +478,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpClient(py::wrapper::Windows::Web::Http::HttpClient* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1350,12 +1338,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpCookie(py::wrapper::Windows::Web::Http::HttpCookie* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1721,12 +1703,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpCookieCollection(py::wrapper::Windows::Web::Http::HttpCookieCollection* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2069,12 +2045,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpCookieManager(py::wrapper::Windows::Web::Http::HttpCookieManager* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2286,12 +2256,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpFormUrlEncodedContent(py::wrapper::Windows::Web::Http::HttpFormUrlEncodedContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2674,12 +2638,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpGetBufferResult(py::wrapper::Windows::Web::Http::HttpGetBufferResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2946,12 +2904,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpGetInputStreamResult(py::wrapper::Windows::Web::Http::HttpGetInputStreamResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3218,12 +3170,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpGetStringResult(py::wrapper::Windows::Web::Http::HttpGetStringResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3514,12 +3460,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpMethod(py::wrapper::Windows::Web::Http::HttpMethod* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -3866,12 +3806,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpMultipartContent(py::wrapper::Windows::Web::Http::HttpMultipartContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4368,12 +4302,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpMultipartFormDataContent(py::wrapper::Windows::Web::Http::HttpMultipartFormDataContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4916,12 +4844,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpRequestMessage(py::wrapper::Windows::Web::Http::HttpRequestMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5340,12 +5262,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpRequestResult(py::wrapper::Windows::Web::Http::HttpRequestResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -5629,12 +5545,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpResponseMessage(py::wrapper::Windows::Web::Http::HttpResponseMessage* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6183,12 +6093,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpStreamContent(py::wrapper::Windows::Web::Http::HttpStreamContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -6628,12 +6532,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpStringContent(py::wrapper::Windows::Web::Http::HttpStringContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7016,12 +6914,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpTransportInformation(py::wrapper::Windows::Web::Http::HttpTransportInformation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7215,12 +7107,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_IHttpContent(py::wrapper::Windows::Web::Http::IHttpContent* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -7595,12 +7481,6 @@ namespace py::cpp::Windows::Web::Http
     static void _dealloc_HttpProgress(py::wrapper::Windows::Web::Http::HttpProgress* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

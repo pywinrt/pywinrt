@@ -89,12 +89,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_CachedFileUpdaterUI(py::wrapper::Windows::Storage::Provider::CachedFileUpdaterUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -392,12 +386,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_FileUpdateRequest(py::wrapper::Windows::Storage::Provider::FileUpdateRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -666,12 +654,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_FileUpdateRequestDeferral(py::wrapper::Windows::Storage::Provider::FileUpdateRequestDeferral* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -772,12 +754,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_FileUpdateRequestedEventArgs(py::wrapper::Windows::Storage::Provider::FileUpdateRequestedEventArgs* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -892,12 +868,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderFileTypeInfo(py::wrapper::Windows::Storage::Provider::StorageProviderFileTypeInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1029,12 +999,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderGetContentInfoForPathResult(py::wrapper::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1270,12 +1234,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderGetPathForContentUriResult(py::wrapper::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1530,12 +1488,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderItemProperty(py::wrapper::Windows::Storage::Provider::StorageProviderItemProperty* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1771,12 +1723,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderItemPropertyDefinition(py::wrapper::Windows::Storage::Provider::StorageProviderItemPropertyDefinition* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1964,12 +1910,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderMoreInfoUI(py::wrapper::Windows::Storage::Provider::StorageProviderMoreInfoUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2157,12 +2097,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderQuotaUI(py::wrapper::Windows::Storage::Provider::StorageProviderQuotaUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2446,12 +2380,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderStatusUI(py::wrapper::Windows::Storage::Provider::StorageProviderStatusUI* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -2927,12 +2855,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_StorageProviderSyncRootInfo(py::wrapper::Windows::Storage::Provider::StorageProviderSyncRootInfo* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4034,12 +3956,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_IStorageProviderItemPropertySource(py::wrapper::Windows::Storage::Provider::IStorageProviderItemPropertySource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4141,12 +4057,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_IStorageProviderPropertyCapabilities(py::wrapper::Windows::Storage::Provider::IStorageProviderPropertyCapabilities* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4248,12 +4158,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_IStorageProviderStatusUISource(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4398,12 +4302,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_IStorageProviderStatusUISourceFactory(py::wrapper::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4505,12 +4403,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_IStorageProviderUICommand(py::wrapper::Windows::Storage::Provider::IStorageProviderUICommand* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -4691,12 +4583,6 @@ namespace py::cpp::Windows::Storage::Provider
     static void _dealloc_IStorageProviderUriSource(py::wrapper::Windows::Storage::Provider::IStorageProviderUriSource* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);

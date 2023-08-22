@@ -40,12 +40,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_OnlineIdAuthenticator(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -286,12 +280,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_OnlineIdServiceTicket(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -461,12 +449,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_OnlineIdServiceTicketRequest(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -682,12 +664,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_OnlineIdSystemAuthenticatorForUser(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -857,12 +833,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_OnlineIdSystemIdentity(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -972,12 +942,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_OnlineIdSystemTicketResult(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1107,12 +1071,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_SignOutUserOperation(py::wrapper::Windows::Security::Authentication::OnlineId::SignOutUserOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1389,12 +1347,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_UserAuthenticationOperation(py::wrapper::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
@@ -1670,12 +1622,6 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
     static void _dealloc_UserIdentity(py::wrapper::Windows::Security::Authentication::OnlineId::UserIdentity* self) noexcept
     {
         auto tp = Py_TYPE(self);
-
-        if (PyType_IS_GC(tp))
-        {
-            PyObject_GC_UnTrack(self);
-        }
-
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
