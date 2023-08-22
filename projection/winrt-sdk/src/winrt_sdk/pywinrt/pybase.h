@@ -144,16 +144,9 @@ namespace py
         PyObject* _callable{};
     };
 
-    struct winrt_wrapper_base
-    {
-        PyObject_HEAD;
-
-        // PyObject_New doesn't call type's constructor, so manually manage the
-        // "virtual" get_unknown function
-        winrt::Windows::Foundation::IUnknown const& (*get_unknown)(
-            winrt_wrapper_base* self);
-    };
-
+    /**
+     * Python PyObject struct for wrapping WinRT structs.
+     */
     template<typename T>
     struct winrt_struct_wrapper
     {
@@ -161,36 +154,33 @@ namespace py
         T obj{};
     };
 
+    /**
+     * Python PyObject struct for wrapping WinRT objects and interfaces.
+     *
+     * @tparam T   The WinRT type to wrap (e.g. `winrt::Windows::...`).
+     */
     template<typename T>
-    struct winrt_wrapper : winrt_wrapper_base
+    struct winrt_wrapper
     {
-        T obj{nullptr};
-
-        static winrt::Windows::Foundation::IUnknown const& fetch_unknown(
-            winrt_wrapper_base* self)
-        {
-            return reinterpret_cast<winrt_wrapper<T>*>(self)->obj;
-        }
+        PyObject_HEAD;
+        /** The winrt object instance. */
+        T obj{};
+        static_assert(std::is_base_of_v<winrt::Windows::Foundation::IUnknown, T>);
     };
 
+    /**
+     * Python PyObject struct for wrapping WinRT parameterized interfaces.
+     *
+     * @tparam T   The abstract pinterface wrapper type to wrap (e.g.
+     * `py::proj::Windows::...`).
+     */
     template<typename T>
-    struct winrt_pinterface_wrapper : winrt_wrapper_base
+    struct winrt_pinterface_wrapper
+        : winrt_wrapper<winrt::Windows::Foundation::IUnknown>
     {
-        std::unique_ptr<T> obj{nullptr};
-
-        static winrt::Windows::Foundation::IUnknown const& fetch_unknown(
-            winrt_wrapper_base* self)
-        {
-            return reinterpret_cast<winrt_pinterface_wrapper<T>*>(self)
-                ->obj->get_unknown();
-        }
+        /** The PyWinRT member implementation for the concrete generic type. */
+        std::unique_ptr<T> impl{};
     };
-
-    template<typename To>
-    To as(winrt_wrapper_base* wrapper)
-    {
-        return wrapper->get_unknown(wrapper).template as<To>();
-    }
 
     /**
      * Generic WinRT array type (System.Array) implementation.
@@ -684,7 +674,6 @@ namespace py
             return nullptr;
         }
 
-        py_instance->get_unknown = &winrt_wrapper<T>::fetch_unknown;
         // call C++ constructors on memory allocated from CPython heap
         std::construct_at(&py_instance->obj, instance);
 
@@ -716,11 +705,10 @@ namespace py
             return nullptr;
         }
 
-        py_instance->get_unknown
-            = &winrt_pinterface_wrapper<typename ptype::abstract>::fetch_unknown;
         // call C++ constructors on memory allocated from CPython heap
-        std::construct_at(&py_instance->obj);
-        py_instance->obj = std::make_unique<typename ptype::concrete>(instance);
+        std::construct_at(&py_instance->obj, instance);
+        std::construct_at(&py_instance->impl);
+        py_instance->impl = std::make_unique<typename ptype::concrete>(instance);
 
         return reinterpret_cast<PyObject*>(py_instance);
     }
@@ -1357,8 +1345,9 @@ namespace py
                 throw python_exception();
             }
 
-            auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
-            return as<winrt::Windows::Foundation::IInspectable>(wrapper);
+            return reinterpret_cast<
+                       winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(obj)
+                ->obj.as<winrt::Windows::Foundation::IInspectable>();
         }
     };
 
@@ -1651,8 +1640,9 @@ namespace py
             return {};
         }
 
-        auto wrapper = reinterpret_cast<winrt_wrapper_base*>(obj);
-        return as<T>(wrapper);
+        return reinterpret_cast<winrt_wrapper<winrt::Windows::Foundation::IUnknown>*>(
+                   obj)
+            ->obj.as<T>();
     }
 
     // TODO: specialization for Python Sequence Protocol -> IVector[View]

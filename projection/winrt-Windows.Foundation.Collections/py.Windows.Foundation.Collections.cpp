@@ -1465,18 +1465,19 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IIterable_First(py::wrapper::Windows::Foundation::Collections::IIterable* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* _iterator_IIterable(py::wrapper::Windows::Foundation::Collections::IIterable* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static PyMethodDef _methods_IIterable[] = {
@@ -1529,18 +1530,19 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IIterator_GetMany(py::wrapper::Windows::Foundation::Collections::IIterator* self, PyObject* args) noexcept
     {
-        return self->obj->GetMany(args);
+        return self->impl->GetMany(args);
     }
 
     static PyObject* IIterator_MoveNext(py::wrapper::Windows::Foundation::Collections::IIterator* self, PyObject* args) noexcept
     {
-        return self->obj->MoveNext(args);
+        return self->impl->MoveNext(args);
     }
 
     static PyObject* IIterator_get_Current(py::wrapper::Windows::Foundation::Collections::IIterator* self, void* /*unused*/) noexcept
@@ -1551,7 +1553,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Current();
+        return self->impl->get_Current();
     }
 
     static PyObject* IIterator_get_HasCurrent(py::wrapper::Windows::Foundation::Collections::IIterator* self, void* /*unused*/) noexcept
@@ -1562,17 +1564,17 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_HasCurrent();
+        return self->impl->get_HasCurrent();
     }
 
     static PyObject* _iterator_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static PyObject* _iterator_next_IIterator(py::wrapper::Windows::Foundation::Collections::IIterator* self) noexcept
     {
-        return self->obj->dunder_iternext();
+        return self->impl->dunder_iternext();
     }
 
     static PyMethodDef _methods_IIterator[] = {
@@ -1629,6 +1631,7 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
@@ -1641,7 +1644,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Key();
+        return self->impl->get_Key();
     }
 
     static PyObject* IKeyValuePair_get_Value(py::wrapper::Windows::Foundation::Collections::IKeyValuePair* self, void* /*unused*/) noexcept
@@ -1652,7 +1655,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Value();
+        return self->impl->get_Value();
     }
 
     static PyMethodDef _methods_IKeyValuePair[] = {
@@ -1705,6 +1708,7 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
@@ -1717,7 +1721,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_CollectionChange();
+        return self->impl->get_CollectionChange();
     }
 
     static PyObject* IMapChangedEventArgs_get_Key(py::wrapper::Windows::Foundation::Collections::IMapChangedEventArgs* self, void* /*unused*/) noexcept
@@ -1728,7 +1732,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Key();
+        return self->impl->get_Key();
     }
 
     static PyMethodDef _methods_IMapChangedEventArgs[] = {
@@ -1781,28 +1785,29 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IMapView_First(py::wrapper::Windows::Foundation::Collections::IMapView* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* IMapView_HasKey(py::wrapper::Windows::Foundation::Collections::IMapView* self, PyObject* args) noexcept
     {
-        return self->obj->HasKey(args);
+        return self->impl->HasKey(args);
     }
 
     static PyObject* IMapView_Lookup(py::wrapper::Windows::Foundation::Collections::IMapView* self, PyObject* args) noexcept
     {
-        return self->obj->Lookup(args);
+        return self->impl->Lookup(args);
     }
 
     static PyObject* IMapView_Split(py::wrapper::Windows::Foundation::Collections::IMapView* self, PyObject* args) noexcept
     {
-        return self->obj->Split(args);
+        return self->impl->Split(args);
     }
 
     static PyObject* IMapView_get_Size(py::wrapper::Windows::Foundation::Collections::IMapView* self, void* /*unused*/) noexcept
@@ -1813,27 +1818,27 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Size();
+        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static int _map_contains_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self, PyObject* key) noexcept
     {
-        return self->obj->map_contains(key);
+        return self->impl->map_contains(key);
     }
 
     static Py_ssize_t _map_length_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self) noexcept
     {
-        return self->obj->map_length();
+        return self->impl->map_length();
     }
 
     static PyObject* _map_subscript_IMapView(py::wrapper::Windows::Foundation::Collections::IMapView* self, PyObject* key) noexcept
     {
-        return self->obj->map_subscript(key);
+        return self->impl->map_subscript(key);
     }
 
     static PyMethodDef _methods_IMapView[] = {
@@ -1893,43 +1898,44 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IMap_Clear(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->Clear(args);
+        return self->impl->Clear(args);
     }
 
     static PyObject* IMap_First(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* IMap_GetView(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->GetView(args);
+        return self->impl->GetView(args);
     }
 
     static PyObject* IMap_HasKey(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->HasKey(args);
+        return self->impl->HasKey(args);
     }
 
     static PyObject* IMap_Insert(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->Insert(args);
+        return self->impl->Insert(args);
     }
 
     static PyObject* IMap_Lookup(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->Lookup(args);
+        return self->impl->Lookup(args);
     }
 
     static PyObject* IMap_Remove(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* args) noexcept
     {
-        return self->obj->Remove(args);
+        return self->impl->Remove(args);
     }
 
     static PyObject* IMap_get_Size(py::wrapper::Windows::Foundation::Collections::IMap* self, void* /*unused*/) noexcept
@@ -1940,32 +1946,32 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Size();
+        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static int _map_contains_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* key) noexcept
     {
-        return self->obj->map_contains(key);
+        return self->impl->map_contains(key);
     }
 
     static Py_ssize_t _map_length_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self) noexcept
     {
-        return self->obj->map_length();
+        return self->impl->map_length();
     }
 
     static PyObject* _map_subscript_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* key) noexcept
     {
-        return self->obj->map_subscript(key);
+        return self->impl->map_subscript(key);
     }
 
     static int _map_assign_IMap(py::wrapper::Windows::Foundation::Collections::IMap* self, PyObject* key, PyObject* value) noexcept
     {
-        return self->obj->map_assign(key, value);
+        return self->impl->map_assign(key, value);
     }
 
     static PyMethodDef _methods_IMap[] = {
@@ -2029,43 +2035,44 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IObservableMap_Clear(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->Clear(args);
+        return self->impl->Clear(args);
     }
 
     static PyObject* IObservableMap_First(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* IObservableMap_GetView(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->GetView(args);
+        return self->impl->GetView(args);
     }
 
     static PyObject* IObservableMap_HasKey(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->HasKey(args);
+        return self->impl->HasKey(args);
     }
 
     static PyObject* IObservableMap_Insert(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->Insert(args);
+        return self->impl->Insert(args);
     }
 
     static PyObject* IObservableMap_Lookup(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->Lookup(args);
+        return self->impl->Lookup(args);
     }
 
     static PyObject* IObservableMap_Remove(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* args) noexcept
     {
-        return self->obj->Remove(args);
+        return self->impl->Remove(args);
     }
 
     static PyObject* IObservableMap_get_Size(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, void* /*unused*/) noexcept
@@ -2076,7 +2083,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Size();
+        return self->impl->get_Size();
     }
 
     static PyObject* IObservableMap_add_MapChanged(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* arg) noexcept
@@ -2087,7 +2094,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->add_MapChanged(arg);
+        return self->impl->add_MapChanged(arg);
     }
 
     static PyObject* IObservableMap_remove_MapChanged(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* arg) noexcept
@@ -2098,32 +2105,32 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->remove_MapChanged(arg);
+        return self->impl->remove_MapChanged(arg);
     }
 
     static PyObject* _iterator_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static int _map_contains_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* key) noexcept
     {
-        return self->obj->map_contains(key);
+        return self->impl->map_contains(key);
     }
 
     static Py_ssize_t _map_length_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self) noexcept
     {
-        return self->obj->map_length();
+        return self->impl->map_length();
     }
 
     static PyObject* _map_subscript_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* key) noexcept
     {
-        return self->obj->map_subscript(key);
+        return self->impl->map_subscript(key);
     }
 
     static int _map_assign_IObservableMap(py::wrapper::Windows::Foundation::Collections::IObservableMap* self, PyObject* key, PyObject* value) noexcept
     {
-        return self->obj->map_assign(key, value);
+        return self->impl->map_assign(key, value);
     }
 
     static PyMethodDef _methods_IObservableMap[] = {
@@ -2189,68 +2196,69 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IObservableVector_Append(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->Append(args);
+        return self->impl->Append(args);
     }
 
     static PyObject* IObservableVector_Clear(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->Clear(args);
+        return self->impl->Clear(args);
     }
 
     static PyObject* IObservableVector_First(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* IObservableVector_GetAt(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->GetAt(args);
+        return self->impl->GetAt(args);
     }
 
     static PyObject* IObservableVector_GetMany(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->GetMany(args);
+        return self->impl->GetMany(args);
     }
 
     static PyObject* IObservableVector_GetView(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->GetView(args);
+        return self->impl->GetView(args);
     }
 
     static PyObject* IObservableVector_IndexOf(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->IndexOf(args);
+        return self->impl->IndexOf(args);
     }
 
     static PyObject* IObservableVector_InsertAt(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->InsertAt(args);
+        return self->impl->InsertAt(args);
     }
 
     static PyObject* IObservableVector_RemoveAt(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->RemoveAt(args);
+        return self->impl->RemoveAt(args);
     }
 
     static PyObject* IObservableVector_RemoveAtEnd(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->RemoveAtEnd(args);
+        return self->impl->RemoveAtEnd(args);
     }
 
     static PyObject* IObservableVector_ReplaceAll(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->ReplaceAll(args);
+        return self->impl->ReplaceAll(args);
     }
 
     static PyObject* IObservableVector_SetAt(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* args) noexcept
     {
-        return self->obj->SetAt(args);
+        return self->impl->SetAt(args);
     }
 
     static PyObject* IObservableVector_get_Size(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, void* /*unused*/) noexcept
@@ -2261,7 +2269,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Size();
+        return self->impl->get_Size();
     }
 
     static PyObject* IObservableVector_add_VectorChanged(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* arg) noexcept
@@ -2272,7 +2280,7 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->add_VectorChanged(arg);
+        return self->impl->add_VectorChanged(arg);
     }
 
     static PyObject* IObservableVector_remove_VectorChanged(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* arg) noexcept
@@ -2283,32 +2291,32 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->remove_VectorChanged(arg);
+        return self->impl->remove_VectorChanged(arg);
     }
 
     static PyObject* _iterator_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static Py_ssize_t _seq_length_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self) noexcept
     {
-        return self->obj->seq_length();
+        return self->impl->seq_length();
     }
 
     static PyObject* _seq_item_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, Py_ssize_t i) noexcept
     {
-        return self->obj->seq_item(i);
+        return self->impl->seq_item(i);
     }
 
     static PyObject* _seq_subscript_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, PyObject* slice) noexcept
     {
-        return self->obj->seq_subscript(slice);
+        return self->impl->seq_subscript(slice);
     }
 
     static int _seq_assign_IObservableVector(py::wrapper::Windows::Foundation::Collections::IObservableVector* self, Py_ssize_t i, PyObject* value) noexcept
     {
-        return self->obj->seq_assign(i, value);
+        return self->impl->seq_assign(i, value);
     }
 
     static PyMethodDef _methods_IObservableVector[] = {
@@ -2952,28 +2960,29 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IVectorView_First(py::wrapper::Windows::Foundation::Collections::IVectorView* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* IVectorView_GetAt(py::wrapper::Windows::Foundation::Collections::IVectorView* self, PyObject* args) noexcept
     {
-        return self->obj->GetAt(args);
+        return self->impl->GetAt(args);
     }
 
     static PyObject* IVectorView_GetMany(py::wrapper::Windows::Foundation::Collections::IVectorView* self, PyObject* args) noexcept
     {
-        return self->obj->GetMany(args);
+        return self->impl->GetMany(args);
     }
 
     static PyObject* IVectorView_IndexOf(py::wrapper::Windows::Foundation::Collections::IVectorView* self, PyObject* args) noexcept
     {
-        return self->obj->IndexOf(args);
+        return self->impl->IndexOf(args);
     }
 
     static PyObject* IVectorView_get_Size(py::wrapper::Windows::Foundation::Collections::IVectorView* self, void* /*unused*/) noexcept
@@ -2984,27 +2993,27 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Size();
+        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static Py_ssize_t _seq_length_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self) noexcept
     {
-        return self->obj->seq_length();
+        return self->impl->seq_length();
     }
 
     static PyObject* _seq_item_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self, Py_ssize_t i) noexcept
     {
-        return self->obj->seq_item(i);
+        return self->impl->seq_item(i);
     }
 
     static PyObject* _seq_subscript_IVectorView(py::wrapper::Windows::Foundation::Collections::IVectorView* self, PyObject* slice) noexcept
     {
-        return self->obj->seq_subscript(slice);
+        return self->impl->seq_subscript(slice);
     }
 
     static PyMethodDef _methods_IVectorView[] = {
@@ -3064,68 +3073,69 @@ namespace py::cpp::Windows::Foundation::Collections
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IVector_Append(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->Append(args);
+        return self->impl->Append(args);
     }
 
     static PyObject* IVector_Clear(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->Clear(args);
+        return self->impl->Clear(args);
     }
 
     static PyObject* IVector_First(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->First(args);
+        return self->impl->First(args);
     }
 
     static PyObject* IVector_GetAt(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->GetAt(args);
+        return self->impl->GetAt(args);
     }
 
     static PyObject* IVector_GetMany(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->GetMany(args);
+        return self->impl->GetMany(args);
     }
 
     static PyObject* IVector_GetView(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->GetView(args);
+        return self->impl->GetView(args);
     }
 
     static PyObject* IVector_IndexOf(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->IndexOf(args);
+        return self->impl->IndexOf(args);
     }
 
     static PyObject* IVector_InsertAt(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->InsertAt(args);
+        return self->impl->InsertAt(args);
     }
 
     static PyObject* IVector_RemoveAt(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->RemoveAt(args);
+        return self->impl->RemoveAt(args);
     }
 
     static PyObject* IVector_RemoveAtEnd(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->RemoveAtEnd(args);
+        return self->impl->RemoveAtEnd(args);
     }
 
     static PyObject* IVector_ReplaceAll(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->ReplaceAll(args);
+        return self->impl->ReplaceAll(args);
     }
 
     static PyObject* IVector_SetAt(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* args) noexcept
     {
-        return self->obj->SetAt(args);
+        return self->impl->SetAt(args);
     }
 
     static PyObject* IVector_get_Size(py::wrapper::Windows::Foundation::Collections::IVector* self, void* /*unused*/) noexcept
@@ -3136,32 +3146,32 @@ namespace py::cpp::Windows::Foundation::Collections
             return nullptr;
         }
 
-        return self->obj->get_Size();
+        return self->impl->get_Size();
     }
 
     static PyObject* _iterator_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self) noexcept
     {
-        return self->obj->dunder_iter();
+        return self->impl->dunder_iter();
     }
 
     static Py_ssize_t _seq_length_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self) noexcept
     {
-        return self->obj->seq_length();
+        return self->impl->seq_length();
     }
 
     static PyObject* _seq_item_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self, Py_ssize_t i) noexcept
     {
-        return self->obj->seq_item(i);
+        return self->impl->seq_item(i);
     }
 
     static PyObject* _seq_subscript_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self, PyObject* slice) noexcept
     {
-        return self->obj->seq_subscript(slice);
+        return self->impl->seq_subscript(slice);
     }
 
     static int _seq_assign_IVector(py::wrapper::Windows::Foundation::Collections::IVector* self, Py_ssize_t i, PyObject* value) noexcept
     {
-        return self->obj->seq_assign(i, value);
+        return self->impl->seq_assign(i, value);
     }
 
     static PyMethodDef _methods_IVector[] = {

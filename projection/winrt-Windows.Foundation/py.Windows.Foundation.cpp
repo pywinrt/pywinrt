@@ -3255,23 +3255,24 @@ namespace py::cpp::Windows::Foundation
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IAsyncActionWithProgress_Cancel(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* args) noexcept
     {
-        return self->obj->Cancel(args);
+        return self->impl->Cancel(args);
     }
 
     static PyObject* IAsyncActionWithProgress_Close(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* args) noexcept
     {
-        return self->obj->Close(args);
+        return self->impl->Close(args);
     }
 
     static PyObject* IAsyncActionWithProgress_GetResults(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* args) noexcept
     {
-        return self->obj->GetResults(args);
+        return self->impl->GetResults(args);
     }
 
     static PyObject* IAsyncActionWithProgress_get_Progress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, void* /*unused*/) noexcept
@@ -3282,7 +3283,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Progress();
+        return self->impl->get_Progress();
     }
 
     static int IAsyncActionWithProgress_put_Progress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
@@ -3293,7 +3294,7 @@ namespace py::cpp::Windows::Foundation
             return -1;
         }
 
-        return self->obj->put_Progress(arg);
+        return self->impl->put_Progress(arg);
     }
 
     static PyObject* IAsyncActionWithProgress_get_Completed(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, void* /*unused*/) noexcept
@@ -3304,7 +3305,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Completed();
+        return self->impl->get_Completed();
     }
 
     static int IAsyncActionWithProgress_put_Completed(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
@@ -3315,7 +3316,7 @@ namespace py::cpp::Windows::Foundation
             return -1;
         }
 
-        return self->obj->put_Completed(arg);
+        return self->impl->put_Completed(arg);
     }
 
     static PyObject* IAsyncActionWithProgress_get_ErrorCode(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, void* /*unused*/) noexcept
@@ -3326,7 +3327,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_ErrorCode();
+        return self->impl->get_ErrorCode();
     }
 
     static PyObject* IAsyncActionWithProgress_get_Id(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, void* /*unused*/) noexcept
@@ -3337,7 +3338,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Id();
+        return self->impl->get_Id();
     }
 
     static PyObject* IAsyncActionWithProgress_get_Status(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self, void* /*unused*/) noexcept
@@ -3348,12 +3349,12 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Status();
+        return self->impl->get_Status();
     }
 
     static PyObject* _await_IAsyncActionWithProgress(py::wrapper::Windows::Foundation::IAsyncActionWithProgress* self) noexcept
     {
-        return self->obj->dunder_await();
+        return self->impl->dunder_await();
     }
 
     static PyMethodDef _methods_IAsyncActionWithProgress[] = {
@@ -3610,23 +3611,24 @@ namespace py::cpp::Windows::Foundation
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IAsyncOperationWithProgress_Cancel(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* args) noexcept
     {
-        return self->obj->Cancel(args);
+        return self->impl->Cancel(args);
     }
 
     static PyObject* IAsyncOperationWithProgress_Close(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* args) noexcept
     {
-        return self->obj->Close(args);
+        return self->impl->Close(args);
     }
 
     static PyObject* IAsyncOperationWithProgress_GetResults(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* args) noexcept
     {
-        return self->obj->GetResults(args);
+        return self->impl->GetResults(args);
     }
 
     static PyObject* IAsyncOperationWithProgress_get_Progress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, void* /*unused*/) noexcept
@@ -3637,7 +3639,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Progress();
+        return self->impl->get_Progress();
     }
 
     static int IAsyncOperationWithProgress_put_Progress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
@@ -3648,7 +3650,7 @@ namespace py::cpp::Windows::Foundation
             return -1;
         }
 
-        return self->obj->put_Progress(arg);
+        return self->impl->put_Progress(arg);
     }
 
     static PyObject* IAsyncOperationWithProgress_get_Completed(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, void* /*unused*/) noexcept
@@ -3659,7 +3661,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Completed();
+        return self->impl->get_Completed();
     }
 
     static int IAsyncOperationWithProgress_put_Completed(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, PyObject* arg, void* /*unused*/) noexcept
@@ -3670,7 +3672,7 @@ namespace py::cpp::Windows::Foundation
             return -1;
         }
 
-        return self->obj->put_Completed(arg);
+        return self->impl->put_Completed(arg);
     }
 
     static PyObject* IAsyncOperationWithProgress_get_ErrorCode(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, void* /*unused*/) noexcept
@@ -3681,7 +3683,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_ErrorCode();
+        return self->impl->get_ErrorCode();
     }
 
     static PyObject* IAsyncOperationWithProgress_get_Id(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, void* /*unused*/) noexcept
@@ -3692,7 +3694,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Id();
+        return self->impl->get_Id();
     }
 
     static PyObject* IAsyncOperationWithProgress_get_Status(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self, void* /*unused*/) noexcept
@@ -3703,12 +3705,12 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Status();
+        return self->impl->get_Status();
     }
 
     static PyObject* _await_IAsyncOperationWithProgress(py::wrapper::Windows::Foundation::IAsyncOperationWithProgress* self) noexcept
     {
-        return self->obj->dunder_await();
+        return self->impl->dunder_await();
     }
 
     static PyMethodDef _methods_IAsyncOperationWithProgress[] = {
@@ -3768,23 +3770,24 @@ namespace py::cpp::Windows::Foundation
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IAsyncOperation_Cancel(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* args) noexcept
     {
-        return self->obj->Cancel(args);
+        return self->impl->Cancel(args);
     }
 
     static PyObject* IAsyncOperation_Close(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* args) noexcept
     {
-        return self->obj->Close(args);
+        return self->impl->Close(args);
     }
 
     static PyObject* IAsyncOperation_GetResults(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* args) noexcept
     {
-        return self->obj->GetResults(args);
+        return self->impl->GetResults(args);
     }
 
     static PyObject* IAsyncOperation_get_Completed(py::wrapper::Windows::Foundation::IAsyncOperation* self, void* /*unused*/) noexcept
@@ -3795,7 +3798,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Completed();
+        return self->impl->get_Completed();
     }
 
     static int IAsyncOperation_put_Completed(py::wrapper::Windows::Foundation::IAsyncOperation* self, PyObject* arg, void* /*unused*/) noexcept
@@ -3806,7 +3809,7 @@ namespace py::cpp::Windows::Foundation
             return -1;
         }
 
-        return self->obj->put_Completed(arg);
+        return self->impl->put_Completed(arg);
     }
 
     static PyObject* IAsyncOperation_get_ErrorCode(py::wrapper::Windows::Foundation::IAsyncOperation* self, void* /*unused*/) noexcept
@@ -3817,7 +3820,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_ErrorCode();
+        return self->impl->get_ErrorCode();
     }
 
     static PyObject* IAsyncOperation_get_Id(py::wrapper::Windows::Foundation::IAsyncOperation* self, void* /*unused*/) noexcept
@@ -3828,7 +3831,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Id();
+        return self->impl->get_Id();
     }
 
     static PyObject* IAsyncOperation_get_Status(py::wrapper::Windows::Foundation::IAsyncOperation* self, void* /*unused*/) noexcept
@@ -3839,12 +3842,12 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Status();
+        return self->impl->get_Status();
     }
 
     static PyObject* _await_IAsyncOperation(py::wrapper::Windows::Foundation::IAsyncOperation* self) noexcept
     {
-        return self->obj->dunder_await();
+        return self->impl->dunder_await();
     }
 
     static PyMethodDef _methods_IAsyncOperation[] = {
@@ -5906,193 +5909,194 @@ namespace py::cpp::Windows::Foundation
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IReferenceArray_GetBoolean(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetBoolean(args);
+        return self->impl->GetBoolean(args);
     }
 
     static PyObject* IReferenceArray_GetBooleanArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetBooleanArray(args);
+        return self->impl->GetBooleanArray(args);
     }
 
     static PyObject* IReferenceArray_GetChar16(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetChar16(args);
+        return self->impl->GetChar16(args);
     }
 
     static PyObject* IReferenceArray_GetChar16Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetChar16Array(args);
+        return self->impl->GetChar16Array(args);
     }
 
     static PyObject* IReferenceArray_GetDateTime(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetDateTime(args);
+        return self->impl->GetDateTime(args);
     }
 
     static PyObject* IReferenceArray_GetDateTimeArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetDateTimeArray(args);
+        return self->impl->GetDateTimeArray(args);
     }
 
     static PyObject* IReferenceArray_GetDouble(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetDouble(args);
+        return self->impl->GetDouble(args);
     }
 
     static PyObject* IReferenceArray_GetDoubleArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetDoubleArray(args);
+        return self->impl->GetDoubleArray(args);
     }
 
     static PyObject* IReferenceArray_GetGuid(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetGuid(args);
+        return self->impl->GetGuid(args);
     }
 
     static PyObject* IReferenceArray_GetGuidArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetGuidArray(args);
+        return self->impl->GetGuidArray(args);
     }
 
     static PyObject* IReferenceArray_GetInspectableArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInspectableArray(args);
+        return self->impl->GetInspectableArray(args);
     }
 
     static PyObject* IReferenceArray_GetInt16(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt16(args);
+        return self->impl->GetInt16(args);
     }
 
     static PyObject* IReferenceArray_GetInt16Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt16Array(args);
+        return self->impl->GetInt16Array(args);
     }
 
     static PyObject* IReferenceArray_GetInt32(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt32(args);
+        return self->impl->GetInt32(args);
     }
 
     static PyObject* IReferenceArray_GetInt32Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt32Array(args);
+        return self->impl->GetInt32Array(args);
     }
 
     static PyObject* IReferenceArray_GetInt64(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt64(args);
+        return self->impl->GetInt64(args);
     }
 
     static PyObject* IReferenceArray_GetInt64Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt64Array(args);
+        return self->impl->GetInt64Array(args);
     }
 
     static PyObject* IReferenceArray_GetPoint(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetPoint(args);
+        return self->impl->GetPoint(args);
     }
 
     static PyObject* IReferenceArray_GetPointArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetPointArray(args);
+        return self->impl->GetPointArray(args);
     }
 
     static PyObject* IReferenceArray_GetRect(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetRect(args);
+        return self->impl->GetRect(args);
     }
 
     static PyObject* IReferenceArray_GetRectArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetRectArray(args);
+        return self->impl->GetRectArray(args);
     }
 
     static PyObject* IReferenceArray_GetSingle(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetSingle(args);
+        return self->impl->GetSingle(args);
     }
 
     static PyObject* IReferenceArray_GetSingleArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetSingleArray(args);
+        return self->impl->GetSingleArray(args);
     }
 
     static PyObject* IReferenceArray_GetSize(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetSize(args);
+        return self->impl->GetSize(args);
     }
 
     static PyObject* IReferenceArray_GetSizeArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetSizeArray(args);
+        return self->impl->GetSizeArray(args);
     }
 
     static PyObject* IReferenceArray_GetString(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetString(args);
+        return self->impl->GetString(args);
     }
 
     static PyObject* IReferenceArray_GetStringArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetStringArray(args);
+        return self->impl->GetStringArray(args);
     }
 
     static PyObject* IReferenceArray_GetTimeSpan(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetTimeSpan(args);
+        return self->impl->GetTimeSpan(args);
     }
 
     static PyObject* IReferenceArray_GetTimeSpanArray(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetTimeSpanArray(args);
+        return self->impl->GetTimeSpanArray(args);
     }
 
     static PyObject* IReferenceArray_GetUInt16(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt16(args);
+        return self->impl->GetUInt16(args);
     }
 
     static PyObject* IReferenceArray_GetUInt16Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt16Array(args);
+        return self->impl->GetUInt16Array(args);
     }
 
     static PyObject* IReferenceArray_GetUInt32(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt32(args);
+        return self->impl->GetUInt32(args);
     }
 
     static PyObject* IReferenceArray_GetUInt32Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt32Array(args);
+        return self->impl->GetUInt32Array(args);
     }
 
     static PyObject* IReferenceArray_GetUInt64(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt64(args);
+        return self->impl->GetUInt64(args);
     }
 
     static PyObject* IReferenceArray_GetUInt64Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt64Array(args);
+        return self->impl->GetUInt64Array(args);
     }
 
     static PyObject* IReferenceArray_GetUInt8(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt8(args);
+        return self->impl->GetUInt8(args);
     }
 
     static PyObject* IReferenceArray_GetUInt8Array(py::wrapper::Windows::Foundation::IReferenceArray* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt8Array(args);
+        return self->impl->GetUInt8Array(args);
     }
 
     static PyObject* IReferenceArray_get_Value(py::wrapper::Windows::Foundation::IReferenceArray* self, void* /*unused*/) noexcept
@@ -6103,7 +6107,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Value();
+        return self->impl->get_Value();
     }
 
     static PyObject* IReferenceArray_get_IsNumericScalar(py::wrapper::Windows::Foundation::IReferenceArray* self, void* /*unused*/) noexcept
@@ -6114,7 +6118,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_IsNumericScalar();
+        return self->impl->get_IsNumericScalar();
     }
 
     static PyObject* IReferenceArray_get_Type(py::wrapper::Windows::Foundation::IReferenceArray* self, void* /*unused*/) noexcept
@@ -6125,7 +6129,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Type();
+        return self->impl->get_Type();
     }
 
     static PyMethodDef _methods_IReferenceArray[] = {
@@ -6216,193 +6220,194 @@ namespace py::cpp::Windows::Foundation
         }
 
         std::destroy_at(&self->obj);
+        std::destroy_at(&self->impl);
         tp->tp_free(self);
         Py_DECREF(tp);
     }
 
     static PyObject* IReference_GetBoolean(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetBoolean(args);
+        return self->impl->GetBoolean(args);
     }
 
     static PyObject* IReference_GetBooleanArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetBooleanArray(args);
+        return self->impl->GetBooleanArray(args);
     }
 
     static PyObject* IReference_GetChar16(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetChar16(args);
+        return self->impl->GetChar16(args);
     }
 
     static PyObject* IReference_GetChar16Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetChar16Array(args);
+        return self->impl->GetChar16Array(args);
     }
 
     static PyObject* IReference_GetDateTime(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetDateTime(args);
+        return self->impl->GetDateTime(args);
     }
 
     static PyObject* IReference_GetDateTimeArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetDateTimeArray(args);
+        return self->impl->GetDateTimeArray(args);
     }
 
     static PyObject* IReference_GetDouble(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetDouble(args);
+        return self->impl->GetDouble(args);
     }
 
     static PyObject* IReference_GetDoubleArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetDoubleArray(args);
+        return self->impl->GetDoubleArray(args);
     }
 
     static PyObject* IReference_GetGuid(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetGuid(args);
+        return self->impl->GetGuid(args);
     }
 
     static PyObject* IReference_GetGuidArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetGuidArray(args);
+        return self->impl->GetGuidArray(args);
     }
 
     static PyObject* IReference_GetInspectableArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInspectableArray(args);
+        return self->impl->GetInspectableArray(args);
     }
 
     static PyObject* IReference_GetInt16(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt16(args);
+        return self->impl->GetInt16(args);
     }
 
     static PyObject* IReference_GetInt16Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt16Array(args);
+        return self->impl->GetInt16Array(args);
     }
 
     static PyObject* IReference_GetInt32(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt32(args);
+        return self->impl->GetInt32(args);
     }
 
     static PyObject* IReference_GetInt32Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt32Array(args);
+        return self->impl->GetInt32Array(args);
     }
 
     static PyObject* IReference_GetInt64(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt64(args);
+        return self->impl->GetInt64(args);
     }
 
     static PyObject* IReference_GetInt64Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetInt64Array(args);
+        return self->impl->GetInt64Array(args);
     }
 
     static PyObject* IReference_GetPoint(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetPoint(args);
+        return self->impl->GetPoint(args);
     }
 
     static PyObject* IReference_GetPointArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetPointArray(args);
+        return self->impl->GetPointArray(args);
     }
 
     static PyObject* IReference_GetRect(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetRect(args);
+        return self->impl->GetRect(args);
     }
 
     static PyObject* IReference_GetRectArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetRectArray(args);
+        return self->impl->GetRectArray(args);
     }
 
     static PyObject* IReference_GetSingle(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetSingle(args);
+        return self->impl->GetSingle(args);
     }
 
     static PyObject* IReference_GetSingleArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetSingleArray(args);
+        return self->impl->GetSingleArray(args);
     }
 
     static PyObject* IReference_GetSize(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetSize(args);
+        return self->impl->GetSize(args);
     }
 
     static PyObject* IReference_GetSizeArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetSizeArray(args);
+        return self->impl->GetSizeArray(args);
     }
 
     static PyObject* IReference_GetString(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetString(args);
+        return self->impl->GetString(args);
     }
 
     static PyObject* IReference_GetStringArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetStringArray(args);
+        return self->impl->GetStringArray(args);
     }
 
     static PyObject* IReference_GetTimeSpan(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetTimeSpan(args);
+        return self->impl->GetTimeSpan(args);
     }
 
     static PyObject* IReference_GetTimeSpanArray(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetTimeSpanArray(args);
+        return self->impl->GetTimeSpanArray(args);
     }
 
     static PyObject* IReference_GetUInt16(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt16(args);
+        return self->impl->GetUInt16(args);
     }
 
     static PyObject* IReference_GetUInt16Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt16Array(args);
+        return self->impl->GetUInt16Array(args);
     }
 
     static PyObject* IReference_GetUInt32(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt32(args);
+        return self->impl->GetUInt32(args);
     }
 
     static PyObject* IReference_GetUInt32Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt32Array(args);
+        return self->impl->GetUInt32Array(args);
     }
 
     static PyObject* IReference_GetUInt64(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt64(args);
+        return self->impl->GetUInt64(args);
     }
 
     static PyObject* IReference_GetUInt64Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt64Array(args);
+        return self->impl->GetUInt64Array(args);
     }
 
     static PyObject* IReference_GetUInt8(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt8(args);
+        return self->impl->GetUInt8(args);
     }
 
     static PyObject* IReference_GetUInt8Array(py::wrapper::Windows::Foundation::IReference* self, PyObject* args) noexcept
     {
-        return self->obj->GetUInt8Array(args);
+        return self->impl->GetUInt8Array(args);
     }
 
     static PyObject* IReference_get_Value(py::wrapper::Windows::Foundation::IReference* self, void* /*unused*/) noexcept
@@ -6413,7 +6418,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Value();
+        return self->impl->get_Value();
     }
 
     static PyObject* IReference_get_IsNumericScalar(py::wrapper::Windows::Foundation::IReference* self, void* /*unused*/) noexcept
@@ -6424,7 +6429,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_IsNumericScalar();
+        return self->impl->get_IsNumericScalar();
     }
 
     static PyObject* IReference_get_Type(py::wrapper::Windows::Foundation::IReference* self, void* /*unused*/) noexcept
@@ -6435,7 +6440,7 @@ namespace py::cpp::Windows::Foundation
             return nullptr;
         }
 
-        return self->obj->get_Type();
+        return self->impl->get_Type();
     }
 
     static PyMethodDef _methods_IReference[] = {

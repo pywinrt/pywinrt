@@ -17,7 +17,6 @@ namespace py::proj::Windows::Foundation
     struct IAsyncActionWithProgress
     {
         virtual ~IAsyncActionWithProgress() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Cancel(PyObject*) noexcept = 0;
         virtual PyObject* Close(PyObject*) noexcept = 0;
         virtual PyObject* GetResults(PyObject*) noexcept = 0;
@@ -34,7 +33,6 @@ namespace py::proj::Windows::Foundation
     struct IAsyncOperationWithProgress
     {
         virtual ~IAsyncOperationWithProgress() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Cancel(PyObject*) noexcept = 0;
         virtual PyObject* Close(PyObject*) noexcept = 0;
         virtual PyObject* GetResults(PyObject*) noexcept = 0;
@@ -51,7 +49,6 @@ namespace py::proj::Windows::Foundation
     struct IAsyncOperation
     {
         virtual ~IAsyncOperation() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Cancel(PyObject*) noexcept = 0;
         virtual PyObject* Close(PyObject*) noexcept = 0;
         virtual PyObject* GetResults(PyObject*) noexcept = 0;
@@ -66,7 +63,6 @@ namespace py::proj::Windows::Foundation
     struct IReferenceArray
     {
         virtual ~IReferenceArray() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* GetBoolean(PyObject*) noexcept = 0;
         virtual PyObject* GetBooleanArray(PyObject*) noexcept = 0;
         virtual PyObject* GetChar16(PyObject*) noexcept = 0;
@@ -112,7 +108,6 @@ namespace py::proj::Windows::Foundation
     struct IReference
     {
         virtual ~IReference() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* GetBoolean(PyObject*) noexcept = 0;
         virtual PyObject* GetBooleanArray(PyObject*) noexcept = 0;
         virtual PyObject* GetChar16(PyObject*) noexcept = 0;
@@ -527,7 +522,6 @@ namespace py::impl::Windows::Foundation
     struct IAsyncActionWithProgress : public py::proj::Windows::Foundation::IAsyncActionWithProgress
     {
         IAsyncActionWithProgress(winrt::Windows::Foundation::IAsyncActionWithProgress<TProgress> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Cancel(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -726,7 +720,6 @@ namespace py::impl::Windows::Foundation
     struct IAsyncOperationWithProgress : public py::proj::Windows::Foundation::IAsyncOperationWithProgress
     {
         IAsyncOperationWithProgress(winrt::Windows::Foundation::IAsyncOperationWithProgress<TResult, TProgress> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Cancel(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -924,7 +917,6 @@ namespace py::impl::Windows::Foundation
     struct IAsyncOperation : public py::proj::Windows::Foundation::IAsyncOperation
     {
         IAsyncOperation(winrt::Windows::Foundation::IAsyncOperation<TResult> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Cancel(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -1089,7 +1081,6 @@ namespace py::impl::Windows::Foundation
     struct IReferenceArray : public py::proj::Windows::Foundation::IReferenceArray
     {
         IReferenceArray(winrt::Windows::Foundation::IReferenceArray<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* GetBoolean(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -2341,7 +2332,6 @@ namespace py::impl::Windows::Foundation
     struct IReference : public py::proj::Windows::Foundation::IReference
     {
         IReference(winrt::Windows::Foundation::IReference<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* GetBoolean(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);

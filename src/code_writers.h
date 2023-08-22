@@ -594,6 +594,12 @@ static PyModuleDef module_def
             w.write("}\n\n");
 
             w.write("std::destroy_at(&self->obj);\n");
+
+            if (is_ptype(type))
+            {
+                w.write("std::destroy_at(&self->impl);\n");
+            }
+
             w.write("tp->tp_free(self);\n");
             w.write("Py_DECREF(tp);\n");
         }
@@ -1093,7 +1099,7 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
 
             if (is_ptype(type))
             {
-                w.write("return self->obj->%();\n", method.Name());
+                w.write("return self->impl->%();\n", method.Name());
             }
             else
             {
@@ -1160,7 +1166,7 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
 
             if (is_ptype(type))
             {
-                w.write("return self->obj->%(arg);\n", method.Name());
+                w.write("return self->impl->%(arg);\n", method.Name());
             }
             else
             {
@@ -1223,7 +1229,7 @@ static PyObject* _new_@(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject
 
             if (is_ptype(type))
             {
-                w.write("return self->obj->%(arg);\n", method.Name());
+                w.write("return self->impl->%(arg);\n", method.Name());
             }
             else
             {
@@ -1634,7 +1640,7 @@ return 0;
 
                 if (is_ptype(type))
                 {
-                    w.write("return self->obj->%(args);\n", method_name);
+                    w.write("return self->impl->%(args);\n", method_name);
                 }
                 else
                 {
@@ -1801,7 +1807,7 @@ return 0;
 
             if (is_ptype(type))
             {
-                w.write("return self->obj->%;\n", ptype_func_call);
+                w.write("return self->impl->%;\n", ptype_func_call);
             }
             else
             {
@@ -2426,8 +2432,6 @@ struct pinterface_python_type<%<%>>
             writer::indent_guard g{w};
 
             w.write("virtual ~@() {};\n", type.TypeName());
-            w.write(
-                "virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;\n");
 
             std::set<std::string_view> method_names{};
             enumerate_methods(
@@ -2542,8 +2546,6 @@ struct pinterface_python_type<%<%>>
                 type.TypeName(),
                 type,
                 bind_list<write_template_arg_name>(", ", type.GenericParam()));
-            w.write(
-                "winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }\n");
 
             std::set<std::string_view> method_names{};
             enumerate_methods(

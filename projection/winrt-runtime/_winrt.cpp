@@ -44,7 +44,7 @@ namespace py::cpp::_winrt
 
     static PyType_Spec Object_type_spec
         = {"_winrt.Object",
-           sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IInspectable>),
+           sizeof(py::winrt_wrapper<winrt::Windows::Foundation::IUnknown>),
            0,
            Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
            Object_type_slots};

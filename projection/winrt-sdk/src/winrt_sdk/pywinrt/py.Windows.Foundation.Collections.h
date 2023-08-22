@@ -17,7 +17,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IIterable
     {
         virtual ~IIterable() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
         virtual PyObject* dunder_iter() noexcept = 0;
     };
@@ -25,7 +24,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IIterator
     {
         virtual ~IIterator() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* GetMany(PyObject*) noexcept = 0;
         virtual PyObject* MoveNext(PyObject*) noexcept = 0;
         virtual PyObject* get_Current() noexcept = 0;
@@ -37,7 +35,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IKeyValuePair
     {
         virtual ~IKeyValuePair() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* get_Key() noexcept = 0;
         virtual PyObject* get_Value() noexcept = 0;
     };
@@ -45,7 +42,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IMapChangedEventArgs
     {
         virtual ~IMapChangedEventArgs() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* get_CollectionChange() noexcept = 0;
         virtual PyObject* get_Key() noexcept = 0;
     };
@@ -53,7 +49,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IMapView
     {
         virtual ~IMapView() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
         virtual PyObject* HasKey(PyObject*) noexcept = 0;
         virtual PyObject* Lookup(PyObject*) noexcept = 0;
@@ -68,7 +63,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IMap
     {
         virtual ~IMap() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Clear(PyObject*) noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
         virtual PyObject* GetView(PyObject*) noexcept = 0;
@@ -87,7 +81,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IObservableMap
     {
         virtual ~IObservableMap() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Clear(PyObject*) noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
         virtual PyObject* GetView(PyObject*) noexcept = 0;
@@ -108,7 +101,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IObservableVector
     {
         virtual ~IObservableVector() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Append(PyObject*) noexcept = 0;
         virtual PyObject* Clear(PyObject*) noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
@@ -134,7 +126,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IVectorView
     {
         virtual ~IVectorView() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
         virtual PyObject* GetAt(PyObject*) noexcept = 0;
         virtual PyObject* GetMany(PyObject*) noexcept = 0;
@@ -149,7 +140,6 @@ namespace py::proj::Windows::Foundation::Collections
     struct IVector
     {
         virtual ~IVector() {};
-        virtual winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept = 0;
         virtual PyObject* Append(PyObject*) noexcept = 0;
         virtual PyObject* Clear(PyObject*) noexcept = 0;
         virtual PyObject* First(PyObject*) noexcept = 0;
@@ -263,7 +253,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IIterable : public py::proj::Windows::Foundation::Collections::IIterable
     {
         IIterable(winrt::Windows::Foundation::Collections::IIterable<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* First(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -312,7 +301,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IIterator : public py::proj::Windows::Foundation::Collections::IIterator
     {
         IIterator(winrt::Windows::Foundation::Collections::IIterator<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* GetMany(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -427,7 +415,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IKeyValuePair : public py::proj::Windows::Foundation::Collections::IKeyValuePair
     {
         IKeyValuePair(winrt::Windows::Foundation::Collections::IKeyValuePair<K, V> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* get_Key() noexcept override
         {
             try
@@ -460,7 +447,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IMapChangedEventArgs : public py::proj::Windows::Foundation::Collections::IMapChangedEventArgs
     {
         IMapChangedEventArgs(winrt::Windows::Foundation::Collections::IMapChangedEventArgs<K> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* get_CollectionChange() noexcept override
         {
             try
@@ -493,7 +479,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IMapView : public py::proj::Windows::Foundation::Collections::IMapView
     {
         IMapView(winrt::Windows::Foundation::Collections::IMapView<K, V> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* First(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -707,7 +692,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IMap : public py::proj::Windows::Foundation::Collections::IMap
     {
         IMap(winrt::Windows::Foundation::Collections::IMap<K, V> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Clear(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -1022,7 +1006,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IObservableMap : public py::proj::Windows::Foundation::Collections::IObservableMap
     {
         IObservableMap(winrt::Windows::Foundation::Collections::IObservableMap<K, V> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Clear(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -1366,7 +1349,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IObservableVector : public py::proj::Windows::Foundation::Collections::IObservableVector
     {
         IObservableVector(winrt::Windows::Foundation::Collections::IObservableVector<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Append(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -1910,7 +1892,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IVectorView : public py::proj::Windows::Foundation::Collections::IVectorView
     {
         IVectorView(winrt::Windows::Foundation::Collections::IVectorView<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* First(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
@@ -2168,7 +2149,6 @@ namespace py::impl::Windows::Foundation::Collections
     struct IVector : public py::proj::Windows::Foundation::Collections::IVector
     {
         IVector(winrt::Windows::Foundation::Collections::IVector<T> o) : _obj(o) {}
-        winrt::Windows::Foundation::IUnknown const& get_unknown() noexcept override { return _obj; }
         PyObject* Append(PyObject* args) noexcept override
         {
             auto arg_count = PyTuple_Size(args);
