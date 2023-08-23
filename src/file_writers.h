@@ -179,7 +179,15 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.flush_to_file(folder / "__init__.py");
     }
 
-    inline void write_namespace_dunder_init_pyi(
+    /**
+     * Writes the .pyi file for a namespace.
+     *
+     * @param folder The folder to write the file to.
+     * @param needed_namespaces The set of namespaces that are needed by this namespace.
+     * @param ns The namespace to write the file for.
+     * @param members The members of the namespace.
+     */
+    inline void write_namespace_pyi(
         stdfs::path const& folder,
         std::set<std::string> const& needed_namespaces,
         std::string_view const& ns,
@@ -215,6 +223,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
             w);
         settings.filter.bind_each<write_python_type_alias>(members.delegates)(w);
 
-        w.flush_to_file(folder / "__init__.pyi");
+        auto file_name = w.write_temp("%.pyi", bind<write_ns_module_name>(ns));
+        w.flush_to_file(folder / file_name);
     }
 } // namespace pywinrt
