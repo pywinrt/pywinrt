@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -93,13 +94,13 @@ class AppMemoryUsageLimitChangingEventArgs(winrt.system.Object):
 class AppResourceGroupBackgroundTaskReport(winrt.system.Object):
     entry_point: str
     name: str
-    task_id: winrt.system.Guid
+    task_id: uuid.UUID
     trigger: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupBackgroundTaskReport: ...
 
 class AppResourceGroupInfo(winrt.system.Object):
-    instance_id: winrt.system.Guid
+    instance_id: uuid.UUID
     is_shared: winrt.system.Boolean
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppResourceGroupInfo: ...

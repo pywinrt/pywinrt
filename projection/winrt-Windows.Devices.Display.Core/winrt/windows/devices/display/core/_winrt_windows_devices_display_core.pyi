@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.devices.display
@@ -31,7 +32,7 @@ class DisplayAdapter(winrt.system.Object):
     pci_revision: winrt.system.UInt32
     pci_sub_system_id: winrt.system.UInt32
     pci_vendor_id: winrt.system.UInt32
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     source_count: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayAdapter: ...
@@ -117,7 +118,7 @@ class DisplayModeInfo(winrt.system.Object):
     is_interlaced: winrt.system.Boolean
     is_stereo: winrt.system.Boolean
     presentation_rate: DisplayPresentationRate
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     source_pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat
     source_resolution: winrt.windows.graphics.SizeInt32
     target_resolution: winrt.windows.graphics.SizeInt32
@@ -137,7 +138,7 @@ class DisplayPath(winrt.system.Object):
     presentation_rate: typing.Optional[typing.Optional[DisplayPresentationRate]]
     is_stereo: winrt.system.Boolean
     is_interlaced: typing.Optional[typing.Optional[winrt.system.Boolean]]
-    properties: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMap[uuid.UUID, winrt.system.Object]]
     status: DisplayPathStatus
     target: typing.Optional[DisplayTarget]
     view: typing.Optional[DisplayView]
@@ -153,13 +154,13 @@ class DisplayPrimaryDescription(winrt.system.Object):
     height: winrt.system.UInt32
     is_stereo: winrt.system.Boolean
     multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     width: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayPrimaryDescription: ...
     def __new__(cls: typing.Type[DisplayPrimaryDescription], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: winrt.system.Boolean, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription) -> DisplayPrimaryDescription:...
     @staticmethod
-    def create_with_properties(extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[winrt.system.Guid, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: winrt.system.Boolean, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription, /) -> typing.Optional[DisplayPrimaryDescription]: ...
+    def create_with_properties(extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: winrt.system.Boolean, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription, /) -> typing.Optional[DisplayPrimaryDescription]: ...
 
 class DisplayScanout(winrt.system.Object):
     @staticmethod
@@ -171,14 +172,14 @@ class DisplaySource(winrt.system.Object):
     status: DisplaySourceStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplaySource: ...
-    def get_metadata(self, key: winrt.system.Guid, /) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    def get_metadata(self, key: uuid.UUID, /) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
     def add_status_changed(self, handler: winrt.windows.foundation.TypedEventHandler[DisplaySource, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class DisplayState(winrt.system.Object):
     is_read_only: winrt.system.Boolean
     is_stale: winrt.system.Boolean
-    properties: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMap[uuid.UUID, winrt.system.Object]]
     targets: typing.Optional[winrt.windows.foundation.collections.IVectorView[DisplayTarget]]
     views: typing.Optional[winrt.windows.foundation.collections.IVectorView[DisplayView]]
     @staticmethod
@@ -214,7 +215,7 @@ class DisplayTarget(winrt.system.Object):
     is_virtual_mode_enabled: winrt.system.Boolean
     is_virtual_topology_enabled: winrt.system.Boolean
     monitor_persistence: DisplayTargetPersistence
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     stable_monitor_id: str
     usage_kind: winrt.windows.devices.display.DisplayMonitorUsageKind
     @staticmethod
@@ -247,7 +248,7 @@ class DisplayTaskResult(winrt.system.Object):
 class DisplayView(winrt.system.Object):
     content_resolution: typing.Optional[typing.Optional[winrt.windows.graphics.SizeInt32]]
     paths: typing.Optional[winrt.windows.foundation.collections.IVectorView[DisplayPath]]
-    properties: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMap[uuid.UUID, winrt.system.Object]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayView: ...
     def set_primary_path(self, path: typing.Optional[DisplayPath], /) -> None: ...
@@ -258,10 +259,10 @@ class DisplayWireFormat(winrt.system.Object):
     eotf: DisplayWireFormatEotf
     hdr_metadata: DisplayWireFormatHdrMetadata
     pixel_encoding: DisplayWireFormatPixelEncoding
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[winrt.system.Guid, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayWireFormat: ...
     def __new__(cls: typing.Type[DisplayWireFormat], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata) -> DisplayWireFormat:...
     @staticmethod
-    def create_with_properties(extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[winrt.system.Guid, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> typing.Optional[DisplayWireFormat]: ...
+    def create_with_properties(extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> typing.Optional[DisplayWireFormat]: ...
 

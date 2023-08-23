@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -45,7 +46,7 @@ class BitmapBuffer(winrt.system.Object):
     def get_plane_description(self, index: winrt.system.Int32, /) -> BitmapPlaneDescription: ...
 
 class BitmapCodecInformation(winrt.system.Object):
-    codec_id: winrt.system.Guid
+    codec_id: uuid.UUID
     file_extensions: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     friendly_name: str
     mime_types: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
@@ -65,15 +66,15 @@ class BitmapDecoder(winrt.system.Object):
     oriented_pixel_width: winrt.system.UInt32
     pixel_height: winrt.system.UInt32
     pixel_width: winrt.system.UInt32
-    bmp_decoder_id: typing.ClassVar[winrt.system.Guid]
-    gif_decoder_id: typing.ClassVar[winrt.system.Guid]
-    ico_decoder_id: typing.ClassVar[winrt.system.Guid]
-    jpeg_decoder_id: typing.ClassVar[winrt.system.Guid]
-    jpeg_x_r_decoder_id: typing.ClassVar[winrt.system.Guid]
-    png_decoder_id: typing.ClassVar[winrt.system.Guid]
-    tiff_decoder_id: typing.ClassVar[winrt.system.Guid]
-    heif_decoder_id: typing.ClassVar[winrt.system.Guid]
-    webp_decoder_id: typing.ClassVar[winrt.system.Guid]
+    bmp_decoder_id: typing.ClassVar[uuid.UUID]
+    gif_decoder_id: typing.ClassVar[uuid.UUID]
+    ico_decoder_id: typing.ClassVar[uuid.UUID]
+    jpeg_decoder_id: typing.ClassVar[uuid.UUID]
+    jpeg_x_r_decoder_id: typing.ClassVar[uuid.UUID]
+    png_decoder_id: typing.ClassVar[uuid.UUID]
+    tiff_decoder_id: typing.ClassVar[uuid.UUID]
+    heif_decoder_id: typing.ClassVar[uuid.UUID]
+    webp_decoder_id: typing.ClassVar[uuid.UUID]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapDecoder: ...
     @typing.overload
@@ -81,7 +82,7 @@ class BitmapDecoder(winrt.system.Object):
     def create_async(stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapDecoder]: ...
     @typing.overload
     @staticmethod
-    def create_async(decoder_id: winrt.system.Guid, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapDecoder]: ...
+    def create_async(decoder_id: uuid.UUID, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapDecoder]: ...
     @staticmethod
     def get_decoder_information_enumerator() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[BitmapCodecInformation]]: ...
     def get_frame_async(self, frame_index: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[BitmapFrame]: ...
@@ -106,21 +107,21 @@ class BitmapEncoder(winrt.system.Object):
     bitmap_properties: typing.Optional[BitmapProperties]
     bitmap_transform: typing.Optional[BitmapTransform]
     encoder_information: typing.Optional[BitmapCodecInformation]
-    bmp_encoder_id: typing.ClassVar[winrt.system.Guid]
-    gif_encoder_id: typing.ClassVar[winrt.system.Guid]
-    jpeg_encoder_id: typing.ClassVar[winrt.system.Guid]
-    jpeg_x_r_encoder_id: typing.ClassVar[winrt.system.Guid]
-    png_encoder_id: typing.ClassVar[winrt.system.Guid]
-    tiff_encoder_id: typing.ClassVar[winrt.system.Guid]
-    heif_encoder_id: typing.ClassVar[winrt.system.Guid]
+    bmp_encoder_id: typing.ClassVar[uuid.UUID]
+    gif_encoder_id: typing.ClassVar[uuid.UUID]
+    jpeg_encoder_id: typing.ClassVar[uuid.UUID]
+    jpeg_x_r_encoder_id: typing.ClassVar[uuid.UUID]
+    png_encoder_id: typing.ClassVar[uuid.UUID]
+    tiff_encoder_id: typing.ClassVar[uuid.UUID]
+    heif_encoder_id: typing.ClassVar[uuid.UUID]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapEncoder: ...
     @typing.overload
     @staticmethod
-    def create_async(encoder_id: winrt.system.Guid, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapEncoder]: ...
+    def create_async(encoder_id: uuid.UUID, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncOperation[BitmapEncoder]: ...
     @typing.overload
     @staticmethod
-    def create_async(encoder_id: winrt.system.Guid, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], encoding_options: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, BitmapTypedValue]], /) -> winrt.windows.foundation.IAsyncOperation[BitmapEncoder]: ...
+    def create_async(encoder_id: uuid.UUID, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], encoding_options: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, BitmapTypedValue]], /) -> winrt.windows.foundation.IAsyncOperation[BitmapEncoder]: ...
     @staticmethod
     def create_for_in_place_property_encoding_async(bitmap_decoder: typing.Optional[BitmapDecoder], /) -> winrt.windows.foundation.IAsyncOperation[BitmapEncoder]: ...
     @staticmethod

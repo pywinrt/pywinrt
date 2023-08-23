@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.devices.enumeration
@@ -23,7 +24,7 @@ class AllJoynAboutData(winrt.system.Object):
     default_app_name: str
     date_of_manufacture: typing.Optional[typing.Optional[datetime.datetime]]
     default_manufacturer: str
-    app_id: winrt.system.Guid
+    app_id: uuid.UUID
     support_url: typing.Optional[winrt.windows.foundation.Uri]
     software_version: str
     model_number: str
@@ -36,7 +37,7 @@ class AllJoynAboutData(winrt.system.Object):
 
 class AllJoynAboutDataView(winrt.system.Object):
     a_j_software_version: str
-    app_id: winrt.system.Guid
+    app_id: uuid.UUID
     app_name: str
     date_of_manufacture: typing.Optional[typing.Optional[datetime.datetime]]
     default_language: typing.Optional[winrt.windows.globalization.Language]

@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -103,7 +104,7 @@ class DeleteSharedPackageContainerResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> DeleteSharedPackageContainerResult: ...
 
 class DeploymentResult(winrt.system.Object):
-    activity_id: winrt.system.Guid
+    activity_id: uuid.UUID
     error_text: str
     extended_error_code: winrt.windows.foundation.HResult
     is_registered: winrt.system.Boolean

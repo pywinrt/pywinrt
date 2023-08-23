@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,7 +17,7 @@ from . import LicenseChangedEventHandler
 Self = typing.TypeVar('Self')
 
 class CurrentApp(winrt.system.Object):
-    app_id: typing.ClassVar[winrt.system.Guid]
+    app_id: typing.ClassVar[uuid.UUID]
     license_information: typing.ClassVar[typing.Optional[LicenseInformation]]
     link_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
     @staticmethod
@@ -40,7 +41,7 @@ class CurrentApp(winrt.system.Object):
     @staticmethod
     def load_listing_information_by_product_ids_async(product_ids: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[ListingInformation]: ...
     @staticmethod
-    def report_consumable_fulfillment_async(product_id: str, transaction_id: winrt.system.Guid, /) -> winrt.windows.foundation.IAsyncOperation[FulfillmentResult]: ...
+    def report_consumable_fulfillment_async(product_id: str, transaction_id: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[FulfillmentResult]: ...
     @staticmethod
     def report_product_fulfillment(product_id: str, /) -> None: ...
     @staticmethod
@@ -56,7 +57,7 @@ class CurrentApp(winrt.system.Object):
     def request_product_purchase_async(product_id: str, offer_id: str, display_properties: typing.Optional[ProductPurchaseDisplayProperties], /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
 
 class CurrentAppSimulator(winrt.system.Object):
-    app_id: typing.ClassVar[winrt.system.Guid]
+    app_id: typing.ClassVar[uuid.UUID]
     license_information: typing.ClassVar[typing.Optional[LicenseInformation]]
     link_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
     @staticmethod
@@ -78,7 +79,7 @@ class CurrentAppSimulator(winrt.system.Object):
     @staticmethod
     def reload_simulator_async(simulator_settings_file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncAction: ...
     @staticmethod
-    def report_consumable_fulfillment_async(product_id: str, transaction_id: winrt.system.Guid, /) -> winrt.windows.foundation.IAsyncOperation[FulfillmentResult]: ...
+    def report_consumable_fulfillment_async(product_id: str, transaction_id: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[FulfillmentResult]: ...
     @staticmethod
     def request_app_purchase_async(include_receipt: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
@@ -154,14 +155,14 @@ class PurchaseResults(winrt.system.Object):
     offer_id: str
     receipt_xml: str
     status: ProductPurchaseStatus
-    transaction_id: winrt.system.Guid
+    transaction_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PurchaseResults: ...
 
 class UnfulfilledConsumable(winrt.system.Object):
     offer_id: str
     product_id: str
-    transaction_id: winrt.system.Guid
+    transaction_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnfulfilledConsumable: ...
 

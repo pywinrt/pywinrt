@@ -2,6 +2,7 @@
 
 import enum
 import typing
+import uuid
 
 import winrt.system
 from . import _winrt_windows_ui_xaml

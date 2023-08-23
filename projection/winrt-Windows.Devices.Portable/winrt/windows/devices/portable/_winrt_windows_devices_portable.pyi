@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.storage
@@ -18,7 +19,7 @@ class ServiceDevice(winrt.system.Object):
     @staticmethod
     def get_device_selector(service_type: ServiceDeviceType, /) -> str: ...
     @staticmethod
-    def get_device_selector_from_service_id(service_id: winrt.system.Guid, /) -> str: ...
+    def get_device_selector_from_service_id(service_id: uuid.UUID, /) -> str: ...
 
 class StorageDevice(winrt.system.Object):
     @staticmethod

@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.data.xml.dom
@@ -243,7 +244,7 @@ class MobileBroadbandAccount(winrt.system.Object):
     current_device_information: typing.Optional[MobileBroadbandDeviceInformation]
     current_network: typing.Optional[MobileBroadbandNetwork]
     network_account_id: str
-    service_provider_guid: winrt.system.Guid
+    service_provider_guid: uuid.UUID
     service_provider_name: str
     account_experience_url: typing.Optional[winrt.windows.foundation.Uri]
     available_network_account_ids: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
@@ -409,7 +410,7 @@ class MobileBroadbandDeviceInformation(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceInformation: ...
 
 class MobileBroadbandDeviceService(winrt.system.Object):
-    device_service_id: winrt.system.Guid
+    device_service_id: uuid.UUID
     supported_commands: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MobileBroadbandDeviceService: ...
@@ -443,7 +444,7 @@ class MobileBroadbandDeviceServiceDataSession(winrt.system.Object):
     def remove_data_received(self, event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MobileBroadbandDeviceServiceInformation(winrt.system.Object):
-    device_service_id: winrt.system.Guid
+    device_service_id: uuid.UUID
     is_data_read_supported: winrt.system.Boolean
     is_data_write_supported: winrt.system.Boolean
     @staticmethod
@@ -451,7 +452,7 @@ class MobileBroadbandDeviceServiceInformation(winrt.system.Object):
 
 class MobileBroadbandDeviceServiceTriggerDetails(winrt.system.Object):
     device_id: str
-    device_service_id: winrt.system.Guid
+    device_service_id: uuid.UUID
     received_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
     event_id: winrt.system.UInt32
     @staticmethod
@@ -475,7 +476,7 @@ class MobileBroadbandModem(winrt.system.Object):
     def get_default() -> typing.Optional[MobileBroadbandModem]: ...
     @staticmethod
     def get_device_selector() -> str: ...
-    def get_device_service(self, device_service_id: winrt.system.Guid, /) -> typing.Optional[MobileBroadbandDeviceService]: ...
+    def get_device_service(self, device_service_id: uuid.UUID, /) -> typing.Optional[MobileBroadbandDeviceService]: ...
     def get_is_passthrough_enabled(self, slotindex: winrt.system.Int32, /) -> winrt.system.Boolean: ...
     @typing.overload
     def get_is_passthrough_enabled_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...

@@ -147,7 +147,6 @@ if sys.version_info >= (3, 9):
     Single = Annotated[float, "f"]
     Double = Annotated[float, "d"]
     Char16 = Annotated[str, "u"]
-    Guid = Annotated[uuid.UUID, "T{I2H8B}"]
 else:
     Boolean = bool
     Int8 = int
@@ -161,6 +160,5 @@ else:
     Single = float
     Double = float
     Char16 = str
-    Guid = uuid.UUID
 
 _mixin_mutable_sequence(Array)

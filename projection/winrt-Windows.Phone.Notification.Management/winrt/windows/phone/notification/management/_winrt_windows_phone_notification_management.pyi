@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel.appointments
@@ -53,11 +54,11 @@ class AccessoryManager(winrt.system.Object):
     @staticmethod
     def disable_notifications_for_application(app_id: str, /) -> None: ...
     @staticmethod
-    def dismiss_alarm(alarm_id: winrt.system.Guid, /) -> None: ...
+    def dismiss_alarm(alarm_id: uuid.UUID, /) -> None: ...
     @staticmethod
     def dismiss_alarm_by_instance_id(instance_id: str, /) -> None: ...
     @staticmethod
-    def dismiss_reminder(reminder_id: winrt.system.Guid, /) -> None: ...
+    def dismiss_reminder(reminder_id: uuid.UUID, /) -> None: ...
     @staticmethod
     def dismiss_reminder_by_instance_id(instance_id: str, /) -> None: ...
     @staticmethod
@@ -85,7 +86,7 @@ class AccessoryManager(winrt.system.Object):
     @staticmethod
     def get_next_trigger_details() -> typing.Optional[IAccessoryNotificationTriggerDetails]: ...
     @staticmethod
-    def get_phone_line_details(phone_line: winrt.system.Guid, /) -> typing.Optional[PhoneLineDetails]: ...
+    def get_phone_line_details(phone_line: uuid.UUID, /) -> typing.Optional[PhoneLineDetails]: ...
     @staticmethod
     def get_user_consent() -> winrt.system.Boolean: ...
     @staticmethod
@@ -96,16 +97,16 @@ class AccessoryManager(winrt.system.Object):
     def is_notification_enabled_for_application(app_id: str, /) -> winrt.system.Boolean: ...
     @typing.overload
     @staticmethod
-    def make_phone_call(phone_line: winrt.system.Guid, phone_number: str, /) -> None: ...
+    def make_phone_call(phone_line: uuid.UUID, phone_number: str, /) -> None: ...
     @typing.overload
     @staticmethod
-    def make_phone_call(phone_line: winrt.system.Guid, phone_number: str, end_point: PhoneCallAudioEndpoint, /) -> None: ...
+    def make_phone_call(phone_line: uuid.UUID, phone_number: str, end_point: PhoneCallAudioEndpoint, /) -> None: ...
     @typing.overload
     @staticmethod
-    def make_phone_call_with_video(phone_line: winrt.system.Guid, phone_number: str, /) -> None: ...
+    def make_phone_call_with_video(phone_line: uuid.UUID, phone_number: str, /) -> None: ...
     @typing.overload
     @staticmethod
-    def make_phone_call_with_video(phone_line: winrt.system.Guid, phone_number: str, end_point: PhoneCallAudioEndpoint, /) -> None: ...
+    def make_phone_call_with_video(phone_line: uuid.UUID, phone_number: str, end_point: PhoneCallAudioEndpoint, /) -> None: ...
     @staticmethod
     def perform_media_playback_command(command: PlaybackCommand, /) -> None: ...
     @staticmethod
@@ -126,18 +127,18 @@ class AccessoryManager(winrt.system.Object):
     def set_ringer_vibrate(ringer: winrt.system.Boolean, vibrate: winrt.system.Boolean, /) -> None: ...
     @typing.overload
     @staticmethod
-    def snooze_alarm(alarm_id: winrt.system.Guid, /) -> None: ...
+    def snooze_alarm(alarm_id: uuid.UUID, /) -> None: ...
     @typing.overload
     @staticmethod
-    def snooze_alarm(alarm_id: winrt.system.Guid, time_span: datetime.timedelta, /) -> None: ...
+    def snooze_alarm(alarm_id: uuid.UUID, time_span: datetime.timedelta, /) -> None: ...
     @staticmethod
     def snooze_alarm_by_instance_id(instance_id: str, /) -> None: ...
     @typing.overload
     @staticmethod
-    def snooze_reminder(reminder_id: winrt.system.Guid, /) -> None: ...
+    def snooze_reminder(reminder_id: uuid.UUID, /) -> None: ...
     @typing.overload
     @staticmethod
-    def snooze_reminder(reminder_id: winrt.system.Guid, time_span: datetime.timedelta, /) -> None: ...
+    def snooze_reminder(reminder_id: uuid.UUID, time_span: datetime.timedelta, /) -> None: ...
     @staticmethod
     def snooze_reminder_by_instance_id(instance_id: str, /) -> None: ...
     @staticmethod
@@ -151,7 +152,7 @@ class AlarmNotificationTriggerDetails(winrt.system.Object):
     app_display_name: str
     app_id: str
     time_created: datetime.datetime
-    alarm_id: winrt.system.Guid
+    alarm_id: uuid.UUID
     reminder_state: ReminderState
     timestamp: datetime.datetime
     title: str
@@ -272,7 +273,7 @@ class PhoneCallDetails(winrt.system.Object):
     conference_call_id: winrt.system.UInt32
     contact_name: str
     end_time: datetime.datetime
-    phone_line: winrt.system.Guid
+    phone_line: uuid.UUID
     phone_number: str
     preset_text_responses: typing.Optional[winrt.windows.foundation.collections.IVectorView[TextResponse]]
     start_time: datetime.datetime
@@ -283,7 +284,7 @@ class PhoneCallDetails(winrt.system.Object):
 class PhoneLineDetails(winrt.system.Object):
     default_outgoing_line: winrt.system.Boolean
     display_name: str
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     line_number: str
     registration_state: PhoneLineRegistrationState
     voicemail_count: winrt.system.UInt32
@@ -298,7 +299,7 @@ class PhoneNotificationTriggerDetails(winrt.system.Object):
     app_id: str
     time_created: datetime.datetime
     call_details: typing.Optional[PhoneCallDetails]
-    phone_line_changed_id: winrt.system.Guid
+    phone_line_changed_id: uuid.UUID
     phone_notification_type: PhoneNotificationType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNotificationTriggerDetails: ...
@@ -312,7 +313,7 @@ class ReminderNotificationTriggerDetails(winrt.system.Object):
     appointment: typing.Optional[winrt.windows.applicationmodel.appointments.Appointment]
     description: str
     details: str
-    reminder_id: winrt.system.Guid
+    reminder_id: uuid.UUID
     reminder_state: ReminderState
     timestamp: datetime.datetime
     title: str

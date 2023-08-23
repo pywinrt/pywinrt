@@ -318,7 +318,7 @@ namespace pywinrt
 
             if (ns == "System" && name == "Guid")
             {
-                write("winrt.system.Guid");
+                write("uuid.UUID");
             }
             else
             {

@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation.numerics
@@ -14,7 +15,7 @@ Self = typing.TypeVar('Self')
 class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
     coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]
     coordinate_system_to_node_transform: winrt.windows.foundation.numerics.Matrix4x4
-    node_id: winrt.system.Guid
+    node_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialGraphInteropFrameOfReferencePreview: ...
 
@@ -23,15 +24,15 @@ class SpatialGraphInteropPreview(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SpatialGraphInteropPreview: ...
     @typing.overload
     @staticmethod
-    def create_coordinate_system_for_node(node_id: winrt.system.Guid, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
+    def create_coordinate_system_for_node(node_id: uuid.UUID, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
     @typing.overload
     @staticmethod
-    def create_coordinate_system_for_node(node_id: winrt.system.Guid, relative_position: winrt.windows.foundation.numerics.Vector3, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
+    def create_coordinate_system_for_node(node_id: uuid.UUID, relative_position: winrt.windows.foundation.numerics.Vector3, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
     @typing.overload
     @staticmethod
-    def create_coordinate_system_for_node(node_id: winrt.system.Guid, relative_position: winrt.windows.foundation.numerics.Vector3, relative_orientation: winrt.windows.foundation.numerics.Quaternion, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
+    def create_coordinate_system_for_node(node_id: uuid.UUID, relative_position: winrt.windows.foundation.numerics.Vector3, relative_orientation: winrt.windows.foundation.numerics.Quaternion, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
     @staticmethod
-    def create_locator_for_node(node_id: winrt.system.Guid, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialLocator]: ...
+    def create_locator_for_node(node_id: uuid.UUID, /) -> typing.Optional[winrt.windows.perception.spatial.SpatialLocator]: ...
     @typing.overload
     @staticmethod
     def try_create_frame_of_reference(coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], /) -> typing.Optional[SpatialGraphInteropFrameOfReferencePreview]: ...

@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,7 +16,7 @@ from . import CredentialPromptType, OnlineIdSystemTicketStatus
 Self = typing.TypeVar('Self')
 
 class OnlineIdAuthenticator(winrt.system.Object):
-    application_id: winrt.system.Guid
+    application_id: uuid.UUID
     authenticated_safe_customer_id: str
     can_sign_out: winrt.system.Boolean
     @staticmethod
@@ -52,7 +53,7 @@ class OnlineIdSystemAuthenticator(winrt.system.Object):
     def get_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[OnlineIdSystemAuthenticatorForUser]: ...
 
 class OnlineIdSystemAuthenticatorForUser(winrt.system.Object):
-    application_id: winrt.system.Guid
+    application_id: uuid.UUID
     user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdSystemAuthenticatorForUser: ...

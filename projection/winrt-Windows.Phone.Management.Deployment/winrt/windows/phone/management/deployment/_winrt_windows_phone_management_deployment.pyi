@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -18,7 +19,7 @@ Self = typing.TypeVar('Self')
 class Enterprise(winrt.system.Object):
     enrollment_valid_from: datetime.datetime
     enrollment_valid_to: datetime.datetime
-    id: winrt.system.Guid
+    id: uuid.UUID
     name: str
     status: EnterpriseStatus
     workplace_id: winrt.system.Int32

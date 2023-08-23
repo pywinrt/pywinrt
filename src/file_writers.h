@@ -171,6 +171,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         if (!delegate_types.empty())
         {
             w.write("import typing\n");
+            w.write("import uuid\n");
         }
 
         if (!enum_types.empty() || !delegate_types.empty())
@@ -234,6 +235,7 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import sys\n");
         w.write("import types\n");
         w.write("import typing\n");
+        w.write("import uuid\n");
         w.write("\n");
         w.write("import winrt.system\n");
 

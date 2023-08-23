@@ -3027,7 +3027,7 @@ struct pinterface_python_type<%<%>>
             },
             [&](guid_type type)
             {
-                w.write("uuid.uuid");
+                w.write("uuid.UUID");
             },
             [&]([[maybe_unused]] TypeDef const& type)
             {

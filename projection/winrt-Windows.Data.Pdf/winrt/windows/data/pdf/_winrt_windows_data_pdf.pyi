@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -65,7 +66,7 @@ class PdfPageRenderOptions(winrt.system.Object):
     is_ignoring_high_contrast: winrt.system.Boolean
     destination_width: winrt.system.UInt32
     destination_height: winrt.system.UInt32
-    bitmap_encoder_id: winrt.system.Guid
+    bitmap_encoder_id: uuid.UUID
     background_color: winrt.windows.ui.Color
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PdfPageRenderOptions: ...

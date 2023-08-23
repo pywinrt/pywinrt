@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -30,7 +31,7 @@ class GameControllerFactoryManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameControllerFactoryManager: ...
     @staticmethod
-    def register_custom_factory_for_gip_interface(factory: typing.Optional[ICustomGameControllerFactory], interface_id: winrt.system.Guid, /) -> None: ...
+    def register_custom_factory_for_gip_interface(factory: typing.Optional[ICustomGameControllerFactory], interface_id: uuid.UUID, /) -> None: ...
     @staticmethod
     def register_custom_factory_for_hardware_id(factory: typing.Optional[ICustomGameControllerFactory], hardware_vendor_id: winrt.system.UInt16, hardware_product_id: winrt.system.UInt16, /) -> None: ...
     @staticmethod

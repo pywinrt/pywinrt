@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel.activation
@@ -270,7 +271,7 @@ class PackageContentGroup(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageContentGroup: ...
 
 class PackageContentGroupStagingEventArgs(winrt.system.Object):
-    activity_id: winrt.system.Guid
+    activity_id: uuid.UUID
     content_group_name: str
     error_code: winrt.windows.foundation.HResult
     is_complete: winrt.system.Boolean
@@ -295,7 +296,7 @@ class PackageId(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageId: ...
 
 class PackageInstallingEventArgs(winrt.system.Object):
-    activity_id: winrt.system.Guid
+    activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
     is_complete: winrt.system.Boolean
     package: typing.Optional[Package]
@@ -304,7 +305,7 @@ class PackageInstallingEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageInstallingEventArgs: ...
 
 class PackageStagingEventArgs(winrt.system.Object):
-    activity_id: winrt.system.Guid
+    activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
     is_complete: winrt.system.Boolean
     package: typing.Optional[Package]
@@ -335,7 +336,7 @@ class PackageStatusChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageStatusChangedEventArgs: ...
 
 class PackageUninstallingEventArgs(winrt.system.Object):
-    activity_id: winrt.system.Guid
+    activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
     is_complete: winrt.system.Boolean
     package: typing.Optional[Package]
@@ -350,7 +351,7 @@ class PackageUpdateAvailabilityResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageUpdateAvailabilityResult: ...
 
 class PackageUpdatingEventArgs(winrt.system.Object):
-    activity_id: winrt.system.Guid
+    activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
     is_complete: winrt.system.Boolean
     progress: winrt.system.Double

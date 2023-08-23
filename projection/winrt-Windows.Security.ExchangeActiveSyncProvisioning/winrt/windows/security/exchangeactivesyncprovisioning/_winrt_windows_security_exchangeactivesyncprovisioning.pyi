@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,7 +15,7 @@ Self = typing.TypeVar('Self')
 
 class EasClientDeviceInformation(winrt.system.Object):
     friendly_name: str
-    id: winrt.system.Guid
+    id: uuid.UUID
     operating_system: str
     system_manufacturer: str
     system_product_name: str

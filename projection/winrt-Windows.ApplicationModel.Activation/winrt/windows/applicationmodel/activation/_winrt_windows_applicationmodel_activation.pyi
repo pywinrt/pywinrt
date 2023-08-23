@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel.appointments.appointmentsprovider
@@ -354,7 +355,7 @@ class PhoneCallActivatedEventArgs(winrt.system.Object):
     previous_execution_state: ApplicationExecutionState
     splash_screen: typing.Optional[SplashScreen]
     user: typing.Optional[winrt.windows.system.User]
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallActivatedEventArgs: ...
 
@@ -872,7 +873,7 @@ class ILockScreenCallActivatedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ILockScreenCallActivatedEventArgs: ...
 
 class IPhoneCallActivatedEventArgs(winrt.system.Object):
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     kind: ActivationKind
     previous_execution_state: ApplicationExecutionState
     splash_screen: typing.Optional[SplashScreen]

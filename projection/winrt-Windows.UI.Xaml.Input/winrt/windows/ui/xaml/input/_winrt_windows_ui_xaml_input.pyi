@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.devices.input
@@ -148,13 +149,13 @@ class FocusManager(winrt.system.Object):
     def remove_lost_focus(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class FocusManagerGotFocusEventArgs(winrt.system.Object):
-    correlation_id: winrt.system.Guid
+    correlation_id: uuid.UUID
     new_focused_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusManagerGotFocusEventArgs: ...
 
 class FocusManagerLostFocusEventArgs(winrt.system.Object):
-    correlation_id: winrt.system.Guid
+    correlation_id: uuid.UUID
     old_focused_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusManagerLostFocusEventArgs: ...
@@ -172,7 +173,7 @@ class GettingFocusEventArgs(winrt.system.Object):
     focus_state: winrt.windows.ui.xaml.FocusState
     input_device: FocusInputDeviceKind
     old_focused_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
-    correlation_id: winrt.system.Guid
+    correlation_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GettingFocusEventArgs: ...
     def try_cancel(self) -> winrt.system.Boolean: ...
@@ -259,7 +260,7 @@ class LosingFocusEventArgs(winrt.system.Object):
     focus_state: winrt.windows.ui.xaml.FocusState
     input_device: FocusInputDeviceKind
     old_focused_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
-    correlation_id: winrt.system.Guid
+    correlation_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LosingFocusEventArgs: ...
     def try_cancel(self) -> winrt.system.Boolean: ...

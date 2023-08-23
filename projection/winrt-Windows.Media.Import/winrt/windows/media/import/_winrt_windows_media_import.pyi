@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -147,7 +148,7 @@ class PhotoImportSession(winrt.system.Object):
     destination_folder: typing.Optional[winrt.windows.storage.IStorageFolder]
     destination_file_name_prefix: str
     append_session_date_to_destination_folder: winrt.system.Boolean
-    session_id: winrt.system.Guid
+    session_id: uuid.UUID
     source: typing.Optional[PhotoImportSource]
     subfolder_date_format: PhotoImportSubfolderDateFormat
     remember_deselected_items: winrt.system.Boolean

@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,21 +15,21 @@ Self = typing.TypeVar('Self')
 
 class PhoneCallBlockedTriggerDetails(winrt.system.Object):
     call_blocked_reason: PhoneCallBlockedReason
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     phone_number: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallBlockedTriggerDetails: ...
 
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
     phone_number: str
-    request_id: winrt.system.Guid
+    request_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOriginDataRequestTriggerDetails: ...
 
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
     dismissal_time: datetime.datetime
     display_name: str
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     phone_number: str
     reason: PhoneIncomingCallDismissedReason
     text_reply_message: str
@@ -37,19 +38,19 @@ class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
 
 class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
     call_id: str
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallNotificationTriggerDetails: ...
 
 class PhoneLineChangedTriggerDetails(winrt.system.Object):
     change_type: PhoneLineChangeKind
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineChangedTriggerDetails: ...
     def has_line_property_changed(self, line_property: PhoneLineProperties, /) -> winrt.system.Boolean: ...
 
 class PhoneNewVoicemailMessageTriggerDetails(winrt.system.Object):
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     operator_message: str
     voicemail_count: winrt.system.Int32
     @staticmethod

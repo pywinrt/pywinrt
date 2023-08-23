@@ -4,6 +4,7 @@ import datetime
 import sys
 import types
 import typing
+import uuid
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -215,7 +216,7 @@ class WebUIBackgroundTaskInstance(winrt.system.Object):
 
 class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object):
     progress: winrt.system.UInt32
-    instance_id: winrt.system.Guid
+    instance_id: uuid.UUID
     suspended_count: winrt.system.UInt32
     task: typing.Optional[winrt.windows.applicationmodel.background.BackgroundTaskRegistration]
     trigger_details: typing.Optional[winrt.system.Object]
@@ -514,7 +515,7 @@ class WebUIPhoneCallActivatedEventArgs(winrt.system.Object):
     previous_execution_state: winrt.windows.applicationmodel.activation.ApplicationExecutionState
     splash_screen: typing.Optional[winrt.windows.applicationmodel.activation.SplashScreen]
     user: typing.Optional[winrt.windows.system.User]
-    line_id: winrt.system.Guid
+    line_id: uuid.UUID
     activated_operation: typing.Optional[ActivatedOperation]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUIPhoneCallActivatedEventArgs: ...
