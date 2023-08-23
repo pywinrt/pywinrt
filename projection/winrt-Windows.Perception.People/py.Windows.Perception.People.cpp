@@ -939,22 +939,28 @@ namespace py::cpp::Windows::Perception::People
 
     // ----- HandMeshVertex struct --------------------
 
-    PyObject* _new_HandMeshVertex(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>* _new_HandMeshVertex(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_HandMeshVertex(winrt_struct_wrapper<winrt::Windows::Perception::People::HandMeshVertex>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::People::HandMeshVertex return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Position{};
@@ -963,18 +969,18 @@ namespace py::cpp::Windows::Perception::People
         static const char* kwlist[] = {"position", "normal", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Position, &_Normal))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::People::HandMeshVertex return_value{ py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Normal)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1061,6 +1067,7 @@ namespace py::cpp::Windows::Perception::People
     static PyType_Slot _type_slots_HandMeshVertex[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_HandMeshVertex) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_HandMeshVertex) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HandMeshVertex) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HandMeshVertex) },
         { },
@@ -1077,22 +1084,28 @@ namespace py::cpp::Windows::Perception::People
 
     // ----- JointPose struct --------------------
 
-    PyObject* _new_JointPose(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>* _new_JointPose(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_JointPose(winrt_struct_wrapper<winrt::Windows::Perception::People::JointPose>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::People::JointPose return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Orientation{};
@@ -1103,18 +1116,18 @@ namespace py::cpp::Windows::Perception::People
         static const char* kwlist[] = {"orientation", "position", "radius", "accuracy", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOfi", const_cast<char**>(kwlist), &_Orientation, &_Position, &_Radius, &_Accuracy))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::People::JointPose return_value{ py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position), _Radius, static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Position), _Radius, static_cast<winrt::Windows::Perception::People::JointPoseAccuracy>(_Accuracy)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1269,6 +1282,7 @@ namespace py::cpp::Windows::Perception::People
     static PyType_Slot _type_slots_JointPose[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_JointPose) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_JointPose) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_JointPose) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_JointPose) },
         { },

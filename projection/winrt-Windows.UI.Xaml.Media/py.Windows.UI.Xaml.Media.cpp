@@ -19809,22 +19809,28 @@ namespace py::cpp::Windows::UI::Xaml::Media
 
     // ----- Matrix struct --------------------
 
-    PyObject* _new_Matrix(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Matrix>* _new_Matrix(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Matrix>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_Matrix(winrt_struct_wrapper<winrt::Windows::UI::Xaml::Media::Matrix>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::UI::Xaml::Media::Matrix return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         double _M11{};
@@ -19837,18 +19843,18 @@ namespace py::cpp::Windows::UI::Xaml::Media
         static const char* kwlist[] = {"m11", "m12", "m21", "m22", "offset_x", "offset_y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "dddddd", const_cast<char**>(kwlist), &_M11, &_M12, &_M21, &_M22, &_OffsetX, &_OffsetY))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::UI::Xaml::Media::Matrix return_value{ _M11, _M12, _M21, _M22, _OffsetX, _OffsetY };
-            return py::convert(return_value);
+            self->obj = {_M11, _M12, _M21, _M22, _OffsetX, _OffsetY};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -20071,6 +20077,7 @@ namespace py::cpp::Windows::UI::Xaml::Media
     static PyType_Slot _type_slots_Matrix[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_Matrix) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_Matrix) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix) },
         { },

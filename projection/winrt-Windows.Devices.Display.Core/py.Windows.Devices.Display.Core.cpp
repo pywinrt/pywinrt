@@ -5521,22 +5521,28 @@ namespace py::cpp::Windows::Devices::Display::Core
 
     // ----- DisplayPresentationRate struct --------------------
 
-    PyObject* _new_DisplayPresentationRate(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>* _new_DisplayPresentationRate(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_DisplayPresentationRate(winrt_struct_wrapper<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Devices::Display::Core::DisplayPresentationRate return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _VerticalSyncRate{};
@@ -5545,18 +5551,18 @@ namespace py::cpp::Windows::Devices::Display::Core
         static const char* kwlist[] = {"vertical_sync_rate", "vertical_syncs_per_presentation", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Oi", const_cast<char**>(kwlist), &_VerticalSyncRate, &_VerticalSyncsPerPresentation))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Devices::Display::Core::DisplayPresentationRate return_value{ py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(_VerticalSyncRate), _VerticalSyncsPerPresentation };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::Rational>::convert_to(_VerticalSyncRate), _VerticalSyncsPerPresentation};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -5643,6 +5649,7 @@ namespace py::cpp::Windows::Devices::Display::Core
     static PyType_Slot _type_slots_DisplayPresentationRate[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayPresentationRate) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_DisplayPresentationRate) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayPresentationRate) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayPresentationRate) },
         { },

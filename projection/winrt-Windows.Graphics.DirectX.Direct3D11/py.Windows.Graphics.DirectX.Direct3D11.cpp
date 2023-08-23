@@ -303,22 +303,28 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     // ----- Direct3DMultisampleDescription struct --------------------
 
-    PyObject* _new_Direct3DMultisampleDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>* _new_Direct3DMultisampleDescription(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_Direct3DMultisampleDescription(winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _Count{};
@@ -327,18 +333,18 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         static const char* kwlist[] = {"count", "quality", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Count, &_Quality))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription return_value{ _Count, _Quality };
-            return py::convert(return_value);
+            self->obj = {_Count, _Quality};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -425,6 +431,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static PyType_Slot _type_slots_Direct3DMultisampleDescription[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DMultisampleDescription) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DMultisampleDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DMultisampleDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DMultisampleDescription) },
         { },
@@ -441,22 +448,28 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
 
     // ----- Direct3DSurfaceDescription struct --------------------
 
-    PyObject* _new_Direct3DSurfaceDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>* _new_Direct3DSurfaceDescription(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_Direct3DSurfaceDescription(winrt_struct_wrapper<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _Width{};
@@ -467,18 +480,18 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
         static const char* kwlist[] = {"width", "height", "format", "multisample_description", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiiO", const_cast<char**>(kwlist), &_Width, &_Height, &_Format, &_MultisampleDescription))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription return_value{ _Width, _Height, static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format), py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(_MultisampleDescription) };
-            return py::convert(return_value);
+            self->obj = {_Width, _Height, static_cast<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>(_Format), py::converter<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>::convert_to(_MultisampleDescription)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -633,6 +646,7 @@ namespace py::cpp::Windows::Graphics::DirectX::Direct3D11
     static PyType_Slot _type_slots_Direct3DSurfaceDescription[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_Direct3DSurfaceDescription) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_Direct3DSurfaceDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Direct3DSurfaceDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Direct3DSurfaceDescription) },
         { },

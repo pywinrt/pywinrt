@@ -4561,22 +4561,28 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicAdapterId struct --------------------
 
-    PyObject* _new_HolographicAdapterId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicAdapterId>* _new_HolographicAdapterId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicAdapterId>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_HolographicAdapterId(winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicAdapterId>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Holographic::HolographicAdapterId return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _LowPart{};
@@ -4585,18 +4591,18 @@ namespace py::cpp::Windows::Graphics::Holographic
         static const char* kwlist[] = {"low_part", "high_part", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Holographic::HolographicAdapterId return_value{ _LowPart, _HighPart };
-            return py::convert(return_value);
+            self->obj = {_LowPart, _HighPart};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4683,6 +4689,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyType_Slot _type_slots_HolographicAdapterId[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicAdapterId) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_HolographicAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicAdapterId) },
         { },
@@ -4699,22 +4706,28 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicFrameId struct --------------------
 
-    PyObject* _new_HolographicFrameId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameId>* _new_HolographicFrameId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameId>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_HolographicFrameId(winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicFrameId>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Holographic::HolographicFrameId return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint64_t _Value{};
@@ -4722,18 +4735,18 @@ namespace py::cpp::Windows::Graphics::Holographic
         static const char* kwlist[] = {"value", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Holographic::HolographicFrameId return_value{ _Value };
-            return py::convert(return_value);
+            self->obj = {_Value};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4786,6 +4799,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyType_Slot _type_slots_HolographicFrameId[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicFrameId) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_HolographicFrameId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicFrameId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicFrameId) },
         { },
@@ -4802,22 +4816,28 @@ namespace py::cpp::Windows::Graphics::Holographic
 
     // ----- HolographicStereoTransform struct --------------------
 
-    PyObject* _new_HolographicStereoTransform(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>* _new_HolographicStereoTransform(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_HolographicStereoTransform(winrt_struct_wrapper<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Holographic::HolographicStereoTransform return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Left{};
@@ -4826,18 +4846,18 @@ namespace py::cpp::Windows::Graphics::Holographic
         static const char* kwlist[] = {"left", "right", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Left, &_Right))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Holographic::HolographicStereoTransform return_value{ py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Left), py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Right) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Left), py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(_Right)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4924,6 +4944,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyType_Slot _type_slots_HolographicStereoTransform[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_HolographicStereoTransform) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_HolographicStereoTransform) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HolographicStereoTransform) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HolographicStereoTransform) },
         { },

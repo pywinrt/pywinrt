@@ -1642,22 +1642,28 @@ namespace py::cpp::Windows::UI::Xaml::Interop
 
     // ----- TypeName struct --------------------
 
-    PyObject* _new_TypeName(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::UI::Xaml::Interop::TypeName>* _new_TypeName(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Interop::TypeName>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_TypeName(winrt_struct_wrapper<winrt::Windows::UI::Xaml::Interop::TypeName>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::UI::Xaml::Interop::TypeName return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         winrt::hstring _Name{};
@@ -1666,18 +1672,18 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         static const char* kwlist[] = {"name", "kind", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ui", const_cast<char**>(kwlist), &_Name, &_Kind))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::UI::Xaml::Interop::TypeName return_value{ _Name, static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind) };
-            return py::convert(return_value);
+            self->obj = {_Name, static_cast<winrt::Windows::UI::Xaml::Interop::TypeKind>(_Kind)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1764,6 +1770,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
     static PyType_Slot _type_slots_TypeName[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_TypeName) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_TypeName) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TypeName) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TypeName) },
         { },

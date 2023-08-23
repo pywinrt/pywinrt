@@ -8236,22 +8236,28 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- RetrievalProgress struct --------------------
 
-    PyObject* _new_RetrievalProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>* _new_RetrievalProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_RetrievalProgress(winrt_struct_wrapper<winrt::Windows::Web::Syndication::RetrievalProgress>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Web::Syndication::RetrievalProgress return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _BytesRetrieved{};
@@ -8260,18 +8266,18 @@ namespace py::cpp::Windows::Web::Syndication
         static const char* kwlist[] = {"bytes_retrieved", "total_bytes_to_retrieve", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_BytesRetrieved, &_TotalBytesToRetrieve))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Web::Syndication::RetrievalProgress return_value{ _BytesRetrieved, _TotalBytesToRetrieve };
-            return py::convert(return_value);
+            self->obj = {_BytesRetrieved, _TotalBytesToRetrieve};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -8358,6 +8364,7 @@ namespace py::cpp::Windows::Web::Syndication
     static PyType_Slot _type_slots_RetrievalProgress[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_RetrievalProgress) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_RetrievalProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RetrievalProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RetrievalProgress) },
         { },
@@ -8374,22 +8381,28 @@ namespace py::cpp::Windows::Web::Syndication
 
     // ----- TransferProgress struct --------------------
 
-    PyObject* _new_TransferProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>* _new_TransferProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_TransferProgress(winrt_struct_wrapper<winrt::Windows::Web::Syndication::TransferProgress>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Web::Syndication::TransferProgress return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _BytesSent{};
@@ -8400,18 +8413,18 @@ namespace py::cpp::Windows::Web::Syndication
         static const char* kwlist[] = {"bytes_sent", "total_bytes_to_send", "bytes_retrieved", "total_bytes_to_retrieve", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIII", const_cast<char**>(kwlist), &_BytesSent, &_TotalBytesToSend, &_BytesRetrieved, &_TotalBytesToRetrieve))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Web::Syndication::TransferProgress return_value{ _BytesSent, _TotalBytesToSend, _BytesRetrieved, _TotalBytesToRetrieve };
-            return py::convert(return_value);
+            self->obj = {_BytesSent, _TotalBytesToSend, _BytesRetrieved, _TotalBytesToRetrieve};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -8566,6 +8579,7 @@ namespace py::cpp::Windows::Web::Syndication
     static PyType_Slot _type_slots_TransferProgress[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_TransferProgress) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_TransferProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TransferProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TransferProgress) },
         { },

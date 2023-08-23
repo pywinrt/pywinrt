@@ -3797,22 +3797,28 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingBox struct --------------------
 
-    PyObject* _new_SpatialBoundingBox(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingBox>* _new_SpatialBoundingBox(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingBox>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_SpatialBoundingBox(winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingBox>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::Spatial::SpatialBoundingBox return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Center{};
@@ -3821,18 +3827,18 @@ namespace py::cpp::Windows::Perception::Spatial
         static const char* kwlist[] = {"center", "extents", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Center, &_Extents))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::Spatial::SpatialBoundingBox return_value{ py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -3919,6 +3925,7 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyType_Slot _type_slots_SpatialBoundingBox[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingBox) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingBox) },
         { },
@@ -3935,22 +3942,28 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingFrustum struct --------------------
 
-    PyObject* _new_SpatialBoundingFrustum(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>* _new_SpatialBoundingFrustum(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_SpatialBoundingFrustum(winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::Spatial::SpatialBoundingFrustum return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Near{};
@@ -3963,18 +3976,18 @@ namespace py::cpp::Windows::Perception::Spatial
         static const char* kwlist[] = {"near", "far", "right", "left", "top", "bottom", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOOOOO", const_cast<char**>(kwlist), &_Near, &_Far, &_Right, &_Left, &_Top, &_Bottom))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::Spatial::SpatialBoundingFrustum return_value{ py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Near), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Far), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Right), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Left), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Top), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Bottom) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Near), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Far), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Right), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Left), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Top), py::converter<winrt::Windows::Foundation::Numerics::plane>::convert_to(_Bottom)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4197,6 +4210,7 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyType_Slot _type_slots_SpatialBoundingFrustum[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingFrustum) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingFrustum) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingFrustum) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingFrustum) },
         { },
@@ -4213,22 +4227,28 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingOrientedBox struct --------------------
 
-    PyObject* _new_SpatialBoundingOrientedBox(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>* _new_SpatialBoundingOrientedBox(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_SpatialBoundingOrientedBox(winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Center{};
@@ -4238,18 +4258,18 @@ namespace py::cpp::Windows::Perception::Spatial
         static const char* kwlist[] = {"center", "extents", "orientation", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OOO", const_cast<char**>(kwlist), &_Center, &_Extents, &_Orientation))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox return_value{ py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents), py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Extents), py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(_Orientation)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4370,6 +4390,7 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyType_Slot _type_slots_SpatialBoundingOrientedBox[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingOrientedBox) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingOrientedBox) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingOrientedBox) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingOrientedBox) },
         { },
@@ -4386,22 +4407,28 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialBoundingSphere struct --------------------
 
-    PyObject* _new_SpatialBoundingSphere(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>* _new_SpatialBoundingSphere(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_SpatialBoundingSphere(winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::Spatial::SpatialBoundingSphere return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Center{};
@@ -4410,18 +4437,18 @@ namespace py::cpp::Windows::Perception::Spatial
         static const char* kwlist[] = {"center", "radius", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Of", const_cast<char**>(kwlist), &_Center, &_Radius))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::Spatial::SpatialBoundingSphere return_value{ py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), _Radius };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Center), _Radius};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4508,6 +4535,7 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyType_Slot _type_slots_SpatialBoundingSphere[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialBoundingSphere) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_SpatialBoundingSphere) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialBoundingSphere) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialBoundingSphere) },
         { },
@@ -4524,22 +4552,28 @@ namespace py::cpp::Windows::Perception::Spatial
 
     // ----- SpatialRay struct --------------------
 
-    PyObject* _new_SpatialRay(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialRay>* _new_SpatialRay(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialRay>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_SpatialRay(winrt_struct_wrapper<winrt::Windows::Perception::Spatial::SpatialRay>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Perception::Spatial::SpatialRay return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         PyObject* _Origin{};
@@ -4548,18 +4582,18 @@ namespace py::cpp::Windows::Perception::Spatial
         static const char* kwlist[] = {"origin", "direction", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "OO", const_cast<char**>(kwlist), &_Origin, &_Direction))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Perception::Spatial::SpatialRay return_value{ py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Origin), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Direction) };
-            return py::convert(return_value);
+            self->obj = {py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Origin), py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(_Direction)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4646,6 +4680,7 @@ namespace py::cpp::Windows::Perception::Spatial
     static PyType_Slot _type_slots_SpatialRay[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_SpatialRay) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_SpatialRay) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SpatialRay) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SpatialRay) },
         { },

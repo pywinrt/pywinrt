@@ -4382,22 +4382,28 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
 
     // ----- ResourceLayoutInfo struct --------------------
 
-    PyObject* _new_ResourceLayoutInfo(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>* _new_ResourceLayoutInfo(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_ResourceLayoutInfo(winrt_struct_wrapper<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _MajorVersion{};
@@ -4409,18 +4415,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         static const char* kwlist[] = {"major_version", "minor_version", "resource_subtree_count", "named_resource_count", "checksum", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIIIi", const_cast<char**>(kwlist), &_MajorVersion, &_MinorVersion, &_ResourceSubtreeCount, &_NamedResourceCount, &_Checksum))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo return_value{ _MajorVersion, _MinorVersion, _ResourceSubtreeCount, _NamedResourceCount, _Checksum };
-            return py::convert(return_value);
+            self->obj = {_MajorVersion, _MinorVersion, _ResourceSubtreeCount, _NamedResourceCount, _Checksum};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4609,6 +4615,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static PyType_Slot _type_slots_ResourceLayoutInfo[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_ResourceLayoutInfo) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_ResourceLayoutInfo) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ResourceLayoutInfo) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ResourceLayoutInfo) },
         { },

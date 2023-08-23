@@ -15343,22 +15343,28 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ESimProfileInstallProgress struct --------------------
 
-    PyObject* _new_ESimProfileInstallProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>* _new_ESimProfileInstallProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_ESimProfileInstallProgress(winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _TotalSizeInBytes{};
@@ -15367,18 +15373,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         static const char* kwlist[] = {"total_size_in_bytes", "installed_size_in_bytes", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_TotalSizeInBytes, &_InstalledSizeInBytes))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress return_value{ _TotalSizeInBytes, _InstalledSizeInBytes };
-            return py::convert(return_value);
+            self->obj = {_TotalSizeInBytes, _InstalledSizeInBytes};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -15465,6 +15471,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyType_Slot _type_slots_ESimProfileInstallProgress[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_ESimProfileInstallProgress) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_ESimProfileInstallProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ESimProfileInstallProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ESimProfileInstallProgress) },
         { },
@@ -15481,22 +15488,28 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     // ----- ProfileUsage struct --------------------
 
-    PyObject* _new_ProfileUsage(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>* _new_ProfileUsage(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_ProfileUsage(winrt_struct_wrapper<winrt::Windows::Networking::NetworkOperators::ProfileUsage>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Networking::NetworkOperators::ProfileUsage return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _UsageInMegabytes{};
@@ -15505,18 +15518,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         static const char* kwlist[] = {"usage_in_megabytes", "last_sync_time", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IO", const_cast<char**>(kwlist), &_UsageInMegabytes, &_LastSyncTime))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Networking::NetworkOperators::ProfileUsage return_value{ _UsageInMegabytes, py::converter<winrt::Windows::Foundation::DateTime>::convert_to(_LastSyncTime) };
-            return py::convert(return_value);
+            self->obj = {_UsageInMegabytes, py::converter<winrt::Windows::Foundation::DateTime>::convert_to(_LastSyncTime)};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -15603,6 +15616,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyType_Slot _type_slots_ProfileUsage[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_ProfileUsage) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_ProfileUsage) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ProfileUsage) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_ProfileUsage) },
         { },

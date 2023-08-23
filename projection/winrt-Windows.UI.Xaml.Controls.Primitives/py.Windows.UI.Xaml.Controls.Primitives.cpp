@@ -21996,22 +21996,28 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
     // ----- GeneratorPosition struct --------------------
 
-    PyObject* _new_GeneratorPosition(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>* _new_GeneratorPosition(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_GeneratorPosition(winrt_struct_wrapper<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _Index{};
@@ -22020,18 +22026,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         static const char* kwlist[] = {"index", "offset", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Index, &_Offset))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition return_value{ _Index, _Offset };
-            return py::convert(return_value);
+            self->obj = {_Index, _Offset};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -22118,6 +22124,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
     static PyType_Slot _type_slots_GeneratorPosition[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_GeneratorPosition) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_GeneratorPosition) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_GeneratorPosition) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_GeneratorPosition) },
         { },

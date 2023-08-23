@@ -2350,22 +2350,28 @@ namespace py::cpp::Windows::Data::Text
 
     // ----- TextSegment struct --------------------
 
-    PyObject* _new_TextSegment(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>* _new_TextSegment(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_TextSegment(winrt_struct_wrapper<winrt::Windows::Data::Text::TextSegment>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Data::Text::TextSegment return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _StartPosition{};
@@ -2374,18 +2380,18 @@ namespace py::cpp::Windows::Data::Text
         static const char* kwlist[] = {"start_position", "length", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_StartPosition, &_Length))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Data::Text::TextSegment return_value{ _StartPosition, _Length };
-            return py::convert(return_value);
+            self->obj = {_StartPosition, _Length};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -2472,6 +2478,7 @@ namespace py::cpp::Windows::Data::Text
     static PyType_Slot _type_slots_TextSegment[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_TextSegment) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_TextSegment) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextSegment) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_TextSegment) },
         { },

@@ -2155,6 +2155,10 @@ return 0;
             writer::indent_guard g{w};
 
             w.write("{ Py_tp_new, reinterpret_cast<void*>(_new_@) },\n", name);
+            if (category == category::struct_type)
+            {
+                w.write("{ Py_tp_init, reinterpret_cast<void*>(_init_@) },\n", name);
+            }
             if (!is_static_class(type))
             {
                 w.write(
@@ -3165,8 +3169,32 @@ struct pinterface_python_type<%<%>>
     void write_struct_constructor(writer& w, TypeDef const& type)
     {
         w.write(
-            "\nPyObject* _new_@(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept\n{",
+            "\nwinrt_struct_wrapper<%>* _new_@(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept\n{\n",
+            type,
             type.TypeName());
+        {
+            writer::indent_guard g{w};
+            w.write(
+                "auto self = reinterpret_cast<winrt_struct_wrapper<%>*>(subclass->tp_alloc(subclass, 0));\n",
+                type);
+
+            w.write("\nif (!self)\n{\n");
+            {
+                writer::indent_guard gg{w};
+                w.write("return nullptr;\n");
+            }
+            w.write("}\n\n");
+
+            w.write("std::construct_at(&self->obj);\n");
+
+            w.write("\nreturn self;\n");
+        }
+        w.write("}\n");
+
+        w.write(
+            "\nint _init_@(winrt_struct_wrapper<%>* self, PyObject* args, PyObject* kwds) noexcept\n{",
+            type.TypeName(),
+            type);
         {
             writer::indent_guard g{w};
             w.write(R"(
@@ -3177,14 +3205,8 @@ if ((tuple_size == 0) && (kwds == nullptr))
 )");
             {
                 writer::indent_guard gg{w};
-                write_try_catch(
-                    w,
-                    [&](writer& w)
-                    {
-                        w.write(
-                            "% return_value{};\nreturn py::convert(return_value);\n",
-                            type);
-                    });
+                w.write("self->obj = {};\n");
+                w.write("return 0;\n");
             }
             w.write("}\n\n");
 
@@ -3196,55 +3218,31 @@ if ((tuple_size == 0) && (kwds == nullptr))
                     field.Name());
             }
 
-            {
-                auto format = R"(
+            auto format = R"(
 static const char* kwlist[] = {%nullptr};
 if (!PyArg_ParseTupleAndKeywords(args, kwds, "%", const_cast<char**>(kwlist)%))
 {
-    return nullptr;
+    return -1;
 }
 
 )";
-                w.write(
-                    format,
-                    bind_each<write_struct_field_keyword>(type.FieldList()),
-                    bind_each<write_struct_field_format>(type.FieldList()),
-                    bind_each<write_struct_field_parse_parameter>(type.FieldList()));
-            }
+            w.write(
+                format,
+                bind_each<write_struct_field_keyword>(type.FieldList()),
+                bind_each<write_struct_field_format>(type.FieldList()),
+                bind_each<write_struct_field_parse_parameter>(type.FieldList()));
 
-            if (has_custom_conversion(type))
-            {
-                auto format
-                    = "% return_value{ };\ncustom_set(return_value, %);\nreturn py::convert(return_value);\n";
-                write_try_catch(
-                    w,
-                    [&](writer& w)
-                    {
-                        w.write(
-                            format,
-                            type,
-                            bind<write_struct_field_initializer>(
-                                type.FieldList().first));
-                    });
-            }
-            else
-            {
-                auto ref_captures = w.write_temp(
-                    "%", bind_each<write_struct_field_ref_capture>(type.FieldList()));
-                auto format
-                    = "% return_value{ % };\nreturn py::convert(return_value);\n";
-                write_try_catch(
-                    w,
-                    [&](writer& w)
-                    {
-                        w.write(
-                            format,
-                            type,
-                            bind_list<write_struct_field_initializer>(
-                                ", ", type.FieldList()));
-                    },
-                    "nullptr");
-            }
+            write_try_catch(
+                w,
+                [&](writer& w)
+                {
+                    w.write(
+                        "self->obj = {%};\n",
+                        bind_list<write_struct_field_initializer>(
+                            ", ", type.FieldList()));
+                    w.write("return 0;\n");
+                },
+                "-1");
         }
         w.write("}\n");
     }

@@ -6634,22 +6634,28 @@ namespace py::cpp::Windows::Foundation
 
     // ----- EventRegistrationToken struct --------------------
 
-    PyObject* _new_EventRegistrationToken(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::event_token>* _new_EventRegistrationToken(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::event_token>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_EventRegistrationToken(winrt_struct_wrapper<winrt::event_token>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::event_token return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int64_t _Value{};
@@ -6657,19 +6663,18 @@ namespace py::cpp::Windows::Foundation
         static const char* kwlist[] = {"value", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "L", const_cast<char**>(kwlist), &_Value))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::event_token return_value{ };
-            custom_set(return_value, _Value);
-            return py::convert(return_value);
+            self->obj = {_Value};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -6722,6 +6727,7 @@ namespace py::cpp::Windows::Foundation
     static PyType_Slot _type_slots_EventRegistrationToken[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_EventRegistrationToken) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_EventRegistrationToken) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EventRegistrationToken) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_EventRegistrationToken) },
         { },
@@ -6738,22 +6744,28 @@ namespace py::cpp::Windows::Foundation
 
     // ----- HResult struct --------------------
 
-    PyObject* _new_HResult(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::hresult>* _new_HResult(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::hresult>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_HResult(winrt_struct_wrapper<winrt::hresult>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::hresult return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _Value{};
@@ -6761,19 +6773,18 @@ namespace py::cpp::Windows::Foundation
         static const char* kwlist[] = {"value", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "i", const_cast<char**>(kwlist), &_Value))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::hresult return_value{ };
-            custom_set(return_value, _Value);
-            return py::convert(return_value);
+            self->obj = {_Value};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -6826,6 +6837,7 @@ namespace py::cpp::Windows::Foundation
     static PyType_Slot _type_slots_HResult[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_HResult) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_HResult) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HResult) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_HResult) },
         { },
@@ -6842,22 +6854,28 @@ namespace py::cpp::Windows::Foundation
 
     // ----- Point struct --------------------
 
-    PyObject* _new_Point(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Foundation::Point>* _new_Point(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Point>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_Point(winrt_struct_wrapper<winrt::Windows::Foundation::Point>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Foundation::Point return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         float _X{};
@@ -6866,18 +6884,18 @@ namespace py::cpp::Windows::Foundation
         static const char* kwlist[] = {"x", "y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_X, &_Y))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Foundation::Point return_value{ _X, _Y };
-            return py::convert(return_value);
+            self->obj = {_X, _Y};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -6964,6 +6982,7 @@ namespace py::cpp::Windows::Foundation
     static PyType_Slot _type_slots_Point[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_Point) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_Point) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Point) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Point) },
         { },
@@ -6980,22 +6999,28 @@ namespace py::cpp::Windows::Foundation
 
     // ----- Rect struct --------------------
 
-    PyObject* _new_Rect(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Foundation::Rect>* _new_Rect(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Rect>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_Rect(winrt_struct_wrapper<winrt::Windows::Foundation::Rect>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Foundation::Rect return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         float _X{};
@@ -7006,18 +7031,18 @@ namespace py::cpp::Windows::Foundation
         static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ffff", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Foundation::Rect return_value{ _X, _Y, _Width, _Height };
-            return py::convert(return_value);
+            self->obj = {_X, _Y, _Width, _Height};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -7172,6 +7197,7 @@ namespace py::cpp::Windows::Foundation
     static PyType_Slot _type_slots_Rect[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_Rect) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_Rect) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Rect) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Rect) },
         { },
@@ -7188,22 +7214,28 @@ namespace py::cpp::Windows::Foundation
 
     // ----- Size struct --------------------
 
-    PyObject* _new_Size(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Foundation::Size>* _new_Size(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Foundation::Size>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_Size(winrt_struct_wrapper<winrt::Windows::Foundation::Size>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Foundation::Size return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         float _Width{};
@@ -7212,18 +7244,18 @@ namespace py::cpp::Windows::Foundation
         static const char* kwlist[] = {"width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ff", const_cast<char**>(kwlist), &_Width, &_Height))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Foundation::Size return_value{ _Width, _Height };
-            return py::convert(return_value);
+            self->obj = {_Width, _Height};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -7310,6 +7342,7 @@ namespace py::cpp::Windows::Foundation
     static PyType_Slot _type_slots_Size[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_Size) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_Size) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Size) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Size) },
         { },

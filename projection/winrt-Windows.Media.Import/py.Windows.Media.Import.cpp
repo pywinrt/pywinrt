@@ -3856,22 +3856,28 @@ namespace py::cpp::Windows::Media::Import
 
     // ----- PhotoImportProgress struct --------------------
 
-    PyObject* _new_PhotoImportProgress(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>* _new_PhotoImportProgress(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_PhotoImportProgress(winrt_struct_wrapper<winrt::Windows::Media::Import::PhotoImportProgress>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Media::Import::PhotoImportProgress return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _ItemsImported{};
@@ -3883,18 +3889,18 @@ namespace py::cpp::Windows::Media::Import
         static const char* kwlist[] = {"items_imported", "total_items_to_import", "bytes_imported", "total_bytes_to_import", "import_progress", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIKKd", const_cast<char**>(kwlist), &_ItemsImported, &_TotalItemsToImport, &_BytesImported, &_TotalBytesToImport, &_ImportProgress))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Media::Import::PhotoImportProgress return_value{ _ItemsImported, _TotalItemsToImport, _BytesImported, _TotalBytesToImport, _ImportProgress };
-            return py::convert(return_value);
+            self->obj = {_ItemsImported, _TotalItemsToImport, _BytesImported, _TotalBytesToImport, _ImportProgress};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -4083,6 +4089,7 @@ namespace py::cpp::Windows::Media::Import
     static PyType_Slot _type_slots_PhotoImportProgress[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_PhotoImportProgress) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_PhotoImportProgress) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhotoImportProgress) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PhotoImportProgress) },
         { },

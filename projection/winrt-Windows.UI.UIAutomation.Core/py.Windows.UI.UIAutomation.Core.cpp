@@ -1672,22 +1672,28 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- AutomationAnnotationTypeRegistration struct --------------------
 
-    PyObject* _new_AutomationAnnotationTypeRegistration(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>* _new_AutomationAnnotationTypeRegistration(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_AutomationAnnotationTypeRegistration(winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _LocalId{};
@@ -1695,18 +1701,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         static const char* kwlist[] = {"local_id", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "i", const_cast<char**>(kwlist), &_LocalId))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration return_value{ _LocalId };
-            return py::convert(return_value);
+            self->obj = {_LocalId};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1759,6 +1765,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyType_Slot _type_slots_AutomationAnnotationTypeRegistration[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationAnnotationTypeRegistration) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_AutomationAnnotationTypeRegistration) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationAnnotationTypeRegistration) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationAnnotationTypeRegistration) },
         { },
@@ -1775,22 +1782,28 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
 
     // ----- AutomationRemoteOperationOperandId struct --------------------
 
-    PyObject* _new_AutomationRemoteOperationOperandId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>* _new_AutomationRemoteOperationOperandId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_AutomationRemoteOperationOperandId(winrt_struct_wrapper<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _Value{};
@@ -1798,18 +1811,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
         static const char* kwlist[] = {"value", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "i", const_cast<char**>(kwlist), &_Value))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId return_value{ _Value };
-            return py::convert(return_value);
+            self->obj = {_Value};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -1862,6 +1875,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyType_Slot _type_slots_AutomationRemoteOperationOperandId[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_AutomationRemoteOperationOperandId) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_AutomationRemoteOperationOperandId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AutomationRemoteOperationOperandId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_AutomationRemoteOperationOperandId) },
         { },

@@ -5659,22 +5659,28 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapBounds struct --------------------
 
-    PyObject* _new_BitmapBounds(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapBounds>* _new_BitmapBounds(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapBounds>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_BitmapBounds(winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapBounds>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Imaging::BitmapBounds return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _X{};
@@ -5685,18 +5691,18 @@ namespace py::cpp::Windows::Graphics::Imaging
         static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "IIII", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Imaging::BitmapBounds return_value{ _X, _Y, _Width, _Height };
-            return py::convert(return_value);
+            self->obj = {_X, _Y, _Width, _Height};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -5851,6 +5857,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyType_Slot _type_slots_BitmapBounds[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapBounds) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_BitmapBounds) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapBounds) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapBounds) },
         { },
@@ -5867,22 +5874,28 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapPlaneDescription struct --------------------
 
-    PyObject* _new_BitmapPlaneDescription(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>* _new_BitmapPlaneDescription(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_BitmapPlaneDescription(winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Imaging::BitmapPlaneDescription return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _StartIndex{};
@@ -5893,18 +5906,18 @@ namespace py::cpp::Windows::Graphics::Imaging
         static const char* kwlist[] = {"start_index", "width", "height", "stride", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiii", const_cast<char**>(kwlist), &_StartIndex, &_Width, &_Height, &_Stride))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Imaging::BitmapPlaneDescription return_value{ _StartIndex, _Width, _Height, _Stride };
-            return py::convert(return_value);
+            self->obj = {_StartIndex, _Width, _Height, _Stride};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -6059,6 +6072,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyType_Slot _type_slots_BitmapPlaneDescription[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapPlaneDescription) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_BitmapPlaneDescription) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapPlaneDescription) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapPlaneDescription) },
         { },
@@ -6075,22 +6089,28 @@ namespace py::cpp::Windows::Graphics::Imaging
 
     // ----- BitmapSize struct --------------------
 
-    PyObject* _new_BitmapSize(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapSize>* _new_BitmapSize(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapSize>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_BitmapSize(winrt_struct_wrapper<winrt::Windows::Graphics::Imaging::BitmapSize>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Imaging::BitmapSize return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _Width{};
@@ -6099,18 +6119,18 @@ namespace py::cpp::Windows::Graphics::Imaging
         static const char* kwlist[] = {"width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "II", const_cast<char**>(kwlist), &_Width, &_Height))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Imaging::BitmapSize return_value{ _Width, _Height };
-            return py::convert(return_value);
+            self->obj = {_Width, _Height};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -6197,6 +6217,7 @@ namespace py::cpp::Windows::Graphics::Imaging
     static PyType_Slot _type_slots_BitmapSize[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_BitmapSize) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_BitmapSize) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_BitmapSize) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_BitmapSize) },
         { },

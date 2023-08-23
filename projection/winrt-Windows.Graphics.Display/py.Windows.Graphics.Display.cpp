@@ -3116,22 +3116,28 @@ namespace py::cpp::Windows::Graphics::Display
 
     // ----- NitRange struct --------------------
 
-    PyObject* _new_NitRange(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::Display::NitRange>* _new_NitRange(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::Display::NitRange>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_NitRange(winrt_struct_wrapper<winrt::Windows::Graphics::Display::NitRange>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::Display::NitRange return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         float _MinNits{};
@@ -3141,18 +3147,18 @@ namespace py::cpp::Windows::Graphics::Display
         static const char* kwlist[] = {"min_nits", "max_nits", "step_size_nits", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "fff", const_cast<char**>(kwlist), &_MinNits, &_MaxNits, &_StepSizeNits))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::Display::NitRange return_value{ _MinNits, _MaxNits, _StepSizeNits };
-            return py::convert(return_value);
+            self->obj = {_MinNits, _MaxNits, _StepSizeNits};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -3273,6 +3279,7 @@ namespace py::cpp::Windows::Graphics::Display
     static PyType_Slot _type_slots_NitRange[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_NitRange) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_NitRange) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NitRange) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_NitRange) },
         { },

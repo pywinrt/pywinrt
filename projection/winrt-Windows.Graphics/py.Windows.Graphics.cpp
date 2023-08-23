@@ -77,22 +77,28 @@ namespace py::cpp::Windows::Graphics
 
     // ----- DisplayAdapterId struct --------------------
 
-    PyObject* _new_DisplayAdapterId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::DisplayAdapterId>* _new_DisplayAdapterId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::DisplayAdapterId>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_DisplayAdapterId(winrt_struct_wrapper<winrt::Windows::Graphics::DisplayAdapterId>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::DisplayAdapterId return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint32_t _LowPart{};
@@ -101,18 +107,18 @@ namespace py::cpp::Windows::Graphics
         static const char* kwlist[] = {"low_part", "high_part", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "Ii", const_cast<char**>(kwlist), &_LowPart, &_HighPart))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::DisplayAdapterId return_value{ _LowPart, _HighPart };
-            return py::convert(return_value);
+            self->obj = {_LowPart, _HighPart};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -199,6 +205,7 @@ namespace py::cpp::Windows::Graphics
     static PyType_Slot _type_slots_DisplayAdapterId[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayAdapterId) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_DisplayAdapterId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayAdapterId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayAdapterId) },
         { },
@@ -215,22 +222,28 @@ namespace py::cpp::Windows::Graphics
 
     // ----- DisplayId struct --------------------
 
-    PyObject* _new_DisplayId(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::DisplayId>* _new_DisplayId(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::DisplayId>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_DisplayId(winrt_struct_wrapper<winrt::Windows::Graphics::DisplayId>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::DisplayId return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         uint64_t _Value{};
@@ -238,18 +251,18 @@ namespace py::cpp::Windows::Graphics
         static const char* kwlist[] = {"value", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "K", const_cast<char**>(kwlist), &_Value))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::DisplayId return_value{ _Value };
-            return py::convert(return_value);
+            self->obj = {_Value};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -302,6 +315,7 @@ namespace py::cpp::Windows::Graphics
     static PyType_Slot _type_slots_DisplayId[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_DisplayId) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_DisplayId) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayId) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayId) },
         { },
@@ -318,22 +332,28 @@ namespace py::cpp::Windows::Graphics
 
     // ----- PointInt32 struct --------------------
 
-    PyObject* _new_PointInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::PointInt32>* _new_PointInt32(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::PointInt32>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_PointInt32(winrt_struct_wrapper<winrt::Windows::Graphics::PointInt32>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::PointInt32 return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _X{};
@@ -342,18 +362,18 @@ namespace py::cpp::Windows::Graphics
         static const char* kwlist[] = {"x", "y", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_X, &_Y))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::PointInt32 return_value{ _X, _Y };
-            return py::convert(return_value);
+            self->obj = {_X, _Y};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -440,6 +460,7 @@ namespace py::cpp::Windows::Graphics
     static PyType_Slot _type_slots_PointInt32[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_PointInt32) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_PointInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PointInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_PointInt32) },
         { },
@@ -456,22 +477,28 @@ namespace py::cpp::Windows::Graphics
 
     // ----- RectInt32 struct --------------------
 
-    PyObject* _new_RectInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::RectInt32>* _new_RectInt32(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::RectInt32>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_RectInt32(winrt_struct_wrapper<winrt::Windows::Graphics::RectInt32>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::RectInt32 return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _X{};
@@ -482,18 +509,18 @@ namespace py::cpp::Windows::Graphics
         static const char* kwlist[] = {"x", "y", "width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "iiii", const_cast<char**>(kwlist), &_X, &_Y, &_Width, &_Height))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::RectInt32 return_value{ _X, _Y, _Width, _Height };
-            return py::convert(return_value);
+            self->obj = {_X, _Y, _Width, _Height};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -648,6 +675,7 @@ namespace py::cpp::Windows::Graphics
     static PyType_Slot _type_slots_RectInt32[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_RectInt32) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_RectInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RectInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_RectInt32) },
         { },
@@ -664,22 +692,28 @@ namespace py::cpp::Windows::Graphics
 
     // ----- SizeInt32 struct --------------------
 
-    PyObject* _new_SizeInt32(PyTypeObject* /*unused*/, PyObject* args, PyObject* kwds) noexcept
+    winrt_struct_wrapper<winrt::Windows::Graphics::SizeInt32>* _new_SizeInt32(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        auto self = reinterpret_cast<winrt_struct_wrapper<winrt::Windows::Graphics::SizeInt32>*>(subclass->tp_alloc(subclass, 0));
+
+        if (!self)
+        {
+            return nullptr;
+        }
+
+        std::construct_at(&self->obj);
+
+        return self;
+    }
+
+    int _init_SizeInt32(winrt_struct_wrapper<winrt::Windows::Graphics::SizeInt32>* self, PyObject* args, PyObject* kwds) noexcept
     {
         auto tuple_size = PyTuple_Size(args);
 
         if ((tuple_size == 0) && (kwds == nullptr))
         {
-            try
-            {
-                winrt::Windows::Graphics::SizeInt32 return_value{};
-                return py::convert(return_value);
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            self->obj = {};
+            return 0;
         }
 
         int32_t _Width{};
@@ -688,18 +722,18 @@ namespace py::cpp::Windows::Graphics
         static const char* kwlist[] = {"width", "height", nullptr};
         if (!PyArg_ParseTupleAndKeywords(args, kwds, "ii", const_cast<char**>(kwlist), &_Width, &_Height))
         {
-            return nullptr;
+            return -1;
         }
 
         try
         {
-            winrt::Windows::Graphics::SizeInt32 return_value{ _Width, _Height };
-            return py::convert(return_value);
+            self->obj = {_Width, _Height};
+            return 0;
         }
         catch (...)
         {
             py::to_PyErr();
-            return nullptr;
+            return -1;
         }
     }
 
@@ -786,6 +820,7 @@ namespace py::cpp::Windows::Graphics
     static PyType_Slot _type_slots_SizeInt32[] = 
     {
         { Py_tp_new, reinterpret_cast<void*>(_new_SizeInt32) },
+        { Py_tp_init, reinterpret_cast<void*>(_init_SizeInt32) },
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_SizeInt32) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_SizeInt32) },
         { },
