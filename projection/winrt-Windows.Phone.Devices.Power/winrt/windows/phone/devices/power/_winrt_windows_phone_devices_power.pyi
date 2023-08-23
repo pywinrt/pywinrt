@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -12,12 +13,14 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class Battery(winrt.system.Object):
-    remaining_charge_percent: winrt.system.Int32
-    remaining_discharge_time: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Battery: ...
     @staticmethod
     def get_default() -> typing.Optional[Battery]: ...
     def add_remaining_charge_percent_changed(self, change_handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_remaining_charge_percent_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def remaining_charge_percent(self) -> winrt.system.Int32: ...
+    @_property
+    def remaining_discharge_time(self) -> datetime.timedelta: ...
 

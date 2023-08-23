@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.contacts
@@ -16,9 +17,6 @@ from . import AddContactResult
 Self = typing.TypeVar('Self')
 
 class ContactPickerUI(winrt.system.Object):
-    desired_fields: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    selection_mode: winrt.windows.applicationmodel.contacts.ContactSelectionMode
-    desired_fields_with_contact_field_type: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.applicationmodel.contacts.ContactFieldType]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactPickerUI: ...
     @typing.overload
@@ -29,9 +27,16 @@ class ContactPickerUI(winrt.system.Object):
     def remove_contact(self, id: str, /) -> None: ...
     def add_contact_removed(self, handler: winrt.windows.foundation.TypedEventHandler[ContactPickerUI, ContactRemovedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_contact_removed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def desired_fields(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def selection_mode(self) -> winrt.windows.applicationmodel.contacts.ContactSelectionMode: ...
+    @_property
+    def desired_fields_with_contact_field_type(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.applicationmodel.contacts.ContactFieldType]]: ...
 
 class ContactRemovedEventArgs(winrt.system.Object):
-    id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactRemovedEventArgs: ...
+    @_property
+    def id(self) -> str: ...
 

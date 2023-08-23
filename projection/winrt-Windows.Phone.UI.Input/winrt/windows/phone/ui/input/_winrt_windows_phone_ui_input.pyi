@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -12,9 +13,12 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class BackPressedEventArgs(winrt.system.Object):
-    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackPressedEventArgs: ...
+    @_property
+    def handled(self) -> bool: ...
+    @handled.setter
+    def handled(self, value: bool) -> None: ...
 
 class CameraEventArgs(winrt.system.Object):
     @staticmethod

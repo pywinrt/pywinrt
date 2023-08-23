@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -23,14 +24,21 @@ class PlatformTelemetryClient(winrt.system.Object):
     def register(id: str, settings: typing.Optional[PlatformTelemetryRegistrationSettings], /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
 
 class PlatformTelemetryRegistrationResult(winrt.system.Object):
-    status: PlatformTelemetryRegistrationStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformTelemetryRegistrationResult: ...
+    @_property
+    def status(self) -> PlatformTelemetryRegistrationStatus: ...
 
 class PlatformTelemetryRegistrationSettings(winrt.system.Object):
-    upload_quota_size: winrt.system.UInt32
-    storage_size: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformTelemetryRegistrationSettings: ...
     def __new__(cls: typing.Type[PlatformTelemetryRegistrationSettings]) -> PlatformTelemetryRegistrationSettings:...
+    @_property
+    def upload_quota_size(self) -> winrt.system.UInt32: ...
+    @upload_quota_size.setter
+    def upload_quota_size(self, value: winrt.system.UInt32) -> None: ...
+    @_property
+    def storage_size(self) -> winrt.system.UInt32: ...
+    @storage_size.setter
+    def storage_size(self, value: winrt.system.UInt32) -> None: ...
 

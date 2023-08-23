@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,6 +16,8 @@ from . import VibrationAccessStatus
 Self = typing.TypeVar('Self')
 
 class KnownSimpleHapticsControllerWaveforms(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> KnownSimpleHapticsControllerWaveforms: ...
     buzz_continuous: typing.ClassVar[winrt.system.UInt16]
     click: typing.ClassVar[winrt.system.UInt16]
     press: typing.ClassVar[winrt.system.UInt16]
@@ -30,16 +33,8 @@ class KnownSimpleHapticsControllerWaveforms(winrt.system.Object):
     marker_continuous: typing.ClassVar[winrt.system.UInt16]
     pencil_continuous: typing.ClassVar[winrt.system.UInt16]
     success: typing.ClassVar[winrt.system.UInt16]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> KnownSimpleHapticsControllerWaveforms: ...
 
 class SimpleHapticsController(winrt.system.Object):
-    id: str
-    is_intensity_supported: bool
-    is_play_count_supported: bool
-    is_play_duration_supported: bool
-    is_replay_pause_interval_supported: bool
-    supported_feedback: typing.Optional[winrt.windows.foundation.collections.IVectorView[SimpleHapticsControllerFeedback]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SimpleHapticsController: ...
     @typing.overload
@@ -49,16 +44,28 @@ class SimpleHapticsController(winrt.system.Object):
     def send_haptic_feedback_for_duration(self, feedback: typing.Optional[SimpleHapticsControllerFeedback], intensity: winrt.system.Double, play_duration: datetime.timedelta, /) -> None: ...
     def send_haptic_feedback_for_play_count(self, feedback: typing.Optional[SimpleHapticsControllerFeedback], intensity: winrt.system.Double, play_count: winrt.system.Int32, replay_pause_interval: datetime.timedelta, /) -> None: ...
     def stop_feedback(self) -> None: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def is_intensity_supported(self) -> bool: ...
+    @_property
+    def is_play_count_supported(self) -> bool: ...
+    @_property
+    def is_play_duration_supported(self) -> bool: ...
+    @_property
+    def is_replay_pause_interval_supported(self) -> bool: ...
+    @_property
+    def supported_feedback(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[SimpleHapticsControllerFeedback]]: ...
 
 class SimpleHapticsControllerFeedback(winrt.system.Object):
-    duration: datetime.timedelta
-    waveform: winrt.system.UInt16
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SimpleHapticsControllerFeedback: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def waveform(self) -> winrt.system.UInt16: ...
 
 class VibrationDevice(winrt.system.Object):
-    id: str
-    simple_haptics_controller: typing.Optional[SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VibrationDevice: ...
     @staticmethod
@@ -71,4 +78,8 @@ class VibrationDevice(winrt.system.Object):
     def get_device_selector() -> str: ...
     @staticmethod
     def request_access_async() -> winrt.windows.foundation.IAsyncOperation[VibrationAccessStatus]: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def simple_haptics_controller(self) -> typing.Optional[SimpleHapticsController]: ...
 

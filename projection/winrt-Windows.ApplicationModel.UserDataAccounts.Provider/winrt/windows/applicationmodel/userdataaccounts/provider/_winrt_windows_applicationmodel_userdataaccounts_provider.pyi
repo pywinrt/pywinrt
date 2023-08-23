@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.userdataaccounts
@@ -15,36 +16,47 @@ from . import UserDataAccountProviderOperationKind, UserDataAccountProviderPartn
 Self = typing.TypeVar('Self')
 
 class UserDataAccountPartnerAccountInfo(winrt.system.Object):
-    account_kind: UserDataAccountProviderPartnerAccountKind
-    display_name: str
-    priority: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountPartnerAccountInfo: ...
+    @_property
+    def account_kind(self) -> UserDataAccountProviderPartnerAccountKind: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def priority(self) -> winrt.system.UInt32: ...
 
 class UserDataAccountProviderAddAccountOperation(winrt.system.Object):
-    content_kinds: winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds
-    partner_account_infos: typing.Optional[winrt.windows.foundation.collections.IVectorView[UserDataAccountPartnerAccountInfo]]
-    kind: UserDataAccountProviderOperationKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderAddAccountOperation: ...
     def report_completed(self, user_data_account_id: str, /) -> None: ...
+    @_property
+    def content_kinds(self) -> winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds: ...
+    @_property
+    def partner_account_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UserDataAccountPartnerAccountInfo]]: ...
+    @_property
+    def kind(self) -> UserDataAccountProviderOperationKind: ...
 
 class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object):
-    kind: UserDataAccountProviderOperationKind
-    user_data_account_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderResolveErrorsOperation: ...
     def report_completed(self) -> None: ...
+    @_property
+    def kind(self) -> UserDataAccountProviderOperationKind: ...
+    @_property
+    def user_data_account_id(self) -> str: ...
 
 class UserDataAccountProviderSettingsOperation(winrt.system.Object):
-    kind: UserDataAccountProviderOperationKind
-    user_data_account_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderSettingsOperation: ...
     def report_completed(self) -> None: ...
+    @_property
+    def kind(self) -> UserDataAccountProviderOperationKind: ...
+    @_property
+    def user_data_account_id(self) -> str: ...
 
 class IUserDataAccountProviderOperation(winrt.system.Object):
-    kind: UserDataAccountProviderOperationKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderOperation: ...
+    @_property
+    def kind(self) -> UserDataAccountProviderOperationKind: ...
 

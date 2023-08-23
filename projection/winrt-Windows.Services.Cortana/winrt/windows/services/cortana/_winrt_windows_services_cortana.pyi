@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.datatransfer
@@ -18,7 +19,6 @@ from . import CortanaPermission, CortanaPermissionsChangeResult
 Self = typing.TypeVar('Self')
 
 class CortanaActionableInsights(winrt.system.Object):
-    user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaActionableInsights: ...
     @staticmethod
@@ -38,13 +38,21 @@ class CortanaActionableInsights(winrt.system.Object):
     def show_insights_for_text_async(self, text: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
     def show_insights_for_text_async(self, text: str, options: typing.Optional[CortanaActionableInsightsOptions], /) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
 class CortanaActionableInsightsOptions(winrt.system.Object):
-    surrounding_text: str
-    content_source_web_link: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaActionableInsightsOptions: ...
     def __new__(cls: typing.Type[CortanaActionableInsightsOptions]) -> CortanaActionableInsightsOptions:...
+    @_property
+    def surrounding_text(self) -> str: ...
+    @surrounding_text.setter
+    def surrounding_text(self, value: str) -> None: ...
+    @_property
+    def content_source_web_link(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @content_source_web_link.setter
+    def content_source_web_link(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
 
 class CortanaPermissionsManager(winrt.system.Object):
     @staticmethod
@@ -57,12 +65,16 @@ class CortanaPermissionsManager(winrt.system.Object):
     def revoke_permissions_async(self, permissions: typing.Iterable[CortanaPermission], /) -> winrt.windows.foundation.IAsyncOperation[CortanaPermissionsChangeResult]: ...
 
 class CortanaSettings(winrt.system.Object):
-    is_voice_activation_enabled: bool
-    has_user_consent_to_voice_activation: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaSettings: ...
     @staticmethod
     def get_default() -> typing.Optional[CortanaSettings]: ...
     @staticmethod
     def is_supported() -> bool: ...
+    @_property
+    def is_voice_activation_enabled(self) -> bool: ...
+    @is_voice_activation_enabled.setter
+    def is_voice_activation_enabled(self, value: bool) -> None: ...
+    @_property
+    def has_user_consent_to_voice_activation(self) -> bool: ...
 

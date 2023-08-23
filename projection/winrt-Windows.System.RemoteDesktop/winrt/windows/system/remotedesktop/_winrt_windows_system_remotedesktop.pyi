@@ -5,13 +5,14 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class InteractiveSession(winrt.system.Object):
-    is_remote: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractiveSession: ...
+    is_remote: typing.ClassVar[bool]
 

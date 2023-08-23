@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -19,10 +20,13 @@ class CoreAppWindowPreview(winrt.system.Object):
     def get_id_from_window(window: typing.Optional[winrt.windows.ui.windowmanagement.AppWindow], /) -> winrt.system.Int32: ...
 
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
-    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemNavigationCloseRequestedPreviewEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
+    @_property
+    def handled(self) -> bool: ...
+    @handled.setter
+    def handled(self, value: bool) -> None: ...
 
 class SystemNavigationManagerPreview(winrt.system.Object):
     @staticmethod

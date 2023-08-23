@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,8 +14,6 @@ import winrt.windows.system.power
 Self = typing.TypeVar('Self')
 
 class Battery(winrt.system.Object):
-    device_id: str
-    aggregate_battery: typing.ClassVar[typing.Optional[Battery]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Battery: ...
     @staticmethod
@@ -24,13 +23,21 @@ class Battery(winrt.system.Object):
     def get_report(self) -> typing.Optional[BatteryReport]: ...
     def add_report_updated(self, handler: winrt.windows.foundation.TypedEventHandler[Battery, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_report_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def device_id(self) -> str: ...
+    aggregate_battery: typing.ClassVar[typing.Optional[Battery]]
 
 class BatteryReport(winrt.system.Object):
-    charge_rate_in_milliwatts: typing.Optional[typing.Optional[winrt.system.Int32]]
-    design_capacity_in_milliwatt_hours: typing.Optional[typing.Optional[winrt.system.Int32]]
-    full_charge_capacity_in_milliwatt_hours: typing.Optional[typing.Optional[winrt.system.Int32]]
-    remaining_capacity_in_milliwatt_hours: typing.Optional[typing.Optional[winrt.system.Int32]]
-    status: winrt.windows.system.power.BatteryStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BatteryReport: ...
+    @_property
+    def charge_rate_in_milliwatts(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
+    @_property
+    def design_capacity_in_milliwatt_hours(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
+    @_property
+    def full_charge_capacity_in_milliwatt_hours(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
+    @_property
+    def remaining_capacity_in_milliwatt_hours(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
+    @_property
+    def status(self) -> winrt.windows.system.power.BatteryStatus: ...
 

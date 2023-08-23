@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,18 +15,20 @@ import winrt.windows.storage.streams
 Self = typing.TypeVar('Self')
 
 class NotePlacementChangedPreviewEventArgs(winrt.system.Object):
-    view_id: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotePlacementChangedPreviewEventArgs: ...
+    @_property
+    def view_id(self) -> winrt.system.Int32: ...
 
 class NoteVisibilityChangedPreviewEventArgs(winrt.system.Object):
-    is_visible: bool
-    view_id: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NoteVisibilityChangedPreviewEventArgs: ...
+    @_property
+    def is_visible(self) -> bool: ...
+    @_property
+    def view_id(self) -> winrt.system.Int32: ...
 
 class NotesWindowManagerPreview(winrt.system.Object):
-    is_screen_locked: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotesWindowManagerPreview: ...
     @staticmethod
@@ -52,10 +55,15 @@ class NotesWindowManagerPreview(winrt.system.Object):
     def remove_note_visibility_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_system_lock_state_changed(self, handler: winrt.windows.foundation.TypedEventHandler[NotesWindowManagerPreview, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_system_lock_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def is_screen_locked(self) -> bool: ...
 
 class NotesWindowManagerPreviewShowNoteOptions(winrt.system.Object):
-    show_with_focus: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotesWindowManagerPreviewShowNoteOptions: ...
     def __new__(cls: typing.Type[NotesWindowManagerPreviewShowNoteOptions]) -> NotesWindowManagerPreviewShowNoteOptions:...
+    @_property
+    def show_with_focus(self) -> bool: ...
+    @show_with_focus.setter
+    def show_with_focus(self, value: bool) -> None: ...
 

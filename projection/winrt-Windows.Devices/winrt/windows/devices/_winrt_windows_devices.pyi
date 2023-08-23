@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.adc.provider
@@ -16,26 +17,36 @@ import winrt.windows.devices.spi.provider
 Self = typing.TypeVar('Self')
 
 class LowLevelDevicesAggregateProvider(winrt.system.Object):
-    adc_controller_provider: typing.Optional[winrt.windows.devices.adc.provider.IAdcControllerProvider]
-    gpio_controller_provider: typing.Optional[winrt.windows.devices.gpio.provider.IGpioControllerProvider]
-    i2c_controller_provider: typing.Optional[winrt.windows.devices.i2c.provider.II2cControllerProvider]
-    pwm_controller_provider: typing.Optional[winrt.windows.devices.pwm.provider.IPwmControllerProvider]
-    spi_controller_provider: typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesAggregateProvider: ...
     def __new__(cls: typing.Type[LowLevelDevicesAggregateProvider], adc: typing.Optional[winrt.windows.devices.adc.provider.IAdcControllerProvider], pwm: typing.Optional[winrt.windows.devices.pwm.provider.IPwmControllerProvider], gpio: typing.Optional[winrt.windows.devices.gpio.provider.IGpioControllerProvider], i2c: typing.Optional[winrt.windows.devices.i2c.provider.II2cControllerProvider], spi: typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]) -> LowLevelDevicesAggregateProvider:...
+    @_property
+    def adc_controller_provider(self) -> typing.Optional[winrt.windows.devices.adc.provider.IAdcControllerProvider]: ...
+    @_property
+    def gpio_controller_provider(self) -> typing.Optional[winrt.windows.devices.gpio.provider.IGpioControllerProvider]: ...
+    @_property
+    def i2c_controller_provider(self) -> typing.Optional[winrt.windows.devices.i2c.provider.II2cControllerProvider]: ...
+    @_property
+    def pwm_controller_provider(self) -> typing.Optional[winrt.windows.devices.pwm.provider.IPwmControllerProvider]: ...
+    @_property
+    def spi_controller_provider(self) -> typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]: ...
 
 class LowLevelDevicesController(winrt.system.Object):
-    default_provider: typing.ClassVar[typing.Optional[ILowLevelDevicesAggregateProvider]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLevelDevicesController: ...
+    default_provider: typing.ClassVar[typing.Optional[ILowLevelDevicesAggregateProvider]]
 
 class ILowLevelDevicesAggregateProvider(winrt.system.Object):
-    adc_controller_provider: typing.Optional[winrt.windows.devices.adc.provider.IAdcControllerProvider]
-    gpio_controller_provider: typing.Optional[winrt.windows.devices.gpio.provider.IGpioControllerProvider]
-    i2c_controller_provider: typing.Optional[winrt.windows.devices.i2c.provider.II2cControllerProvider]
-    pwm_controller_provider: typing.Optional[winrt.windows.devices.pwm.provider.IPwmControllerProvider]
-    spi_controller_provider: typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILowLevelDevicesAggregateProvider: ...
+    @_property
+    def adc_controller_provider(self) -> typing.Optional[winrt.windows.devices.adc.provider.IAdcControllerProvider]: ...
+    @_property
+    def gpio_controller_provider(self) -> typing.Optional[winrt.windows.devices.gpio.provider.IGpioControllerProvider]: ...
+    @_property
+    def i2c_controller_provider(self) -> typing.Optional[winrt.windows.devices.i2c.provider.II2cControllerProvider]: ...
+    @_property
+    def pwm_controller_provider(self) -> typing.Optional[winrt.windows.devices.pwm.provider.IPwmControllerProvider]: ...
+    @_property
+    def spi_controller_provider(self) -> typing.Optional[winrt.windows.devices.spi.provider.ISpiControllerProvider]: ...
 

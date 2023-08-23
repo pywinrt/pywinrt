@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.geolocation
@@ -15,7 +16,6 @@ from . import LocationOverrideStatus
 Self = typing.TypeVar('Self')
 
 class GeolocationProvider(winrt.system.Object):
-    is_overridden: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeolocationProvider: ...
     def __new__(cls: typing.Type[GeolocationProvider]) -> GeolocationProvider:...
@@ -23,4 +23,6 @@ class GeolocationProvider(winrt.system.Object):
     def set_override_position(self, new_position: winrt.windows.devices.geolocation.BasicGeoposition, position_source: winrt.windows.devices.geolocation.PositionSource, accuracy_in_meters: winrt.system.Double, /) -> LocationOverrideStatus: ...
     def add_is_overridden_changed(self, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_is_overridden_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def is_overridden(self) -> bool: ...
 

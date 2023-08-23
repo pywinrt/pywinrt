@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,12 +14,16 @@ import winrt.windows.media.capture
 Self = typing.TypeVar('Self')
 
 class VariablePhotoCapturedEventArgs(winrt.system.Object):
-    capture_time_offset: datetime.timedelta
-    captured_frame_control_values: typing.Optional[winrt.windows.media.capture.CapturedFrameControlValues]
-    frame: typing.Optional[winrt.windows.media.capture.CapturedFrame]
-    used_frame_controller_index: typing.Optional[typing.Optional[winrt.system.UInt32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VariablePhotoCapturedEventArgs: ...
+    @_property
+    def capture_time_offset(self) -> datetime.timedelta: ...
+    @_property
+    def captured_frame_control_values(self) -> typing.Optional[winrt.windows.media.capture.CapturedFrameControlValues]: ...
+    @_property
+    def frame(self) -> typing.Optional[winrt.windows.media.capture.CapturedFrame]: ...
+    @_property
+    def used_frame_controller_index(self) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
 
 class VariablePhotoSequenceCapture(winrt.system.Object):
     @staticmethod

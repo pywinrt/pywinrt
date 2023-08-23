@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.data.json
@@ -17,13 +18,14 @@ from . import DiagnosticActionState
 Self = typing.TypeVar('Self')
 
 class DiagnosticActionResult(winrt.system.Object):
-    extended_error: winrt.windows.foundation.HResult
-    results: typing.Optional[winrt.windows.foundation.collections.ValueSet]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiagnosticActionResult: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def results(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 
 class DiagnosticInvoker(winrt.system.Object):
-    is_supported: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiagnosticInvoker: ...
     @staticmethod
@@ -32,6 +34,7 @@ class DiagnosticInvoker(winrt.system.Object):
     def get_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[DiagnosticInvoker]: ...
     def run_diagnostic_action_async(self, context: typing.Optional[winrt.windows.data.json.JsonObject], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[DiagnosticActionResult, DiagnosticActionState]: ...
     def run_diagnostic_action_from_string_async(self, context: str, /) -> winrt.windows.foundation.IAsyncOperationWithProgress[DiagnosticActionResult, DiagnosticActionState]: ...
+    is_supported: typing.ClassVar[bool]
 
 class ProcessCpuUsage(winrt.system.Object):
     @staticmethod
@@ -39,20 +42,14 @@ class ProcessCpuUsage(winrt.system.Object):
     def get_report(self) -> typing.Optional[ProcessCpuUsageReport]: ...
 
 class ProcessCpuUsageReport(winrt.system.Object):
-    kernel_time: datetime.timedelta
-    user_time: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessCpuUsageReport: ...
+    @_property
+    def kernel_time(self) -> datetime.timedelta: ...
+    @_property
+    def user_time(self) -> datetime.timedelta: ...
 
 class ProcessDiagnosticInfo(winrt.system.Object):
-    cpu_usage: typing.Optional[ProcessCpuUsage]
-    disk_usage: typing.Optional[ProcessDiskUsage]
-    executable_file_name: str
-    memory_usage: typing.Optional[ProcessMemoryUsage]
-    parent: typing.Optional[ProcessDiagnosticInfo]
-    process_id: winrt.system.UInt32
-    process_start_time: datetime.datetime
-    is_packaged: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessDiagnosticInfo: ...
     def get_app_diagnostic_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.system.AppDiagnosticInfo]]: ...
@@ -62,6 +59,22 @@ class ProcessDiagnosticInfo(winrt.system.Object):
     def get_for_processes() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ProcessDiagnosticInfo]]: ...
     @staticmethod
     def try_get_for_process_id(process_id: winrt.system.UInt32, /) -> typing.Optional[ProcessDiagnosticInfo]: ...
+    @_property
+    def cpu_usage(self) -> typing.Optional[ProcessCpuUsage]: ...
+    @_property
+    def disk_usage(self) -> typing.Optional[ProcessDiskUsage]: ...
+    @_property
+    def executable_file_name(self) -> str: ...
+    @_property
+    def memory_usage(self) -> typing.Optional[ProcessMemoryUsage]: ...
+    @_property
+    def parent(self) -> typing.Optional[ProcessDiagnosticInfo]: ...
+    @_property
+    def process_id(self) -> winrt.system.UInt32: ...
+    @_property
+    def process_start_time(self) -> datetime.datetime: ...
+    @_property
+    def is_packaged(self) -> bool: ...
 
 class ProcessDiskUsage(winrt.system.Object):
     @staticmethod
@@ -69,14 +82,20 @@ class ProcessDiskUsage(winrt.system.Object):
     def get_report(self) -> typing.Optional[ProcessDiskUsageReport]: ...
 
 class ProcessDiskUsageReport(winrt.system.Object):
-    bytes_read_count: winrt.system.Int64
-    bytes_written_count: winrt.system.Int64
-    other_bytes_count: winrt.system.Int64
-    other_operation_count: winrt.system.Int64
-    read_operation_count: winrt.system.Int64
-    write_operation_count: winrt.system.Int64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessDiskUsageReport: ...
+    @_property
+    def bytes_read_count(self) -> winrt.system.Int64: ...
+    @_property
+    def bytes_written_count(self) -> winrt.system.Int64: ...
+    @_property
+    def other_bytes_count(self) -> winrt.system.Int64: ...
+    @_property
+    def other_operation_count(self) -> winrt.system.Int64: ...
+    @_property
+    def read_operation_count(self) -> winrt.system.Int64: ...
+    @_property
+    def write_operation_count(self) -> winrt.system.Int64: ...
 
 class ProcessMemoryUsage(winrt.system.Object):
     @staticmethod
@@ -84,20 +103,32 @@ class ProcessMemoryUsage(winrt.system.Object):
     def get_report(self) -> typing.Optional[ProcessMemoryUsageReport]: ...
 
 class ProcessMemoryUsageReport(winrt.system.Object):
-    non_paged_pool_size_in_bytes: winrt.system.UInt64
-    page_fault_count: winrt.system.UInt32
-    page_file_size_in_bytes: winrt.system.UInt64
-    paged_pool_size_in_bytes: winrt.system.UInt64
-    peak_non_paged_pool_size_in_bytes: winrt.system.UInt64
-    peak_page_file_size_in_bytes: winrt.system.UInt64
-    peak_paged_pool_size_in_bytes: winrt.system.UInt64
-    peak_virtual_memory_size_in_bytes: winrt.system.UInt64
-    peak_working_set_size_in_bytes: winrt.system.UInt64
-    private_page_count: winrt.system.UInt64
-    virtual_memory_size_in_bytes: winrt.system.UInt64
-    working_set_size_in_bytes: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessMemoryUsageReport: ...
+    @_property
+    def non_paged_pool_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def page_fault_count(self) -> winrt.system.UInt32: ...
+    @_property
+    def page_file_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def paged_pool_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def peak_non_paged_pool_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def peak_page_file_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def peak_paged_pool_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def peak_virtual_memory_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def peak_working_set_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def private_page_count(self) -> winrt.system.UInt64: ...
+    @_property
+    def virtual_memory_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def working_set_size_in_bytes(self) -> winrt.system.UInt64: ...
 
 class SystemCpuUsage(winrt.system.Object):
     @staticmethod
@@ -105,22 +136,27 @@ class SystemCpuUsage(winrt.system.Object):
     def get_report(self) -> typing.Optional[SystemCpuUsageReport]: ...
 
 class SystemCpuUsageReport(winrt.system.Object):
-    idle_time: datetime.timedelta
-    kernel_time: datetime.timedelta
-    user_time: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemCpuUsageReport: ...
+    @_property
+    def idle_time(self) -> datetime.timedelta: ...
+    @_property
+    def kernel_time(self) -> datetime.timedelta: ...
+    @_property
+    def user_time(self) -> datetime.timedelta: ...
 
 class SystemDiagnosticInfo(winrt.system.Object):
-    cpu_usage: typing.Optional[SystemCpuUsage]
-    memory_usage: typing.Optional[SystemMemoryUsage]
-    preferred_architecture: typing.ClassVar[winrt.windows.system.ProcessorArchitecture]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemDiagnosticInfo: ...
     @staticmethod
     def get_for_current_system() -> typing.Optional[SystemDiagnosticInfo]: ...
     @staticmethod
     def is_architecture_supported(type: winrt.windows.system.ProcessorArchitecture, /) -> bool: ...
+    @_property
+    def cpu_usage(self) -> typing.Optional[SystemCpuUsage]: ...
+    @_property
+    def memory_usage(self) -> typing.Optional[SystemMemoryUsage]: ...
+    preferred_architecture: typing.ClassVar[winrt.windows.system.ProcessorArchitecture]
 
 class SystemMemoryUsage(winrt.system.Object):
     @staticmethod
@@ -128,9 +164,12 @@ class SystemMemoryUsage(winrt.system.Object):
     def get_report(self) -> typing.Optional[SystemMemoryUsageReport]: ...
 
 class SystemMemoryUsageReport(winrt.system.Object):
-    available_size_in_bytes: winrt.system.UInt64
-    committed_size_in_bytes: winrt.system.UInt64
-    total_physical_size_in_bytes: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMemoryUsageReport: ...
+    @_property
+    def available_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def committed_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def total_physical_size_in_bytes(self) -> winrt.system.UInt64: ...
 

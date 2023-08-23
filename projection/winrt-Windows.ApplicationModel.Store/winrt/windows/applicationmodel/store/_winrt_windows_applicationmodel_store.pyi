@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -17,9 +18,6 @@ from . import LicenseChangedEventHandler
 Self = typing.TypeVar('Self')
 
 class CurrentApp(winrt.system.Object):
-    app_id: typing.ClassVar[_uuid.UUID]
-    license_information: typing.ClassVar[typing.Optional[LicenseInformation]]
-    link_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentApp: ...
     @staticmethod
@@ -55,11 +53,11 @@ class CurrentApp(winrt.system.Object):
     @typing.overload
     @staticmethod
     def request_product_purchase_async(product_id: str, offer_id: str, display_properties: typing.Optional[ProductPurchaseDisplayProperties], /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
-
-class CurrentAppSimulator(winrt.system.Object):
     app_id: typing.ClassVar[_uuid.UUID]
     license_information: typing.ClassVar[typing.Optional[LicenseInformation]]
     link_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
+
+class CurrentAppSimulator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentAppSimulator: ...
     @staticmethod
@@ -91,78 +89,127 @@ class CurrentAppSimulator(winrt.system.Object):
     @typing.overload
     @staticmethod
     def request_product_purchase_async(product_id: str, offer_id: str, display_properties: typing.Optional[ProductPurchaseDisplayProperties], /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
+    app_id: typing.ClassVar[_uuid.UUID]
+    license_information: typing.ClassVar[typing.Optional[LicenseInformation]]
+    link_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
 
 class LicenseInformation(winrt.system.Object):
-    expiration_date: datetime.datetime
-    is_active: bool
-    is_trial: bool
-    product_licenses: typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductLicense]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseInformation: ...
     def add_license_changed(self, handler: typing.Optional[LicenseChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_license_changed(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def expiration_date(self) -> datetime.datetime: ...
+    @_property
+    def is_active(self) -> bool: ...
+    @_property
+    def is_trial(self) -> bool: ...
+    @_property
+    def product_licenses(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductLicense]]: ...
 
 class ListingInformation(winrt.system.Object):
-    age_rating: winrt.system.UInt32
-    current_market: str
-    description: str
-    formatted_price: str
-    name: str
-    product_listings: typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductListing]]
-    currency_code: str
-    formatted_base_price: str
-    is_on_sale: bool
-    sale_end_date: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListingInformation: ...
+    @_property
+    def age_rating(self) -> winrt.system.UInt32: ...
+    @_property
+    def current_market(self) -> str: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def formatted_price(self) -> str: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def product_listings(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductListing]]: ...
+    @_property
+    def currency_code(self) -> str: ...
+    @_property
+    def formatted_base_price(self) -> str: ...
+    @_property
+    def is_on_sale(self) -> bool: ...
+    @_property
+    def sale_end_date(self) -> datetime.datetime: ...
 
 class ProductLicense(winrt.system.Object):
-    expiration_date: datetime.datetime
-    is_active: bool
-    product_id: str
-    is_consumable: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductLicense: ...
+    @_property
+    def expiration_date(self) -> datetime.datetime: ...
+    @_property
+    def is_active(self) -> bool: ...
+    @_property
+    def product_id(self) -> str: ...
+    @_property
+    def is_consumable(self) -> bool: ...
 
 class ProductListing(winrt.system.Object):
-    formatted_price: str
-    name: str
-    product_id: str
-    formatted_base_price: str
-    is_on_sale: bool
-    sale_end_date: datetime.datetime
-    currency_code: str
-    description: str
-    image_uri: typing.Optional[winrt.windows.foundation.Uri]
-    keywords: typing.Optional[winrt.windows.foundation.collections.IIterable[str]]
-    tag: str
-    product_type: ProductType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductListing: ...
+    @_property
+    def formatted_price(self) -> str: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def product_id(self) -> str: ...
+    @_property
+    def formatted_base_price(self) -> str: ...
+    @_property
+    def is_on_sale(self) -> bool: ...
+    @_property
+    def sale_end_date(self) -> datetime.datetime: ...
+    @_property
+    def currency_code(self) -> str: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def image_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @_property
+    def keywords(self) -> typing.Optional[winrt.windows.foundation.collections.IIterable[str]]: ...
+    @_property
+    def tag(self) -> str: ...
+    @_property
+    def product_type(self) -> ProductType: ...
 
 class ProductPurchaseDisplayProperties(winrt.system.Object):
-    name: str
-    image: typing.Optional[winrt.windows.foundation.Uri]
-    description: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductPurchaseDisplayProperties: ...
     @typing.overload
     def __new__(cls: typing.Type[ProductPurchaseDisplayProperties], name: str) -> ProductPurchaseDisplayProperties:...
     @typing.overload
     def __new__(cls: typing.Type[ProductPurchaseDisplayProperties]) -> ProductPurchaseDisplayProperties:...
+    @_property
+    def name(self) -> str: ...
+    @name.setter
+    def name(self, value: str) -> None: ...
+    @_property
+    def image(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @image.setter
+    def image(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
+    @_property
+    def description(self) -> str: ...
+    @description.setter
+    def description(self, value: str) -> None: ...
 
 class PurchaseResults(winrt.system.Object):
-    offer_id: str
-    receipt_xml: str
-    status: ProductPurchaseStatus
-    transaction_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PurchaseResults: ...
+    @_property
+    def offer_id(self) -> str: ...
+    @_property
+    def receipt_xml(self) -> str: ...
+    @_property
+    def status(self) -> ProductPurchaseStatus: ...
+    @_property
+    def transaction_id(self) -> _uuid.UUID: ...
 
 class UnfulfilledConsumable(winrt.system.Object):
-    offer_id: str
-    product_id: str
-    transaction_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnfulfilledConsumable: ...
+    @_property
+    def offer_id(self) -> str: ...
+    @_property
+    def product_id(self) -> str: ...
+    @_property
+    def transaction_id(self) -> _uuid.UUID: ...
 

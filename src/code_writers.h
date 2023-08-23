@@ -4100,28 +4100,6 @@ if (!return_value)
         {
             writer::indent_guard g{w};
 
-            // write attributes
-
-            auto property_writer = [&](Property const& property)
-            {
-                auto [get_method, put_method] = get_property_methods(property);
-
-                auto type = w.write_temp(
-                    "%", bind<write_nullable_python_type>(property.Type().Type()));
-
-                if (is_static(get_method))
-                {
-                    type = w.write_temp("typing.ClassVar[%]", type);
-                }
-
-                w.write(
-                    "%: %\n",
-                    bind<write_lower_snake_case_python_identifier>(property.Name()),
-                    type);
-            };
-
-            enumerate_properties(w, type, property_writer);
-
             // Write special methods.
 
             if (is_ptype(type))
@@ -4437,6 +4415,51 @@ if (!return_value)
                     method_writer(add_method);
                     method_writer(remove_method);
                 });
+
+            // write properties
+
+            auto property_writer = [&](Property const& property)
+            {
+                auto [get_method, put_method] = get_property_methods(property);
+
+                auto type = w.write_temp(
+                    "%", bind<write_nullable_python_type>(property.Type().Type()));
+
+                if (is_static(get_method))
+                {
+                    // TODO: find a way to indicate read-only vs. read-write
+                    // static properties
+                    w.write(
+                        "%: typing.ClassVar[%]\n",
+                        bind<write_lower_snake_case_python_identifier>(property.Name()),
+                        type);
+                }
+                else
+                {
+                    // NB: have to use "_property" because there can be
+                    // properties named "property"
+                    w.write("@_property\n");
+                    w.write(
+                        "def %(self) -> %: ...\n",
+                        bind<write_lower_snake_case_python_identifier>(property.Name()),
+                        type);
+
+                    if (put_method)
+                    {
+                        w.write(
+                            "^@%.setter\n",
+                            bind<write_lower_snake_case_python_identifier>(
+                                property.Name()));
+                        w.write(
+                            "def %(self, value: %) -> None: ...\n",
+                            bind<write_lower_snake_case_python_identifier>(
+                                property.Name()),
+                            type);
+                    }
+                }
+            };
+
+            enumerate_properties(w, type, property_writer);
         }
 
         w.write("\n");

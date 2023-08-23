@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -17,10 +18,12 @@ from . import ComponentLoadFailedEventHandler, RebootNeededEventHandler, Service
 Self = typing.TypeVar('Self')
 
 class ComponentLoadFailedEventArgs(winrt.system.Object):
-    completion: typing.Optional[MediaProtectionServiceCompletion]
-    information: typing.Optional[RevocationAndRenewalInformation]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComponentLoadFailedEventArgs: ...
+    @_property
+    def completion(self) -> typing.Optional[MediaProtectionServiceCompletion]: ...
+    @_property
+    def information(self) -> typing.Optional[RevocationAndRenewalInformation]: ...
 
 class ComponentRenewal(winrt.system.Object):
     @staticmethod
@@ -42,7 +45,6 @@ class HdcpSession(winrt.system.Object):
     def remove_protection_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MediaProtectionManager(winrt.system.Object):
-    properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProtectionManager: ...
     def __new__(cls: typing.Type[MediaProtectionManager]) -> MediaProtectionManager:...
@@ -52,12 +54,15 @@ class MediaProtectionManager(winrt.system.Object):
     def remove_reboot_needed(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_service_requested(self, handler: typing.Optional[ServiceRequestedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_service_requested(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
 class MediaProtectionPMPServer(winrt.system.Object):
-    properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaProtectionPMPServer: ...
     def __new__(cls: typing.Type[MediaProtectionPMPServer], p_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]) -> MediaProtectionPMPServer:...
+    @_property
+    def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IPropertySet]: ...
 
 class MediaProtectionServiceCompletion(winrt.system.Object):
     @staticmethod
@@ -71,29 +76,40 @@ class ProtectionCapabilities(winrt.system.Object):
     def is_type_supported(self, type: str, key_system: str, /) -> ProtectionCapabilityResult: ...
 
 class RevocationAndRenewalInformation(winrt.system.Object):
-    items: typing.Optional[winrt.windows.foundation.collections.IVector[RevocationAndRenewalItem]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevocationAndRenewalInformation: ...
+    @_property
+    def items(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[RevocationAndRenewalItem]]: ...
 
 class RevocationAndRenewalItem(winrt.system.Object):
-    header_hash: str
-    name: str
-    public_key_hash: str
-    reasons: RevocationAndRenewalReasons
-    renewal_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevocationAndRenewalItem: ...
+    @_property
+    def header_hash(self) -> str: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def public_key_hash(self) -> str: ...
+    @_property
+    def reasons(self) -> RevocationAndRenewalReasons: ...
+    @_property
+    def renewal_id(self) -> str: ...
 
 class ServiceRequestedEventArgs(winrt.system.Object):
-    completion: typing.Optional[MediaProtectionServiceCompletion]
-    request: typing.Optional[IMediaProtectionServiceRequest]
-    media_playback_item: typing.Optional[winrt.windows.media.playback.MediaPlaybackItem]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ServiceRequestedEventArgs: ...
+    @_property
+    def completion(self) -> typing.Optional[MediaProtectionServiceCompletion]: ...
+    @_property
+    def request(self) -> typing.Optional[IMediaProtectionServiceRequest]: ...
+    @_property
+    def media_playback_item(self) -> typing.Optional[winrt.windows.media.playback.MediaPlaybackItem]: ...
 
 class IMediaProtectionServiceRequest(winrt.system.Object):
-    protection_system: _uuid.UUID
-    type: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaProtectionServiceRequest: ...
+    @_property
+    def protection_system(self) -> _uuid.UUID: ...
+    @_property
+    def type(self) -> _uuid.UUID: ...
 

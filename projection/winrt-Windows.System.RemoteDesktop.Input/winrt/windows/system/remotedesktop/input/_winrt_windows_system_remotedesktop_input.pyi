@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -13,7 +14,6 @@ from . import RemoteTextConnectionDataHandler
 Self = typing.TypeVar('Self')
 
 class RemoteTextConnection(winrt.system.Object):
-    is_enabled: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -23,4 +23,8 @@ class RemoteTextConnection(winrt.system.Object):
     def register_thread(self, thread_id: winrt.system.UInt32, /) -> None: ...
     def report_data_received(self, pdu_data: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
     def unregister_thread(self, thread_id: winrt.system.UInt32, /) -> None: ...
+    @_property
+    def is_enabled(self) -> bool: ...
+    @is_enabled.setter
+    def is_enabled(self, value: bool) -> None: ...
 

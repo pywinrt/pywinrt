@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.bluetooth
@@ -18,13 +19,6 @@ import winrt.windows.storage.streams
 Self = typing.TypeVar('Self')
 
 class RfcommDeviceService(winrt.system.Object):
-    connection_host_name: typing.Optional[winrt.windows.networking.HostName]
-    connection_service_name: str
-    max_protection_level: winrt.windows.networking.sockets.SocketProtectionLevel
-    protection_level: winrt.windows.networking.sockets.SocketProtectionLevel
-    service_id: typing.Optional[RfcommServiceId]
-    device: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDevice]
-    device_access_information: typing.Optional[winrt.windows.devices.enumeration.DeviceAccessInformation]
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -51,21 +45,30 @@ class RfcommDeviceService(winrt.system.Object):
     @typing.overload
     def get_sdp_raw_attributes_async(self, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IMapView[winrt.system.UInt32, winrt.windows.storage.streams.IBuffer]]: ...
     def request_access_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.devices.enumeration.DeviceAccessStatus]: ...
+    @_property
+    def connection_host_name(self) -> typing.Optional[winrt.windows.networking.HostName]: ...
+    @_property
+    def connection_service_name(self) -> str: ...
+    @_property
+    def max_protection_level(self) -> winrt.windows.networking.sockets.SocketProtectionLevel: ...
+    @_property
+    def protection_level(self) -> winrt.windows.networking.sockets.SocketProtectionLevel: ...
+    @_property
+    def service_id(self) -> typing.Optional[RfcommServiceId]: ...
+    @_property
+    def device(self) -> typing.Optional[winrt.windows.devices.bluetooth.BluetoothDevice]: ...
+    @_property
+    def device_access_information(self) -> typing.Optional[winrt.windows.devices.enumeration.DeviceAccessInformation]: ...
 
 class RfcommDeviceServicesResult(winrt.system.Object):
-    error: winrt.windows.devices.bluetooth.BluetoothError
-    services: typing.Optional[winrt.windows.foundation.collections.IVectorView[RfcommDeviceService]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommDeviceServicesResult: ...
+    @_property
+    def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
+    @_property
+    def services(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[RfcommDeviceService]]: ...
 
 class RfcommServiceId(winrt.system.Object):
-    uuid: _uuid.UUID
-    generic_file_transfer: typing.ClassVar[typing.Optional[RfcommServiceId]]
-    obex_file_transfer: typing.ClassVar[typing.Optional[RfcommServiceId]]
-    obex_object_push: typing.ClassVar[typing.Optional[RfcommServiceId]]
-    phone_book_access_pce: typing.ClassVar[typing.Optional[RfcommServiceId]]
-    phone_book_access_pse: typing.ClassVar[typing.Optional[RfcommServiceId]]
-    serial_port: typing.ClassVar[typing.Optional[RfcommServiceId]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommServiceId: ...
     def as_short_id(self) -> winrt.system.UInt32: ...
@@ -74,10 +77,16 @@ class RfcommServiceId(winrt.system.Object):
     def from_short_id(short_id: winrt.system.UInt32, /) -> typing.Optional[RfcommServiceId]: ...
     @staticmethod
     def from_uuid(uuid: _uuid.UUID, /) -> typing.Optional[RfcommServiceId]: ...
+    @_property
+    def uuid(self) -> _uuid.UUID: ...
+    generic_file_transfer: typing.ClassVar[typing.Optional[RfcommServiceId]]
+    obex_file_transfer: typing.ClassVar[typing.Optional[RfcommServiceId]]
+    obex_object_push: typing.ClassVar[typing.Optional[RfcommServiceId]]
+    phone_book_access_pce: typing.ClassVar[typing.Optional[RfcommServiceId]]
+    phone_book_access_pse: typing.ClassVar[typing.Optional[RfcommServiceId]]
+    serial_port: typing.ClassVar[typing.Optional[RfcommServiceId]]
 
 class RfcommServiceProvider(winrt.system.Object):
-    sdp_raw_attributes: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.system.UInt32, winrt.windows.storage.streams.IBuffer]]
-    service_id: typing.Optional[RfcommServiceId]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommServiceProvider: ...
     @staticmethod
@@ -87,4 +96,8 @@ class RfcommServiceProvider(winrt.system.Object):
     @typing.overload
     def start_advertising(self, listener: typing.Optional[winrt.windows.networking.sockets.StreamSocketListener], radio_discoverable: bool, /) -> None: ...
     def stop_advertising(self) -> None: ...
+    @_property
+    def sdp_raw_attributes(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[winrt.system.UInt32, winrt.windows.storage.streams.IBuffer]]: ...
+    @_property
+    def service_id(self) -> typing.Optional[RfcommServiceId]: ...
 

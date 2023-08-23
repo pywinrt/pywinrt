@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation.collections
@@ -16,19 +17,15 @@ from . import AnnotationType, AutomationActiveEnd, AutomationAnimationStyle, Aut
 Self = typing.TypeVar('Self')
 
 class AnnotationPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> AnnotationPatternIdentifiers: ...
     annotation_type_id_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     annotation_type_name_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     author_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     date_time_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     target_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AnnotationPatternIdentifiers: ...
 
 class AutomationAnnotation(winrt.system.Object):
-    type: AnnotationType
-    element: typing.Optional[winrt.windows.ui.xaml.UIElement]
-    element_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationAnnotation: ...
     @typing.overload
@@ -37,8 +34,20 @@ class AutomationAnnotation(winrt.system.Object):
     def __new__(cls: typing.Type[AutomationAnnotation], type: AnnotationType, element: typing.Optional[winrt.windows.ui.xaml.UIElement]) -> AutomationAnnotation:...
     @typing.overload
     def __new__(cls: typing.Type[AutomationAnnotation]) -> AutomationAnnotation:...
+    @_property
+    def type(self) -> AnnotationType: ...
+    @type.setter
+    def type(self, value: AnnotationType) -> None: ...
+    @_property
+    def element(self) -> typing.Optional[winrt.windows.ui.xaml.UIElement]: ...
+    @element.setter
+    def element(self, value: typing.Optional[winrt.windows.ui.xaml.UIElement]) -> None: ...
+    element_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class AutomationElementIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> AutomationElementIdentifiers: ...
     bounding_rectangle_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     has_keyboard_focus_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     help_text_property: typing.ClassVar[typing.Optional[AutomationProperty]]
@@ -78,39 +87,8 @@ class AutomationElementIdentifiers(winrt.system.Object):
     culture_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     heading_level_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     is_dialog_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> AutomationElementIdentifiers: ...
 
 class AutomationProperties(winrt.system.Object):
-    accelerator_key_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    access_key_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    automation_id_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    help_text_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_required_for_form_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    item_status_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    item_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    labeled_by_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    live_setting_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    name_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    accessibility_view_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    controlled_peers_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    annotations_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    level_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    position_in_set_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    size_of_set_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    landmark_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    localized_landmark_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    described_by_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    flows_from_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    flows_to_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    full_description_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_data_valid_for_form_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_peripheral_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    localized_control_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    culture_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    heading_level_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_dialog_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    automation_control_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationProperties: ...
     @staticmethod
@@ -219,67 +197,98 @@ class AutomationProperties(winrt.system.Object):
     def set_position_in_set(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: winrt.system.Int32, /) -> None: ...
     @staticmethod
     def set_size_of_set(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: winrt.system.Int32, /) -> None: ...
+    accelerator_key_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    access_key_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    automation_id_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    help_text_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    is_required_for_form_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    item_status_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    item_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    labeled_by_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    live_setting_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    name_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    accessibility_view_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    controlled_peers_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    annotations_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    level_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    position_in_set_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    size_of_set_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    landmark_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    localized_landmark_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    described_by_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    flows_from_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    flows_to_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    full_description_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    is_data_valid_for_form_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    is_peripheral_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    localized_control_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    culture_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    heading_level_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    is_dialog_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    automation_control_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class AutomationProperty(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationProperty: ...
 
 class DockPatternIdentifiers(winrt.system.Object):
-    dock_position_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DockPatternIdentifiers: ...
+    dock_position_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class DragPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> DragPatternIdentifiers: ...
     drop_effect_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     drop_effects_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     grabbed_items_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     is_grabbed_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DragPatternIdentifiers: ...
 
 class DropTargetPatternIdentifiers(winrt.system.Object):
-    drop_target_effect_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    drop_target_effects_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropTargetPatternIdentifiers: ...
+    drop_target_effect_property: typing.ClassVar[typing.Optional[AutomationProperty]]
+    drop_target_effects_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class ExpandCollapsePatternIdentifiers(winrt.system.Object):
-    expand_collapse_state_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExpandCollapsePatternIdentifiers: ...
+    expand_collapse_state_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class GridItemPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> GridItemPatternIdentifiers: ...
     column_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     column_span_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     containing_grid_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     row_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     row_span_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> GridItemPatternIdentifiers: ...
 
 class GridPatternIdentifiers(winrt.system.Object):
-    column_count_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    row_count_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridPatternIdentifiers: ...
+    column_count_property: typing.ClassVar[typing.Optional[AutomationProperty]]
+    row_count_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class MultipleViewPatternIdentifiers(winrt.system.Object):
-    current_view_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    supported_views_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MultipleViewPatternIdentifiers: ...
+    current_view_property: typing.ClassVar[typing.Optional[AutomationProperty]]
+    supported_views_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class RangeValuePatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> RangeValuePatternIdentifiers: ...
     is_read_only_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     large_change_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     maximum_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     minimum_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     small_change_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     value_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> RangeValuePatternIdentifiers: ...
 
 class ScrollPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> ScrollPatternIdentifiers: ...
     horizontal_scroll_percent_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     horizontal_view_size_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     horizontally_scrollable_property: typing.ClassVar[typing.Optional[AutomationProperty]]
@@ -287,28 +296,28 @@ class ScrollPatternIdentifiers(winrt.system.Object):
     vertical_scroll_percent_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     vertical_view_size_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     vertically_scrollable_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ScrollPatternIdentifiers: ...
 
 class SelectionItemPatternIdentifiers(winrt.system.Object):
-    is_selected_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    selection_container_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectionItemPatternIdentifiers: ...
+    is_selected_property: typing.ClassVar[typing.Optional[AutomationProperty]]
+    selection_container_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class SelectionPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> SelectionPatternIdentifiers: ...
     can_select_multiple_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     is_selection_required_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     selection_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SelectionPatternIdentifiers: ...
 
 class SpreadsheetItemPatternIdentifiers(winrt.system.Object):
-    formula_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpreadsheetItemPatternIdentifiers: ...
+    formula_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class StylesPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> StylesPatternIdentifiers: ...
     extended_properties_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     fill_color_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     fill_pattern_color_property: typing.ClassVar[typing.Optional[AutomationProperty]]
@@ -316,55 +325,53 @@ class StylesPatternIdentifiers(winrt.system.Object):
     shape_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     style_id_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     style_name_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> StylesPatternIdentifiers: ...
 
 class TableItemPatternIdentifiers(winrt.system.Object):
-    column_header_items_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    row_header_items_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TableItemPatternIdentifiers: ...
+    column_header_items_property: typing.ClassVar[typing.Optional[AutomationProperty]]
+    row_header_items_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class TablePatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> TablePatternIdentifiers: ...
     column_headers_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     row_headers_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     row_or_column_major_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TablePatternIdentifiers: ...
 
 class TogglePatternIdentifiers(winrt.system.Object):
-    toggle_state_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TogglePatternIdentifiers: ...
+    toggle_state_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class TransformPattern2Identifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> TransformPattern2Identifiers: ...
     can_zoom_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     max_zoom_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     min_zoom_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     zoom_level_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TransformPattern2Identifiers: ...
 
 class TransformPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> TransformPatternIdentifiers: ...
     can_move_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     can_resize_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     can_rotate_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TransformPatternIdentifiers: ...
 
 class ValuePatternIdentifiers(winrt.system.Object):
-    is_read_only_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    value_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ValuePatternIdentifiers: ...
+    is_read_only_property: typing.ClassVar[typing.Optional[AutomationProperty]]
+    value_property: typing.ClassVar[typing.Optional[AutomationProperty]]
 
 class WindowPatternIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> WindowPatternIdentifiers: ...
     can_maximize_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     can_minimize_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     is_modal_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     is_topmost_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     window_interaction_state_property: typing.ClassVar[typing.Optional[AutomationProperty]]
     window_visual_state_property: typing.ClassVar[typing.Optional[AutomationProperty]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> WindowPatternIdentifiers: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,7 +17,6 @@ from . import UserNotificationListenerAccessStatus
 Self = typing.TypeVar('Self')
 
 class UserNotificationListener(winrt.system.Object):
-    current: typing.ClassVar[typing.Optional[UserNotificationListener]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserNotificationListener: ...
     def clear_notifications(self) -> None: ...
@@ -27,4 +27,5 @@ class UserNotificationListener(winrt.system.Object):
     def request_access_async(self) -> winrt.windows.foundation.IAsyncOperation[UserNotificationListenerAccessStatus]: ...
     def add_notification_changed(self, handler: winrt.windows.foundation.TypedEventHandler[UserNotificationListener, winrt.windows.ui.notifications.UserNotificationChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_notification_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    current: typing.ClassVar[typing.Optional[UserNotificationListener]]
 

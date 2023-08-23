@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -12,16 +13,19 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
-    is_reading_text: bool
-    screen_position_in_raw_pixels: winrt.windows.foundation.Rect
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenReaderPositionChangedEventArgs: ...
+    @_property
+    def is_reading_text(self) -> bool: ...
+    @_property
+    def screen_position_in_raw_pixels(self) -> winrt.windows.foundation.Rect: ...
 
 class ScreenReaderService(winrt.system.Object):
-    current_screen_reader_position: typing.Optional[ScreenReaderPositionChangedEventArgs]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenReaderService: ...
     def __new__(cls: typing.Type[ScreenReaderService]) -> ScreenReaderService:...
     def add_screen_reader_position_changed(self, handler: winrt.windows.foundation.TypedEventHandler[ScreenReaderService, ScreenReaderPositionChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_screen_reader_position_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def current_screen_reader_position(self) -> typing.Optional[ScreenReaderPositionChangedEventArgs]: ...
 

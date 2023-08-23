@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,14 +15,6 @@ from . import BatteryStatus, EnergySaverStatus, PowerSupplyStatus
 Self = typing.TypeVar('Self')
 
 class BackgroundEnergyManager(winrt.system.Object):
-    excessive_usage_level: typing.ClassVar[winrt.system.UInt32]
-    low_usage_level: typing.ClassVar[winrt.system.UInt32]
-    max_acceptable_usage_level: typing.ClassVar[winrt.system.UInt32]
-    near_max_acceptable_usage_level: typing.ClassVar[winrt.system.UInt32]
-    near_termination_usage_level: typing.ClassVar[winrt.system.UInt32]
-    recent_energy_usage: typing.ClassVar[winrt.system.UInt32]
-    recent_energy_usage_level: typing.ClassVar[winrt.system.UInt32]
-    termination_usage_level: typing.ClassVar[winrt.system.UInt32]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundEnergyManager: ...
     @staticmethod
@@ -32,14 +25,16 @@ class BackgroundEnergyManager(winrt.system.Object):
     def add_recent_energy_usage_returned_to_low(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_recent_energy_usage_returned_to_low(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-
-class ForegroundEnergyManager(winrt.system.Object):
     excessive_usage_level: typing.ClassVar[winrt.system.UInt32]
     low_usage_level: typing.ClassVar[winrt.system.UInt32]
     max_acceptable_usage_level: typing.ClassVar[winrt.system.UInt32]
     near_max_acceptable_usage_level: typing.ClassVar[winrt.system.UInt32]
+    near_termination_usage_level: typing.ClassVar[winrt.system.UInt32]
     recent_energy_usage: typing.ClassVar[winrt.system.UInt32]
     recent_energy_usage_level: typing.ClassVar[winrt.system.UInt32]
+    termination_usage_level: typing.ClassVar[winrt.system.UInt32]
+
+class ForegroundEnergyManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ForegroundEnergyManager: ...
     @staticmethod
@@ -50,13 +45,14 @@ class ForegroundEnergyManager(winrt.system.Object):
     def add_recent_energy_usage_returned_to_low(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_recent_energy_usage_returned_to_low(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    excessive_usage_level: typing.ClassVar[winrt.system.UInt32]
+    low_usage_level: typing.ClassVar[winrt.system.UInt32]
+    max_acceptable_usage_level: typing.ClassVar[winrt.system.UInt32]
+    near_max_acceptable_usage_level: typing.ClassVar[winrt.system.UInt32]
+    recent_energy_usage: typing.ClassVar[winrt.system.UInt32]
+    recent_energy_usage_level: typing.ClassVar[winrt.system.UInt32]
 
 class PowerManager(winrt.system.Object):
-    battery_status: typing.ClassVar[BatteryStatus]
-    energy_saver_status: typing.ClassVar[EnergySaverStatus]
-    power_supply_status: typing.ClassVar[PowerSupplyStatus]
-    remaining_charge_percent: typing.ClassVar[winrt.system.Int32]
-    remaining_discharge_time: typing.ClassVar[datetime.timedelta]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerManager: ...
     @staticmethod
@@ -79,4 +75,9 @@ class PowerManager(winrt.system.Object):
     def add_remaining_discharge_time_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_remaining_discharge_time_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    battery_status: typing.ClassVar[BatteryStatus]
+    energy_saver_status: typing.ClassVar[EnergySaverStatus]
+    power_supply_status: typing.ClassVar[PowerSupplyStatus]
+    remaining_charge_percent: typing.ClassVar[winrt.system.Int32]
+    remaining_discharge_time: typing.ClassVar[datetime.timedelta]
 

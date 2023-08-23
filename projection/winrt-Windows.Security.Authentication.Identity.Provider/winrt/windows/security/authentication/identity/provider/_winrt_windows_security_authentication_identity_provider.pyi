@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,10 +17,6 @@ from . import SecondaryAuthenticationFactorAuthenticationMessage, SecondaryAuthe
 Self = typing.TypeVar('Self')
 
 class SecondaryAuthenticationFactorAuthentication(winrt.system.Object):
-    device_configuration_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    device_nonce: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    service_authentication_hmac: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    session_nonce: typing.Optional[winrt.windows.storage.streams.IBuffer]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthentication: ...
     def abort_authentication_async(self, error_log_message: str, /) -> winrt.windows.foundation.IAsyncAction: ...
@@ -34,35 +31,55 @@ class SecondaryAuthenticationFactorAuthentication(winrt.system.Object):
     def add_authentication_stage_changed(handler: winrt.windows.foundation.EventHandler[SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_authentication_stage_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def device_configuration_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def device_nonce(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def service_authentication_hmac(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def session_nonce(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
 class SecondaryAuthenticationFactorAuthenticationResult(winrt.system.Object):
-    authentication: typing.Optional[SecondaryAuthenticationFactorAuthentication]
-    status: SecondaryAuthenticationFactorAuthenticationStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationResult: ...
+    @_property
+    def authentication(self) -> typing.Optional[SecondaryAuthenticationFactorAuthentication]: ...
+    @_property
+    def status(self) -> SecondaryAuthenticationFactorAuthenticationStatus: ...
 
 class SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs(winrt.system.Object):
-    stage_info: typing.Optional[SecondaryAuthenticationFactorAuthenticationStageInfo]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs: ...
+    @_property
+    def stage_info(self) -> typing.Optional[SecondaryAuthenticationFactorAuthenticationStageInfo]: ...
 
 class SecondaryAuthenticationFactorAuthenticationStageInfo(winrt.system.Object):
-    device_id: str
-    scenario: SecondaryAuthenticationFactorAuthenticationScenario
-    stage: SecondaryAuthenticationFactorAuthenticationStage
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorAuthenticationStageInfo: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def scenario(self) -> SecondaryAuthenticationFactorAuthenticationScenario: ...
+    @_property
+    def stage(self) -> SecondaryAuthenticationFactorAuthenticationStage: ...
 
 class SecondaryAuthenticationFactorInfo(winrt.system.Object):
-    device_configuration_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    device_friendly_name: str
-    device_id: str
-    device_model_number: str
-    is_authentication_supported: bool
-    presence_monitoring_mode: SecondaryAuthenticationFactorDevicePresenceMonitoringMode
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorInfo: ...
     def update_device_presence_async(self, presence_state: SecondaryAuthenticationFactorDevicePresence, /) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def device_configuration_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def device_friendly_name(self) -> str: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def device_model_number(self) -> str: ...
+    @_property
+    def is_authentication_supported(self) -> bool: ...
+    @_property
+    def presence_monitoring_mode(self) -> SecondaryAuthenticationFactorDevicePresenceMonitoringMode: ...
 
 class SecondaryAuthenticationFactorRegistration(winrt.system.Object):
     @staticmethod
@@ -89,8 +106,10 @@ class SecondaryAuthenticationFactorRegistration(winrt.system.Object):
     def update_device_configuration_data_async(device_id: str, device_configuration_data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class SecondaryAuthenticationFactorRegistrationResult(winrt.system.Object):
-    registration: typing.Optional[SecondaryAuthenticationFactorRegistration]
-    status: SecondaryAuthenticationFactorRegistrationStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SecondaryAuthenticationFactorRegistrationResult: ...
+    @_property
+    def registration(self) -> typing.Optional[SecondaryAuthenticationFactorRegistration]: ...
+    @_property
+    def status(self) -> SecondaryAuthenticationFactorRegistrationStatus: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation.collections
@@ -14,17 +15,24 @@ from . import ProviderAdcChannelMode
 Self = typing.TypeVar('Self')
 
 class IAdcControllerProvider(winrt.system.Object):
-    channel_count: winrt.system.Int32
-    channel_mode: ProviderAdcChannelMode
-    max_value: winrt.system.Int32
-    min_value: winrt.system.Int32
-    resolution_in_bits: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdcControllerProvider: ...
     def acquire_channel(self, channel: winrt.system.Int32, /) -> None: ...
     def is_channel_mode_supported(self, channel_mode: ProviderAdcChannelMode, /) -> bool: ...
     def read_value(self, channel_number: winrt.system.Int32, /) -> winrt.system.Int32: ...
     def release_channel(self, channel: winrt.system.Int32, /) -> None: ...
+    @_property
+    def channel_count(self) -> winrt.system.Int32: ...
+    @_property
+    def channel_mode(self) -> ProviderAdcChannelMode: ...
+    @channel_mode.setter
+    def channel_mode(self, value: ProviderAdcChannelMode) -> None: ...
+    @_property
+    def max_value(self) -> winrt.system.Int32: ...
+    @_property
+    def min_value(self) -> winrt.system.Int32: ...
+    @_property
+    def resolution_in_bits(self) -> winrt.system.Int32: ...
 
 class IAdcProvider(winrt.system.Object):
     @staticmethod

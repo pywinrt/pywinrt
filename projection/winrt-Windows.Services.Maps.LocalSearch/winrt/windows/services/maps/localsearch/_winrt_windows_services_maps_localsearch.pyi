@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.geolocation
@@ -18,6 +19,8 @@ from . import LocalLocationFinderStatus
 Self = typing.TypeVar('Self')
 
 class LocalCategories(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> LocalCategories: ...
     all: typing.ClassVar[str]
     bank_and_credit_unions: typing.ClassVar[str]
     eat_drink: typing.ClassVar[str]
@@ -26,22 +29,30 @@ class LocalCategories(winrt.system.Object):
     parking: typing.ClassVar[str]
     see_do: typing.ClassVar[str]
     shop: typing.ClassVar[str]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> LocalCategories: ...
 
 class LocalLocation(winrt.system.Object):
-    address: typing.Optional[winrt.windows.services.maps.MapAddress]
-    data_attribution: str
-    description: str
-    display_name: str
-    identifier: str
-    phone_number: str
-    point: typing.Optional[winrt.windows.devices.geolocation.Geopoint]
-    category: str
-    hours_of_operation: typing.Optional[winrt.windows.foundation.collections.IVectorView[LocalLocationHoursOfOperationItem]]
-    rating_info: typing.Optional[LocalLocationRatingInfo]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalLocation: ...
+    @_property
+    def address(self) -> typing.Optional[winrt.windows.services.maps.MapAddress]: ...
+    @_property
+    def data_attribution(self) -> str: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def identifier(self) -> str: ...
+    @_property
+    def phone_number(self) -> str: ...
+    @_property
+    def point(self) -> typing.Optional[winrt.windows.devices.geolocation.Geopoint]: ...
+    @_property
+    def category(self) -> str: ...
+    @_property
+    def hours_of_operation(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[LocalLocationHoursOfOperationItem]]: ...
+    @_property
+    def rating_info(self) -> typing.Optional[LocalLocationRatingInfo]: ...
 
 class LocalLocationFinder(winrt.system.Object):
     @staticmethod
@@ -50,24 +61,32 @@ class LocalLocationFinder(winrt.system.Object):
     def find_local_locations_async(search_term: str, search_area: typing.Optional[winrt.windows.devices.geolocation.Geocircle], local_category: str, max_results: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[LocalLocationFinderResult]: ...
 
 class LocalLocationFinderResult(winrt.system.Object):
-    local_locations: typing.Optional[winrt.windows.foundation.collections.IVectorView[LocalLocation]]
-    status: LocalLocationFinderStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalLocationFinderResult: ...
+    @_property
+    def local_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[LocalLocation]]: ...
+    @_property
+    def status(self) -> LocalLocationFinderStatus: ...
 
 class LocalLocationHoursOfOperationItem(winrt.system.Object):
-    day: winrt.windows.globalization.DayOfWeek
-    span: datetime.timedelta
-    start: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalLocationHoursOfOperationItem: ...
+    @_property
+    def day(self) -> winrt.windows.globalization.DayOfWeek: ...
+    @_property
+    def span(self) -> datetime.timedelta: ...
+    @_property
+    def start(self) -> datetime.timedelta: ...
 
 class LocalLocationRatingInfo(winrt.system.Object):
-    aggregate_rating: typing.Optional[typing.Optional[winrt.system.Double]]
-    provider_identifier: str
-    rating_count: typing.Optional[typing.Optional[winrt.system.Int32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalLocationRatingInfo: ...
+    @_property
+    def aggregate_rating(self) -> typing.Optional[typing.Optional[winrt.system.Double]]: ...
+    @_property
+    def provider_identifier(self) -> str: ...
+    @_property
+    def rating_count(self) -> typing.Optional[typing.Optional[winrt.system.Int32]]: ...
 
 class PlaceInfoHelper(winrt.system.Object):
     @staticmethod

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.activation
@@ -16,8 +17,6 @@ from . import GameChatMessageOrigin, GameChatOverlayPosition
 Self = typing.TypeVar('Self')
 
 class GameBar(winrt.system.Object):
-    is_input_redirected: typing.ClassVar[bool]
-    visible: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBar: ...
     @staticmethod
@@ -28,23 +27,33 @@ class GameBar(winrt.system.Object):
     def add_visibility_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_visibility_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    is_input_redirected: typing.ClassVar[bool]
+    visible: typing.ClassVar[bool]
 
 class GameChatMessageReceivedEventArgs(winrt.system.Object):
-    app_display_name: str
-    app_id: str
-    message: str
-    origin: GameChatMessageOrigin
-    sender_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameChatMessageReceivedEventArgs: ...
+    @_property
+    def app_display_name(self) -> str: ...
+    @_property
+    def app_id(self) -> str: ...
+    @_property
+    def message(self) -> str: ...
+    @_property
+    def origin(self) -> GameChatMessageOrigin: ...
+    @_property
+    def sender_name(self) -> str: ...
 
 class GameChatOverlay(winrt.system.Object):
-    desired_position: GameChatOverlayPosition
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameChatOverlay: ...
     def add_message(self, sender: str, message: str, origin: GameChatMessageOrigin, /) -> None: ...
     @staticmethod
     def get_default() -> typing.Optional[GameChatOverlay]: ...
+    @_property
+    def desired_position(self) -> GameChatOverlayPosition: ...
+    @desired_position.setter
+    def desired_position(self, value: GameChatOverlayPosition) -> None: ...
 
 class GameChatOverlayMessageSource(winrt.system.Object):
     @staticmethod
@@ -55,11 +64,15 @@ class GameChatOverlayMessageSource(winrt.system.Object):
     def remove_message_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class GameUIProviderActivatedEventArgs(winrt.system.Object):
-    kind: winrt.windows.applicationmodel.activation.ActivationKind
-    previous_execution_state: winrt.windows.applicationmodel.activation.ApplicationExecutionState
-    splash_screen: typing.Optional[winrt.windows.applicationmodel.activation.SplashScreen]
-    game_u_i_args: typing.Optional[winrt.windows.foundation.collections.ValueSet]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameUIProviderActivatedEventArgs: ...
     def report_completed(self, results: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> None: ...
+    @_property
+    def kind(self) -> winrt.windows.applicationmodel.activation.ActivationKind: ...
+    @_property
+    def previous_execution_state(self) -> winrt.windows.applicationmodel.activation.ApplicationExecutionState: ...
+    @_property
+    def splash_screen(self) -> typing.Optional[winrt.windows.applicationmodel.activation.SplashScreen]: ...
+    @_property
+    def game_u_i_args(self) -> typing.Optional[winrt.windows.foundation.collections.ValueSet]: ...
 

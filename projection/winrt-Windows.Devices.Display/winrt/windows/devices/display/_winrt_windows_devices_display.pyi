@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,26 +16,6 @@ from . import DisplayMonitorConnectionKind, DisplayMonitorDescriptorKind, Displa
 Self = typing.TypeVar('Self')
 
 class DisplayMonitor(winrt.system.Object):
-    blue_primary: winrt.windows.foundation.Point
-    connection_kind: DisplayMonitorConnectionKind
-    device_id: str
-    display_adapter_device_id: str
-    display_adapter_id: winrt.windows.graphics.DisplayAdapterId
-    display_adapter_target_id: winrt.system.UInt32
-    display_name: str
-    green_primary: winrt.windows.foundation.Point
-    max_average_full_frame_luminance_in_nits: winrt.system.Single
-    max_luminance_in_nits: winrt.system.Single
-    min_luminance_in_nits: winrt.system.Single
-    native_resolution_in_raw_pixels: winrt.windows.graphics.SizeInt32
-    physical_connector: DisplayMonitorPhysicalConnectorKind
-    physical_size_in_inches: typing.Optional[typing.Optional[winrt.windows.foundation.Size]]
-    raw_dpi_x: winrt.system.Single
-    raw_dpi_y: winrt.system.Single
-    red_primary: winrt.windows.foundation.Point
-    usage_kind: DisplayMonitorUsageKind
-    white_point: winrt.windows.foundation.Point
-    is_dolby_vision_supported_in_hdr_mode: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayMonitor: ...
     @staticmethod
@@ -44,4 +25,44 @@ class DisplayMonitor(winrt.system.Object):
     def get_descriptor(self, descriptor_kind: DisplayMonitorDescriptorKind, /) -> winrt.system.UInt8: ...
     @staticmethod
     def get_device_selector() -> str: ...
+    @_property
+    def blue_primary(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def connection_kind(self) -> DisplayMonitorConnectionKind: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def display_adapter_device_id(self) -> str: ...
+    @_property
+    def display_adapter_id(self) -> winrt.windows.graphics.DisplayAdapterId: ...
+    @_property
+    def display_adapter_target_id(self) -> winrt.system.UInt32: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def green_primary(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def max_average_full_frame_luminance_in_nits(self) -> winrt.system.Single: ...
+    @_property
+    def max_luminance_in_nits(self) -> winrt.system.Single: ...
+    @_property
+    def min_luminance_in_nits(self) -> winrt.system.Single: ...
+    @_property
+    def native_resolution_in_raw_pixels(self) -> winrt.windows.graphics.SizeInt32: ...
+    @_property
+    def physical_connector(self) -> DisplayMonitorPhysicalConnectorKind: ...
+    @_property
+    def physical_size_in_inches(self) -> typing.Optional[typing.Optional[winrt.windows.foundation.Size]]: ...
+    @_property
+    def raw_dpi_x(self) -> winrt.system.Single: ...
+    @_property
+    def raw_dpi_y(self) -> winrt.system.Single: ...
+    @_property
+    def red_primary(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def usage_kind(self) -> DisplayMonitorUsageKind: ...
+    @_property
+    def white_point(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def is_dolby_vision_supported_in_hdr_mode(self) -> bool: ...
 

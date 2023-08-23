@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,9 +16,6 @@ from . import RadioAccessStatus, RadioKind, RadioState
 Self = typing.TypeVar('Self')
 
 class Radio(winrt.system.Object):
-    kind: RadioKind
-    name: str
-    state: RadioState
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Radio: ...
     @staticmethod
@@ -31,4 +29,10 @@ class Radio(winrt.system.Object):
     def set_state_async(self, value: RadioState, /) -> winrt.windows.foundation.IAsyncOperation[RadioAccessStatus]: ...
     def add_state_changed(self, handler: winrt.windows.foundation.TypedEventHandler[Radio, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_state_changed(self, event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def kind(self) -> RadioKind: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def state(self) -> RadioState: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,13 +15,12 @@ from . import ExtendedExecutionForegroundReason, ExtendedExecutionForegroundResu
 Self = typing.TypeVar('Self')
 
 class ExtendedExecutionForegroundRevokedEventArgs(winrt.system.Object):
-    reason: ExtendedExecutionForegroundRevokedReason
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExtendedExecutionForegroundRevokedEventArgs: ...
+    @_property
+    def reason(self) -> ExtendedExecutionForegroundRevokedReason: ...
 
 class ExtendedExecutionForegroundSession(winrt.system.Object):
-    reason: ExtendedExecutionForegroundReason
-    description: str
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -30,4 +30,12 @@ class ExtendedExecutionForegroundSession(winrt.system.Object):
     def request_extension_async(self) -> winrt.windows.foundation.IAsyncOperation[ExtendedExecutionForegroundResult]: ...
     def add_revoked(self, handler: winrt.windows.foundation.TypedEventHandler[winrt.system.Object, ExtendedExecutionForegroundRevokedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_revoked(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def reason(self) -> ExtendedExecutionForegroundReason: ...
+    @reason.setter
+    def reason(self, value: ExtendedExecutionForegroundReason) -> None: ...
+    @_property
+    def description(self) -> str: ...
+    @description.setter
+    def description(self, value: str) -> None: ...
 

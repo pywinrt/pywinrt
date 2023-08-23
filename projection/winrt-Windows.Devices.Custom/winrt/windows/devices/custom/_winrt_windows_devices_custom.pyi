@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,8 +16,6 @@ from . import DeviceAccessMode, DeviceSharingMode, IOControlAccessMode, IOContro
 Self = typing.TypeVar('Self')
 
 class CustomDevice(winrt.system.Object):
-    input_stream: typing.Optional[winrt.windows.storage.streams.IInputStream]
-    output_stream: typing.Optional[winrt.windows.storage.streams.IOutputStream]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomDevice: ...
     @staticmethod
@@ -25,28 +24,42 @@ class CustomDevice(winrt.system.Object):
     def get_device_selector(class_guid: _uuid.UUID, /) -> str: ...
     def send_i_o_control_async(self, io_control_code: typing.Optional[IIOControlCode], input_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], output_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
     def try_send_i_o_control_async(self, io_control_code: typing.Optional[IIOControlCode], input_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], output_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    @_property
+    def input_stream(self) -> typing.Optional[winrt.windows.storage.streams.IInputStream]: ...
+    @_property
+    def output_stream(self) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
 
 class IOControlCode(winrt.system.Object):
-    access_mode: IOControlAccessMode
-    buffering_method: IOControlBufferingMethod
-    control_code: winrt.system.UInt32
-    device_type: winrt.system.UInt16
-    function: winrt.system.UInt16
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IOControlCode: ...
     def __new__(cls: typing.Type[IOControlCode], device_type: winrt.system.UInt16, function: winrt.system.UInt16, access_mode: IOControlAccessMode, buffering_method: IOControlBufferingMethod) -> IOControlCode:...
+    @_property
+    def access_mode(self) -> IOControlAccessMode: ...
+    @_property
+    def buffering_method(self) -> IOControlBufferingMethod: ...
+    @_property
+    def control_code(self) -> winrt.system.UInt32: ...
+    @_property
+    def device_type(self) -> winrt.system.UInt16: ...
+    @_property
+    def function(self) -> winrt.system.UInt16: ...
 
 class KnownDeviceTypes(winrt.system.Object):
-    unknown: typing.ClassVar[winrt.system.UInt16]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KnownDeviceTypes: ...
+    unknown: typing.ClassVar[winrt.system.UInt16]
 
 class IIOControlCode(winrt.system.Object):
-    access_mode: IOControlAccessMode
-    buffering_method: IOControlBufferingMethod
-    control_code: winrt.system.UInt32
-    device_type: winrt.system.UInt16
-    function: winrt.system.UInt16
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IIOControlCode: ...
+    @_property
+    def access_mode(self) -> IOControlAccessMode: ...
+    @_property
+    def buffering_method(self) -> IOControlBufferingMethod: ...
+    @_property
+    def control_code(self) -> winrt.system.UInt32: ...
+    @_property
+    def device_type(self) -> winrt.system.UInt16: ...
+    @_property
+    def function(self) -> winrt.system.UInt16: ...
 

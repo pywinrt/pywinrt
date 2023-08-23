@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -12,32 +13,42 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class OemSupportInfo(winrt.system.Object):
-    support_app_link: typing.Optional[winrt.windows.foundation.Uri]
-    support_link: typing.Optional[winrt.windows.foundation.Uri]
-    support_provider: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OemSupportInfo: ...
+    @_property
+    def support_app_link(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @_property
+    def support_link(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @_property
+    def support_provider(self) -> str: ...
 
 class SmbiosInformation(winrt.system.Object):
-    serial_number: typing.ClassVar[str]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmbiosInformation: ...
+    serial_number: typing.ClassVar[str]
 
 class SystemSupportDeviceInfo(winrt.system.Object):
-    friendly_name: str
-    operating_system: str
-    system_firmware_version: str
-    system_hardware_version: str
-    system_manufacturer: str
-    system_product_name: str
-    system_sku: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemSupportDeviceInfo: ...
+    @_property
+    def friendly_name(self) -> str: ...
+    @_property
+    def operating_system(self) -> str: ...
+    @_property
+    def system_firmware_version(self) -> str: ...
+    @_property
+    def system_hardware_version(self) -> str: ...
+    @_property
+    def system_manufacturer(self) -> str: ...
+    @_property
+    def system_product_name(self) -> str: ...
+    @_property
+    def system_sku(self) -> str: ...
 
 class SystemSupportInfo(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> SystemSupportInfo: ...
     local_system_edition: typing.ClassVar[str]
     oem_support_info: typing.ClassVar[typing.Optional[OemSupportInfo]]
     local_device_info: typing.ClassVar[typing.Optional[SystemSupportDeviceInfo]]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> SystemSupportInfo: ...
 

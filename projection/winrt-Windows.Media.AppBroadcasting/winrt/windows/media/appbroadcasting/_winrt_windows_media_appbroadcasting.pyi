@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,30 +14,41 @@ import winrt.windows.system
 Self = typing.TypeVar('Self')
 
 class AppBroadcastingMonitor(winrt.system.Object):
-    is_current_app_broadcasting: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingMonitor: ...
     def __new__(cls: typing.Type[AppBroadcastingMonitor]) -> AppBroadcastingMonitor:...
     def add_is_current_app_broadcasting_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AppBroadcastingMonitor, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_is_current_app_broadcasting_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def is_current_app_broadcasting(self) -> bool: ...
 
 class AppBroadcastingStatus(winrt.system.Object):
-    can_start_broadcast: bool
-    details: typing.Optional[AppBroadcastingStatusDetails]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingStatus: ...
+    @_property
+    def can_start_broadcast(self) -> bool: ...
+    @_property
+    def details(self) -> typing.Optional[AppBroadcastingStatusDetails]: ...
 
 class AppBroadcastingStatusDetails(winrt.system.Object):
-    is_any_app_broadcasting: bool
-    is_app_inactive: bool
-    is_blocked_for_app: bool
-    is_capture_resource_unavailable: bool
-    is_disabled_by_system: bool
-    is_disabled_by_user: bool
-    is_game_stream_in_progress: bool
-    is_gpu_constrained: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingStatusDetails: ...
+    @_property
+    def is_any_app_broadcasting(self) -> bool: ...
+    @_property
+    def is_app_inactive(self) -> bool: ...
+    @_property
+    def is_blocked_for_app(self) -> bool: ...
+    @_property
+    def is_capture_resource_unavailable(self) -> bool: ...
+    @_property
+    def is_disabled_by_system(self) -> bool: ...
+    @_property
+    def is_disabled_by_user(self) -> bool: ...
+    @_property
+    def is_game_stream_in_progress(self) -> bool: ...
+    @_property
+    def is_gpu_constrained(self) -> bool: ...
 
 class AppBroadcastingUI(winrt.system.Object):
     @staticmethod

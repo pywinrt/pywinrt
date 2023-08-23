@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,14 +14,18 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class InstalledDesktopApp(winrt.system.Object):
-    display_name: str
-    display_version: str
-    id: str
-    publisher: str
     def __str__(self) -> str: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InstalledDesktopApp: ...
     @staticmethod
     def get_inventory_async() -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[InstalledDesktopApp]]: ...
     def to_string(self) -> str: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def display_version(self) -> str: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def publisher(self) -> str: ...
 

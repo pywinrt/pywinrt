@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,26 +16,6 @@ from . import DayFormat, DayOfWeekFormat, HourFormat, MinuteFormat, MonthFormat,
 Self = typing.TypeVar('Self')
 
 class DateTimeFormatter(winrt.system.Object):
-    numeral_system: str
-    clock: str
-    geographic_region: str
-    include_day: DayFormat
-    include_day_of_week: DayOfWeekFormat
-    include_hour: HourFormat
-    include_minute: MinuteFormat
-    include_month: MonthFormat
-    include_second: SecondFormat
-    include_year: YearFormat
-    languages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    calendar: str
-    patterns: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    resolved_geographic_region: str
-    resolved_language: str
-    template: str
-    long_date: typing.ClassVar[typing.Optional[DateTimeFormatter]]
-    long_time: typing.ClassVar[typing.Optional[DateTimeFormatter]]
-    short_date: typing.ClassVar[typing.Optional[DateTimeFormatter]]
-    short_time: typing.ClassVar[typing.Optional[DateTimeFormatter]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DateTimeFormatter: ...
     @typing.overload
@@ -55,4 +36,42 @@ class DateTimeFormatter(winrt.system.Object):
     def format(self, value: datetime.datetime, /) -> str: ...
     @typing.overload
     def format(self, datetime: datetime.datetime, time_zone_id: str, /) -> str: ...
+    @_property
+    def numeral_system(self) -> str: ...
+    @numeral_system.setter
+    def numeral_system(self, value: str) -> None: ...
+    @_property
+    def clock(self) -> str: ...
+    @_property
+    def geographic_region(self) -> str: ...
+    @_property
+    def include_day(self) -> DayFormat: ...
+    @_property
+    def include_day_of_week(self) -> DayOfWeekFormat: ...
+    @_property
+    def include_hour(self) -> HourFormat: ...
+    @_property
+    def include_minute(self) -> MinuteFormat: ...
+    @_property
+    def include_month(self) -> MonthFormat: ...
+    @_property
+    def include_second(self) -> SecondFormat: ...
+    @_property
+    def include_year(self) -> YearFormat: ...
+    @_property
+    def languages(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def calendar(self) -> str: ...
+    @_property
+    def patterns(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def resolved_geographic_region(self) -> str: ...
+    @_property
+    def resolved_language(self) -> str: ...
+    @_property
+    def template(self) -> str: ...
+    long_date: typing.ClassVar[typing.Optional[DateTimeFormatter]]
+    long_time: typing.ClassVar[typing.Optional[DateTimeFormatter]]
+    short_date: typing.ClassVar[typing.Optional[DateTimeFormatter]]
+    short_time: typing.ClassVar[typing.Optional[DateTimeFormatter]]
 

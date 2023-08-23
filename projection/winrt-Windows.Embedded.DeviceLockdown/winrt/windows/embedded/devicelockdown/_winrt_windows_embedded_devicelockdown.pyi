@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -25,7 +26,8 @@ class DeviceLockdownProfile(winrt.system.Object):
     def get_supported_lockdown_profiles() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[_uuid.UUID]]: ...
 
 class DeviceLockdownProfileInformation(winrt.system.Object):
-    name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceLockdownProfileInformation: ...
+    @_property
+    def name(self) -> str: ...
 

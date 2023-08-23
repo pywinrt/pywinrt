@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,17 +14,22 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
-    key_id: str
-    key_name: str
-    subject: str
-    tenant_id: str
-    tenant_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationInfo: ...
+    @_property
+    def key_id(self) -> str: ...
+    @_property
+    def key_name(self) -> str: ...
+    @_property
+    def subject(self) -> str: ...
+    @_property
+    def tenant_id(self) -> str: ...
+    @_property
+    def tenant_name(self) -> str: ...
 
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object):
-    current: typing.ClassVar[typing.Optional[EnterpriseKeyCredentialRegistrationManager]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseKeyCredentialRegistrationManager: ...
     def get_registrations_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EnterpriseKeyCredentialRegistrationInfo]]: ...
+    current: typing.ClassVar[typing.Optional[EnterpriseKeyCredentialRegistrationManager]]
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -20,16 +21,16 @@ from . import DeliveryOptimizationDownloadMode, DeliveryOptimizationDownloadMode
 Self = typing.TypeVar('Self')
 
 class DeliveryOptimizationSettings(winrt.system.Object):
-    download_mode: DeliveryOptimizationDownloadMode
-    download_mode_source: DeliveryOptimizationDownloadModeSource
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeliveryOptimizationSettings: ...
     @staticmethod
     def get_current_settings() -> typing.Optional[DeliveryOptimizationSettings]: ...
+    @_property
+    def download_mode(self) -> DeliveryOptimizationDownloadMode: ...
+    @_property
+    def download_mode_source(self) -> DeliveryOptimizationDownloadModeSource: ...
 
 class StoreConfiguration(winrt.system.Object):
-    hardware_manufacturer_info: typing.ClassVar[typing.Optional[StoreHardwareManufacturerInfo]]
-    purchase_prompting_policy: typing.ClassVar[typing.Optional[typing.Optional[winrt.system.UInt32]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreConfiguration: ...
     @staticmethod
@@ -82,14 +83,20 @@ class StoreConfiguration(winrt.system.Object):
     def should_restrict_to_enterprise_store_only() -> bool: ...
     @staticmethod
     def should_restrict_to_enterprise_store_only_for_user(user: typing.Optional[winrt.windows.system.User], /) -> bool: ...
+    hardware_manufacturer_info: typing.ClassVar[typing.Optional[StoreHardwareManufacturerInfo]]
+    purchase_prompting_policy: typing.ClassVar[typing.Optional[typing.Optional[winrt.system.UInt32]]]
 
 class StoreHardwareManufacturerInfo(winrt.system.Object):
-    hardware_manufacturer_id: str
-    manufacturer_name: str
-    model_name: str
-    store_content_modifier_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreHardwareManufacturerInfo: ...
+    @_property
+    def hardware_manufacturer_id(self) -> str: ...
+    @_property
+    def manufacturer_name(self) -> str: ...
+    @_property
+    def model_name(self) -> str: ...
+    @_property
+    def store_content_modifier_id(self) -> str: ...
 
 class StorePreview(winrt.system.Object):
     @staticmethod
@@ -100,31 +107,46 @@ class StorePreview(winrt.system.Object):
     def request_product_purchase_by_product_id_and_sku_id_async(product_id: str, sku_id: str, /) -> winrt.windows.foundation.IAsyncOperation[StorePreviewPurchaseResults]: ...
 
 class StorePreviewProductInfo(winrt.system.Object):
-    description: str
-    product_id: str
-    product_type: str
-    sku_info_list: typing.Optional[winrt.windows.foundation.collections.IVectorView[StorePreviewSkuInfo]]
-    title: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreviewProductInfo: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def product_id(self) -> str: ...
+    @_property
+    def product_type(self) -> str: ...
+    @_property
+    def sku_info_list(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[StorePreviewSkuInfo]]: ...
+    @_property
+    def title(self) -> str: ...
 
 class StorePreviewPurchaseResults(winrt.system.Object):
-    product_purchase_status: StorePreviewProductPurchaseStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreviewPurchaseResults: ...
+    @_property
+    def product_purchase_status(self) -> StorePreviewProductPurchaseStatus: ...
 
 class StorePreviewSkuInfo(winrt.system.Object):
-    currency_code: str
-    custom_developer_data: str
-    description: str
-    extended_data: str
-    formatted_list_price: str
-    product_id: str
-    sku_id: str
-    sku_type: str
-    title: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePreviewSkuInfo: ...
+    @_property
+    def currency_code(self) -> str: ...
+    @_property
+    def custom_developer_data(self) -> str: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def extended_data(self) -> str: ...
+    @_property
+    def formatted_list_price(self) -> str: ...
+    @_property
+    def product_id(self) -> str: ...
+    @_property
+    def sku_id(self) -> str: ...
+    @_property
+    def sku_type(self) -> str: ...
+    @_property
+    def title(self) -> str: ...
 
 class WebAuthenticationCoreManagerHelper(winrt.system.Object):
     @staticmethod

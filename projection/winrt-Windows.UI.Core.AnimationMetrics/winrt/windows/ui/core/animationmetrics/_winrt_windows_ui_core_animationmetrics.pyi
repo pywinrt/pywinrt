@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,64 +16,101 @@ from . import AnimationEffect, AnimationEffectTarget, PropertyAnimationType
 Self = typing.TypeVar('Self')
 
 class AnimationDescription(winrt.system.Object):
-    animations: typing.Optional[winrt.windows.foundation.collections.IVectorView[IPropertyAnimation]]
-    delay_limit: datetime.timedelta
-    stagger_delay: datetime.timedelta
-    stagger_delay_factor: winrt.system.Single
-    z_order: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimationDescription: ...
     def __new__(cls: typing.Type[AnimationDescription], effect: AnimationEffect, target: AnimationEffectTarget) -> AnimationDescription:...
+    @_property
+    def animations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[IPropertyAnimation]]: ...
+    @_property
+    def delay_limit(self) -> datetime.timedelta: ...
+    @_property
+    def stagger_delay(self) -> datetime.timedelta: ...
+    @_property
+    def stagger_delay_factor(self) -> winrt.system.Single: ...
+    @_property
+    def z_order(self) -> winrt.system.Int32: ...
 
 class OpacityAnimation(winrt.system.Object):
-    final_opacity: winrt.system.Single
-    initial_opacity: typing.Optional[typing.Optional[winrt.system.Single]]
-    control1: winrt.windows.foundation.Point
-    control2: winrt.windows.foundation.Point
-    delay: datetime.timedelta
-    duration: datetime.timedelta
-    type: PropertyAnimationType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OpacityAnimation: ...
+    @_property
+    def final_opacity(self) -> winrt.system.Single: ...
+    @_property
+    def initial_opacity(self) -> typing.Optional[typing.Optional[winrt.system.Single]]: ...
+    @_property
+    def control1(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def control2(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def delay(self) -> datetime.timedelta: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def type(self) -> PropertyAnimationType: ...
 
 class PropertyAnimation(winrt.system.Object):
-    control1: winrt.windows.foundation.Point
-    control2: winrt.windows.foundation.Point
-    delay: datetime.timedelta
-    duration: datetime.timedelta
-    type: PropertyAnimationType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyAnimation: ...
+    @_property
+    def control1(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def control2(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def delay(self) -> datetime.timedelta: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def type(self) -> PropertyAnimationType: ...
 
 class ScaleAnimation(winrt.system.Object):
-    control1: winrt.windows.foundation.Point
-    control2: winrt.windows.foundation.Point
-    delay: datetime.timedelta
-    duration: datetime.timedelta
-    type: PropertyAnimationType
-    final_scale_x: winrt.system.Single
-    final_scale_y: winrt.system.Single
-    initial_scale_x: typing.Optional[typing.Optional[winrt.system.Single]]
-    initial_scale_y: typing.Optional[typing.Optional[winrt.system.Single]]
-    normalized_origin: winrt.windows.foundation.Point
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScaleAnimation: ...
+    @_property
+    def control1(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def control2(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def delay(self) -> datetime.timedelta: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def type(self) -> PropertyAnimationType: ...
+    @_property
+    def final_scale_x(self) -> winrt.system.Single: ...
+    @_property
+    def final_scale_y(self) -> winrt.system.Single: ...
+    @_property
+    def initial_scale_x(self) -> typing.Optional[typing.Optional[winrt.system.Single]]: ...
+    @_property
+    def initial_scale_y(self) -> typing.Optional[typing.Optional[winrt.system.Single]]: ...
+    @_property
+    def normalized_origin(self) -> winrt.windows.foundation.Point: ...
 
 class TranslationAnimation(winrt.system.Object):
-    control1: winrt.windows.foundation.Point
-    control2: winrt.windows.foundation.Point
-    delay: datetime.timedelta
-    duration: datetime.timedelta
-    type: PropertyAnimationType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TranslationAnimation: ...
+    @_property
+    def control1(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def control2(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def delay(self) -> datetime.timedelta: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def type(self) -> PropertyAnimationType: ...
 
 class IPropertyAnimation(winrt.system.Object):
-    control1: winrt.windows.foundation.Point
-    control2: winrt.windows.foundation.Point
-    delay: datetime.timedelta
-    duration: datetime.timedelta
-    type: PropertyAnimationType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPropertyAnimation: ...
+    @_property
+    def control1(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def control2(self) -> winrt.windows.foundation.Point: ...
+    @_property
+    def delay(self) -> datetime.timedelta: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def type(self) -> PropertyAnimationType: ...
 

@@ -5,29 +5,37 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class AutomationConnection(winrt.system.Object):
-    app_user_model_id: str
-    executable_file_name: str
-    is_remote_system: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationConnection: ...
+    @_property
+    def app_user_model_id(self) -> str: ...
+    @_property
+    def executable_file_name(self) -> str: ...
+    @_property
+    def is_remote_system(self) -> bool: ...
 
 class AutomationConnectionBoundObject(winrt.system.Object):
-    connection: typing.Optional[AutomationConnection]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationConnectionBoundObject: ...
+    @_property
+    def connection(self) -> typing.Optional[AutomationConnection]: ...
 
 class AutomationElement(winrt.system.Object):
-    app_user_model_id: str
-    executable_file_name: str
-    is_remote_system: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationElement: ...
+    @_property
+    def app_user_model_id(self) -> str: ...
+    @_property
+    def executable_file_name(self) -> str: ...
+    @_property
+    def is_remote_system(self) -> bool: ...
 
 class AutomationTextRange(winrt.system.Object):
     @staticmethod

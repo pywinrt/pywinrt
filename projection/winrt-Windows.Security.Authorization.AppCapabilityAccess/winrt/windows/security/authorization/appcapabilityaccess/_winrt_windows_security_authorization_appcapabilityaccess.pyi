@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,9 +17,6 @@ from . import AppCapabilityAccessStatus
 Self = typing.TypeVar('Self')
 
 class AppCapability(winrt.system.Object):
-    capability_name: str
-    user: typing.Optional[winrt.windows.system.User]
-    display_message: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCapability: ...
     def check_access(self) -> AppCapabilityAccessStatus: ...
@@ -33,6 +31,14 @@ class AppCapability(winrt.system.Object):
     def request_access_for_capabilities_for_user_async(user: typing.Optional[winrt.windows.system.User], capability_names: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IMapView[str, AppCapabilityAccessStatus]]: ...
     def add_access_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AppCapability, AppCapabilityAccessChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_access_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def capability_name(self) -> str: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
+    @_property
+    def display_message(self) -> str: ...
+    @display_message.setter
+    def display_message(self, value: str) -> None: ...
 
 class AppCapabilityAccessChangedEventArgs(winrt.system.Object):
     @staticmethod

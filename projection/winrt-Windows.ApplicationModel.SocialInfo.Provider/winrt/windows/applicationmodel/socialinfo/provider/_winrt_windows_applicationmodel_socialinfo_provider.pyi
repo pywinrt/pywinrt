@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.socialinfo
@@ -14,22 +15,36 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class SocialDashboardItemUpdater(winrt.system.Object):
-    timestamp: datetime.datetime
-    thumbnail: typing.Optional[winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail]
-    target_uri: typing.Optional[winrt.windows.foundation.Uri]
-    content: typing.Optional[winrt.windows.applicationmodel.socialinfo.SocialFeedContent]
-    owner_remote_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialDashboardItemUpdater: ...
     def commit_async(self) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def timestamp(self) -> datetime.datetime: ...
+    @timestamp.setter
+    def timestamp(self, value: datetime.datetime) -> None: ...
+    @_property
+    def thumbnail(self) -> typing.Optional[winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail]: ...
+    @thumbnail.setter
+    def thumbnail(self, value: typing.Optional[winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail]) -> None: ...
+    @_property
+    def target_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @target_uri.setter
+    def target_uri(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
+    @_property
+    def content(self) -> typing.Optional[winrt.windows.applicationmodel.socialinfo.SocialFeedContent]: ...
+    @_property
+    def owner_remote_id(self) -> str: ...
 
 class SocialFeedUpdater(winrt.system.Object):
-    items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.applicationmodel.socialinfo.SocialFeedItem]]
-    kind: winrt.windows.applicationmodel.socialinfo.SocialFeedKind
-    owner_remote_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SocialFeedUpdater: ...
     def commit_async(self) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def items(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.applicationmodel.socialinfo.SocialFeedItem]]: ...
+    @_property
+    def kind(self) -> winrt.windows.applicationmodel.socialinfo.SocialFeedKind: ...
+    @_property
+    def owner_remote_id(self) -> str: ...
 
 class SocialInfoProviderManager(winrt.system.Object):
     @staticmethod

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -12,15 +13,20 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class DeviceServicingDetails(winrt.system.Object):
-    arguments: str
-    device_id: str
-    expected_duration: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceServicingDetails: ...
+    @_property
+    def arguments(self) -> str: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def expected_duration(self) -> datetime.timedelta: ...
 
 class DeviceUseDetails(winrt.system.Object):
-    arguments: str
-    device_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceUseDetails: ...
+    @_property
+    def arguments(self) -> str: ...
+    @_property
+    def device_id(self) -> str: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.ui.composition
@@ -22,9 +23,10 @@ class CompositionDebugHeatMaps(winrt.system.Object):
     def show_redraw(self, subtree: typing.Optional[winrt.windows.ui.composition.Visual], /) -> None: ...
 
 class CompositionDebugSettings(winrt.system.Object):
-    heat_maps: typing.Optional[CompositionDebugHeatMaps]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionDebugSettings: ...
     @staticmethod
     def try_get_settings(compositor: typing.Optional[winrt.windows.ui.composition.Compositor], /) -> typing.Optional[CompositionDebugSettings]: ...
+    @_property
+    def heat_maps(self) -> typing.Optional[CompositionDebugHeatMaps]: ...
 

@@ -5,15 +5,16 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class SystemProtection(winrt.system.Object):
-    screen_locked: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemProtection: ...
     @staticmethod
     def request_screen_unlock() -> None: ...
+    screen_locked: typing.ClassVar[bool]
 

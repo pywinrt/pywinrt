@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -31,51 +32,80 @@ class HttpDiagnosticProvider(winrt.system.Object):
     def remove_response_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Object):
-    activity_id: _uuid.UUID
-    initiator: HttpDiagnosticRequestInitiator
-    process_id: winrt.system.UInt32
-    requested_uri: typing.Optional[winrt.windows.foundation.Uri]
-    source_locations: typing.Optional[winrt.windows.foundation.collections.IVectorView[HttpDiagnosticSourceLocation]]
-    thread_id: winrt.system.UInt32
-    timestamps: typing.Optional[HttpDiagnosticProviderRequestResponseTimestamps]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseCompletedEventArgs: ...
+    @_property
+    def activity_id(self) -> _uuid.UUID: ...
+    @_property
+    def initiator(self) -> HttpDiagnosticRequestInitiator: ...
+    @_property
+    def process_id(self) -> winrt.system.UInt32: ...
+    @_property
+    def requested_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @_property
+    def source_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[HttpDiagnosticSourceLocation]]: ...
+    @_property
+    def thread_id(self) -> winrt.system.UInt32: ...
+    @_property
+    def timestamps(self) -> typing.Optional[HttpDiagnosticProviderRequestResponseTimestamps]: ...
 
 class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
-    cache_checked_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    connection_completed_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    connection_initiated_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    name_resolved_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    request_completed_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    request_sent_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    response_completed_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    response_received_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    ssl_negotiated_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseTimestamps: ...
+    @_property
+    def cache_checked_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def connection_completed_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def connection_initiated_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def name_resolved_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def request_completed_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def request_sent_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def response_completed_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def response_received_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
+    @_property
+    def ssl_negotiated_timestamp(self) -> typing.Optional[typing.Optional[datetime.datetime]]: ...
 
 class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
-    activity_id: _uuid.UUID
-    initiator: HttpDiagnosticRequestInitiator
-    message: typing.Optional[winrt.windows.web.http.HttpRequestMessage]
-    process_id: winrt.system.UInt32
-    source_locations: typing.Optional[winrt.windows.foundation.collections.IVectorView[HttpDiagnosticSourceLocation]]
-    thread_id: winrt.system.UInt32
-    timestamp: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestSentEventArgs: ...
+    @_property
+    def activity_id(self) -> _uuid.UUID: ...
+    @_property
+    def initiator(self) -> HttpDiagnosticRequestInitiator: ...
+    @_property
+    def message(self) -> typing.Optional[winrt.windows.web.http.HttpRequestMessage]: ...
+    @_property
+    def process_id(self) -> winrt.system.UInt32: ...
+    @_property
+    def source_locations(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[HttpDiagnosticSourceLocation]]: ...
+    @_property
+    def thread_id(self) -> winrt.system.UInt32: ...
+    @_property
+    def timestamp(self) -> datetime.datetime: ...
 
 class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
-    activity_id: _uuid.UUID
-    message: typing.Optional[winrt.windows.web.http.HttpResponseMessage]
-    timestamp: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderResponseReceivedEventArgs: ...
+    @_property
+    def activity_id(self) -> _uuid.UUID: ...
+    @_property
+    def message(self) -> typing.Optional[winrt.windows.web.http.HttpResponseMessage]: ...
+    @_property
+    def timestamp(self) -> datetime.datetime: ...
 
 class HttpDiagnosticSourceLocation(winrt.system.Object):
-    column_number: winrt.system.UInt64
-    line_number: winrt.system.UInt64
-    source_uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticSourceLocation: ...
+    @_property
+    def column_number(self) -> winrt.system.UInt64: ...
+    @_property
+    def line_number(self) -> winrt.system.UInt64: ...
+    @_property
+    def source_uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
 

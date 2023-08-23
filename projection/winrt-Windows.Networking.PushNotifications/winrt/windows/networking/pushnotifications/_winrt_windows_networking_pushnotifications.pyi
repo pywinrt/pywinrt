@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -18,13 +19,15 @@ from . import PushNotificationType
 Self = typing.TypeVar('Self')
 
 class PushNotificationChannel(winrt.system.Object):
-    expiration_time: datetime.datetime
-    uri: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannel: ...
     def close(self) -> None: ...
     def add_push_notification_received(self, handler: winrt.windows.foundation.TypedEventHandler[PushNotificationChannel, PushNotificationReceivedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_push_notification_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def expiration_time(self) -> datetime.datetime: ...
+    @_property
+    def uri(self) -> str: ...
 
 class PushNotificationChannelManager(winrt.system.Object):
     @staticmethod
@@ -47,7 +50,6 @@ class PushNotificationChannelManager(winrt.system.Object):
     def remove_channels_revoked(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PushNotificationChannelManagerForUser(winrt.system.Object):
-    user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannelManagerForUser: ...
     @typing.overload
@@ -59,26 +61,40 @@ class PushNotificationChannelManagerForUser(winrt.system.Object):
     def create_raw_push_notification_channel_with_alternate_key_for_application_async(self, app_server_key: typing.Optional[winrt.windows.storage.streams.IBuffer], channel_id: str, /) -> winrt.windows.foundation.IAsyncOperation[PushNotificationChannel]: ...
     @typing.overload
     def create_raw_push_notification_channel_with_alternate_key_for_application_async(self, app_server_key: typing.Optional[winrt.windows.storage.streams.IBuffer], channel_id: str, app_id: str, /) -> winrt.windows.foundation.IAsyncOperation[PushNotificationChannel]: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
 class PushNotificationChannelsRevokedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannelsRevokedEventArgs: ...
 
 class PushNotificationReceivedEventArgs(winrt.system.Object):
-    cancel: bool
-    badge_notification: typing.Optional[winrt.windows.ui.notifications.BadgeNotification]
-    notification_type: PushNotificationType
-    raw_notification: typing.Optional[RawNotification]
-    tile_notification: typing.Optional[winrt.windows.ui.notifications.TileNotification]
-    toast_notification: typing.Optional[winrt.windows.ui.notifications.ToastNotification]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PushNotificationReceivedEventArgs: ...
+    @_property
+    def cancel(self) -> bool: ...
+    @cancel.setter
+    def cancel(self, value: bool) -> None: ...
+    @_property
+    def badge_notification(self) -> typing.Optional[winrt.windows.ui.notifications.BadgeNotification]: ...
+    @_property
+    def notification_type(self) -> PushNotificationType: ...
+    @_property
+    def raw_notification(self) -> typing.Optional[RawNotification]: ...
+    @_property
+    def tile_notification(self) -> typing.Optional[winrt.windows.ui.notifications.TileNotification]: ...
+    @_property
+    def toast_notification(self) -> typing.Optional[winrt.windows.ui.notifications.ToastNotification]: ...
 
 class RawNotification(winrt.system.Object):
-    content: str
-    channel_id: str
-    headers: typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]
-    content_bytes: typing.Optional[winrt.windows.storage.streams.IBuffer]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RawNotification: ...
+    @_property
+    def content(self) -> str: ...
+    @_property
+    def channel_id(self) -> str: ...
+    @_property
+    def headers(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]: ...
+    @_property
+    def content_bytes(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation.collections
@@ -12,13 +13,14 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class CharacterGrouping(winrt.system.Object):
-    first: str
-    label: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CharacterGrouping: ...
+    @_property
+    def first(self) -> str: ...
+    @_property
+    def label(self) -> str: ...
 
 class CharacterGroupings(winrt.system.Object, typing.Sequence[CharacterGrouping]):
-    size: winrt.system.UInt32
     def __len__(self) -> int: ...
     @typing.overload
     def __getitem__(self, index: int) -> CharacterGrouping: ...
@@ -35,4 +37,6 @@ class CharacterGroupings(winrt.system.Object, typing.Sequence[CharacterGrouping]
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[CharacterGrouping], /) -> winrt.system.UInt32: ...
     def index_of(self, value: typing.Optional[CharacterGrouping], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def lookup(self, text: str, /) -> str: ...
+    @_property
+    def size(self) -> winrt.system.UInt32: ...
 

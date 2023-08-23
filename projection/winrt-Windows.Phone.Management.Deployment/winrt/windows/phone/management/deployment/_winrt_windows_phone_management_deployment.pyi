@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -17,18 +18,22 @@ from . import EnterpriseEnrollmentStatus, EnterpriseStatus
 Self = typing.TypeVar('Self')
 
 class Enterprise(winrt.system.Object):
-    enrollment_valid_from: datetime.datetime
-    enrollment_valid_to: datetime.datetime
-    id: _uuid.UUID
-    name: str
-    status: EnterpriseStatus
-    workplace_id: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Enterprise: ...
+    @_property
+    def enrollment_valid_from(self) -> datetime.datetime: ...
+    @_property
+    def enrollment_valid_to(self) -> datetime.datetime: ...
+    @_property
+    def id(self) -> _uuid.UUID: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def status(self) -> EnterpriseStatus: ...
+    @_property
+    def workplace_id(self) -> winrt.system.Int32: ...
 
 class EnterpriseEnrollmentManager(winrt.system.Object):
-    current_enterprise: typing.ClassVar[typing.Optional[Enterprise]]
-    enrolled_enterprises: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[Enterprise]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseEnrollmentManager: ...
     @staticmethod
@@ -37,12 +42,16 @@ class EnterpriseEnrollmentManager(winrt.system.Object):
     def request_unenrollment_async(enterprise: typing.Optional[Enterprise], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @staticmethod
     def validate_enterprises_async() -> winrt.windows.foundation.IAsyncAction: ...
+    current_enterprise: typing.ClassVar[typing.Optional[Enterprise]]
+    enrolled_enterprises: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[Enterprise]]]
 
 class EnterpriseEnrollmentResult(winrt.system.Object):
-    enrolled_enterprise: typing.Optional[Enterprise]
-    status: EnterpriseEnrollmentStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnterpriseEnrollmentResult: ...
+    @_property
+    def enrolled_enterprise(self) -> typing.Optional[Enterprise]: ...
+    @_property
+    def status(self) -> EnterpriseEnrollmentStatus: ...
 
 class InstallationManager(winrt.system.Object):
     @staticmethod
@@ -69,9 +78,12 @@ class InstallationManager(winrt.system.Object):
     def remove_package_async(package_full_name: str, removal_options: winrt.windows.management.deployment.RemovalOptions, /) -> winrt.windows.foundation.IAsyncOperationWithProgress[PackageInstallResult, winrt.system.UInt32]: ...
 
 class PackageInstallResult(winrt.system.Object):
-    install_state: winrt.windows.management.deployment.PackageInstallState
-    product_id: str
-    error_text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageInstallResult: ...
+    @_property
+    def install_state(self) -> winrt.windows.management.deployment.PackageInstallState: ...
+    @_property
+    def product_id(self) -> str: ...
+    @_property
+    def error_text(self) -> str: ...
 

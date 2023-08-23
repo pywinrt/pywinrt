@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,9 +16,6 @@ import winrt.windows.graphics.imaging
 Self = typing.TypeVar('Self')
 
 class OcrEngine(winrt.system.Object):
-    recognizer_language: typing.Optional[winrt.windows.globalization.Language]
-    available_recognizer_languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.globalization.Language]]]
-    max_image_dimension: typing.ClassVar[winrt.system.UInt32]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrEngine: ...
     @staticmethod
@@ -27,23 +25,34 @@ class OcrEngine(winrt.system.Object):
     def try_create_from_language(language: typing.Optional[winrt.windows.globalization.Language], /) -> typing.Optional[OcrEngine]: ...
     @staticmethod
     def try_create_from_user_profile_languages() -> typing.Optional[OcrEngine]: ...
+    @_property
+    def recognizer_language(self) -> typing.Optional[winrt.windows.globalization.Language]: ...
+    available_recognizer_languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.globalization.Language]]]
+    max_image_dimension: typing.ClassVar[winrt.system.UInt32]
 
 class OcrLine(winrt.system.Object):
-    text: str
-    words: typing.Optional[winrt.windows.foundation.collections.IVectorView[OcrWord]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrLine: ...
+    @_property
+    def text(self) -> str: ...
+    @_property
+    def words(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[OcrWord]]: ...
 
 class OcrResult(winrt.system.Object):
-    lines: typing.Optional[winrt.windows.foundation.collections.IVectorView[OcrLine]]
-    text: str
-    text_angle: typing.Optional[typing.Optional[winrt.system.Double]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrResult: ...
+    @_property
+    def lines(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[OcrLine]]: ...
+    @_property
+    def text(self) -> str: ...
+    @_property
+    def text_angle(self) -> typing.Optional[typing.Optional[winrt.system.Double]]: ...
 
 class OcrWord(winrt.system.Object):
-    bounding_rect: winrt.windows.foundation.Rect
-    text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OcrWord: ...
+    @_property
+    def bounding_rect(self) -> winrt.windows.foundation.Rect: ...
+    @_property
+    def text(self) -> str: ...
 

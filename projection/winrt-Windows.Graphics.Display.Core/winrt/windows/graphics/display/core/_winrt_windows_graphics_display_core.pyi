@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -47,18 +48,29 @@ class HdmiDisplayInformation(winrt.system.Object):
     def remove_display_modes_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class HdmiDisplayMode(winrt.system.Object):
-    bits_per_pixel: winrt.system.UInt16
-    color_space: HdmiDisplayColorSpace
-    is2086_metadata_supported: bool
-    is_sdr_luminance_supported: bool
-    is_smpte2084_supported: bool
-    pixel_encoding: HdmiDisplayPixelEncoding
-    refresh_rate: winrt.system.Double
-    resolution_height_in_raw_pixels: winrt.system.UInt32
-    resolution_width_in_raw_pixels: winrt.system.UInt32
-    stereo_enabled: bool
-    is_dolby_vision_low_latency_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HdmiDisplayMode: ...
     def is_equal(self, mode: typing.Optional[HdmiDisplayMode], /) -> bool: ...
+    @_property
+    def bits_per_pixel(self) -> winrt.system.UInt16: ...
+    @_property
+    def color_space(self) -> HdmiDisplayColorSpace: ...
+    @_property
+    def is2086_metadata_supported(self) -> bool: ...
+    @_property
+    def is_sdr_luminance_supported(self) -> bool: ...
+    @_property
+    def is_smpte2084_supported(self) -> bool: ...
+    @_property
+    def pixel_encoding(self) -> HdmiDisplayPixelEncoding: ...
+    @_property
+    def refresh_rate(self) -> winrt.system.Double: ...
+    @_property
+    def resolution_height_in_raw_pixels(self) -> winrt.system.UInt32: ...
+    @_property
+    def resolution_width_in_raw_pixels(self) -> winrt.system.UInt32: ...
+    @_property
+    def stereo_enabled(self) -> bool: ...
+    @_property
+    def is_dolby_vision_low_latency_supported(self) -> bool: ...
 

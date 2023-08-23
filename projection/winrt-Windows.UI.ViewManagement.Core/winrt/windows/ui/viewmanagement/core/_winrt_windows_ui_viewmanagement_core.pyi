@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -28,17 +29,22 @@ class CoreFrameworkInputView(winrt.system.Object):
     def remove_primary_view_animation_starting(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreFrameworkInputViewAnimationStartingEventArgs(winrt.system.Object):
-    animation_duration: datetime.timedelta
-    framework_animation_recommended: bool
-    occlusions: typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreFrameworkInputViewAnimationStartingEventArgs: ...
+    @_property
+    def animation_duration(self) -> datetime.timedelta: ...
+    @_property
+    def framework_animation_recommended(self) -> bool: ...
+    @_property
+    def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
 class CoreFrameworkInputViewOcclusionsChangedEventArgs(winrt.system.Object):
-    handled: bool
-    occlusions: typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreFrameworkInputViewOcclusionsChangedEventArgs: ...
+    @_property
+    def handled(self) -> bool: ...
+    @_property
+    def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
 class CoreInputView(winrt.system.Object):
     @staticmethod
@@ -73,11 +79,16 @@ class CoreInputView(winrt.system.Object):
     def remove_supported_kinds_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreInputViewAnimationStartingEventArgs(winrt.system.Object):
-    handled: bool
-    animation_duration: datetime.timedelta
-    occlusions: typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewAnimationStartingEventArgs: ...
+    @_property
+    def handled(self) -> bool: ...
+    @handled.setter
+    def handled(self, value: bool) -> None: ...
+    @_property
+    def animation_duration(self) -> datetime.timedelta: ...
+    @_property
+    def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
 class CoreInputViewHidingEventArgs(winrt.system.Object):
     @staticmethod
@@ -85,16 +96,22 @@ class CoreInputViewHidingEventArgs(winrt.system.Object):
     def try_cancel(self) -> bool: ...
 
 class CoreInputViewOcclusion(winrt.system.Object):
-    occluding_rect: winrt.windows.foundation.Rect
-    occlusion_kind: CoreInputViewOcclusionKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewOcclusion: ...
+    @_property
+    def occluding_rect(self) -> winrt.windows.foundation.Rect: ...
+    @_property
+    def occlusion_kind(self) -> CoreInputViewOcclusionKind: ...
 
 class CoreInputViewOcclusionsChangedEventArgs(winrt.system.Object):
-    handled: bool
-    occlusions: typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewOcclusionsChangedEventArgs: ...
+    @_property
+    def handled(self) -> bool: ...
+    @handled.setter
+    def handled(self, value: bool) -> None: ...
+    @_property
+    def occlusions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreInputViewOcclusion]]: ...
 
 class CoreInputViewShowingEventArgs(winrt.system.Object):
     @staticmethod
@@ -102,12 +119,20 @@ class CoreInputViewShowingEventArgs(winrt.system.Object):
     def try_cancel(self) -> bool: ...
 
 class CoreInputViewTransferringXYFocusEventArgs(winrt.system.Object):
-    transfer_handled: bool
-    keep_primary_view_visible: bool
-    direction: CoreInputViewXYFocusTransferDirection
-    origin: winrt.windows.foundation.Rect
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreInputViewTransferringXYFocusEventArgs: ...
+    @_property
+    def transfer_handled(self) -> bool: ...
+    @transfer_handled.setter
+    def transfer_handled(self, value: bool) -> None: ...
+    @_property
+    def keep_primary_view_visible(self) -> bool: ...
+    @keep_primary_view_visible.setter
+    def keep_primary_view_visible(self, value: bool) -> None: ...
+    @_property
+    def direction(self) -> CoreInputViewXYFocusTransferDirection: ...
+    @_property
+    def origin(self) -> winrt.windows.foundation.Rect: ...
 
 class UISettingsController(winrt.system.Object):
     @staticmethod

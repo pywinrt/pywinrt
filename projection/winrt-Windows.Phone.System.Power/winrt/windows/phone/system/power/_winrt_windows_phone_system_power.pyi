@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,12 +15,12 @@ from . import PowerSavingMode
 Self = typing.TypeVar('Self')
 
 class PowerManager(winrt.system.Object):
-    power_saving_mode: typing.ClassVar[PowerSavingMode]
-    power_saving_mode_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerManager: ...
     @staticmethod
     def add_power_saving_mode_changed(change_handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_power_saving_mode_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    power_saving_mode: typing.ClassVar[PowerSavingMode]
+    power_saving_mode_enabled: typing.ClassVar[bool]
 

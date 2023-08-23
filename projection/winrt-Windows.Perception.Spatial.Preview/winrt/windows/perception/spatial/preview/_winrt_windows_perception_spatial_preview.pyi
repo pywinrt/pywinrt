@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation.numerics
@@ -13,11 +14,14 @@ import winrt.windows.perception.spatial
 Self = typing.TypeVar('Self')
 
 class SpatialGraphInteropFrameOfReferencePreview(winrt.system.Object):
-    coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]
-    coordinate_system_to_node_transform: winrt.windows.foundation.numerics.Matrix4x4
-    node_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialGraphInteropFrameOfReferencePreview: ...
+    @_property
+    def coordinate_system(self) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
+    @_property
+    def coordinate_system_to_node_transform(self) -> winrt.windows.foundation.numerics.Matrix4x4: ...
+    @_property
+    def node_id(self) -> _uuid.UUID: ...
 
 class SpatialGraphInteropPreview(winrt.system.Object):
     @staticmethod

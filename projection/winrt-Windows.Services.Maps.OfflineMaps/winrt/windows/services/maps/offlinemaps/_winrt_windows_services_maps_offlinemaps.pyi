@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.geolocation
@@ -16,10 +17,6 @@ from . import OfflineMapPackageQueryStatus, OfflineMapPackageStartDownloadStatus
 Self = typing.TypeVar('Self')
 
 class OfflineMapPackage(winrt.system.Object):
-    display_name: str
-    enclosing_region_name: str
-    estimated_size_in_bytes: winrt.system.UInt64
-    status: OfflineMapPackageStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OfflineMapPackage: ...
     @staticmethod
@@ -31,15 +28,26 @@ class OfflineMapPackage(winrt.system.Object):
     def request_start_download_async(self) -> winrt.windows.foundation.IAsyncOperation[OfflineMapPackageStartDownloadResult]: ...
     def add_status_changed(self, value: winrt.windows.foundation.TypedEventHandler[OfflineMapPackage, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def enclosing_region_name(self) -> str: ...
+    @_property
+    def estimated_size_in_bytes(self) -> winrt.system.UInt64: ...
+    @_property
+    def status(self) -> OfflineMapPackageStatus: ...
 
 class OfflineMapPackageQueryResult(winrt.system.Object):
-    packages: typing.Optional[winrt.windows.foundation.collections.IVectorView[OfflineMapPackage]]
-    status: OfflineMapPackageQueryStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OfflineMapPackageQueryResult: ...
+    @_property
+    def packages(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[OfflineMapPackage]]: ...
+    @_property
+    def status(self) -> OfflineMapPackageQueryStatus: ...
 
 class OfflineMapPackageStartDownloadResult(winrt.system.Object):
-    status: OfflineMapPackageStartDownloadStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OfflineMapPackageStartDownloadResult: ...
+    @_property
+    def status(self) -> OfflineMapPackageStartDownloadStatus: ...
 

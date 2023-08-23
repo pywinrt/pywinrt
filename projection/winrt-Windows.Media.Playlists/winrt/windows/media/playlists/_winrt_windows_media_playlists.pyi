@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,7 +17,6 @@ from . import PlaylistFormat
 Self = typing.TypeVar('Self')
 
 class Playlist(winrt.system.Object):
-    files: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.storage.StorageFile]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Playlist: ...
     def __new__(cls: typing.Type[Playlist]) -> Playlist:...
@@ -27,4 +27,6 @@ class Playlist(winrt.system.Object):
     @typing.overload
     def save_as_async(self, save_location: typing.Optional[winrt.windows.storage.IStorageFolder], desired_name: str, option: winrt.windows.storage.NameCollisionOption, playlist_format: PlaylistFormat, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.StorageFile]: ...
     def save_async(self) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def files(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.storage.StorageFile]]: ...
 

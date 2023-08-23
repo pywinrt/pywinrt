@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,11 +14,6 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class CustomSensor(winrt.system.Object):
-    report_interval: winrt.system.UInt32
-    device_id: str
-    minimum_report_interval: winrt.system.UInt32
-    report_latency: winrt.system.UInt32
-    max_batch_size: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSensor: ...
     @staticmethod
@@ -27,16 +23,34 @@ class CustomSensor(winrt.system.Object):
     def get_device_selector(interface_id: _uuid.UUID, /) -> str: ...
     def add_reading_changed(self, handler: winrt.windows.foundation.TypedEventHandler[CustomSensor, CustomSensorReadingChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_reading_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def report_interval(self) -> winrt.system.UInt32: ...
+    @report_interval.setter
+    def report_interval(self, value: winrt.system.UInt32) -> None: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def minimum_report_interval(self) -> winrt.system.UInt32: ...
+    @_property
+    def report_latency(self) -> winrt.system.UInt32: ...
+    @report_latency.setter
+    def report_latency(self, value: winrt.system.UInt32) -> None: ...
+    @_property
+    def max_batch_size(self) -> winrt.system.UInt32: ...
 
 class CustomSensorReading(winrt.system.Object):
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]
-    timestamp: datetime.datetime
-    performance_count: typing.Optional[typing.Optional[datetime.timedelta]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSensorReading: ...
+    @_property
+    def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]: ...
+    @_property
+    def timestamp(self) -> datetime.datetime: ...
+    @_property
+    def performance_count(self) -> typing.Optional[typing.Optional[datetime.timedelta]]: ...
 
 class CustomSensorReadingChangedEventArgs(winrt.system.Object):
-    reading: typing.Optional[CustomSensorReading]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomSensorReadingChangedEventArgs: ...
+    @_property
+    def reading(self) -> typing.Optional[CustomSensorReading]: ...
 

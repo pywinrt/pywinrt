@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.geolocation
@@ -16,13 +17,6 @@ from . import GeofenceMonitorStatus, GeofenceRemovalReason, GeofenceState, Monit
 Self = typing.TypeVar('Self')
 
 class Geofence(winrt.system.Object):
-    duration: datetime.timedelta
-    dwell_time: datetime.timedelta
-    geoshape: typing.Optional[winrt.windows.devices.geolocation.IGeoshape]
-    id: str
-    monitored_states: MonitoredGeofenceStates
-    single_use: bool
-    start_time: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geofence: ...
     @typing.overload
@@ -33,12 +27,22 @@ class Geofence(winrt.system.Object):
     def __new__(cls: typing.Type[Geofence], id: str, geoshape: typing.Optional[winrt.windows.devices.geolocation.IGeoshape], monitored_states: MonitoredGeofenceStates, single_use: bool, dwell_time: datetime.timedelta) -> Geofence:...
     @typing.overload
     def __new__(cls: typing.Type[Geofence], id: str, geoshape: typing.Optional[winrt.windows.devices.geolocation.IGeoshape], monitored_states: MonitoredGeofenceStates, single_use: bool, dwell_time: datetime.timedelta, start_time: datetime.datetime, duration: datetime.timedelta) -> Geofence:...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def dwell_time(self) -> datetime.timedelta: ...
+    @_property
+    def geoshape(self) -> typing.Optional[winrt.windows.devices.geolocation.IGeoshape]: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def monitored_states(self) -> MonitoredGeofenceStates: ...
+    @_property
+    def single_use(self) -> bool: ...
+    @_property
+    def start_time(self) -> datetime.datetime: ...
 
 class GeofenceMonitor(winrt.system.Object):
-    geofences: typing.Optional[winrt.windows.foundation.collections.IVector[Geofence]]
-    last_known_geoposition: typing.Optional[winrt.windows.devices.geolocation.Geoposition]
-    status: GeofenceMonitorStatus
-    current: typing.ClassVar[typing.Optional[GeofenceMonitor]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeofenceMonitor: ...
     def read_reports(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GeofenceStateChangeReport]]: ...
@@ -46,12 +50,23 @@ class GeofenceMonitor(winrt.system.Object):
     def remove_geofence_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_status_changed(self, event_handler: winrt.windows.foundation.TypedEventHandler[GeofenceMonitor, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def geofences(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[Geofence]]: ...
+    @_property
+    def last_known_geoposition(self) -> typing.Optional[winrt.windows.devices.geolocation.Geoposition]: ...
+    @_property
+    def status(self) -> GeofenceMonitorStatus: ...
+    current: typing.ClassVar[typing.Optional[GeofenceMonitor]]
 
 class GeofenceStateChangeReport(winrt.system.Object):
-    geofence: typing.Optional[Geofence]
-    geoposition: typing.Optional[winrt.windows.devices.geolocation.Geoposition]
-    new_state: GeofenceState
-    removal_reason: GeofenceRemovalReason
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeofenceStateChangeReport: ...
+    @_property
+    def geofence(self) -> typing.Optional[Geofence]: ...
+    @_property
+    def geoposition(self) -> typing.Optional[winrt.windows.devices.geolocation.Geoposition]: ...
+    @_property
+    def new_state(self) -> GeofenceState: ...
+    @_property
+    def removal_reason(self) -> GeofenceRemovalReason: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,21 +17,39 @@ from . import ContentAccessRestrictionLevel, RatedContentCategory
 Self = typing.TypeVar('Self')
 
 class ContentRestrictionsBrowsePolicy(winrt.system.Object):
-    geographic_region: str
-    max_browsable_age_rating: typing.Optional[typing.Optional[winrt.system.UInt32]]
-    preferred_age_rating: typing.Optional[typing.Optional[winrt.system.UInt32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentRestrictionsBrowsePolicy: ...
+    @_property
+    def geographic_region(self) -> str: ...
+    @_property
+    def max_browsable_age_rating(self) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
+    @_property
+    def preferred_age_rating(self) -> typing.Optional[typing.Optional[winrt.system.UInt32]]: ...
 
 class RatedContentDescription(winrt.system.Object):
-    title: str
-    ratings: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
-    image: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]
-    id: str
-    category: RatedContentCategory
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatedContentDescription: ...
     def __new__(cls: typing.Type[RatedContentDescription], id: str, title: str, category: RatedContentCategory) -> RatedContentDescription:...
+    @_property
+    def title(self) -> str: ...
+    @title.setter
+    def title(self, value: str) -> None: ...
+    @_property
+    def ratings(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
+    @ratings.setter
+    def ratings(self, value: typing.Optional[winrt.windows.foundation.collections.IVector[str]]) -> None: ...
+    @_property
+    def image(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]: ...
+    @image.setter
+    def image(self, value: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]) -> None: ...
+    @_property
+    def id(self) -> str: ...
+    @id.setter
+    def id(self, value: str) -> None: ...
+    @_property
+    def category(self) -> RatedContentCategory: ...
+    @category.setter
+    def category(self, value: RatedContentCategory) -> None: ...
 
 class RatedContentRestrictions(winrt.system.Object):
     @staticmethod

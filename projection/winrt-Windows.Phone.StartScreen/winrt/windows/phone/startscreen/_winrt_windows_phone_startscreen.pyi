@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,8 +14,6 @@ import winrt.windows.ui.notifications
 Self = typing.TypeVar('Self')
 
 class DualSimTile(winrt.system.Object):
-    display_name: str
-    is_pinned_to_start: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DualSimTile: ...
     def __new__(cls: typing.Type[DualSimTile]) -> DualSimTile:...
@@ -37,6 +36,12 @@ class DualSimTile(winrt.system.Object):
     def update_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @staticmethod
     def update_display_name_for_sim1_async(name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    @_property
+    def display_name(self) -> str: ...
+    @display_name.setter
+    def display_name(self, value: str) -> None: ...
+    @_property
+    def is_pinned_to_start(self) -> bool: ...
 
 class IToastNotificationManagerStatics3(winrt.system.Object):
     @staticmethod

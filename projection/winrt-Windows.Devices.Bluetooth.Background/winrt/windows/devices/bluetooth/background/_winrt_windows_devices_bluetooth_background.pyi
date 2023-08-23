@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.bluetooth
@@ -21,57 +22,86 @@ from . import BluetoothEventTriggeringMode
 Self = typing.TypeVar('Self')
 
 class BluetoothLEAdvertisementPublisherTriggerDetails(winrt.system.Object):
-    error: winrt.windows.devices.bluetooth.BluetoothError
-    status: winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatus
-    selected_transmit_power_level_in_d_bm: typing.Optional[typing.Optional[winrt.system.Int16]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisherTriggerDetails: ...
+    @_property
+    def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
+    @_property
+    def status(self) -> winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatus: ...
+    @_property
+    def selected_transmit_power_level_in_d_bm(self) -> typing.Optional[typing.Optional[winrt.system.Int16]]: ...
 
 class BluetoothLEAdvertisementWatcherTriggerDetails(winrt.system.Object):
-    advertisements: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementReceivedEventArgs]]
-    error: winrt.windows.devices.bluetooth.BluetoothError
-    signal_strength_filter: typing.Optional[winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcherTriggerDetails: ...
+    @_property
+    def advertisements(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementReceivedEventArgs]]: ...
+    @_property
+    def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
+    @_property
+    def signal_strength_filter(self) -> typing.Optional[winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter]: ...
 
 class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
-    characteristic: typing.Optional[winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic]
-    value: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    error: winrt.windows.devices.bluetooth.BluetoothError
-    event_triggering_mode: BluetoothEventTriggeringMode
-    value_changed_events: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.bluetooth.genericattributeprofile.GattValueChangedEventArgs]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristicNotificationTriggerDetails: ...
+    @_property
+    def characteristic(self) -> typing.Optional[winrt.windows.devices.bluetooth.genericattributeprofile.GattCharacteristic]: ...
+    @_property
+    def value(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def error(self) -> winrt.windows.devices.bluetooth.BluetoothError: ...
+    @_property
+    def event_triggering_mode(self) -> BluetoothEventTriggeringMode: ...
+    @_property
+    def value_changed_events(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.bluetooth.genericattributeprofile.GattValueChangedEventArgs]]: ...
 
 class GattServiceProviderConnection(winrt.system.Object):
-    service: typing.Optional[winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalService]
-    trigger_id: str
-    all_services: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[str, GattServiceProviderConnection]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderConnection: ...
     def start(self) -> None: ...
+    @_property
+    def service(self) -> typing.Optional[winrt.windows.devices.bluetooth.genericattributeprofile.GattLocalService]: ...
+    @_property
+    def trigger_id(self) -> str: ...
+    all_services: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[str, GattServiceProviderConnection]]]
 
 class GattServiceProviderTriggerDetails(winrt.system.Object):
-    connection: typing.Optional[GattServiceProviderConnection]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderTriggerDetails: ...
+    @_property
+    def connection(self) -> typing.Optional[GattServiceProviderConnection]: ...
 
 class RfcommConnectionTriggerDetails(winrt.system.Object):
-    incoming: bool
-    remote_device: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDevice]
-    socket: typing.Optional[winrt.windows.networking.sockets.StreamSocket]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommConnectionTriggerDetails: ...
+    @_property
+    def incoming(self) -> bool: ...
+    @_property
+    def remote_device(self) -> typing.Optional[winrt.windows.devices.bluetooth.BluetoothDevice]: ...
+    @_property
+    def socket(self) -> typing.Optional[winrt.windows.networking.sockets.StreamSocket]: ...
 
 class RfcommInboundConnectionInformation(winrt.system.Object):
-    service_capabilities: winrt.windows.devices.bluetooth.BluetoothServiceCapabilities
-    sdp_record: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    local_service_id: typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommInboundConnectionInformation: ...
+    @_property
+    def service_capabilities(self) -> winrt.windows.devices.bluetooth.BluetoothServiceCapabilities: ...
+    @service_capabilities.setter
+    def service_capabilities(self, value: winrt.windows.devices.bluetooth.BluetoothServiceCapabilities) -> None: ...
+    @_property
+    def sdp_record(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @sdp_record.setter
+    def sdp_record(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer]) -> None: ...
+    @_property
+    def local_service_id(self) -> typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]: ...
+    @local_service_id.setter
+    def local_service_id(self, value: typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]) -> None: ...
 
 class RfcommOutboundConnectionInformation(winrt.system.Object):
-    remote_service_id: typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RfcommOutboundConnectionInformation: ...
+    @_property
+    def remote_service_id(self) -> typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]: ...
+    @remote_service_id.setter
+    def remote_service_id(self, value: typing.Optional[winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId]) -> None: ...
 

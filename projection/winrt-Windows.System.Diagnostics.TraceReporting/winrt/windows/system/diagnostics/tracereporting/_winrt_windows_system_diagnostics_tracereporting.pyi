@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation.collections
@@ -34,18 +35,26 @@ class PlatformDiagnosticActions(winrt.system.Object):
     def try_escalate_scenario(scenario_id: _uuid.UUID, escalation_type: PlatformDiagnosticEscalationType, output_directory: str, timestamp_output_directory: bool, force_escalation_upload: bool, triggers: winrt.windows.foundation.collections.IMapView[str, str], /) -> bool: ...
 
 class PlatformDiagnosticTraceInfo(winrt.system.Object):
-    is_auto_logger: bool
-    is_exclusive: bool
-    max_trace_duration_file_time: winrt.system.Int64
-    priority: PlatformDiagnosticTracePriority
-    profile_hash: winrt.system.UInt64
-    scenario_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceInfo: ...
+    @_property
+    def is_auto_logger(self) -> bool: ...
+    @_property
+    def is_exclusive(self) -> bool: ...
+    @_property
+    def max_trace_duration_file_time(self) -> winrt.system.Int64: ...
+    @_property
+    def priority(self) -> PlatformDiagnosticTracePriority: ...
+    @_property
+    def profile_hash(self) -> winrt.system.UInt64: ...
+    @_property
+    def scenario_id(self) -> _uuid.UUID: ...
 
 class PlatformDiagnosticTraceRuntimeInfo(winrt.system.Object):
-    etw_runtime_file_time: winrt.system.Int64
-    runtime_file_time: winrt.system.Int64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceRuntimeInfo: ...
+    @_property
+    def etw_runtime_file_time(self) -> winrt.system.Int64: ...
+    @_property
+    def runtime_file_time(self) -> winrt.system.Int64: ...
 

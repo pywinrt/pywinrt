@@ -5,15 +5,19 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class IGraphicsEffect(winrt.system.Object):
-    name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGraphicsEffect: ...
+    @_property
+    def name(self) -> str: ...
+    @name.setter
+    def name(self, value: str) -> None: ...
 
 class IGraphicsEffectSource(winrt.system.Object):
     @staticmethod

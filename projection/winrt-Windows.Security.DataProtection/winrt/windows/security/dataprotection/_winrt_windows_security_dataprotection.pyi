@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -22,10 +23,12 @@ class UserDataAvailabilityStateChangedEventArgs(winrt.system.Object):
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class UserDataBufferUnprotectResult(winrt.system.Object):
-    status: UserDataBufferUnprotectStatus
-    unprotected_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataBufferUnprotectResult: ...
+    @_property
+    def status(self) -> UserDataBufferUnprotectStatus: ...
+    @_property
+    def unprotected_buffer(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
 class UserDataProtectionManager(winrt.system.Object):
     @staticmethod
@@ -43,7 +46,8 @@ class UserDataProtectionManager(winrt.system.Object):
     def remove_data_availability_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class UserDataStorageItemProtectionInfo(winrt.system.Object):
-    availability: UserDataAvailability
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataStorageItemProtectionInfo: ...
+    @_property
+    def availability(self) -> UserDataAvailability: ...
 

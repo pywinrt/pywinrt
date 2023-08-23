@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -26,19 +27,28 @@ class LicenseManager(winrt.system.Object):
     def refresh_licenses_async(refresh_option: LicenseRefreshOption, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class LicenseSatisfactionInfo(winrt.system.Object):
-    is_satisfied: bool
-    satisfied_by_device: bool
-    satisfied_by_install_media: bool
-    satisfied_by_open_license: bool
-    satisfied_by_pass: bool
-    satisfied_by_signed_in_user: bool
-    satisfied_by_trial: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionInfo: ...
+    @_property
+    def is_satisfied(self) -> bool: ...
+    @_property
+    def satisfied_by_device(self) -> bool: ...
+    @_property
+    def satisfied_by_install_media(self) -> bool: ...
+    @_property
+    def satisfied_by_open_license(self) -> bool: ...
+    @_property
+    def satisfied_by_pass(self) -> bool: ...
+    @_property
+    def satisfied_by_signed_in_user(self) -> bool: ...
+    @_property
+    def satisfied_by_trial(self) -> bool: ...
 
 class LicenseSatisfactionResult(winrt.system.Object):
-    extended_error: winrt.windows.foundation.HResult
-    license_satisfaction_infos: typing.Optional[winrt.windows.foundation.collections.IMapView[str, LicenseSatisfactionInfo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionResult: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def license_satisfaction_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, LicenseSatisfactionInfo]]: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -17,16 +18,20 @@ from . import FindAllWebAccountsStatus, WebTokenRequestPromptType, WebTokenReque
 Self = typing.TypeVar('Self')
 
 class FindAllAccountsResult(winrt.system.Object):
-    accounts: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.security.credentials.WebAccount]]
-    provider_error: typing.Optional[WebProviderError]
-    status: FindAllWebAccountsStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FindAllAccountsResult: ...
+    @_property
+    def accounts(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.security.credentials.WebAccount]]: ...
+    @_property
+    def provider_error(self) -> typing.Optional[WebProviderError]: ...
+    @_property
+    def status(self) -> FindAllWebAccountsStatus: ...
 
 class WebAccountEventArgs(winrt.system.Object):
-    account: typing.Optional[winrt.windows.security.credentials.WebAccount]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountEventArgs: ...
+    @_property
+    def account(self) -> typing.Optional[winrt.windows.security.credentials.WebAccount]: ...
 
 class WebAccountMonitor(winrt.system.Object):
     @staticmethod
@@ -85,21 +90,17 @@ class WebAuthenticationCoreManager(winrt.system.Object):
     def request_token_async(request: typing.Optional[WebTokenRequest], web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], /) -> winrt.windows.foundation.IAsyncOperation[WebTokenRequestResult]: ...
 
 class WebProviderError(winrt.system.Object):
-    error_code: winrt.system.UInt32
-    error_message: str
-    properties: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebProviderError: ...
     def __new__(cls: typing.Type[WebProviderError], error_code: winrt.system.UInt32, error_message: str) -> WebProviderError:...
+    @_property
+    def error_code(self) -> winrt.system.UInt32: ...
+    @_property
+    def error_message(self) -> str: ...
+    @_property
+    def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
 
 class WebTokenRequest(winrt.system.Object):
-    client_id: str
-    prompt_type: WebTokenRequestPromptType
-    properties: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
-    scope: str
-    web_account_provider: typing.Optional[winrt.windows.security.credentials.WebAccountProvider]
-    app_properties: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
-    correlation_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebTokenRequest: ...
     @typing.overload
@@ -110,20 +111,35 @@ class WebTokenRequest(winrt.system.Object):
     def __new__(cls: typing.Type[WebTokenRequest], provider: typing.Optional[winrt.windows.security.credentials.WebAccountProvider]) -> WebTokenRequest:...
     @typing.overload
     def __new__(cls: typing.Type[WebTokenRequest], provider: typing.Optional[winrt.windows.security.credentials.WebAccountProvider], scope: str) -> WebTokenRequest:...
+    @_property
+    def client_id(self) -> str: ...
+    @_property
+    def prompt_type(self) -> WebTokenRequestPromptType: ...
+    @_property
+    def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
+    @_property
+    def scope(self) -> str: ...
+    @_property
+    def web_account_provider(self) -> typing.Optional[winrt.windows.security.credentials.WebAccountProvider]: ...
+    @_property
+    def app_properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
+    @_property
+    def correlation_id(self) -> str: ...
+    @correlation_id.setter
+    def correlation_id(self, value: str) -> None: ...
 
 class WebTokenRequestResult(winrt.system.Object):
-    response_data: typing.Optional[winrt.windows.foundation.collections.IVectorView[WebTokenResponse]]
-    response_error: typing.Optional[WebProviderError]
-    response_status: WebTokenRequestStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebTokenRequestResult: ...
     def invalidate_cache_async(self) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def response_data(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WebTokenResponse]]: ...
+    @_property
+    def response_error(self) -> typing.Optional[WebProviderError]: ...
+    @_property
+    def response_status(self) -> WebTokenRequestStatus: ...
 
 class WebTokenResponse(winrt.system.Object):
-    properties: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
-    provider_error: typing.Optional[WebProviderError]
-    token: str
-    web_account: typing.Optional[winrt.windows.security.credentials.WebAccount]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebTokenResponse: ...
     @typing.overload
@@ -134,4 +150,12 @@ class WebTokenResponse(winrt.system.Object):
     def __new__(cls: typing.Type[WebTokenResponse], token: str, web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], error: typing.Optional[WebProviderError]) -> WebTokenResponse:...
     @typing.overload
     def __new__(cls: typing.Type[WebTokenResponse]) -> WebTokenResponse:...
+    @_property
+    def properties(self) -> typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]: ...
+    @_property
+    def provider_error(self) -> typing.Optional[WebProviderError]: ...
+    @_property
+    def token(self) -> str: ...
+    @_property
+    def web_account(self) -> typing.Optional[winrt.windows.security.credentials.WebAccount]: ...
 

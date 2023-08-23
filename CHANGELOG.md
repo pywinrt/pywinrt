@@ -12,6 +12,7 @@
 ### Changed
 - Changed code generator to generate module per namespace instead of monolith.
 - Moved delegate type aliases from .pyi to .py files.
+- Changed type hints for non-static properties to use `@property`.
 
 ### Fixed
 - Fixed mixin of `__eq__` for mappings.

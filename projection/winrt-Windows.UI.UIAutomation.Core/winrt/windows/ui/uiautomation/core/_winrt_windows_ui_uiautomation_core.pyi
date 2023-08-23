@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -23,13 +24,16 @@ class AutomationRemoteOperationOperandId:
     def __init__(self, value: winrt.system.Int32) -> None: ...
 
 class AutomationRemoteOperationResult(winrt.system.Object):
-    error_location: winrt.system.Int32
-    extended_error: winrt.windows.foundation.HResult
-    status: AutomationRemoteOperationStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationRemoteOperationResult: ...
     def get_operand(self, operand_id: AutomationRemoteOperationOperandId, /) -> typing.Optional[winrt.system.Object]: ...
     def has_operand(self, operand_id: AutomationRemoteOperationOperandId, /) -> bool: ...
+    @_property
+    def error_location(self) -> winrt.system.Int32: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def status(self) -> AutomationRemoteOperationStatus: ...
 
 class CoreAutomationRegistrar(winrt.system.Object):
     @staticmethod
@@ -60,7 +64,6 @@ class CoreAutomationRemoteOperationContext(winrt.system.Object):
     def set_operand(self, id: AutomationRemoteOperationOperandId, operand: typing.Optional[winrt.system.Object], operand_interface_id: _uuid.UUID, /) -> None: ...
 
 class RemoteAutomationClientSession(winrt.system.Object):
-    session_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationClientSession: ...
     @typing.overload
@@ -74,17 +77,22 @@ class RemoteAutomationClientSession(winrt.system.Object):
     def remove_connection_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_disconnected(self, handler: winrt.windows.foundation.TypedEventHandler[RemoteAutomationClientSession, RemoteAutomationDisconnectedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_disconnected(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def session_id(self) -> _uuid.UUID: ...
 
 class RemoteAutomationConnectionRequestedEventArgs(winrt.system.Object):
-    local_pipe_name: str
-    remote_process_id: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationConnectionRequestedEventArgs: ...
+    @_property
+    def local_pipe_name(self) -> str: ...
+    @_property
+    def remote_process_id(self) -> winrt.system.UInt32: ...
 
 class RemoteAutomationDisconnectedEventArgs(winrt.system.Object):
-    local_pipe_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationDisconnectedEventArgs: ...
+    @_property
+    def local_pipe_name(self) -> str: ...
 
 class RemoteAutomationServer(winrt.system.Object):
     @staticmethod
@@ -93,15 +101,17 @@ class RemoteAutomationServer(winrt.system.Object):
     def report_session(session_id: _uuid.UUID, /) -> None: ...
 
 class RemoteAutomationWindow(winrt.system.Object):
-    automation_provider: typing.Optional[winrt.system.Object]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RemoteAutomationWindow: ...
     def unregister_async(self) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def automation_provider(self) -> typing.Optional[winrt.system.Object]: ...
 
 class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object):
-    is_com_threading_required: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationConnectionBoundObjectProvider: ...
+    @_property
+    def is_com_threading_required(self) -> bool: ...
 
 class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object):
     @staticmethod

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.core
@@ -15,11 +16,14 @@ import winrt.windows.ui.input
 Self = typing.TypeVar('Self')
 
 class RadialControllerIndependentInputSource(winrt.system.Object):
-    controller: typing.Optional[winrt.windows.ui.input.RadialController]
-    dispatcher: typing.Optional[winrt.windows.ui.core.CoreDispatcher]
-    dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerIndependentInputSource: ...
     @staticmethod
     def create_for_view(view: typing.Optional[winrt.windows.applicationmodel.core.CoreApplicationView], /) -> typing.Optional[RadialControllerIndependentInputSource]: ...
+    @_property
+    def controller(self) -> typing.Optional[winrt.windows.ui.input.RadialController]: ...
+    @_property
+    def dispatcher(self) -> typing.Optional[winrt.windows.ui.core.CoreDispatcher]: ...
+    @_property
+    def dispatcher_queue(self) -> typing.Optional[winrt.windows.system.DispatcherQueue]: ...
 

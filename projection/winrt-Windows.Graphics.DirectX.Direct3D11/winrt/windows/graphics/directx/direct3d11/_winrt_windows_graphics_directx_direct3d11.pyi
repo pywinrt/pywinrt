@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.graphics.directx
@@ -34,10 +35,11 @@ class IDirect3DDevice(winrt.system.Object):
     def trim(self) -> None: ...
 
 class IDirect3DSurface(winrt.system.Object):
-    description: Direct3DSurfaceDescription
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDirect3DSurface: ...
     def close(self) -> None: ...
+    @_property
+    def description(self) -> Direct3DSurfaceDescription: ...
 

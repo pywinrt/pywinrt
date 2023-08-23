@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -19,19 +20,12 @@ from . import DeviceArrivedEventHandler, DeviceDepartedEventHandler, MessageRece
 Self = typing.TypeVar('Self')
 
 class ConnectionRequestedEventArgs(winrt.system.Object):
-    peer_information: typing.Optional[PeerInformation]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectionRequestedEventArgs: ...
+    @_property
+    def peer_information(self) -> typing.Optional[PeerInformation]: ...
 
 class PeerFinder(winrt.system.Object):
-    display_name: typing.ClassVar[str]
-    allow_wi_fi_direct: typing.ClassVar[bool]
-    allow_infrastructure: typing.ClassVar[bool]
-    allow_bluetooth: typing.ClassVar[bool]
-    alternate_identities: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]]
-    supported_discovery_types: typing.ClassVar[PeerDiscoveryTypes]
-    role: typing.ClassVar[PeerRole]
-    discovery_data: typing.ClassVar[typing.Optional[winrt.windows.storage.streams.IBuffer]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeerFinder: ...
     @staticmethod
@@ -56,18 +50,30 @@ class PeerFinder(winrt.system.Object):
     def add_triggered_connection_state_changed(handler: winrt.windows.foundation.TypedEventHandler[winrt.system.Object, TriggeredConnectionStateChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_triggered_connection_state_changed(cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    display_name: typing.ClassVar[str]
+    allow_wi_fi_direct: typing.ClassVar[bool]
+    allow_infrastructure: typing.ClassVar[bool]
+    allow_bluetooth: typing.ClassVar[bool]
+    alternate_identities: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]]
+    supported_discovery_types: typing.ClassVar[PeerDiscoveryTypes]
+    role: typing.ClassVar[PeerRole]
+    discovery_data: typing.ClassVar[typing.Optional[winrt.windows.storage.streams.IBuffer]]
 
 class PeerInformation(winrt.system.Object):
-    display_name: str
-    discovery_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    id: str
-    host_name: typing.Optional[winrt.windows.networking.HostName]
-    service_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeerInformation: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def discovery_data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def host_name(self) -> typing.Optional[winrt.windows.networking.HostName]: ...
+    @_property
+    def service_name(self) -> str: ...
 
 class PeerWatcher(winrt.system.Object):
-    status: PeerWatcherStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeerWatcher: ...
     def start(self) -> None: ...
@@ -82,11 +88,10 @@ class PeerWatcher(winrt.system.Object):
     def remove_stopped(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_updated(self, handler: winrt.windows.foundation.TypedEventHandler[PeerWatcher, PeerInformation], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def status(self) -> PeerWatcherStatus: ...
 
 class ProximityDevice(winrt.system.Object):
-    bits_per_second: winrt.system.UInt64
-    device_id: str
-    max_message_bytes: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProximityDevice: ...
     @staticmethod
@@ -114,19 +119,32 @@ class ProximityDevice(winrt.system.Object):
     def remove_device_arrived(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_device_departed(self, departed_handler: typing.Optional[DeviceDepartedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_device_departed(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def bits_per_second(self) -> winrt.system.UInt64: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def max_message_bytes(self) -> winrt.system.UInt32: ...
 
 class ProximityMessage(winrt.system.Object):
-    data: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    data_as_string: str
-    message_type: str
-    subscription_id: winrt.system.Int64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProximityMessage: ...
+    @_property
+    def data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def data_as_string(self) -> str: ...
+    @_property
+    def message_type(self) -> str: ...
+    @_property
+    def subscription_id(self) -> winrt.system.Int64: ...
 
 class TriggeredConnectionStateChangedEventArgs(winrt.system.Object):
-    id: winrt.system.UInt32
-    socket: typing.Optional[winrt.windows.networking.sockets.StreamSocket]
-    state: TriggeredConnectState
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TriggeredConnectionStateChangedEventArgs: ...
+    @_property
+    def id(self) -> winrt.system.UInt32: ...
+    @_property
+    def socket(self) -> typing.Optional[winrt.windows.networking.sockets.StreamSocket]: ...
+    @_property
+    def state(self) -> TriggeredConnectState: ...
 

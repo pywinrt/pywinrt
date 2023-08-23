@@ -5,13 +5,14 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class RetailMode(winrt.system.Object):
-    retail_mode_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RetailMode: ...
+    retail_mode_enabled: typing.ClassVar[bool]
 

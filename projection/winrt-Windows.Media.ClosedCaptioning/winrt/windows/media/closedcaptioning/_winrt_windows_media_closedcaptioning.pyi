@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,6 +16,12 @@ from . import ClosedCaptionColor, ClosedCaptionEdgeEffect, ClosedCaptionOpacity,
 Self = typing.TypeVar('Self')
 
 class ClosedCaptionProperties(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> ClosedCaptionProperties: ...
+    @staticmethod
+    def add_properties_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
+    @staticmethod
+    def remove_properties_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     background_color: typing.ClassVar[ClosedCaptionColor]
     background_opacity: typing.ClassVar[ClosedCaptionOpacity]
     computed_background_color: typing.ClassVar[winrt.windows.ui.Color]
@@ -27,10 +34,4 @@ class ClosedCaptionProperties(winrt.system.Object):
     font_style: typing.ClassVar[ClosedCaptionStyle]
     region_color: typing.ClassVar[ClosedCaptionColor]
     region_opacity: typing.ClassVar[ClosedCaptionOpacity]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ClosedCaptionProperties: ...
-    @staticmethod
-    def add_properties_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
-    @staticmethod
-    def remove_properties_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 

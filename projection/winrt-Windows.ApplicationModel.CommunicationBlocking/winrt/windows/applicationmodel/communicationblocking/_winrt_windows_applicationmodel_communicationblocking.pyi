@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,7 +14,6 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class CommunicationBlockingAccessManager(winrt.system.Object):
-    is_blocking_active: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAccessManager: ...
     @staticmethod
@@ -26,13 +26,14 @@ class CommunicationBlockingAccessManager(winrt.system.Object):
     def show_blocked_messages_u_i() -> None: ...
     @staticmethod
     def show_unblock_numbers_u_i(phone_numbers: typing.Iterable[str], /) -> bool: ...
+    is_blocking_active: typing.ClassVar[bool]
 
 class CommunicationBlockingAppManager(winrt.system.Object):
-    is_current_app_active_blocking_app: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommunicationBlockingAppManager: ...
     @staticmethod
     def request_set_as_active_blocking_app_async() -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @staticmethod
     def show_communication_blocking_settings_u_i() -> None: ...
+    is_current_app_active_blocking_app: typing.ClassVar[bool]
 

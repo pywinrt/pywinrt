@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,7 +16,6 @@ from . import GameServiceGameOutcome, GameServiceScoreKind
 Self = typing.TypeVar('Self')
 
 class GameService(winrt.system.Object):
-    service_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameService: ...
     @staticmethod
@@ -36,6 +36,7 @@ class GameService(winrt.system.Object):
     def notify_partner_token_expired(audience_uri: typing.Optional[winrt.windows.foundation.Uri], /) -> None: ...
     @staticmethod
     def post_result(game_variant: winrt.system.UInt32, score_kind: GameServiceScoreKind, score_value: winrt.system.Int64, game_outcome: GameServiceGameOutcome, buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> None: ...
+    service_uri: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
 
 class GameServicePropertyCollection(winrt.system.Object):
     @staticmethod

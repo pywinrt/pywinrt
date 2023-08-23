@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -17,8 +18,10 @@ class ClassicAppManager(winrt.system.Object):
     def find_installed_app(app_uninstall_key: str, /) -> typing.Optional[InstalledClassicAppInfo]: ...
 
 class InstalledClassicAppInfo(winrt.system.Object):
-    display_name: str
-    display_version: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InstalledClassicAppInfo: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def display_version(self) -> str: ...
 

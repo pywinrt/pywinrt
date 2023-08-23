@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -42,9 +43,12 @@ class WebAuthenticationBroker(winrt.system.Object):
     def get_current_application_callback_uri() -> typing.Optional[winrt.windows.foundation.Uri]: ...
 
 class WebAuthenticationResult(winrt.system.Object):
-    response_data: str
-    response_error_detail: winrt.system.UInt32
-    response_status: WebAuthenticationStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAuthenticationResult: ...
+    @_property
+    def response_data(self) -> str: ...
+    @_property
+    def response_error_detail(self) -> winrt.system.UInt32: ...
+    @_property
+    def response_status(self) -> WebAuthenticationStatus: ...
 

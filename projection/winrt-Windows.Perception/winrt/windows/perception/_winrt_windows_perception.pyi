@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -12,11 +13,14 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class PerceptionTimestamp(winrt.system.Object):
-    prediction_amount: datetime.timedelta
-    target_time: datetime.datetime
-    system_relative_target_time: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PerceptionTimestamp: ...
+    @_property
+    def prediction_amount(self) -> datetime.timedelta: ...
+    @_property
+    def target_time(self) -> datetime.datetime: ...
+    @_property
+    def system_relative_target_time(self) -> datetime.timedelta: ...
 
 class PerceptionTimestampHelper(winrt.system.Object):
     @staticmethod

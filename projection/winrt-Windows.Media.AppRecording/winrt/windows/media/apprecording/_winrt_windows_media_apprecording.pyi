@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,7 +17,6 @@ from . import AppRecordingSaveScreenshotOption
 Self = typing.TypeVar('Self')
 
 class AppRecordingManager(winrt.system.Object):
-    supported_screenshot_media_encoding_subtypes: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingManager: ...
     @staticmethod
@@ -25,46 +25,70 @@ class AppRecordingManager(winrt.system.Object):
     def record_time_span_to_file_async(self, start_time: datetime.datetime, duration: datetime.timedelta, file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[AppRecordingResult]: ...
     def save_screenshot_to_files_async(self, folder: typing.Optional[winrt.windows.storage.StorageFolder], filename_prefix: str, option: AppRecordingSaveScreenshotOption, requested_formats: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[AppRecordingSaveScreenshotResult]: ...
     def start_recording_to_file_async(self, file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[AppRecordingResult]: ...
+    @_property
+    def supported_screenshot_media_encoding_subtypes(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 
 class AppRecordingResult(winrt.system.Object):
-    duration: datetime.timedelta
-    extended_error: winrt.windows.foundation.HResult
-    is_file_truncated: bool
-    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingResult: ...
+    @_property
+    def duration(self) -> datetime.timedelta: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def is_file_truncated(self) -> bool: ...
+    @_property
+    def succeeded(self) -> bool: ...
 
 class AppRecordingSaveScreenshotResult(winrt.system.Object):
-    extended_error: winrt.windows.foundation.HResult
-    saved_screenshot_infos: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppRecordingSavedScreenshotInfo]]
-    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingSaveScreenshotResult: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def saved_screenshot_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[AppRecordingSavedScreenshotInfo]]: ...
+    @_property
+    def succeeded(self) -> bool: ...
 
 class AppRecordingSavedScreenshotInfo(winrt.system.Object):
-    file: typing.Optional[winrt.windows.storage.StorageFile]
-    media_encoding_subtype: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingSavedScreenshotInfo: ...
+    @_property
+    def file(self) -> typing.Optional[winrt.windows.storage.StorageFile]: ...
+    @_property
+    def media_encoding_subtype(self) -> str: ...
 
 class AppRecordingStatus(winrt.system.Object):
-    can_record: bool
-    can_record_time_span: bool
-    details: typing.Optional[AppRecordingStatusDetails]
-    historical_buffer_duration: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingStatus: ...
+    @_property
+    def can_record(self) -> bool: ...
+    @_property
+    def can_record_time_span(self) -> bool: ...
+    @_property
+    def details(self) -> typing.Optional[AppRecordingStatusDetails]: ...
+    @_property
+    def historical_buffer_duration(self) -> datetime.timedelta: ...
 
 class AppRecordingStatusDetails(winrt.system.Object):
-    is_any_app_broadcasting: bool
-    is_app_inactive: bool
-    is_blocked_for_app: bool
-    is_capture_resource_unavailable: bool
-    is_disabled_by_system: bool
-    is_disabled_by_user: bool
-    is_game_stream_in_progress: bool
-    is_gpu_constrained: bool
-    is_time_span_recording_disabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingStatusDetails: ...
+    @_property
+    def is_any_app_broadcasting(self) -> bool: ...
+    @_property
+    def is_app_inactive(self) -> bool: ...
+    @_property
+    def is_blocked_for_app(self) -> bool: ...
+    @_property
+    def is_capture_resource_unavailable(self) -> bool: ...
+    @_property
+    def is_disabled_by_system(self) -> bool: ...
+    @_property
+    def is_disabled_by_user(self) -> bool: ...
+    @_property
+    def is_game_stream_in_progress(self) -> bool: ...
+    @_property
+    def is_gpu_constrained(self) -> bool: ...
+    @_property
+    def is_time_span_recording_disabled(self) -> bool: ...
 

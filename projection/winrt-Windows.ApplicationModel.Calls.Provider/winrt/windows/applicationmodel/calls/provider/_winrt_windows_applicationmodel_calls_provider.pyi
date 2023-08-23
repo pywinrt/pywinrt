@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,18 +14,31 @@ import winrt.windows.storage
 Self = typing.TypeVar('Self')
 
 class PhoneCallOrigin(winrt.system.Object):
-    location: str
-    category_description: str
-    category: str
-    display_name: str
-    display_picture: typing.Optional[winrt.windows.storage.StorageFile]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOrigin: ...
     def __new__(cls: typing.Type[PhoneCallOrigin]) -> PhoneCallOrigin:...
+    @_property
+    def location(self) -> str: ...
+    @location.setter
+    def location(self, value: str) -> None: ...
+    @_property
+    def category_description(self) -> str: ...
+    @category_description.setter
+    def category_description(self, value: str) -> None: ...
+    @_property
+    def category(self) -> str: ...
+    @category.setter
+    def category(self, value: str) -> None: ...
+    @_property
+    def display_name(self) -> str: ...
+    @display_name.setter
+    def display_name(self, value: str) -> None: ...
+    @_property
+    def display_picture(self) -> typing.Optional[winrt.windows.storage.StorageFile]: ...
+    @display_picture.setter
+    def display_picture(self, value: typing.Optional[winrt.windows.storage.StorageFile]) -> None: ...
 
 class PhoneCallOriginManager(winrt.system.Object):
-    is_current_app_active_call_origin_app: typing.ClassVar[bool]
-    is_supported: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOriginManager: ...
     @staticmethod
@@ -33,4 +47,6 @@ class PhoneCallOriginManager(winrt.system.Object):
     def set_call_origin(request_id: _uuid.UUID, call_origin: typing.Optional[PhoneCallOrigin], /) -> None: ...
     @staticmethod
     def show_phone_call_origin_settings_u_i() -> None: ...
+    is_current_app_active_call_origin_app: typing.ClassVar[bool]
+    is_supported: typing.ClassVar[bool]
 

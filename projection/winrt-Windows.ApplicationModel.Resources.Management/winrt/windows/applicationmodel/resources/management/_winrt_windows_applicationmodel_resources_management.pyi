@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,20 +16,27 @@ from . import IndexedResourceType
 Self = typing.TypeVar('Self')
 
 class IndexedResourceCandidate(winrt.system.Object):
-    metadata: typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]
-    qualifiers: typing.Optional[winrt.windows.foundation.collections.IVectorView[IndexedResourceQualifier]]
-    type: IndexedResourceType
-    uri: typing.Optional[winrt.windows.foundation.Uri]
-    value_as_string: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IndexedResourceCandidate: ...
     def get_qualifier_value(self, qualifier_name: str, /) -> str: ...
+    @_property
+    def metadata(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]: ...
+    @_property
+    def qualifiers(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[IndexedResourceQualifier]]: ...
+    @_property
+    def type(self) -> IndexedResourceType: ...
+    @_property
+    def uri(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @_property
+    def value_as_string(self) -> str: ...
 
 class IndexedResourceQualifier(winrt.system.Object):
-    qualifier_name: str
-    qualifier_value: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IndexedResourceQualifier: ...
+    @_property
+    def qualifier_name(self) -> str: ...
+    @_property
+    def qualifier_value(self) -> str: ...
 
 class ResourceIndexer(winrt.system.Object):
     @staticmethod

@@ -5,26 +5,27 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class BackgroundEnergyDiagnostics(winrt.system.Object):
-    device_specific_conversion_factor: typing.ClassVar[winrt.system.Double]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundEnergyDiagnostics: ...
     @staticmethod
     def compute_total_energy_usage() -> winrt.system.UInt64: ...
     @staticmethod
     def reset_total_energy_usage() -> None: ...
+    device_specific_conversion_factor: typing.ClassVar[winrt.system.Double]
 
 class ForegroundEnergyDiagnostics(winrt.system.Object):
-    device_specific_conversion_factor: typing.ClassVar[winrt.system.Double]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ForegroundEnergyDiagnostics: ...
     @staticmethod
     def compute_total_energy_usage() -> winrt.system.UInt64: ...
     @staticmethod
     def reset_total_energy_usage() -> None: ...
+    device_specific_conversion_factor: typing.ClassVar[winrt.system.Double]
 

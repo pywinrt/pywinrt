@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,7 +16,6 @@ from . import MicrosoftAccountMultiFactorAuthenticationType, MicrosoftAccountMul
 Self = typing.TypeVar('Self')
 
 class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object):
-    current: typing.ClassVar[typing.Optional[MicrosoftAccountMultiFactorAuthenticationManager]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorAuthenticationManager: ...
     def add_device_async(self, user_account_id: str, authentication_token: str, wns_channel_id: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
@@ -32,36 +32,53 @@ class MicrosoftAccountMultiFactorAuthenticationManager(winrt.system.Object):
     def get_sessions_async(self, user_account_id_list: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorGetSessionsResult]: ...
     def remove_device_async(self, user_account_id: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
     def update_wns_channel_async(self, user_account_id: str, channel_uri: str, /) -> winrt.windows.foundation.IAsyncOperation[MicrosoftAccountMultiFactorServiceResponse]: ...
+    current: typing.ClassVar[typing.Optional[MicrosoftAccountMultiFactorAuthenticationManager]]
 
 class MicrosoftAccountMultiFactorGetSessionsResult(winrt.system.Object):
-    service_response: MicrosoftAccountMultiFactorServiceResponse
-    sessions: typing.Optional[winrt.windows.foundation.collections.IVectorView[MicrosoftAccountMultiFactorSessionInfo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorGetSessionsResult: ...
+    @_property
+    def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
+    @_property
+    def sessions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MicrosoftAccountMultiFactorSessionInfo]]: ...
 
 class MicrosoftAccountMultiFactorOneTimeCodedInfo(winrt.system.Object):
-    code: str
-    service_response: MicrosoftAccountMultiFactorServiceResponse
-    time_interval: datetime.timedelta
-    time_to_live: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorOneTimeCodedInfo: ...
+    @_property
+    def code(self) -> str: ...
+    @_property
+    def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
+    @_property
+    def time_interval(self) -> datetime.timedelta: ...
+    @_property
+    def time_to_live(self) -> datetime.timedelta: ...
 
 class MicrosoftAccountMultiFactorSessionInfo(winrt.system.Object):
-    approval_status: MicrosoftAccountMultiFactorSessionApprovalStatus
-    authentication_type: MicrosoftAccountMultiFactorAuthenticationType
-    display_session_id: str
-    expiration_time: datetime.datetime
-    request_time: datetime.datetime
-    session_id: str
-    user_account_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorSessionInfo: ...
+    @_property
+    def approval_status(self) -> MicrosoftAccountMultiFactorSessionApprovalStatus: ...
+    @_property
+    def authentication_type(self) -> MicrosoftAccountMultiFactorAuthenticationType: ...
+    @_property
+    def display_session_id(self) -> str: ...
+    @_property
+    def expiration_time(self) -> datetime.datetime: ...
+    @_property
+    def request_time(self) -> datetime.datetime: ...
+    @_property
+    def session_id(self) -> str: ...
+    @_property
+    def user_account_id(self) -> str: ...
 
 class MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo(winrt.system.Object):
-    service_response: MicrosoftAccountMultiFactorServiceResponse
-    sessions: typing.Optional[winrt.windows.foundation.collections.IVectorView[MicrosoftAccountMultiFactorSessionInfo]]
-    unregistered_accounts: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo: ...
+    @_property
+    def service_response(self) -> MicrosoftAccountMultiFactorServiceResponse: ...
+    @_property
+    def sessions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[MicrosoftAccountMultiFactorSessionInfo]]: ...
+    @_property
+    def unregistered_accounts(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -19,41 +20,47 @@ from . import AccountPictureKind, SetAccountPictureResult, SetImageFeedResult
 Self = typing.TypeVar('Self')
 
 class AdvertisingManager(winrt.system.Object):
-    advertising_id: typing.ClassVar[str]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvertisingManager: ...
     @staticmethod
     def get_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AdvertisingManagerForUser]: ...
+    advertising_id: typing.ClassVar[str]
 
 class AdvertisingManagerForUser(winrt.system.Object):
-    advertising_id: str
-    user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvertisingManagerForUser: ...
+    @_property
+    def advertising_id(self) -> str: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
 class AssignedAccessSettings(winrt.system.Object):
-    is_enabled: bool
-    is_single_app_kiosk_mode: bool
-    user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AssignedAccessSettings: ...
     @staticmethod
     def get_default() -> typing.Optional[AssignedAccessSettings]: ...
     @staticmethod
     def get_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[AssignedAccessSettings]: ...
+    @_property
+    def is_enabled(self) -> bool: ...
+    @_property
+    def is_single_app_kiosk_mode(self) -> bool: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
 class DiagnosticsSettings(winrt.system.Object):
-    can_use_diagnostics_to_tailor_experiences: bool
-    user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiagnosticsSettings: ...
     @staticmethod
     def get_default() -> typing.Optional[DiagnosticsSettings]: ...
     @staticmethod
     def get_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[DiagnosticsSettings]: ...
+    @_property
+    def can_use_diagnostics_to_tailor_experiences(self) -> bool: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
 class FirstSignInSettings(winrt.system.Object, typing.Mapping[str, winrt.system.Object]):
-    size: winrt.system.UInt32
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool:...
@@ -66,14 +73,10 @@ class FirstSignInSettings(winrt.system.Object, typing.Mapping[str, winrt.system.
     def has_key(self, key: str, /) -> bool: ...
     def lookup(self, key: str, /) -> typing.Optional[winrt.system.Object]: ...
     def split(self) -> typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]], typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]]: ...
+    @_property
+    def size(self) -> winrt.system.UInt32: ...
 
 class GlobalizationPreferences(winrt.system.Object):
-    calendars: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
-    clocks: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
-    currencies: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
-    home_geographic_region: typing.ClassVar[str]
-    languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
-    week_starts_on: typing.ClassVar[winrt.windows.globalization.DayOfWeek]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalizationPreferences: ...
     @staticmethod
@@ -82,20 +85,32 @@ class GlobalizationPreferences(winrt.system.Object):
     def try_set_home_geographic_region(region: str, /) -> bool: ...
     @staticmethod
     def try_set_languages(language_tags: typing.Iterable[str], /) -> bool: ...
+    calendars: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
+    clocks: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
+    currencies: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
+    home_geographic_region: typing.ClassVar[str]
+    languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
+    week_starts_on: typing.ClassVar[winrt.windows.globalization.DayOfWeek]
 
 class GlobalizationPreferencesForUser(winrt.system.Object):
-    calendars: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    clocks: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    currencies: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    home_geographic_region: str
-    languages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    user: typing.Optional[winrt.windows.system.User]
-    week_starts_on: winrt.windows.globalization.DayOfWeek
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GlobalizationPreferencesForUser: ...
+    @_property
+    def calendars(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def clocks(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def currencies(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def home_geographic_region(self) -> str: ...
+    @_property
+    def languages(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
+    @_property
+    def week_starts_on(self) -> winrt.windows.globalization.DayOfWeek: ...
 
 class LockScreen(winrt.system.Object):
-    original_image_file: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockScreen: ...
     @staticmethod
@@ -108,10 +123,9 @@ class LockScreen(winrt.system.Object):
     def set_image_stream_async(value: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncAction: ...
     @staticmethod
     def try_remove_image_feed() -> bool: ...
+    original_image_file: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
 
 class UserInformation(winrt.system.Object):
-    account_picture_change_enabled: typing.ClassVar[bool]
-    name_access_allowed: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserInformation: ...
     @staticmethod
@@ -140,13 +154,15 @@ class UserInformation(winrt.system.Object):
     def add_account_picture_changed(change_handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_account_picture_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    account_picture_change_enabled: typing.ClassVar[bool]
+    name_access_allowed: typing.ClassVar[bool]
 
 class UserProfilePersonalizationSettings(winrt.system.Object):
-    current: typing.ClassVar[typing.Optional[UserProfilePersonalizationSettings]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserProfilePersonalizationSettings: ...
     @staticmethod
     def is_supported() -> bool: ...
     def try_set_lock_screen_image_async(self, image_file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def try_set_wallpaper_image_async(self, image_file: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    current: typing.ClassVar[typing.Optional[UserProfilePersonalizationSettings]]
 

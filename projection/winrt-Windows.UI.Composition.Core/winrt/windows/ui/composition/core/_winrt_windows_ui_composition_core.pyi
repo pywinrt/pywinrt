@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,7 +14,6 @@ import winrt.windows.ui.composition
 Self = typing.TypeVar('Self')
 
 class CompositorController(winrt.system.Object):
-    compositor: typing.Optional[winrt.windows.ui.composition.Compositor]
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -24,4 +24,6 @@ class CompositorController(winrt.system.Object):
     def ensure_previous_commit_completed_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def add_commit_needed(self, handler: winrt.windows.foundation.TypedEventHandler[CompositorController, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_commit_needed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def compositor(self) -> typing.Optional[winrt.windows.ui.composition.Compositor]: ...
 

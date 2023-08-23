@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -27,7 +28,7 @@ class MdmPolicy(winrt.system.Object):
     def is_store_allowed() -> bool: ...
 
 class WorkplaceSettings(winrt.system.Object):
-    is_microsoft_account_optional: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WorkplaceSettings: ...
+    is_microsoft_account_optional: typing.ClassVar[bool]
 

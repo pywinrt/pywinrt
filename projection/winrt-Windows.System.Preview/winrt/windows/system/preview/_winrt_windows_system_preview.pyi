@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.devices.sensors
@@ -24,17 +25,24 @@ class TwoPanelHingedDevicePosturePreview(winrt.system.Object):
     def remove_posture_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class TwoPanelHingedDevicePosturePreviewReading(winrt.system.Object):
-    hinge_state: HingeState
-    panel1_id: str
-    panel1_orientation: winrt.windows.devices.sensors.SimpleOrientation
-    panel2_id: str
-    panel2_orientation: winrt.windows.devices.sensors.SimpleOrientation
-    timestamp: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreviewReading: ...
+    @_property
+    def hinge_state(self) -> HingeState: ...
+    @_property
+    def panel1_id(self) -> str: ...
+    @_property
+    def panel1_orientation(self) -> winrt.windows.devices.sensors.SimpleOrientation: ...
+    @_property
+    def panel2_id(self) -> str: ...
+    @_property
+    def panel2_orientation(self) -> winrt.windows.devices.sensors.SimpleOrientation: ...
+    @_property
+    def timestamp(self) -> datetime.datetime: ...
 
 class TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs(winrt.system.Object):
-    reading: typing.Optional[TwoPanelHingedDevicePosturePreviewReading]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs: ...
+    @_property
+    def reading(self) -> typing.Optional[TwoPanelHingedDevicePosturePreviewReading]: ...
 

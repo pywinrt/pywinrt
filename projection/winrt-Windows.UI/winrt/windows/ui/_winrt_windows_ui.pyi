@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -30,6 +31,8 @@ class ColorHelper(winrt.system.Object):
     def to_display_name(color: Color, /) -> str: ...
 
 class Colors(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> Colors: ...
     alice_blue: typing.ClassVar[Color]
     antique_white: typing.ClassVar[Color]
     aqua: typing.ClassVar[Color]
@@ -171,13 +174,12 @@ class Colors(winrt.system.Object):
     white_smoke: typing.ClassVar[Color]
     yellow: typing.ClassVar[Color]
     yellow_green: typing.ClassVar[Color]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> Colors: ...
 
 class UIContentRoot(winrt.system.Object):
-    u_i_context: typing.Optional[UIContext]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UIContentRoot: ...
+    @_property
+    def u_i_context(self) -> typing.Optional[UIContext]: ...
 
 class UIContext(winrt.system.Object):
     @staticmethod

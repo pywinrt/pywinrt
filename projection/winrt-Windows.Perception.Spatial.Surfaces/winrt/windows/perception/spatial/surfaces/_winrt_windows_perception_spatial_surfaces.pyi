@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -17,8 +18,6 @@ import winrt.windows.storage.streams
 Self = typing.TypeVar('Self')
 
 class SpatialSurfaceInfo(winrt.system.Object):
-    id: _uuid.UUID
-    update_time: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceInfo: ...
     @typing.overload
@@ -26,36 +25,62 @@ class SpatialSurfaceInfo(winrt.system.Object):
     @typing.overload
     def try_compute_latest_mesh_async(self, max_triangles_per_cubic_meter: winrt.system.Double, options: typing.Optional[SpatialSurfaceMeshOptions], /) -> winrt.windows.foundation.IAsyncOperation[SpatialSurfaceMesh]: ...
     def try_get_bounds(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], /) -> typing.Optional[typing.Optional[winrt.windows.perception.spatial.SpatialBoundingOrientedBox]]: ...
+    @_property
+    def id(self) -> _uuid.UUID: ...
+    @_property
+    def update_time(self) -> datetime.datetime: ...
 
 class SpatialSurfaceMesh(winrt.system.Object):
-    coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]
-    surface_info: typing.Optional[SpatialSurfaceInfo]
-    triangle_indices: typing.Optional[SpatialSurfaceMeshBuffer]
-    vertex_normals: typing.Optional[SpatialSurfaceMeshBuffer]
-    vertex_position_scale: winrt.windows.foundation.numerics.Vector3
-    vertex_positions: typing.Optional[SpatialSurfaceMeshBuffer]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceMesh: ...
+    @_property
+    def coordinate_system(self) -> typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]: ...
+    @_property
+    def surface_info(self) -> typing.Optional[SpatialSurfaceInfo]: ...
+    @_property
+    def triangle_indices(self) -> typing.Optional[SpatialSurfaceMeshBuffer]: ...
+    @_property
+    def vertex_normals(self) -> typing.Optional[SpatialSurfaceMeshBuffer]: ...
+    @_property
+    def vertex_position_scale(self) -> winrt.windows.foundation.numerics.Vector3: ...
+    @_property
+    def vertex_positions(self) -> typing.Optional[SpatialSurfaceMeshBuffer]: ...
 
 class SpatialSurfaceMeshBuffer(winrt.system.Object):
-    data: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    element_count: winrt.system.UInt32
-    format: winrt.windows.graphics.directx.DirectXPixelFormat
-    stride: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceMeshBuffer: ...
+    @_property
+    def data(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
+    @_property
+    def element_count(self) -> winrt.system.UInt32: ...
+    @_property
+    def format(self) -> winrt.windows.graphics.directx.DirectXPixelFormat: ...
+    @_property
+    def stride(self) -> winrt.system.UInt32: ...
 
 class SpatialSurfaceMeshOptions(winrt.system.Object):
-    vertex_position_format: winrt.windows.graphics.directx.DirectXPixelFormat
-    vertex_normal_format: winrt.windows.graphics.directx.DirectXPixelFormat
-    triangle_index_format: winrt.windows.graphics.directx.DirectXPixelFormat
-    include_vertex_normals: bool
-    supported_triangle_index_formats: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]]
-    supported_vertex_normal_formats: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]]
-    supported_vertex_position_formats: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceMeshOptions: ...
     def __new__(cls: typing.Type[SpatialSurfaceMeshOptions]) -> SpatialSurfaceMeshOptions:...
+    @_property
+    def vertex_position_format(self) -> winrt.windows.graphics.directx.DirectXPixelFormat: ...
+    @vertex_position_format.setter
+    def vertex_position_format(self, value: winrt.windows.graphics.directx.DirectXPixelFormat) -> None: ...
+    @_property
+    def vertex_normal_format(self) -> winrt.windows.graphics.directx.DirectXPixelFormat: ...
+    @vertex_normal_format.setter
+    def vertex_normal_format(self, value: winrt.windows.graphics.directx.DirectXPixelFormat) -> None: ...
+    @_property
+    def triangle_index_format(self) -> winrt.windows.graphics.directx.DirectXPixelFormat: ...
+    @triangle_index_format.setter
+    def triangle_index_format(self, value: winrt.windows.graphics.directx.DirectXPixelFormat) -> None: ...
+    @_property
+    def include_vertex_normals(self) -> bool: ...
+    @include_vertex_normals.setter
+    def include_vertex_normals(self, value: bool) -> None: ...
+    supported_triangle_index_formats: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]]
+    supported_vertex_normal_formats: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]]
+    supported_vertex_position_formats: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.directx.DirectXPixelFormat]]]
 
 class SpatialSurfaceObserver(winrt.system.Object):
     @staticmethod

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -13,10 +14,11 @@ import winrt.windows.web.http
 Self = typing.TypeVar('Self')
 
 class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
-    json: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SysStorageProviderEventReceivedEventArgs: ...
     def __new__(cls: typing.Type[SysStorageProviderEventReceivedEventArgs], json: str) -> SysStorageProviderEventReceivedEventArgs:...
+    @_property
+    def json(self) -> str: ...
 
 class ISysStorageProviderEventSource(winrt.system.Object):
     @staticmethod

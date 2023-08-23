@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.appservice
@@ -38,16 +39,21 @@ class DevicePortalConnection(winrt.system.Object):
     def remove_request_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class DevicePortalConnectionClosedEventArgs(winrt.system.Object):
-    reason: DevicePortalConnectionClosedReason
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePortalConnectionClosedEventArgs: ...
+    @_property
+    def reason(self) -> DevicePortalConnectionClosedReason: ...
 
 class DevicePortalConnectionRequestReceivedEventArgs(winrt.system.Object):
-    request_message: typing.Optional[winrt.windows.web.http.HttpRequestMessage]
-    response_message: typing.Optional[winrt.windows.web.http.HttpResponseMessage]
-    is_web_socket_upgrade_request: bool
-    web_socket_protocols_requested: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DevicePortalConnectionRequestReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
+    @_property
+    def request_message(self) -> typing.Optional[winrt.windows.web.http.HttpRequestMessage]: ...
+    @_property
+    def response_message(self) -> typing.Optional[winrt.windows.web.http.HttpResponseMessage]: ...
+    @_property
+    def is_web_socket_upgrade_request(self) -> bool: ...
+    @_property
+    def web_socket_protocols_requested(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
 

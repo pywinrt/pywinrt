@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -16,53 +17,15 @@ from . import DayOfWeek, LanguageLayoutDirection
 Self = typing.TypeVar('Self')
 
 class ApplicationLanguages(winrt.system.Object):
-    primary_language_override: typing.ClassVar[str]
-    languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
-    manifest_languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationLanguages: ...
     @staticmethod
     def get_languages_for_user(user: typing.Optional[winrt.windows.system.User], /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    primary_language_override: typing.ClassVar[str]
+    languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
+    manifest_languages: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]
 
 class Calendar(winrt.system.Object):
-    year: winrt.system.Int32
-    second: winrt.system.Int32
-    period: winrt.system.Int32
-    nanosecond: winrt.system.Int32
-    month: winrt.system.Int32
-    minute: winrt.system.Int32
-    numeral_system: str
-    era: winrt.system.Int32
-    hour: winrt.system.Int32
-    day: winrt.system.Int32
-    first_second_in_this_minute: winrt.system.Int32
-    first_year_in_this_era: winrt.system.Int32
-    is_daylight_saving_time: bool
-    languages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    last_day_in_this_month: winrt.system.Int32
-    last_era: winrt.system.Int32
-    last_hour_in_this_period: winrt.system.Int32
-    last_minute_in_this_hour: winrt.system.Int32
-    last_month_in_this_year: winrt.system.Int32
-    last_second_in_this_minute: winrt.system.Int32
-    last_year_in_this_era: winrt.system.Int32
-    day_of_week: DayOfWeek
-    first_day_in_this_month: winrt.system.Int32
-    last_period_in_this_day: winrt.system.Int32
-    first_era: winrt.system.Int32
-    number_of_days_in_this_month: winrt.system.Int32
-    number_of_eras: winrt.system.Int32
-    number_of_hours_in_this_period: winrt.system.Int32
-    number_of_minutes_in_this_hour: winrt.system.Int32
-    first_hour_in_this_period: winrt.system.Int32
-    number_of_months_in_this_year: winrt.system.Int32
-    number_of_periods_in_this_day: winrt.system.Int32
-    number_of_seconds_in_this_minute: winrt.system.Int32
-    number_of_years_in_this_era: winrt.system.Int32
-    first_minute_in_this_hour: winrt.system.Int32
-    resolved_language: str
-    first_month_in_this_year: winrt.system.Int32
-    first_period_in_this_day: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Calendar: ...
     @typing.overload
@@ -141,8 +104,106 @@ class Calendar(winrt.system.Object):
     def year_as_padded_string(self, min_digits: winrt.system.Int32, /) -> str: ...
     def year_as_string(self) -> str: ...
     def year_as_truncated_string(self, remaining_digits: winrt.system.Int32, /) -> str: ...
+    @_property
+    def year(self) -> winrt.system.Int32: ...
+    @year.setter
+    def year(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def second(self) -> winrt.system.Int32: ...
+    @second.setter
+    def second(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def period(self) -> winrt.system.Int32: ...
+    @period.setter
+    def period(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def nanosecond(self) -> winrt.system.Int32: ...
+    @nanosecond.setter
+    def nanosecond(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def month(self) -> winrt.system.Int32: ...
+    @month.setter
+    def month(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def minute(self) -> winrt.system.Int32: ...
+    @minute.setter
+    def minute(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def numeral_system(self) -> str: ...
+    @numeral_system.setter
+    def numeral_system(self, value: str) -> None: ...
+    @_property
+    def era(self) -> winrt.system.Int32: ...
+    @era.setter
+    def era(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def hour(self) -> winrt.system.Int32: ...
+    @hour.setter
+    def hour(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def day(self) -> winrt.system.Int32: ...
+    @day.setter
+    def day(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def first_second_in_this_minute(self) -> winrt.system.Int32: ...
+    @_property
+    def first_year_in_this_era(self) -> winrt.system.Int32: ...
+    @_property
+    def is_daylight_saving_time(self) -> bool: ...
+    @_property
+    def languages(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def last_day_in_this_month(self) -> winrt.system.Int32: ...
+    @_property
+    def last_era(self) -> winrt.system.Int32: ...
+    @_property
+    def last_hour_in_this_period(self) -> winrt.system.Int32: ...
+    @_property
+    def last_minute_in_this_hour(self) -> winrt.system.Int32: ...
+    @_property
+    def last_month_in_this_year(self) -> winrt.system.Int32: ...
+    @_property
+    def last_second_in_this_minute(self) -> winrt.system.Int32: ...
+    @_property
+    def last_year_in_this_era(self) -> winrt.system.Int32: ...
+    @_property
+    def day_of_week(self) -> DayOfWeek: ...
+    @_property
+    def first_day_in_this_month(self) -> winrt.system.Int32: ...
+    @_property
+    def last_period_in_this_day(self) -> winrt.system.Int32: ...
+    @_property
+    def first_era(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_days_in_this_month(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_eras(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_hours_in_this_period(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_minutes_in_this_hour(self) -> winrt.system.Int32: ...
+    @_property
+    def first_hour_in_this_period(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_months_in_this_year(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_periods_in_this_day(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_seconds_in_this_minute(self) -> winrt.system.Int32: ...
+    @_property
+    def number_of_years_in_this_era(self) -> winrt.system.Int32: ...
+    @_property
+    def first_minute_in_this_hour(self) -> winrt.system.Int32: ...
+    @_property
+    def resolved_language(self) -> str: ...
+    @_property
+    def first_month_in_this_year(self) -> winrt.system.Int32: ...
+    @_property
+    def first_period_in_this_day(self) -> winrt.system.Int32: ...
 
 class CalendarIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> CalendarIdentifiers: ...
     julian: typing.ClassVar[str]
     gregorian: typing.ClassVar[str]
     hebrew: typing.ClassVar[str]
@@ -158,23 +219,25 @@ class CalendarIdentifiers(winrt.system.Object):
     taiwan_lunar: typing.ClassVar[str]
     korean_lunar: typing.ClassVar[str]
     japanese_lunar: typing.ClassVar[str]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CalendarIdentifiers: ...
 
 class ClockIdentifiers(winrt.system.Object):
-    twelve_hour: typing.ClassVar[str]
-    twenty_four_hour: typing.ClassVar[str]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClockIdentifiers: ...
+    twelve_hour: typing.ClassVar[str]
+    twenty_four_hour: typing.ClassVar[str]
 
 class CurrencyAmount(winrt.system.Object):
-    amount: str
-    currency: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrencyAmount: ...
     def __new__(cls: typing.Type[CurrencyAmount], amount: str, currency: str) -> CurrencyAmount:...
+    @_property
+    def amount(self) -> str: ...
+    @_property
+    def currency(self) -> str: ...
 
 class CurrencyIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> CurrencyIdentifiers: ...
     h_n_l: typing.ClassVar[str]
     a_e_d: typing.ClassVar[str]
     a_f_n: typing.ClassVar[str]
@@ -337,17 +400,8 @@ class CurrencyIdentifiers(winrt.system.Object):
     s_t_n: typing.ClassVar[str]
     v_e_s: typing.ClassVar[str]
     m_r_u: typing.ClassVar[str]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> CurrencyIdentifiers: ...
 
 class GeographicRegion(winrt.system.Object):
-    code: str
-    code_three_digit: str
-    code_three_letter: str
-    code_two_letter: str
-    currencies_in_use: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    display_name: str
-    native_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeographicRegion: ...
     @typing.overload
@@ -356,13 +410,30 @@ class GeographicRegion(winrt.system.Object):
     def __new__(cls: typing.Type[GeographicRegion]) -> GeographicRegion:...
     @staticmethod
     def is_supported(geographic_region_code: str, /) -> bool: ...
+    @_property
+    def code(self) -> str: ...
+    @_property
+    def code_three_digit(self) -> str: ...
+    @_property
+    def code_three_letter(self) -> str: ...
+    @_property
+    def code_two_letter(self) -> str: ...
+    @_property
+    def currencies_in_use(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def native_name(self) -> str: ...
 
 class JapanesePhoneme(winrt.system.Object):
-    display_text: str
-    is_phrase_start: bool
-    yomi_text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JapanesePhoneme: ...
+    @_property
+    def display_text(self) -> str: ...
+    @_property
+    def is_phrase_start(self) -> bool: ...
+    @_property
+    def yomi_text(self) -> str: ...
 
 class JapanesePhoneticAnalyzer(winrt.system.Object):
     @staticmethod
@@ -375,13 +446,6 @@ class JapanesePhoneticAnalyzer(winrt.system.Object):
     def get_words(input: str, mono_ruby: bool, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[JapanesePhoneme]]: ...
 
 class Language(winrt.system.Object):
-    display_name: str
-    language_tag: str
-    native_name: str
-    script: str
-    layout_direction: LanguageLayoutDirection
-    abbreviated_name: str
-    current_input_method_language_tag: typing.ClassVar[str]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Language: ...
     def __new__(cls: typing.Type[Language], language_tag: str) -> Language:...
@@ -392,8 +456,23 @@ class Language(winrt.system.Object):
     def is_well_formed(language_tag: str, /) -> bool: ...
     @staticmethod
     def try_set_input_method_language_tag(language_tag: str, /) -> bool: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def language_tag(self) -> str: ...
+    @_property
+    def native_name(self) -> str: ...
+    @_property
+    def script(self) -> str: ...
+    @_property
+    def layout_direction(self) -> LanguageLayoutDirection: ...
+    @_property
+    def abbreviated_name(self) -> str: ...
+    current_input_method_language_tag: typing.ClassVar[str]
 
 class NumeralSystemIdentifiers(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> NumeralSystemIdentifiers: ...
     full_wide: typing.ClassVar[str]
     arab: typing.ClassVar[str]
     arab_ext: typing.ClassVar[str]
@@ -442,6 +521,4 @@ class NumeralSystemIdentifiers(winrt.system.Object):
     zmth_sanb: typing.ClassVar[str]
     zmth_sans: typing.ClassVar[str]
     brah: typing.ClassVar[str]
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> NumeralSystemIdentifiers: ...
 

@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -33,8 +34,6 @@ class PhoneNumberFormatter(winrt.system.Object):
     def wrap_with_left_to_right_markers(number: str, /) -> str: ...
 
 class PhoneNumberInfo(winrt.system.Object):
-    country_code: winrt.system.Int32
-    phone_number: str
     def __str__(self) -> str: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNumberInfo: ...
@@ -52,4 +51,8 @@ class PhoneNumberInfo(winrt.system.Object):
     @typing.overload
     @staticmethod
     def try_parse(input: str, region_code: str, /) -> typing.Tuple[PhoneNumberParseResult, typing.Optional[PhoneNumberInfo]]: ...
+    @_property
+    def country_code(self) -> winrt.system.Int32: ...
+    @_property
+    def phone_number(self) -> str: ...
 

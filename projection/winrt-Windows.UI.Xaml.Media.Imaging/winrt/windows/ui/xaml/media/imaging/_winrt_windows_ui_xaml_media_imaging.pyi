@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel.background
@@ -19,22 +20,6 @@ from . import DownloadProgressEventHandler
 Self = typing.TypeVar('Self')
 
 class BitmapImage(winrt.system.Object):
-    uri_source: typing.Optional[winrt.windows.foundation.Uri]
-    decode_pixel_width: winrt.system.Int32
-    decode_pixel_height: winrt.system.Int32
-    create_options: BitmapCreateOptions
-    decode_pixel_type: DecodePixelType
-    auto_play: bool
-    is_animated_bitmap: bool
-    is_playing: bool
-    create_options_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    decode_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    decode_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    decode_pixel_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    auto_play_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_animated_bitmap_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    is_playing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapImage: ...
     @typing.overload
@@ -49,27 +34,64 @@ class BitmapImage(winrt.system.Object):
     def remove_image_failed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_image_opened(self, handler: typing.Optional[winrt.windows.ui.xaml.RoutedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_image_opened(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def uri_source(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @uri_source.setter
+    def uri_source(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
+    @_property
+    def decode_pixel_width(self) -> winrt.system.Int32: ...
+    @decode_pixel_width.setter
+    def decode_pixel_width(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def decode_pixel_height(self) -> winrt.system.Int32: ...
+    @decode_pixel_height.setter
+    def decode_pixel_height(self, value: winrt.system.Int32) -> None: ...
+    @_property
+    def create_options(self) -> BitmapCreateOptions: ...
+    @create_options.setter
+    def create_options(self, value: BitmapCreateOptions) -> None: ...
+    @_property
+    def decode_pixel_type(self) -> DecodePixelType: ...
+    @decode_pixel_type.setter
+    def decode_pixel_type(self, value: DecodePixelType) -> None: ...
+    @_property
+    def auto_play(self) -> bool: ...
+    @auto_play.setter
+    def auto_play(self, value: bool) -> None: ...
+    @_property
+    def is_animated_bitmap(self) -> bool: ...
+    @_property
+    def is_playing(self) -> bool: ...
+    create_options_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    decode_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    decode_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    decode_pixel_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    auto_play_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    is_animated_bitmap_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    is_playing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class BitmapSource(winrt.system.Object):
-    pixel_height: winrt.system.Int32
-    pixel_width: winrt.system.Int32
-    pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapSource: ...
     def set_source(self, stream_source: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> None: ...
     def set_source_async(self, stream_source: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> winrt.windows.foundation.IAsyncAction: ...
-
-class DownloadProgressEventArgs(winrt.system.Object):
-    progress: winrt.system.Int32
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> DownloadProgressEventArgs: ...
-
-class RenderTargetBitmap(winrt.system.Object):
-    pixel_height: winrt.system.Int32
-    pixel_width: winrt.system.Int32
+    @_property
+    def pixel_height(self) -> winrt.system.Int32: ...
+    @_property
+    def pixel_width(self) -> winrt.system.Int32: ...
     pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+
+class DownloadProgressEventArgs(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> DownloadProgressEventArgs: ...
+    @_property
+    def progress(self) -> winrt.system.Int32: ...
+    @progress.setter
+    def progress(self, value: winrt.system.Int32) -> None: ...
+
+class RenderTargetBitmap(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RenderTargetBitmap: ...
     def __new__(cls: typing.Type[RenderTargetBitmap]) -> RenderTargetBitmap:...
@@ -78,6 +100,12 @@ class RenderTargetBitmap(winrt.system.Object):
     def render_async(self, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
     def render_async(self, element: typing.Optional[winrt.windows.ui.xaml.UIElement], scaled_width: winrt.system.Int32, scaled_height: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncAction: ...
+    @_property
+    def pixel_height(self) -> winrt.system.Int32: ...
+    @_property
+    def pixel_width(self) -> winrt.system.Int32: ...
+    pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class SoftwareBitmapSource(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
@@ -97,12 +125,6 @@ class SurfaceImageSource(winrt.system.Object):
     def __new__(cls: typing.Type[SurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: bool) -> SurfaceImageSource:...
 
 class SvgImageSource(winrt.system.Object):
-    uri_source: typing.Optional[winrt.windows.foundation.Uri]
-    rasterize_pixel_width: winrt.system.Double
-    rasterize_pixel_height: winrt.system.Double
-    rasterize_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    rasterize_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
-    uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SvgImageSource: ...
     @typing.overload
@@ -114,11 +136,27 @@ class SvgImageSource(winrt.system.Object):
     def remove_open_failed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_opened(self, handler: winrt.windows.foundation.TypedEventHandler[SvgImageSource, SvgImageSourceOpenedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_opened(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def uri_source(self) -> typing.Optional[winrt.windows.foundation.Uri]: ...
+    @uri_source.setter
+    def uri_source(self, value: typing.Optional[winrt.windows.foundation.Uri]) -> None: ...
+    @_property
+    def rasterize_pixel_width(self) -> winrt.system.Double: ...
+    @rasterize_pixel_width.setter
+    def rasterize_pixel_width(self, value: winrt.system.Double) -> None: ...
+    @_property
+    def rasterize_pixel_height(self) -> winrt.system.Double: ...
+    @rasterize_pixel_height.setter
+    def rasterize_pixel_height(self, value: winrt.system.Double) -> None: ...
+    rasterize_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    rasterize_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
+    uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
 
 class SvgImageSourceFailedEventArgs(winrt.system.Object):
-    status: SvgImageSourceLoadStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SvgImageSourceFailedEventArgs: ...
+    @_property
+    def status(self) -> SvgImageSourceLoadStatus: ...
 
 class SvgImageSourceOpenedEventArgs(winrt.system.Object):
     @staticmethod
@@ -133,11 +171,12 @@ class VirtualSurfaceImageSource(winrt.system.Object):
     def __new__(cls: typing.Type[VirtualSurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: bool) -> VirtualSurfaceImageSource:...
 
 class WriteableBitmap(winrt.system.Object):
-    pixel_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WriteableBitmap: ...
     def __new__(cls: typing.Type[WriteableBitmap], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32) -> WriteableBitmap:...
     def invalidate(self) -> None: ...
+    @_property
+    def pixel_buffer(self) -> typing.Optional[winrt.windows.storage.streams.IBuffer]: ...
 
 class XamlRenderingBackgroundTask(winrt.system.Object):
     @staticmethod

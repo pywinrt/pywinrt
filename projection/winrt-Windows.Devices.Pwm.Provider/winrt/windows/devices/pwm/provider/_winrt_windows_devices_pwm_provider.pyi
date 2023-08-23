@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation.collections
@@ -12,10 +13,6 @@ import winrt.windows.foundation.collections
 Self = typing.TypeVar('Self')
 
 class IPwmControllerProvider(winrt.system.Object):
-    actual_frequency: winrt.system.Double
-    max_frequency: winrt.system.Double
-    min_frequency: winrt.system.Double
-    pin_count: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPwmControllerProvider: ...
     def acquire_pin(self, pin: winrt.system.Int32, /) -> None: ...
@@ -24,6 +21,14 @@ class IPwmControllerProvider(winrt.system.Object):
     def release_pin(self, pin: winrt.system.Int32, /) -> None: ...
     def set_desired_frequency(self, frequency: winrt.system.Double, /) -> winrt.system.Double: ...
     def set_pulse_parameters(self, pin: winrt.system.Int32, duty_cycle: winrt.system.Double, invert_polarity: bool, /) -> None: ...
+    @_property
+    def actual_frequency(self) -> winrt.system.Double: ...
+    @_property
+    def max_frequency(self) -> winrt.system.Double: ...
+    @_property
+    def min_frequency(self) -> winrt.system.Double: ...
+    @_property
+    def pin_count(self) -> winrt.system.Int32: ...
 
 class IPwmProvider(winrt.system.Object):
     @staticmethod

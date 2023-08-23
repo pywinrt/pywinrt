@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -14,45 +15,63 @@ from . import PhoneCallBlockedReason, PhoneIncomingCallDismissedReason, PhoneLin
 Self = typing.TypeVar('Self')
 
 class PhoneCallBlockedTriggerDetails(winrt.system.Object):
-    call_blocked_reason: PhoneCallBlockedReason
-    line_id: _uuid.UUID
-    phone_number: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallBlockedTriggerDetails: ...
+    @_property
+    def call_blocked_reason(self) -> PhoneCallBlockedReason: ...
+    @_property
+    def line_id(self) -> _uuid.UUID: ...
+    @_property
+    def phone_number(self) -> str: ...
 
 class PhoneCallOriginDataRequestTriggerDetails(winrt.system.Object):
-    phone_number: str
-    request_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallOriginDataRequestTriggerDetails: ...
+    @_property
+    def phone_number(self) -> str: ...
+    @_property
+    def request_id(self) -> _uuid.UUID: ...
 
 class PhoneIncomingCallDismissedTriggerDetails(winrt.system.Object):
-    dismissal_time: datetime.datetime
-    display_name: str
-    line_id: _uuid.UUID
-    phone_number: str
-    reason: PhoneIncomingCallDismissedReason
-    text_reply_message: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallDismissedTriggerDetails: ...
+    @_property
+    def dismissal_time(self) -> datetime.datetime: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def line_id(self) -> _uuid.UUID: ...
+    @_property
+    def phone_number(self) -> str: ...
+    @_property
+    def reason(self) -> PhoneIncomingCallDismissedReason: ...
+    @_property
+    def text_reply_message(self) -> str: ...
 
 class PhoneIncomingCallNotificationTriggerDetails(winrt.system.Object):
-    call_id: str
-    line_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneIncomingCallNotificationTriggerDetails: ...
+    @_property
+    def call_id(self) -> str: ...
+    @_property
+    def line_id(self) -> _uuid.UUID: ...
 
 class PhoneLineChangedTriggerDetails(winrt.system.Object):
-    change_type: PhoneLineChangeKind
-    line_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineChangedTriggerDetails: ...
     def has_line_property_changed(self, line_property: PhoneLineProperties, /) -> bool: ...
+    @_property
+    def change_type(self) -> PhoneLineChangeKind: ...
+    @_property
+    def line_id(self) -> _uuid.UUID: ...
 
 class PhoneNewVoicemailMessageTriggerDetails(winrt.system.Object):
-    line_id: _uuid.UUID
-    operator_message: str
-    voicemail_count: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNewVoicemailMessageTriggerDetails: ...
+    @_property
+    def line_id(self) -> _uuid.UUID: ...
+    @_property
+    def operator_message(self) -> str: ...
+    @_property
+    def voicemail_count(self) -> winrt.system.Int32: ...
 

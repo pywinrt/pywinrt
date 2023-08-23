@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -15,36 +16,36 @@ from . import SystemUpdateAttentionRequiredReason, SystemUpdateItemState, System
 Self = typing.TypeVar('Self')
 
 class SystemUpdateItem(winrt.system.Object):
-    description: str
-    download_progress: winrt.system.Double
-    extended_error: winrt.windows.foundation.HResult
-    id: str
-    install_progress: winrt.system.Double
-    revision: winrt.system.UInt32
-    state: SystemUpdateItemState
-    title: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemUpdateItem: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def download_progress(self) -> winrt.system.Double: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def install_progress(self) -> winrt.system.Double: ...
+    @_property
+    def revision(self) -> winrt.system.UInt32: ...
+    @_property
+    def state(self) -> SystemUpdateItemState: ...
+    @_property
+    def title(self) -> str: ...
 
 class SystemUpdateLastErrorInfo(winrt.system.Object):
-    extended_error: winrt.windows.foundation.HResult
-    is_interactive: bool
-    state: SystemUpdateManagerState
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemUpdateLastErrorInfo: ...
+    @_property
+    def extended_error(self) -> winrt.windows.foundation.HResult: ...
+    @_property
+    def is_interactive(self) -> bool: ...
+    @_property
+    def state(self) -> SystemUpdateManagerState: ...
 
 class SystemUpdateManager(winrt.system.Object):
-    attention_required_reason: typing.ClassVar[SystemUpdateAttentionRequiredReason]
-    download_progress: typing.ClassVar[winrt.system.Double]
-    extended_error: typing.ClassVar[winrt.windows.foundation.HResult]
-    install_progress: typing.ClassVar[winrt.system.Double]
-    last_error_info: typing.ClassVar[typing.Optional[SystemUpdateLastErrorInfo]]
-    last_update_check_time: typing.ClassVar[datetime.datetime]
-    last_update_install_time: typing.ClassVar[datetime.datetime]
-    state: typing.ClassVar[SystemUpdateManagerState]
-    user_active_hours_end: typing.ClassVar[datetime.timedelta]
-    user_active_hours_max: typing.ClassVar[winrt.system.Int32]
-    user_active_hours_start: typing.ClassVar[datetime.timedelta]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemUpdateManager: ...
     @staticmethod
@@ -73,4 +74,15 @@ class SystemUpdateManager(winrt.system.Object):
     def add_state_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_state_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
+    attention_required_reason: typing.ClassVar[SystemUpdateAttentionRequiredReason]
+    download_progress: typing.ClassVar[winrt.system.Double]
+    extended_error: typing.ClassVar[winrt.windows.foundation.HResult]
+    install_progress: typing.ClassVar[winrt.system.Double]
+    last_error_info: typing.ClassVar[typing.Optional[SystemUpdateLastErrorInfo]]
+    last_update_check_time: typing.ClassVar[datetime.datetime]
+    last_update_install_time: typing.ClassVar[datetime.datetime]
+    state: typing.ClassVar[SystemUpdateManagerState]
+    user_active_hours_end: typing.ClassVar[datetime.timedelta]
+    user_active_hours_max: typing.ClassVar[winrt.system.Int32]
+    user_active_hours_start: typing.ClassVar[datetime.timedelta]
 

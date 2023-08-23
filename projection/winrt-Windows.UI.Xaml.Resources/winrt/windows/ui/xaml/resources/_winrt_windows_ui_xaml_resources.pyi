@@ -5,15 +5,16 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
 Self = typing.TypeVar('Self')
 
 class CustomXamlResourceLoader(winrt.system.Object):
-    current: typing.ClassVar[typing.Optional[CustomXamlResourceLoader]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomXamlResourceLoader: ...
     def __new__(cls: typing.Type[CustomXamlResourceLoader]) -> CustomXamlResourceLoader:...
     def get_resource(self, resource_id: str, object_type: str, property_name: str, property_type: str, /) -> typing.Optional[winrt.system.Object]: ...
+    current: typing.ClassVar[typing.Optional[CustomXamlResourceLoader]]
 

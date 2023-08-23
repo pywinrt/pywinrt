@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 
@@ -13,7 +14,7 @@ from . import ApplicationProfileModes
 Self = typing.TypeVar('Self')
 
 class ApplicationProfile(winrt.system.Object):
-    modes: typing.ClassVar[ApplicationProfileModes]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ApplicationProfile: ...
+    modes: typing.ClassVar[ApplicationProfileModes]
 

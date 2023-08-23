@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -17,22 +18,28 @@ from . import GameSaveErrorStatus
 Self = typing.TypeVar('Self')
 
 class GameSaveBlobGetResult(winrt.system.Object):
-    status: GameSaveErrorStatus
-    value: typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.windows.storage.streams.IBuffer]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobGetResult: ...
+    @_property
+    def status(self) -> GameSaveErrorStatus: ...
+    @_property
+    def value(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.windows.storage.streams.IBuffer]]: ...
 
 class GameSaveBlobInfo(winrt.system.Object):
-    name: str
-    size: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobInfo: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def size(self) -> winrt.system.UInt32: ...
 
 class GameSaveBlobInfoGetResult(winrt.system.Object):
-    status: GameSaveErrorStatus
-    value: typing.Optional[winrt.windows.foundation.collections.IVectorView[GameSaveBlobInfo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveBlobInfoGetResult: ...
+    @_property
+    def status(self) -> GameSaveErrorStatus: ...
+    @_property
+    def value(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GameSaveBlobInfo]]: ...
 
 class GameSaveBlobInfoQuery(winrt.system.Object):
     @staticmethod
@@ -44,8 +51,6 @@ class GameSaveBlobInfoQuery(winrt.system.Object):
     def get_item_count_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
 
 class GameSaveContainer(winrt.system.Object):
-    name: str
-    provider: typing.Optional[GameSaveProvider]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainer: ...
     def create_blob_info_query(self, blob_name_prefix: str, /) -> typing.Optional[GameSaveBlobInfoQuery]: ...
@@ -53,21 +58,32 @@ class GameSaveContainer(winrt.system.Object):
     def read_async(self, blobs_to_read: winrt.windows.foundation.collections.IMapView[str, winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[GameSaveOperationResult]: ...
     def submit_property_set_updates_async(self, blobs_to_write: typing.Optional[winrt.windows.foundation.collections.IPropertySet], blobs_to_delete: typing.Iterable[str], display_name: str, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveOperationResult]: ...
     def submit_updates_async(self, blobs_to_write: winrt.windows.foundation.collections.IMapView[str, winrt.windows.storage.streams.IBuffer], blobs_to_delete: typing.Iterable[str], display_name: str, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveOperationResult]: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def provider(self) -> typing.Optional[GameSaveProvider]: ...
 
 class GameSaveContainerInfo(winrt.system.Object):
-    display_name: str
-    last_modified_time: datetime.datetime
-    name: str
-    needs_sync: bool
-    total_size: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainerInfo: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def last_modified_time(self) -> datetime.datetime: ...
+    @_property
+    def name(self) -> str: ...
+    @_property
+    def needs_sync(self) -> bool: ...
+    @_property
+    def total_size(self) -> winrt.system.UInt64: ...
 
 class GameSaveContainerInfoGetResult(winrt.system.Object):
-    status: GameSaveErrorStatus
-    value: typing.Optional[winrt.windows.foundation.collections.IVectorView[GameSaveContainerInfo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainerInfoGetResult: ...
+    @_property
+    def status(self) -> GameSaveErrorStatus: ...
+    @_property
+    def value(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GameSaveContainerInfo]]: ...
 
 class GameSaveContainerInfoQuery(winrt.system.Object):
     @staticmethod
@@ -79,13 +95,12 @@ class GameSaveContainerInfoQuery(winrt.system.Object):
     def get_item_count_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
 
 class GameSaveOperationResult(winrt.system.Object):
-    status: GameSaveErrorStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveOperationResult: ...
+    @_property
+    def status(self) -> GameSaveErrorStatus: ...
 
 class GameSaveProvider(winrt.system.Object):
-    containers_changed_since_last_sync: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveProvider: ...
     def create_container(self, name: str, /) -> typing.Optional[GameSaveContainer]: ...
@@ -99,10 +114,16 @@ class GameSaveProvider(winrt.system.Object):
     def get_remaining_bytes_in_quota_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Int64]: ...
     @staticmethod
     def get_sync_on_demand_for_user_async(user: typing.Optional[winrt.windows.system.User], service_config_id: str, /) -> winrt.windows.foundation.IAsyncOperation[GameSaveProviderGetResult]: ...
+    @_property
+    def containers_changed_since_last_sync(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
+    @_property
+    def user(self) -> typing.Optional[winrt.windows.system.User]: ...
 
 class GameSaveProviderGetResult(winrt.system.Object):
-    status: GameSaveErrorStatus
-    value: typing.Optional[GameSaveProvider]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveProviderGetResult: ...
+    @_property
+    def status(self) -> GameSaveErrorStatus: ...
+    @_property
+    def value(self) -> typing.Optional[GameSaveProvider]: ...
 

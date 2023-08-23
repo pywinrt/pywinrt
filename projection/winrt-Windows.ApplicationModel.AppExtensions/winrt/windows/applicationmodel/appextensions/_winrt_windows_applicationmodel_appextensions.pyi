@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -15,16 +16,22 @@ import winrt.windows.storage
 Self = typing.TypeVar('Self')
 
 class AppExtension(winrt.system.Object):
-    app_info: typing.Optional[winrt.windows.applicationmodel.AppInfo]
-    description: str
-    display_name: str
-    id: str
-    package: typing.Optional[winrt.windows.applicationmodel.Package]
-    app_user_model_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtension: ...
     def get_extension_properties_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IPropertySet]: ...
     def get_public_folder_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.StorageFolder]: ...
+    @_property
+    def app_info(self) -> typing.Optional[winrt.windows.applicationmodel.AppInfo]: ...
+    @_property
+    def description(self) -> str: ...
+    @_property
+    def display_name(self) -> str: ...
+    @_property
+    def id(self) -> str: ...
+    @_property
+    def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
+    @_property
+    def app_user_model_id(self) -> str: ...
 
 class AppExtensionCatalog(winrt.system.Object):
     @staticmethod
@@ -45,34 +52,46 @@ class AppExtensionCatalog(winrt.system.Object):
     def remove_package_updating(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class AppExtensionPackageInstalledEventArgs(winrt.system.Object):
-    app_extension_name: str
-    extensions: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppExtension]]
-    package: typing.Optional[winrt.windows.applicationmodel.Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageInstalledEventArgs: ...
+    @_property
+    def app_extension_name(self) -> str: ...
+    @_property
+    def extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[AppExtension]]: ...
+    @_property
+    def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
 class AppExtensionPackageStatusChangedEventArgs(winrt.system.Object):
-    app_extension_name: str
-    package: typing.Optional[winrt.windows.applicationmodel.Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageStatusChangedEventArgs: ...
+    @_property
+    def app_extension_name(self) -> str: ...
+    @_property
+    def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
 class AppExtensionPackageUninstallingEventArgs(winrt.system.Object):
-    app_extension_name: str
-    package: typing.Optional[winrt.windows.applicationmodel.Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUninstallingEventArgs: ...
+    @_property
+    def app_extension_name(self) -> str: ...
+    @_property
+    def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
 class AppExtensionPackageUpdatedEventArgs(winrt.system.Object):
-    app_extension_name: str
-    extensions: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppExtension]]
-    package: typing.Optional[winrt.windows.applicationmodel.Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUpdatedEventArgs: ...
+    @_property
+    def app_extension_name(self) -> str: ...
+    @_property
+    def extensions(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[AppExtension]]: ...
+    @_property
+    def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 
 class AppExtensionPackageUpdatingEventArgs(winrt.system.Object):
-    app_extension_name: str
-    package: typing.Optional[winrt.windows.applicationmodel.Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppExtensionPackageUpdatingEventArgs: ...
+    @_property
+    def app_extension_name(self) -> str: ...
+    @_property
+    def package(self) -> typing.Optional[winrt.windows.applicationmodel.Package]: ...
 

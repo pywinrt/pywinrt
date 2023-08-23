@@ -5,6 +5,7 @@ import sys
 import types
 import typing
 import uuid as _uuid
+from builtins import property as _property
 
 import winrt.system
 import winrt.windows.foundation
@@ -28,8 +29,6 @@ class ThreadPool(winrt.system.Object):
     def run_async(handler: typing.Optional[WorkItemHandler], priority: WorkItemPriority, options: WorkItemOptions, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class ThreadPoolTimer(winrt.system.Object):
-    delay: datetime.timedelta
-    period: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThreadPoolTimer: ...
     def cancel(self) -> None: ...
@@ -45,4 +44,8 @@ class ThreadPoolTimer(winrt.system.Object):
     @typing.overload
     @staticmethod
     def create_timer(handler: typing.Optional[TimerElapsedHandler], delay: datetime.timedelta, destroyed: typing.Optional[TimerDestroyedHandler], /) -> typing.Optional[ThreadPoolTimer]: ...
+    @_property
+    def delay(self) -> datetime.timedelta: ...
+    @_property
+    def period(self) -> datetime.timedelta: ...
 
