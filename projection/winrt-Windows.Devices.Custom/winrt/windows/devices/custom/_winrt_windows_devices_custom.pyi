@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -22,7 +22,7 @@ class CustomDevice(winrt.system.Object):
     @staticmethod
     def from_id_async(device_id: str, desired_access: DeviceAccessMode, sharing_mode: DeviceSharingMode, /) -> winrt.windows.foundation.IAsyncOperation[CustomDevice]: ...
     @staticmethod
-    def get_device_selector(class_guid: uuid.UUID, /) -> str: ...
+    def get_device_selector(class_guid: _uuid.UUID, /) -> str: ...
     def send_i_o_control_async(self, io_control_code: typing.Optional[IIOControlCode], input_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], output_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
     def try_send_i_o_control_async(self, io_control_code: typing.Optional[IIOControlCode], input_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], output_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 

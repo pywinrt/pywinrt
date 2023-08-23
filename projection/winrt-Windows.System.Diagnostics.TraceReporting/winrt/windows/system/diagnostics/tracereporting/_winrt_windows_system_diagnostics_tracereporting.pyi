@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation.collections
@@ -21,17 +21,17 @@ class PlatformDiagnosticActions(winrt.system.Object):
     @staticmethod
     def force_upload(latency: PlatformDiagnosticEventBufferLatencies, upload_over_costed_network: bool, upload_over_battery: bool, /) -> PlatformDiagnosticActionState: ...
     @staticmethod
-    def get_active_scenario_list() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[uuid.UUID]]: ...
+    def get_active_scenario_list() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[_uuid.UUID]]: ...
     @staticmethod
     def get_active_trace_runtime(slot_type: PlatformDiagnosticTraceSlotType, /) -> typing.Optional[PlatformDiagnosticTraceRuntimeInfo]: ...
     @staticmethod
     def get_known_trace_list(slot_type: PlatformDiagnosticTraceSlotType, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[PlatformDiagnosticTraceInfo]]: ...
     @staticmethod
-    def is_scenario_enabled(scenario_id: uuid.UUID, /) -> bool: ...
+    def is_scenario_enabled(scenario_id: _uuid.UUID, /) -> bool: ...
     @staticmethod
-    def is_trace_running(slot_type: PlatformDiagnosticTraceSlotType, scenario_id: uuid.UUID, trace_profile_hash: winrt.system.UInt64, /) -> PlatformDiagnosticTraceSlotState: ...
+    def is_trace_running(slot_type: PlatformDiagnosticTraceSlotType, scenario_id: _uuid.UUID, trace_profile_hash: winrt.system.UInt64, /) -> PlatformDiagnosticTraceSlotState: ...
     @staticmethod
-    def try_escalate_scenario(scenario_id: uuid.UUID, escalation_type: PlatformDiagnosticEscalationType, output_directory: str, timestamp_output_directory: bool, force_escalation_upload: bool, triggers: winrt.windows.foundation.collections.IMapView[str, str], /) -> bool: ...
+    def try_escalate_scenario(scenario_id: _uuid.UUID, escalation_type: PlatformDiagnosticEscalationType, output_directory: str, timestamp_output_directory: bool, force_escalation_upload: bool, triggers: winrt.windows.foundation.collections.IMapView[str, str], /) -> bool: ...
 
 class PlatformDiagnosticTraceInfo(winrt.system.Object):
     is_auto_logger: bool
@@ -39,7 +39,7 @@ class PlatformDiagnosticTraceInfo(winrt.system.Object):
     max_trace_duration_file_time: winrt.system.Int64
     priority: PlatformDiagnosticTracePriority
     profile_hash: winrt.system.UInt64
-    scenario_id: uuid.UUID
+    scenario_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticTraceInfo: ...
 

@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -145,7 +145,7 @@ class StorageProviderSyncRootInfo(winrt.system.Object):
     context: typing.Optional[winrt.windows.storage.streams.IBuffer]
     allow_pinning: bool
     storage_provider_item_property_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[StorageProviderItemPropertyDefinition]]
-    provider_id: uuid.UUID
+    provider_id: _uuid.UUID
     fallback_file_type_info: typing.Optional[winrt.windows.foundation.collections.IVector[StorageProviderFileTypeInfo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageProviderSyncRootInfo: ...

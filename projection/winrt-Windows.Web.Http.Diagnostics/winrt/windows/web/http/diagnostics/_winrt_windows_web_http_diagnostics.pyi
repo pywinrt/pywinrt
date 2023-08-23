@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -31,7 +31,7 @@ class HttpDiagnosticProvider(winrt.system.Object):
     def remove_response_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class HttpDiagnosticProviderRequestResponseCompletedEventArgs(winrt.system.Object):
-    activity_id: uuid.UUID
+    activity_id: _uuid.UUID
     initiator: HttpDiagnosticRequestInitiator
     process_id: winrt.system.UInt32
     requested_uri: typing.Optional[winrt.windows.foundation.Uri]
@@ -55,7 +55,7 @@ class HttpDiagnosticProviderRequestResponseTimestamps(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestResponseTimestamps: ...
 
 class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
-    activity_id: uuid.UUID
+    activity_id: _uuid.UUID
     initiator: HttpDiagnosticRequestInitiator
     message: typing.Optional[winrt.windows.web.http.HttpRequestMessage]
     process_id: winrt.system.UInt32
@@ -66,7 +66,7 @@ class HttpDiagnosticProviderRequestSentEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> HttpDiagnosticProviderRequestSentEventArgs: ...
 
 class HttpDiagnosticProviderResponseReceivedEventArgs(winrt.system.Object):
-    activity_id: uuid.UUID
+    activity_id: _uuid.UUID
     message: typing.Optional[winrt.windows.web.http.HttpResponseMessage]
     timestamp: datetime.datetime
     @staticmethod

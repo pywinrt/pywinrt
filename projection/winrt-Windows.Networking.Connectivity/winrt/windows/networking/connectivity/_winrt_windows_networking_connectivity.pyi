@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -58,7 +58,7 @@ class ConnectionProfile(winrt.system.Object):
     profile_name: str
     is_wlan_connection_profile: bool
     is_wwan_connection_profile: bool
-    service_provider_guid: typing.Optional[typing.Optional[uuid.UUID]]
+    service_provider_guid: typing.Optional[typing.Optional[_uuid.UUID]]
     wlan_connection_profile_details: typing.Optional[WlanConnectionProfileDetails]
     wwan_connection_profile_details: typing.Optional[WwanConnectionProfileDetails]
     can_delete: bool
@@ -82,7 +82,7 @@ class ConnectionProfile(winrt.system.Object):
     def try_delete_async(self) -> winrt.windows.foundation.IAsyncOperation[ConnectionProfileDeleteStatus]: ...
 
 class ConnectionProfileFilter(winrt.system.Object):
-    service_provider_guid: typing.Optional[typing.Optional[uuid.UUID]]
+    service_provider_guid: typing.Optional[typing.Optional[_uuid.UUID]]
     network_cost_type: NetworkCostType
     is_wwan_connection_profile: bool
     is_wlan_connection_profile: bool
@@ -91,7 +91,7 @@ class ConnectionProfileFilter(winrt.system.Object):
     is_over_data_limit: typing.Optional[typing.Optional[bool]]
     is_background_data_usage_restricted: typing.Optional[typing.Optional[bool]]
     raw_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    purpose_guid: typing.Optional[typing.Optional[uuid.UUID]]
+    purpose_guid: typing.Optional[typing.Optional[_uuid.UUID]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectionProfileFilter: ...
     def __new__(cls: typing.Type[ConnectionProfileFilter]) -> ConnectionProfileFilter:...
@@ -150,7 +150,7 @@ class IPInformation(winrt.system.Object):
 
 class LanIdentifier(winrt.system.Object):
     infrastructure_id: typing.Optional[LanIdentifierData]
-    network_adapter_id: uuid.UUID
+    network_adapter_id: _uuid.UUID
     port_id: typing.Optional[LanIdentifierData]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LanIdentifier: ...
@@ -164,7 +164,7 @@ class LanIdentifierData(winrt.system.Object):
 class NetworkAdapter(winrt.system.Object):
     iana_interface_type: winrt.system.UInt32
     inbound_max_bits_per_second: winrt.system.UInt64
-    network_adapter_id: uuid.UUID
+    network_adapter_id: _uuid.UUID
     network_item: typing.Optional[NetworkItem]
     outbound_max_bits_per_second: winrt.system.UInt64
     @staticmethod
@@ -194,7 +194,7 @@ class NetworkInformation(winrt.system.Object):
     def remove_network_status_changed(event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class NetworkItem(winrt.system.Object):
-    network_id: uuid.UUID
+    network_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkItem: ...
     def get_network_types(self) -> NetworkTypes: ...
@@ -254,7 +254,7 @@ class WwanConnectionProfileDetails(winrt.system.Object):
     access_point_name: str
     home_provider_id: str
     i_p_kind: WwanNetworkIPKind
-    purpose_guids: typing.Optional[winrt.windows.foundation.collections.IVectorView[uuid.UUID]]
+    purpose_guids: typing.Optional[winrt.windows.foundation.collections.IVectorView[_uuid.UUID]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WwanConnectionProfileDetails: ...
     def get_current_data_class(self) -> WwanDataClass: ...

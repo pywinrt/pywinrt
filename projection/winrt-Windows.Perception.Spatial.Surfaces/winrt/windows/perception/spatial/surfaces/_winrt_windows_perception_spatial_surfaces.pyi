@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -17,7 +17,7 @@ import winrt.windows.storage.streams
 Self = typing.TypeVar('Self')
 
 class SpatialSurfaceInfo(winrt.system.Object):
-    id: uuid.UUID
+    id: _uuid.UUID
     update_time: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceInfo: ...
@@ -61,7 +61,7 @@ class SpatialSurfaceObserver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialSurfaceObserver: ...
     def __new__(cls: typing.Type[SpatialSurfaceObserver]) -> SpatialSurfaceObserver:...
-    def get_observed_surfaces(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, SpatialSurfaceInfo]]: ...
+    def get_observed_surfaces(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, SpatialSurfaceInfo]]: ...
     @staticmethod
     def is_supported() -> bool: ...
     @staticmethod

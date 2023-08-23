@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -92,8 +92,8 @@ class ServiceRequestedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ServiceRequestedEventArgs: ...
 
 class IMediaProtectionServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaProtectionServiceRequest: ...
 

@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -24,8 +24,8 @@ class Blittable:
     g: winrt.system.Int64
     h: winrt.system.Single
     i: winrt.system.Double
-    j: uuid.UUID
-    def __init__(self, a: winrt.system.UInt8, b: winrt.system.UInt16, c: winrt.system.UInt32, d: winrt.system.UInt64, e: winrt.system.Int16, f: winrt.system.Int32, g: winrt.system.Int64, h: winrt.system.Single, i: winrt.system.Double, j: uuid.UUID) -> None: ...
+    j: _uuid.UUID
+    def __init__(self, a: winrt.system.UInt8, b: winrt.system.UInt16, c: winrt.system.UInt32, d: winrt.system.UInt64, e: winrt.system.Int16, f: winrt.system.Int32, g: winrt.system.Int64, h: winrt.system.Single, i: winrt.system.Double, j: _uuid.UUID) -> None: ...
 
 class Nested:
     blittable: Blittable

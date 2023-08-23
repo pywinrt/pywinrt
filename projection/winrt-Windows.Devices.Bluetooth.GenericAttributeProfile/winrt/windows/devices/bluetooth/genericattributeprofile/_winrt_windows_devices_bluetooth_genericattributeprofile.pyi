@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.devices.bluetooth
@@ -23,22 +23,22 @@ class GattCharacteristic(winrt.system.Object):
     characteristic_properties: GattCharacteristicProperties
     presentation_formats: typing.Optional[winrt.windows.foundation.collections.IVectorView[GattPresentationFormat]]
     user_description: str
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     service: typing.Optional[GattDeviceService]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristic: ...
     @staticmethod
-    def convert_short_id_to_uuid(short_id: winrt.system.UInt16, /) -> uuid.UUID: ...
+    def convert_short_id_to_uuid(short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
     def get_all_descriptors(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDescriptor]]: ...
-    def get_descriptors(self, descriptor_uuid: uuid.UUID, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDescriptor]]: ...
+    def get_descriptors(self, descriptor_uuid: _uuid.UUID, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDescriptor]]: ...
     @typing.overload
     def get_descriptors_async(self) -> winrt.windows.foundation.IAsyncOperation[GattDescriptorsResult]: ...
     @typing.overload
     def get_descriptors_async(self, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDescriptorsResult]: ...
     @typing.overload
-    def get_descriptors_for_uuid_async(self, descriptor_uuid: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    def get_descriptors_for_uuid_async(self, descriptor_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattDescriptorsResult]: ...
     @typing.overload
-    def get_descriptors_for_uuid_async(self, descriptor_uuid: uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDescriptorsResult]: ...
+    def get_descriptors_for_uuid_async(self, descriptor_uuid: _uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDescriptorsResult]: ...
     def read_client_characteristic_configuration_descriptor_async(self) -> winrt.windows.foundation.IAsyncOperation[GattReadClientCharacteristicConfigurationDescriptorResult]: ...
     @typing.overload
     def read_value_async(self) -> winrt.windows.foundation.IAsyncOperation[GattReadResult]: ...
@@ -58,87 +58,87 @@ class GattCharacteristic(winrt.system.Object):
     def remove_value_changed(self, value_changed_event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class GattCharacteristicUuids(winrt.system.Object):
-    heart_rate_measurement: typing.ClassVar[uuid.UUID]
-    battery_level: typing.ClassVar[uuid.UUID]
-    blood_pressure_feature: typing.ClassVar[uuid.UUID]
-    blood_pressure_measurement: typing.ClassVar[uuid.UUID]
-    body_sensor_location: typing.ClassVar[uuid.UUID]
-    csc_feature: typing.ClassVar[uuid.UUID]
-    csc_measurement: typing.ClassVar[uuid.UUID]
-    glucose_feature: typing.ClassVar[uuid.UUID]
-    glucose_measurement: typing.ClassVar[uuid.UUID]
-    glucose_measurement_context: typing.ClassVar[uuid.UUID]
-    heart_rate_control_point: typing.ClassVar[uuid.UUID]
-    intermediate_cuff_pressure: typing.ClassVar[uuid.UUID]
-    intermediate_temperature: typing.ClassVar[uuid.UUID]
-    measurement_interval: typing.ClassVar[uuid.UUID]
-    record_access_control_point: typing.ClassVar[uuid.UUID]
-    rsc_feature: typing.ClassVar[uuid.UUID]
-    rsc_measurement: typing.ClassVar[uuid.UUID]
-    s_c_control_point: typing.ClassVar[uuid.UUID]
-    sensor_location: typing.ClassVar[uuid.UUID]
-    temperature_measurement: typing.ClassVar[uuid.UUID]
-    temperature_type: typing.ClassVar[uuid.UUID]
-    gap_peripheral_preferred_connection_parameters: typing.ClassVar[uuid.UUID]
-    gap_peripheral_privacy_flag: typing.ClassVar[uuid.UUID]
-    gap_reconnection_address: typing.ClassVar[uuid.UUID]
-    gatt_service_changed: typing.ClassVar[uuid.UUID]
-    hardware_revision_string: typing.ClassVar[uuid.UUID]
-    hid_control_point: typing.ClassVar[uuid.UUID]
-    hid_information: typing.ClassVar[uuid.UUID]
-    ieee1107320601_regulatory_certification_data_list: typing.ClassVar[uuid.UUID]
-    ln_control_point: typing.ClassVar[uuid.UUID]
-    ln_feature: typing.ClassVar[uuid.UUID]
-    local_time_information: typing.ClassVar[uuid.UUID]
-    location_and_speed: typing.ClassVar[uuid.UUID]
-    manufacturer_name_string: typing.ClassVar[uuid.UUID]
-    model_number_string: typing.ClassVar[uuid.UUID]
-    navigation: typing.ClassVar[uuid.UUID]
-    new_alert: typing.ClassVar[uuid.UUID]
-    pnp_id: typing.ClassVar[uuid.UUID]
-    position_quality: typing.ClassVar[uuid.UUID]
-    protocol_mode: typing.ClassVar[uuid.UUID]
-    cycling_power_feature: typing.ClassVar[uuid.UUID]
-    report: typing.ClassVar[uuid.UUID]
-    report_map: typing.ClassVar[uuid.UUID]
-    ringer_control_point: typing.ClassVar[uuid.UUID]
-    ringer_setting: typing.ClassVar[uuid.UUID]
-    scan_interval_window: typing.ClassVar[uuid.UUID]
-    scan_refresh: typing.ClassVar[uuid.UUID]
-    serial_number_string: typing.ClassVar[uuid.UUID]
-    software_revision_string: typing.ClassVar[uuid.UUID]
-    support_unread_alert_category: typing.ClassVar[uuid.UUID]
-    supported_new_alert_category: typing.ClassVar[uuid.UUID]
-    system_id: typing.ClassVar[uuid.UUID]
-    time_accuracy: typing.ClassVar[uuid.UUID]
-    time_source: typing.ClassVar[uuid.UUID]
-    time_update_control_point: typing.ClassVar[uuid.UUID]
-    time_update_state: typing.ClassVar[uuid.UUID]
-    time_with_dst: typing.ClassVar[uuid.UUID]
-    time_zone: typing.ClassVar[uuid.UUID]
-    tx_power_level: typing.ClassVar[uuid.UUID]
-    unread_alert_status: typing.ClassVar[uuid.UUID]
-    alert_category_id: typing.ClassVar[uuid.UUID]
-    alert_category_id_bit_mask: typing.ClassVar[uuid.UUID]
-    alert_level: typing.ClassVar[uuid.UUID]
-    alert_notification_control_point: typing.ClassVar[uuid.UUID]
-    alert_status: typing.ClassVar[uuid.UUID]
-    boot_keyboard_input_report: typing.ClassVar[uuid.UUID]
-    boot_keyboard_output_report: typing.ClassVar[uuid.UUID]
-    boot_mouse_input_report: typing.ClassVar[uuid.UUID]
-    current_time: typing.ClassVar[uuid.UUID]
-    cycling_power_control_point: typing.ClassVar[uuid.UUID]
-    reference_time_information: typing.ClassVar[uuid.UUID]
-    cycling_power_measurement: typing.ClassVar[uuid.UUID]
-    cycling_power_vector: typing.ClassVar[uuid.UUID]
-    date_time: typing.ClassVar[uuid.UUID]
-    day_date_time: typing.ClassVar[uuid.UUID]
-    day_of_week: typing.ClassVar[uuid.UUID]
-    dst_offset: typing.ClassVar[uuid.UUID]
-    exact_time256: typing.ClassVar[uuid.UUID]
-    firmware_revision_string: typing.ClassVar[uuid.UUID]
-    gap_appearance: typing.ClassVar[uuid.UUID]
-    gap_device_name: typing.ClassVar[uuid.UUID]
+    heart_rate_measurement: typing.ClassVar[_uuid.UUID]
+    battery_level: typing.ClassVar[_uuid.UUID]
+    blood_pressure_feature: typing.ClassVar[_uuid.UUID]
+    blood_pressure_measurement: typing.ClassVar[_uuid.UUID]
+    body_sensor_location: typing.ClassVar[_uuid.UUID]
+    csc_feature: typing.ClassVar[_uuid.UUID]
+    csc_measurement: typing.ClassVar[_uuid.UUID]
+    glucose_feature: typing.ClassVar[_uuid.UUID]
+    glucose_measurement: typing.ClassVar[_uuid.UUID]
+    glucose_measurement_context: typing.ClassVar[_uuid.UUID]
+    heart_rate_control_point: typing.ClassVar[_uuid.UUID]
+    intermediate_cuff_pressure: typing.ClassVar[_uuid.UUID]
+    intermediate_temperature: typing.ClassVar[_uuid.UUID]
+    measurement_interval: typing.ClassVar[_uuid.UUID]
+    record_access_control_point: typing.ClassVar[_uuid.UUID]
+    rsc_feature: typing.ClassVar[_uuid.UUID]
+    rsc_measurement: typing.ClassVar[_uuid.UUID]
+    s_c_control_point: typing.ClassVar[_uuid.UUID]
+    sensor_location: typing.ClassVar[_uuid.UUID]
+    temperature_measurement: typing.ClassVar[_uuid.UUID]
+    temperature_type: typing.ClassVar[_uuid.UUID]
+    gap_peripheral_preferred_connection_parameters: typing.ClassVar[_uuid.UUID]
+    gap_peripheral_privacy_flag: typing.ClassVar[_uuid.UUID]
+    gap_reconnection_address: typing.ClassVar[_uuid.UUID]
+    gatt_service_changed: typing.ClassVar[_uuid.UUID]
+    hardware_revision_string: typing.ClassVar[_uuid.UUID]
+    hid_control_point: typing.ClassVar[_uuid.UUID]
+    hid_information: typing.ClassVar[_uuid.UUID]
+    ieee1107320601_regulatory_certification_data_list: typing.ClassVar[_uuid.UUID]
+    ln_control_point: typing.ClassVar[_uuid.UUID]
+    ln_feature: typing.ClassVar[_uuid.UUID]
+    local_time_information: typing.ClassVar[_uuid.UUID]
+    location_and_speed: typing.ClassVar[_uuid.UUID]
+    manufacturer_name_string: typing.ClassVar[_uuid.UUID]
+    model_number_string: typing.ClassVar[_uuid.UUID]
+    navigation: typing.ClassVar[_uuid.UUID]
+    new_alert: typing.ClassVar[_uuid.UUID]
+    pnp_id: typing.ClassVar[_uuid.UUID]
+    position_quality: typing.ClassVar[_uuid.UUID]
+    protocol_mode: typing.ClassVar[_uuid.UUID]
+    cycling_power_feature: typing.ClassVar[_uuid.UUID]
+    report: typing.ClassVar[_uuid.UUID]
+    report_map: typing.ClassVar[_uuid.UUID]
+    ringer_control_point: typing.ClassVar[_uuid.UUID]
+    ringer_setting: typing.ClassVar[_uuid.UUID]
+    scan_interval_window: typing.ClassVar[_uuid.UUID]
+    scan_refresh: typing.ClassVar[_uuid.UUID]
+    serial_number_string: typing.ClassVar[_uuid.UUID]
+    software_revision_string: typing.ClassVar[_uuid.UUID]
+    support_unread_alert_category: typing.ClassVar[_uuid.UUID]
+    supported_new_alert_category: typing.ClassVar[_uuid.UUID]
+    system_id: typing.ClassVar[_uuid.UUID]
+    time_accuracy: typing.ClassVar[_uuid.UUID]
+    time_source: typing.ClassVar[_uuid.UUID]
+    time_update_control_point: typing.ClassVar[_uuid.UUID]
+    time_update_state: typing.ClassVar[_uuid.UUID]
+    time_with_dst: typing.ClassVar[_uuid.UUID]
+    time_zone: typing.ClassVar[_uuid.UUID]
+    tx_power_level: typing.ClassVar[_uuid.UUID]
+    unread_alert_status: typing.ClassVar[_uuid.UUID]
+    alert_category_id: typing.ClassVar[_uuid.UUID]
+    alert_category_id_bit_mask: typing.ClassVar[_uuid.UUID]
+    alert_level: typing.ClassVar[_uuid.UUID]
+    alert_notification_control_point: typing.ClassVar[_uuid.UUID]
+    alert_status: typing.ClassVar[_uuid.UUID]
+    boot_keyboard_input_report: typing.ClassVar[_uuid.UUID]
+    boot_keyboard_output_report: typing.ClassVar[_uuid.UUID]
+    boot_mouse_input_report: typing.ClassVar[_uuid.UUID]
+    current_time: typing.ClassVar[_uuid.UUID]
+    cycling_power_control_point: typing.ClassVar[_uuid.UUID]
+    reference_time_information: typing.ClassVar[_uuid.UUID]
+    cycling_power_measurement: typing.ClassVar[_uuid.UUID]
+    cycling_power_vector: typing.ClassVar[_uuid.UUID]
+    date_time: typing.ClassVar[_uuid.UUID]
+    day_date_time: typing.ClassVar[_uuid.UUID]
+    day_of_week: typing.ClassVar[_uuid.UUID]
+    dst_offset: typing.ClassVar[_uuid.UUID]
+    exact_time256: typing.ClassVar[_uuid.UUID]
+    firmware_revision_string: typing.ClassVar[_uuid.UUID]
+    gap_appearance: typing.ClassVar[_uuid.UUID]
+    gap_device_name: typing.ClassVar[_uuid.UUID]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattCharacteristicUuids: ...
 
@@ -160,11 +160,11 @@ class GattClientNotificationResult(winrt.system.Object):
 class GattDescriptor(winrt.system.Object):
     protection_level: GattProtectionLevel
     attribute_handle: winrt.system.UInt16
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattDescriptor: ...
     @staticmethod
-    def convert_short_id_to_uuid(short_id: winrt.system.UInt16, /) -> uuid.UUID: ...
+    def convert_short_id_to_uuid(short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
     @typing.overload
     def read_value_async(self) -> winrt.windows.foundation.IAsyncOperation[GattReadResult]: ...
     @typing.overload
@@ -173,12 +173,12 @@ class GattDescriptor(winrt.system.Object):
     def write_value_with_result_async(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[GattWriteResult]: ...
 
 class GattDescriptorUuids(winrt.system.Object):
-    characteristic_aggregate_format: typing.ClassVar[uuid.UUID]
-    characteristic_extended_properties: typing.ClassVar[uuid.UUID]
-    characteristic_presentation_format: typing.ClassVar[uuid.UUID]
-    characteristic_user_description: typing.ClassVar[uuid.UUID]
-    client_characteristic_configuration: typing.ClassVar[uuid.UUID]
-    server_characteristic_configuration: typing.ClassVar[uuid.UUID]
+    characteristic_aggregate_format: typing.ClassVar[_uuid.UUID]
+    characteristic_extended_properties: typing.ClassVar[_uuid.UUID]
+    characteristic_presentation_format: typing.ClassVar[_uuid.UUID]
+    characteristic_user_description: typing.ClassVar[_uuid.UUID]
+    client_characteristic_configuration: typing.ClassVar[_uuid.UUID]
+    server_characteristic_configuration: typing.ClassVar[_uuid.UUID]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattDescriptorUuids: ...
 
@@ -192,7 +192,7 @@ class GattDescriptorsResult(winrt.system.Object):
 class GattDeviceService(winrt.system.Object):
     attribute_handle: winrt.system.UInt16
     device_id: str
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     device: typing.Optional[winrt.windows.devices.bluetooth.BluetoothLEDevice]
     parent_services: typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDeviceService]]
     device_access_information: typing.Optional[winrt.windows.devices.enumeration.DeviceAccessInformation]
@@ -204,7 +204,7 @@ class GattDeviceService(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> GattDeviceService: ...
     def close(self) -> None: ...
     @staticmethod
-    def convert_short_id_to_uuid(short_id: winrt.system.UInt16, /) -> uuid.UUID: ...
+    def convert_short_id_to_uuid(short_id: winrt.system.UInt16, /) -> _uuid.UUID: ...
     @typing.overload
     @staticmethod
     def from_id_async(device_id: str, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceService]: ...
@@ -213,15 +213,15 @@ class GattDeviceService(winrt.system.Object):
     def from_id_async(device_id: str, sharing_mode: GattSharingMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceService]: ...
     def get_all_characteristics(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattCharacteristic]]: ...
     def get_all_included_services(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDeviceService]]: ...
-    def get_characteristics(self, characteristic_uuid: uuid.UUID, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattCharacteristic]]: ...
+    def get_characteristics(self, characteristic_uuid: _uuid.UUID, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattCharacteristic]]: ...
     @typing.overload
     def get_characteristics_async(self) -> winrt.windows.foundation.IAsyncOperation[GattCharacteristicsResult]: ...
     @typing.overload
     def get_characteristics_async(self, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattCharacteristicsResult]: ...
     @typing.overload
-    def get_characteristics_for_uuid_async(self, characteristic_uuid: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    def get_characteristics_for_uuid_async(self, characteristic_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattCharacteristicsResult]: ...
     @typing.overload
-    def get_characteristics_for_uuid_async(self, characteristic_uuid: uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattCharacteristicsResult]: ...
+    def get_characteristics_for_uuid_async(self, characteristic_uuid: _uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattCharacteristicsResult]: ...
     @typing.overload
     @staticmethod
     def get_device_selector_for_bluetooth_device_id(bluetooth_device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], /) -> str: ...
@@ -230,23 +230,23 @@ class GattDeviceService(winrt.system.Object):
     def get_device_selector_for_bluetooth_device_id(bluetooth_device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> str: ...
     @typing.overload
     @staticmethod
-    def get_device_selector_for_bluetooth_device_id_and_uuid(bluetooth_device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], service_uuid: uuid.UUID, /) -> str: ...
+    def get_device_selector_for_bluetooth_device_id_and_uuid(bluetooth_device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], service_uuid: _uuid.UUID, /) -> str: ...
     @typing.overload
     @staticmethod
-    def get_device_selector_for_bluetooth_device_id_and_uuid(bluetooth_device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], service_uuid: uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> str: ...
+    def get_device_selector_for_bluetooth_device_id_and_uuid(bluetooth_device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId], service_uuid: _uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> str: ...
     @staticmethod
     def get_device_selector_from_short_id(service_short_id: winrt.system.UInt16, /) -> str: ...
     @staticmethod
-    def get_device_selector_from_uuid(service_uuid: uuid.UUID, /) -> str: ...
-    def get_included_services(self, service_uuid: uuid.UUID, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDeviceService]]: ...
+    def get_device_selector_from_uuid(service_uuid: _uuid.UUID, /) -> str: ...
+    def get_included_services(self, service_uuid: _uuid.UUID, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[GattDeviceService]]: ...
     @typing.overload
     def get_included_services_async(self) -> winrt.windows.foundation.IAsyncOperation[GattDeviceServicesResult]: ...
     @typing.overload
     def get_included_services_async(self, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceServicesResult]: ...
     @typing.overload
-    def get_included_services_for_uuid_async(self, service_uuid: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    def get_included_services_for_uuid_async(self, service_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceServicesResult]: ...
     @typing.overload
-    def get_included_services_for_uuid_async(self, service_uuid: uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceServicesResult]: ...
+    def get_included_services_for_uuid_async(self, service_uuid: _uuid.UUID, cache_mode: winrt.windows.devices.bluetooth.BluetoothCacheMode, /) -> winrt.windows.foundation.IAsyncOperation[GattDeviceServicesResult]: ...
     def open_async(self, sharing_mode: GattSharingMode, /) -> winrt.windows.foundation.IAsyncOperation[GattOpenStatus]: ...
     def request_access_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.devices.enumeration.DeviceAccessStatus]: ...
 
@@ -265,11 +265,11 @@ class GattLocalCharacteristic(winrt.system.Object):
     static_value: typing.Optional[winrt.windows.storage.streams.IBuffer]
     subscribed_clients: typing.Optional[winrt.windows.foundation.collections.IVectorView[GattSubscribedClient]]
     user_description: str
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     write_protection_level: GattProtectionLevel
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalCharacteristic: ...
-    def create_descriptor_async(self, descriptor_uuid: uuid.UUID, parameters: typing.Optional[GattLocalDescriptorParameters], /) -> winrt.windows.foundation.IAsyncOperation[GattLocalDescriptorResult]: ...
+    def create_descriptor_async(self, descriptor_uuid: _uuid.UUID, parameters: typing.Optional[GattLocalDescriptorParameters], /) -> winrt.windows.foundation.IAsyncOperation[GattLocalDescriptorResult]: ...
     @typing.overload
     def notify_value_async(self, value: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[GattClientNotificationResult]]: ...
     @typing.overload
@@ -301,7 +301,7 @@ class GattLocalCharacteristicResult(winrt.system.Object):
 class GattLocalDescriptor(winrt.system.Object):
     read_protection_level: GattProtectionLevel
     static_value: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     write_protection_level: GattProtectionLevel
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalDescriptor: ...
@@ -326,10 +326,10 @@ class GattLocalDescriptorResult(winrt.system.Object):
 
 class GattLocalService(winrt.system.Object):
     characteristics: typing.Optional[winrt.windows.foundation.collections.IVectorView[GattLocalCharacteristic]]
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattLocalService: ...
-    def create_characteristic_async(self, characteristic_uuid: uuid.UUID, parameters: typing.Optional[GattLocalCharacteristicParameters], /) -> winrt.windows.foundation.IAsyncOperation[GattLocalCharacteristicResult]: ...
+    def create_characteristic_async(self, characteristic_uuid: _uuid.UUID, parameters: typing.Optional[GattLocalCharacteristicParameters], /) -> winrt.windows.foundation.IAsyncOperation[GattLocalCharacteristicResult]: ...
 
 class GattPresentationFormat(winrt.system.Object):
     description: winrt.system.UInt16
@@ -447,7 +447,7 @@ class GattServiceProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProvider: ...
     @staticmethod
-    def create_async(service_uuid: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattServiceProviderResult]: ...
+    def create_async(service_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattServiceProviderResult]: ...
     @typing.overload
     def start_advertising(self) -> None: ...
     @typing.overload
@@ -477,28 +477,28 @@ class GattServiceProviderResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderResult: ...
 
 class GattServiceUuids(winrt.system.Object):
-    battery: typing.ClassVar[uuid.UUID]
-    blood_pressure: typing.ClassVar[uuid.UUID]
-    cycling_speed_and_cadence: typing.ClassVar[uuid.UUID]
-    generic_access: typing.ClassVar[uuid.UUID]
-    generic_attribute: typing.ClassVar[uuid.UUID]
-    glucose: typing.ClassVar[uuid.UUID]
-    health_thermometer: typing.ClassVar[uuid.UUID]
-    heart_rate: typing.ClassVar[uuid.UUID]
-    running_speed_and_cadence: typing.ClassVar[uuid.UUID]
-    alert_notification: typing.ClassVar[uuid.UUID]
-    current_time: typing.ClassVar[uuid.UUID]
-    cycling_power: typing.ClassVar[uuid.UUID]
-    device_information: typing.ClassVar[uuid.UUID]
-    human_interface_device: typing.ClassVar[uuid.UUID]
-    immediate_alert: typing.ClassVar[uuid.UUID]
-    link_loss: typing.ClassVar[uuid.UUID]
-    location_and_navigation: typing.ClassVar[uuid.UUID]
-    next_dst_change: typing.ClassVar[uuid.UUID]
-    phone_alert_status: typing.ClassVar[uuid.UUID]
-    reference_time_update: typing.ClassVar[uuid.UUID]
-    scan_parameters: typing.ClassVar[uuid.UUID]
-    tx_power: typing.ClassVar[uuid.UUID]
+    battery: typing.ClassVar[_uuid.UUID]
+    blood_pressure: typing.ClassVar[_uuid.UUID]
+    cycling_speed_and_cadence: typing.ClassVar[_uuid.UUID]
+    generic_access: typing.ClassVar[_uuid.UUID]
+    generic_attribute: typing.ClassVar[_uuid.UUID]
+    glucose: typing.ClassVar[_uuid.UUID]
+    health_thermometer: typing.ClassVar[_uuid.UUID]
+    heart_rate: typing.ClassVar[_uuid.UUID]
+    running_speed_and_cadence: typing.ClassVar[_uuid.UUID]
+    alert_notification: typing.ClassVar[_uuid.UUID]
+    current_time: typing.ClassVar[_uuid.UUID]
+    cycling_power: typing.ClassVar[_uuid.UUID]
+    device_information: typing.ClassVar[_uuid.UUID]
+    human_interface_device: typing.ClassVar[_uuid.UUID]
+    immediate_alert: typing.ClassVar[_uuid.UUID]
+    link_loss: typing.ClassVar[_uuid.UUID]
+    location_and_navigation: typing.ClassVar[_uuid.UUID]
+    next_dst_change: typing.ClassVar[_uuid.UUID]
+    phone_alert_status: typing.ClassVar[_uuid.UUID]
+    reference_time_update: typing.ClassVar[_uuid.UUID]
+    scan_parameters: typing.ClassVar[_uuid.UUID]
+    tx_power: typing.ClassVar[_uuid.UUID]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceUuids: ...
 

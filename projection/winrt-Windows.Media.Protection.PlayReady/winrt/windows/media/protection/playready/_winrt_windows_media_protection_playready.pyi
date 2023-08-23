@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -72,7 +72,7 @@ class NDStreamParserNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NDStreamParserNotifier: ...
     def __new__(cls: typing.Type[NDStreamParserNotifier]) -> NDStreamParserNotifier:...
-    def on_begin_setup_decryptor(self, descriptor: typing.Optional[winrt.windows.media.core.IMediaStreamDescriptor], key_i_d: uuid.UUID, pro_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
+    def on_begin_setup_decryptor(self, descriptor: typing.Optional[winrt.windows.media.core.IMediaStreamDescriptor], key_i_d: _uuid.UUID, pro_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
     def on_content_i_d_received(self, license_fetch_descriptor: typing.Optional[INDLicenseFetchDescriptor], /) -> None: ...
     def on_media_stream_descriptor_created(self, audio_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.AudioStreamDescriptor], video_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.VideoStreamDescriptor], /) -> None: ...
     def on_sample_parsed(self, stream_i_d: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: typing.Optional[winrt.windows.media.core.MediaStreamSample], pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
@@ -89,23 +89,23 @@ class NDTCPMessenger(winrt.system.Object):
 class PlayReadyContentHeader(winrt.system.Object):
     custom_attributes: str
     decryptor_setup: PlayReadyDecryptorSetup
-    domain_service_id: uuid.UUID
+    domain_service_id: _uuid.UUID
     encryption_type: PlayReadyEncryptionAlgorithm
     header_with_embedded_updates: typing.Optional[PlayReadyContentHeader]
-    key_id: uuid.UUID
+    key_id: _uuid.UUID
     key_id_string: str
     license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri]
     license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri]
     key_id_strings: str
-    key_ids: uuid.UUID
+    key_ids: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyContentHeader: ...
     @typing.overload
-    def __new__(cls: typing.Type[PlayReadyContentHeader], dw_flags: winrt.system.UInt32, content_key_ids: winrt.system.Array[uuid.UUID], content_key_id_strings: winrt.system.Array[str], content_encryption_algorithm: PlayReadyEncryptionAlgorithm, license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri], license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri], custom_attributes: str, domain_service_id: uuid.UUID) -> PlayReadyContentHeader:...
+    def __new__(cls: typing.Type[PlayReadyContentHeader], dw_flags: winrt.system.UInt32, content_key_ids: winrt.system.Array[_uuid.UUID], content_key_id_strings: winrt.system.Array[str], content_encryption_algorithm: PlayReadyEncryptionAlgorithm, license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri], license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri], custom_attributes: str, domain_service_id: _uuid.UUID) -> PlayReadyContentHeader:...
     @typing.overload
-    def __new__(cls: typing.Type[PlayReadyContentHeader], header_bytes: winrt.system.Array[winrt.system.UInt8], license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri], license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri], custom_attributes: str, domain_service_id: uuid.UUID) -> PlayReadyContentHeader:...
+    def __new__(cls: typing.Type[PlayReadyContentHeader], header_bytes: winrt.system.Array[winrt.system.UInt8], license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri], license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri], custom_attributes: str, domain_service_id: _uuid.UUID) -> PlayReadyContentHeader:...
     @typing.overload
-    def __new__(cls: typing.Type[PlayReadyContentHeader], content_key_id: uuid.UUID, content_key_id_string: str, content_encryption_algorithm: PlayReadyEncryptionAlgorithm, license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri], license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri], custom_attributes: str, domain_service_id: uuid.UUID) -> PlayReadyContentHeader:...
+    def __new__(cls: typing.Type[PlayReadyContentHeader], content_key_id: _uuid.UUID, content_key_id_string: str, content_encryption_algorithm: PlayReadyEncryptionAlgorithm, license_acquisition_url: typing.Optional[winrt.windows.foundation.Uri], license_acquisition_user_interface_url: typing.Optional[winrt.windows.foundation.Uri], custom_attributes: str, domain_service_id: _uuid.UUID) -> PlayReadyContentHeader:...
     @typing.overload
     def __new__(cls: typing.Type[PlayReadyContentHeader], header_bytes: winrt.system.Array[winrt.system.UInt8]) -> PlayReadyContentHeader:...
     def get_serialized_header(self) -> winrt.system.UInt8: ...
@@ -117,11 +117,11 @@ class PlayReadyContentResolver(winrt.system.Object):
     def service_request(content_header: typing.Optional[PlayReadyContentHeader], /) -> typing.Optional[IPlayReadyServiceRequest]: ...
 
 class PlayReadyDomain(winrt.system.Object):
-    account_id: uuid.UUID
+    account_id: _uuid.UUID
     domain_join_url: typing.Optional[winrt.windows.foundation.Uri]
     friendly_name: str
     revision: winrt.system.UInt32
-    service_id: uuid.UUID
+    service_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyDomain: ...
 
@@ -129,7 +129,7 @@ class PlayReadyDomainIterable(winrt.system.Object):
     def __iter__(self) -> winrt.windows.foundation.collections.IIterator[IPlayReadyDomain]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyDomainIterable: ...
-    def __new__(cls: typing.Type[PlayReadyDomainIterable], domain_account_id: uuid.UUID) -> PlayReadyDomainIterable:...
+    def __new__(cls: typing.Type[PlayReadyDomainIterable], domain_account_id: _uuid.UUID) -> PlayReadyDomainIterable:...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[IPlayReadyDomain]]: ...
 
 class PlayReadyDomainIterator(winrt.system.Object):
@@ -143,11 +143,11 @@ class PlayReadyDomainIterator(winrt.system.Object):
     def move_next(self) -> bool: ...
 
 class PlayReadyDomainJoinServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
-    domain_service_id: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
+    domain_service_id: _uuid.UUID
     domain_friendly_name: str
-    domain_account_id: uuid.UUID
+    domain_account_id: _uuid.UUID
     uri: typing.Optional[winrt.windows.foundation.Uri]
     challenge_custom_data: str
     response_custom_data: str
@@ -160,10 +160,10 @@ class PlayReadyDomainJoinServiceRequest(winrt.system.Object):
     def process_manual_enabling_response(self, response_bytes: winrt.system.Array[winrt.system.UInt8], /) -> winrt.windows.foundation.HResult: ...
 
 class PlayReadyDomainLeaveServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
-    domain_service_id: uuid.UUID
-    domain_account_id: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
+    domain_service_id: _uuid.UUID
+    domain_account_id: _uuid.UUID
     uri: typing.Optional[winrt.windows.foundation.Uri]
     challenge_custom_data: str
     response_custom_data: str
@@ -179,11 +179,11 @@ class PlayReadyITADataGenerator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyITADataGenerator: ...
     def __new__(cls: typing.Type[PlayReadyITADataGenerator]) -> PlayReadyITADataGenerator:...
-    def generate_data(self, guid_c_p_system_id: uuid.UUID, count_of_streams: winrt.system.UInt32, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], format: PlayReadyITADataFormat, /) -> winrt.system.UInt8: ...
+    def generate_data(self, guid_c_p_system_id: _uuid.UUID, count_of_streams: winrt.system.UInt32, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], format: PlayReadyITADataFormat, /) -> winrt.system.UInt8: ...
 
 class PlayReadyIndividualizationServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     uri: typing.Optional[winrt.windows.foundation.Uri]
     challenge_custom_data: str
     response_custom_data: str
@@ -197,25 +197,25 @@ class PlayReadyIndividualizationServiceRequest(winrt.system.Object):
 
 class PlayReadyLicense(winrt.system.Object):
     chain_depth: winrt.system.UInt32
-    domain_account_i_d: uuid.UUID
+    domain_account_i_d: _uuid.UUID
     expiration_date: typing.Optional[typing.Optional[datetime.datetime]]
     expire_after_first_play: winrt.system.UInt32
     fully_evaluated: bool
     usable_for_play: bool
     expires_in_real_time: bool
     in_memory_only: bool
-    secure_stop_id: uuid.UUID
+    secure_stop_id: _uuid.UUID
     security_level: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayReadyLicense: ...
-    def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> uuid.UUID: ...
+    def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> _uuid.UUID: ...
 
 class PlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
-    domain_service_id: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
+    domain_service_id: _uuid.UUID
     content_header: typing.Optional[PlayReadyContentHeader]
-    session_id: uuid.UUID
+    session_id: _uuid.UUID
     uri: typing.Optional[winrt.windows.foundation.Uri]
     challenge_custom_data: str
     response_custom_data: str
@@ -263,8 +263,8 @@ class PlayReadyLicenseSession(winrt.system.Object):
     def create_license_iterable(self, content_header: typing.Optional[PlayReadyContentHeader], fully_evaluated: bool, /) -> typing.Optional[PlayReadyLicenseIterable]: ...
 
 class PlayReadyMeteringReportServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     metering_certificate: winrt.system.UInt8
     uri: typing.Optional[winrt.windows.foundation.Uri]
     challenge_custom_data: str
@@ -278,8 +278,8 @@ class PlayReadyMeteringReportServiceRequest(winrt.system.Object):
     def process_manual_enabling_response(self, response_bytes: winrt.system.Array[winrt.system.UInt8], /) -> winrt.windows.foundation.HResult: ...
 
 class PlayReadyRevocationServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     uri: typing.Optional[winrt.windows.foundation.Uri]
     challenge_custom_data: str
     response_custom_data: str
@@ -309,10 +309,10 @@ class PlayReadySecureStopIterator(winrt.system.Object):
     def move_next(self) -> bool: ...
 
 class PlayReadySecureStopServiceRequest(winrt.system.Object):
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     publisher_certificate: winrt.system.UInt8
-    session_i_d: uuid.UUID
+    session_i_d: _uuid.UUID
     start_time: datetime.datetime
     stopped: bool
     update_time: datetime.datetime
@@ -324,7 +324,7 @@ class PlayReadySecureStopServiceRequest(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[PlayReadySecureStopServiceRequest], publisher_cert_bytes: winrt.system.Array[winrt.system.UInt8]) -> PlayReadySecureStopServiceRequest:...
     @typing.overload
-    def __new__(cls: typing.Type[PlayReadySecureStopServiceRequest], session_i_d: uuid.UUID, publisher_cert_bytes: winrt.system.Array[winrt.system.UInt8]) -> PlayReadySecureStopServiceRequest:...
+    def __new__(cls: typing.Type[PlayReadySecureStopServiceRequest], session_i_d: _uuid.UUID, publisher_cert_bytes: winrt.system.Array[winrt.system.UInt8]) -> PlayReadySecureStopServiceRequest:...
     def begin_service_request(self) -> winrt.windows.foundation.IAsyncAction: ...
     def generate_manual_enabling_challenge(self) -> typing.Optional[PlayReadySoapMessage]: ...
     def next_service_request(self) -> typing.Optional[IPlayReadyServiceRequest]: ...
@@ -338,17 +338,17 @@ class PlayReadySoapMessage(winrt.system.Object):
     def get_message_body(self) -> winrt.system.UInt8: ...
 
 class PlayReadyStatics(winrt.system.Object):
-    domain_join_service_request_type: typing.ClassVar[uuid.UUID]
-    domain_leave_service_request_type: typing.ClassVar[uuid.UUID]
-    individualization_service_request_type: typing.ClassVar[uuid.UUID]
-    license_acquirer_service_request_type: typing.ClassVar[uuid.UUID]
-    media_protection_system_id: typing.ClassVar[uuid.UUID]
-    metering_report_service_request_type: typing.ClassVar[uuid.UUID]
+    domain_join_service_request_type: typing.ClassVar[_uuid.UUID]
+    domain_leave_service_request_type: typing.ClassVar[_uuid.UUID]
+    individualization_service_request_type: typing.ClassVar[_uuid.UUID]
+    license_acquirer_service_request_type: typing.ClassVar[_uuid.UUID]
+    media_protection_system_id: typing.ClassVar[_uuid.UUID]
+    metering_report_service_request_type: typing.ClassVar[_uuid.UUID]
     play_ready_security_version: typing.ClassVar[winrt.system.UInt32]
-    revocation_service_request_type: typing.ClassVar[uuid.UUID]
+    revocation_service_request_type: typing.ClassVar[_uuid.UUID]
     play_ready_certificate_security_level: typing.ClassVar[winrt.system.UInt32]
-    secure_stop_service_request_type: typing.ClassVar[uuid.UUID]
-    protection_system_id: typing.ClassVar[uuid.UUID]
+    secure_stop_service_request_type: typing.ClassVar[_uuid.UUID]
+    protection_system_id: typing.ClassVar[_uuid.UUID]
     input_trust_authority_to_create: typing.ClassVar[str]
     hardware_d_r_m_disabled_until_time: typing.ClassVar[typing.Optional[typing.Optional[datetime.datetime]]]
     hardware_d_r_m_disabled_at_time: typing.ClassVar[typing.Optional[typing.Optional[datetime.datetime]]]
@@ -459,7 +459,7 @@ class INDStreamParser(winrt.system.Object):
 class INDStreamParserNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INDStreamParserNotifier: ...
-    def on_begin_setup_decryptor(self, descriptor: typing.Optional[winrt.windows.media.core.IMediaStreamDescriptor], key_i_d: uuid.UUID, pro_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
+    def on_begin_setup_decryptor(self, descriptor: typing.Optional[winrt.windows.media.core.IMediaStreamDescriptor], key_i_d: _uuid.UUID, pro_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
     def on_content_i_d_received(self, license_fetch_descriptor: typing.Optional[INDLicenseFetchDescriptor], /) -> None: ...
     def on_media_stream_descriptor_created(self, audio_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.AudioStreamDescriptor], video_stream_descriptors: winrt.windows.foundation.collections.IVector[winrt.windows.media.core.VideoStreamDescriptor], /) -> None: ...
     def on_sample_parsed(self, stream_i_d: winrt.system.UInt32, stream_type: NDMediaStreamType, stream_sample: typing.Optional[winrt.windows.media.core.MediaStreamSample], pts: winrt.system.Int64, cc_format: NDClosedCaptionFormat, cc_data_bytes: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
@@ -480,33 +480,33 @@ class INDTransmitterProperties(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> INDTransmitterProperties: ...
 
 class IPlayReadyDomain(winrt.system.Object):
-    account_id: uuid.UUID
+    account_id: _uuid.UUID
     domain_join_url: typing.Optional[winrt.windows.foundation.Uri]
     friendly_name: str
     revision: winrt.system.UInt32
-    service_id: uuid.UUID
+    service_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyDomain: ...
 
 class IPlayReadyLicense(winrt.system.Object):
     chain_depth: winrt.system.UInt32
-    domain_account_i_d: uuid.UUID
+    domain_account_i_d: _uuid.UUID
     expiration_date: typing.Optional[typing.Optional[datetime.datetime]]
     expire_after_first_play: winrt.system.UInt32
     fully_evaluated: bool
     usable_for_play: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicense: ...
-    def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> uuid.UUID: ...
+    def get_k_i_d_at_chain_depth(self, chain_depth: winrt.system.UInt32, /) -> _uuid.UUID: ...
 
 class IPlayReadyLicenseAcquisitionServiceRequest(winrt.system.Object):
     content_header: typing.Optional[PlayReadyContentHeader]
-    domain_service_id: uuid.UUID
+    domain_service_id: _uuid.UUID
     challenge_custom_data: str
     response_custom_data: str
     uri: typing.Optional[winrt.windows.foundation.Uri]
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyLicenseAcquisitionServiceRequest: ...
     def begin_service_request(self) -> winrt.windows.foundation.IAsyncAction: ...
@@ -529,15 +529,15 @@ class IPlayReadyLicenseSession2(winrt.system.Object):
 
 class IPlayReadySecureStopServiceRequest(winrt.system.Object):
     publisher_certificate: winrt.system.UInt8
-    session_i_d: uuid.UUID
+    session_i_d: _uuid.UUID
     start_time: datetime.datetime
     stopped: bool
     update_time: datetime.datetime
     challenge_custom_data: str
     response_custom_data: str
     uri: typing.Optional[winrt.windows.foundation.Uri]
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadySecureStopServiceRequest: ...
     def begin_service_request(self) -> winrt.windows.foundation.IAsyncAction: ...
@@ -549,8 +549,8 @@ class IPlayReadyServiceRequest(winrt.system.Object):
     challenge_custom_data: str
     response_custom_data: str
     uri: typing.Optional[winrt.windows.foundation.Uri]
-    protection_system: uuid.UUID
-    type: uuid.UUID
+    protection_system: _uuid.UUID
+    type: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPlayReadyServiceRequest: ...
     def begin_service_request(self) -> winrt.windows.foundation.IAsyncAction: ...

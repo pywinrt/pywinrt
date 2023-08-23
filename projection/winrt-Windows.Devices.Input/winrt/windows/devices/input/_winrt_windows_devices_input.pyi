@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.devices.haptics
@@ -76,7 +76,7 @@ class PenButtonListener(winrt.system.Object):
     def remove_tail_button_long_pressed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PenDevice(winrt.system.Object):
-    pen_id: uuid.UUID
+    pen_id: _uuid.UUID
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PenDevice: ...

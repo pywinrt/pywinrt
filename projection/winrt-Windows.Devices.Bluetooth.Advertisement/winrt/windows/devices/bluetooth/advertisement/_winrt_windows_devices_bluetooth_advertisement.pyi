@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.devices.bluetooth
@@ -21,7 +21,7 @@ class BluetoothLEAdvertisement(winrt.system.Object):
     flags: typing.Optional[typing.Optional[BluetoothLEAdvertisementFlags]]
     data_sections: typing.Optional[winrt.windows.foundation.collections.IVector[BluetoothLEAdvertisementDataSection]]
     manufacturer_data: typing.Optional[winrt.windows.foundation.collections.IVector[BluetoothLEManufacturerData]]
-    service_uuids: typing.Optional[winrt.windows.foundation.collections.IVector[uuid.UUID]]
+    service_uuids: typing.Optional[winrt.windows.foundation.collections.IVector[_uuid.UUID]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisement: ...
     def __new__(cls: typing.Type[BluetoothLEAdvertisement]) -> BluetoothLEAdvertisement:...

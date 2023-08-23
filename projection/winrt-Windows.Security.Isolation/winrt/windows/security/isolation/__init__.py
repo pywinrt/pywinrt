@@ -2,7 +2,7 @@
 
 import enum
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 from . import _winrt_windows_security_isolation
@@ -170,5 +170,5 @@ IsolatedWindowsEnvironmentStartProcessResult = _winrt_windows_security_isolation
 IsolatedWindowsEnvironmentTelemetryParameters = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters
 IsolatedWindowsEnvironmentUserInfo = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo
 IsolatedWindowsHostMessenger = _winrt_windows_security_isolation.IsolatedWindowsHostMessenger
-HostMessageReceivedCallback = typing.Callable[[uuid.UUID, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
-MessageReceivedCallback = typing.Callable[[uuid.UUID, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
+HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
+MessageReceivedCallback = typing.Callable[[_uuid.UUID, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]

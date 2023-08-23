@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.devices.bluetooth
@@ -59,7 +59,7 @@ class RfcommDeviceServicesResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> RfcommDeviceServicesResult: ...
 
 class RfcommServiceId(winrt.system.Object):
-    uuid: uuid.UUID
+    uuid: _uuid.UUID
     generic_file_transfer: typing.ClassVar[typing.Optional[RfcommServiceId]]
     obex_file_transfer: typing.ClassVar[typing.Optional[RfcommServiceId]]
     obex_object_push: typing.ClassVar[typing.Optional[RfcommServiceId]]
@@ -73,7 +73,7 @@ class RfcommServiceId(winrt.system.Object):
     @staticmethod
     def from_short_id(short_id: winrt.system.UInt32, /) -> typing.Optional[RfcommServiceId]: ...
     @staticmethod
-    def from_uuid(uuid: uuid.UUID, /) -> typing.Optional[RfcommServiceId]: ...
+    def from_uuid(uuid: _uuid.UUID, /) -> typing.Optional[RfcommServiceId]: ...
 
 class RfcommServiceProvider(winrt.system.Object):
     sdp_raw_attributes: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.system.UInt32, winrt.windows.storage.streams.IBuffer]]

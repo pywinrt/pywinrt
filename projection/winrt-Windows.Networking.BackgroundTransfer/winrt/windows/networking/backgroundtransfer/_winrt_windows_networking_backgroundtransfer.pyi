@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.applicationmodel.background
@@ -176,7 +176,7 @@ class DownloadOperation(winrt.system.Object):
     requested_uri: typing.Optional[winrt.windows.foundation.Uri]
     method: str
     group: str
-    guid: uuid.UUID
+    guid: _uuid.UUID
     priority: BackgroundTransferPriority
     progress: BackgroundDownloadProgress
     result_file: typing.Optional[winrt.windows.storage.IStorageFile]
@@ -216,7 +216,7 @@ class UnconstrainedTransferRequestResult(winrt.system.Object):
 class UploadOperation(winrt.system.Object):
     cost_policy: BackgroundTransferCostPolicy
     group: str
-    guid: uuid.UUID
+    guid: _uuid.UUID
     method: str
     requested_uri: typing.Optional[winrt.windows.foundation.Uri]
     priority: BackgroundTransferPriority
@@ -252,7 +252,7 @@ class IBackgroundTransferContentPartFactory(winrt.system.Object):
 class IBackgroundTransferOperation(winrt.system.Object):
     cost_policy: BackgroundTransferCostPolicy
     group: str
-    guid: uuid.UUID
+    guid: _uuid.UUID
     method: str
     requested_uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod

@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -97,13 +97,13 @@ class UsbDevice(winrt.system.Object):
     def get_device_class_selector(usb_class: typing.Optional[UsbDeviceClass], /) -> str: ...
     @typing.overload
     @staticmethod
-    def get_device_selector(win_usb_interface_class: uuid.UUID, /) -> str: ...
+    def get_device_selector(win_usb_interface_class: _uuid.UUID, /) -> str: ...
     @typing.overload
     @staticmethod
     def get_device_selector(vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, /) -> str: ...
     @typing.overload
     @staticmethod
-    def get_device_selector(vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, win_usb_interface_class: uuid.UUID, /) -> str: ...
+    def get_device_selector(vendor_id: winrt.system.UInt32, product_id: winrt.system.UInt32, win_usb_interface_class: _uuid.UUID, /) -> str: ...
     @typing.overload
     def send_control_in_transfer_async(self, setup_packet: typing.Optional[UsbSetupPacket], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IBuffer]: ...
     @typing.overload

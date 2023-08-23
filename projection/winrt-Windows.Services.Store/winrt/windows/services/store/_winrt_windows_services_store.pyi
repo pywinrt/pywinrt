@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.applicationmodel
@@ -81,7 +81,7 @@ class StoreConsumableResult(winrt.system.Object):
     balance_remaining: winrt.system.UInt32
     extended_error: winrt.windows.foundation.HResult
     status: StoreConsumableStatus
-    tracking_id: uuid.UUID
+    tracking_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreConsumableResult: ...
 
@@ -117,7 +117,7 @@ class StoreContext(winrt.system.Object):
     def get_user_collection_async(self, product_kinds: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[StoreProductQueryResult]: ...
     def get_user_collection_with_paging_async(self, product_kinds: typing.Iterable[str], max_items_to_retrieve_per_page: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[StoreProductPagedQueryResult]: ...
     def get_user_purchase_history_async(self, product_kinds: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[StoreProductQueryResult]: ...
-    def report_consumable_fulfillment_async(self, product_store_id: str, quantity: winrt.system.UInt32, tracking_id: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[StoreConsumableResult]: ...
+    def report_consumable_fulfillment_async(self, product_store_id: str, quantity: winrt.system.UInt32, tracking_id: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[StoreConsumableResult]: ...
     def request_download_and_install_store_package_updates_async(self, store_package_updates: typing.Iterable[StorePackageUpdate], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...
     @typing.overload
     def request_download_and_install_store_packages_async(self, store_ids: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperationWithProgress[StorePackageUpdateResult, StorePackageUpdateStatus]: ...

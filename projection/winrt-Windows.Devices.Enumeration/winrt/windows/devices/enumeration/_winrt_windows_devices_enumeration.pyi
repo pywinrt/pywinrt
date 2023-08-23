@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.applicationmodel.background
@@ -32,7 +32,7 @@ class DeviceAccessInformation(winrt.system.Object):
     @staticmethod
     def create_from_device_class(device_class: DeviceClass, /) -> typing.Optional[DeviceAccessInformation]: ...
     @staticmethod
-    def create_from_device_class_id(device_class_id: uuid.UUID, /) -> typing.Optional[DeviceAccessInformation]: ...
+    def create_from_device_class_id(device_class_id: _uuid.UUID, /) -> typing.Optional[DeviceAccessInformation]: ...
     @staticmethod
     def create_from_id(device_id: str, /) -> typing.Optional[DeviceAccessInformation]: ...
     def add_access_changed(self, handler: winrt.windows.foundation.TypedEventHandler[DeviceAccessInformation, DeviceAccessChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...

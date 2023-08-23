@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.devices.enumeration
@@ -68,7 +68,7 @@ class MediaFrameArrivedEventArgs(winrt.system.Object):
 class MediaFrameFormat(winrt.system.Object):
     frame_rate: typing.Optional[winrt.windows.media.mediaproperties.MediaRatio]
     major_type: str
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, winrt.system.Object]]
     subtype: str
     video_format: typing.Optional[VideoMediaFrameFormat]
     audio_encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
@@ -93,7 +93,7 @@ class MediaFrameReference(winrt.system.Object):
     coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem]
     duration: datetime.timedelta
     format: typing.Optional[MediaFrameFormat]
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, winrt.system.Object]]
     source_kind: MediaFrameSourceKind
     system_relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     video_media_frame: typing.Optional[VideoMediaFrame]
@@ -150,7 +150,7 @@ class MediaFrameSourceInfo(winrt.system.Object):
     device_information: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]
     id: str
     media_stream_type: winrt.windows.media.capture.MediaStreamType
-    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
+    properties: typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, winrt.system.Object]]
     source_group: typing.Optional[MediaFrameSourceGroup]
     source_kind: MediaFrameSourceKind
     profile_id: str

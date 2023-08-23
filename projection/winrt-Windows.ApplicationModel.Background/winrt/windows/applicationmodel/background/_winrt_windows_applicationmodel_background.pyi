@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.applicationmodel.activation
@@ -126,11 +126,11 @@ class BackgroundTaskBuilder(winrt.system.Object):
     def __new__(cls: typing.Type[BackgroundTaskBuilder]) -> BackgroundTaskBuilder:...
     def add_condition(self, condition: typing.Optional[IBackgroundCondition], /) -> None: ...
     def register(self) -> typing.Optional[BackgroundTaskRegistration]: ...
-    def set_task_entry_point_clsid(self, task_entry_point: uuid.UUID, /) -> None: ...
+    def set_task_entry_point_clsid(self, task_entry_point: _uuid.UUID, /) -> None: ...
     def set_trigger(self, trigger: typing.Optional[IBackgroundTrigger], /) -> None: ...
 
 class BackgroundTaskCompletedEventArgs(winrt.system.Object):
-    instance_id: uuid.UUID
+    instance_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskCompletedEventArgs: ...
     def check_result(self) -> None: ...
@@ -141,17 +141,17 @@ class BackgroundTaskDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 class BackgroundTaskProgressEventArgs(winrt.system.Object):
-    instance_id: uuid.UUID
+    instance_id: _uuid.UUID
     progress: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskProgressEventArgs: ...
 
 class BackgroundTaskRegistration(winrt.system.Object):
     name: str
-    task_id: uuid.UUID
+    task_id: _uuid.UUID
     trigger: typing.Optional[IBackgroundTrigger]
     task_group: typing.Optional[BackgroundTaskRegistrationGroup]
-    all_tasks: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, IBackgroundTaskRegistration]]]
+    all_tasks: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, IBackgroundTaskRegistration]]]
     all_task_groups: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[str, BackgroundTaskRegistrationGroup]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTaskRegistration: ...
@@ -164,7 +164,7 @@ class BackgroundTaskRegistration(winrt.system.Object):
     def remove_progress(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class BackgroundTaskRegistrationGroup(winrt.system.Object):
-    all_tasks: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, BackgroundTaskRegistration]]
+    all_tasks: typing.Optional[winrt.windows.foundation.collections.IMapView[_uuid.UUID, BackgroundTaskRegistration]]
     id: str
     name: str
     @staticmethod
@@ -316,7 +316,7 @@ class GattServiceProviderTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderTrigger: ...
     @staticmethod
-    def create_async(trigger_id: str, service_uuid: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattServiceProviderTriggerResult]: ...
+    def create_async(trigger_id: str, service_uuid: _uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[GattServiceProviderTriggerResult]: ...
 
 class GattServiceProviderTriggerResult(winrt.system.Object):
     error: winrt.windows.devices.bluetooth.BluetoothError
@@ -534,7 +534,7 @@ class IBackgroundTask(winrt.system.Object):
     def run(self, task_instance: typing.Optional[IBackgroundTaskInstance], /) -> None: ...
 
 class IBackgroundTaskInstance(winrt.system.Object):
-    instance_id: uuid.UUID
+    instance_id: _uuid.UUID
     progress: winrt.system.UInt32
     suspended_count: winrt.system.UInt32
     task: typing.Optional[BackgroundTaskRegistration]
@@ -546,7 +546,7 @@ class IBackgroundTaskInstance(winrt.system.Object):
     def remove_canceled(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class IBackgroundTaskInstance2(winrt.system.Object):
-    instance_id: uuid.UUID
+    instance_id: _uuid.UUID
     progress: winrt.system.UInt32
     suspended_count: winrt.system.UInt32
     task: typing.Optional[BackgroundTaskRegistration]
@@ -560,7 +560,7 @@ class IBackgroundTaskInstance2(winrt.system.Object):
 
 class IBackgroundTaskInstance4(winrt.system.Object):
     user: typing.Optional[winrt.windows.system.User]
-    instance_id: uuid.UUID
+    instance_id: _uuid.UUID
     progress: winrt.system.UInt32
     suspended_count: winrt.system.UInt32
     task: typing.Optional[BackgroundTaskRegistration]
@@ -573,7 +573,7 @@ class IBackgroundTaskInstance4(winrt.system.Object):
 
 class IBackgroundTaskRegistration(winrt.system.Object):
     name: str
-    task_id: uuid.UUID
+    task_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration: ...
     def unregister(self, cancel_task: bool, /) -> None: ...
@@ -585,7 +585,7 @@ class IBackgroundTaskRegistration(winrt.system.Object):
 class IBackgroundTaskRegistration2(winrt.system.Object):
     trigger: typing.Optional[IBackgroundTrigger]
     name: str
-    task_id: uuid.UUID
+    task_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration2: ...
     def unregister(self, cancel_task: bool, /) -> None: ...
@@ -597,7 +597,7 @@ class IBackgroundTaskRegistration2(winrt.system.Object):
 class IBackgroundTaskRegistration3(winrt.system.Object):
     task_group: typing.Optional[BackgroundTaskRegistrationGroup]
     name: str
-    task_id: uuid.UUID
+    task_id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTaskRegistration3: ...
     def unregister(self, cancel_task: bool, /) -> None: ...

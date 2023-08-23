@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -83,11 +83,11 @@ class WiFiOnDemandHotspotConnectionResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotConnectionResult: ...
 
 class WiFiOnDemandHotspotNetwork(winrt.system.Object):
-    id: uuid.UUID
+    id: _uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiOnDemandHotspotNetwork: ...
     @staticmethod
-    def get_or_create_by_id(network_id: uuid.UUID, /) -> typing.Optional[WiFiOnDemandHotspotNetwork]: ...
+    def get_or_create_by_id(network_id: _uuid.UUID, /) -> typing.Optional[WiFiOnDemandHotspotNetwork]: ...
     def get_properties(self) -> typing.Optional[WiFiOnDemandHotspotNetworkProperties]: ...
     def update_properties(self, new_properties: typing.Optional[WiFiOnDemandHotspotNetworkProperties], /) -> None: ...
 

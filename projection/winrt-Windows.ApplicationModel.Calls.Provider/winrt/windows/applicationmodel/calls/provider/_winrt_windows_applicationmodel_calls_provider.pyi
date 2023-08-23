@@ -4,7 +4,7 @@ import datetime
 import sys
 import types
 import typing
-import uuid
+import uuid as _uuid
 
 import winrt.system
 import winrt.windows.foundation
@@ -30,7 +30,7 @@ class PhoneCallOriginManager(winrt.system.Object):
     @staticmethod
     def request_set_as_active_call_origin_app_async() -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @staticmethod
-    def set_call_origin(request_id: uuid.UUID, call_origin: typing.Optional[PhoneCallOrigin], /) -> None: ...
+    def set_call_origin(request_id: _uuid.UUID, call_origin: typing.Optional[PhoneCallOrigin], /) -> None: ...
     @staticmethod
     def show_phone_call_origin_settings_u_i() -> None: ...
 
