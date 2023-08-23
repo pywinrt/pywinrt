@@ -22,12 +22,12 @@ Self = typing.TypeVar('Self')
 class ESimProfileInstallProgress:
     total_size_in_bytes: winrt.system.Int32
     installed_size_in_bytes: winrt.system.Int32
-    def __new__(cls: typing.Type[ESimProfileInstallProgress], total_size_in_bytes: winrt.system.Int32, installed_size_in_bytes: winrt.system.Int32) -> ESimProfileInstallProgress: ...
+    def __init__(self, total_size_in_bytes: winrt.system.Int32, installed_size_in_bytes: winrt.system.Int32) -> None: ...
 
 class ProfileUsage:
     usage_in_megabytes: winrt.system.UInt32
     last_sync_time: datetime.datetime
-    def __new__(cls: typing.Type[ProfileUsage], usage_in_megabytes: winrt.system.UInt32, last_sync_time: datetime.datetime) -> ProfileUsage: ...
+    def __init__(self, usage_in_megabytes: winrt.system.UInt32, last_sync_time: datetime.datetime) -> None: ...
 
 class ESim(winrt.system.Object):
     available_memory_in_bytes: typing.Optional[typing.Optional[winrt.system.Int32]]

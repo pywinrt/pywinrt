@@ -23,16 +23,16 @@ Self = typing.TypeVar('Self')
 class HolographicAdapterId:
     low_part: winrt.system.UInt32
     high_part: winrt.system.Int32
-    def __new__(cls: typing.Type[HolographicAdapterId], low_part: winrt.system.UInt32, high_part: winrt.system.Int32) -> HolographicAdapterId: ...
+    def __init__(self, low_part: winrt.system.UInt32, high_part: winrt.system.Int32) -> None: ...
 
 class HolographicFrameId:
     value: winrt.system.UInt64
-    def __new__(cls: typing.Type[HolographicFrameId], value: winrt.system.UInt64) -> HolographicFrameId: ...
+    def __init__(self, value: winrt.system.UInt64) -> None: ...
 
 class HolographicStereoTransform:
     left: winrt.windows.foundation.numerics.Matrix4x4
     right: winrt.windows.foundation.numerics.Matrix4x4
-    def __new__(cls: typing.Type[HolographicStereoTransform], left: winrt.windows.foundation.numerics.Matrix4x4, right: winrt.windows.foundation.numerics.Matrix4x4) -> HolographicStereoTransform: ...
+    def __init__(self, left: winrt.windows.foundation.numerics.Matrix4x4, right: winrt.windows.foundation.numerics.Matrix4x4) -> None: ...
 
 class HolographicCamera(winrt.system.Object):
     viewport_scale_factor: winrt.system.Double

@@ -26,12 +26,12 @@ class BackgroundDownloadProgress:
     status: BackgroundTransferStatus
     has_response_changed: bool
     has_restarted: bool
-    def __new__(cls: typing.Type[BackgroundDownloadProgress], bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> BackgroundDownloadProgress: ...
+    def __init__(self, bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> None: ...
 
 class BackgroundTransferFileRange:
     offset: winrt.system.UInt64
     length: winrt.system.UInt64
-    def __new__(cls: typing.Type[BackgroundTransferFileRange], offset: winrt.system.UInt64, length: winrt.system.UInt64) -> BackgroundTransferFileRange: ...
+    def __init__(self, offset: winrt.system.UInt64, length: winrt.system.UInt64) -> None: ...
 
 class BackgroundUploadProgress:
     bytes_received: winrt.system.UInt64
@@ -41,7 +41,7 @@ class BackgroundUploadProgress:
     status: BackgroundTransferStatus
     has_response_changed: bool
     has_restarted: bool
-    def __new__(cls: typing.Type[BackgroundUploadProgress], bytes_received: winrt.system.UInt64, bytes_sent: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> BackgroundUploadProgress: ...
+    def __init__(self, bytes_received: winrt.system.UInt64, bytes_sent: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> None: ...
 
 class BackgroundDownloader(winrt.system.Object):
     failure_toast_notification: typing.Optional[winrt.windows.ui.notifications.ToastNotification]

@@ -13,28 +13,28 @@ Self = typing.TypeVar('Self')
 class DisplayAdapterId:
     low_part: winrt.system.UInt32
     high_part: winrt.system.Int32
-    def __new__(cls: typing.Type[DisplayAdapterId], low_part: winrt.system.UInt32, high_part: winrt.system.Int32) -> DisplayAdapterId: ...
+    def __init__(self, low_part: winrt.system.UInt32, high_part: winrt.system.Int32) -> None: ...
 
 class DisplayId:
     value: winrt.system.UInt64
-    def __new__(cls: typing.Type[DisplayId], value: winrt.system.UInt64) -> DisplayId: ...
+    def __init__(self, value: winrt.system.UInt64) -> None: ...
 
 class PointInt32:
     x: winrt.system.Int32
     y: winrt.system.Int32
-    def __new__(cls: typing.Type[PointInt32], x: winrt.system.Int32, y: winrt.system.Int32) -> PointInt32: ...
+    def __init__(self, x: winrt.system.Int32, y: winrt.system.Int32) -> None: ...
 
 class RectInt32:
     x: winrt.system.Int32
     y: winrt.system.Int32
     width: winrt.system.Int32
     height: winrt.system.Int32
-    def __new__(cls: typing.Type[RectInt32], x: winrt.system.Int32, y: winrt.system.Int32, width: winrt.system.Int32, height: winrt.system.Int32) -> RectInt32: ...
+    def __init__(self, x: winrt.system.Int32, y: winrt.system.Int32, width: winrt.system.Int32, height: winrt.system.Int32) -> None: ...
 
 class SizeInt32:
     width: winrt.system.Int32
     height: winrt.system.Int32
-    def __new__(cls: typing.Type[SizeInt32], width: winrt.system.Int32, height: winrt.system.Int32) -> SizeInt32: ...
+    def __init__(self, width: winrt.system.Int32, height: winrt.system.Int32) -> None: ...
 
 class IGeometrySource2D(winrt.system.Object):
     @staticmethod

@@ -24,7 +24,7 @@ Self = typing.TypeVar('Self')
 class MapZoomLevelRange:
     min: winrt.system.Double
     max: winrt.system.Double
-    def __new__(cls: typing.Type[MapZoomLevelRange], min: winrt.system.Double, max: winrt.system.Double) -> MapZoomLevelRange: ...
+    def __init__(self, min: winrt.system.Double, max: winrt.system.Double) -> None: ...
 
 class CustomMapTileDataSource(winrt.system.Object):
     @staticmethod

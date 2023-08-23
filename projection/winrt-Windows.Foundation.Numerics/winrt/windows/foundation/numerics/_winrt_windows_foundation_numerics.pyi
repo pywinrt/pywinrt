@@ -17,7 +17,7 @@ class Matrix3x2:
     m22: winrt.system.Single
     m31: winrt.system.Single
     m32: winrt.system.Single
-    def __new__(cls: typing.Type[Matrix3x2], m11: winrt.system.Single, m12: winrt.system.Single, m21: winrt.system.Single, m22: winrt.system.Single, m31: winrt.system.Single, m32: winrt.system.Single) -> Matrix3x2: ...
+    def __init__(self, m11: winrt.system.Single, m12: winrt.system.Single, m21: winrt.system.Single, m22: winrt.system.Single, m31: winrt.system.Single, m32: winrt.system.Single) -> None: ...
 
 class Matrix4x4:
     m11: winrt.system.Single
@@ -36,40 +36,40 @@ class Matrix4x4:
     m42: winrt.system.Single
     m43: winrt.system.Single
     m44: winrt.system.Single
-    def __new__(cls: typing.Type[Matrix4x4], m11: winrt.system.Single, m12: winrt.system.Single, m13: winrt.system.Single, m14: winrt.system.Single, m21: winrt.system.Single, m22: winrt.system.Single, m23: winrt.system.Single, m24: winrt.system.Single, m31: winrt.system.Single, m32: winrt.system.Single, m33: winrt.system.Single, m34: winrt.system.Single, m41: winrt.system.Single, m42: winrt.system.Single, m43: winrt.system.Single, m44: winrt.system.Single) -> Matrix4x4: ...
+    def __init__(self, m11: winrt.system.Single, m12: winrt.system.Single, m13: winrt.system.Single, m14: winrt.system.Single, m21: winrt.system.Single, m22: winrt.system.Single, m23: winrt.system.Single, m24: winrt.system.Single, m31: winrt.system.Single, m32: winrt.system.Single, m33: winrt.system.Single, m34: winrt.system.Single, m41: winrt.system.Single, m42: winrt.system.Single, m43: winrt.system.Single, m44: winrt.system.Single) -> None: ...
 
 class Plane:
     normal: Vector3
     d: winrt.system.Single
-    def __new__(cls: typing.Type[Plane], normal: Vector3, d: winrt.system.Single) -> Plane: ...
+    def __init__(self, normal: Vector3, d: winrt.system.Single) -> None: ...
 
 class Quaternion:
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single
     w: winrt.system.Single
-    def __new__(cls: typing.Type[Quaternion], x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single, w: winrt.system.Single) -> Quaternion: ...
+    def __init__(self, x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single, w: winrt.system.Single) -> None: ...
 
 class Rational:
     numerator: winrt.system.UInt32
     denominator: winrt.system.UInt32
-    def __new__(cls: typing.Type[Rational], numerator: winrt.system.UInt32, denominator: winrt.system.UInt32) -> Rational: ...
+    def __init__(self, numerator: winrt.system.UInt32, denominator: winrt.system.UInt32) -> None: ...
 
 class Vector2:
     x: winrt.system.Single
     y: winrt.system.Single
-    def __new__(cls: typing.Type[Vector2], x: winrt.system.Single, y: winrt.system.Single) -> Vector2: ...
+    def __init__(self, x: winrt.system.Single, y: winrt.system.Single) -> None: ...
 
 class Vector3:
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single
-    def __new__(cls: typing.Type[Vector3], x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single) -> Vector3: ...
+    def __init__(self, x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single) -> None: ...
 
 class Vector4:
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single
     w: winrt.system.Single
-    def __new__(cls: typing.Type[Vector4], x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single, w: winrt.system.Single) -> Vector4: ...
+    def __init__(self, x: winrt.system.Single, y: winrt.system.Single, z: winrt.system.Single, w: winrt.system.Single) -> None: ...
 

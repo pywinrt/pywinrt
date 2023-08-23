@@ -21,7 +21,7 @@ class NitRange:
     min_nits: winrt.system.Single
     max_nits: winrt.system.Single
     step_size_nits: winrt.system.Single
-    def __new__(cls: typing.Type[NitRange], min_nits: winrt.system.Single, max_nits: winrt.system.Single, step_size_nits: winrt.system.Single) -> NitRange: ...
+    def __init__(self, min_nits: winrt.system.Single, max_nits: winrt.system.Single, step_size_nits: winrt.system.Single) -> None: ...
 
 class AdvancedColorInfo(winrt.system.Object):
     blue_primary: winrt.windows.foundation.Point

@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 class SizeUInt32:
     width: winrt.system.UInt32
     height: winrt.system.UInt32
-    def __new__(cls: typing.Type[SizeUInt32], width: winrt.system.UInt32, height: winrt.system.UInt32) -> SizeUInt32: ...
+    def __init__(self, width: winrt.system.UInt32, height: winrt.system.UInt32) -> None: ...
 
 class BarcodeScanner(winrt.system.Object):
     capabilities: typing.Optional[BarcodeScannerCapabilities]

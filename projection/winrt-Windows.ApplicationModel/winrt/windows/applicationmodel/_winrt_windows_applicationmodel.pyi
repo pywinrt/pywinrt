@@ -21,14 +21,14 @@ Self = typing.TypeVar('Self')
 
 class PackageInstallProgress:
     percent_complete: winrt.system.UInt32
-    def __new__(cls: typing.Type[PackageInstallProgress], percent_complete: winrt.system.UInt32) -> PackageInstallProgress: ...
+    def __init__(self, percent_complete: winrt.system.UInt32) -> None: ...
 
 class PackageVersion:
     major: winrt.system.UInt16
     minor: winrt.system.UInt16
     build: winrt.system.UInt16
     revision: winrt.system.UInt16
-    def __new__(cls: typing.Type[PackageVersion], major: winrt.system.UInt16, minor: winrt.system.UInt16, build: winrt.system.UInt16, revision: winrt.system.UInt16) -> PackageVersion: ...
+    def __init__(self, major: winrt.system.UInt16, minor: winrt.system.UInt16, build: winrt.system.UInt16, revision: winrt.system.UInt16) -> None: ...
 
 class AppDisplayInfo(winrt.system.Object):
     description: str

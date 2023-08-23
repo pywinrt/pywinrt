@@ -24,7 +24,7 @@ class StorePackageUpdateStatus:
     package_download_progress: winrt.system.Double
     total_download_progress: winrt.system.Double
     package_update_state: StorePackageUpdateState
-    def __new__(cls: typing.Type[StorePackageUpdateStatus], package_family_name: str, package_download_size_in_bytes: winrt.system.UInt64, package_bytes_downloaded: winrt.system.UInt64, package_download_progress: winrt.system.Double, total_download_progress: winrt.system.Double, package_update_state: StorePackageUpdateState) -> StorePackageUpdateStatus: ...
+    def __init__(self, package_family_name: str, package_download_size_in_bytes: winrt.system.UInt64, package_bytes_downloaded: winrt.system.UInt64, package_download_progress: winrt.system.Double, total_download_progress: winrt.system.Double, package_update_state: StorePackageUpdateState) -> None: ...
 
 class StoreAcquireLicenseResult(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult

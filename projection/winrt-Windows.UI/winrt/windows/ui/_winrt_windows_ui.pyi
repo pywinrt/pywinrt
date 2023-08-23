@@ -15,11 +15,11 @@ class Color:
     r: winrt.system.UInt8
     g: winrt.system.UInt8
     b: winrt.system.UInt8
-    def __new__(cls: typing.Type[Color], a: winrt.system.UInt8, r: winrt.system.UInt8, g: winrt.system.UInt8, b: winrt.system.UInt8) -> Color: ...
+    def __init__(self, a: winrt.system.UInt8, r: winrt.system.UInt8, g: winrt.system.UInt8, b: winrt.system.UInt8) -> None: ...
 
 class WindowId:
     value: winrt.system.UInt64
-    def __new__(cls: typing.Type[WindowId], value: winrt.system.UInt64) -> WindowId: ...
+    def __init__(self, value: winrt.system.UInt64) -> None: ...
 
 class ColorHelper(winrt.system.Object):
     @staticmethod

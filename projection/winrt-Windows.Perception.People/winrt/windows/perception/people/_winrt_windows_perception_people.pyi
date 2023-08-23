@@ -21,14 +21,14 @@ Self = typing.TypeVar('Self')
 class HandMeshVertex:
     position: winrt.windows.foundation.numerics.Vector3
     normal: winrt.windows.foundation.numerics.Vector3
-    def __new__(cls: typing.Type[HandMeshVertex], position: winrt.windows.foundation.numerics.Vector3, normal: winrt.windows.foundation.numerics.Vector3) -> HandMeshVertex: ...
+    def __init__(self, position: winrt.windows.foundation.numerics.Vector3, normal: winrt.windows.foundation.numerics.Vector3) -> None: ...
 
 class JointPose:
     orientation: winrt.windows.foundation.numerics.Quaternion
     position: winrt.windows.foundation.numerics.Vector3
     radius: winrt.system.Single
     accuracy: JointPoseAccuracy
-    def __new__(cls: typing.Type[JointPose], orientation: winrt.windows.foundation.numerics.Quaternion, position: winrt.windows.foundation.numerics.Vector3, radius: winrt.system.Single, accuracy: JointPoseAccuracy) -> JointPose: ...
+    def __init__(self, orientation: winrt.windows.foundation.numerics.Quaternion, position: winrt.windows.foundation.numerics.Vector3, radius: winrt.system.Single, accuracy: JointPoseAccuracy) -> None: ...
 
 class EyesPose(winrt.system.Object):
     gaze: typing.Optional[typing.Optional[winrt.windows.perception.spatial.SpatialRay]]

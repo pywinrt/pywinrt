@@ -19,12 +19,12 @@ class XamlBinaryWriterErrorInformation:
     input_stream_index: winrt.system.UInt32
     line_number: winrt.system.UInt32
     line_position: winrt.system.UInt32
-    def __new__(cls: typing.Type[XamlBinaryWriterErrorInformation], input_stream_index: winrt.system.UInt32, line_number: winrt.system.UInt32, line_position: winrt.system.UInt32) -> XamlBinaryWriterErrorInformation: ...
+    def __init__(self, input_stream_index: winrt.system.UInt32, line_number: winrt.system.UInt32, line_position: winrt.system.UInt32) -> None: ...
 
 class XmlnsDefinition:
     xml_namespace: str
     namespace: str
-    def __new__(cls: typing.Type[XmlnsDefinition], xml_namespace: str, namespace: str) -> XmlnsDefinition: ...
+    def __init__(self, xml_namespace: str, namespace: str) -> None: ...
 
 class MarkupExtension(winrt.system.Object):
     @staticmethod

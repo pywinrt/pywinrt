@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 class CoreTextRange:
     start_caret_position: winrt.system.Int32
     end_caret_position: winrt.system.Int32
-    def __new__(cls: typing.Type[CoreTextRange], start_caret_position: winrt.system.Int32, end_caret_position: winrt.system.Int32) -> CoreTextRange: ...
+    def __init__(self, start_caret_position: winrt.system.Int32, end_caret_position: winrt.system.Int32) -> None: ...
 
 class CoreTextCompositionCompletedEventArgs(winrt.system.Object):
     composition_segments: typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreTextCompositionSegment]]

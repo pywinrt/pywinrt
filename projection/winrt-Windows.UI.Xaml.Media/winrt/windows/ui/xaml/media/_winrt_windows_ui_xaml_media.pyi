@@ -29,7 +29,7 @@ class Matrix:
     m22: winrt.system.Double
     offset_x: winrt.system.Double
     offset_y: winrt.system.Double
-    def __new__(cls: typing.Type[Matrix], m11: winrt.system.Double, m12: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double) -> Matrix: ...
+    def __init__(self, m11: winrt.system.Double, m12: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double) -> None: ...
 
 class AcrylicBrush(winrt.system.Object):
     tint_transition_duration: datetime.timedelta

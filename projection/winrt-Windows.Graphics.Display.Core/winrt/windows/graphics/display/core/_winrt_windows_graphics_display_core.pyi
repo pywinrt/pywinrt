@@ -27,7 +27,7 @@ class HdmiDisplayHdr2086Metadata:
     min_mastering_luminance: winrt.system.UInt16
     max_content_light_level: winrt.system.UInt16
     max_frame_average_light_level: winrt.system.UInt16
-    def __new__(cls: typing.Type[HdmiDisplayHdr2086Metadata], red_primary_x: winrt.system.UInt16, red_primary_y: winrt.system.UInt16, green_primary_x: winrt.system.UInt16, green_primary_y: winrt.system.UInt16, blue_primary_x: winrt.system.UInt16, blue_primary_y: winrt.system.UInt16, white_point_x: winrt.system.UInt16, white_point_y: winrt.system.UInt16, max_mastering_luminance: winrt.system.UInt16, min_mastering_luminance: winrt.system.UInt16, max_content_light_level: winrt.system.UInt16, max_frame_average_light_level: winrt.system.UInt16) -> HdmiDisplayHdr2086Metadata: ...
+    def __init__(self, red_primary_x: winrt.system.UInt16, red_primary_y: winrt.system.UInt16, green_primary_x: winrt.system.UInt16, green_primary_y: winrt.system.UInt16, blue_primary_x: winrt.system.UInt16, blue_primary_y: winrt.system.UInt16, white_point_x: winrt.system.UInt16, white_point_y: winrt.system.UInt16, max_mastering_luminance: winrt.system.UInt16, min_mastering_luminance: winrt.system.UInt16, max_content_light_level: winrt.system.UInt16, max_frame_average_light_level: winrt.system.UInt16) -> None: ...
 
 class HdmiDisplayInformation(winrt.system.Object):
     @staticmethod

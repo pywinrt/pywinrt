@@ -19,7 +19,7 @@ Self = typing.TypeVar('Self')
 class AccessListEntry:
     token: str
     metadata: str
-    def __new__(cls: typing.Type[AccessListEntry], token: str, metadata: str) -> AccessListEntry: ...
+    def __init__(self, token: str, metadata: str) -> None: ...
 
 class AccessListEntryView(winrt.system.Object, typing.Sequence[AccessListEntry]):
     size: winrt.system.UInt32

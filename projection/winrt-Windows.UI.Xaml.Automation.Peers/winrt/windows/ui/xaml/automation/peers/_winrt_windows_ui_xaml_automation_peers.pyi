@@ -22,7 +22,7 @@ Self = typing.TypeVar('Self')
 class RawElementProviderRuntimeId:
     part1: winrt.system.UInt32
     part2: winrt.system.UInt32
-    def __new__(cls: typing.Type[RawElementProviderRuntimeId], part1: winrt.system.UInt32, part2: winrt.system.UInt32) -> RawElementProviderRuntimeId: ...
+    def __init__(self, part1: winrt.system.UInt32, part2: winrt.system.UInt32) -> None: ...
 
 class AppBarAutomationPeer(winrt.system.Object):
     expand_collapse_state: winrt.windows.ui.xaml.automation.ExpandCollapseState

@@ -19,14 +19,14 @@ Self = typing.TypeVar('Self')
 class RetrievalProgress:
     bytes_retrieved: winrt.system.UInt32
     total_bytes_to_retrieve: winrt.system.UInt32
-    def __new__(cls: typing.Type[RetrievalProgress], bytes_retrieved: winrt.system.UInt32, total_bytes_to_retrieve: winrt.system.UInt32) -> RetrievalProgress: ...
+    def __init__(self, bytes_retrieved: winrt.system.UInt32, total_bytes_to_retrieve: winrt.system.UInt32) -> None: ...
 
 class TransferProgress:
     bytes_sent: winrt.system.UInt32
     total_bytes_to_send: winrt.system.UInt32
     bytes_retrieved: winrt.system.UInt32
     total_bytes_to_retrieve: winrt.system.UInt32
-    def __new__(cls: typing.Type[TransferProgress], bytes_sent: winrt.system.UInt32, total_bytes_to_send: winrt.system.UInt32, bytes_retrieved: winrt.system.UInt32, total_bytes_to_retrieve: winrt.system.UInt32) -> TransferProgress: ...
+    def __init__(self, bytes_sent: winrt.system.UInt32, total_bytes_to_send: winrt.system.UInt32, bytes_retrieved: winrt.system.UInt32, total_bytes_to_retrieve: winrt.system.UInt32) -> None: ...
 
 class SyndicationAttribute(winrt.system.Object):
     value: str

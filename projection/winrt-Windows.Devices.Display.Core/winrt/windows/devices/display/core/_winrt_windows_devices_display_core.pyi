@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 class DisplayPresentationRate:
     vertical_sync_rate: winrt.windows.foundation.numerics.Rational
     vertical_syncs_per_presentation: winrt.system.Int32
-    def __new__(cls: typing.Type[DisplayPresentationRate], vertical_sync_rate: winrt.windows.foundation.numerics.Rational, vertical_syncs_per_presentation: winrt.system.Int32) -> DisplayPresentationRate: ...
+    def __init__(self, vertical_sync_rate: winrt.windows.foundation.numerics.Rational, vertical_syncs_per_presentation: winrt.system.Int32) -> None: ...
 
 class DisplayAdapter(winrt.system.Object):
     device_interface_path: str

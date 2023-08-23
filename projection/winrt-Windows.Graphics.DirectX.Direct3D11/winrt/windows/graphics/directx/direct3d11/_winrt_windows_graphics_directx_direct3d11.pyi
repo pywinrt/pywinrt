@@ -16,14 +16,14 @@ Self = typing.TypeVar('Self')
 class Direct3DMultisampleDescription:
     count: winrt.system.Int32
     quality: winrt.system.Int32
-    def __new__(cls: typing.Type[Direct3DMultisampleDescription], count: winrt.system.Int32, quality: winrt.system.Int32) -> Direct3DMultisampleDescription: ...
+    def __init__(self, count: winrt.system.Int32, quality: winrt.system.Int32) -> None: ...
 
 class Direct3DSurfaceDescription:
     width: winrt.system.Int32
     height: winrt.system.Int32
     format: winrt.windows.graphics.directx.DirectXPixelFormat
     multisample_description: Direct3DMultisampleDescription
-    def __new__(cls: typing.Type[Direct3DSurfaceDescription], width: winrt.system.Int32, height: winrt.system.Int32, format: winrt.windows.graphics.directx.DirectXPixelFormat, multisample_description: Direct3DMultisampleDescription) -> Direct3DSurfaceDescription: ...
+    def __init__(self, width: winrt.system.Int32, height: winrt.system.Int32, format: winrt.windows.graphics.directx.DirectXPixelFormat, multisample_description: Direct3DMultisampleDescription) -> None: ...
 
 class IDirect3DDevice(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...

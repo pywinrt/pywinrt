@@ -18,12 +18,12 @@ Self = typing.TypeVar('Self')
 class GpioChangeCount:
     count: winrt.system.UInt64
     relative_time: datetime.timedelta
-    def __new__(cls: typing.Type[GpioChangeCount], count: winrt.system.UInt64, relative_time: datetime.timedelta) -> GpioChangeCount: ...
+    def __init__(self, count: winrt.system.UInt64, relative_time: datetime.timedelta) -> None: ...
 
 class GpioChangeRecord:
     relative_time: datetime.timedelta
     edge: GpioPinEdge
-    def __new__(cls: typing.Type[GpioChangeRecord], relative_time: datetime.timedelta, edge: GpioPinEdge) -> GpioChangeRecord: ...
+    def __init__(self, relative_time: datetime.timedelta, edge: GpioPinEdge) -> None: ...
 
 class GpioChangeCounter(winrt.system.Object):
     polarity: GpioChangePolarity

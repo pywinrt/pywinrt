@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 class ImageScannerResolution:
     dpi_x: winrt.system.Single
     dpi_y: winrt.system.Single
-    def __new__(cls: typing.Type[ImageScannerResolution], dpi_x: winrt.system.Single, dpi_y: winrt.system.Single) -> ImageScannerResolution: ...
+    def __init__(self, dpi_x: winrt.system.Single, dpi_y: winrt.system.Single) -> None: ...
 
 class ImageScanner(winrt.system.Object):
     auto_configuration: typing.Optional[ImageScannerAutoConfiguration]

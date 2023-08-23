@@ -16,11 +16,11 @@ Self = typing.TypeVar('Self')
 
 class AutomationAnnotationTypeRegistration:
     local_id: winrt.system.Int32
-    def __new__(cls: typing.Type[AutomationAnnotationTypeRegistration], local_id: winrt.system.Int32) -> AutomationAnnotationTypeRegistration: ...
+    def __init__(self, local_id: winrt.system.Int32) -> None: ...
 
 class AutomationRemoteOperationOperandId:
     value: winrt.system.Int32
-    def __new__(cls: typing.Type[AutomationRemoteOperationOperandId], value: winrt.system.Int32) -> AutomationRemoteOperationOperandId: ...
+    def __init__(self, value: winrt.system.Int32) -> None: ...
 
 class AutomationRemoteOperationResult(winrt.system.Object):
     error_location: winrt.system.Int32

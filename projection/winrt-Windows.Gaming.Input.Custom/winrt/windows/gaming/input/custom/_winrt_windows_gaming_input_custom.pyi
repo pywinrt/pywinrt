@@ -20,12 +20,12 @@ class GameControllerVersionInfo:
     minor: winrt.system.UInt16
     build: winrt.system.UInt16
     revision: winrt.system.UInt16
-    def __new__(cls: typing.Type[GameControllerVersionInfo], major: winrt.system.UInt16, minor: winrt.system.UInt16, build: winrt.system.UInt16, revision: winrt.system.UInt16) -> GameControllerVersionInfo: ...
+    def __init__(self, major: winrt.system.UInt16, minor: winrt.system.UInt16, build: winrt.system.UInt16, revision: winrt.system.UInt16) -> None: ...
 
 class GipFirmwareUpdateProgress:
     percent_completed: winrt.system.Double
     current_component_id: winrt.system.UInt32
-    def __new__(cls: typing.Type[GipFirmwareUpdateProgress], percent_completed: winrt.system.Double, current_component_id: winrt.system.UInt32) -> GipFirmwareUpdateProgress: ...
+    def __init__(self, percent_completed: winrt.system.Double, current_component_id: winrt.system.UInt32) -> None: ...
 
 class GameControllerFactoryManager(winrt.system.Object):
     @staticmethod

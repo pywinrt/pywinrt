@@ -28,14 +28,14 @@ class BandwidthStatistics:
     inbound_bits_per_second_instability: winrt.system.UInt64
     outbound_bandwidth_peaked: bool
     inbound_bandwidth_peaked: bool
-    def __new__(cls: typing.Type[BandwidthStatistics], outbound_bits_per_second: winrt.system.UInt64, inbound_bits_per_second: winrt.system.UInt64, outbound_bits_per_second_instability: winrt.system.UInt64, inbound_bits_per_second_instability: winrt.system.UInt64, outbound_bandwidth_peaked: bool, inbound_bandwidth_peaked: bool) -> BandwidthStatistics: ...
+    def __init__(self, outbound_bits_per_second: winrt.system.UInt64, inbound_bits_per_second: winrt.system.UInt64, outbound_bits_per_second_instability: winrt.system.UInt64, inbound_bits_per_second_instability: winrt.system.UInt64, outbound_bandwidth_peaked: bool, inbound_bandwidth_peaked: bool) -> None: ...
 
 class RoundTripTimeStatistics:
     variance: winrt.system.UInt32
     max: winrt.system.UInt32
     min: winrt.system.UInt32
     sum: winrt.system.UInt32
-    def __new__(cls: typing.Type[RoundTripTimeStatistics], variance: winrt.system.UInt32, max: winrt.system.UInt32, min: winrt.system.UInt32, sum: winrt.system.UInt32) -> RoundTripTimeStatistics: ...
+    def __init__(self, variance: winrt.system.UInt32, max: winrt.system.UInt32, min: winrt.system.UInt32, sum: winrt.system.UInt32) -> None: ...
 
 class ControlChannelTrigger(winrt.system.Object):
     server_keep_alive_interval_in_minutes: winrt.system.UInt32

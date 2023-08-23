@@ -22,7 +22,7 @@ Self = typing.TypeVar('Self')
 class TextRange:
     start_index: winrt.system.Int32
     length: winrt.system.Int32
-    def __new__(cls: typing.Type[TextRange], start_index: winrt.system.Int32, length: winrt.system.Int32) -> TextRange: ...
+    def __init__(self, start_index: winrt.system.Int32, length: winrt.system.Int32) -> None: ...
 
 class Block(winrt.system.Object):
     text_alignment: winrt.windows.ui.xaml.TextAlignment

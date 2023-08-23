@@ -23,7 +23,7 @@ class ResourceLayoutInfo:
     resource_subtree_count: winrt.system.UInt32
     named_resource_count: winrt.system.UInt32
     checksum: winrt.system.Int32
-    def __new__(cls: typing.Type[ResourceLayoutInfo], major_version: winrt.system.UInt32, minor_version: winrt.system.UInt32, resource_subtree_count: winrt.system.UInt32, named_resource_count: winrt.system.UInt32, checksum: winrt.system.Int32) -> ResourceLayoutInfo: ...
+    def __init__(self, major_version: winrt.system.UInt32, minor_version: winrt.system.UInt32, resource_subtree_count: winrt.system.UInt32, named_resource_count: winrt.system.UInt32, checksum: winrt.system.Int32) -> None: ...
 
 class NamedResource(winrt.system.Object):
     candidates: typing.Optional[winrt.windows.foundation.collections.IVectorView[ResourceCandidate]]

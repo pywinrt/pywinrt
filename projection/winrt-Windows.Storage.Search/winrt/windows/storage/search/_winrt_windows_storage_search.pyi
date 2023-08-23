@@ -21,7 +21,7 @@ Self = typing.TypeVar('Self')
 class SortEntry:
     property_name: str
     ascending_order: bool
-    def __new__(cls: typing.Type[SortEntry], property_name: str, ascending_order: bool) -> SortEntry: ...
+    def __init__(self, property_name: str, ascending_order: bool) -> None: ...
 
 class ContentIndexer(winrt.system.Object):
     revision: winrt.system.UInt64

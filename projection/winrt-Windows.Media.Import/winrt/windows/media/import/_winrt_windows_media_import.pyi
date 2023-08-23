@@ -22,7 +22,7 @@ class PhotoImportProgress:
     bytes_imported: winrt.system.UInt64
     total_bytes_to_import: winrt.system.UInt64
     import_progress: winrt.system.Double
-    def __new__(cls: typing.Type[PhotoImportProgress], items_imported: winrt.system.UInt32, total_items_to_import: winrt.system.UInt32, bytes_imported: winrt.system.UInt64, total_bytes_to_import: winrt.system.UInt64, import_progress: winrt.system.Double) -> PhotoImportProgress: ...
+    def __init__(self, items_imported: winrt.system.UInt32, total_items_to_import: winrt.system.UInt32, bytes_imported: winrt.system.UInt64, total_bytes_to_import: winrt.system.UInt64, import_progress: winrt.system.Double) -> None: ...
 
 class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
     deleted_items: typing.Optional[winrt.windows.foundation.collections.IVectorView[PhotoImportItem]]

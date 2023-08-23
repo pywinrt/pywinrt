@@ -40,24 +40,24 @@ class CornerRadius:
     top_right: winrt.system.Double
     bottom_right: winrt.system.Double
     bottom_left: winrt.system.Double
-    def __new__(cls: typing.Type[CornerRadius], top_left: winrt.system.Double, top_right: winrt.system.Double, bottom_right: winrt.system.Double, bottom_left: winrt.system.Double) -> CornerRadius: ...
+    def __init__(self, top_left: winrt.system.Double, top_right: winrt.system.Double, bottom_right: winrt.system.Double, bottom_left: winrt.system.Double) -> None: ...
 
 class Duration:
     time_span: datetime.timedelta
     type: DurationType
-    def __new__(cls: typing.Type[Duration], time_span: datetime.timedelta, type: DurationType) -> Duration: ...
+    def __init__(self, time_span: datetime.timedelta, type: DurationType) -> None: ...
 
 class GridLength:
     value: winrt.system.Double
     grid_unit_type: GridUnitType
-    def __new__(cls: typing.Type[GridLength], value: winrt.system.Double, grid_unit_type: GridUnitType) -> GridLength: ...
+    def __init__(self, value: winrt.system.Double, grid_unit_type: GridUnitType) -> None: ...
 
 class Thickness:
     left: winrt.system.Double
     top: winrt.system.Double
     right: winrt.system.Double
     bottom: winrt.system.Double
-    def __new__(cls: typing.Type[Thickness], left: winrt.system.Double, top: winrt.system.Double, right: winrt.system.Double, bottom: winrt.system.Double) -> Thickness: ...
+    def __init__(self, left: winrt.system.Double, top: winrt.system.Double, right: winrt.system.Double, bottom: winrt.system.Double) -> None: ...
 
 class AdaptiveTrigger(winrt.system.Object):
     min_window_width: winrt.system.Double

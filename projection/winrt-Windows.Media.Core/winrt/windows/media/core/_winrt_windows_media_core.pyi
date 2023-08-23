@@ -34,12 +34,12 @@ Self = typing.TypeVar('Self')
 class MseTimeRange:
     start: datetime.timedelta
     end: datetime.timedelta
-    def __new__(cls: typing.Type[MseTimeRange], start: datetime.timedelta, end: datetime.timedelta) -> MseTimeRange: ...
+    def __init__(self, start: datetime.timedelta, end: datetime.timedelta) -> None: ...
 
 class TimedTextDouble:
     value: winrt.system.Double
     unit: TimedTextUnit
-    def __new__(cls: typing.Type[TimedTextDouble], value: winrt.system.Double, unit: TimedTextUnit) -> TimedTextDouble: ...
+    def __init__(self, value: winrt.system.Double, unit: TimedTextUnit) -> None: ...
 
 class TimedTextPadding:
     before: winrt.system.Double
@@ -47,19 +47,19 @@ class TimedTextPadding:
     start: winrt.system.Double
     end: winrt.system.Double
     unit: TimedTextUnit
-    def __new__(cls: typing.Type[TimedTextPadding], before: winrt.system.Double, after: winrt.system.Double, start: winrt.system.Double, end: winrt.system.Double, unit: TimedTextUnit) -> TimedTextPadding: ...
+    def __init__(self, before: winrt.system.Double, after: winrt.system.Double, start: winrt.system.Double, end: winrt.system.Double, unit: TimedTextUnit) -> None: ...
 
 class TimedTextPoint:
     x: winrt.system.Double
     y: winrt.system.Double
     unit: TimedTextUnit
-    def __new__(cls: typing.Type[TimedTextPoint], x: winrt.system.Double, y: winrt.system.Double, unit: TimedTextUnit) -> TimedTextPoint: ...
+    def __init__(self, x: winrt.system.Double, y: winrt.system.Double, unit: TimedTextUnit) -> None: ...
 
 class TimedTextSize:
     height: winrt.system.Double
     width: winrt.system.Double
     unit: TimedTextUnit
-    def __new__(cls: typing.Type[TimedTextSize], height: winrt.system.Double, width: winrt.system.Double, unit: TimedTextUnit) -> TimedTextSize: ...
+    def __init__(self, height: winrt.system.Double, width: winrt.system.Double, unit: TimedTextUnit) -> None: ...
 
 class AudioStreamDescriptor(winrt.system.Object):
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]

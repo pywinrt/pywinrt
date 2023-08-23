@@ -26,7 +26,7 @@ class HttpProgress:
     bytes_received: winrt.system.UInt64
     total_bytes_to_receive: winrt.system.UInt64
     retries: winrt.system.UInt32
-    def __new__(cls: typing.Type[HttpProgress], stage: HttpProgressStage, bytes_sent: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, retries: winrt.system.UInt32) -> HttpProgress: ...
+    def __init__(self, stage: HttpProgressStage, bytes_sent: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, retries: winrt.system.UInt32) -> None: ...
 
 class HttpBufferContent(winrt.system.Object):
     headers: typing.Optional[winrt.windows.web.http.headers.HttpContentHeaderCollection]

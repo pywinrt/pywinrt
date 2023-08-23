@@ -18,7 +18,7 @@ Self = typing.TypeVar('Self')
 class MouseDelta:
     x: winrt.system.Int32
     y: winrt.system.Int32
-    def __new__(cls: typing.Type[MouseDelta], x: winrt.system.Int32, y: winrt.system.Int32) -> MouseDelta: ...
+    def __init__(self, x: winrt.system.Int32, y: winrt.system.Int32) -> None: ...
 
 class PointerDeviceUsage:
     usage_page: winrt.system.UInt32
@@ -29,7 +29,7 @@ class PointerDeviceUsage:
     max_physical: winrt.system.Int32
     unit: winrt.system.UInt32
     physical_multiplier: winrt.system.Single
-    def __new__(cls: typing.Type[PointerDeviceUsage], usage_page: winrt.system.UInt32, usage: winrt.system.UInt32, min_logical: winrt.system.Int32, max_logical: winrt.system.Int32, min_physical: winrt.system.Int32, max_physical: winrt.system.Int32, unit: winrt.system.UInt32, physical_multiplier: winrt.system.Single) -> PointerDeviceUsage: ...
+    def __init__(self, usage_page: winrt.system.UInt32, usage: winrt.system.UInt32, min_logical: winrt.system.Int32, max_logical: winrt.system.Int32, min_physical: winrt.system.Int32, max_physical: winrt.system.Int32, unit: winrt.system.UInt32, physical_multiplier: winrt.system.Single) -> None: ...
 
 class KeyboardCapabilities(winrt.system.Object):
     keyboard_present: winrt.system.Int32

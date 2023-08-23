@@ -24,20 +24,20 @@ class CrossSlideThresholds:
     speed_bump_start: winrt.system.Single
     speed_bump_end: winrt.system.Single
     rearrange_start: winrt.system.Single
-    def __new__(cls: typing.Type[CrossSlideThresholds], selection_start: winrt.system.Single, speed_bump_start: winrt.system.Single, speed_bump_end: winrt.system.Single, rearrange_start: winrt.system.Single) -> CrossSlideThresholds: ...
+    def __init__(self, selection_start: winrt.system.Single, speed_bump_start: winrt.system.Single, speed_bump_end: winrt.system.Single, rearrange_start: winrt.system.Single) -> None: ...
 
 class ManipulationDelta:
     translation: winrt.windows.foundation.Point
     scale: winrt.system.Single
     rotation: winrt.system.Single
     expansion: winrt.system.Single
-    def __new__(cls: typing.Type[ManipulationDelta], translation: winrt.windows.foundation.Point, scale: winrt.system.Single, rotation: winrt.system.Single, expansion: winrt.system.Single) -> ManipulationDelta: ...
+    def __init__(self, translation: winrt.windows.foundation.Point, scale: winrt.system.Single, rotation: winrt.system.Single, expansion: winrt.system.Single) -> None: ...
 
 class ManipulationVelocities:
     linear: winrt.windows.foundation.Point
     angular: winrt.system.Single
     expansion: winrt.system.Single
-    def __new__(cls: typing.Type[ManipulationVelocities], linear: winrt.windows.foundation.Point, angular: winrt.system.Single, expansion: winrt.system.Single) -> ManipulationVelocities: ...
+    def __init__(self, linear: winrt.windows.foundation.Point, angular: winrt.system.Single, expansion: winrt.system.Single) -> None: ...
 
 class AttachableInputObject(winrt.system.Object):
     def __enter__(self: Self) -> Self: ...

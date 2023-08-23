@@ -17,7 +17,7 @@ Self = typing.TypeVar('Self')
 
 class FontWeight:
     weight: winrt.system.UInt16
-    def __new__(cls: typing.Type[FontWeight], weight: winrt.system.UInt16) -> FontWeight: ...
+    def __init__(self, weight: winrt.system.UInt16) -> None: ...
 
 class ContentLinkInfo(winrt.system.Object):
     uri: typing.Optional[winrt.windows.foundation.Uri]

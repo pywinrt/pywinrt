@@ -22,7 +22,7 @@ class PrintPageDescription:
     imageable_rect: winrt.windows.foundation.Rect
     dpi_x: winrt.system.UInt32
     dpi_y: winrt.system.UInt32
-    def __new__(cls: typing.Type[PrintPageDescription], page_size: winrt.windows.foundation.Size, imageable_rect: winrt.windows.foundation.Rect, dpi_x: winrt.system.UInt32, dpi_y: winrt.system.UInt32) -> PrintPageDescription: ...
+    def __init__(self, page_size: winrt.windows.foundation.Size, imageable_rect: winrt.windows.foundation.Rect, dpi_x: winrt.system.UInt32, dpi_y: winrt.system.UInt32) -> None: ...
 
 class PrintManager(winrt.system.Object):
     @staticmethod

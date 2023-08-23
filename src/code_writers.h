@@ -4071,10 +4071,8 @@ if (!return_value)
             }
 
             w.write(
-                "def __new__(cls: typing.Type[%], %) -> %: ...\n",
-                type.TypeName(),
-                bind_list<write_struct_field_parameter_typing>(", ", type.FieldList()),
-                type.TypeName());
+                "def __init__(self, %) -> None: ...\n",
+                bind_list<write_struct_field_parameter_typing>(", ", type.FieldList()));
         }
         w.write("\n");
     }

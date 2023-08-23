@@ -17,7 +17,7 @@ Self = typing.TypeVar('Self')
 class ProviderI2cTransferResult:
     status: ProviderI2cTransferStatus
     bytes_transferred: winrt.system.UInt32
-    def __new__(cls: typing.Type[ProviderI2cTransferResult], status: ProviderI2cTransferStatus, bytes_transferred: winrt.system.UInt32) -> ProviderI2cTransferResult: ...
+    def __init__(self, status: ProviderI2cTransferStatus, bytes_transferred: winrt.system.UInt32) -> None: ...
 
 class ProviderI2cConnectionSettings(winrt.system.Object):
     slave_address: winrt.system.Int32

@@ -26,7 +26,7 @@ Self = typing.TypeVar('Self')
 class GeneratorPosition:
     index: winrt.system.Int32
     offset: winrt.system.Int32
-    def __new__(cls: typing.Type[GeneratorPosition], index: winrt.system.Int32, offset: winrt.system.Int32) -> GeneratorPosition: ...
+    def __init__(self, index: winrt.system.Int32, offset: winrt.system.Int32) -> None: ...
 
 class AppBarButtonTemplateSettings(winrt.system.Object):
     keyboard_accelerator_text_min_width: winrt.system.Double

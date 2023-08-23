@@ -22,7 +22,7 @@ class SmsEncodedLength:
     characters_per_segment: winrt.system.UInt32
     byte_count_last_segment: winrt.system.UInt32
     bytes_per_segment: winrt.system.UInt32
-    def __new__(cls: typing.Type[SmsEncodedLength], segment_count: winrt.system.UInt32, character_count_last_segment: winrt.system.UInt32, characters_per_segment: winrt.system.UInt32, byte_count_last_segment: winrt.system.UInt32, bytes_per_segment: winrt.system.UInt32) -> SmsEncodedLength: ...
+    def __init__(self, segment_count: winrt.system.UInt32, character_count_last_segment: winrt.system.UInt32, characters_per_segment: winrt.system.UInt32, byte_count_last_segment: winrt.system.UInt32, bytes_per_segment: winrt.system.UInt32) -> None: ...
 
 class DeleteSmsMessageOperation(winrt.system.Object):
     error_code: winrt.windows.foundation.HResult
