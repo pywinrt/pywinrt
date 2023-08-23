@@ -708,7 +708,7 @@ namespace pywinrt
     /**
      * Filters Python output parameters from @p params of a method.
      *
-     * This matches WinRT output parameters, receive arrays and fill arrays.
+     * This matches WinRT output parameters and receive arrays.
      *
      * @param [in]  params  The parameters to filter.
      * @returns A new vector containing only matching parameters.
