@@ -108,3 +108,14 @@ foreach(package ${packages} ${interop_packages})
     install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/${package_path_suffix}")
     install(DIRECTORY "${package}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 endforeach()
+
+# test component package
+################################################################################
+
+Python3_add_library(_winrt_testcomponent MODULE "winrt-TestComponent/py.TestComponent.cpp")
+set_target_properties(_winrt_testcomponent PROPERTIES LIBRARY_OUTPUT_NAME_DEBUG _winrt_testcomponent_d)
+target_include_directories(_winrt_testcomponent PRIVATE "winrt-TestComponent/cppwinrt" "winrt-TestComponent")
+target_include_directories(_winrt_testcomponent PRIVATE "${WINRT_SDK_PATH}/cppwinrt" "${WINRT_SDK_PATH}/pywinrt")
+
+install(TARGETS _winrt_testcomponent DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt/testcomponent")
+install(DIRECTORY "winrt-TestComponent/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
