@@ -10,6 +10,7 @@ import winrt.windows.foundation
 import winrt.windows.foundation.collections
 
 from . import MessageDialogOptions, Placement
+from . import UICommandInvokedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -68,6 +69,4 @@ class IUICommand(winrt.system.Object):
     label: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUICommand: ...
-
-UICommandInvokedHandler = typing.Callable[[typing.Optional[IUICommand]], None]
 

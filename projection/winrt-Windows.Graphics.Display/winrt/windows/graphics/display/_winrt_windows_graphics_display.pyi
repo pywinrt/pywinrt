@@ -12,6 +12,7 @@ import winrt.windows.graphics
 import winrt.windows.storage.streams
 
 from . import AdvancedColorKind, DisplayBrightnessOverrideOptions, DisplayBrightnessOverrideScenario, DisplayBrightnessScenario, DisplayColorOverrideScenario, DisplayOrientations, HdrMetadataFormat, ResolutionScale
+from . import DisplayPropertiesEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -181,6 +182,4 @@ class DisplayServices(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> DisplayServices: ...
     @staticmethod
     def find_all() -> winrt.windows.graphics.DisplayId: ...
-
-DisplayPropertiesEventHandler = typing.Callable[[typing.Optional[winrt.system.Object]], None]
 

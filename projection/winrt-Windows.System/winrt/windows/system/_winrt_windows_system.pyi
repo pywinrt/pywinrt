@@ -18,6 +18,7 @@ import winrt.windows.ui.popups
 import winrt.windows.ui.viewmanagement
 
 from . import AppDiagnosticInfoWatcherStatus, AppMemoryUsageLevel, AppResourceGroupEnergyQuotaState, AppResourceGroupExecutionState, AppResourceGroupInfoWatcherStatus, AutoUpdateTimeZoneStatus, DiagnosticAccessStatus, DispatcherQueuePriority, LaunchFileStatus, LaunchQuerySupportStatus, LaunchQuerySupportType, LaunchUriStatus, PowerState, ProcessorArchitecture, RemoteLaunchUriStatus, ShutdownKind, UserAgeConsentGroup, UserAgeConsentResult, UserAuthenticationStatus, UserPictureSize, UserType, UserWatcherStatus, UserWatcherUpdateKind, VirtualKey, VirtualKeyModifiers
+from . import DispatcherQueueHandler
 
 Self = typing.TypeVar('Self')
 
@@ -577,6 +578,4 @@ class ILauncherViewOptions(winrt.system.Object):
     desired_remaining_view: winrt.windows.ui.viewmanagement.ViewSizePreference
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILauncherViewOptions: ...
-
-DispatcherQueueHandler = typing.Callable[[], None]
 

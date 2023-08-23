@@ -9,6 +9,8 @@ import winrt.system
 import winrt.windows.foundation
 import winrt.windows.foundation.collections
 
+from . import Array10Handler, Array11Handler, Array12Handler, Array13Handler, Array14Handler, Array15Handler, Array1Handler, Array2Handler, Array3Handler, Array4Handler, Array5Handler, Array6Handler, Array7Handler, Array8Handler, Array9Handler, Async1Handler, Async2Handler, Async3Handler, Async4Handler, Collection1Handler, Collection2Handler, Collection3Handler, Collection4Handler, Collection5Handler, Collection6Handler, Param10Handler, Param11Handler, Param12Handler, Param13Handler, Param14Handler, Param15Handler, Param1Handler, Param2Handler, Param3Handler, Param4Handler, Param5Handler, Param6Handler, Param7Handler, Param8Handler, Param9Handler, TestHandler
+
 Self = typing.TypeVar('Self')
 
 class Blittable:
@@ -145,86 +147,4 @@ class ITests(winrt.system.Object):
     def remove_event1(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_event2(self, handler: winrt.windows.foundation.TypedEventHandler[ITests, winrt.system.Int32], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_event2(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-
-Array10Handler = typing.Callable[[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]], typing.Tuple[winrt.system.Double, winrt.system.Array[winrt.system.Double]]]
-
-Array11Handler = typing.Callable[[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]], typing.Tuple[winrt.system.Char16, winrt.system.Array[winrt.system.Char16]]]
-
-Array12Handler = typing.Callable[[winrt.system.Array[str], winrt.system.Array[str]], typing.Tuple[str, winrt.system.Array[str]]]
-
-Array13Handler = typing.Callable[[winrt.system.Array[Blittable], winrt.system.Array[Blittable]], typing.Tuple[Blittable, winrt.system.Array[Blittable]]]
-
-Array14Handler = typing.Callable[[winrt.system.Array[NonBlittable], winrt.system.Array[NonBlittable]], typing.Tuple[NonBlittable, winrt.system.Array[NonBlittable]]]
-
-Array15Handler = typing.Callable[[winrt.system.Array[Nested], winrt.system.Array[Nested]], typing.Tuple[Nested, winrt.system.Array[Nested]]]
-
-Array1Handler = typing.Callable[[winrt.system.Array[winrt.system.Boolean], winrt.system.Array[winrt.system.Boolean]], typing.Tuple[winrt.system.Boolean, winrt.system.Array[winrt.system.Boolean]]]
-
-Array2Handler = typing.Callable[[winrt.system.Array[winrt.system.UInt8], winrt.system.Array[winrt.system.UInt8]], typing.Tuple[winrt.system.UInt8, winrt.system.Array[winrt.system.UInt8]]]
-
-Array3Handler = typing.Callable[[winrt.system.Array[winrt.system.UInt16], winrt.system.Array[winrt.system.UInt16]], typing.Tuple[winrt.system.UInt16, winrt.system.Array[winrt.system.UInt16]]]
-
-Array4Handler = typing.Callable[[winrt.system.Array[winrt.system.UInt32], winrt.system.Array[winrt.system.UInt32]], typing.Tuple[winrt.system.UInt32, winrt.system.Array[winrt.system.UInt32]]]
-
-Array5Handler = typing.Callable[[winrt.system.Array[winrt.system.UInt64], winrt.system.Array[winrt.system.UInt64]], typing.Tuple[winrt.system.UInt64, winrt.system.Array[winrt.system.UInt64]]]
-
-Array6Handler = typing.Callable[[winrt.system.Array[winrt.system.Int16], winrt.system.Array[winrt.system.Int16]], typing.Tuple[winrt.system.Int16, winrt.system.Array[winrt.system.Int16]]]
-
-Array7Handler = typing.Callable[[winrt.system.Array[winrt.system.Int32], winrt.system.Array[winrt.system.Int32]], typing.Tuple[winrt.system.Int32, winrt.system.Array[winrt.system.Int32]]]
-
-Array8Handler = typing.Callable[[winrt.system.Array[winrt.system.Int64], winrt.system.Array[winrt.system.Int64]], typing.Tuple[winrt.system.Int64, winrt.system.Array[winrt.system.Int64]]]
-
-Array9Handler = typing.Callable[[winrt.system.Array[winrt.system.Single], winrt.system.Array[winrt.system.Single]], typing.Tuple[winrt.system.Single, winrt.system.Array[winrt.system.Single]]]
-
-Async1Handler = typing.Callable[[winrt.windows.foundation.IAsyncAction, winrt.system.Boolean], winrt.windows.foundation.IAsyncAction]
-
-Async2Handler = typing.Callable[[winrt.windows.foundation.IAsyncAction, winrt.system.Boolean, winrt.system.Int32], winrt.windows.foundation.IAsyncActionWithProgress[winrt.system.Int32]]
-
-Async3Handler = typing.Callable[[winrt.windows.foundation.IAsyncAction, winrt.system.Boolean, winrt.system.Int32], winrt.windows.foundation.IAsyncOperation[winrt.system.Int32]]
-
-Async4Handler = typing.Callable[[winrt.windows.foundation.IAsyncAction, winrt.system.Boolean, winrt.system.Int32, winrt.system.Int32], winrt.windows.foundation.IAsyncOperationWithProgress[winrt.system.Int32, winrt.system.Int32]]
-
-Collection1Handler = typing.Callable[[typing.Iterable[str]], typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IIterable[str]], typing.Optional[winrt.windows.foundation.collections.IIterable[str]]]]
-
-Collection2Handler = typing.Callable[[typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]]], typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IIterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]]], typing.Optional[winrt.windows.foundation.collections.IIterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]]]]]
-
-Collection3Handler = typing.Callable[[winrt.windows.foundation.collections.IMap[str, str]], typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IMap[str, str]], typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]]]
-
-Collection4Handler = typing.Callable[[winrt.windows.foundation.collections.IMapView[str, str]], typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]], typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]]]
-
-Collection5Handler = typing.Callable[[winrt.windows.foundation.collections.IVector[str]], typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IVector[str]], typing.Optional[winrt.windows.foundation.collections.IVector[str]]]]
-
-Collection6Handler = typing.Callable[[winrt.windows.foundation.collections.IVectorView[str]], typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IVectorView[str]], typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]]]
-
-Param10Handler = typing.Callable[[winrt.system.Double], typing.Tuple[winrt.system.Double, winrt.system.Double]]
-
-Param11Handler = typing.Callable[[winrt.system.Char16], typing.Tuple[winrt.system.Char16, winrt.system.Char16]]
-
-Param12Handler = typing.Callable[[str], typing.Tuple[str, str]]
-
-Param13Handler = typing.Callable[[Blittable, Blittable], typing.Tuple[Blittable, Blittable]]
-
-Param14Handler = typing.Callable[[NonBlittable, NonBlittable], typing.Tuple[NonBlittable, NonBlittable]]
-
-Param15Handler = typing.Callable[[Nested, Nested], typing.Tuple[Nested, Nested]]
-
-Param1Handler = typing.Callable[[winrt.system.Boolean], typing.Tuple[winrt.system.Boolean, winrt.system.Boolean]]
-
-Param2Handler = typing.Callable[[winrt.system.UInt8], typing.Tuple[winrt.system.UInt8, winrt.system.UInt8]]
-
-Param3Handler = typing.Callable[[winrt.system.UInt16], typing.Tuple[winrt.system.UInt16, winrt.system.UInt16]]
-
-Param4Handler = typing.Callable[[winrt.system.UInt32], typing.Tuple[winrt.system.UInt32, winrt.system.UInt32]]
-
-Param5Handler = typing.Callable[[winrt.system.UInt64], typing.Tuple[winrt.system.UInt64, winrt.system.UInt64]]
-
-Param6Handler = typing.Callable[[winrt.system.Int16], typing.Tuple[winrt.system.Int16, winrt.system.Int16]]
-
-Param7Handler = typing.Callable[[winrt.system.Int32], typing.Tuple[winrt.system.Int32, winrt.system.Int32]]
-
-Param8Handler = typing.Callable[[winrt.system.Int64], typing.Tuple[winrt.system.Int64, winrt.system.Int64]]
-
-Param9Handler = typing.Callable[[winrt.system.Single], typing.Tuple[winrt.system.Single, winrt.system.Single]]
-
-TestHandler = typing.Callable[[typing.Optional[ITests]], None]
 

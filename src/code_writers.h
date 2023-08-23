@@ -3971,13 +3971,9 @@ if (!return_value)
      * Note: only interfaces and delegates currently can be parameterized.
      *
      * @param w The writer
-     * @param interfaces The list of interfaces.
-     * @param delegates The list of delegates.
+     * @param types The list of types to write type vars for.
      */
-    void write_python_type_vars(
-        writer& w,
-        std::vector<TypeDef> const& interfaces,
-        std::vector<TypeDef> const& delegates)
+    void write_python_type_vars(writer& w, std::vector<TypeDef> const& types)
     {
         std::set<std::string> params;
 
@@ -4006,17 +4002,10 @@ if (!return_value)
             }
         };
 
-        for (auto&& type : interfaces)
+        for (auto&& type : types)
         {
             add_param(type);
         }
-
-        for (auto&& type : delegates)
-        {
-            add_param(type);
-        }
-
-        w.write("Self = typing.TypeVar('Self')\n");
 
         for (auto& type_param : params)
         {
@@ -4436,11 +4425,11 @@ if (!return_value)
     }
 
     /**
-     * Writes a Python type alias for a .pyi file.
-     *
-     * This is used for creating a type alias for delagate types.
+     * Writes a Python type alias for a delegate type.
+     * @param [in]  w       The writer.
+     * @param [in]  type    The type metadata.
      */
-    void write_python_type_alias(writer& w, TypeDef const& type)
+    void write_python_delegate_type_alias(writer& w, TypeDef const& type)
     {
         if (is_exclusive_to(type))
         {
@@ -4452,7 +4441,7 @@ if (!return_value)
         method_signature signature{get_delegate_invoke(type)};
 
         w.write(
-            "@ = typing.Callable[[%], %]\n\n",
+            "@ = typing.Callable[[%], %]\n",
             type.TypeName(),
             bind_list<write_method_in_param_typing>(
                 ", ", filter_py_in_params(signature.params())),

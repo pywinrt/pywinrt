@@ -11,6 +11,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.ui.text.core
 
 from . import AlternateNormalizationFormat, TextPredictionOptions, UnicodeGeneralCategory, UnicodeNumericType
+from . import SelectableWordSegmentsTokenizingHandler, WordSegmentsTokenizingHandler
 
 Self = typing.TypeVar('Self')
 
@@ -145,8 +146,4 @@ class WordsSegmenter(winrt.system.Object):
     def get_token_at(self, text: str, start_index: winrt.system.UInt32, /) -> typing.Optional[WordSegment]: ...
     def get_tokens(self, text: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WordSegment]]: ...
     def tokenize(self, text: str, start_index: winrt.system.UInt32, handler: typing.Optional[WordSegmentsTokenizingHandler], /) -> None: ...
-
-SelectableWordSegmentsTokenizingHandler = typing.Callable[[typing.Iterable[SelectableWordSegment], typing.Iterable[SelectableWordSegment]], None]
-
-WordSegmentsTokenizingHandler = typing.Callable[[typing.Iterable[WordSegment], typing.Iterable[WordSegment]], None]
 

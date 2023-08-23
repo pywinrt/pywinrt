@@ -11,6 +11,7 @@ import winrt.windows.graphics.printing
 import winrt.windows.ui.xaml
 
 from . import PreviewPageCountType
+from . import AddPagesEventHandler, GetPreviewPageEventHandler, PaginateEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -50,10 +51,4 @@ class PrintDocument(winrt.system.Object):
     def remove_get_preview_page(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_paginate(self, handler: typing.Optional[PaginateEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_paginate(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-
-AddPagesEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[AddPagesEventArgs]], None]
-
-GetPreviewPageEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[GetPreviewPageEventArgs]], None]
-
-PaginateEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[PaginateEventArgs]], None]
 

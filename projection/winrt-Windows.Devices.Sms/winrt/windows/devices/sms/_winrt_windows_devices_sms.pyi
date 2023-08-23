@@ -11,6 +11,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.storage.streams
 
 from . import CellularClass, SmsBroadcastType, SmsDataFormat, SmsDeviceStatus, SmsEncoding, SmsFilterActionType, SmsGeographicalScope, SmsMessageClass, SmsMessageFilter, SmsMessageType, SmsModemErrorCode
+from . import SmsDeviceStatusChangedEventHandler, SmsMessageReceivedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -410,8 +411,4 @@ class ISmsTextMessage(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsTextMessage: ...
     def to_binary_messages(self, format: SmsDataFormat, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ISmsBinaryMessage]]: ...
-
-SmsDeviceStatusChangedEventHandler = typing.Callable[[typing.Optional[SmsDevice]], None]
-
-SmsMessageReceivedEventHandler = typing.Callable[[typing.Optional[SmsDevice], typing.Optional[SmsMessageReceivedEventArgs]], None]
 

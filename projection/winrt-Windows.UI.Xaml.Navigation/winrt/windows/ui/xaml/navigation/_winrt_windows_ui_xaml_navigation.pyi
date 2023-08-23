@@ -12,6 +12,7 @@ import winrt.windows.ui.xaml.interop
 import winrt.windows.ui.xaml.media.animation
 
 from . import NavigationCacheMode, NavigationMode
+from . import LoadCompletedEventHandler, NavigatedEventHandler, NavigatingCancelEventHandler, NavigationFailedEventHandler, NavigationStoppedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -56,14 +57,4 @@ class PageStackEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PageStackEntry: ...
     def __new__(cls: typing.Type[PageStackEntry], source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], navigation_transition_info: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo]) -> PageStackEntry:...
-
-LoadCompletedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NavigationEventArgs]], None]
-
-NavigatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NavigationEventArgs]], None]
-
-NavigatingCancelEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NavigatingCancelEventArgs]], None]
-
-NavigationFailedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NavigationFailedEventArgs]], None]
-
-NavigationStoppedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NavigationEventArgs]], None]
 

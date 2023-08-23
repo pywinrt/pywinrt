@@ -12,6 +12,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.storage
 
 from . import GameListCategory, GameListEntryLaunchableState
+from . import GameListChangedEventHandler, GameListRemovedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -90,8 +91,4 @@ class IGameListEntry(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IGameListEntry: ...
     def launch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
     def set_category_async(self, value: GameListCategory, /) -> winrt.windows.foundation.IAsyncAction: ...
-
-GameListChangedEventHandler = typing.Callable[[typing.Optional[GameListEntry]], None]
-
-GameListRemovedEventHandler = typing.Callable[[str], None]
 

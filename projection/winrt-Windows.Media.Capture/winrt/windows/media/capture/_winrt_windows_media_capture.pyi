@@ -26,6 +26,7 @@ import winrt.windows.system
 import winrt.windows.ui.windowmanagement
 
 from . import AppBroadcastCameraCaptureState, AppBroadcastCameraOverlayLocation, AppBroadcastCameraOverlaySize, AppBroadcastCaptureTargetType, AppBroadcastExitBroadcastModeReason, AppBroadcastMicrophoneCaptureState, AppBroadcastPlugInState, AppBroadcastPreviewState, AppBroadcastSignInResult, AppBroadcastSignInState, AppBroadcastStreamState, AppBroadcastTerminationReason, AppBroadcastVideoEncodingBitrateMode, AppBroadcastVideoEncodingResolutionMode, AppCaptureHistoricalBufferLengthUnit, AppCaptureMetadataPriority, AppCaptureMicrophoneCaptureState, AppCaptureRecordingState, AppCaptureVideoEncodingBitrateMode, AppCaptureVideoEncodingFrameRateMode, AppCaptureVideoEncodingResolutionMode, CameraCaptureUIMaxPhotoResolution, CameraCaptureUIMaxVideoResolution, CameraCaptureUIMode, CameraCaptureUIPhotoFormat, CameraCaptureUIVideoFormat, ForegroundActivationArgument, GameBarCommand, GameBarCommandOrigin, GameBarServicesDisplayMode, GameBarTargetCapturePolicy, KnownVideoProfile, MediaCaptureDeviceExclusiveControlReleaseMode, MediaCaptureDeviceExclusiveControlStatus, MediaCaptureMemoryPreference, MediaCaptureSharingMode, MediaCaptureThermalStatus, MediaCategory, MediaStreamType, PhotoCaptureSource, PowerlineFrequency, StreamingCaptureMode, VideoDeviceCharacteristic, VideoRotation
+from . import MediaCaptureFailedEventHandler, RecordLimitationExceededEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -896,8 +897,4 @@ class VideoStreamConfiguration(winrt.system.Object):
     output_properties: typing.Optional[winrt.windows.media.mediaproperties.VideoEncodingProperties]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoStreamConfiguration: ...
-
-MediaCaptureFailedEventHandler = typing.Callable[[typing.Optional[MediaCapture], typing.Optional[MediaCaptureFailedEventArgs]], None]
-
-RecordLimitationExceededEventHandler = typing.Callable[[typing.Optional[MediaCapture]], None]
 

@@ -11,6 +11,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.storage
 
 from . import FulfillmentResult, ProductPurchaseStatus, ProductType
+from . import LicenseChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -163,6 +164,4 @@ class UnfulfilledConsumable(winrt.system.Object):
     transaction_id: winrt.system.Guid
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnfulfilledConsumable: ...
-
-LicenseChangedEventHandler = typing.Callable[[], None]
 

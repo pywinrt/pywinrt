@@ -161,20 +161,35 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         write_license(w, "#");
 
-        if (!members.enums.empty())
+        auto enum_types = filter_types(settings.filter, members.enums);
+        if (!enum_types.empty())
         {
             w.write("import enum\n");
+        }
+
+        auto delegate_types = filter_types(settings.filter, members.delegates);
+        if (!delegate_types.empty())
+        {
+            w.write("import typing\n");
+        }
+
+        if (!enum_types.empty() || !delegate_types.empty())
+        {
             w.write("\n");
         }
 
         w.write("import winrt.system\n");
         w.write("from . import %\n", bind<write_ns_module_name>(ns));
 
+        write_python_type_vars(w, members.delegates);
+
         settings.filter.bind_each<write_python_enum>(members.enums)(w);
         w.write("\n");
         settings.filter.bind_each<write_python_import_type>(members.structs)(w);
         settings.filter.bind_each<write_python_import_type>(members.classes)(w);
         settings.filter.bind_each<write_python_import_type>(members.interfaces)(w);
+        settings.filter.bind_each<write_python_delegate_type_alias>(members.delegates)(
+            w);
 
         w.flush_to_file(folder / "__init__.py");
     }
@@ -206,23 +221,34 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import winrt.system\n");
 
         w.write_each<write_python_import_namespace>(needed_namespaces);
-
         w.write("\n");
+
         auto enum_types = filter_types(settings.filter, members.enums);
         if (!enum_types.empty())
         {
             w.write("from . import %\n", bind_list<write_type_name>(", ", enum_types));
+        }
+
+        auto delegate_types = filter_types(settings.filter, members.delegates);
+        if (!delegate_types.empty())
+        {
+            w.write(
+                "from . import %\n", bind_list<write_type_name>(", ", delegate_types));
+        }
+
+        if (!enum_types.empty() || !delegate_types.empty())
+        {
             w.write("\n");
         }
 
-        write_python_type_vars(w, members.interfaces, members.delegates);
+        w.write("Self = typing.TypeVar('Self')\n");
+        write_python_type_vars(w, members.interfaces);
         w.write("\n");
 
         settings.filter.bind_each<write_python_typing_for_struct>(members.structs)(w);
         settings.filter.bind_each<write_python_typing_for_object>(members.classes)(w);
         settings.filter.bind_each<write_python_typing_for_object>(members.interfaces)(
             w);
-        settings.filter.bind_each<write_python_type_alias>(members.delegates)(w);
 
         auto file_name = w.write_temp("%.pyi", bind<write_ns_module_name>(ns));
         w.flush_to_file(folder / file_name);

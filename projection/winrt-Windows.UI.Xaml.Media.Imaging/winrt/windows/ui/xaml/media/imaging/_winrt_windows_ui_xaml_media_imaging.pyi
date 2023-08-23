@@ -13,6 +13,7 @@ import winrt.windows.storage.streams
 import winrt.windows.ui.xaml
 
 from . import BitmapCreateOptions, DecodePixelType, SvgImageSourceLoadStatus
+from . import DownloadProgressEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -141,6 +142,4 @@ class XamlRenderingBackgroundTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlRenderingBackgroundTask: ...
     def on_run(self, task_instance: typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTaskInstance], /) -> None: ...
-
-DownloadProgressEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DownloadProgressEventArgs]], None]
 

@@ -9,6 +9,7 @@ import winrt.system
 import winrt.windows.foundation
 
 from . import NotifyCollectionChangedAction, TypeKind
+from . import BindableVectorChangedEventHandler, NotifyCollectionChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -84,8 +85,4 @@ class INotifyCollectionChanged(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> INotifyCollectionChanged: ...
     def add_collection_changed(self, handler: typing.Optional[NotifyCollectionChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_collection_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-
-BindableVectorChangedEventHandler = typing.Callable[[typing.Optional[IBindableObservableVector], typing.Optional[winrt.system.Object]], None]
-
-NotifyCollectionChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NotifyCollectionChangedEventArgs]], None]
 

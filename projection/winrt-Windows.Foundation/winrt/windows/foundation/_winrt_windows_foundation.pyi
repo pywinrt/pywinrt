@@ -9,12 +9,12 @@ import winrt.system
 import winrt.windows.foundation.collections
 
 from . import AsyncStatus, PropertyType
+from . import AsyncActionCompletedHandler, AsyncActionProgressHandler, AsyncActionWithProgressCompletedHandler, AsyncOperationCompletedHandler, AsyncOperationProgressHandler, AsyncOperationWithProgressCompletedHandler, DeferralCompletedHandler, EventHandler, TypedEventHandler
 
 Self = typing.TypeVar('Self')
 T = typing.TypeVar('T')
 TProgress = typing.TypeVar('TProgress')
 TResult = typing.TypeVar('TResult')
-TSender = typing.TypeVar('TSender')
 
 class EventRegistrationToken:
     value: winrt.system.Int64
@@ -438,22 +438,4 @@ class IWwwFormUrlDecoderEntry(winrt.system.Object):
     value: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWwwFormUrlDecoderEntry: ...
-
-AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], None]
-
-AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], typing.Optional[TProgress]], None]
-
-AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]
-
-AsyncOperationCompletedHandler = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], None]
-
-AsyncOperationProgressHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], typing.Optional[TProgress]], None]
-
-AsyncOperationWithProgressCompletedHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], None]
-
-DeferralCompletedHandler = typing.Callable[[], None]
-
-EventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[T]], None]
-
-TypedEventHandler = typing.Callable[[typing.Optional[TSender], typing.Optional[TResult]], None]
 

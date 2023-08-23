@@ -12,6 +12,7 @@ import winrt.windows.networking
 import winrt.windows.storage.streams
 
 from . import CellularApnAuthenticationType, ConnectionProfileDeleteStatus, DataUsageGranularity, DomainAuthenticationKind, DomainConnectivityLevel, NetworkAuthenticationType, NetworkConnectivityLevel, NetworkCostType, NetworkEncryptionType, NetworkTypes, RoamingStates, TriStates, WwanDataClass, WwanNetworkIPKind, WwanNetworkRegistrationState
+from . import NetworkStatusChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -257,6 +258,4 @@ class WwanConnectionProfileDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WwanConnectionProfileDetails: ...
     def get_current_data_class(self) -> WwanDataClass: ...
     def get_network_registration_state(self) -> WwanNetworkRegistrationState: ...
-
-NetworkStatusChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object]], None]
 

@@ -10,6 +10,7 @@ import winrt.windows.foundation
 import winrt.windows.foundation.collections
 
 from . import IsolatedWindowsEnvironmentActivator, IsolatedWindowsEnvironmentAllowedClipboardFormats, IsolatedWindowsEnvironmentAvailablePrinters, IsolatedWindowsEnvironmentClipboardCopyPasteDirections, IsolatedWindowsEnvironmentCreateStatus, IsolatedWindowsEnvironmentCreationPriority, IsolatedWindowsEnvironmentHostError, IsolatedWindowsEnvironmentLaunchFileStatus, IsolatedWindowsEnvironmentOwnerRegistrationStatus, IsolatedWindowsEnvironmentPostMessageStatus, IsolatedWindowsEnvironmentProcessState, IsolatedWindowsEnvironmentProgressState, IsolatedWindowsEnvironmentShareFileStatus, IsolatedWindowsEnvironmentShareFolderStatus, IsolatedWindowsEnvironmentSignInProgress, IsolatedWindowsEnvironmentStartProcessStatus
+from . import HostMessageReceivedCallback, MessageReceivedCallback
 
 Self = typing.TypeVar('Self')
 
@@ -205,8 +206,4 @@ class IsolatedWindowsHostMessenger(winrt.system.Object):
     def register_host_message_receiver(receiver_id: winrt.system.Guid, host_message_received_callback: typing.Optional[HostMessageReceivedCallback], /) -> None: ...
     @staticmethod
     def unregister_host_message_receiver(receiver_id: winrt.system.Guid, /) -> None: ...
-
-HostMessageReceivedCallback = typing.Callable[[winrt.system.Guid, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
-
-MessageReceivedCallback = typing.Callable[[winrt.system.Guid, winrt.windows.foundation.collections.IVectorView[winrt.system.Object]], None]
 

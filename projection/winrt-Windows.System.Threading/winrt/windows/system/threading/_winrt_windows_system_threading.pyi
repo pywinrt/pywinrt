@@ -9,6 +9,7 @@ import winrt.system
 import winrt.windows.foundation
 
 from . import WorkItemOptions, WorkItemPriority
+from . import TimerDestroyedHandler, TimerElapsedHandler, WorkItemHandler
 
 Self = typing.TypeVar('Self')
 
@@ -43,10 +44,4 @@ class ThreadPoolTimer(winrt.system.Object):
     @typing.overload
     @staticmethod
     def create_timer(handler: typing.Optional[TimerElapsedHandler], delay: datetime.timedelta, destroyed: typing.Optional[TimerDestroyedHandler], /) -> typing.Optional[ThreadPoolTimer]: ...
-
-TimerDestroyedHandler = typing.Callable[[typing.Optional[ThreadPoolTimer]], None]
-
-TimerElapsedHandler = typing.Callable[[typing.Optional[ThreadPoolTimer]], None]
-
-WorkItemHandler = typing.Callable[[winrt.windows.foundation.IAsyncAction], None]
 

@@ -13,6 +13,8 @@ import winrt.windows.foundation.numerics
 import winrt.windows.graphics.imaging
 import winrt.windows.media
 
+from . import PerceptionStartFaceAuthenticationHandler, PerceptionStopFaceAuthenticationHandler
+
 Self = typing.TypeVar('Self')
 
 class KnownPerceptionFrameKind(winrt.system.Object):
@@ -127,8 +129,4 @@ class IPerceptionFrameProviderManager(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IPerceptionFrameProviderManager: ...
     def close(self) -> None: ...
     def get_frame_provider(self, frame_provider_info: typing.Optional[PerceptionFrameProviderInfo], /) -> typing.Optional[IPerceptionFrameProvider]: ...
-
-PerceptionStartFaceAuthenticationHandler = typing.Callable[[typing.Optional[PerceptionFaceAuthenticationGroup]], winrt.system.Boolean]
-
-PerceptionStopFaceAuthenticationHandler = typing.Callable[[typing.Optional[PerceptionFaceAuthenticationGroup]], None]
 

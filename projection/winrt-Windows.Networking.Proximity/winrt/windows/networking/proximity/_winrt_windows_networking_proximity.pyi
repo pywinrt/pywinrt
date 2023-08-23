@@ -13,6 +13,7 @@ import winrt.windows.networking.sockets
 import winrt.windows.storage.streams
 
 from . import PeerDiscoveryTypes, PeerRole, PeerWatcherStatus, TriggeredConnectState
+from . import DeviceArrivedEventHandler, DeviceDepartedEventHandler, MessageReceivedHandler, MessageTransmittedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -127,12 +128,4 @@ class TriggeredConnectionStateChangedEventArgs(winrt.system.Object):
     state: TriggeredConnectState
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TriggeredConnectionStateChangedEventArgs: ...
-
-DeviceArrivedEventHandler = typing.Callable[[typing.Optional[ProximityDevice]], None]
-
-DeviceDepartedEventHandler = typing.Callable[[typing.Optional[ProximityDevice]], None]
-
-MessageReceivedHandler = typing.Callable[[typing.Optional[ProximityDevice], typing.Optional[ProximityMessage]], None]
-
-MessageTransmittedHandler = typing.Callable[[typing.Optional[ProximityDevice], winrt.system.Int64], None]
 

@@ -17,6 +17,7 @@ import winrt.windows.ui.xaml.controls.primitives
 import winrt.windows.ui.xaml.media.media3d
 
 from . import AcrylicBackgroundSource, AlignmentX, AlignmentY, AudioCategory, AudioDeviceType, BrushMappingMode, ColorInterpolationMode, ElementCompositeMode, FastPlayFallbackBehaviour, FillRule, GradientSpreadMethod, LoadedImageSourceLoadStatus, MediaCanPlayResponse, MediaElementState, PenLineCap, PenLineJoin, RevealBrushState, Stereo3DVideoPackingMode, Stereo3DVideoRenderMode, Stretch, StyleSimulations, SweepDirection
+from . import RateChangedRoutedEventHandler, TimelineMarkerRoutedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -888,8 +889,4 @@ class XamlLight(winrt.system.Object):
     def remove_target_brush(light_id: str, brush: typing.Optional[Brush], /) -> None: ...
     @staticmethod
     def remove_target_element(light_id: str, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> None: ...
-
-RateChangedRoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[RateChangedRoutedEventArgs]], None]
-
-TimelineMarkerRoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[TimelineMarkerRoutedEventArgs]], None]
 

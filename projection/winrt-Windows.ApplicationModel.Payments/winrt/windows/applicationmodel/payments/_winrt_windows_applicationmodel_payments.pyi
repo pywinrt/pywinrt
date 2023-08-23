@@ -10,6 +10,7 @@ import winrt.windows.foundation
 import winrt.windows.foundation.collections
 
 from . import PaymentCanMakePaymentResultStatus, PaymentOptionPresence, PaymentRequestChangeKind, PaymentRequestCompletionStatus, PaymentRequestStatus, PaymentShippingType
+from . import PaymentRequestChangedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -200,6 +201,4 @@ class PaymentToken(winrt.system.Object):
     def __new__(cls: typing.Type[PaymentToken], payment_method_id: str) -> PaymentToken:...
     @typing.overload
     def __new__(cls: typing.Type[PaymentToken], payment_method_id: str, json_details: str) -> PaymentToken:...
-
-PaymentRequestChangedHandler = typing.Callable[[typing.Optional[PaymentRequest], typing.Optional[PaymentRequestChangedArgs]], None]
 

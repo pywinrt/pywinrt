@@ -14,6 +14,7 @@ import winrt.windows.storage.streams
 import winrt.windows.ui
 
 from . import ClipboardHistoryItemsResultStatus, DataPackageOperation, SetHistoryItemAsContentStatus, ShareUITheme
+from . import DataProviderHandler, ShareProviderHandler
 
 Self = typing.TypeVar('Self')
 
@@ -334,8 +335,4 @@ class TargetApplicationChosenEventArgs(winrt.system.Object):
     application_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetApplicationChosenEventArgs: ...
-
-DataProviderHandler = typing.Callable[[typing.Optional[DataProviderRequest]], None]
-
-ShareProviderHandler = typing.Callable[[typing.Optional[ShareProviderOperation]], None]
 

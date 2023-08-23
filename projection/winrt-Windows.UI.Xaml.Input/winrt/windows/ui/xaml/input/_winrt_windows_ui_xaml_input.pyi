@@ -16,6 +16,7 @@ import winrt.windows.ui.xaml
 import winrt.windows.ui.xaml.controls
 
 from . import FocusInputDeviceKind, FocusNavigationDirection, InputScopeNameValue, KeyTipPlacementMode, KeyboardAcceleratorPlacementMode, KeyboardNavigationMode, ManipulationModes, StandardUICommandKind, XYFocusKeyboardNavigationMode, XYFocusNavigationStrategy, XYFocusNavigationStrategyOverride
+from . import DoubleTappedEventHandler, HoldingEventHandler, KeyEventHandler, ManipulationCompletedEventHandler, ManipulationDeltaEventHandler, ManipulationInertiaStartingEventHandler, ManipulationStartedEventHandler, ManipulationStartingEventHandler, PointerEventHandler, RightTappedEventHandler, TappedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -425,26 +426,4 @@ class ICommand(winrt.system.Object):
     def execute(self, parameter: typing.Optional[winrt.system.Object], /) -> None: ...
     def add_can_execute_changed(self, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_can_execute_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-
-DoubleTappedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DoubleTappedRoutedEventArgs]], None]
-
-HoldingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[HoldingRoutedEventArgs]], None]
-
-KeyEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[KeyRoutedEventArgs]], None]
-
-ManipulationCompletedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ManipulationCompletedRoutedEventArgs]], None]
-
-ManipulationDeltaEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ManipulationDeltaRoutedEventArgs]], None]
-
-ManipulationInertiaStartingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ManipulationInertiaStartingRoutedEventArgs]], None]
-
-ManipulationStartedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ManipulationStartedRoutedEventArgs]], None]
-
-ManipulationStartingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ManipulationStartingRoutedEventArgs]], None]
-
-PointerEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[PointerRoutedEventArgs]], None]
-
-RightTappedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[RightTappedRoutedEventArgs]], None]
-
-TappedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[TappedRoutedEventArgs]], None]
 

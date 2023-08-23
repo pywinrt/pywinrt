@@ -30,6 +30,7 @@ import winrt.windows.ui.xaml.media.imaging
 import winrt.windows.ui.xaml.media.media3d
 
 from . import ApplicationHighContrastAdjustment, ApplicationRequiresPointerMode, ApplicationTheme, AutomationTextAttributesEnum, DurationType, ElementHighContrastAdjustment, ElementSoundKind, ElementSoundMode, ElementSoundPlayerState, ElementSpatialAudioMode, ElementTheme, FlowDirection, FocusState, FocusVisualKind, FontCapitals, FontEastAsianLanguage, FontEastAsianWidths, FontFraction, FontNumeralAlignment, FontNumeralStyle, FontVariants, GridUnitType, HorizontalAlignment, LineStackingStrategy, OpticalMarginAlignment, TextAlignment, TextLineBounds, TextReadingOrder, TextTrimming, TextWrapping, Vector3TransitionComponents, VerticalAlignment, Visibility
+from . import ApplicationInitializationCallback, BindingFailedEventHandler, CreateDefaultValueCallback, DependencyPropertyChangedCallback, DependencyPropertyChangedEventHandler, DragEventHandler, EnteredBackgroundEventHandler, ExceptionRoutedEventHandler, LeavingBackgroundEventHandler, PropertyChangedCallback, RoutedEventHandler, SizeChangedEventHandler, SuspendingEventHandler, UnhandledExceptionEventHandler, VisualStateChangedEventHandler, WindowActivatedEventHandler, WindowClosedEventHandler, WindowSizeChangedEventHandler, WindowVisibilityChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -1232,42 +1233,4 @@ class IElementFactory(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IElementFactory: ...
     def get_element(self, args: typing.Optional[ElementFactoryGetArgs], /) -> typing.Optional[UIElement]: ...
     def recycle_element(self, args: typing.Optional[ElementFactoryRecycleArgs], /) -> None: ...
-
-ApplicationInitializationCallback = typing.Callable[[typing.Optional[ApplicationInitializationCallbackParams]], None]
-
-BindingFailedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[BindingFailedEventArgs]], None]
-
-CreateDefaultValueCallback = typing.Callable[[], typing.Optional[winrt.system.Object]]
-
-DependencyPropertyChangedCallback = typing.Callable[[typing.Optional[DependencyObject], typing.Optional[DependencyProperty]], None]
-
-DependencyPropertyChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DependencyPropertyChangedEventArgs]], None]
-
-DragEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DragEventArgs]], None]
-
-EnteredBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.EnteredBackgroundEventArgs]], None]
-
-ExceptionRoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ExceptionRoutedEventArgs]], None]
-
-LeavingBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.LeavingBackgroundEventArgs]], None]
-
-PropertyChangedCallback = typing.Callable[[typing.Optional[DependencyObject], typing.Optional[DependencyPropertyChangedEventArgs]], None]
-
-RoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[RoutedEventArgs]], None]
-
-SizeChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SizeChangedEventArgs]], None]
-
-SuspendingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.SuspendingEventArgs]], None]
-
-UnhandledExceptionEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[UnhandledExceptionEventArgs]], None]
-
-VisualStateChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[VisualStateChangedEventArgs]], None]
-
-WindowActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.WindowActivatedEventArgs]], None]
-
-WindowClosedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.CoreWindowEventArgs]], None]
-
-WindowSizeChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.WindowSizeChangedEventArgs]], None]
-
-WindowVisibilityChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.ui.core.VisibilityChangedEventArgs]], None]
 

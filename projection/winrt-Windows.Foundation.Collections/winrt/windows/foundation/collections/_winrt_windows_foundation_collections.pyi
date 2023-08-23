@@ -9,6 +9,7 @@ import winrt.system
 import winrt.windows.foundation
 
 from . import CollectionChange
+from . import MapChangedEventHandler, VectorChangedEventHandler
 
 Self = typing.TypeVar('Self')
 K = typing.TypeVar('K')
@@ -260,8 +261,4 @@ class IVector(winrt.system.Object, typing.MutableSequence[T], typing.Generic[T])
     def remove_at_end(self) -> None: ...
     def replace_all(self, items: winrt.system.Array[T], /) -> None: ...
     def set_at(self, index: winrt.system.UInt32, value: typing.Optional[T], /) -> None: ...
-
-MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
-
-VectorChangedEventHandler = typing.Callable[[IObservableVector[T], typing.Optional[IVectorChangedEventArgs]], None]
 

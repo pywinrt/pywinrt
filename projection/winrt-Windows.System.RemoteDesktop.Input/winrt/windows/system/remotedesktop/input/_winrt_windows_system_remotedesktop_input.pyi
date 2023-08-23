@@ -7,6 +7,8 @@ import typing
 
 import winrt.system
 
+from . import RemoteTextConnectionDataHandler
+
 Self = typing.TypeVar('Self')
 
 class RemoteTextConnection(winrt.system.Object):
@@ -20,6 +22,4 @@ class RemoteTextConnection(winrt.system.Object):
     def register_thread(self, thread_id: winrt.system.UInt32, /) -> None: ...
     def report_data_received(self, pdu_data: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
     def unregister_thread(self, thread_id: winrt.system.UInt32, /) -> None: ...
-
-RemoteTextConnectionDataHandler = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], winrt.system.Boolean]
 

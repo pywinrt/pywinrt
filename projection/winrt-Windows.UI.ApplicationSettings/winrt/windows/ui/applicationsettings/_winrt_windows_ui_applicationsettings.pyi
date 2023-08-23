@@ -13,6 +13,7 @@ import winrt.windows.system
 import winrt.windows.ui.popups
 
 from . import SettingsEdgeLocation, SupportedWebAccountActions, WebAccountAction
+from . import CredentialCommandCredentialDeletedHandler, WebAccountCommandInvokedHandler, WebAccountProviderCommandInvokedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -109,10 +110,4 @@ class WebAccountProviderCommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderCommand: ...
     def __new__(cls: typing.Type[WebAccountProviderCommand], web_account_provider: typing.Optional[winrt.windows.security.credentials.WebAccountProvider], invoked: typing.Optional[WebAccountProviderCommandInvokedHandler]) -> WebAccountProviderCommand:...
-
-CredentialCommandCredentialDeletedHandler = typing.Callable[[typing.Optional[CredentialCommand]], None]
-
-WebAccountCommandInvokedHandler = typing.Callable[[typing.Optional[WebAccountCommand], typing.Optional[WebAccountInvokedArgs]], None]
-
-WebAccountProviderCommandInvokedHandler = typing.Callable[[typing.Optional[WebAccountProviderCommand]], None]
 

@@ -38,6 +38,7 @@ import winrt.windows.web.http
 import winrt.windows.web.ui
 
 from . import PrintContent
+from . import ActivatedEventHandler, BackgroundActivatedEventHandler, EnteredBackgroundEventHandler, LeavingBackgroundEventHandler, NavigatedEventHandler, ResumingEventHandler, SuspendingEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -760,18 +761,4 @@ class IWebUINavigatedEventArgs(winrt.system.Object):
     navigated_operation: typing.Optional[WebUINavigatedOperation]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUINavigatedEventArgs: ...
-
-ActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.activation.IActivatedEventArgs]], None]
-
-BackgroundActivatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.activation.IBackgroundActivatedEventArgs]], None]
-
-EnteredBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.IEnteredBackgroundEventArgs]], None]
-
-LeavingBackgroundEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.ILeavingBackgroundEventArgs]], None]
-
-NavigatedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[IWebUINavigatedEventArgs]], None]
-
-ResumingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object]], None]
-
-SuspendingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[winrt.windows.applicationmodel.ISuspendingEventArgs]], None]
 

@@ -10,6 +10,7 @@
 
 ### Changed
 - Changed code generator to generate module per namespace instead of monolith.
+- Moved delegate type aliases from .pyi to .py files.
 
 ### Fixed
 - Fixed mixin of `__eq__` for mappings.

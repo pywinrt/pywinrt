@@ -39,6 +39,7 @@ import winrt.windows.web
 import winrt.windows.web.http
 
 from . import AppBarClosedDisplayMode, AutoSuggestionBoxTextChangeReason, BackgroundSizing, CalendarViewDisplayMode, CalendarViewSelectionMode, CandidateWindowAlignment, CharacterCasing, ClickMode, ColorPickerHsvChannel, ColorSpectrumComponents, ColorSpectrumShape, ComboBoxSelectionChangedTrigger, CommandBarDefaultLabelPosition, CommandBarDynamicOverflowAction, CommandBarLabelPosition, CommandBarOverflowButtonVisibility, ContentDialogButton, ContentDialogPlacement, ContentDialogResult, ContentLinkChangeKind, DisabledFormattingAccelerators, HandwritingPanelPlacementAlignment, IncrementalLoadingTrigger, InkToolbarButtonFlyoutPlacement, InkToolbarFlyoutItemKind, InkToolbarInitialControls, InkToolbarMenuKind, InkToolbarStencilKind, InkToolbarToggle, InkToolbarTool, ItemsUpdatingScrollMode, LightDismissOverlayMode, ListPickerFlyoutSelectionMode, ListViewReorderMode, ListViewSelectionMode, NavigationViewBackButtonVisible, NavigationViewDisplayMode, NavigationViewOverflowLabelMode, NavigationViewPaneDisplayMode, NavigationViewSelectionFollowsFocus, NavigationViewShoulderNavigationEnabled, Orientation, PanelScrollingDirection, ParallaxSourceOffsetKind, PasswordRevealMode, PivotHeaderFocusVisualPlacement, PivotSlideInAnimationGroup, RefreshPullDirection, RefreshVisualizerOrientation, RefreshVisualizerState, RequiresPointer, RichEditClipboardFormat, ScrollBarVisibility, ScrollIntoViewAlignment, ScrollMode, SelectionMode, SnapPointsType, SplitViewDisplayMode, SplitViewPanePlacement, StretchDirection, SwipeBehaviorOnInvoked, SwipeMode, Symbol, TreeViewSelectionMode, TwoPaneViewMode, TwoPaneViewPriority, TwoPaneViewTallModeConfiguration, TwoPaneViewWideModeConfiguration, VirtualizationMode, WebViewExecutionMode, WebViewPermissionState, WebViewPermissionType, ZoomMode
+from . import BackClickEventHandler, CalendarViewDayItemChangingEventHandler, CleanUpVirtualizedItemEventHandler, ContextMenuOpeningEventHandler, DragItemsStartingEventHandler, HubSectionHeaderClickEventHandler, ItemClickEventHandler, ListViewItemToKeyHandler, ListViewKeyToItemHandler, NotifyEventHandler, SectionsInViewChangedEventHandler, SelectionChangedEventHandler, SemanticZoomViewChangedEventHandler, TextChangedEventHandler, TextControlPasteEventHandler, WebViewNavigationFailedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -4808,36 +4809,4 @@ class ISemanticZoomInformation(winrt.system.Object):
     def make_visible(self, item: typing.Optional[SemanticZoomLocation], /) -> None: ...
     def start_view_change_from(self, source: typing.Optional[SemanticZoomLocation], destination: typing.Optional[SemanticZoomLocation], /) -> None: ...
     def start_view_change_to(self, source: typing.Optional[SemanticZoomLocation], destination: typing.Optional[SemanticZoomLocation], /) -> None: ...
-
-BackClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[BackClickEventArgs]], None]
-
-CalendarViewDayItemChangingEventHandler = typing.Callable[[typing.Optional[CalendarView], typing.Optional[CalendarViewDayItemChangingEventArgs]], None]
-
-CleanUpVirtualizedItemEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[CleanUpVirtualizedItemEventArgs]], None]
-
-ContextMenuOpeningEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ContextMenuEventArgs]], None]
-
-DragItemsStartingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DragItemsStartingEventArgs]], None]
-
-HubSectionHeaderClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[HubSectionHeaderClickEventArgs]], None]
-
-ItemClickEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ItemClickEventArgs]], None]
-
-ListViewItemToKeyHandler = typing.Callable[[typing.Optional[winrt.system.Object]], str]
-
-ListViewKeyToItemHandler = typing.Callable[[str], winrt.windows.foundation.IAsyncOperation[winrt.system.Object]]
-
-NotifyEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NotifyEventArgs]], None]
-
-SectionsInViewChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SectionsInViewChangedEventArgs]], None]
-
-SelectionChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SelectionChangedEventArgs]], None]
-
-SemanticZoomViewChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[SemanticZoomViewChangedEventArgs]], None]
-
-TextChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[TextChangedEventArgs]], None]
-
-TextControlPasteEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[TextControlPasteEventArgs]], None]
-
-WebViewNavigationFailedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[WebViewNavigationFailedEventArgs]], None]
 

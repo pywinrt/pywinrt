@@ -9,6 +9,8 @@ import winrt.system
 import winrt.windows.foundation
 import winrt.windows.system.threading
 
+from . import SignalHandler
+
 Self = typing.TypeVar('Self')
 
 class PreallocatedWorkItem(winrt.system.Object):
@@ -39,6 +41,4 @@ class SignalNotifier(winrt.system.Object):
     def attach_to_semaphore(name: str, handler: typing.Optional[SignalHandler], timeout: datetime.timedelta, /) -> typing.Optional[SignalNotifier]: ...
     def enable(self) -> None: ...
     def terminate(self) -> None: ...
-
-SignalHandler = typing.Callable[[typing.Optional[SignalNotifier], winrt.system.Boolean], None]
 

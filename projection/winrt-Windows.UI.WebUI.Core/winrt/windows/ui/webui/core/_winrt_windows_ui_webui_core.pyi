@@ -11,6 +11,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.ui
 
 from . import WebUICommandBarClosedDisplayMode
+from . import MenuClosedEventHandler, MenuOpenedEventHandler, SizeChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -90,10 +91,4 @@ class IWebUICommandBarElement(winrt.system.Object):
 class IWebUICommandBarIcon(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUICommandBarIcon: ...
-
-MenuClosedEventHandler = typing.Callable[[], None]
-
-MenuOpenedEventHandler = typing.Callable[[], None]
-
-SizeChangedEventHandler = typing.Callable[[typing.Optional[WebUICommandBarSizeChangedEventArgs]], None]
 

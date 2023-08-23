@@ -12,6 +12,7 @@ import winrt.windows.security.cryptography.core
 import winrt.windows.storage.streams
 
 from . import SmartCardActivationPolicyChangeResult, SmartCardAppletIdGroupActivationPolicy, SmartCardAutomaticResponseStatus, SmartCardCryptogramAlgorithm, SmartCardCryptogramGeneratorOperationStatus, SmartCardCryptogramMaterialPackageConfirmationResponseFormat, SmartCardCryptogramMaterialPackageFormat, SmartCardCryptogramMaterialProtectionMethod, SmartCardCryptogramMaterialType, SmartCardCryptogramPlacementOptions, SmartCardCryptogramStorageKeyAlgorithm, SmartCardCryptogramStorageKeyCapabilities, SmartCardCryptographicKeyAttestationStatus, SmartCardEmulationCategory, SmartCardEmulationType, SmartCardEmulatorConnectionDeactivatedReason, SmartCardEmulatorConnectionSource, SmartCardEmulatorEnablementPolicy, SmartCardLaunchBehavior, SmartCardPinCharacterPolicyOption, SmartCardReaderKind, SmartCardReaderStatus, SmartCardStatus, SmartCardTriggerType, SmartCardUnlockPromptingBehavior
+from . import SmartCardPinResetHandler
 
 Self = typing.TypeVar('Self')
 
@@ -348,6 +349,4 @@ class SmartCardTriggerDetails(winrt.system.Object):
     def try_launch_current_app_async(self, arguments: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
     @typing.overload
     def try_launch_current_app_async(self, arguments: str, behavior: SmartCardLaunchBehavior, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-
-SmartCardPinResetHandler = typing.Callable[[typing.Optional[SmartCardProvisioning], typing.Optional[SmartCardPinResetRequest]], None]
 

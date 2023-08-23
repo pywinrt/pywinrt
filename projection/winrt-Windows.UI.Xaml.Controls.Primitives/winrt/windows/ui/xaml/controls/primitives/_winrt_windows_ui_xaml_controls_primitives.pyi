@@ -18,6 +18,7 @@ import winrt.windows.ui.xaml.media
 import winrt.windows.ui.xaml.media.animation
 
 from . import AnimationDirection, ComponentResourceLocation, EdgeTransitionLocation, FlyoutPlacementMode, FlyoutShowMode, GeneratorDirection, GroupHeaderPlacement, ListViewItemPresenterCheckMode, ListViewItemPresenterSelectionIndicatorMode, PlacementMode, PopupPlacementMode, ScrollEventType, ScrollingIndicatorMode, SliderSnapsTo, SnapPointsAlignment, TickPlacement
+from . import DragCompletedEventHandler, DragDeltaEventHandler, DragStartedEventHandler, ItemsChangedEventHandler, RangeBaseValueChangedEventHandler, ScrollEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -873,16 +874,4 @@ class IScrollSnapPointsInfo(winrt.system.Object):
     def remove_horizontal_snap_points_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_vertical_snap_points_changed(self, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_vertical_snap_points_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
-
-DragCompletedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DragCompletedEventArgs]], None]
-
-DragDeltaEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DragDeltaEventArgs]], None]
-
-DragStartedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DragStartedEventArgs]], None]
-
-ItemsChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ItemsChangedEventArgs]], None]
-
-RangeBaseValueChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[RangeBaseValueChangedEventArgs]], None]
-
-ScrollEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[ScrollEventArgs]], None]
 

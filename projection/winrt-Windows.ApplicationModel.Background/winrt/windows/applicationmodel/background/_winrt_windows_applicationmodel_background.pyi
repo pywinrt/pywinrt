@@ -26,6 +26,7 @@ import winrt.windows.system
 import winrt.windows.ui.notifications
 
 from . import AlarmAccessStatus, ApplicationTriggerResult, BackgroundAccessRequestKind, BackgroundAccessStatus, BackgroundTaskCancellationReason, BackgroundTaskThrottleCounter, BackgroundWorkCostValue, CustomSystemEventTriggerRecurrence, DeviceTriggerResult, LocationTriggerType, MediaProcessingTriggerResult, SystemConditionType, SystemTriggerType
+from . import BackgroundTaskCanceledEventHandler, BackgroundTaskCompletedEventHandler, BackgroundTaskProgressEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -607,10 +608,4 @@ class IBackgroundTaskRegistration3(winrt.system.Object):
 class IBackgroundTrigger(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTrigger: ...
-
-BackgroundTaskCanceledEventHandler = typing.Callable[[typing.Optional[IBackgroundTaskInstance], BackgroundTaskCancellationReason], None]
-
-BackgroundTaskCompletedEventHandler = typing.Callable[[typing.Optional[BackgroundTaskRegistration], typing.Optional[BackgroundTaskCompletedEventArgs]], None]
-
-BackgroundTaskProgressEventHandler = typing.Callable[[typing.Optional[BackgroundTaskRegistration], typing.Optional[BackgroundTaskProgressEventArgs]], None]
 

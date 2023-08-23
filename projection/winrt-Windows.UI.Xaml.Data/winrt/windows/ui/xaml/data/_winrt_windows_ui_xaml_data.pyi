@@ -12,6 +12,7 @@ import winrt.windows.ui.xaml
 import winrt.windows.ui.xaml.interop
 
 from . import BindingMode, RelativeSourceMode, UpdateSourceTrigger
+from . import CurrentChangingEventHandler, PropertyChangedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -214,8 +215,4 @@ class IValueConverter(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IValueConverter: ...
     def convert(self, value: typing.Optional[winrt.system.Object], target_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], language: str, /) -> typing.Optional[winrt.system.Object]: ...
     def convert_back(self, value: typing.Optional[winrt.system.Object], target_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], language: str, /) -> typing.Optional[winrt.system.Object]: ...
-
-CurrentChangingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[CurrentChangingEventArgs]], None]
-
-PropertyChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[PropertyChangedEventArgs]], None]
 

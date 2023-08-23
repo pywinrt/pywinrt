@@ -12,6 +12,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.storage.streams
 
 from . import PrintBinding, PrintBordering, PrintCollation, PrintColorMode, PrintDuplex, PrintHolePunch, PrintMediaSize, PrintMediaType, PrintOrientation, PrintQuality, PrintStaple, PrintTaskCompletion
+from . import PrintTaskSourceRequestedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -190,6 +191,4 @@ class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object):
     displayed_options: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreUIConfiguration: ...
-
-PrintTaskSourceRequestedHandler = typing.Callable[[typing.Optional[PrintTaskSourceRequestedArgs]], None]
 

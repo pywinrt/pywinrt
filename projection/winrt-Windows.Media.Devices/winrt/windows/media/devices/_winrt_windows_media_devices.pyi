@@ -15,6 +15,7 @@ import winrt.windows.media.mediaproperties
 import winrt.windows.storage.streams
 
 from . import AdvancedPhotoMode, AudioDeviceRole, AutoFocusRange, CameraOcclusionKind, CameraStreamState, CaptureSceneMode, CaptureUse, ColorTemperaturePreset, DigitalWindowMode, FocusMode, FocusPreset, HdrVideoMode, InfraredTorchMode, IsoSpeedPreset, ManualFocusDistance, MediaCaptureFocusState, MediaCaptureOptimization, MediaCapturePauseBehavior, OpticalImageStabilizationMode, RegionOfInterestType, SendCommandStatus, TelephonyKey, VideoDeviceControllerGetDevicePropertyStatus, VideoDeviceControllerSetDevicePropertyStatus, VideoTemporalDenoisingMode, ZoomTransitionMode
+from . import CallControlEventHandler, DialRequestedEventHandler, KeypadPressedEventHandler, RedialRequestedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -523,12 +524,4 @@ class IMediaDeviceController(winrt.system.Object):
     def get_available_media_stream_properties(self, media_stream_type: winrt.windows.media.capture.MediaStreamType, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.mediaproperties.IMediaEncodingProperties]]: ...
     def get_media_stream_properties(self, media_stream_type: winrt.windows.media.capture.MediaStreamType, /) -> typing.Optional[winrt.windows.media.mediaproperties.IMediaEncodingProperties]: ...
     def set_media_stream_properties_async(self, media_stream_type: winrt.windows.media.capture.MediaStreamType, media_encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.IMediaEncodingProperties], /) -> winrt.windows.foundation.IAsyncAction: ...
-
-CallControlEventHandler = typing.Callable[[typing.Optional[CallControl]], None]
-
-DialRequestedEventHandler = typing.Callable[[typing.Optional[CallControl], typing.Optional[DialRequestedEventArgs]], None]
-
-KeypadPressedEventHandler = typing.Callable[[typing.Optional[CallControl], typing.Optional[KeypadPressedEventArgs]], None]
-
-RedialRequestedEventHandler = typing.Callable[[typing.Optional[CallControl], typing.Optional[RedialRequestedEventArgs]], None]
 

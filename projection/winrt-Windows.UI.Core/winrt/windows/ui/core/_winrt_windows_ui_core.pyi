@@ -15,6 +15,7 @@ import winrt.windows.ui.input
 import winrt.windows.ui.popups
 
 from . import AppViewBackButtonVisibility, CoreAcceleratorKeyEventType, CoreCursorType, CoreDispatcherPriority, CoreIndependentInputFilters, CoreInputDeviceTypes, CoreProcessEventsOption, CoreProximityEvaluationScore, CoreVirtualKeyStates, CoreWindowActivationMode, CoreWindowActivationState, CoreWindowFlowDirection
+from . import DispatchedHandler, IdleDispatchedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -516,8 +517,4 @@ class IInitializeWithCoreWindow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInitializeWithCoreWindow: ...
     def initialize(self, window: typing.Optional[CoreWindow], /) -> None: ...
-
-DispatchedHandler = typing.Callable[[], None]
-
-IdleDispatchedHandler = typing.Callable[[typing.Optional[IdleDispatchedHandlerArgs]], None]
 

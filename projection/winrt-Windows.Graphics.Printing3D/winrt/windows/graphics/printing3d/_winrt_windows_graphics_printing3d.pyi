@@ -13,6 +13,7 @@ import winrt.windows.storage.streams
 import winrt.windows.ui
 
 from . import Print3DTaskCompletion, Print3DTaskDetail, Printing3DBufferFormat, Printing3DMeshVerificationMode, Printing3DModelUnit, Printing3DObjectType, Printing3DPackageCompression, Printing3DTextureEdgeBehavior
+from . import Print3DTaskSourceRequestedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -264,6 +265,4 @@ class Printing3DTextureResource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Printing3DTextureResource: ...
     def __new__(cls: typing.Type[Printing3DTextureResource]) -> Printing3DTextureResource:...
-
-Print3DTaskSourceRequestedHandler = typing.Callable[[typing.Optional[Print3DTaskSourceRequestedArgs]], None]
 

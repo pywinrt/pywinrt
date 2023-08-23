@@ -15,6 +15,7 @@ import winrt.windows.storage.streams
 import winrt.windows.system
 
 from . import ApplicationDataCreateDisposition, ApplicationDataLocality, CreationCollisionOption, FileAccessMode, FileAttributes, KnownFolderId, KnownFoldersAccessStatus, KnownLibraryId, NameCollisionOption, StorageDeleteOption, StorageItemTypes, StorageLibraryChangeType, StorageOpenOptions, StreamedFileFailureMode
+from . import ApplicationDataSetVersionHandler, StreamedFileDataRequestedHandler
 
 Self = typing.TypeVar('Self')
 
@@ -827,8 +828,4 @@ class IStreamedFileDataRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStreamedFileDataRequest: ...
     def fail_and_close(self, failure_mode: StreamedFileFailureMode, /) -> None: ...
-
-ApplicationDataSetVersionHandler = typing.Callable[[typing.Optional[SetVersionRequest]], None]
-
-StreamedFileDataRequestedHandler = typing.Callable[[typing.Optional[StreamedFileDataRequest]], None]
 

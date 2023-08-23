@@ -11,6 +11,7 @@ import winrt.windows.foundation.collections
 import winrt.windows.media.playback
 
 from . import GraphicsTrustStatus, HdcpProtection, HdcpSetProtectionResult, ProtectionCapabilityResult, RenewalStatus, RevocationAndRenewalReasons
+from . import ComponentLoadFailedEventHandler, RebootNeededEventHandler, ServiceRequestedEventHandler
 
 Self = typing.TypeVar('Self')
 
@@ -94,10 +95,4 @@ class IMediaProtectionServiceRequest(winrt.system.Object):
     type: winrt.system.Guid
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaProtectionServiceRequest: ...
-
-ComponentLoadFailedEventHandler = typing.Callable[[typing.Optional[MediaProtectionManager], typing.Optional[ComponentLoadFailedEventArgs]], None]
-
-RebootNeededEventHandler = typing.Callable[[typing.Optional[MediaProtectionManager]], None]
-
-ServiceRequestedEventHandler = typing.Callable[[typing.Optional[MediaProtectionManager], typing.Optional[ServiceRequestedEventArgs]], None]
 
