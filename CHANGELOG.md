@@ -83,7 +83,7 @@
 - Attempting to delete attributes now returns `AttributeError` instead of `TypeError`.
 
 ### Fixed
-- Fixed crash when accessing new APIs on older versions of Windows ([winsdk#13]). 
+- Fixed crash when accessing new APIs on older versions of Windows ([winsdk#13]).
 
 [winsdk#13]: https://github.com/pywinrt/python-winsdk/issues/13
 
