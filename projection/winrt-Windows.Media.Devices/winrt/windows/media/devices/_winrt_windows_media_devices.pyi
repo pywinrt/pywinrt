@@ -28,7 +28,7 @@ class AdvancedPhotoCaptureSettings(winrt.system.Object):
 
 class AdvancedPhotoControl(winrt.system.Object):
     mode: AdvancedPhotoMode
-    supported: winrt.system.Boolean
+    supported: bool
     supported_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[AdvancedPhotoMode]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedPhotoControl: ...
@@ -36,7 +36,7 @@ class AdvancedPhotoControl(winrt.system.Object):
 
 class AudioDeviceController(winrt.system.Object):
     volume_percent: winrt.system.Single
-    muted: winrt.system.Boolean
+    muted: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioDeviceController: ...
     def get_available_media_stream_properties(self, media_stream_type: winrt.windows.media.capture.MediaStreamType, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.mediaproperties.IMediaEncodingProperties]]: ...
@@ -69,7 +69,7 @@ class AudioDeviceModulesManager(winrt.system.Object):
     def remove_module_notification_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CallControl(winrt.system.Object):
-    has_ringer: winrt.system.Boolean
+    has_ringer: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CallControl: ...
     def end_call(self, call_token: winrt.system.UInt64, /) -> None: ...
@@ -78,7 +78,7 @@ class CallControl(winrt.system.Object):
     @staticmethod
     def get_default() -> typing.Optional[CallControl]: ...
     def indicate_active_call(self, call_token: winrt.system.UInt64, /) -> None: ...
-    def indicate_new_incoming_call(self, enable_ringer: winrt.system.Boolean, caller_id: str, /) -> winrt.system.UInt64: ...
+    def indicate_new_incoming_call(self, enable_ringer: bool, caller_id: str, /) -> winrt.system.UInt64: ...
     def indicate_new_outgoing_call(self) -> winrt.system.UInt64: ...
     def add_answer_requested(self, handler: typing.Optional[CallControlEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_answer_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -97,15 +97,15 @@ class CameraOcclusionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraOcclusionInfo: ...
     def get_state(self) -> typing.Optional[CameraOcclusionState]: ...
-    def is_occlusion_kind_supported(self, occlusion_kind: CameraOcclusionKind, /) -> winrt.system.Boolean: ...
+    def is_occlusion_kind_supported(self, occlusion_kind: CameraOcclusionKind, /) -> bool: ...
     def add_state_changed(self, handler: winrt.windows.foundation.TypedEventHandler[CameraOcclusionInfo, CameraOcclusionStateChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_state_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CameraOcclusionState(winrt.system.Object):
-    is_occluded: winrt.system.Boolean
+    is_occluded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraOcclusionState: ...
-    def is_occlusion_kind(self, occlusion_kind: CameraOcclusionKind, /) -> winrt.system.Boolean: ...
+    def is_occlusion_kind(self, occlusion_kind: CameraOcclusionKind, /) -> bool: ...
 
 class CameraOcclusionStateChangedEventArgs(winrt.system.Object):
     state: typing.Optional[CameraOcclusionState]
@@ -150,7 +150,7 @@ class DigitalWindowCapability(winrt.system.Object):
 
 class DigitalWindowControl(winrt.system.Object):
     current_mode: DigitalWindowMode
-    is_supported: winrt.system.Boolean
+    is_supported: bool
     supported_capabilities: typing.Optional[winrt.windows.foundation.collections.IVectorView[DigitalWindowCapability]]
     supported_modes: DigitalWindowMode
     @staticmethod
@@ -166,40 +166,40 @@ class ExposureCompensationControl(winrt.system.Object):
     max: winrt.system.Single
     min: winrt.system.Single
     step: winrt.system.Single
-    supported: winrt.system.Boolean
+    supported: bool
     value: winrt.system.Single
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExposureCompensationControl: ...
     def set_value_async(self, value: winrt.system.Single, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class ExposureControl(winrt.system.Object):
-    auto: winrt.system.Boolean
+    auto: bool
     max: datetime.timedelta
     min: datetime.timedelta
     step: datetime.timedelta
-    supported: winrt.system.Boolean
+    supported: bool
     value: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExposureControl: ...
-    def set_auto_async(self, value: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def set_auto_async(self, value: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
     def set_value_async(self, shutter_duration: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class ExposurePriorityVideoControl(winrt.system.Object):
-    enabled: winrt.system.Boolean
-    supported: winrt.system.Boolean
+    enabled: bool
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExposurePriorityVideoControl: ...
 
 class FlashControl(winrt.system.Object):
-    red_eye_reduction: winrt.system.Boolean
+    red_eye_reduction: bool
     power_percent: winrt.system.Single
-    enabled: winrt.system.Boolean
-    auto: winrt.system.Boolean
-    power_supported: winrt.system.Boolean
-    red_eye_reduction_supported: winrt.system.Boolean
-    supported: winrt.system.Boolean
-    assistant_light_enabled: winrt.system.Boolean
-    assistant_light_supported: winrt.system.Boolean
+    enabled: bool
+    auto: bool
+    power_supported: bool
+    red_eye_reduction_supported: bool
+    supported: bool
+    assistant_light_enabled: bool
+    assistant_light_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlashControl: ...
 
@@ -208,16 +208,16 @@ class FocusControl(winrt.system.Object):
     min: winrt.system.UInt32
     preset: FocusPreset
     step: winrt.system.UInt32
-    supported: winrt.system.Boolean
+    supported: bool
     supported_presets: typing.Optional[winrt.windows.foundation.collections.IVectorView[FocusPreset]]
     value: winrt.system.UInt32
-    focus_changed_supported: winrt.system.Boolean
+    focus_changed_supported: bool
     focus_state: MediaCaptureFocusState
     mode: FocusMode
     supported_focus_distances: typing.Optional[winrt.windows.foundation.collections.IVectorView[ManualFocusDistance]]
     supported_focus_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[FocusMode]]
     supported_focus_ranges: typing.Optional[winrt.windows.foundation.collections.IVectorView[AutoFocusRange]]
-    wait_for_focus_supported: winrt.system.Boolean
+    wait_for_focus_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusControl: ...
     def configure(self, settings: typing.Optional[FocusSettings], /) -> None: ...
@@ -226,16 +226,16 @@ class FocusControl(winrt.system.Object):
     @typing.overload
     def set_preset_async(self, preset: FocusPreset, /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
-    def set_preset_async(self, preset: FocusPreset, complete_before_focus: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def set_preset_async(self, preset: FocusPreset, complete_before_focus: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
     def set_value_async(self, focus: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncAction: ...
     def unlock_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
 class FocusSettings(winrt.system.Object):
-    wait_for_focus: winrt.system.Boolean
+    wait_for_focus: bool
     value: typing.Optional[typing.Optional[winrt.system.UInt32]]
     mode: FocusMode
     distance: typing.Optional[typing.Optional[ManualFocusDistance]]
-    disable_driver_fallback: winrt.system.Boolean
+    disable_driver_fallback: bool
     auto_focus_range: AutoFocusRange
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusSettings: ...
@@ -243,7 +243,7 @@ class FocusSettings(winrt.system.Object):
 
 class HdrVideoControl(winrt.system.Object):
     mode: HdrVideoMode
-    supported: winrt.system.Boolean
+    supported: bool
     supported_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[HdrVideoMode]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HdrVideoControl: ...
@@ -251,7 +251,7 @@ class HdrVideoControl(winrt.system.Object):
 class InfraredTorchControl(winrt.system.Object):
     power: winrt.system.Int32
     current_mode: InfraredTorchMode
-    is_supported: winrt.system.Boolean
+    is_supported: bool
     max_power: winrt.system.Int32
     min_power: winrt.system.Int32
     power_step: winrt.system.Int32
@@ -261,9 +261,9 @@ class InfraredTorchControl(winrt.system.Object):
 
 class IsoSpeedControl(winrt.system.Object):
     preset: IsoSpeedPreset
-    supported: winrt.system.Boolean
+    supported: bool
     supported_presets: typing.Optional[winrt.windows.foundation.collections.IVectorView[IsoSpeedPreset]]
-    auto: winrt.system.Boolean
+    auto: bool
     max: winrt.system.UInt32
     min: winrt.system.UInt32
     step: winrt.system.UInt32
@@ -281,7 +281,7 @@ class KeypadPressedEventArgs(winrt.system.Object):
 
 class LowLagPhotoControl(winrt.system.Object):
     thumbnail_format: winrt.windows.media.mediaproperties.MediaThumbnailFormat
-    thumbnail_enabled: winrt.system.Boolean
+    thumbnail_enabled: bool
     desired_thumbnail_size: winrt.system.UInt32
     hardware_accelerated_thumbnail_supported: winrt.system.UInt32
     @staticmethod
@@ -291,14 +291,14 @@ class LowLagPhotoControl(winrt.system.Object):
 
 class LowLagPhotoSequenceControl(winrt.system.Object):
     thumbnail_format: winrt.windows.media.mediaproperties.MediaThumbnailFormat
-    thumbnail_enabled: winrt.system.Boolean
+    thumbnail_enabled: bool
     photos_per_second_limit: winrt.system.Single
     past_photo_limit: winrt.system.UInt32
     desired_thumbnail_size: winrt.system.UInt32
     hardware_accelerated_thumbnail_supported: winrt.system.UInt32
     max_past_photos: winrt.system.UInt32
     max_photos_per_second: winrt.system.Single
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LowLagPhotoSequenceControl: ...
     def get_current_frame_rate(self) -> typing.Optional[winrt.windows.media.mediaproperties.MediaRatio]: ...
@@ -330,18 +330,18 @@ class MediaDeviceControl(winrt.system.Object):
     capabilities: typing.Optional[MediaDeviceControlCapabilities]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaDeviceControl: ...
-    def try_get_auto(self) -> typing.Tuple[winrt.system.Boolean, winrt.system.Boolean]: ...
-    def try_get_value(self) -> typing.Tuple[winrt.system.Boolean, winrt.system.Double]: ...
-    def try_set_auto(self, value: winrt.system.Boolean, /) -> winrt.system.Boolean: ...
-    def try_set_value(self, value: winrt.system.Double, /) -> winrt.system.Boolean: ...
+    def try_get_auto(self) -> typing.Tuple[bool, bool]: ...
+    def try_get_value(self) -> typing.Tuple[bool, winrt.system.Double]: ...
+    def try_set_auto(self, value: bool, /) -> bool: ...
+    def try_set_value(self, value: winrt.system.Double, /) -> bool: ...
 
 class MediaDeviceControlCapabilities(winrt.system.Object):
-    auto_mode_supported: winrt.system.Boolean
+    auto_mode_supported: bool
     default: winrt.system.Double
     max: winrt.system.Double
     min: winrt.system.Double
     step: winrt.system.Double
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaDeviceControlCapabilities: ...
 
@@ -353,21 +353,21 @@ class ModuleCommandResult(winrt.system.Object):
 
 class OpticalImageStabilizationControl(winrt.system.Object):
     mode: OpticalImageStabilizationMode
-    supported: winrt.system.Boolean
+    supported: bool
     supported_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[OpticalImageStabilizationMode]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OpticalImageStabilizationControl: ...
 
 class PanelBasedOptimizationControl(winrt.system.Object):
     panel: winrt.windows.devices.enumeration.Panel
-    is_supported: winrt.system.Boolean
+    is_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PanelBasedOptimizationControl: ...
 
 class PhotoConfirmationControl(winrt.system.Object):
     pixel_format: winrt.windows.media.mediaproperties.MediaPixelFormat
-    enabled: winrt.system.Boolean
-    supported: winrt.system.Boolean
+    enabled: bool
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoConfirmationControl: ...
 
@@ -378,20 +378,20 @@ class RedialRequestedEventArgs(winrt.system.Object):
 
 class RegionOfInterest(winrt.system.Object):
     bounds: winrt.windows.foundation.Rect
-    auto_white_balance_enabled: winrt.system.Boolean
-    auto_focus_enabled: winrt.system.Boolean
-    auto_exposure_enabled: winrt.system.Boolean
+    auto_white_balance_enabled: bool
+    auto_focus_enabled: bool
+    auto_exposure_enabled: bool
     weight: winrt.system.UInt32
     type: RegionOfInterestType
-    bounds_normalized: winrt.system.Boolean
+    bounds_normalized: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RegionOfInterest: ...
     def __new__(cls: typing.Type[RegionOfInterest]) -> RegionOfInterest:...
 
 class RegionsOfInterestControl(winrt.system.Object):
-    auto_exposure_supported: winrt.system.Boolean
-    auto_focus_supported: winrt.system.Boolean
-    auto_white_balance_supported: winrt.system.Boolean
+    auto_exposure_supported: bool
+    auto_focus_supported: bool
+    auto_white_balance_supported: bool
     max_regions: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RegionsOfInterestControl: ...
@@ -399,7 +399,7 @@ class RegionsOfInterestControl(winrt.system.Object):
     @typing.overload
     def set_regions_async(self, regions: typing.Iterable[RegionOfInterest], /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
-    def set_regions_async(self, regions: typing.Iterable[RegionOfInterest], lock_values: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def set_regions_async(self, regions: typing.Iterable[RegionOfInterest], lock_values: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class SceneModeControl(winrt.system.Object):
     supported_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[CaptureSceneMode]]
@@ -410,9 +410,9 @@ class SceneModeControl(winrt.system.Object):
 
 class TorchControl(winrt.system.Object):
     power_percent: winrt.system.Single
-    enabled: winrt.system.Boolean
-    power_supported: winrt.system.Boolean
-    supported: winrt.system.Boolean
+    enabled: bool
+    power_supported: bool
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TorchControl: ...
 
@@ -465,9 +465,9 @@ class VideoDeviceController(winrt.system.Object):
     def set_device_property_by_extended_id(self, extended_property_id: winrt.system.Array[winrt.system.UInt8], property_value: winrt.system.Array[winrt.system.UInt8], /) -> VideoDeviceControllerSetDevicePropertyStatus: ...
     def set_device_property_by_id(self, property_id: str, property_value: typing.Optional[winrt.system.Object], /) -> VideoDeviceControllerSetDevicePropertyStatus: ...
     def set_media_stream_properties_async(self, media_stream_type: winrt.windows.media.capture.MediaStreamType, media_encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.IMediaEncodingProperties], /) -> winrt.windows.foundation.IAsyncAction: ...
-    def try_acquire_exclusive_control(self, device_id: str, mode: winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlReleaseMode, /) -> winrt.system.Boolean: ...
-    def try_get_powerline_frequency(self) -> typing.Tuple[winrt.system.Boolean, winrt.windows.media.capture.PowerlineFrequency]: ...
-    def try_set_powerline_frequency(self, value: winrt.windows.media.capture.PowerlineFrequency, /) -> winrt.system.Boolean: ...
+    def try_acquire_exclusive_control(self, device_id: str, mode: winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlReleaseMode, /) -> bool: ...
+    def try_get_powerline_frequency(self) -> typing.Tuple[bool, winrt.windows.media.capture.PowerlineFrequency]: ...
+    def try_set_powerline_frequency(self, value: winrt.windows.media.capture.PowerlineFrequency, /) -> bool: ...
 
 class VideoDeviceControllerGetDevicePropertyResult(winrt.system.Object):
     status: VideoDeviceControllerGetDevicePropertyStatus
@@ -477,7 +477,7 @@ class VideoDeviceControllerGetDevicePropertyResult(winrt.system.Object):
 
 class VideoTemporalDenoisingControl(winrt.system.Object):
     mode: VideoTemporalDenoisingMode
-    supported: winrt.system.Boolean
+    supported: bool
     supported_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[VideoTemporalDenoisingMode]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoTemporalDenoisingControl: ...
@@ -487,7 +487,7 @@ class WhiteBalanceControl(winrt.system.Object):
     min: winrt.system.UInt32
     preset: ColorTemperaturePreset
     step: winrt.system.UInt32
-    supported: winrt.system.Boolean
+    supported: bool
     value: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WhiteBalanceControl: ...
@@ -499,7 +499,7 @@ class ZoomControl(winrt.system.Object):
     max: winrt.system.Single
     min: winrt.system.Single
     step: winrt.system.Single
-    supported: winrt.system.Boolean
+    supported: bool
     mode: ZoomTransitionMode
     supported_modes: typing.Optional[winrt.windows.foundation.collections.IVectorView[ZoomTransitionMode]]
     @staticmethod

@@ -317,7 +317,7 @@ class LaunchActivatedEventArgs(winrt.system.Object):
     arguments: str
     tile_id: str
     tile_activated_info: typing.Optional[TileActivatedInfo]
-    prelaunch_activated: winrt.system.Boolean
+    prelaunch_activated: bool
     view_switcher: typing.Optional[winrt.windows.ui.viewmanagement.ActivationViewSwitcher]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LaunchActivatedEventArgs: ...
@@ -889,7 +889,7 @@ class IPickerReturnedActivatedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IPickerReturnedActivatedEventArgs: ...
 
 class IPrelaunchActivatedEventArgs(winrt.system.Object):
-    prelaunch_activated: winrt.system.Boolean
+    prelaunch_activated: bool
     kind: ActivationKind
     previous_execution_state: ApplicationExecutionState
     splash_screen: typing.Optional[SplashScreen]

@@ -26,7 +26,7 @@ class TargetedContentAvailabilityChangedEventArgs(winrt.system.Object):
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class TargetedContentChangedEventArgs(winrt.system.Object):
-    has_previous_content_expired: winrt.system.Boolean
+    has_previous_content_expired: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -77,7 +77,7 @@ class TargetedContentItem(winrt.system.Object):
 
 class TargetedContentItemState(winrt.system.Object):
     app_installation_state: TargetedContentAppInstallationState
-    should_display: winrt.system.Boolean
+    should_display: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TargetedContentItemState: ...
 
@@ -111,7 +111,7 @@ class TargetedContentSubscription(winrt.system.Object):
     def remove_state_changed(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class TargetedContentSubscriptionOptions(winrt.system.Object):
-    allow_partial_content_availability: winrt.system.Boolean
+    allow_partial_content_availability: bool
     cloud_query_parameters: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
     local_filters: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     subscription_id: str
@@ -122,8 +122,8 @@ class TargetedContentSubscriptionOptions(winrt.system.Object):
 class TargetedContentValue(winrt.system.Object):
     action: typing.Optional[TargetedContentAction]
     actions: typing.Optional[winrt.windows.foundation.collections.IVectorView[TargetedContentAction]]
-    boolean: winrt.system.Boolean
-    booleans: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Boolean]]
+    boolean: bool
+    booleans: typing.Optional[winrt.windows.foundation.collections.IVectorView[bool]]
     file: typing.Optional[TargetedContentFile]
     files: typing.Optional[winrt.windows.foundation.collections.IVectorView[TargetedContentFile]]
     image_file: typing.Optional[TargetedContentImage]

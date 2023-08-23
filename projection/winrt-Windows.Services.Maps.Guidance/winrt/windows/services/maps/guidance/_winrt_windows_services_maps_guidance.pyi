@@ -25,7 +25,7 @@ class GuidanceAudioNotificationRequestedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> GuidanceAudioNotificationRequestedEventArgs: ...
 
 class GuidanceLaneInfo(winrt.system.Object):
-    is_on_route: winrt.system.Boolean
+    is_on_route: bool
     lane_markers: GuidanceLaneMarkers
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceLaneInfo: ...
@@ -49,7 +49,7 @@ class GuidanceManeuver(winrt.system.Object):
 class GuidanceMapMatchedCoordinate(winrt.system.Object):
     current_heading: winrt.system.Double
     current_speed: winrt.system.Double
-    is_on_street: winrt.system.Boolean
+    is_on_street: bool
     location: typing.Optional[winrt.windows.devices.geolocation.Geopoint]
     road: typing.Optional[GuidanceRoadSegment]
     @staticmethod
@@ -58,8 +58,8 @@ class GuidanceMapMatchedCoordinate(winrt.system.Object):
 class GuidanceNavigator(winrt.system.Object):
     audio_notifications: GuidanceAudioNotifications
     audio_measurement_system: GuidanceAudioMeasurementSystem
-    is_guidance_audio_muted: winrt.system.Boolean
-    use_app_provided_voice: typing.ClassVar[winrt.system.Boolean]
+    is_guidance_audio_muted: bool
+    use_app_provided_voice: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceNavigator: ...
     @staticmethod
@@ -100,15 +100,15 @@ class GuidanceReroutedEventArgs(winrt.system.Object):
 
 class GuidanceRoadSegment(winrt.system.Object):
     id: str
-    is_highway: winrt.system.Boolean
-    is_toll_road: winrt.system.Boolean
-    is_tunnel: winrt.system.Boolean
+    is_highway: bool
+    is_toll_road: bool
+    is_tunnel: bool
     path: typing.Optional[winrt.windows.devices.geolocation.Geopath]
     road_name: str
     short_road_name: str
     speed_limit: winrt.system.Double
     travel_time: datetime.timedelta
-    is_scenic: winrt.system.Boolean
+    is_scenic: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceRoadSegment: ...
 
@@ -131,7 +131,7 @@ class GuidanceRoute(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceRoute: ...
     @staticmethod
-    def can_create_from_map_route(map_route: typing.Optional[winrt.windows.services.maps.MapRoute], /) -> winrt.system.Boolean: ...
+    def can_create_from_map_route(map_route: typing.Optional[winrt.windows.services.maps.MapRoute], /) -> bool: ...
     def convert_to_map_route(self) -> typing.Optional[winrt.windows.services.maps.MapRoute]: ...
     @staticmethod
     def try_create_from_map_route(map_route: typing.Optional[winrt.windows.services.maps.MapRoute], /) -> typing.Optional[GuidanceRoute]: ...
@@ -139,7 +139,7 @@ class GuidanceRoute(winrt.system.Object):
 class GuidanceTelemetryCollector(winrt.system.Object):
     upload_frequency: winrt.system.Int32
     speed_trigger: winrt.system.Double
-    enabled: winrt.system.Boolean
+    enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GuidanceTelemetryCollector: ...
     def clear_local_data(self) -> None: ...
@@ -153,7 +153,7 @@ class GuidanceUpdatedEventArgs(winrt.system.Object):
     distance_to_destination: winrt.system.Int32
     elapsed_distance: winrt.system.Int32
     elapsed_time: datetime.timedelta
-    is_new_maneuver: winrt.system.Boolean
+    is_new_maneuver: bool
     lane_info: typing.Optional[winrt.windows.foundation.collections.IVectorView[GuidanceLaneInfo]]
     mode: GuidanceMode
     next_maneuver: typing.Optional[GuidanceManeuver]

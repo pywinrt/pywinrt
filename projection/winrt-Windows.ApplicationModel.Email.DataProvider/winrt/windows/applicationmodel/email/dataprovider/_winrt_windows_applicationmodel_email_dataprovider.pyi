@@ -257,7 +257,7 @@ class EmailMailboxUpdateMeetingResponseRequest(winrt.system.Object):
     email_mailbox_id: str
     email_message_id: str
     response: winrt.windows.applicationmodel.email.EmailMeetingResponseType
-    send_update: winrt.system.Boolean
+    send_update: bool
     subject: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxUpdateMeetingResponseRequest: ...

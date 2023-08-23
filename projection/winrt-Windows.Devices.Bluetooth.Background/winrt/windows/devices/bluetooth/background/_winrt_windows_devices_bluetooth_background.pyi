@@ -57,7 +57,7 @@ class GattServiceProviderTriggerDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderTriggerDetails: ...
 
 class RfcommConnectionTriggerDetails(winrt.system.Object):
-    incoming: winrt.system.Boolean
+    incoming: bool
     remote_device: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDevice]
     socket: typing.Optional[winrt.windows.networking.sockets.StreamSocket]
     @staticmethod

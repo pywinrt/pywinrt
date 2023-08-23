@@ -70,7 +70,7 @@ class MiracastReceiverConnectionCreatedEventArgs(winrt.system.Object):
 
 class MiracastReceiverCursorImageChannel(winrt.system.Object):
     image_stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamWithContentType]
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     max_image_size: winrt.windows.graphics.SizeInt32
     position: winrt.windows.graphics.PointInt32
     @staticmethod
@@ -82,7 +82,7 @@ class MiracastReceiverCursorImageChannel(winrt.system.Object):
 
 class MiracastReceiverCursorImageChannelSettings(winrt.system.Object):
     max_image_size: winrt.windows.graphics.SizeInt32
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverCursorImageChannelSettings: ...
 
@@ -92,10 +92,10 @@ class MiracastReceiverDisconnectedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverDisconnectedEventArgs: ...
 
 class MiracastReceiverGameControllerDevice(winrt.system.Object):
-    transmit_input: winrt.system.Boolean
+    transmit_input: bool
     mode: MiracastReceiverGameControllerDeviceUsageMode
-    is_requested_by_transmitter: winrt.system.Boolean
-    is_transmitting_input: winrt.system.Boolean
+    is_requested_by_transmitter: bool
+    is_transmitting_input: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverGameControllerDevice: ...
     def add_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MiracastReceiverGameControllerDevice, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -108,9 +108,9 @@ class MiracastReceiverInputDevices(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverInputDevices: ...
 
 class MiracastReceiverKeyboardDevice(winrt.system.Object):
-    transmit_input: winrt.system.Boolean
-    is_requested_by_transmitter: winrt.system.Boolean
-    is_transmitting_input: winrt.system.Boolean
+    transmit_input: bool
+    is_requested_by_transmitter: bool
+    is_transmitting_input: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverKeyboardDevice: ...
     def add_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MiracastReceiverKeyboardDevice, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -126,7 +126,7 @@ class MiracastReceiverMediaSourceCreatedEventArgs(winrt.system.Object):
 
 class MiracastReceiverSession(winrt.system.Object):
     max_simultaneous_connections: winrt.system.Int32
-    allow_connection_takeover: winrt.system.Boolean
+    allow_connection_takeover: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -148,7 +148,7 @@ class MiracastReceiverSessionStartResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverSessionStartResult: ...
 
 class MiracastReceiverSettings(winrt.system.Object):
-    require_authorization_from_known_transmitters: winrt.system.Boolean
+    require_authorization_from_known_transmitters: bool
     model_number: str
     model_name: str
     friendly_name: str
@@ -157,7 +157,7 @@ class MiracastReceiverSettings(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverSettings: ...
 
 class MiracastReceiverStatus(winrt.system.Object):
-    is_connection_takeover_supported: winrt.system.Boolean
+    is_connection_takeover_supported: bool
     known_transmitters: typing.Optional[winrt.windows.foundation.collections.IVectorView[MiracastTransmitter]]
     listening_status: MiracastReceiverListeningStatus
     max_simultaneous_connections: winrt.system.Int32
@@ -166,7 +166,7 @@ class MiracastReceiverStatus(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverStatus: ...
 
 class MiracastReceiverStreamControl(winrt.system.Object):
-    mute_audio: winrt.system.Boolean
+    mute_audio: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MiracastReceiverStreamControl: ...
     def get_video_stream_settings(self) -> typing.Optional[MiracastReceiverVideoStreamSettings]: ...

@@ -56,7 +56,7 @@ class DepthMediaFrameFormat(winrt.system.Object):
 
 class InfraredMediaFrame(winrt.system.Object):
     frame_reference: typing.Optional[MediaFrameReference]
-    is_illuminated: winrt.system.Boolean
+    is_illuminated: bool
     video_media_frame: typing.Optional[VideoMediaFrame]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfraredMediaFrame: ...
@@ -155,7 +155,7 @@ class MediaFrameSourceInfo(winrt.system.Object):
     source_kind: MediaFrameSourceKind
     profile_id: str
     video_profile_media_description: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.capture.MediaCaptureVideoProfileMediaDescription]]
-    is_shareable: winrt.system.Boolean
+    is_shareable: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaFrameSourceInfo: ...
     def get_relative_panel(self, display_region: typing.Optional[winrt.windows.ui.windowmanagement.DisplayRegion], /) -> winrt.windows.devices.enumeration.Panel: ...

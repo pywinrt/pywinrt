@@ -40,7 +40,7 @@ class PwmController(winrt.system.Object):
 class PwmPin(winrt.system.Object):
     polarity: PwmPulsePolarity
     controller: typing.Optional[PwmController]
-    is_started: winrt.system.Boolean
+    is_started: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

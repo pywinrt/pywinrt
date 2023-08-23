@@ -60,7 +60,7 @@ class PerceptionFrame(winrt.system.Object):
 
 class PerceptionFrameProviderInfo(winrt.system.Object):
     id: str
-    hidden: winrt.system.Boolean
+    hidden: bool
     frame_kind: str
     display_name: str
     device_kind: str
@@ -90,7 +90,7 @@ class PerceptionFrameProviderManagerService(winrt.system.Object):
     @staticmethod
     def unregister_frame_provider_info(manager: typing.Optional[IPerceptionFrameProviderManager], frame_provider_info: typing.Optional[PerceptionFrameProviderInfo], /) -> None: ...
     @staticmethod
-    def update_availability_for_provider(provider: typing.Optional[IPerceptionFrameProvider], available: winrt.system.Boolean, /) -> None: ...
+    def update_availability_for_provider(provider: typing.Optional[IPerceptionFrameProvider], available: bool, /) -> None: ...
 
 class PerceptionPropertyChangeRequest(winrt.system.Object):
     status: winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeStatus
@@ -111,7 +111,7 @@ class PerceptionVideoFrameAllocator(winrt.system.Object):
     def copy_from_video_frame(self, frame: typing.Optional[winrt.windows.media.VideoFrame], /) -> typing.Optional[PerceptionFrame]: ...
 
 class IPerceptionFrameProvider(winrt.system.Object):
-    available: winrt.system.Boolean
+    available: bool
     frame_provider_info: typing.Optional[PerceptionFrameProviderInfo]
     properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     def __enter__(self: Self) -> Self: ...

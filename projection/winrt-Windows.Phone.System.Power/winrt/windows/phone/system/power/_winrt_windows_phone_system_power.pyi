@@ -15,7 +15,7 @@ Self = typing.TypeVar('Self')
 
 class PowerManager(winrt.system.Object):
     power_saving_mode: typing.ClassVar[PowerSavingMode]
-    power_saving_mode_enabled: typing.ClassVar[winrt.system.Boolean]
+    power_saving_mode_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PowerManager: ...
     @staticmethod

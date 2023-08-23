@@ -35,7 +35,7 @@ class CustomMapTileDataSource(winrt.system.Object):
 
 class HttpMapTileDataSource(winrt.system.Object):
     uri_format_string: str
-    allow_caching: winrt.system.Boolean
+    allow_caching: bool
     additional_request_headers: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpMapTileDataSource: ...
@@ -113,15 +113,15 @@ class MapControl(winrt.system.Object):
     zoom_level: winrt.system.Double
     watermark_mode: MapWatermarkMode
     transform_origin: winrt.windows.foundation.Point
-    traffic_flow_visible: winrt.system.Boolean
+    traffic_flow_visible: bool
     style: MapStyle
-    pedestrian_features_visible: winrt.system.Boolean
+    pedestrian_features_visible: bool
     map_service_token: str
     center: typing.Optional[winrt.windows.devices.geolocation.Geopoint]
     heading: winrt.system.Double
     desired_pitch: winrt.system.Double
     color_scheme: MapColorScheme
-    landmarks_visible: winrt.system.Boolean
+    landmarks_visible: bool
     children: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.xaml.DependencyObject]]
     loading_status: MapLoadingStatus
     map_elements: typing.Optional[winrt.windows.foundation.collections.IVector[MapElement]]
@@ -132,27 +132,27 @@ class MapControl(winrt.system.Object):
     tile_sources: typing.Optional[winrt.windows.foundation.collections.IVector[MapTileSource]]
     rotate_interaction_mode: MapInteractionMode
     zoom_interaction_mode: MapInteractionMode
-    transit_features_visible: winrt.system.Boolean
+    transit_features_visible: bool
     tilt_interaction_mode: MapInteractionMode
     scene: typing.Optional[MapScene]
-    business_landmarks_visible: winrt.system.Boolean
+    business_landmarks_visible: bool
     pan_interaction_mode: MapPanInteractionMode
     custom_experience: typing.Optional[MapCustomExperience]
     actual_camera: typing.Optional[MapCamera]
-    is3_d_supported: winrt.system.Boolean
-    is_streetside_supported: winrt.system.Boolean
+    is3_d_supported: bool
+    is_streetside_supported: bool
     target_camera: typing.Optional[MapCamera]
-    transit_features_enabled: winrt.system.Boolean
-    business_landmarks_enabled: winrt.system.Boolean
+    transit_features_enabled: bool
+    business_landmarks_enabled: bool
     view_padding: winrt.windows.ui.xaml.Thickness
     style_sheet: typing.Optional[MapStyleSheet]
     map_projection: MapProjection
     layers: typing.Optional[winrt.windows.foundation.collections.IVector[MapLayer]]
     region: str
-    can_tilt_down: winrt.system.Boolean
-    can_tilt_up: winrt.system.Boolean
-    can_zoom_in: winrt.system.Boolean
-    can_zoom_out: winrt.system.Boolean
+    can_tilt_down: bool
+    can_tilt_up: bool
+    can_zoom_in: bool
+    can_zoom_out: bool
     center_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     zoom_level_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     children_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -210,7 +210,7 @@ class MapControl(winrt.system.Object):
     def get_normalized_anchor_point(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.windows.foundation.Point: ...
     def get_offset_from_location(self, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.Point: ...
     def get_visible_region(self, region: MapVisibleRegionKind, /) -> typing.Optional[winrt.windows.devices.geolocation.Geopath]: ...
-    def is_location_in_view(self, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.system.Boolean: ...
+    def is_location_in_view(self, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> bool: ...
     @staticmethod
     def set_location(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> None: ...
     @staticmethod
@@ -224,31 +224,31 @@ class MapControl(winrt.system.Object):
     def stop_continuous_tilt(self) -> None: ...
     def stop_continuous_zoom(self) -> None: ...
     @typing.overload
-    def try_get_location_from_offset(self, offset: winrt.windows.foundation.Point, /) -> typing.Tuple[winrt.system.Boolean, typing.Optional[winrt.windows.devices.geolocation.Geopoint]]: ...
+    def try_get_location_from_offset(self, offset: winrt.windows.foundation.Point, /) -> typing.Tuple[bool, typing.Optional[winrt.windows.devices.geolocation.Geopoint]]: ...
     @typing.overload
-    def try_get_location_from_offset(self, offset: winrt.windows.foundation.Point, desired_reference_system: winrt.windows.devices.geolocation.AltitudeReferenceSystem, /) -> typing.Tuple[winrt.system.Boolean, typing.Optional[winrt.windows.devices.geolocation.Geopoint]]: ...
-    def try_pan_async(self, horizontal_pixels: winrt.system.Double, vertical_pixels: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_pan_to_async(self, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_rotate_async(self, degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_rotate_to_async(self, angle_in_degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_get_location_from_offset(self, offset: winrt.windows.foundation.Point, desired_reference_system: winrt.windows.devices.geolocation.AltitudeReferenceSystem, /) -> typing.Tuple[bool, typing.Optional[winrt.windows.devices.geolocation.Geopoint]]: ...
+    def try_pan_async(self, horizontal_pixels: winrt.system.Double, vertical_pixels: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_pan_to_async(self, location: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_rotate_async(self, degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_rotate_to_async(self, angle_in_degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_set_scene_async(self, scene: typing.Optional[MapScene], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_scene_async(self, scene: typing.Optional[MapScene], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_set_scene_async(self, scene: typing.Optional[MapScene], animation_kind: MapAnimationKind, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_scene_async(self, scene: typing.Optional[MapScene], animation_kind: MapAnimationKind, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], zoom_level: typing.Optional[winrt.system.Double], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], zoom_level: typing.Optional[winrt.system.Double], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], animation: MapAnimationKind, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_set_view_bounds_async(self, bounds: typing.Optional[winrt.windows.devices.geolocation.GeoboundingBox], margin: typing.Optional[winrt.windows.ui.xaml.Thickness], animation: MapAnimationKind, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_tilt_async(self, degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_tilt_to_async(self, angle_in_degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_zoom_in_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_zoom_out_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_zoom_to_async(self, zoom_level: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_view_async(self, center: typing.Optional[winrt.windows.devices.geolocation.Geopoint], zoom_level: typing.Optional[winrt.system.Double], heading: typing.Optional[winrt.system.Double], desired_pitch: typing.Optional[winrt.system.Double], animation: MapAnimationKind, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_set_view_bounds_async(self, bounds: typing.Optional[winrt.windows.devices.geolocation.GeoboundingBox], margin: typing.Optional[winrt.windows.ui.xaml.Thickness], animation: MapAnimationKind, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_tilt_async(self, degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_tilt_to_async(self, angle_in_degrees: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_zoom_in_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_zoom_out_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_zoom_to_async(self, zoom_level: winrt.system.Double, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_center_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MapControl, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_center_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_heading_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MapControl, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -315,7 +315,7 @@ class MapControlDataHelper(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MapControlDataHelper: ...
     def __new__(cls: typing.Type[MapControlDataHelper], map: typing.Optional[MapControl]) -> MapControlDataHelper:...
     @staticmethod
-    def create_map_control(raster_render_mode: winrt.system.Boolean, /) -> typing.Optional[MapControl]: ...
+    def create_map_control(raster_render_mode: bool, /) -> typing.Optional[MapControl]: ...
     def add_business_landmark_click(self, value: winrt.windows.foundation.TypedEventHandler[MapControl, MapControlBusinessLandmarkClickEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_business_landmark_click(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_business_landmark_right_tapped(self, value: winrt.windows.foundation.TypedEventHandler[MapControl, MapControlBusinessLandmarkRightTappedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -377,12 +377,12 @@ class MapCustomExperienceChangedEventArgs(winrt.system.Object):
 
 class MapElement(winrt.system.Object):
     z_index: winrt.system.Int32
-    visible: winrt.system.Boolean
+    visible: bool
     map_tab_index: winrt.system.Int32
     tag: typing.Optional[winrt.system.Object]
     map_style_sheet_entry_state: str
     map_style_sheet_entry: str
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     visible_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     z_index_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     map_tab_index_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -515,7 +515,7 @@ class MapItemsControl(winrt.system.Object):
 
 class MapLayer(winrt.system.Object):
     z_index: winrt.system.Int32
-    visible: winrt.system.Boolean
+    visible: bool
     map_tab_index: winrt.system.Int32
     map_tab_index_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     visible_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -537,7 +537,7 @@ class MapModel3D(winrt.system.Object):
 
 class MapPolygon(winrt.system.Object):
     stroke_thickness: winrt.system.Double
-    stroke_dashed: winrt.system.Boolean
+    stroke_dashed: bool
     stroke_color: winrt.windows.ui.Color
     path: typing.Optional[winrt.windows.devices.geolocation.Geopath]
     fill_color: winrt.windows.ui.Color
@@ -551,7 +551,7 @@ class MapPolygon(winrt.system.Object):
 
 class MapPolyline(winrt.system.Object):
     stroke_thickness: winrt.system.Double
-    stroke_dashed: winrt.system.Boolean
+    stroke_dashed: bool
     stroke_color: winrt.windows.ui.Color
     path: typing.Optional[winrt.windows.devices.geolocation.Geopath]
     path_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -628,7 +628,7 @@ class MapStyleSheet(winrt.system.Object):
     @staticmethod
     def road_light() -> typing.Optional[MapStyleSheet]: ...
     @staticmethod
-    def try_parse_from_json(style_as_json: str, /) -> typing.Tuple[winrt.system.Boolean, typing.Optional[MapStyleSheet]]: ...
+    def try_parse_from_json(style_as_json: str, /) -> typing.Tuple[bool, typing.Optional[MapStyleSheet]]: ...
 
 class MapStyleSheetEntries(winrt.system.Object):
     admin_district: typing.ClassVar[str]
@@ -743,18 +743,18 @@ class MapTileDataSource(winrt.system.Object):
 class MapTileSource(winrt.system.Object):
     zoom_level_range: MapZoomLevelRange
     z_index: winrt.system.Int32
-    visible: winrt.system.Boolean
+    visible: bool
     tile_pixel_size: winrt.system.Int32
     layer: MapTileLayer
-    is_transparency_enabled: winrt.system.Boolean
-    is_retry_enabled: winrt.system.Boolean
-    is_fading_enabled: winrt.system.Boolean
+    is_transparency_enabled: bool
+    is_retry_enabled: bool
+    is_fading_enabled: bool
     data_source: typing.Optional[MapTileDataSource]
     bounds: typing.Optional[winrt.windows.devices.geolocation.GeoboundingBox]
-    allow_overstretch: winrt.system.Boolean
+    allow_overstretch: bool
     frame_duration: datetime.timedelta
     frame_count: winrt.system.Int32
-    auto_play: winrt.system.Boolean
+    auto_play: bool
     animation_state: MapTileAnimationState
     allow_overstretch_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     bounds_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -811,12 +811,12 @@ class MapTileUriRequestedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[MapTileUriRequestedEventArgs]) -> MapTileUriRequestedEventArgs:...
 
 class StreetsideExperience(winrt.system.Object):
-    zoom_buttons_visible: winrt.system.Boolean
-    street_labels_visible: winrt.system.Boolean
-    overview_map_visible: winrt.system.Boolean
-    exit_button_visible: winrt.system.Boolean
-    cursor_visible: winrt.system.Boolean
-    address_text_visible: winrt.system.Boolean
+    zoom_buttons_visible: bool
+    street_labels_visible: bool
+    overview_map_visible: bool
+    exit_button_visible: bool
+    cursor_visible: bool
+    address_text_visible: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StreetsideExperience: ...
     @typing.overload

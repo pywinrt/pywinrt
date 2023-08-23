@@ -135,7 +135,6 @@ if sys.version_info >= (3, 9):
     from typing import Annotated
 
     # type aliases with struct format string annotation
-    Boolean = Annotated[bool, "?"]
     Int8 = Annotated[int, "b"]
     UInt8 = Annotated[int, "B"]
     Int16 = Annotated[int, "h"]
@@ -148,7 +147,6 @@ if sys.version_info >= (3, 9):
     Double = Annotated[float, "d"]
     Char16 = Annotated[str, "u"]
 else:
-    Boolean = bool
     Int8 = int
     UInt8 = int
     Int16 = int

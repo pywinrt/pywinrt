@@ -26,7 +26,7 @@ class PhotoImportProgress:
 
 class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
     deleted_items: typing.Optional[winrt.windows.foundation.collections.IVectorView[PhotoImportItem]]
-    has_succeeded: winrt.system.Boolean
+    has_succeeded: bool
     photos_count: winrt.system.UInt32
     photos_size_in_bytes: winrt.system.UInt64
     session: typing.Optional[PhotoImportSession]
@@ -43,7 +43,7 @@ class PhotoImportDeleteImportedItemsFromSourceResult(winrt.system.Object):
 
 class PhotoImportFindItemsResult(winrt.system.Object):
     found_items: typing.Optional[winrt.windows.foundation.collections.IVectorView[PhotoImportItem]]
-    has_succeeded: winrt.system.Boolean
+    has_succeeded: bool
     import_mode: PhotoImportImportMode
     photos_count: winrt.system.UInt32
     photos_size_in_bytes: winrt.system.UInt64
@@ -80,7 +80,7 @@ class PhotoImportFindItemsResult(winrt.system.Object):
     def remove_selection_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PhotoImportImportItemsResult(winrt.system.Object):
-    has_succeeded: winrt.system.Boolean
+    has_succeeded: bool
     imported_items: typing.Optional[winrt.windows.foundation.collections.IVectorView[PhotoImportItem]]
     photos_count: winrt.system.UInt32
     photos_size_in_bytes: winrt.system.UInt64
@@ -98,7 +98,7 @@ class PhotoImportImportItemsResult(winrt.system.Object):
     def delete_imported_items_from_source_async(self) -> winrt.windows.foundation.IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, winrt.system.Double]: ...
 
 class PhotoImportItem(winrt.system.Object):
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     content_type: PhotoImportContentType
     date: datetime.datetime
     deleted_file_names: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
@@ -127,7 +127,7 @@ class PhotoImportManager(winrt.system.Object):
     @staticmethod
     def get_pending_operations() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[PhotoImportOperation]]: ...
     @staticmethod
-    def is_supported_async() -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def is_supported_async() -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class PhotoImportOperation(winrt.system.Object):
     continue_deleting_imported_items_from_source_async: winrt.windows.foundation.IAsyncOperationWithProgress[PhotoImportDeleteImportedItemsFromSourceResult, winrt.system.Double]
@@ -139,7 +139,7 @@ class PhotoImportOperation(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PhotoImportOperation: ...
 
 class PhotoImportSelectionChangedEventArgs(winrt.system.Object):
-    is_selection_empty: winrt.system.Boolean
+    is_selection_empty: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhotoImportSelectionChangedEventArgs: ...
 
@@ -147,11 +147,11 @@ class PhotoImportSession(winrt.system.Object):
     subfolder_creation_mode: PhotoImportSubfolderCreationMode
     destination_folder: typing.Optional[winrt.windows.storage.IStorageFolder]
     destination_file_name_prefix: str
-    append_session_date_to_destination_folder: winrt.system.Boolean
+    append_session_date_to_destination_folder: bool
     session_id: uuid.UUID
     source: typing.Optional[PhotoImportSource]
     subfolder_date_format: PhotoImportSubfolderDateFormat
-    remember_deselected_items: winrt.system.Boolean
+    remember_deselected_items: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -174,8 +174,8 @@ class PhotoImportSource(winrt.system.Object):
     description: str
     display_name: str
     id: str
-    is_locked: typing.Optional[typing.Optional[winrt.system.Boolean]]
-    is_mass_storage: winrt.system.Boolean
+    is_locked: typing.Optional[typing.Optional[bool]]
+    is_mass_storage: bool
     manufacturer: str
     model: str
     power_source: PhotoImportPowerSource

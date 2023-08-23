@@ -43,8 +43,8 @@ class PreviewTeamJoinMeetingRequestedEventArgs(winrt.system.Object):
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class PreviewTeamView(winrt.system.Object):
-    is_full_screen: winrt.system.Boolean
-    is_screen_sharing: winrt.system.Boolean
+    is_full_screen: bool
+    is_screen_sharing: bool
     meeting_info_display_type: PreviewMeetingInfoDisplayKind
     meeting_uri: typing.Optional[winrt.windows.foundation.Uri]
     sharing_screen_bounds: winrt.windows.foundation.Rect

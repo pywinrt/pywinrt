@@ -18,15 +18,15 @@ Self = typing.TypeVar('Self')
 
 class AppInstallItem(winrt.system.Object):
     install_type: AppInstallType
-    is_user_initiated: winrt.system.Boolean
+    is_user_initiated: bool
     package_family_name: str
     product_id: str
     children: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]
-    item_operations_might_affect_other_items: winrt.system.Boolean
-    launch_after_install: winrt.system.Boolean
-    pin_to_taskbar_after_install: winrt.system.Boolean
-    pin_to_start_after_install: winrt.system.Boolean
-    pin_to_desktop_after_install: winrt.system.Boolean
+    item_operations_might_affect_other_items: bool
+    launch_after_install: bool
+    pin_to_taskbar_after_install: bool
+    pin_to_start_after_install: bool
+    pin_to_desktop_after_install: bool
     install_in_progress_toast_notification_mode: AppInstallationToastNotificationMode
     completed_install_toast_notification_mode: AppInstallationToastNotificationMode
     @staticmethod
@@ -54,7 +54,7 @@ class AppInstallManager(winrt.system.Object):
     acquisition_identity: str
     app_install_items: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]
     app_install_items_with_group_support: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]
-    can_install_for_all_users: winrt.system.Boolean
+    can_install_for_all_users: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallManager: ...
     def __new__(cls: typing.Type[AppInstallManager]) -> AppInstallManager:...
@@ -66,15 +66,15 @@ class AppInstallManager(winrt.system.Object):
     def get_free_user_entitlement_async(self, store_id: str, campaign_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[GetEntitlementResult]: ...
     def get_free_user_entitlement_for_user_async(self, user: typing.Optional[winrt.windows.system.User], store_id: str, campaign_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[GetEntitlementResult]: ...
     @typing.overload
-    def get_is_app_allowed_to_install_async(self, product_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def get_is_app_allowed_to_install_async(self, product_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def get_is_app_allowed_to_install_async(self, product_id: str, sku_id: str, catalog_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def get_is_app_allowed_to_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, sku_id: str, catalog_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def get_is_applicable_async(self, product_id: str, sku_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def get_is_applicable_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, sku_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def get_is_package_identity_allowed_to_install_async(self, correlation_vector: str, package_identity_name: str, publisher_certificate_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def get_is_package_identity_allowed_to_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], correlation_vector: str, package_identity_name: str, publisher_certificate_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def is_store_blocked_by_policy_async(self, store_client_name: str, store_client_publisher: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def get_is_app_allowed_to_install_async(self, product_id: str, sku_id: str, catalog_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def get_is_app_allowed_to_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, sku_id: str, catalog_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def get_is_applicable_async(self, product_id: str, sku_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def get_is_applicable_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, sku_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def get_is_package_identity_allowed_to_install_async(self, correlation_vector: str, package_identity_name: str, publisher_certificate_name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def get_is_package_identity_allowed_to_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], correlation_vector: str, package_identity_name: str, publisher_certificate_name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def is_store_blocked_by_policy_async(self, store_client_name: str, store_client_publisher: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def move_to_front_of_download_queue(self, product_id: str, correlation_vector: str, /) -> None: ...
     @typing.overload
     def pause(self, product_id: str, /) -> None: ...
@@ -105,17 +105,17 @@ class AppInstallManager(winrt.system.Object):
     @typing.overload
     def search_for_updates_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, sku_id: str, correlation_vector: str, client_id: str, update_options: typing.Optional[AppUpdateOptions], /) -> winrt.windows.foundation.IAsyncOperation[AppInstallItem]: ...
     @typing.overload
-    def start_app_install_async(self, product_id: str, sku_id: str, repair: winrt.system.Boolean, force_use_of_non_removable_storage: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[AppInstallItem]: ...
+    def start_app_install_async(self, product_id: str, sku_id: str, repair: bool, force_use_of_non_removable_storage: bool, /) -> winrt.windows.foundation.IAsyncOperation[AppInstallItem]: ...
     @typing.overload
-    def start_app_install_async(self, product_id: str, sku_id: str, repair: winrt.system.Boolean, force_use_of_non_removable_storage: winrt.system.Boolean, catalog_id: str, bundle_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[AppInstallItem]: ...
+    def start_app_install_async(self, product_id: str, sku_id: str, repair: bool, force_use_of_non_removable_storage: bool, catalog_id: str, bundle_id: str, correlation_vector: str, /) -> winrt.windows.foundation.IAsyncOperation[AppInstallItem]: ...
     @typing.overload
     def start_product_install_async(self, product_id: str, flight_id: str, client_id: str, correlation_vector: str, install_options: typing.Optional[AppInstallOptions], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]: ...
     @typing.overload
-    def start_product_install_async(self, product_id: str, catalog_id: str, flight_id: str, client_id: str, repair: winrt.system.Boolean, force_use_of_non_removable_storage: winrt.system.Boolean, correlation_vector: str, target_volume: typing.Optional[winrt.windows.management.deployment.PackageVolume], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]: ...
+    def start_product_install_async(self, product_id: str, catalog_id: str, flight_id: str, client_id: str, repair: bool, force_use_of_non_removable_storage: bool, correlation_vector: str, target_volume: typing.Optional[winrt.windows.management.deployment.PackageVolume], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]: ...
     @typing.overload
     def start_product_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, flight_id: str, client_id: str, correlation_vector: str, install_options: typing.Optional[AppInstallOptions], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]: ...
     @typing.overload
-    def start_product_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, catalog_id: str, flight_id: str, client_id: str, repair: winrt.system.Boolean, force_use_of_non_removable_storage: winrt.system.Boolean, correlation_vector: str, target_volume: typing.Optional[winrt.windows.management.deployment.PackageVolume], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]: ...
+    def start_product_install_for_user_async(self, user: typing.Optional[winrt.windows.system.User], product_id: str, catalog_id: str, flight_id: str, client_id: str, repair: bool, force_use_of_non_removable_storage: bool, correlation_vector: str, target_volume: typing.Optional[winrt.windows.management.deployment.PackageVolume], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppInstallItem]]: ...
     @typing.overload
     def update_app_by_package_family_name_async(self, package_family_name: str, /) -> winrt.windows.foundation.IAsyncOperation[AppInstallItem]: ...
     @typing.overload
@@ -133,17 +133,17 @@ class AppInstallManagerItemEventArgs(winrt.system.Object):
 
 class AppInstallOptions(winrt.system.Object):
     target_volume: typing.Optional[winrt.windows.management.deployment.PackageVolume]
-    repair: winrt.system.Boolean
-    launch_after_install: winrt.system.Boolean
-    force_use_of_non_removable_storage: winrt.system.Boolean
+    repair: bool
+    launch_after_install: bool
+    force_use_of_non_removable_storage: bool
     catalog_id: str
-    allow_forced_app_restart: winrt.system.Boolean
-    stage_but_do_not_install: winrt.system.Boolean
-    pin_to_taskbar_after_install: winrt.system.Boolean
-    pin_to_start_after_install: winrt.system.Boolean
-    pin_to_desktop_after_install: winrt.system.Boolean
+    allow_forced_app_restart: bool
+    stage_but_do_not_install: bool
+    pin_to_taskbar_after_install: bool
+    pin_to_start_after_install: bool
+    pin_to_desktop_after_install: bool
     install_in_progress_toast_notification_mode: AppInstallationToastNotificationMode
-    install_for_all_users: winrt.system.Boolean
+    install_for_all_users: bool
     extended_campaign_id: str
     completed_install_toast_notification_mode: AppInstallationToastNotificationMode
     campaign_id: str
@@ -157,16 +157,16 @@ class AppInstallStatus(winrt.system.Object):
     error_code: winrt.windows.foundation.HResult
     install_state: AppInstallState
     percent_complete: winrt.system.Double
-    ready_for_launch: winrt.system.Boolean
+    ready_for_launch: bool
     user: typing.Optional[winrt.windows.system.User]
-    is_staged: winrt.system.Boolean
+    is_staged: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallStatus: ...
 
 class AppUpdateOptions(winrt.system.Object):
     catalog_id: str
-    allow_forced_app_restart: winrt.system.Boolean
-    automatically_download_and_install_update_if_found: winrt.system.Boolean
+    allow_forced_app_restart: bool
+    automatically_download_and_install_update_if_found: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppUpdateOptions: ...
     def __new__(cls: typing.Type[AppUpdateOptions]) -> AppUpdateOptions:...

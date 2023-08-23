@@ -21,7 +21,7 @@ class CurrentTimeChangeRequestedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CurrentTimeChangeRequestedEventArgs: ...
 
 class MuteChangeRequestedEventArgs(winrt.system.Object):
-    mute: winrt.system.Boolean
+    mute: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MuteChangeRequestedEventArgs: ...
 
@@ -55,7 +55,7 @@ class PlayToConnectionTransferredEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PlayToConnectionTransferredEventArgs: ...
 
 class PlayToManager(winrt.system.Object):
-    default_source_selection: winrt.system.Boolean
+    default_source_selection: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToManager: ...
     @staticmethod
@@ -68,9 +68,9 @@ class PlayToManager(winrt.system.Object):
     def remove_source_selected(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PlayToReceiver(winrt.system.Object):
-    supports_video: winrt.system.Boolean
-    supports_image: winrt.system.Boolean
-    supports_audio: winrt.system.Boolean
+    supports_video: bool
+    supports_image: bool
+    supports_audio: bool
     friendly_name: str
     properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     @staticmethod
@@ -87,7 +87,7 @@ class PlayToReceiver(winrt.system.Object):
     def notify_seeking(self) -> None: ...
     def notify_stopped(self) -> None: ...
     def notify_time_update(self, current_time: datetime.timedelta, /) -> None: ...
-    def notify_volume_change(self, volume: winrt.system.Double, mute: winrt.system.Boolean, /) -> None: ...
+    def notify_volume_change(self, volume: winrt.system.Double, mute: bool, /) -> None: ...
     def start_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def stop_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def add_current_time_change_requested(self, handler: winrt.windows.foundation.TypedEventHandler[PlayToReceiver, CurrentTimeChangeRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -138,9 +138,9 @@ class PlayToSourceRequestedEventArgs(winrt.system.Object):
 class PlayToSourceSelectedEventArgs(winrt.system.Object):
     friendly_name: str
     icon: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamWithContentType]
-    supports_audio: winrt.system.Boolean
-    supports_image: winrt.system.Boolean
-    supports_video: winrt.system.Boolean
+    supports_audio: bool
+    supports_image: bool
+    supports_video: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlayToSourceSelectedEventArgs: ...
 

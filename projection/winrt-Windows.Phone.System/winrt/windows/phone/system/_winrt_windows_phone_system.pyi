@@ -11,7 +11,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 class SystemProtection(winrt.system.Object):
-    screen_locked: typing.ClassVar[winrt.system.Boolean]
+    screen_locked: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemProtection: ...
     @staticmethod

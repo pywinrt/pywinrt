@@ -19,7 +19,7 @@ Self = typing.TypeVar('Self')
 
 class Appointment(winrt.system.Object):
     location: str
-    all_day: winrt.system.Boolean
+    all_day: bool
     organizer: typing.Optional[AppointmentOrganizer]
     duration: datetime.timedelta
     details: str
@@ -31,15 +31,15 @@ class Appointment(winrt.system.Object):
     sensitivity: AppointmentSensitivity
     reminder: typing.Optional[typing.Optional[datetime.timedelta]]
     invitees: typing.Optional[winrt.windows.foundation.collections.IVector[AppointmentInvitee]]
-    allow_new_time_proposal: winrt.system.Boolean
+    allow_new_time_proposal: bool
     user_response: AppointmentParticipantResponse
     roaming_id: str
     reply_time: typing.Optional[typing.Optional[datetime.datetime]]
-    is_response_requested: winrt.system.Boolean
-    is_organized_by_user: winrt.system.Boolean
-    is_canceled_meeting: winrt.system.Boolean
+    is_response_requested: bool
+    is_organized_by_user: bool
+    is_canceled_meeting: bool
     online_meeting_link: str
-    has_invitees: winrt.system.Boolean
+    has_invitees: bool
     calendar_id: str
     local_id: str
     original_start_time: typing.Optional[typing.Optional[datetime.datetime]]
@@ -54,19 +54,19 @@ class AppointmentCalendar(winrt.system.Object):
     summary_card_view: AppointmentSummaryCardView
     other_app_write_access: AppointmentCalendarOtherAppWriteAccess
     display_color: winrt.windows.ui.Color
-    is_hidden: winrt.system.Boolean
+    is_hidden: bool
     display_name: str
     other_app_read_access: AppointmentCalendarOtherAppReadAccess
     local_id: str
     source_display_name: str
-    can_cancel_meetings: winrt.system.Boolean
-    can_notify_invitees: winrt.system.Boolean
+    can_cancel_meetings: bool
+    can_notify_invitees: bool
     remote_id: str
-    must_nofity_invitees: winrt.system.Boolean
-    can_update_meeting_responses: winrt.system.Boolean
-    can_propose_new_time_for_meetings: winrt.system.Boolean
-    can_create_or_update_appointments: winrt.system.Boolean
-    can_forward_meetings: winrt.system.Boolean
+    must_nofity_invitees: bool
+    can_update_meeting_responses: bool
+    can_propose_new_time_for_meetings: bool
+    can_create_or_update_appointments: bool
+    can_forward_meetings: bool
     sync_manager: typing.Optional[AppointmentCalendarSyncManager]
     user_data_account_id: str
     @staticmethod
@@ -92,11 +92,11 @@ class AppointmentCalendar(winrt.system.Object):
     def register_sync_manager_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def save_appointment_async(self, p_appointment: typing.Optional[Appointment], /) -> winrt.windows.foundation.IAsyncAction: ...
     def save_async(self) -> winrt.windows.foundation.IAsyncAction: ...
-    def try_cancel_meeting_async(self, meeting: typing.Optional[Appointment], subject: str, comment: str, notify_invitees: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_create_or_update_appointment_async(self, appointment: typing.Optional[Appointment], notify_invitees: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_forward_meeting_async(self, meeting: typing.Optional[Appointment], invitees: typing.Iterable[AppointmentInvitee], subject: str, forward_header: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_propose_new_time_for_meeting_async(self, meeting: typing.Optional[Appointment], new_start_time: datetime.datetime, new_duration: datetime.timedelta, subject: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_update_meeting_response_async(self, meeting: typing.Optional[Appointment], response: AppointmentParticipantResponse, subject: str, comment: str, send_update: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_cancel_meeting_async(self, meeting: typing.Optional[Appointment], subject: str, comment: str, notify_invitees: bool, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_create_or_update_appointment_async(self, appointment: typing.Optional[Appointment], notify_invitees: bool, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_forward_meeting_async(self, meeting: typing.Optional[Appointment], invitees: typing.Iterable[AppointmentInvitee], subject: str, forward_header: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_propose_new_time_for_meeting_async(self, meeting: typing.Optional[Appointment], new_start_time: datetime.datetime, new_duration: datetime.timedelta, subject: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_update_meeting_response_async(self, meeting: typing.Optional[Appointment], response: AppointmentParticipantResponse, subject: str, comment: str, send_update: bool, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class AppointmentCalendarSyncManager(winrt.system.Object):
     status: AppointmentCalendarSyncStatus
@@ -104,7 +104,7 @@ class AppointmentCalendarSyncManager(winrt.system.Object):
     last_attempted_sync_time: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarSyncManager: ...
-    def sync_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def sync_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_sync_status_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AppointmentCalendarSyncManager, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_sync_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -117,7 +117,7 @@ class AppointmentConflictResult(winrt.system.Object):
 class AppointmentException(winrt.system.Object):
     appointment: typing.Optional[Appointment]
     exception_properties: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    is_deleted: winrt.system.Boolean
+    is_deleted: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentException: ...
 
@@ -153,13 +153,13 @@ class AppointmentManager(winrt.system.Object):
     def show_edit_new_appointment_async(appointment: typing.Optional[Appointment], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
     @staticmethod
-    def show_remove_appointment_async(appointment_id: str, selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(appointment_id: str, selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     @staticmethod
-    def show_remove_appointment_async(appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     @staticmethod
-    def show_remove_appointment_async(appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     @staticmethod
     def show_replace_appointment_async(appointment_id: str, appointment: typing.Optional[Appointment], selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
@@ -187,11 +187,11 @@ class AppointmentManagerForUser(winrt.system.Object):
     def show_appointment_details_async(self, appointment_id: str, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncAction: ...
     def show_edit_new_appointment_async(self, appointment: typing.Optional[Appointment], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
-    def show_remove_appointment_async(self, appointment_id: str, selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(self, appointment_id: str, selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def show_remove_appointment_async(self, appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(self, appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def show_remove_appointment_async(self, appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(self, appointment_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     def show_replace_appointment_async(self, appointment_id: str, appointment: typing.Optional[Appointment], selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
@@ -286,9 +286,9 @@ class AppointmentStore(winrt.system.Object):
     def show_appointment_details_async(self, local_id: str, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncAction: ...
     def show_edit_new_appointment_async(self, appointment: typing.Optional[Appointment], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
-    def show_remove_appointment_async(self, local_id: str, selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(self, local_id: str, selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def show_remove_appointment_async(self, local_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_remove_appointment_async(self, local_id: str, selection: winrt.windows.foundation.Rect, preferred_placement: winrt.windows.ui.popups.Placement, instance_start_date: datetime.datetime, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     def show_replace_appointment_async(self, local_id: str, appointment: typing.Optional[Appointment], selection: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
@@ -311,7 +311,7 @@ class AppointmentStoreChangeReader(winrt.system.Object):
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AppointmentStoreChange]]: ...
 
 class AppointmentStoreChangeTracker(winrt.system.Object):
-    is_tracking: winrt.system.Boolean
+    is_tracking: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentStoreChangeTracker: ...
     def enable(self) -> None: ...
@@ -334,7 +334,7 @@ class AppointmentStoreNotificationTriggerDetails(winrt.system.Object):
 
 class FindAppointmentsOptions(winrt.system.Object):
     max_count: winrt.system.UInt32
-    include_hidden: winrt.system.Boolean
+    include_hidden: bool
     calendar_ids: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     fetch_properties: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     @staticmethod

@@ -65,7 +65,7 @@ class PushNotificationChannelsRevokedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PushNotificationChannelsRevokedEventArgs: ...
 
 class PushNotificationReceivedEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     badge_notification: typing.Optional[winrt.windows.ui.notifications.BadgeNotification]
     notification_type: PushNotificationType
     raw_notification: typing.Optional[RawNotification]

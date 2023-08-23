@@ -24,14 +24,14 @@ Self = typing.TypeVar('Self')
 
 class WebViewControl(winrt.system.Object):
     scale: winrt.system.Double
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     bounds: winrt.windows.foundation.Rect
     process: typing.Optional[WebViewControlProcess]
     source: typing.Optional[winrt.windows.foundation.Uri]
     default_background_color: winrt.windows.ui.Color
-    can_go_back: winrt.system.Boolean
-    can_go_forward: winrt.system.Boolean
-    contains_full_screen_element: winrt.system.Boolean
+    can_go_back: bool
+    can_go_forward: bool
+    contains_full_screen_element: bool
     deferred_permission_requests: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.web.ui.WebViewControlDeferredPermissionRequest]]
     document_title: str
     settings: typing.Optional[winrt.windows.web.ui.WebViewControlSettings]
@@ -97,7 +97,7 @@ class WebViewControl(winrt.system.Object):
     def remove_lost_focus(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class WebViewControlAcceleratorKeyPressedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     event_type: winrt.windows.ui.core.CoreAcceleratorKeyEventType
     key_status: winrt.windows.ui.core.CorePhysicalKeyStatus
     routing_stage: WebViewControlAcceleratorKeyRoutingStage
@@ -112,7 +112,7 @@ class WebViewControlMoveFocusRequestedEventArgs(winrt.system.Object):
 
 class WebViewControlProcess(winrt.system.Object):
     enterprise_id: str
-    is_private_network_client_server_capability_enabled: winrt.system.Boolean
+    is_private_network_client_server_capability_enabled: bool
     process_id: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlProcess: ...

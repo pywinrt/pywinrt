@@ -51,7 +51,7 @@ class XamlBindingHelper(winrt.system.Object):
     @staticmethod
     def set_data_template_component(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: typing.Optional[IDataTemplateComponent], /) -> None: ...
     @staticmethod
-    def set_property_from_boolean(dependency_object: typing.Optional[winrt.system.Object], property_to_set: typing.Optional[winrt.windows.ui.xaml.DependencyProperty], value: winrt.system.Boolean, /) -> None: ...
+    def set_property_from_boolean(dependency_object: typing.Optional[winrt.system.Object], property_to_set: typing.Optional[winrt.windows.ui.xaml.DependencyProperty], value: bool, /) -> None: ...
     @staticmethod
     def set_property_from_byte(dependency_object: typing.Optional[winrt.system.Object], property_to_set: typing.Optional[winrt.windows.ui.xaml.DependencyProperty], value: winrt.system.UInt8, /) -> None: ...
     @staticmethod
@@ -123,9 +123,9 @@ class IXamlBindScopeDiagnostics(winrt.system.Object):
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
 
 class IXamlMember(winrt.system.Object):
-    is_attachable: winrt.system.Boolean
-    is_dependency_property: winrt.system.Boolean
-    is_read_only: winrt.system.Boolean
+    is_attachable: bool
+    is_dependency_property: bool
+    is_read_only: bool
     name: str
     target_type: typing.Optional[IXamlType]
     type: typing.Optional[IXamlType]
@@ -144,12 +144,12 @@ class IXamlType(winrt.system.Object):
     base_type: typing.Optional[IXamlType]
     content_property: typing.Optional[IXamlMember]
     full_name: str
-    is_array: winrt.system.Boolean
-    is_bindable: winrt.system.Boolean
-    is_collection: winrt.system.Boolean
-    is_constructible: winrt.system.Boolean
-    is_dictionary: winrt.system.Boolean
-    is_markup_extension: winrt.system.Boolean
+    is_array: bool
+    is_bindable: bool
+    is_collection: bool
+    is_constructible: bool
+    is_dictionary: bool
+    is_markup_extension: bool
     item_type: typing.Optional[IXamlType]
     key_type: typing.Optional[IXamlType]
     underlying_type: winrt.windows.ui.xaml.interop.TypeName
@@ -167,12 +167,12 @@ class IXamlType2(winrt.system.Object):
     base_type: typing.Optional[IXamlType]
     content_property: typing.Optional[IXamlMember]
     full_name: str
-    is_array: winrt.system.Boolean
-    is_bindable: winrt.system.Boolean
-    is_collection: winrt.system.Boolean
-    is_constructible: winrt.system.Boolean
-    is_dictionary: winrt.system.Boolean
-    is_markup_extension: winrt.system.Boolean
+    is_array: bool
+    is_bindable: bool
+    is_collection: bool
+    is_constructible: bool
+    is_dictionary: bool
+    is_markup_extension: bool
     item_type: typing.Optional[IXamlType]
     key_type: typing.Optional[IXamlType]
     underlying_type: winrt.windows.ui.xaml.interop.TypeName

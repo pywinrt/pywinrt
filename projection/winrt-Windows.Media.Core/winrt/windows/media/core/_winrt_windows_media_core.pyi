@@ -67,7 +67,7 @@ class AudioStreamDescriptor(winrt.system.Object):
     leading_encoder_padding: typing.Optional[typing.Optional[winrt.system.UInt32]]
     name: str
     language: str
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     label: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioStreamDescriptor: ...
@@ -113,7 +113,7 @@ class ChapterCue(winrt.system.Object):
 class CodecInfo(winrt.system.Object):
     category: CodecCategory
     display_name: str
-    is_trusted: winrt.system.Boolean
+    is_trusted: bool
     kind: CodecKind
     subtypes: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     @staticmethod
@@ -196,7 +196,7 @@ class FaceDetectedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> FaceDetectedEventArgs: ...
 
 class FaceDetectionEffect(winrt.system.Object):
-    enabled: winrt.system.Boolean
+    enabled: bool
     desired_detection_interval: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceDetectionEffect: ...
@@ -205,7 +205,7 @@ class FaceDetectionEffect(winrt.system.Object):
     def remove_face_detected(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class FaceDetectionEffectDefinition(winrt.system.Object):
-    synchronous_detection_enabled: winrt.system.Boolean
+    synchronous_detection_enabled: bool
     detection_mode: FaceDetectionMode
     activatable_class_id: str
     properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
@@ -217,10 +217,10 @@ class FaceDetectionEffectFrame(winrt.system.Object):
     detected_faces: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.faceanalysis.DetectedFace]]
     system_relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
-    is_discontinuous: winrt.system.Boolean
+    is_discontinuous: bool
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     type: str
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -229,7 +229,7 @@ class FaceDetectionEffectFrame(winrt.system.Object):
     def close(self) -> None: ...
 
 class HighDynamicRangeControl(winrt.system.Object):
-    enabled: winrt.system.Boolean
+    enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HighDynamicRangeControl: ...
 
@@ -306,7 +306,7 @@ class MediaSource(winrt.system.Object):
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     external_timed_metadata_tracks: typing.Optional[winrt.windows.foundation.collections.IObservableVector[TimedMetadataTrack]]
     external_timed_text_sources: typing.Optional[winrt.windows.foundation.collections.IObservableVector[TimedTextSource]]
-    is_open: winrt.system.Boolean
+    is_open: bool
     state: MediaSourceState
     adaptive_media_source: typing.Optional[winrt.windows.media.streaming.adaptive.AdaptiveMediaSource]
     media_stream_source: typing.Optional[MediaStreamSource]
@@ -372,9 +372,9 @@ class MediaSourceStateChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MediaSourceStateChangedEventArgs: ...
 
 class MediaStreamSample(winrt.system.Object):
-    key_frame: winrt.system.Boolean
+    key_frame: bool
     duration: datetime.timedelta
-    discontinuous: winrt.system.Boolean
+    discontinuous: bool
     decode_timestamp: datetime.timedelta
     buffer: typing.Optional[winrt.windows.storage.streams.Buffer]
     extended_properties: typing.Optional[MediaStreamSamplePropertySet]
@@ -405,8 +405,8 @@ class MediaStreamSamplePropertySet(winrt.system.Object, typing.MutableMapping[uu
     def clear(self) -> None: ...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[winrt.windows.foundation.collections.IKeyValuePair[uuid.UUID, winrt.system.Object]]]: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]: ...
-    def has_key(self, key: uuid.UUID, /) -> winrt.system.Boolean: ...
-    def insert(self, key: uuid.UUID, value: typing.Optional[winrt.system.Object], /) -> winrt.system.Boolean: ...
+    def has_key(self, key: uuid.UUID, /) -> bool: ...
+    def insert(self, key: uuid.UUID, value: typing.Optional[winrt.system.Object], /) -> bool: ...
     def lookup(self, key: uuid.UUID, /) -> typing.Optional[winrt.system.Object]: ...
     def remove(self, key: uuid.UUID, /) -> None: ...
 
@@ -424,12 +424,12 @@ class MediaStreamSource(winrt.system.Object):
     thumbnail: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]
     media_protection_manager: typing.Optional[winrt.windows.media.protection.MediaProtectionManager]
     duration: datetime.timedelta
-    can_seek: winrt.system.Boolean
+    can_seek: bool
     buffer_time: datetime.timedelta
     music_properties: typing.Optional[winrt.windows.storage.fileproperties.MusicProperties]
     video_properties: typing.Optional[winrt.windows.storage.fileproperties.VideoProperties]
     max_supported_playback_rate: typing.Optional[typing.Optional[winrt.system.Double]]
-    is_live: winrt.system.Boolean
+    is_live: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaStreamSource: ...
     @typing.overload
@@ -526,7 +526,7 @@ class MseSourceBuffer(winrt.system.Object):
     append_window_start: datetime.timedelta
     append_window_end: typing.Optional[typing.Optional[datetime.timedelta]]
     buffered: typing.Optional[winrt.windows.foundation.collections.IVectorView[MseTimeRange]]
-    is_updating: winrt.system.Boolean
+    is_updating: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MseSourceBuffer: ...
     def abort(self) -> None: ...
@@ -568,7 +568,7 @@ class MseStreamSource(winrt.system.Object):
     def add_source_buffer(self, mime_type: str, /) -> typing.Optional[MseSourceBuffer]: ...
     def end_of_stream(self, status: MseEndOfStreamStatus, /) -> None: ...
     @staticmethod
-    def is_content_type_supported(content_type: str, /) -> winrt.system.Boolean: ...
+    def is_content_type_supported(content_type: str, /) -> bool: ...
     def remove_source_buffer(self, buffer: typing.Optional[MseSourceBuffer], /) -> None: ...
     def add_closed(self, handler: winrt.windows.foundation.TypedEventHandler[MseStreamSource, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_closed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -599,10 +599,10 @@ class SceneAnalysisEffectFrame(winrt.system.Object):
     analysis_recommendation: SceneAnalysisRecommendation
     system_relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
-    is_discontinuous: winrt.system.Boolean
+    is_discontinuous: bool
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     type: str
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -629,7 +629,7 @@ class SpeechCue(winrt.system.Object):
 class TimedMetadataStreamDescriptor(winrt.system.Object):
     name: str
     language: str
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     label: str
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties]
     @staticmethod
@@ -699,7 +699,7 @@ class TimedTextLine(winrt.system.Object):
 class TimedTextRegion(winrt.system.Object):
     name: str
     line_height: TimedTextDouble
-    is_overflow_clipped: winrt.system.Boolean
+    is_overflow_clipped: bool
     extent: TimedTextSize
     display_alignment: TimedTextDisplayAlignment
     padding: TimedTextPadding
@@ -759,7 +759,7 @@ class TimedTextSourceResolveResultEventArgs(winrt.system.Object):
 
 class TimedTextStyle(winrt.system.Object):
     line_alignment: TimedTextLineAlignment
-    is_background_always_shown: winrt.system.Boolean
+    is_background_always_shown: bool
     outline_color: winrt.windows.ui.Color
     foreground: winrt.windows.ui.Color
     font_weight: TimedTextWeight
@@ -770,11 +770,11 @@ class TimedTextStyle(winrt.system.Object):
     outline_thickness: TimedTextDouble
     outline_radius: TimedTextDouble
     name: str
-    is_underline_enabled: winrt.system.Boolean
-    is_overline_enabled: winrt.system.Boolean
-    is_line_through_enabled: winrt.system.Boolean
+    is_underline_enabled: bool
+    is_overline_enabled: bool
+    is_line_through_enabled: bool
     font_style: TimedTextFontStyle
-    is_text_combined: winrt.system.Boolean
+    is_text_combined: bool
     font_angle_in_degrees: winrt.system.Double
     bouten: typing.Optional[TimedTextBouten]
     ruby: typing.Optional[TimedTextRuby]
@@ -791,7 +791,7 @@ class TimedTextSubformat(winrt.system.Object):
     def __new__(cls: typing.Type[TimedTextSubformat]) -> TimedTextSubformat:...
 
 class VideoStabilizationEffect(winrt.system.Object):
-    enabled: winrt.system.Boolean
+    enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoStabilizationEffect: ...
     def get_recommended_stream_configuration(self, controller: typing.Optional[winrt.windows.media.devices.VideoDeviceController], desired_properties: typing.Optional[winrt.windows.media.mediaproperties.VideoEncodingProperties], /) -> typing.Optional[winrt.windows.media.capture.VideoStreamConfiguration]: ...
@@ -814,7 +814,7 @@ class VideoStabilizationEffectEnabledChangedEventArgs(winrt.system.Object):
 class VideoStreamDescriptor(winrt.system.Object):
     name: str
     language: str
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     label: str
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.VideoEncodingProperties]
     @staticmethod
@@ -859,7 +859,7 @@ class IMediaSource(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IMediaSource: ...
 
 class IMediaStreamDescriptor(winrt.system.Object):
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     language: str
     name: str
     @staticmethod
@@ -867,7 +867,7 @@ class IMediaStreamDescriptor(winrt.system.Object):
 
 class IMediaStreamDescriptor2(winrt.system.Object):
     label: str
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     language: str
     name: str
     @staticmethod

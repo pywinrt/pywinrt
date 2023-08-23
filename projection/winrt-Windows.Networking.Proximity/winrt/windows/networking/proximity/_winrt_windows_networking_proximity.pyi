@@ -25,9 +25,9 @@ class ConnectionRequestedEventArgs(winrt.system.Object):
 
 class PeerFinder(winrt.system.Object):
     display_name: typing.ClassVar[str]
-    allow_wi_fi_direct: typing.ClassVar[winrt.system.Boolean]
-    allow_infrastructure: typing.ClassVar[winrt.system.Boolean]
-    allow_bluetooth: typing.ClassVar[winrt.system.Boolean]
+    allow_wi_fi_direct: typing.ClassVar[bool]
+    allow_infrastructure: typing.ClassVar[bool]
+    allow_bluetooth: typing.ClassVar[bool]
     alternate_identities: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]]
     supported_discovery_types: typing.ClassVar[PeerDiscoveryTypes]
     role: typing.ClassVar[PeerRole]

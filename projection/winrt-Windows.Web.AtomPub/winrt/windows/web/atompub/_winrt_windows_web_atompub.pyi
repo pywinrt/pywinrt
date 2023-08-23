@@ -21,7 +21,7 @@ class AtomPubClient(winrt.system.Object):
     server_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     proxy_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     max_response_buffer_size: winrt.system.UInt32
-    bypass_cache_on_retrieve: winrt.system.Boolean
+    bypass_cache_on_retrieve: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AtomPubClient: ...
     @typing.overload

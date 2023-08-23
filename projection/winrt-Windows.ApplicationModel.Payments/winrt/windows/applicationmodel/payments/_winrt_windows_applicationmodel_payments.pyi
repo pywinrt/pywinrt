@@ -78,7 +78,7 @@ class PaymentDetailsModifier(winrt.system.Object):
     def __new__(cls: typing.Type[PaymentDetailsModifier], supported_method_ids: typing.Iterable[str], total: typing.Optional[PaymentItem], additional_display_items: typing.Iterable[PaymentItem], json_data: str) -> PaymentDetailsModifier:...
 
 class PaymentItem(winrt.system.Object):
-    pending: winrt.system.Boolean
+    pending: bool
     label: str
     amount: typing.Optional[PaymentCurrencyAmount]
     @staticmethod
@@ -118,7 +118,7 @@ class PaymentMethodData(winrt.system.Object):
 
 class PaymentOptions(winrt.system.Object):
     shipping_type: PaymentShippingType
-    request_shipping: winrt.system.Boolean
+    request_shipping: bool
     request_payer_phone_number: PaymentOptionPresence
     request_payer_name: PaymentOptionPresence
     request_payer_email: PaymentOptionPresence
@@ -154,13 +154,13 @@ class PaymentRequestChangedArgs(winrt.system.Object):
 class PaymentRequestChangedResult(winrt.system.Object):
     updated_payment_details: typing.Optional[PaymentDetails]
     message: str
-    change_accepted_by_merchant: winrt.system.Boolean
+    change_accepted_by_merchant: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentRequestChangedResult: ...
     @typing.overload
-    def __new__(cls: typing.Type[PaymentRequestChangedResult], change_accepted_by_merchant: winrt.system.Boolean) -> PaymentRequestChangedResult:...
+    def __new__(cls: typing.Type[PaymentRequestChangedResult], change_accepted_by_merchant: bool) -> PaymentRequestChangedResult:...
     @typing.overload
-    def __new__(cls: typing.Type[PaymentRequestChangedResult], change_accepted_by_merchant: winrt.system.Boolean, updated_payment_details: typing.Optional[PaymentDetails]) -> PaymentRequestChangedResult:...
+    def __new__(cls: typing.Type[PaymentRequestChangedResult], change_accepted_by_merchant: bool, updated_payment_details: typing.Optional[PaymentDetails]) -> PaymentRequestChangedResult:...
 
 class PaymentRequestSubmitResult(winrt.system.Object):
     response: typing.Optional[PaymentResponse]
@@ -182,16 +182,16 @@ class PaymentResponse(winrt.system.Object):
 class PaymentShippingOption(winrt.system.Object):
     tag: str
     label: str
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     amount: typing.Optional[PaymentCurrencyAmount]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PaymentShippingOption: ...
     @typing.overload
     def __new__(cls: typing.Type[PaymentShippingOption], label: str, amount: typing.Optional[PaymentCurrencyAmount]) -> PaymentShippingOption:...
     @typing.overload
-    def __new__(cls: typing.Type[PaymentShippingOption], label: str, amount: typing.Optional[PaymentCurrencyAmount], selected: winrt.system.Boolean) -> PaymentShippingOption:...
+    def __new__(cls: typing.Type[PaymentShippingOption], label: str, amount: typing.Optional[PaymentCurrencyAmount], selected: bool) -> PaymentShippingOption:...
     @typing.overload
-    def __new__(cls: typing.Type[PaymentShippingOption], label: str, amount: typing.Optional[PaymentCurrencyAmount], selected: winrt.system.Boolean, tag: str) -> PaymentShippingOption:...
+    def __new__(cls: typing.Type[PaymentShippingOption], label: str, amount: typing.Optional[PaymentCurrencyAmount], selected: bool, tag: str) -> PaymentShippingOption:...
 
 class PaymentToken(winrt.system.Object):
     json_details: str

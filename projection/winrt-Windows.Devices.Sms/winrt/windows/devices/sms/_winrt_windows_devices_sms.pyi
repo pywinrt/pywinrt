@@ -100,7 +100,7 @@ class SendSmsMessageOperation(winrt.system.Object):
 class SmsAppMessage(winrt.system.Object):
     protocol_id: winrt.system.Int32
     port_number: winrt.system.Int32
-    is_delivery_notification_enabled: winrt.system.Boolean
+    is_delivery_notification_enabled: bool
     retry_attempt_count: winrt.system.Int32
     encoding: SmsEncoding
     body: str
@@ -134,8 +134,8 @@ class SmsBroadcastMessage(winrt.system.Object):
     broadcast_type: SmsBroadcastType
     channel: winrt.system.Int32
     geographical_scope: SmsGeographicalScope
-    is_emergency_alert: winrt.system.Boolean
-    is_user_popup_requested: winrt.system.Boolean
+    is_emergency_alert: bool
+    is_user_popup_requested: bool
     message_code: winrt.system.Int32
     timestamp: datetime.datetime
     to: str
@@ -266,8 +266,8 @@ class SmsReceivedEventDetails(winrt.system.Object):
 
 class SmsSendMessageResult(winrt.system.Object):
     cellular_class: CellularClass
-    is_error_transient: winrt.system.Boolean
-    is_successful: winrt.system.Boolean
+    is_error_transient: bool
+    is_successful: bool
     message_reference_numbers: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Int32]]
     modem_error_code: SmsModemErrorCode
     network_cause_code: winrt.system.Int32
@@ -319,7 +319,7 @@ class SmsTextMessage2(winrt.system.Object):
     sim_icc_id: str
     retry_attempt_count: winrt.system.Int32
     to: str
-    is_delivery_notification_enabled: winrt.system.Boolean
+    is_delivery_notification_enabled: bool
     encoding: SmsEncoding
     callback_number: str
     body: str

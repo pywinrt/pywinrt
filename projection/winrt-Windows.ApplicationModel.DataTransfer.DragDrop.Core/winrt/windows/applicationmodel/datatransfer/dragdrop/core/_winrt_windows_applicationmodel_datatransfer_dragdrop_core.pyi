@@ -17,7 +17,7 @@ from . import CoreDragUIContentMode
 Self = typing.TypeVar('Self')
 
 class CoreDragDropManager(winrt.system.Object):
-    are_concurrent_operations_enabled: winrt.system.Boolean
+    are_concurrent_operations_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDragDropManager: ...
     @staticmethod
@@ -48,9 +48,9 @@ class CoreDragOperation(winrt.system.Object):
     def start_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.applicationmodel.datatransfer.DataPackageOperation]: ...
 
 class CoreDragUIOverride(winrt.system.Object):
-    is_glyph_visible: winrt.system.Boolean
-    is_content_visible: winrt.system.Boolean
-    is_caption_visible: winrt.system.Boolean
+    is_glyph_visible: bool
+    is_content_visible: bool
+    is_caption_visible: bool
     caption: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDragUIOverride: ...

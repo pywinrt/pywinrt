@@ -25,20 +25,20 @@ class PinChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PinChangedEventArgs: ...
 
 class SerialDevice(winrt.system.Object):
-    is_data_terminal_ready_enabled: winrt.system.Boolean
+    is_data_terminal_ready_enabled: bool
     data_bits: winrt.system.UInt16
     handshake: SerialHandshake
-    break_signal_state: winrt.system.Boolean
+    break_signal_state: bool
     baud_rate: winrt.system.UInt32
     write_timeout: datetime.timedelta
     stop_bits: SerialStopBitCount
     read_timeout: datetime.timedelta
     parity: SerialParity
-    is_request_to_send_enabled: winrt.system.Boolean
+    is_request_to_send_enabled: bool
     bytes_received: winrt.system.UInt32
-    carrier_detect_state: winrt.system.Boolean
-    clear_to_send_state: winrt.system.Boolean
-    data_set_ready_state: winrt.system.Boolean
+    carrier_detect_state: bool
+    clear_to_send_state: bool
+    data_set_ready_state: bool
     input_stream: typing.Optional[winrt.windows.storage.streams.IInputStream]
     output_stream: typing.Optional[winrt.windows.storage.streams.IOutputStream]
     port_name: str

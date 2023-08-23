@@ -84,7 +84,7 @@ class Geocoordinate(winrt.system.Object):
     position_source: PositionSource
     satellite_data: typing.Optional[GeocoordinateSatelliteData]
     position_source_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
-    is_remote_source: winrt.system.Boolean
+    is_remote_source: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geocoordinate: ...
 
@@ -104,7 +104,7 @@ class Geolocator(winrt.system.Object):
     location_status: PositionStatus
     desired_accuracy_in_meters: typing.Optional[typing.Optional[winrt.system.UInt32]]
     default_geoposition: typing.ClassVar[typing.Optional[typing.Optional[BasicGeoposition]]]
-    is_default_geoposition_recommended: typing.ClassVar[winrt.system.Boolean]
+    is_default_geoposition_recommended: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geolocator: ...
     def __new__(cls: typing.Type[Geolocator]) -> Geolocator:...

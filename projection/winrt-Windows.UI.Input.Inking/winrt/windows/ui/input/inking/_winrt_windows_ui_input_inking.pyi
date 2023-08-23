@@ -22,14 +22,14 @@ Self = typing.TypeVar('Self')
 class InkDrawingAttributes(winrt.system.Object):
     size: winrt.windows.foundation.Size
     pen_tip: PenTipShape
-    ignore_pressure: winrt.system.Boolean
-    fit_to_curve: winrt.system.Boolean
+    ignore_pressure: bool
+    fit_to_curve: bool
     color: winrt.windows.ui.Color
     pen_tip_transform: winrt.windows.foundation.numerics.Matrix3x2
-    draw_as_highlighter: winrt.system.Boolean
+    draw_as_highlighter: bool
     kind: InkDrawingAttributesKind
     pencil_properties: typing.Optional[InkDrawingAttributesPencilProperties]
-    ignore_tilt: winrt.system.Boolean
+    ignore_tilt: bool
     modeler_attributes: typing.Optional[InkModelerAttributes]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkDrawingAttributes: ...
@@ -43,9 +43,9 @@ class InkDrawingAttributesPencilProperties(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> InkDrawingAttributesPencilProperties: ...
 
 class InkInputConfiguration(winrt.system.Object):
-    is_primary_barrel_button_input_enabled: winrt.system.Boolean
-    is_eraser_input_enabled: winrt.system.Boolean
-    is_pen_haptic_feedback_enabled: winrt.system.Boolean
+    is_primary_barrel_button_input_enabled: bool
+    is_eraser_input_enabled: bool
+    is_pen_haptic_feedback_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkInputConfiguration: ...
 
@@ -62,7 +62,7 @@ class InkManager(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> InkManager: ...
     def __new__(cls: typing.Type[InkManager]) -> InkManager:...
     def add_stroke(self, stroke: typing.Optional[InkStroke], /) -> None: ...
-    def can_paste_from_clipboard(self) -> winrt.system.Boolean: ...
+    def can_paste_from_clipboard(self) -> bool: ...
     def copy_selected_to_clipboard(self) -> None: ...
     def delete_selected(self) -> winrt.windows.foundation.Rect: ...
     def get_recognition_results(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[InkRecognitionResult]]: ...
@@ -88,7 +88,7 @@ class InkManager(winrt.system.Object):
 class InkModelerAttributes(winrt.system.Object):
     scaling_factor: winrt.system.Single
     prediction_time: datetime.timedelta
-    use_velocity_based_pressure: winrt.system.Boolean
+    use_velocity_based_pressure: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkModelerAttributes: ...
 
@@ -107,7 +107,7 @@ class InkPoint(winrt.system.Object):
 
 class InkPresenter(winrt.system.Object):
     stroke_container: typing.Optional[InkStrokeContainer]
-    is_input_enabled: winrt.system.Boolean
+    is_input_enabled: bool
     input_device_types: winrt.windows.ui.core.CoreInputDeviceTypes
     input_processing_configuration: typing.Optional[InkInputProcessingConfiguration]
     stroke_input: typing.Optional[InkStrokeInput]
@@ -127,14 +127,14 @@ class InkPresenter(winrt.system.Object):
 
 class InkPresenterProtractor(winrt.system.Object):
     radius: winrt.system.Double
-    is_resizable: winrt.system.Boolean
-    is_center_marker_visible: winrt.system.Boolean
-    is_angle_readout_visible: winrt.system.Boolean
-    are_tick_marks_visible: winrt.system.Boolean
-    are_rays_visible: winrt.system.Boolean
+    is_resizable: bool
+    is_center_marker_visible: bool
+    is_angle_readout_visible: bool
+    are_tick_marks_visible: bool
+    are_rays_visible: bool
     accent_color: winrt.windows.ui.Color
     transform: winrt.windows.foundation.numerics.Matrix3x2
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     foreground_color: winrt.windows.ui.Color
     background_color: winrt.windows.ui.Color
     kind: InkPresenterStencilKind
@@ -145,10 +145,10 @@ class InkPresenterProtractor(winrt.system.Object):
 class InkPresenterRuler(winrt.system.Object):
     width: winrt.system.Double
     length: winrt.system.Double
-    is_compass_visible: winrt.system.Boolean
-    are_tick_marks_visible: winrt.system.Boolean
+    is_compass_visible: bool
+    are_tick_marks_visible: bool
     transform: winrt.windows.foundation.numerics.Matrix3x2
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     foreground_color: winrt.windows.ui.Color
     background_color: winrt.windows.ui.Color
     kind: InkPresenterStencilKind
@@ -177,10 +177,10 @@ class InkRecognizerContainer(winrt.system.Object):
     def set_default_recognizer(self, recognizer: typing.Optional[InkRecognizer], /) -> None: ...
 
 class InkStroke(winrt.system.Object):
-    selected: winrt.system.Boolean
+    selected: bool
     drawing_attributes: typing.Optional[InkDrawingAttributes]
     bounding_rect: winrt.windows.foundation.Rect
-    recognized: winrt.system.Boolean
+    recognized: bool
     point_transform: winrt.windows.foundation.numerics.Matrix3x2
     stroke_started_time: typing.Optional[typing.Optional[datetime.datetime]]
     stroke_duration: typing.Optional[typing.Optional[datetime.timedelta]]
@@ -213,7 +213,7 @@ class InkStrokeContainer(winrt.system.Object):
     def __new__(cls: typing.Type[InkStrokeContainer]) -> InkStrokeContainer:...
     def add_stroke(self, stroke: typing.Optional[InkStroke], /) -> None: ...
     def add_strokes(self, strokes: typing.Iterable[InkStroke], /) -> None: ...
-    def can_paste_from_clipboard(self) -> winrt.system.Boolean: ...
+    def can_paste_from_clipboard(self) -> bool: ...
     def clear(self) -> None: ...
     def copy_selected_to_clipboard(self) -> None: ...
     def delete_selected(self) -> winrt.windows.foundation.Rect: ...
@@ -293,10 +293,10 @@ class InkUnprocessedInput(winrt.system.Object):
 class PenAndInkSettings(winrt.system.Object):
     font_family_name: str
     handwriting_line_height: HandwritingLineHeight
-    is_handwriting_directly_into_text_field_enabled: winrt.system.Boolean
-    is_touch_handwriting_enabled: winrt.system.Boolean
+    is_handwriting_directly_into_text_field_enabled: bool
+    is_touch_handwriting_enabled: bool
     pen_handedness: PenHandedness
-    user_consents_to_handwriting_telemetry_collection: winrt.system.Boolean
+    user_consents_to_handwriting_telemetry_collection: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PenAndInkSettings: ...
     @staticmethod
@@ -316,7 +316,7 @@ class IInkPresenterRulerFactory(winrt.system.Object):
 class IInkPresenterStencil(winrt.system.Object):
     background_color: winrt.windows.ui.Color
     foreground_color: winrt.windows.ui.Color
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     kind: InkPresenterStencilKind
     transform: winrt.windows.foundation.numerics.Matrix3x2
     @staticmethod
@@ -334,7 +334,7 @@ class IInkStrokeContainer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInkStrokeContainer: ...
     def add_stroke(self, stroke: typing.Optional[InkStroke], /) -> None: ...
-    def can_paste_from_clipboard(self) -> winrt.system.Boolean: ...
+    def can_paste_from_clipboard(self) -> bool: ...
     def copy_selected_to_clipboard(self) -> None: ...
     def delete_selected(self) -> winrt.windows.foundation.Rect: ...
     def get_recognition_results(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[InkRecognitionResult]]: ...

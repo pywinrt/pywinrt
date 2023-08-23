@@ -45,13 +45,13 @@ class CurrentApp(winrt.system.Object):
     @staticmethod
     def report_product_fulfillment(product_id: str, /) -> None: ...
     @staticmethod
-    def request_app_purchase_async(include_receipt: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
+    def request_app_purchase_async(include_receipt: bool, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
     @staticmethod
     def request_product_purchase_async(product_id: str, /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
     @typing.overload
     @staticmethod
-    def request_product_purchase_async(product_id: str, include_receipt: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
+    def request_product_purchase_async(product_id: str, include_receipt: bool, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
     @staticmethod
     def request_product_purchase_async(product_id: str, offer_id: str, display_properties: typing.Optional[ProductPurchaseDisplayProperties], /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
@@ -81,21 +81,21 @@ class CurrentAppSimulator(winrt.system.Object):
     @staticmethod
     def report_consumable_fulfillment_async(product_id: str, transaction_id: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[FulfillmentResult]: ...
     @staticmethod
-    def request_app_purchase_async(include_receipt: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
+    def request_app_purchase_async(include_receipt: bool, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
     @staticmethod
     def request_product_purchase_async(product_id: str, /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
     @typing.overload
     @staticmethod
-    def request_product_purchase_async(product_id: str, include_receipt: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
+    def request_product_purchase_async(product_id: str, include_receipt: bool, /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     @typing.overload
     @staticmethod
     def request_product_purchase_async(product_id: str, offer_id: str, display_properties: typing.Optional[ProductPurchaseDisplayProperties], /) -> winrt.windows.foundation.IAsyncOperation[PurchaseResults]: ...
 
 class LicenseInformation(winrt.system.Object):
     expiration_date: datetime.datetime
-    is_active: winrt.system.Boolean
-    is_trial: winrt.system.Boolean
+    is_active: bool
+    is_trial: bool
     product_licenses: typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductLicense]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseInformation: ...
@@ -111,16 +111,16 @@ class ListingInformation(winrt.system.Object):
     product_listings: typing.Optional[winrt.windows.foundation.collections.IMapView[str, ProductListing]]
     currency_code: str
     formatted_base_price: str
-    is_on_sale: winrt.system.Boolean
+    is_on_sale: bool
     sale_end_date: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListingInformation: ...
 
 class ProductLicense(winrt.system.Object):
     expiration_date: datetime.datetime
-    is_active: winrt.system.Boolean
+    is_active: bool
     product_id: str
-    is_consumable: winrt.system.Boolean
+    is_consumable: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProductLicense: ...
 
@@ -129,7 +129,7 @@ class ProductListing(winrt.system.Object):
     name: str
     product_id: str
     formatted_base_price: str
-    is_on_sale: winrt.system.Boolean
+    is_on_sale: bool
     sale_end_date: datetime.datetime
     currency_code: str
     description: str

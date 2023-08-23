@@ -17,7 +17,7 @@ from . import HidCollectionType, HidReportType
 Self = typing.TypeVar('Self')
 
 class HidBooleanControl(winrt.system.Object):
-    is_active: winrt.system.Boolean
+    is_active: bool
     control_description: typing.Optional[HidBooleanControlDescription]
     id: winrt.system.UInt32
     usage_id: winrt.system.UInt16
@@ -32,7 +32,7 @@ class HidBooleanControlDescription(winrt.system.Object):
     report_type: HidReportType
     usage_id: winrt.system.UInt16
     usage_page: winrt.system.UInt16
-    is_absolute: winrt.system.Boolean
+    is_absolute: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidBooleanControlDescription: ...
 
@@ -118,16 +118,16 @@ class HidNumericControl(winrt.system.Object):
     scaled_value: winrt.system.Int64
     control_description: typing.Optional[HidNumericControlDescription]
     id: winrt.system.UInt32
-    is_grouped: winrt.system.Boolean
+    is_grouped: bool
     usage_id: winrt.system.UInt16
     usage_page: winrt.system.UInt16
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HidNumericControl: ...
 
 class HidNumericControlDescription(winrt.system.Object):
-    has_null: winrt.system.Boolean
+    has_null: bool
     id: winrt.system.UInt32
-    is_absolute: winrt.system.Boolean
+    is_absolute: bool
     logical_maximum: winrt.system.Int32
     logical_minimum: winrt.system.Int32
     parent_collections: typing.Optional[winrt.windows.foundation.collections.IVectorView[HidCollection]]

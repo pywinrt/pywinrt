@@ -22,7 +22,7 @@ class DetectedFace(winrt.system.Object):
 class FaceDetector(winrt.system.Object):
     min_detectable_face_size: winrt.windows.graphics.imaging.BitmapSize
     max_detectable_face_size: winrt.windows.graphics.imaging.BitmapSize
-    is_supported: typing.ClassVar[winrt.system.Boolean]
+    is_supported: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceDetector: ...
     @staticmethod
@@ -34,12 +34,12 @@ class FaceDetector(winrt.system.Object):
     @staticmethod
     def get_supported_bitmap_pixel_formats() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.imaging.BitmapPixelFormat]]: ...
     @staticmethod
-    def is_bitmap_pixel_format_supported(bitmap_pixel_format: winrt.windows.graphics.imaging.BitmapPixelFormat, /) -> winrt.system.Boolean: ...
+    def is_bitmap_pixel_format_supported(bitmap_pixel_format: winrt.windows.graphics.imaging.BitmapPixelFormat, /) -> bool: ...
 
 class FaceTracker(winrt.system.Object):
     min_detectable_face_size: winrt.windows.graphics.imaging.BitmapSize
     max_detectable_face_size: winrt.windows.graphics.imaging.BitmapSize
-    is_supported: typing.ClassVar[winrt.system.Boolean]
+    is_supported: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceTracker: ...
     @staticmethod
@@ -47,6 +47,6 @@ class FaceTracker(winrt.system.Object):
     @staticmethod
     def get_supported_bitmap_pixel_formats() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.graphics.imaging.BitmapPixelFormat]]: ...
     @staticmethod
-    def is_bitmap_pixel_format_supported(bitmap_pixel_format: winrt.windows.graphics.imaging.BitmapPixelFormat, /) -> winrt.system.Boolean: ...
+    def is_bitmap_pixel_format_supported(bitmap_pixel_format: winrt.windows.graphics.imaging.BitmapPixelFormat, /) -> bool: ...
     def process_next_frame_async(self, video_frame: typing.Optional[winrt.windows.media.VideoFrame], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVector[DetectedFace]]: ...
 

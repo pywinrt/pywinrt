@@ -15,7 +15,7 @@ import winrt.windows.storage.streams
 Self = typing.TypeVar('Self')
 
 class LocalContentSuggestionSettings(winrt.system.Object):
-    enabled: winrt.system.Boolean
+    enabled: bool
     aqs_filter: str
     locations: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.storage.StorageFolder]]
     properties_to_match: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
@@ -24,13 +24,13 @@ class LocalContentSuggestionSettings(winrt.system.Object):
     def __new__(cls: typing.Type[LocalContentSuggestionSettings]) -> LocalContentSuggestionSettings:...
 
 class SearchPane(winrt.system.Object):
-    show_on_keyboard_input: winrt.system.Boolean
-    search_history_enabled: winrt.system.Boolean
+    show_on_keyboard_input: bool
+    search_history_enabled: bool
     search_history_context: str
     placeholder_text: str
     language: str
     query_text: str
-    visible: winrt.system.Boolean
+    visible: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPane: ...
     @staticmethod
@@ -42,7 +42,7 @@ class SearchPane(winrt.system.Object):
     def show(self) -> None: ...
     @typing.overload
     def show(self, query: str, /) -> None: ...
-    def try_set_query_text(self, query: str, /) -> winrt.system.Boolean: ...
+    def try_set_query_text(self, query: str, /) -> bool: ...
     def add_query_changed(self, handler: winrt.windows.foundation.TypedEventHandler[SearchPane, SearchPaneQueryChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_query_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_query_submitted(self, handler: winrt.windows.foundation.TypedEventHandler[SearchPane, SearchPaneQuerySubmittedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -81,7 +81,7 @@ class SearchPaneResultSuggestionChosenEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SearchPaneResultSuggestionChosenEventArgs: ...
 
 class SearchPaneSuggestionsRequest(winrt.system.Object):
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     search_suggestion_collection: typing.Optional[SearchSuggestionCollection]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequest: ...
@@ -101,7 +101,7 @@ class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequestedEventArgs: ...
 
 class SearchPaneVisibilityChangedEventArgs(winrt.system.Object):
-    visible: winrt.system.Boolean
+    visible: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneVisibilityChangedEventArgs: ...
 
@@ -123,7 +123,7 @@ class SearchSuggestionCollection(winrt.system.Object):
     def append_search_separator(self, label: str, /) -> None: ...
 
 class SearchSuggestionsRequest(winrt.system.Object):
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     search_suggestion_collection: typing.Optional[SearchSuggestionCollection]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequest: ...

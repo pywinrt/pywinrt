@@ -56,8 +56,8 @@ class ButtonBase(winrt.system.Object):
     command_parameter: typing.Optional[winrt.system.Object]
     command: typing.Optional[winrt.windows.ui.xaml.input.ICommand]
     click_mode: winrt.windows.ui.xaml.controls.ClickMode
-    is_pointer_over: winrt.system.Boolean
-    is_pressed: winrt.system.Boolean
+    is_pointer_over: bool
+    is_pressed: bool
     click_mode_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     command_parameter_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     command_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -77,9 +77,9 @@ class CalendarViewTemplateSettings(winrt.system.Object):
     center_x: winrt.system.Double
     center_y: winrt.system.Double
     clip_rect: winrt.windows.foundation.Rect
-    has_more_content_after: winrt.system.Boolean
-    has_more_content_before: winrt.system.Boolean
-    has_more_views: winrt.system.Boolean
+    has_more_content_after: bool
+    has_more_content_before: bool
+    has_more_views: bool
     header_text: str
     min_view_width: winrt.system.Double
     week_day1: str
@@ -94,16 +94,16 @@ class CalendarViewTemplateSettings(winrt.system.Object):
 
 class CarouselPanel(winrt.system.Object):
     scroll_owner: typing.Optional[winrt.system.Object]
-    can_vertically_scroll: winrt.system.Boolean
-    can_horizontally_scroll: winrt.system.Boolean
+    can_vertically_scroll: bool
+    can_horizontally_scroll: bool
     extent_height: winrt.system.Double
     extent_width: winrt.system.Double
     horizontal_offset: winrt.system.Double
     vertical_offset: winrt.system.Double
     viewport_height: winrt.system.Double
     viewport_width: winrt.system.Double
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CarouselPanel: ...
     def __new__(cls: typing.Type[CarouselPanel]) -> CarouselPanel:...
@@ -219,12 +219,12 @@ class CommandBarTemplateSettings(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CommandBarTemplateSettings: ...
 
 class DragCompletedEventArgs(winrt.system.Object):
-    canceled: winrt.system.Boolean
+    canceled: bool
     horizontal_change: winrt.system.Double
     vertical_change: winrt.system.Double
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragCompletedEventArgs: ...
-    def __new__(cls: typing.Type[DragCompletedEventArgs], horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, canceled: winrt.system.Boolean) -> DragCompletedEventArgs:...
+    def __new__(cls: typing.Type[DragCompletedEventArgs], horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, canceled: bool) -> DragCompletedEventArgs:...
 
 class DragDeltaEventArgs(winrt.system.Object):
     horizontal_change: winrt.system.Double
@@ -244,17 +244,17 @@ class FlyoutBase(winrt.system.Object):
     placement: FlyoutPlacementMode
     light_dismiss_overlay_mode: winrt.windows.ui.xaml.controls.LightDismissOverlayMode
     element_sound_mode: winrt.windows.ui.xaml.ElementSoundMode
-    allow_focus_when_disabled: winrt.system.Boolean
-    allow_focus_on_interaction: winrt.system.Boolean
+    allow_focus_when_disabled: bool
+    allow_focus_on_interaction: bool
     target: typing.Optional[winrt.windows.ui.xaml.FrameworkElement]
     overlay_input_pass_through_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     show_mode: FlyoutShowMode
-    are_open_close_animations_enabled: winrt.system.Boolean
-    input_device_prefers_primary_commands: winrt.system.Boolean
-    is_open: winrt.system.Boolean
+    are_open_close_animations_enabled: bool
+    input_device_prefers_primary_commands: bool
+    is_open: bool
     xaml_root: typing.Optional[winrt.windows.ui.xaml.XamlRoot]
-    should_constrain_to_root_bounds: winrt.system.Boolean
-    is_constrained_to_root_bounds: winrt.system.Boolean
+    should_constrain_to_root_bounds: bool
+    is_constrained_to_root_bounds: bool
     attached_flyout_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     placement_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     allow_focus_on_interaction_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -294,7 +294,7 @@ class FlyoutBase(winrt.system.Object):
     def remove_closing(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class FlyoutBaseClosingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutBaseClosingEventArgs: ...
 
@@ -314,7 +314,7 @@ class GeneratorPositionHelper(winrt.system.Object):
     def from_index_and_offset(index: winrt.system.Int32, offset: winrt.system.Int32, /) -> GeneratorPosition: ...
 
 class GridViewItemPresenter(winrt.system.Object):
-    selection_check_mark_visual_enabled: winrt.system.Boolean
+    selection_check_mark_visual_enabled: bool
     selected_pointer_over_border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     selected_pointer_over_background: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     selected_foreground: typing.Optional[winrt.windows.ui.xaml.media.Brush]
@@ -409,7 +409,7 @@ class LayoutInformation(winrt.system.Object):
     def get_layout_slot(element: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], /) -> winrt.windows.foundation.Rect: ...
 
 class ListViewItemPresenter(winrt.system.Object):
-    selection_check_mark_visual_enabled: winrt.system.Boolean
+    selection_check_mark_visual_enabled: bool
     selected_pointer_over_border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     selected_pointer_over_background: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     selected_foreground: typing.Optional[winrt.windows.ui.xaml.media.Brush]
@@ -438,7 +438,7 @@ class ListViewItemPresenter(winrt.system.Object):
     check_mode: ListViewItemPresenterCheckMode
     check_box_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     reveal_background: typing.Optional[winrt.windows.ui.xaml.media.Brush]
-    reveal_background_shows_above_content: winrt.system.Boolean
+    reveal_background_shows_above_content: bool
     reveal_border_thickness: winrt.windows.ui.xaml.Thickness
     reveal_border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     check_disabled_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
@@ -455,7 +455,7 @@ class ListViewItemPresenter(winrt.system.Object):
     selected_border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     pointer_over_border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     check_pressed_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
-    selection_indicator_visual_enabled: winrt.system.Boolean
+    selection_indicator_visual_enabled: bool
     check_box_selected_pressed_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     check_box_selected_pointer_over_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     check_box_selected_disabled_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
@@ -537,7 +537,7 @@ class ListViewItemTemplateSettings(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ListViewItemTemplateSettings: ...
 
 class LoopingSelector(winrt.system.Object):
-    should_loop: winrt.system.Boolean
+    should_loop: bool
     selected_item: typing.Optional[winrt.system.Object]
     selected_index: winrt.system.Int32
     items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Object]]
@@ -561,8 +561,8 @@ class LoopingSelectorItem(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> LoopingSelectorItem: ...
 
 class LoopingSelectorPanel(winrt.system.Object):
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LoopingSelectorPanel: ...
     def get_irregular_snap_points(self, orientation: winrt.windows.ui.xaml.controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Single]]: ...
@@ -591,16 +591,16 @@ class NavigationViewItemPresenter(winrt.system.Object):
 
 class OrientedVirtualizingPanel(winrt.system.Object):
     scroll_owner: typing.Optional[winrt.system.Object]
-    can_vertically_scroll: winrt.system.Boolean
-    can_horizontally_scroll: winrt.system.Boolean
+    can_vertically_scroll: bool
+    can_horizontally_scroll: bool
     extent_height: winrt.system.Double
     extent_width: winrt.system.Double
     horizontal_offset: winrt.system.Double
     vertical_offset: winrt.system.Double
     viewport_height: winrt.system.Double
     viewport_width: winrt.system.Double
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OrientedVirtualizingPanel: ...
     def get_insertion_indexes(self, position: winrt.windows.foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -635,7 +635,7 @@ class PickerFlyoutBase(winrt.system.Object):
     def on_confirmed(self) -> None: ...
     @staticmethod
     def set_title(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: str, /) -> None: ...
-    def should_show_confirmation_buttons(self) -> winrt.system.Boolean: ...
+    def should_show_confirmation_buttons(self) -> bool: ...
 
 class PivotHeaderItem(winrt.system.Object):
     @staticmethod
@@ -648,8 +648,8 @@ class PivotHeaderPanel(winrt.system.Object):
     def __new__(cls: typing.Type[PivotHeaderPanel]) -> PivotHeaderPanel:...
 
 class PivotPanel(winrt.system.Object):
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotPanel: ...
     def __new__(cls: typing.Type[PivotPanel]) -> PivotPanel:...
@@ -662,14 +662,14 @@ class PivotPanel(winrt.system.Object):
 
 class Popup(winrt.system.Object):
     vertical_offset: winrt.system.Double
-    is_open: winrt.system.Boolean
-    is_light_dismiss_enabled: winrt.system.Boolean
+    is_open: bool
+    is_light_dismiss_enabled: bool
     horizontal_offset: winrt.system.Double
     child_transitions: typing.Optional[winrt.windows.ui.xaml.media.animation.TransitionCollection]
     child: typing.Optional[winrt.windows.ui.xaml.UIElement]
     light_dismiss_overlay_mode: winrt.windows.ui.xaml.controls.LightDismissOverlayMode
-    should_constrain_to_root_bounds: winrt.system.Boolean
-    is_constrained_to_root_bounds: winrt.system.Boolean
+    should_constrain_to_root_bounds: bool
+    is_constrained_to_root_bounds: bool
     placement_target: typing.Optional[winrt.windows.ui.xaml.FrameworkElement]
     desired_placement: PopupPlacementMode
     actual_placement: PopupPlacementMode
@@ -770,7 +770,7 @@ class Selector(winrt.system.Object):
     selected_value: typing.Optional[winrt.system.Object]
     selected_item: typing.Optional[winrt.system.Object]
     selected_index: winrt.system.Int32
-    is_synchronized_with_current_item: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    is_synchronized_with_current_item: typing.Optional[typing.Optional[bool]]
     is_synchronized_with_current_item_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     selected_index_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     selected_item_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -779,12 +779,12 @@ class Selector(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Selector: ...
     @staticmethod
-    def get_is_selection_active(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_selection_active(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     def add_selection_changed(self, handler: typing.Optional[winrt.windows.ui.xaml.controls.SelectionChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_selection_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class SelectorItem(winrt.system.Object):
-    is_selected: winrt.system.Boolean
+    is_selected: bool
     is_selected_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorItem: ...
@@ -810,7 +810,7 @@ class SplitViewTemplateSettings(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SplitViewTemplateSettings: ...
 
 class Thumb(winrt.system.Object):
-    is_dragging: winrt.system.Boolean
+    is_dragging: bool
     is_dragging_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Thumb: ...
@@ -831,8 +831,8 @@ class TickBar(winrt.system.Object):
     def __new__(cls: typing.Type[TickBar]) -> TickBar:...
 
 class ToggleButton(winrt.system.Object):
-    is_three_state: winrt.system.Boolean
-    is_checked: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    is_three_state: bool
+    is_checked: typing.Optional[typing.Optional[bool]]
     is_checked_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_three_state_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -865,8 +865,8 @@ class ToolTipTemplateSettings(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ToolTipTemplateSettings: ...
 
 class IScrollSnapPointsInfo(winrt.system.Object):
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollSnapPointsInfo: ...
     def get_irregular_snap_points(self, orientation: winrt.windows.ui.xaml.controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Single]]: ...

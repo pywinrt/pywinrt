@@ -13,7 +13,7 @@ from . import RemoteTextConnectionDataHandler
 Self = typing.TypeVar('Self')
 
 class RemoteTextConnection(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

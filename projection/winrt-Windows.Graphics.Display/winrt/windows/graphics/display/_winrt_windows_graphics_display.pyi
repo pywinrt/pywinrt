@@ -35,13 +35,13 @@ class AdvancedColorInfo(winrt.system.Object):
     white_point: winrt.windows.foundation.Point
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdvancedColorInfo: ...
-    def is_advanced_color_kind_available(self, kind: AdvancedColorKind, /) -> winrt.system.Boolean: ...
-    def is_hdr_metadata_format_currently_supported(self, format: HdrMetadataFormat, /) -> winrt.system.Boolean: ...
+    def is_advanced_color_kind_available(self, kind: AdvancedColorKind, /) -> bool: ...
+    def is_hdr_metadata_format_currently_supported(self, format: HdrMetadataFormat, /) -> bool: ...
 
 class BrightnessOverride(winrt.system.Object):
     brightness_level: winrt.system.Double
-    is_override_active: winrt.system.Boolean
-    is_supported: winrt.system.Boolean
+    is_override_active: bool
+    is_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BrightnessOverride: ...
     @staticmethod
@@ -50,7 +50,7 @@ class BrightnessOverride(winrt.system.Object):
     def get_for_current_view() -> typing.Optional[BrightnessOverride]: ...
     def get_level_for_scenario(self, scenario: DisplayBrightnessScenario, /) -> winrt.system.Double: ...
     @staticmethod
-    def save_for_system_async(value: typing.Optional[BrightnessOverride], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def save_for_system_async(value: typing.Optional[BrightnessOverride], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def set_brightness_level(self, brightness_level: winrt.system.Double, options: DisplayBrightnessOverrideOptions, /) -> None: ...
     def set_brightness_scenario(self, scenario: DisplayBrightnessScenario, options: DisplayBrightnessOverrideOptions, /) -> None: ...
     def start_override(self) -> None: ...
@@ -84,8 +84,8 @@ class ColorOverrideSettings(winrt.system.Object):
 class DisplayEnhancementOverride(winrt.system.Object):
     color_override_settings: typing.Optional[ColorOverrideSettings]
     brightness_override_settings: typing.Optional[BrightnessOverrideSettings]
-    can_override: winrt.system.Boolean
-    is_override_active: winrt.system.Boolean
+    can_override: bool
+    is_override_active: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayEnhancementOverride: ...
     def get_current_display_enhancement_override_capabilities(self) -> typing.Optional[DisplayEnhancementOverrideCapabilities]: ...
@@ -101,8 +101,8 @@ class DisplayEnhancementOverride(winrt.system.Object):
     def remove_is_override_active_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class DisplayEnhancementOverrideCapabilities(winrt.system.Object):
-    is_brightness_control_supported: winrt.system.Boolean
-    is_brightness_nits_control_supported: winrt.system.Boolean
+    is_brightness_control_supported: bool
+    is_brightness_nits_control_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayEnhancementOverrideCapabilities: ...
     def get_supported_nit_ranges(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[NitRange]]: ...
@@ -119,7 +119,7 @@ class DisplayInformation(winrt.system.Object):
     raw_dpi_x: winrt.system.Single
     raw_dpi_y: winrt.system.Single
     resolution_scale: ResolutionScale
-    stereo_enabled: winrt.system.Boolean
+    stereo_enabled: bool
     raw_pixels_per_view_pixel: winrt.system.Double
     diagonal_size_in_inches: typing.Optional[typing.Optional[winrt.system.Double]]
     screen_height_in_raw_pixels: winrt.system.UInt32
@@ -152,7 +152,7 @@ class DisplayProperties(winrt.system.Object):
     logical_dpi: typing.ClassVar[winrt.system.Single]
     native_orientation: typing.ClassVar[DisplayOrientations]
     resolution_scale: typing.ClassVar[ResolutionScale]
-    stereo_enabled: typing.ClassVar[winrt.system.Boolean]
+    stereo_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayProperties: ...
     @staticmethod

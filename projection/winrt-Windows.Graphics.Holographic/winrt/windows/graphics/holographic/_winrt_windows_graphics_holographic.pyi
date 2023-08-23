@@ -37,17 +37,17 @@ class HolographicStereoTransform:
 class HolographicCamera(winrt.system.Object):
     viewport_scale_factor: winrt.system.Double
     id: winrt.system.UInt32
-    is_stereo: winrt.system.Boolean
+    is_stereo: bool
     render_target_size: winrt.windows.foundation.Size
     display: typing.Optional[HolographicDisplay]
     left_viewport_parameters: typing.Optional[HolographicCameraViewportParameters]
     right_viewport_parameters: typing.Optional[HolographicCameraViewportParameters]
-    is_primary_layer_enabled: winrt.system.Boolean
+    is_primary_layer_enabled: bool
     max_quad_layer_count: winrt.system.UInt32
     quad_layers: typing.Optional[winrt.windows.foundation.collections.IVector[HolographicQuadLayer]]
-    can_override_viewport: winrt.system.Boolean
-    is_hardware_content_protection_enabled: winrt.system.Boolean
-    is_hardware_content_protection_supported: winrt.system.Boolean
+    can_override_viewport: bool
+    is_hardware_content_protection_enabled: bool
+    is_hardware_content_protection_supported: bool
     view_configuration: typing.Optional[HolographicViewConfiguration]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicCamera: ...
@@ -73,7 +73,7 @@ class HolographicCameraRenderingParameters(winrt.system.Object):
     direct3_d11_back_buffer: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface]
     direct3_d11_device: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DDevice]
     reprojection_mode: HolographicReprojectionMode
-    is_content_protection_enabled: winrt.system.Boolean
+    is_content_protection_enabled: bool
     depth_reprojection_method: HolographicDepthReprojectionMethod
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicCameraRenderingParameters: ...
@@ -94,8 +94,8 @@ class HolographicCameraViewportParameters(winrt.system.Object):
 class HolographicDisplay(winrt.system.Object):
     adapter_id: HolographicAdapterId
     display_name: str
-    is_opaque: winrt.system.Boolean
-    is_stereo: winrt.system.Boolean
+    is_opaque: bool
+    is_stereo: bool
     max_viewport_size: winrt.windows.foundation.Size
     spatial_locator: typing.Optional[winrt.windows.perception.spatial.SpatialLocator]
     refresh_rate: winrt.system.Double
@@ -185,12 +185,12 @@ class HolographicQuadLayer(winrt.system.Object):
     def close(self) -> None: ...
 
 class HolographicQuadLayerUpdateParameters(winrt.system.Object):
-    can_acquire_with_hardware_protection: winrt.system.Boolean
+    can_acquire_with_hardware_protection: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicQuadLayerUpdateParameters: ...
     def acquire_buffer_to_update_content(self) -> typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface]: ...
     def acquire_buffer_to_update_content_with_hardware_protection(self) -> typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface]: ...
-    def update_content_protection_enabled(self, value: winrt.system.Boolean, /) -> None: ...
+    def update_content_protection_enabled(self, value: bool, /) -> None: ...
     def update_extents(self, value: winrt.windows.foundation.numerics.Vector2, /) -> None: ...
     def update_location_with_display_relative_mode(self, position: winrt.windows.foundation.numerics.Vector3, orientation: winrt.windows.foundation.numerics.Quaternion, /) -> None: ...
     def update_location_with_stationary_mode(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], position: winrt.windows.foundation.numerics.Vector3, orientation: winrt.windows.foundation.numerics.Quaternion, /) -> None: ...
@@ -199,9 +199,9 @@ class HolographicQuadLayerUpdateParameters(winrt.system.Object):
 class HolographicSpace(winrt.system.Object):
     primary_adapter_id: HolographicAdapterId
     user_presence: HolographicSpaceUserPresence
-    is_available: typing.ClassVar[winrt.system.Boolean]
-    is_supported: typing.ClassVar[winrt.system.Boolean]
-    is_configured: typing.ClassVar[winrt.system.Boolean]
+    is_available: typing.ClassVar[bool]
+    is_supported: typing.ClassVar[bool]
+    is_configured: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HolographicSpace: ...
     @staticmethod
@@ -236,9 +236,9 @@ class HolographicSpaceCameraRemovedEventArgs(winrt.system.Object):
 
 class HolographicViewConfiguration(winrt.system.Object):
     pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     display: typing.Optional[HolographicDisplay]
-    is_stereo: winrt.system.Boolean
+    is_stereo: bool
     kind: HolographicViewConfigurationKind
     native_render_target_size: winrt.windows.foundation.Size
     refresh_rate: winrt.system.Double

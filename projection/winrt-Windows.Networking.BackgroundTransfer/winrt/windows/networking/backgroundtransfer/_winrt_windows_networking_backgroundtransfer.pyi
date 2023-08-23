@@ -24,9 +24,9 @@ class BackgroundDownloadProgress:
     bytes_received: winrt.system.UInt64
     total_bytes_to_receive: winrt.system.UInt64
     status: BackgroundTransferStatus
-    has_response_changed: winrt.system.Boolean
-    has_restarted: winrt.system.Boolean
-    def __new__(cls: typing.Type[BackgroundDownloadProgress], bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: winrt.system.Boolean, has_restarted: winrt.system.Boolean) -> BackgroundDownloadProgress: ...
+    has_response_changed: bool
+    has_restarted: bool
+    def __new__(cls: typing.Type[BackgroundDownloadProgress], bytes_received: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> BackgroundDownloadProgress: ...
 
 class BackgroundTransferFileRange:
     offset: winrt.system.UInt64
@@ -39,9 +39,9 @@ class BackgroundUploadProgress:
     total_bytes_to_receive: winrt.system.UInt64
     total_bytes_to_send: winrt.system.UInt64
     status: BackgroundTransferStatus
-    has_response_changed: winrt.system.Boolean
-    has_restarted: winrt.system.Boolean
-    def __new__(cls: typing.Type[BackgroundUploadProgress], bytes_received: winrt.system.UInt64, bytes_sent: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: winrt.system.Boolean, has_restarted: winrt.system.Boolean) -> BackgroundUploadProgress: ...
+    has_response_changed: bool
+    has_restarted: bool
+    def __new__(cls: typing.Type[BackgroundUploadProgress], bytes_received: winrt.system.UInt64, bytes_sent: winrt.system.UInt64, total_bytes_to_receive: winrt.system.UInt64, total_bytes_to_send: winrt.system.UInt64, status: BackgroundTransferStatus, has_response_changed: bool, has_restarted: bool) -> BackgroundUploadProgress: ...
 
 class BackgroundDownloader(winrt.system.Object):
     failure_toast_notification: typing.Optional[winrt.windows.ui.notifications.ToastNotification]
@@ -79,7 +79,7 @@ class BackgroundDownloader(winrt.system.Object):
     def set_request_header(self, header_name: str, header_value: str, /) -> None: ...
 
 class BackgroundTransferCompletionGroup(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     trigger: typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTrigger]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferCompletionGroup: ...
@@ -121,7 +121,7 @@ class BackgroundTransferGroup(winrt.system.Object):
 
 class BackgroundTransferRangesDownloadedEventArgs(winrt.system.Object):
     added_ranges: typing.Optional[winrt.windows.foundation.collections.IVector[BackgroundTransferFileRange]]
-    was_download_restarted: winrt.system.Boolean
+    was_download_restarted: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundTransferRangesDownloadedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -181,7 +181,7 @@ class DownloadOperation(winrt.system.Object):
     progress: BackgroundDownloadProgress
     result_file: typing.Optional[winrt.windows.storage.IStorageFile]
     transfer_group: typing.Optional[BackgroundTransferGroup]
-    is_random_access_required: winrt.system.Boolean
+    is_random_access_required: bool
     current_web_error_status: typing.Optional[typing.Optional[winrt.windows.web.WebErrorStatus]]
     recoverable_web_error_statuses: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.web.WebErrorStatus]]
     @staticmethod
@@ -203,13 +203,13 @@ class DownloadOperation(winrt.system.Object):
 class ResponseInformation(winrt.system.Object):
     actual_uri: typing.Optional[winrt.windows.foundation.Uri]
     headers: typing.Optional[winrt.windows.foundation.collections.IMapView[str, str]]
-    is_resumable: winrt.system.Boolean
+    is_resumable: bool
     status_code: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResponseInformation: ...
 
 class UnconstrainedTransferRequestResult(winrt.system.Object):
-    is_unconstrained: winrt.system.Boolean
+    is_unconstrained: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnconstrainedTransferRequestResult: ...
 

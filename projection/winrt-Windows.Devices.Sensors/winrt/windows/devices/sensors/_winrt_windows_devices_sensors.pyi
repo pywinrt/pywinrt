@@ -116,7 +116,7 @@ class ActivitySensorTriggerDetails(winrt.system.Object):
     def read_reports(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ActivitySensorReadingChangeReport]]: ...
 
 class AdaptiveDimmingOptions(winrt.system.Object):
-    allow_when_external_display_connected: winrt.system.Boolean
+    allow_when_external_display_connected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveDimmingOptions: ...
 
@@ -297,12 +297,12 @@ class HingeAngleSensorReadingChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> HingeAngleSensorReadingChangedEventArgs: ...
 
 class HumanPresenceFeatures(winrt.system.Object):
-    is_attention_aware_dimming_supported: winrt.system.Boolean
-    is_lock_on_leave_supported: winrt.system.Boolean
-    is_wake_on_approach_supported: winrt.system.Boolean
+    is_attention_aware_dimming_supported: bool
+    is_lock_on_leave_supported: bool
+    is_wake_on_approach_supported: bool
     sensor_id: str
     supported_wake_or_lock_distances_in_millimeters: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
-    is_adaptive_dimming_supported: winrt.system.Boolean
+    is_adaptive_dimming_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HumanPresenceFeatures: ...
 
@@ -310,8 +310,8 @@ class HumanPresenceSensor(winrt.system.Object):
     device_id: str
     max_detectable_distance_in_millimeters: typing.Optional[typing.Optional[winrt.system.UInt32]]
     min_detectable_distance_in_millimeters: typing.Optional[typing.Optional[winrt.system.UInt32]]
-    is_engagement_supported: winrt.system.Boolean
-    is_presence_supported: winrt.system.Boolean
+    is_engagement_supported: bool
+    is_presence_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HumanPresenceSensor: ...
     @staticmethod
@@ -346,10 +346,10 @@ class HumanPresenceSettings(winrt.system.Object):
     sensor_id: str
     lock_on_leave_timeout: datetime.timedelta
     lock_on_leave_distance_in_millimeters: typing.Optional[typing.Optional[winrt.system.UInt32]]
-    is_wake_on_approach_enabled: winrt.system.Boolean
-    is_lock_on_leave_enabled: winrt.system.Boolean
-    is_attention_aware_dimming_enabled: winrt.system.Boolean
-    is_adaptive_dimming_enabled: winrt.system.Boolean
+    is_wake_on_approach_enabled: bool
+    is_lock_on_leave_enabled: bool
+    is_attention_aware_dimming_enabled: bool
+    is_adaptive_dimming_enabled: bool
     dimming_options: typing.Optional[AdaptiveDimmingOptions]
     lock_options: typing.Optional[LockOnLeaveOptions]
     wake_options: typing.Optional[WakeOnApproachOptions]
@@ -463,7 +463,7 @@ class LightSensorReadingChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> LightSensorReadingChangedEventArgs: ...
 
 class LockOnLeaveOptions(winrt.system.Object):
-    allow_when_external_display_connected: winrt.system.Boolean
+    allow_when_external_display_connected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LockOnLeaveOptions: ...
 
@@ -632,7 +632,7 @@ class ProximitySensorDisplayOnOffController(winrt.system.Object):
 
 class ProximitySensorReading(winrt.system.Object):
     distance_in_millimeters: typing.Optional[typing.Optional[winrt.system.UInt32]]
-    is_detected: winrt.system.Boolean
+    is_detected: bool
     timestamp: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProximitySensorReading: ...
@@ -691,8 +691,8 @@ class SimpleOrientationSensorOrientationChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SimpleOrientationSensorOrientationChangedEventArgs: ...
 
 class WakeOnApproachOptions(winrt.system.Object):
-    disable_when_battery_saver_on: winrt.system.Boolean
-    allow_when_external_display_connected: winrt.system.Boolean
+    disable_when_battery_saver_on: bool
+    allow_when_external_display_connected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WakeOnApproachOptions: ...
 

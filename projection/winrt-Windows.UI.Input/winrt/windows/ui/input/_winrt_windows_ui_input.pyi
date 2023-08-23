@@ -80,10 +80,10 @@ class EdgeGestureEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> EdgeGestureEventArgs: ...
 
 class GestureRecognizer(winrt.system.Object):
-    show_gesture_feedback: winrt.system.Boolean
+    show_gesture_feedback: bool
     pivot_radius: winrt.system.Single
     pivot_center: winrt.windows.foundation.Point
-    manipulation_exact: winrt.system.Boolean
+    manipulation_exact: bool
     inertia_translation_displacement: winrt.system.Single
     inertia_translation_deceleration: winrt.system.Single
     inertia_rotation_deceleration: winrt.system.Single
@@ -92,11 +92,11 @@ class GestureRecognizer(winrt.system.Object):
     inertia_expansion: winrt.system.Single
     gesture_settings: GestureSettings
     cross_slide_thresholds: CrossSlideThresholds
-    cross_slide_horizontally: winrt.system.Boolean
-    cross_slide_exact: winrt.system.Boolean
-    auto_process_inertia: winrt.system.Boolean
-    is_active: winrt.system.Boolean
-    is_inertial: winrt.system.Boolean
+    cross_slide_horizontally: bool
+    cross_slide_exact: bool
+    auto_process_inertia: bool
+    is_active: bool
+    is_inertial: bool
     mouse_wheel_parameters: typing.Optional[MouseWheelParameters]
     translation_min_contact_count: winrt.system.UInt32
     translation_max_contact_count: winrt.system.UInt32
@@ -109,11 +109,11 @@ class GestureRecognizer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GestureRecognizer: ...
     def __new__(cls: typing.Type[GestureRecognizer]) -> GestureRecognizer:...
-    def can_be_double_tap(self, value: typing.Optional[PointerPoint], /) -> winrt.system.Boolean: ...
+    def can_be_double_tap(self, value: typing.Optional[PointerPoint], /) -> bool: ...
     def complete_gesture(self) -> None: ...
     def process_down_event(self, value: typing.Optional[PointerPoint], /) -> None: ...
     def process_inertia(self) -> None: ...
-    def process_mouse_wheel_event(self, value: typing.Optional[PointerPoint], is_shift_key_down: winrt.system.Boolean, is_control_key_down: winrt.system.Boolean, /) -> None: ...
+    def process_mouse_wheel_event(self, value: typing.Optional[PointerPoint], is_shift_key_down: bool, is_control_key_down: bool, /) -> None: ...
     def process_move_events(self, value: winrt.windows.foundation.collections.IVector[PointerPoint], /) -> None: ...
     def process_up_event(self, value: typing.Optional[PointerPoint], /) -> None: ...
     def add_cross_sliding(self, handler: winrt.windows.foundation.TypedEventHandler[GestureRecognizer, CrossSlidingEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -157,7 +157,7 @@ class InputActivationListenerActivationChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> InputActivationListenerActivationChangedEventArgs: ...
 
 class KeyboardDeliveryInterceptor(winrt.system.Object):
-    is_interception_enabled_when_in_foreground: winrt.system.Boolean
+    is_interception_enabled_when_in_foreground: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyboardDeliveryInterceptor: ...
     @staticmethod
@@ -216,7 +216,7 @@ class MouseWheelParameters(winrt.system.Object):
 
 class PointerPoint(winrt.system.Object):
     frame_id: winrt.system.UInt32
-    is_in_contact: winrt.system.Boolean
+    is_in_contact: bool
     pointer_device: typing.Optional[winrt.windows.devices.input.PointerDevice]
     pointer_id: winrt.system.UInt32
     position: winrt.windows.foundation.Point
@@ -241,23 +241,23 @@ class PointerPoint(winrt.system.Object):
 class PointerPointProperties(winrt.system.Object):
     contact_rect: winrt.windows.foundation.Rect
     contact_rect_raw: winrt.windows.foundation.Rect
-    is_barrel_button_pressed: winrt.system.Boolean
-    is_canceled: winrt.system.Boolean
-    is_eraser: winrt.system.Boolean
-    is_horizontal_mouse_wheel: winrt.system.Boolean
-    is_in_range: winrt.system.Boolean
-    is_inverted: winrt.system.Boolean
-    is_left_button_pressed: winrt.system.Boolean
-    is_middle_button_pressed: winrt.system.Boolean
-    is_primary: winrt.system.Boolean
-    is_right_button_pressed: winrt.system.Boolean
-    is_x_button1_pressed: winrt.system.Boolean
-    is_x_button2_pressed: winrt.system.Boolean
+    is_barrel_button_pressed: bool
+    is_canceled: bool
+    is_eraser: bool
+    is_horizontal_mouse_wheel: bool
+    is_in_range: bool
+    is_inverted: bool
+    is_left_button_pressed: bool
+    is_middle_button_pressed: bool
+    is_primary: bool
+    is_right_button_pressed: bool
+    is_x_button1_pressed: bool
+    is_x_button2_pressed: bool
     mouse_wheel_delta: winrt.system.Int32
     orientation: winrt.system.Single
     pointer_update_kind: PointerUpdateKind
     pressure: winrt.system.Single
-    touch_confidence: winrt.system.Boolean
+    touch_confidence: bool
     twist: winrt.system.Single
     x_tilt: winrt.system.Single
     y_tilt: winrt.system.Single
@@ -265,18 +265,18 @@ class PointerPointProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerPointProperties: ...
     def get_usage_value(self, usage_page: winrt.system.UInt32, usage_id: winrt.system.UInt32, /) -> winrt.system.Int32: ...
-    def has_usage(self, usage_page: winrt.system.UInt32, usage_id: winrt.system.UInt32, /) -> winrt.system.Boolean: ...
+    def has_usage(self, usage_page: winrt.system.UInt32, usage_id: winrt.system.UInt32, /) -> bool: ...
 
 class PointerVisualizationSettings(winrt.system.Object):
-    is_contact_feedback_enabled: winrt.system.Boolean
-    is_barrel_button_feedback_enabled: winrt.system.Boolean
+    is_contact_feedback_enabled: bool
+    is_barrel_button_feedback_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerVisualizationSettings: ...
     @staticmethod
     def get_for_current_view() -> typing.Optional[PointerVisualizationSettings]: ...
 
 class RadialController(winrt.system.Object):
-    use_automatic_haptic_feedback: winrt.system.Boolean
+    use_automatic_haptic_feedback: bool
     rotation_resolution_in_degrees: winrt.system.Double
     menu: typing.Optional[RadialControllerMenu]
     @staticmethod
@@ -284,7 +284,7 @@ class RadialController(winrt.system.Object):
     @staticmethod
     def create_for_current_view() -> typing.Optional[RadialController]: ...
     @staticmethod
-    def is_supported() -> winrt.system.Boolean: ...
+    def is_supported() -> bool: ...
     def add_button_clicked(self, handler: winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerButtonClickedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_button_clicked(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_control_acquired(self, handler: winrt.windows.foundation.TypedEventHandler[RadialController, RadialControllerControlAcquiredEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -331,9 +331,9 @@ class RadialControllerButtonReleasedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> RadialControllerButtonReleasedEventArgs: ...
 
 class RadialControllerConfiguration(winrt.system.Object):
-    is_menu_suppressed: winrt.system.Boolean
+    is_menu_suppressed: bool
     active_controller_when_menu_is_suppressed: typing.Optional[RadialController]
-    is_app_controller_enabled: typing.ClassVar[winrt.system.Boolean]
+    is_app_controller_enabled: typing.ClassVar[bool]
     app_controller: typing.ClassVar[typing.Optional[RadialController]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerConfiguration: ...
@@ -341,23 +341,23 @@ class RadialControllerConfiguration(winrt.system.Object):
     def get_for_current_view() -> typing.Optional[RadialControllerConfiguration]: ...
     def reset_to_default_menu_items(self) -> None: ...
     def set_default_menu_items(self, buttons: typing.Iterable[RadialControllerSystemMenuItemKind], /) -> None: ...
-    def try_select_default_menu_item(self, type: RadialControllerSystemMenuItemKind, /) -> winrt.system.Boolean: ...
+    def try_select_default_menu_item(self, type: RadialControllerSystemMenuItemKind, /) -> bool: ...
 
 class RadialControllerControlAcquiredEventArgs(winrt.system.Object):
     contact: typing.Optional[RadialControllerScreenContact]
-    is_button_pressed: winrt.system.Boolean
+    is_button_pressed: bool
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerControlAcquiredEventArgs: ...
 
 class RadialControllerMenu(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     items: typing.Optional[winrt.windows.foundation.collections.IVector[RadialControllerMenuItem]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerMenu: ...
     def get_selected_menu_item(self) -> typing.Optional[RadialControllerMenuItem]: ...
     def select_menu_item(self, menu_item: typing.Optional[RadialControllerMenuItem], /) -> None: ...
-    def try_select_previously_selected_menu_item(self) -> winrt.system.Boolean: ...
+    def try_select_previously_selected_menu_item(self) -> bool: ...
 
 class RadialControllerMenuItem(winrt.system.Object):
     tag: typing.Optional[winrt.system.Object]
@@ -380,7 +380,7 @@ class RadialControllerMenuItem(winrt.system.Object):
 class RadialControllerRotationChangedEventArgs(winrt.system.Object):
     contact: typing.Optional[RadialControllerScreenContact]
     rotation_delta_in_degrees: winrt.system.Double
-    is_button_pressed: winrt.system.Boolean
+    is_button_pressed: bool
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerRotationChangedEventArgs: ...
@@ -393,20 +393,20 @@ class RadialControllerScreenContact(winrt.system.Object):
 
 class RadialControllerScreenContactContinuedEventArgs(winrt.system.Object):
     contact: typing.Optional[RadialControllerScreenContact]
-    is_button_pressed: winrt.system.Boolean
+    is_button_pressed: bool
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContactContinuedEventArgs: ...
 
 class RadialControllerScreenContactEndedEventArgs(winrt.system.Object):
-    is_button_pressed: winrt.system.Boolean
+    is_button_pressed: bool
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContactEndedEventArgs: ...
 
 class RadialControllerScreenContactStartedEventArgs(winrt.system.Object):
     contact: typing.Optional[RadialControllerScreenContact]
-    is_button_pressed: winrt.system.Boolean
+    is_button_pressed: bool
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadialControllerScreenContactStartedEventArgs: ...
@@ -433,21 +433,21 @@ class SystemButtonEventController(winrt.system.Object):
     def remove_system_function_lock_indicator_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class SystemFunctionButtonEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     timestamp: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemFunctionButtonEventArgs: ...
 
 class SystemFunctionLockChangedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
-    is_locked: winrt.system.Boolean
+    handled: bool
+    is_locked: bool
     timestamp: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemFunctionLockChangedEventArgs: ...
 
 class SystemFunctionLockIndicatorChangedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
-    is_indicator_on: winrt.system.Boolean
+    handled: bool
+    is_indicator_on: bool
     timestamp: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemFunctionLockIndicatorChangedEventArgs: ...
@@ -465,5 +465,5 @@ class IPointerPointTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPointerPointTransform: ...
     def transform_bounds(self, rect: winrt.windows.foundation.Rect, /) -> winrt.windows.foundation.Rect: ...
-    def try_transform(self, in_point: winrt.windows.foundation.Point, /) -> typing.Tuple[winrt.system.Boolean, winrt.windows.foundation.Point]: ...
+    def try_transform(self, in_point: winrt.windows.foundation.Point, /) -> typing.Tuple[bool, winrt.windows.foundation.Point]: ...
 

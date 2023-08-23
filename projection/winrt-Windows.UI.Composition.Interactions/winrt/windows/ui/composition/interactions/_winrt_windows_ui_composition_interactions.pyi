@@ -50,7 +50,7 @@ class InteractionTracker(winrt.system.Object):
     max_scale: winrt.system.Single
     max_position: winrt.windows.foundation.numerics.Vector3
     interaction_sources: typing.Optional[CompositionInteractionSourceCollection]
-    is_position_rounding_suggested: winrt.system.Boolean
+    is_position_rounding_suggested: bool
     natural_resting_position: winrt.windows.foundation.numerics.Vector3
     natural_resting_scale: winrt.system.Single
     owner: typing.Optional[IInteractionTrackerOwner]
@@ -58,7 +58,7 @@ class InteractionTracker(winrt.system.Object):
     position_velocity_in_pixels_per_second: winrt.windows.foundation.numerics.Vector3
     scale: winrt.system.Single
     scale_velocity_in_percent_per_second: winrt.system.Single
-    is_inertia_from_impulse: winrt.system.Boolean
+    is_inertia_from_impulse: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTracker: ...
     def adjust_position_x_if_greater_than_threshold(self, adjustment: winrt.system.Single, position_threshold: winrt.system.Single, /) -> None: ...
@@ -95,13 +95,13 @@ class InteractionTracker(winrt.system.Object):
 
 class InteractionTrackerCustomAnimationStateEnteredArgs(winrt.system.Object):
     request_id: winrt.system.Int32
-    is_from_binding: winrt.system.Boolean
+    is_from_binding: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerCustomAnimationStateEnteredArgs: ...
 
 class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
     request_id: winrt.system.Int32
-    is_from_binding: winrt.system.Boolean
+    is_from_binding: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerIdleStateEnteredArgs: ...
 
@@ -141,14 +141,14 @@ class InteractionTrackerInertiaStateEnteredArgs(winrt.system.Object):
     position_velocity_in_pixels_per_second: winrt.windows.foundation.numerics.Vector3
     request_id: winrt.system.Int32
     scale_velocity_in_percent_per_second: winrt.system.Single
-    is_inertia_from_impulse: winrt.system.Boolean
-    is_from_binding: winrt.system.Boolean
+    is_inertia_from_impulse: bool
+    is_from_binding: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaStateEnteredArgs: ...
 
 class InteractionTrackerInteractingStateEnteredArgs(winrt.system.Object):
     request_id: winrt.system.Int32
-    is_from_binding: winrt.system.Boolean
+    is_from_binding: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInteractingStateEnteredArgs: ...
 
@@ -184,8 +184,8 @@ class VisualInteractionSource(winrt.system.Object):
     position_x_source_mode: InteractionSourceMode
     position_x_chaining_mode: InteractionChainingMode
     manipulation_redirection_mode: VisualInteractionSourceRedirectionMode
-    is_position_y_rails_enabled: winrt.system.Boolean
-    is_position_x_rails_enabled: winrt.system.Boolean
+    is_position_y_rails_enabled: bool
+    is_position_x_rails_enabled: bool
     source: typing.Optional[winrt.windows.ui.composition.Visual]
     delta_position: winrt.windows.foundation.numerics.Vector3
     delta_scale: winrt.system.Single

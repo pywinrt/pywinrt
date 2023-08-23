@@ -65,7 +65,7 @@ class SyndicationClient(winrt.system.Object):
     server_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     proxy_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     max_response_buffer_size: winrt.system.UInt32
-    bypass_cache_on_retrieve: winrt.system.Boolean
+    bypass_cache_on_retrieve: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SyndicationClient: ...
     @typing.overload
@@ -276,7 +276,7 @@ class SyndicationText(winrt.system.Object):
     def get_xml_document(self, format: SyndicationFormat, /) -> typing.Optional[winrt.windows.data.xml.dom.XmlDocument]: ...
 
 class ISyndicationClient(winrt.system.Object):
-    bypass_cache_on_retrieve: winrt.system.Boolean
+    bypass_cache_on_retrieve: bool
     max_response_buffer_size: winrt.system.UInt32
     proxy_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     server_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]

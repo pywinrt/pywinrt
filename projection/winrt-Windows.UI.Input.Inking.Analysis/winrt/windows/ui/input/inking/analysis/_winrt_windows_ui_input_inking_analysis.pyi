@@ -134,7 +134,7 @@ class InkAnalysisWritingRegion(winrt.system.Object):
 
 class InkAnalyzer(winrt.system.Object):
     analysis_root: typing.Optional[InkAnalysisRoot]
-    is_analyzing: winrt.system.Boolean
+    is_analyzing: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkAnalyzer: ...
     def __new__(cls: typing.Type[InkAnalyzer]) -> InkAnalyzer:...

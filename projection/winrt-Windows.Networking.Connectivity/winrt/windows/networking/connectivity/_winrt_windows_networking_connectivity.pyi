@@ -35,7 +35,7 @@ class CellularApnContext(winrt.system.Object):
     user_name: str
     provider_id: str
     password: str
-    is_compression_enabled: winrt.system.Boolean
+    is_compression_enabled: bool
     authentication_type: CellularApnAuthenticationType
     access_point_name: str
     profile_name: str
@@ -44,11 +44,11 @@ class CellularApnContext(winrt.system.Object):
     def __new__(cls: typing.Type[CellularApnContext]) -> CellularApnContext:...
 
 class ConnectionCost(winrt.system.Object):
-    approaching_data_limit: winrt.system.Boolean
+    approaching_data_limit: bool
     network_cost_type: NetworkCostType
-    over_data_limit: winrt.system.Boolean
-    roaming: winrt.system.Boolean
-    background_data_usage_restricted: winrt.system.Boolean
+    over_data_limit: bool
+    roaming: bool
+    background_data_usage_restricted: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectionCost: ...
 
@@ -56,12 +56,12 @@ class ConnectionProfile(winrt.system.Object):
     network_adapter: typing.Optional[NetworkAdapter]
     network_security_settings: typing.Optional[NetworkSecuritySettings]
     profile_name: str
-    is_wlan_connection_profile: winrt.system.Boolean
-    is_wwan_connection_profile: winrt.system.Boolean
+    is_wlan_connection_profile: bool
+    is_wwan_connection_profile: bool
     service_provider_guid: typing.Optional[typing.Optional[uuid.UUID]]
     wlan_connection_profile_details: typing.Optional[WlanConnectionProfileDetails]
     wwan_connection_profile_details: typing.Optional[WwanConnectionProfileDetails]
-    can_delete: winrt.system.Boolean
+    can_delete: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectionProfile: ...
     def get_attributed_network_usage_async(self, start_time: datetime.datetime, end_time: datetime.datetime, states: NetworkUsageStates, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[AttributedNetworkUsage]]: ...
@@ -78,18 +78,18 @@ class ConnectionProfile(winrt.system.Object):
     def get_network_usage_async(self, start_time: datetime.datetime, end_time: datetime.datetime, granularity: DataUsageGranularity, states: NetworkUsageStates, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[NetworkUsage]]: ...
     def get_provider_network_usage_async(self, start_time: datetime.datetime, end_time: datetime.datetime, states: NetworkUsageStates, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[ProviderNetworkUsage]]: ...
     def get_signal_bars(self) -> typing.Optional[typing.Optional[winrt.system.UInt8]]: ...
-    def is_domain_authenticated_by(self, kind: DomainAuthenticationKind, /) -> winrt.system.Boolean: ...
+    def is_domain_authenticated_by(self, kind: DomainAuthenticationKind, /) -> bool: ...
     def try_delete_async(self) -> winrt.windows.foundation.IAsyncOperation[ConnectionProfileDeleteStatus]: ...
 
 class ConnectionProfileFilter(winrt.system.Object):
     service_provider_guid: typing.Optional[typing.Optional[uuid.UUID]]
     network_cost_type: NetworkCostType
-    is_wwan_connection_profile: winrt.system.Boolean
-    is_wlan_connection_profile: winrt.system.Boolean
-    is_connected: winrt.system.Boolean
-    is_roaming: typing.Optional[typing.Optional[winrt.system.Boolean]]
-    is_over_data_limit: typing.Optional[typing.Optional[winrt.system.Boolean]]
-    is_background_data_usage_restricted: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    is_wwan_connection_profile: bool
+    is_wlan_connection_profile: bool
+    is_connected: bool
+    is_roaming: typing.Optional[typing.Optional[bool]]
+    is_over_data_limit: typing.Optional[typing.Optional[bool]]
+    is_background_data_usage_restricted: typing.Optional[typing.Optional[bool]]
     raw_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
     purpose_guid: typing.Optional[typing.Optional[uuid.UUID]]
     @staticmethod
@@ -206,14 +206,14 @@ class NetworkSecuritySettings(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> NetworkSecuritySettings: ...
 
 class NetworkStateChangeEventDetails(winrt.system.Object):
-    has_new_connection_cost: winrt.system.Boolean
-    has_new_domain_connectivity_level: winrt.system.Boolean
-    has_new_host_name_list: winrt.system.Boolean
-    has_new_internet_connection_profile: winrt.system.Boolean
-    has_new_network_connectivity_level: winrt.system.Boolean
-    has_new_wwan_registration_state: winrt.system.Boolean
-    has_new_tethering_client_count: winrt.system.Boolean
-    has_new_tethering_operational_state: winrt.system.Boolean
+    has_new_connection_cost: bool
+    has_new_domain_connectivity_level: bool
+    has_new_host_name_list: bool
+    has_new_internet_connection_profile: bool
+    has_new_network_connectivity_level: bool
+    has_new_wwan_registration_state: bool
+    has_new_tethering_client_count: bool
+    has_new_tethering_operational_state: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NetworkStateChangeEventDetails: ...
 
@@ -232,7 +232,7 @@ class ProviderNetworkUsage(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ProviderNetworkUsage: ...
 
 class ProxyConfiguration(winrt.system.Object):
-    can_connect_directly: winrt.system.Boolean
+    can_connect_directly: bool
     proxy_uris: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Uri]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProxyConfiguration: ...

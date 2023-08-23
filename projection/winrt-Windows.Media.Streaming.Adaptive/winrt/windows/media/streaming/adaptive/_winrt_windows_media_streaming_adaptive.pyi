@@ -23,11 +23,11 @@ class AdaptiveMediaSource(winrt.system.Object):
     desired_live_offset: datetime.timedelta
     desired_min_bitrate: typing.Optional[typing.Optional[winrt.system.UInt32]]
     current_playback_bitrate: winrt.system.UInt32
-    audio_only_playback: winrt.system.Boolean
+    audio_only_playback: bool
     inbound_bits_per_second: winrt.system.UInt64
     available_bitrates: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
     current_download_bitrate: winrt.system.UInt32
-    is_live: winrt.system.Boolean
+    is_live: bool
     advanced_settings: typing.Optional[AdaptiveMediaSourceAdvancedSettings]
     desired_seekable_window_size: typing.Optional[typing.Optional[datetime.timedelta]]
     diagnostics: typing.Optional[AdaptiveMediaSourceDiagnostics]
@@ -52,7 +52,7 @@ class AdaptiveMediaSource(winrt.system.Object):
     def create_from_uri_async(uri: typing.Optional[winrt.windows.foundation.Uri], http_client: typing.Optional[winrt.windows.web.http.HttpClient], /) -> winrt.windows.foundation.IAsyncOperation[AdaptiveMediaSourceCreationResult]: ...
     def get_correlated_times(self) -> typing.Optional[AdaptiveMediaSourceCorrelatedTimes]: ...
     @staticmethod
-    def is_content_type_supported(content_type: str, /) -> winrt.system.Boolean: ...
+    def is_content_type_supported(content_type: str, /) -> bool: ...
     def add_download_bitrate_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AdaptiveMediaSource, AdaptiveMediaSourceDownloadBitrateChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_download_bitrate_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_download_completed(self, handler: winrt.windows.foundation.TypedEventHandler[AdaptiveMediaSource, AdaptiveMediaSourceDownloadCompletedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -67,7 +67,7 @@ class AdaptiveMediaSource(winrt.system.Object):
 class AdaptiveMediaSourceAdvancedSettings(winrt.system.Object):
     desired_bitrate_headroom_ratio: typing.Optional[typing.Optional[winrt.system.Double]]
     bitrate_downgrade_trigger_ratio: typing.Optional[typing.Optional[winrt.system.Double]]
-    all_segments_independent: winrt.system.Boolean
+    all_segments_independent: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceAdvancedSettings: ...
 
@@ -183,7 +183,7 @@ class AdaptiveMediaSourceDownloadStatistics(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AdaptiveMediaSourceDownloadStatistics: ...
 
 class AdaptiveMediaSourcePlaybackBitrateChangedEventArgs(winrt.system.Object):
-    audio_only: winrt.system.Boolean
+    audio_only: bool
     new_value: winrt.system.UInt32
     old_value: winrt.system.UInt32
     @staticmethod

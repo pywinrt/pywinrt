@@ -51,7 +51,7 @@ class GipGameControllerProvider(winrt.system.Object):
     hardware_product_id: winrt.system.UInt16
     hardware_vendor_id: winrt.system.UInt16
     hardware_version_info: GameControllerVersionInfo
-    is_connected: winrt.system.Boolean
+    is_connected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GipGameControllerProvider: ...
     def send_message(self, message_class: GipMessageClass, message_id: winrt.system.UInt8, message_buffer: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
@@ -63,7 +63,7 @@ class HidGameControllerProvider(winrt.system.Object):
     hardware_product_id: winrt.system.UInt16
     hardware_vendor_id: winrt.system.UInt16
     hardware_version_info: GameControllerVersionInfo
-    is_connected: winrt.system.Boolean
+    is_connected: bool
     usage_id: winrt.system.UInt16
     usage_page: winrt.system.UInt16
     @staticmethod
@@ -77,7 +77,7 @@ class XusbGameControllerProvider(winrt.system.Object):
     hardware_product_id: winrt.system.UInt16
     hardware_vendor_id: winrt.system.UInt16
     hardware_version_info: GameControllerVersionInfo
-    is_connected: winrt.system.Boolean
+    is_connected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XusbGameControllerProvider: ...
     def set_vibration(self, low_frequency_motor_speed: winrt.system.Double, high_frequency_motor_speed: winrt.system.Double, /) -> None: ...
@@ -100,7 +100,7 @@ class IGameControllerProvider(winrt.system.Object):
     hardware_product_id: winrt.system.UInt16
     hardware_vendor_id: winrt.system.UInt16
     hardware_version_info: GameControllerVersionInfo
-    is_connected: winrt.system.Boolean
+    is_connected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameControllerProvider: ...
 
@@ -109,7 +109,7 @@ class IGipGameControllerInputSink(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IGipGameControllerInputSink: ...
     def on_input_resumed(self, timestamp: winrt.system.UInt64, /) -> None: ...
     def on_input_suspended(self, timestamp: winrt.system.UInt64, /) -> None: ...
-    def on_key_received(self, timestamp: winrt.system.UInt64, key_code: winrt.system.UInt8, is_pressed: winrt.system.Boolean, /) -> None: ...
+    def on_key_received(self, timestamp: winrt.system.UInt64, key_code: winrt.system.UInt8, is_pressed: bool, /) -> None: ...
     def on_message_received(self, timestamp: winrt.system.UInt64, message_class: GipMessageClass, message_id: winrt.system.UInt8, sequence_id: winrt.system.UInt8, message_buffer: winrt.system.Array[winrt.system.UInt8], /) -> None: ...
 
 class IHidGameControllerInputSink(winrt.system.Object):

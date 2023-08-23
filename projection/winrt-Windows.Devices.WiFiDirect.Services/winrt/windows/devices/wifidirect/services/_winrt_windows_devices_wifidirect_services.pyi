@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 
 class WiFiDirectService(winrt.system.Object):
     session_info: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    prefer_group_owner_mode: winrt.system.Boolean
+    prefer_group_owner_mode: bool
     remote_service_info: typing.Optional[winrt.windows.storage.streams.IBuffer]
     service_error: WiFiDirectServiceError
     supported_configuration_methods: typing.Optional[winrt.windows.foundation.collections.IVectorView[WiFiDirectServiceConfigurationMethod]]
@@ -45,10 +45,10 @@ class WiFiDirectService(winrt.system.Object):
 class WiFiDirectServiceAdvertiser(winrt.system.Object):
     service_status: WiFiDirectServiceStatus
     service_info: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    prefer_group_owner_mode: winrt.system.Boolean
+    prefer_group_owner_mode: bool
     deferred_session_info: typing.Optional[winrt.windows.storage.streams.IBuffer]
     custom_service_status_code: winrt.system.UInt32
-    auto_accept_session: winrt.system.Boolean
+    auto_accept_session: bool
     service_error: WiFiDirectServiceError
     preferred_configuration_methods: typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectServiceConfigurationMethod]]
     service_name: str
@@ -77,7 +77,7 @@ class WiFiDirectServiceAutoAcceptSessionConnectedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceAutoAcceptSessionConnectedEventArgs: ...
 
 class WiFiDirectServiceProvisioningInfo(winrt.system.Object):
-    is_group_formation_needed: winrt.system.Boolean
+    is_group_formation_needed: bool
     selected_configuration_method: WiFiDirectServiceConfigurationMethod
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectServiceProvisioningInfo: ...

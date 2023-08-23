@@ -47,7 +47,7 @@ class WiFiAvailableNetwork(winrt.system.Object):
     beacon_interval: datetime.timedelta
     bssid: str
     channel_center_frequency_in_kilohertz: winrt.system.Int32
-    is_wi_fi_direct: winrt.system.Boolean
+    is_wi_fi_direct: bool
     network_kind: WiFiNetworkKind
     network_rssi_in_decibel_milliwatts: winrt.system.Double
     phy_kind: WiFiPhyKind
@@ -95,7 +95,7 @@ class WiFiOnDemandHotspotNetworkProperties(winrt.system.Object):
     ssid: str
     remaining_battery_percent: typing.Optional[typing.Optional[winrt.system.UInt32]]
     password: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
-    is_metered: winrt.system.Boolean
+    is_metered: bool
     display_name: str
     cellular_bars: typing.Optional[typing.Optional[WiFiOnDemandHotspotCellularBars]]
     availability: WiFiOnDemandHotspotAvailability

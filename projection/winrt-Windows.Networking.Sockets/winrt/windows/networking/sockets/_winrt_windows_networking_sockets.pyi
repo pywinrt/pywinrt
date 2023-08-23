@@ -26,9 +26,9 @@ class BandwidthStatistics:
     inbound_bits_per_second: winrt.system.UInt64
     outbound_bits_per_second_instability: winrt.system.UInt64
     inbound_bits_per_second_instability: winrt.system.UInt64
-    outbound_bandwidth_peaked: winrt.system.Boolean
-    inbound_bandwidth_peaked: winrt.system.Boolean
-    def __new__(cls: typing.Type[BandwidthStatistics], outbound_bits_per_second: winrt.system.UInt64, inbound_bits_per_second: winrt.system.UInt64, outbound_bits_per_second_instability: winrt.system.UInt64, inbound_bits_per_second_instability: winrt.system.UInt64, outbound_bandwidth_peaked: winrt.system.Boolean, inbound_bandwidth_peaked: winrt.system.Boolean) -> BandwidthStatistics: ...
+    outbound_bandwidth_peaked: bool
+    inbound_bandwidth_peaked: bool
+    def __new__(cls: typing.Type[BandwidthStatistics], outbound_bits_per_second: winrt.system.UInt64, inbound_bits_per_second: winrt.system.UInt64, outbound_bits_per_second_instability: winrt.system.UInt64, inbound_bits_per_second_instability: winrt.system.UInt64, outbound_bandwidth_peaked: bool, inbound_bandwidth_peaked: bool) -> BandwidthStatistics: ...
 
 class RoundTripTimeStatistics:
     variance: winrt.system.UInt32
@@ -44,7 +44,7 @@ class ControlChannelTrigger(winrt.system.Object):
     keep_alive_trigger: typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTrigger]
     push_notification_trigger: typing.Optional[winrt.windows.applicationmodel.background.IBackgroundTrigger]
     transport_object: typing.Optional[winrt.system.Object]
-    is_wake_from_low_power_supported: winrt.system.Boolean
+    is_wake_from_low_power_supported: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -107,8 +107,8 @@ class DatagramSocketControl(winrt.system.Object):
     quality_of_service: SocketQualityOfService
     outbound_unicast_hop_limit: winrt.system.UInt8
     inbound_buffer_size_in_bytes: winrt.system.UInt32
-    dont_fragment: winrt.system.Boolean
-    multicast_only: winrt.system.Boolean
+    dont_fragment: bool
+    multicast_only: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatagramSocketControl: ...
 
@@ -181,7 +181,7 @@ class MessageWebSocketInformation(winrt.system.Object):
 
 class MessageWebSocketMessageReceivedEventArgs(winrt.system.Object):
     message_type: SocketMessageType
-    is_message_complete: winrt.system.Boolean
+    is_message_complete: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MessageWebSocketMessageReceivedEventArgs: ...
     def get_data_reader(self) -> typing.Optional[winrt.windows.storage.streams.DataReader]: ...
@@ -310,10 +310,10 @@ class StreamSocketControl(winrt.system.Object):
     quality_of_service: SocketQualityOfService
     outbound_unicast_hop_limit: winrt.system.UInt8
     outbound_buffer_size_in_bytes: winrt.system.UInt32
-    no_delay: winrt.system.Boolean
-    keep_alive: winrt.system.Boolean
+    no_delay: bool
+    keep_alive: bool
     ignorable_server_certificate_errors: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.security.cryptography.certificates.ChainValidationResult]]
-    serialize_connection_attempts: winrt.system.Boolean
+    serialize_connection_attempts: bool
     client_certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate]
     min_protection_level: SocketProtectionLevel
     @staticmethod
@@ -374,8 +374,8 @@ class StreamSocketListenerControl(winrt.system.Object):
     quality_of_service: SocketQualityOfService
     outbound_unicast_hop_limit: winrt.system.UInt8
     outbound_buffer_size_in_bytes: winrt.system.UInt32
-    no_delay: winrt.system.Boolean
-    keep_alive: winrt.system.Boolean
+    no_delay: bool
+    keep_alive: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StreamSocketListenerControl: ...
 
@@ -406,7 +406,7 @@ class StreamWebSocket(winrt.system.Object):
     def remove_server_custom_validation_requested(self, event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class StreamWebSocketControl(winrt.system.Object):
-    no_delay: winrt.system.Boolean
+    no_delay: bool
     desired_unsolicited_pong_interval: datetime.timedelta
     client_certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate]
     actual_unsolicited_pong_interval: datetime.timedelta
@@ -463,9 +463,9 @@ class IControlChannelTriggerEventDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IControlChannelTriggerEventDetails: ...
 
 class IControlChannelTriggerResetEventDetails(winrt.system.Object):
-    hardware_slot_reset: winrt.system.Boolean
+    hardware_slot_reset: bool
     reset_reason: ControlChannelTriggerResetReason
-    software_slot_reset: winrt.system.Boolean
+    software_slot_reset: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IControlChannelTriggerResetEventDetails: ...
 

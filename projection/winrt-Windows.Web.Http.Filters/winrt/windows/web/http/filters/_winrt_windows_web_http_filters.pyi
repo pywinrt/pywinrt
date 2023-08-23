@@ -20,14 +20,14 @@ from . import HttpCacheReadBehavior, HttpCacheWriteBehavior, HttpCookieUsageBeha
 Self = typing.TypeVar('Self')
 
 class HttpBaseProtocolFilter(winrt.system.Object):
-    use_proxy: winrt.system.Boolean
+    use_proxy: bool
     server_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     proxy_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     max_connections_per_server: winrt.system.UInt32
     client_certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate]
-    automatic_decompression: winrt.system.Boolean
-    allow_u_i: winrt.system.Boolean
-    allow_auto_redirect: winrt.system.Boolean
+    automatic_decompression: bool
+    allow_u_i: bool
+    allow_auto_redirect: bool
     cache_control: typing.Optional[HttpCacheControl]
     cookie_manager: typing.Optional[winrt.windows.web.http.HttpCookieManager]
     ignorable_server_certificate_errors: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.security.cryptography.certificates.ChainValidationResult]]

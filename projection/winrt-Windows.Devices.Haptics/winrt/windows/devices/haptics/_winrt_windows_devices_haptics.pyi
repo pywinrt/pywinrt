@@ -35,10 +35,10 @@ class KnownSimpleHapticsControllerWaveforms(winrt.system.Object):
 
 class SimpleHapticsController(winrt.system.Object):
     id: str
-    is_intensity_supported: winrt.system.Boolean
-    is_play_count_supported: winrt.system.Boolean
-    is_play_duration_supported: winrt.system.Boolean
-    is_replay_pause_interval_supported: winrt.system.Boolean
+    is_intensity_supported: bool
+    is_play_count_supported: bool
+    is_play_duration_supported: bool
+    is_replay_pause_interval_supported: bool
     supported_feedback: typing.Optional[winrt.windows.foundation.collections.IVectorView[SimpleHapticsControllerFeedback]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SimpleHapticsController: ...

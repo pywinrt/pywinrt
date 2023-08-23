@@ -38,10 +38,10 @@ class AudioBuffer(winrt.system.Object):
 class AudioFrame(winrt.system.Object):
     system_relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
-    is_discontinuous: winrt.system.Boolean
+    is_discontinuous: bool
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     type: str
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -64,7 +64,7 @@ class ImageDisplayProperties(winrt.system.Object):
 
 class MediaControl(winrt.system.Object):
     track_name: typing.ClassVar[str]
-    is_playing: typing.ClassVar[winrt.system.Boolean]
+    is_playing: typing.ClassVar[bool]
     artist_name: typing.ClassVar[str]
     album_art: typing.ClassVar[typing.Optional[winrt.windows.foundation.Uri]]
     sound_level: typing.ClassVar[SoundLevel]
@@ -163,7 +163,7 @@ class MediaTimelineController(winrt.system.Object):
     position: datetime.timedelta
     clock_rate: winrt.system.Double
     state: MediaTimelineControllerState
-    is_looping_enabled: winrt.system.Boolean
+    is_looping_enabled: bool
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTimelineController: ...
@@ -207,26 +207,26 @@ class PlaybackRateChangeRequestedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PlaybackRateChangeRequestedEventArgs: ...
 
 class ShuffleEnabledChangeRequestedEventArgs(winrt.system.Object):
-    requested_shuffle_enabled: winrt.system.Boolean
+    requested_shuffle_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ShuffleEnabledChangeRequestedEventArgs: ...
 
 class SystemMediaTransportControls(winrt.system.Object):
-    is_play_enabled: winrt.system.Boolean
-    is_pause_enabled: winrt.system.Boolean
-    is_next_enabled: winrt.system.Boolean
-    is_previous_enabled: winrt.system.Boolean
-    is_enabled: winrt.system.Boolean
-    is_channel_down_enabled: winrt.system.Boolean
-    is_fast_forward_enabled: winrt.system.Boolean
-    is_channel_up_enabled: winrt.system.Boolean
+    is_play_enabled: bool
+    is_pause_enabled: bool
+    is_next_enabled: bool
+    is_previous_enabled: bool
+    is_enabled: bool
+    is_channel_down_enabled: bool
+    is_fast_forward_enabled: bool
+    is_channel_up_enabled: bool
     playback_status: MediaPlaybackStatus
-    is_stop_enabled: winrt.system.Boolean
-    is_rewind_enabled: winrt.system.Boolean
-    is_record_enabled: winrt.system.Boolean
+    is_stop_enabled: bool
+    is_rewind_enabled: bool
+    is_record_enabled: bool
     display_updater: typing.Optional[SystemMediaTransportControlsDisplayUpdater]
     sound_level: SoundLevel
-    shuffle_enabled: winrt.system.Boolean
+    shuffle_enabled: bool
     playback_rate: winrt.system.Double
     auto_repeat_mode: MediaPlaybackAutoRepeatMode
     @staticmethod
@@ -262,7 +262,7 @@ class SystemMediaTransportControlsDisplayUpdater(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemMediaTransportControlsDisplayUpdater: ...
     def clear_all(self) -> None: ...
-    def copy_from_file_async(self, type: MediaPlaybackType, source: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def copy_from_file_async(self, type: MediaPlaybackType, source: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def update(self) -> None: ...
 
 class SystemMediaTransportControlsPropertyChangedEventArgs(winrt.system.Object):
@@ -295,10 +295,10 @@ class VideoEffects(winrt.system.Object):
 class VideoFrame(winrt.system.Object):
     system_relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
-    is_discontinuous: winrt.system.Boolean
+    is_discontinuous: bool
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     type: str
     direct3_d_surface: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface]
     software_bitmap: typing.Optional[winrt.windows.graphics.imaging.SoftwareBitmap]
@@ -334,8 +334,8 @@ class IMediaExtension(winrt.system.Object):
 class IMediaFrame(winrt.system.Object):
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
-    is_discontinuous: winrt.system.Boolean
-    is_read_only: winrt.system.Boolean
+    is_discontinuous: bool
+    is_read_only: bool
     relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     system_relative_time: typing.Optional[typing.Optional[datetime.timedelta]]
     type: str

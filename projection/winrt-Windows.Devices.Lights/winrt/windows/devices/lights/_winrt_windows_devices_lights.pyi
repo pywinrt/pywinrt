@@ -18,11 +18,11 @@ from . import LampArrayKind, LampPurposes
 Self = typing.TypeVar('Self')
 
 class Lamp(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     color: winrt.windows.ui.Color
     brightness_level: winrt.system.Single
     device_id: str
-    is_color_settable: winrt.system.Boolean
+    is_color_settable: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -38,18 +38,18 @@ class Lamp(winrt.system.Object):
     def remove_availability_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class LampArray(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     brightness_level: winrt.system.Double
     bounding_box: winrt.windows.foundation.numerics.Vector3
     device_id: str
     hardware_product_id: winrt.system.UInt16
     hardware_vendor_id: winrt.system.UInt16
     hardware_version: winrt.system.UInt16
-    is_connected: winrt.system.Boolean
+    is_connected: bool
     lamp_array_kind: LampArrayKind
     lamp_count: winrt.system.Int32
     min_update_interval: datetime.timedelta
-    supports_virtual_keys: winrt.system.Boolean
+    supports_virtual_keys: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampArray: ...
     @staticmethod
@@ -70,7 +70,7 @@ class LampArray(winrt.system.Object):
     def set_single_color_for_indices(self, desired_color: winrt.windows.ui.Color, lamp_indexes: winrt.system.Array[winrt.system.Int32], /) -> None: ...
 
 class LampAvailabilityChangedEventArgs(winrt.system.Object):
-    is_available: winrt.system.Boolean
+    is_available: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LampAvailabilityChangedEventArgs: ...
 

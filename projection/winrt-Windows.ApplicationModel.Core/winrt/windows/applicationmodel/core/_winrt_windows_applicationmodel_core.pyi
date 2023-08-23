@@ -24,8 +24,8 @@ class AppListEntry(winrt.system.Object):
     app_info: typing.Optional[winrt.windows.applicationmodel.AppInfo]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppListEntry: ...
-    def launch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def launch_for_user_async(self, user: typing.Optional[winrt.windows.system.User], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def launch_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def launch_for_user_async(self, user: typing.Optional[winrt.windows.system.User], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class CoreApplication(winrt.system.Object):
     id: typing.ClassVar[str]
@@ -46,7 +46,7 @@ class CoreApplication(winrt.system.Object):
     @staticmethod
     def decrement_application_use_count() -> None: ...
     @staticmethod
-    def enable_prelaunch(value: winrt.system.Boolean, /) -> None: ...
+    def enable_prelaunch(value: bool, /) -> None: ...
     @staticmethod
     def exit() -> None: ...
     @staticmethod
@@ -92,10 +92,10 @@ class CoreApplication(winrt.system.Object):
 
 class CoreApplicationView(winrt.system.Object):
     core_window: typing.Optional[winrt.windows.ui.core.CoreWindow]
-    is_hosted: winrt.system.Boolean
-    is_main: winrt.system.Boolean
+    is_hosted: bool
+    is_main: bool
     dispatcher: typing.Optional[winrt.windows.ui.core.CoreDispatcher]
-    is_component: winrt.system.Boolean
+    is_component: bool
     title_bar: typing.Optional[CoreApplicationViewTitleBar]
     properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
@@ -107,9 +107,9 @@ class CoreApplicationView(winrt.system.Object):
     def remove_hosted_view_closing(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreApplicationViewTitleBar(winrt.system.Object):
-    extend_view_into_title_bar: winrt.system.Boolean
+    extend_view_into_title_bar: bool
     height: winrt.system.Double
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     system_overlay_left_inset: winrt.system.Double
     system_overlay_right_inset: winrt.system.Double
     @staticmethod
@@ -125,7 +125,7 @@ class HostedViewClosingEventArgs(winrt.system.Object):
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class UnhandledError(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UnhandledError: ...
     def propagate(self) -> None: ...

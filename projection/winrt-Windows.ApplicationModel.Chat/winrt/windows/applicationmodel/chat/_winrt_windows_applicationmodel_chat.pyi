@@ -18,11 +18,11 @@ from . import ChatConversationThreadingKind, ChatItemKind, ChatMessageChangeType
 Self = typing.TypeVar('Self')
 
 class ChatCapabilities(winrt.system.Object):
-    is_chat_capable: winrt.system.Boolean
-    is_file_transfer_capable: winrt.system.Boolean
-    is_geo_location_push_capable: winrt.system.Boolean
-    is_integrated_messaging_capable: winrt.system.Boolean
-    is_online: winrt.system.Boolean
+    is_chat_capable: bool
+    is_file_transfer_capable: bool
+    is_geo_location_push_capable: bool
+    is_integrated_messaging_capable: bool
+    is_online: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatCapabilities: ...
 
@@ -44,13 +44,13 @@ class ChatCapabilitiesManager(winrt.system.Object):
 
 class ChatConversation(winrt.system.Object):
     subject: str
-    is_conversation_muted: winrt.system.Boolean
-    has_unread_messages: winrt.system.Boolean
+    is_conversation_muted: bool
+    has_unread_messages: bool
     id: str
     most_recent_message_id: str
     participants: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     threading_info: typing.Optional[ChatConversationThreadingInfo]
-    can_modify_participants: winrt.system.Boolean
+    can_modify_participants: bool
     item_kind: ChatItemKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatConversation: ...
@@ -60,8 +60,8 @@ class ChatConversation(winrt.system.Object):
     def mark_messages_as_read_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
     def mark_messages_as_read_async(self, value: datetime.datetime, /) -> winrt.windows.foundation.IAsyncAction: ...
-    def notify_local_participant_composing(self, transport_id: str, participant_address: str, is_composing: winrt.system.Boolean, /) -> None: ...
-    def notify_remote_participant_composing(self, transport_id: str, participant_address: str, is_composing: winrt.system.Boolean, /) -> None: ...
+    def notify_local_participant_composing(self, transport_id: str, participant_address: str, is_composing: bool, /) -> None: ...
+    def notify_remote_participant_composing(self, transport_id: str, participant_address: str, is_composing: bool, /) -> None: ...
     def save_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def add_remote_participant_composing_changed(self, handler: winrt.windows.foundation.TypedEventHandler[ChatConversation, RemoteParticipantComposingChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_remote_participant_composing_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -86,14 +86,14 @@ class ChatConversationThreadingInfo(winrt.system.Object):
 
 class ChatMessage(winrt.system.Object):
     item_kind: ChatItemKind
-    is_incoming: winrt.system.Boolean
-    is_forwarding_disabled: winrt.system.Boolean
+    is_incoming: bool
+    is_forwarding_disabled: bool
     transport_id: str
     status: ChatMessageStatus
     from_: str
     body: str
     subject: str
-    is_read: winrt.system.Boolean
+    is_read: bool
     network_timestamp: datetime.datetime
     local_timestamp: datetime.datetime
     recipient_send_statuses: typing.Optional[winrt.windows.foundation.collections.IMapView[str, ChatMessageStatus]]
@@ -101,17 +101,17 @@ class ChatMessage(winrt.system.Object):
     transport_friendly_name: str
     attachments: typing.Optional[winrt.windows.foundation.collections.IVector[ChatMessageAttachment]]
     id: str
-    is_seen: winrt.system.Boolean
+    is_seen: bool
     message_kind: ChatMessageKind
-    is_received_during_quiet_hours: winrt.system.Boolean
-    is_auto_reply: winrt.system.Boolean
+    is_received_during_quiet_hours: bool
+    is_auto_reply: bool
     estimated_download_size: winrt.system.UInt64
     threading_info: typing.Optional[ChatConversationThreadingInfo]
-    should_suppress_notification: winrt.system.Boolean
+    should_suppress_notification: bool
     remote_id: str
     message_operator_kind: ChatMessageOperatorKind
-    is_reply_disabled: winrt.system.Boolean
-    is_sim_message: winrt.system.Boolean
+    is_reply_disabled: bool
+    is_sim_message: bool
     recipients_delivery_infos: typing.Optional[winrt.windows.foundation.collections.IVector[ChatRecipientDeliveryInfo]]
     sync_id: str
     @staticmethod
@@ -134,7 +134,7 @@ class ChatMessageBlocking(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageBlocking: ...
     @staticmethod
-    def mark_message_as_blocked_async(local_chat_message_id: str, blocked: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def mark_message_as_blocked_async(local_chat_message_id: str, blocked: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class ChatMessageChange(winrt.system.Object):
     change_type: ChatMessageChangeType
@@ -186,10 +186,10 @@ class ChatMessageManager(winrt.system.Object):
 
 class ChatMessageNotificationTriggerDetails(winrt.system.Object):
     chat_message: typing.Optional[ChatMessage]
-    should_display_toast: winrt.system.Boolean
-    should_update_action_center: winrt.system.Boolean
-    should_update_badge: winrt.system.Boolean
-    should_update_detail_text: winrt.system.Boolean
+    should_display_toast: bool
+    should_update_action_center: bool
+    should_update_badge: bool
+    should_update_detail_text: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessageNotificationTriggerDetails: ...
 
@@ -237,8 +237,8 @@ class ChatMessageStore(winrt.system.Object):
     def retry_send_message_async(self, local_chat_message_id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def save_message_async(self, chat_message: typing.Optional[ChatMessage], /) -> winrt.windows.foundation.IAsyncAction: ...
     def send_message_async(self, chat_message: typing.Optional[ChatMessage], /) -> winrt.windows.foundation.IAsyncAction: ...
-    def try_cancel_download_message_async(self, local_chat_message_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_cancel_send_message_async(self, local_chat_message_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_cancel_download_message_async(self, local_chat_message_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_cancel_send_message_async(self, local_chat_message_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def validate_message(self, chat_message: typing.Optional[ChatMessage], /) -> typing.Optional[ChatMessageValidationResult]: ...
     def add_message_changed(self, value: winrt.windows.foundation.TypedEventHandler[ChatMessageStore, ChatMessageChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_message_changed(self, value: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -252,8 +252,8 @@ class ChatMessageStoreChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ChatMessageStoreChangedEventArgs: ...
 
 class ChatMessageTransport(winrt.system.Object):
-    is_active: winrt.system.Boolean
-    is_app_set_as_notification_provider: winrt.system.Boolean
+    is_active: bool
+    is_app_set_as_notification_provider: bool
     transport_friendly_name: str
     transport_id: str
     configuration: typing.Optional[ChatMessageTransportConfiguration]
@@ -289,7 +289,7 @@ class ChatRecipientDeliveryInfo(winrt.system.Object):
     transport_address: str
     read_time: typing.Optional[typing.Optional[datetime.datetime]]
     delivery_time: typing.Optional[typing.Optional[datetime.datetime]]
-    is_error_permanent: winrt.system.Boolean
+    is_error_permanent: bool
     status: ChatMessageStatus
     transport_error_code: winrt.system.Int32
     transport_error_code_category: ChatTransportErrorCodeCategory
@@ -308,7 +308,7 @@ class ChatSearchReader(winrt.system.Object):
 
 class ChatSyncConfiguration(winrt.system.Object):
     restore_history_span: ChatRestoreHistorySpan
-    is_sync_enabled: winrt.system.Boolean
+    is_sync_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatSyncConfiguration: ...
 
@@ -317,14 +317,14 @@ class ChatSyncManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatSyncManager: ...
     def associate_account_async(self, web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], /) -> winrt.windows.foundation.IAsyncAction: ...
-    def is_account_associated(self, web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], /) -> winrt.system.Boolean: ...
+    def is_account_associated(self, web_account: typing.Optional[winrt.windows.security.credentials.WebAccount], /) -> bool: ...
     def set_configuration_async(self, configuration: typing.Optional[ChatSyncConfiguration], /) -> winrt.windows.foundation.IAsyncAction: ...
     def start_sync(self) -> None: ...
     def unassociate_account_async(self) -> winrt.windows.foundation.IAsyncAction: ...
 
 class RcsEndUserMessage(winrt.system.Object):
     actions: typing.Optional[winrt.windows.foundation.collections.IVectorView[RcsEndUserMessageAction]]
-    is_pin_required: winrt.system.Boolean
+    is_pin_required: bool
     text: str
     title: str
     transport_id: str
@@ -339,7 +339,7 @@ class RcsEndUserMessageAction(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageAction: ...
 
 class RcsEndUserMessageAvailableEventArgs(winrt.system.Object):
-    is_message_available: winrt.system.Boolean
+    is_message_available: bool
     message: typing.Optional[RcsEndUserMessage]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsEndUserMessageAvailableEventArgs: ...
@@ -380,13 +380,13 @@ class RcsServiceKindSupportedChangedEventArgs(winrt.system.Object):
 class RcsTransport(winrt.system.Object):
     configuration: typing.Optional[RcsTransportConfiguration]
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]
-    is_active: winrt.system.Boolean
+    is_active: bool
     transport_friendly_name: str
     transport_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RcsTransport: ...
-    def is_service_kind_supported(self, service_kind: RcsServiceKind, /) -> winrt.system.Boolean: ...
-    def is_store_and_forward_enabled(self, service_kind: RcsServiceKind, /) -> winrt.system.Boolean: ...
+    def is_service_kind_supported(self, service_kind: RcsServiceKind, /) -> bool: ...
+    def is_store_and_forward_enabled(self, service_kind: RcsServiceKind, /) -> bool: ...
     def add_service_kind_supported_changed(self, handler: winrt.windows.foundation.TypedEventHandler[RcsTransport, RcsServiceKindSupportedChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_service_kind_supported_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -401,7 +401,7 @@ class RcsTransportConfiguration(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> RcsTransportConfiguration: ...
 
 class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
-    is_composing: winrt.system.Boolean
+    is_composing: bool
     participant_address: str
     transport_id: str
     @staticmethod

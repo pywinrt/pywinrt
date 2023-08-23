@@ -22,18 +22,18 @@ class ImageVariableDescriptorPreview(winrt.system.Object):
     height: winrt.system.UInt32
     width: winrt.system.UInt32
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     model_feature_kind: LearningModelFeatureKindPreview
     name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageVariableDescriptorPreview: ...
 
 class InferencingOptionsPreview(winrt.system.Object):
-    reclaim_memory_after_evaluation: winrt.system.Boolean
+    reclaim_memory_after_evaluation: bool
     preferred_device_kind: LearningModelDeviceKindPreview
-    minimize_memory_allocation: winrt.system.Boolean
+    minimize_memory_allocation: bool
     max_batch_size: winrt.system.Int32
-    is_tracing_enabled: winrt.system.Boolean
+    is_tracing_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InferencingOptionsPreview: ...
 
@@ -52,7 +52,7 @@ class LearningModelBindingPreview(winrt.system.Object, typing.Mapping[str, winrt
     def bind(self, name: str, value: typing.Optional[winrt.system.Object], metadata: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
     def clear(self) -> None: ...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[winrt.windows.foundation.collections.IKeyValuePair[str, winrt.system.Object]]]: ...
-    def has_key(self, key: str, /) -> winrt.system.Boolean: ...
+    def has_key(self, key: str, /) -> bool: ...
     def lookup(self, key: str, /) -> typing.Optional[winrt.system.Object]: ...
     def split(self) -> typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]], typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]]: ...
 
@@ -88,7 +88,7 @@ class LearningModelPreview(winrt.system.Object):
 
 class LearningModelVariableDescriptorPreview(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     model_feature_kind: LearningModelFeatureKindPreview
     name: str
     @staticmethod
@@ -96,7 +96,7 @@ class LearningModelVariableDescriptorPreview(winrt.system.Object):
 
 class MapVariableDescriptorPreview(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     model_feature_kind: LearningModelFeatureKindPreview
     name: str
     fields: typing.Optional[ILearningModelVariableDescriptorPreview]
@@ -108,7 +108,7 @@ class MapVariableDescriptorPreview(winrt.system.Object):
 
 class SequenceVariableDescriptorPreview(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     model_feature_kind: LearningModelFeatureKindPreview
     name: str
     element_type: typing.Optional[ILearningModelVariableDescriptorPreview]
@@ -117,7 +117,7 @@ class SequenceVariableDescriptorPreview(winrt.system.Object):
 
 class TensorVariableDescriptorPreview(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     model_feature_kind: LearningModelFeatureKindPreview
     name: str
     data_type: FeatureElementKindPreview
@@ -127,7 +127,7 @@ class TensorVariableDescriptorPreview(winrt.system.Object):
 
 class ILearningModelVariableDescriptorPreview(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     model_feature_kind: LearningModelFeatureKindPreview
     name: str
     @staticmethod

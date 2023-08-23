@@ -17,7 +17,7 @@ from . import PdfPageRotation
 Self = typing.TypeVar('Self')
 
 class PdfDocument(winrt.system.Object):
-    is_password_protected: winrt.system.Boolean
+    is_password_protected: bool
     page_count: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PdfDocument: ...
@@ -63,7 +63,7 @@ class PdfPageDimensions(winrt.system.Object):
 
 class PdfPageRenderOptions(winrt.system.Object):
     source_rect: winrt.windows.foundation.Rect
-    is_ignoring_high_contrast: winrt.system.Boolean
+    is_ignoring_high_contrast: bool
     destination_width: winrt.system.UInt32
     destination_height: winrt.system.UInt32
     bitmap_encoder_id: uuid.UUID

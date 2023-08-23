@@ -17,9 +17,9 @@ from . import MenuClosedEventHandler, MenuOpenedEventHandler, SizeChangedEventHa
 Self = typing.TypeVar('Self')
 
 class WebUICommandBar(winrt.system.Object):
-    visible: winrt.system.Boolean
+    visible: bool
     opacity: winrt.system.Double
-    is_open: winrt.system.Boolean
+    is_open: bool
     foreground_color: winrt.windows.ui.Color
     closed_display_mode: WebUICommandBarClosedDisplayMode
     background_color: winrt.windows.ui.Color
@@ -56,10 +56,10 @@ class WebUICommandBarConfirmationButton(winrt.system.Object):
 
 class WebUICommandBarIconButton(winrt.system.Object):
     label: str
-    is_toggle_button: winrt.system.Boolean
-    is_checked: winrt.system.Boolean
+    is_toggle_button: bool
+    is_checked: bool
     icon: typing.Optional[IWebUICommandBarIcon]
-    enabled: winrt.system.Boolean
+    enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarIconButton: ...
     def __new__(cls: typing.Type[WebUICommandBarIconButton]) -> WebUICommandBarIconButton:...
@@ -67,7 +67,7 @@ class WebUICommandBarIconButton(winrt.system.Object):
     def remove_item_invoked(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class WebUICommandBarItemInvokedEventArgs(winrt.system.Object):
-    is_primary_command: winrt.system.Boolean
+    is_primary_command: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUICommandBarItemInvokedEventArgs: ...
 

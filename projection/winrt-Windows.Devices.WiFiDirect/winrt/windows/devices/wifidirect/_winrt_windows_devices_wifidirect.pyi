@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 
 class WiFiDirectAdvertisement(winrt.system.Object):
     listen_state_discoverability: WiFiDirectAdvertisementListenStateDiscoverability
-    is_autonomous_group_owner_enabled: winrt.system.Boolean
+    is_autonomous_group_owner_enabled: bool
     information_elements: typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectInformationElement]]
     legacy_settings: typing.Optional[WiFiDirectLegacySettings]
     supported_configuration_methods: typing.Optional[winrt.windows.foundation.collections.IVector[WiFiDirectConfigurationMethod]]
@@ -113,7 +113,7 @@ class WiFiDirectInformationElement(winrt.system.Object):
 class WiFiDirectLegacySettings(winrt.system.Object):
     ssid: str
     passphrase: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WiFiDirectLegacySettings: ...
 

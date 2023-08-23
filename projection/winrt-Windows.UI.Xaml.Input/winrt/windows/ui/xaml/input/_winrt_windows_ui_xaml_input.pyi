@@ -33,14 +33,14 @@ class AccessKeyDisplayRequestedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[AccessKeyDisplayRequestedEventArgs]) -> AccessKeyDisplayRequestedEventArgs:...
 
 class AccessKeyInvokedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AccessKeyInvokedEventArgs: ...
     def __new__(cls: typing.Type[AccessKeyInvokedEventArgs]) -> AccessKeyInvokedEventArgs:...
 
 class AccessKeyManager(winrt.system.Object):
-    is_display_mode_enabled: typing.ClassVar[winrt.system.Boolean]
-    are_key_tips_enabled: typing.ClassVar[winrt.system.Boolean]
+    is_display_mode_enabled: typing.ClassVar[bool]
+    are_key_tips_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AccessKeyManager: ...
     @staticmethod
@@ -51,27 +51,27 @@ class AccessKeyManager(winrt.system.Object):
     def remove_is_display_mode_enabled_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CanExecuteRequestedEventArgs(winrt.system.Object):
-    can_execute: winrt.system.Boolean
+    can_execute: bool
     parameter: typing.Optional[winrt.system.Object]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CanExecuteRequestedEventArgs: ...
 
 class CharacterReceivedRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     character: winrt.system.Char16
     key_status: winrt.windows.ui.core.CorePhysicalKeyStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CharacterReceivedRoutedEventArgs: ...
 
 class ContextRequestedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContextRequestedEventArgs: ...
     def __new__(cls: typing.Type[ContextRequestedEventArgs]) -> ContextRequestedEventArgs:...
-    def try_get_position(self, relative_to: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Tuple[winrt.system.Boolean, winrt.windows.foundation.Point]: ...
+    def try_get_position(self, relative_to: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Tuple[bool, winrt.windows.foundation.Point]: ...
 
 class DoubleTappedRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DoubleTappedRoutedEventArgs: ...
@@ -121,10 +121,10 @@ class FocusManager(winrt.system.Object):
     def try_focus_async(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: winrt.windows.ui.xaml.FocusState, /) -> winrt.windows.foundation.IAsyncOperation[FocusMovementResult]: ...
     @typing.overload
     @staticmethod
-    def try_move_focus(focus_navigation_direction: FocusNavigationDirection, /) -> winrt.system.Boolean: ...
+    def try_move_focus(focus_navigation_direction: FocusNavigationDirection, /) -> bool: ...
     @typing.overload
     @staticmethod
-    def try_move_focus(focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: typing.Optional[FindNextElementOptions], /) -> winrt.system.Boolean: ...
+    def try_move_focus(focus_navigation_direction: FocusNavigationDirection, focus_navigation_options: typing.Optional[FindNextElementOptions], /) -> bool: ...
     @typing.overload
     @staticmethod
     def try_move_focus_async(focus_navigation_direction: FocusNavigationDirection, /) -> winrt.windows.foundation.IAsyncOperation[FocusMovementResult]: ...
@@ -161,14 +161,14 @@ class FocusManagerLostFocusEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> FocusManagerLostFocusEventArgs: ...
 
 class FocusMovementResult(winrt.system.Object):
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusMovementResult: ...
 
 class GettingFocusEventArgs(winrt.system.Object):
     new_focused_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
-    handled: winrt.system.Boolean
-    cancel: winrt.system.Boolean
+    handled: bool
+    cancel: bool
     direction: FocusNavigationDirection
     focus_state: winrt.windows.ui.xaml.FocusState
     input_device: FocusInputDeviceKind
@@ -176,11 +176,11 @@ class GettingFocusEventArgs(winrt.system.Object):
     correlation_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GettingFocusEventArgs: ...
-    def try_cancel(self) -> winrt.system.Boolean: ...
-    def try_set_new_focused_element(self, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def try_cancel(self) -> bool: ...
+    def try_set_new_focused_element(self, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
 
 class HoldingRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     holding_state: winrt.windows.ui.input.HoldingState
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     @staticmethod
@@ -222,7 +222,7 @@ class InputScopeName(winrt.system.Object):
     def __new__(cls: typing.Type[InputScopeName]) -> InputScopeName:...
 
 class KeyRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     key: winrt.windows.system.VirtualKey
     key_status: winrt.windows.ui.core.CorePhysicalKeyStatus
     original_key: winrt.windows.system.VirtualKey
@@ -234,7 +234,7 @@ class KeyboardAccelerator(winrt.system.Object):
     scope_owner: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     modifiers: winrt.windows.system.VirtualKeyModifiers
     key: winrt.windows.system.VirtualKey
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     is_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     key_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     modifiers_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -246,7 +246,7 @@ class KeyboardAccelerator(winrt.system.Object):
     def remove_invoked(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     keyboard_accelerator: typing.Optional[KeyboardAccelerator]
     @staticmethod
@@ -254,8 +254,8 @@ class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
 
 class LosingFocusEventArgs(winrt.system.Object):
     new_focused_element: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
-    handled: winrt.system.Boolean
-    cancel: winrt.system.Boolean
+    handled: bool
+    cancel: bool
     direction: FocusNavigationDirection
     focus_state: winrt.windows.ui.xaml.FocusState
     input_device: FocusInputDeviceKind
@@ -263,14 +263,14 @@ class LosingFocusEventArgs(winrt.system.Object):
     correlation_id: uuid.UUID
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LosingFocusEventArgs: ...
-    def try_cancel(self) -> winrt.system.Boolean: ...
-    def try_set_new_focused_element(self, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def try_cancel(self) -> bool: ...
+    def try_set_new_focused_element(self, element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
 
 class ManipulationCompletedRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     container: typing.Optional[winrt.windows.ui.xaml.UIElement]
     cumulative: winrt.windows.ui.input.ManipulationDelta
-    is_inertial: winrt.system.Boolean
+    is_inertial: bool
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     position: winrt.windows.foundation.Point
     velocities: winrt.windows.ui.input.ManipulationVelocities
@@ -279,11 +279,11 @@ class ManipulationCompletedRoutedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[ManipulationCompletedRoutedEventArgs]) -> ManipulationCompletedRoutedEventArgs:...
 
 class ManipulationDeltaRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     container: typing.Optional[winrt.windows.ui.xaml.UIElement]
     cumulative: winrt.windows.ui.input.ManipulationDelta
     delta: winrt.windows.ui.input.ManipulationDelta
-    is_inertial: winrt.system.Boolean
+    is_inertial: bool
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     position: winrt.windows.foundation.Point
     velocities: winrt.windows.ui.input.ManipulationVelocities
@@ -295,7 +295,7 @@ class ManipulationDeltaRoutedEventArgs(winrt.system.Object):
 class ManipulationInertiaStartingRoutedEventArgs(winrt.system.Object):
     translation_behavior: typing.Optional[InertiaTranslationBehavior]
     rotation_behavior: typing.Optional[InertiaRotationBehavior]
-    handled: winrt.system.Boolean
+    handled: bool
     expansion_behavior: typing.Optional[InertiaExpansionBehavior]
     container: typing.Optional[winrt.windows.ui.xaml.UIElement]
     cumulative: winrt.windows.ui.input.ManipulationDelta
@@ -317,7 +317,7 @@ class ManipulationPivot(winrt.system.Object):
     def __new__(cls: typing.Type[ManipulationPivot]) -> ManipulationPivot:...
 
 class ManipulationStartedRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     container: typing.Optional[winrt.windows.ui.xaml.UIElement]
     cumulative: winrt.windows.ui.input.ManipulationDelta
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
@@ -330,46 +330,46 @@ class ManipulationStartedRoutedEventArgs(winrt.system.Object):
 class ManipulationStartingRoutedEventArgs(winrt.system.Object):
     pivot: typing.Optional[ManipulationPivot]
     mode: ManipulationModes
-    handled: winrt.system.Boolean
+    handled: bool
     container: typing.Optional[winrt.windows.ui.xaml.UIElement]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationStartingRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationStartingRoutedEventArgs]) -> ManipulationStartingRoutedEventArgs:...
 
 class NoFocusCandidateFoundEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     direction: FocusNavigationDirection
     input_device: FocusInputDeviceKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NoFocusCandidateFoundEventArgs: ...
 
 class Pointer(winrt.system.Object):
-    is_in_contact: winrt.system.Boolean
-    is_in_range: winrt.system.Boolean
+    is_in_contact: bool
+    is_in_range: bool
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     pointer_id: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Pointer: ...
 
 class PointerRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     key_modifiers: winrt.windows.system.VirtualKeyModifiers
     pointer: typing.Optional[Pointer]
-    is_generated: winrt.system.Boolean
+    is_generated: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerRoutedEventArgs: ...
     def get_current_point(self, relative_to: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.windows.ui.input.PointerPoint]: ...
     def get_intermediate_points(self, relative_to: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.input.PointerPoint]]: ...
 
 class ProcessKeyboardAcceleratorEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     key: winrt.windows.system.VirtualKey
     modifiers: winrt.windows.system.VirtualKeyModifiers
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessKeyboardAcceleratorEventArgs: ...
 
 class RightTappedRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RightTappedRoutedEventArgs: ...
@@ -387,7 +387,7 @@ class StandardUICommand(winrt.system.Object):
     def __new__(cls: typing.Type[StandardUICommand], kind: StandardUICommandKind) -> StandardUICommand:...
 
 class TappedRoutedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     pointer_device_type: winrt.windows.devices.input.PointerDeviceType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TappedRoutedEventArgs: ...
@@ -410,7 +410,7 @@ class XamlUICommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlUICommand: ...
     def __new__(cls: typing.Type[XamlUICommand]) -> XamlUICommand:...
-    def can_execute(self, parameter: typing.Optional[winrt.system.Object], /) -> winrt.system.Boolean: ...
+    def can_execute(self, parameter: typing.Optional[winrt.system.Object], /) -> bool: ...
     def execute(self, parameter: typing.Optional[winrt.system.Object], /) -> None: ...
     def notify_can_execute_changed(self) -> None: ...
     def add_can_execute_requested(self, handler: winrt.windows.foundation.TypedEventHandler[XamlUICommand, CanExecuteRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -423,7 +423,7 @@ class XamlUICommand(winrt.system.Object):
 class ICommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommand: ...
-    def can_execute(self, parameter: typing.Optional[winrt.system.Object], /) -> winrt.system.Boolean: ...
+    def can_execute(self, parameter: typing.Optional[winrt.system.Object], /) -> bool: ...
     def execute(self, parameter: typing.Optional[winrt.system.Object], /) -> None: ...
     def add_can_execute_changed(self, handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_can_execute_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...

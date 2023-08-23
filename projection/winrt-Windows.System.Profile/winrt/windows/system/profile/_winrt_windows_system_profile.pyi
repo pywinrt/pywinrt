@@ -38,7 +38,7 @@ class AppApplicability(winrt.system.Object):
     def get_unsupported_app_requirements(capabilities: typing.Iterable[str], /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[UnsupportedAppRequirement]]: ...
 
 class EducationSettings(winrt.system.Object):
-    is_education_environment: typing.ClassVar[winrt.system.Boolean]
+    is_education_environment: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EducationSettings: ...
 
@@ -86,26 +86,26 @@ class PlatformDiagnosticsAndUsageDataSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlatformDiagnosticsAndUsageDataSettings: ...
     @staticmethod
-    def can_collect_diagnostics(level: PlatformDataCollectionLevel, /) -> winrt.system.Boolean: ...
+    def can_collect_diagnostics(level: PlatformDataCollectionLevel, /) -> bool: ...
     @staticmethod
     def add_collection_level_changed(handler: winrt.windows.foundation.EventHandler[winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     @staticmethod
     def remove_collection_level_changed(token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class RetailInfo(winrt.system.Object):
-    is_demo_mode_enabled: typing.ClassVar[winrt.system.Boolean]
+    is_demo_mode_enabled: typing.ClassVar[bool]
     properties: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RetailInfo: ...
 
 class SharedModeSettings(winrt.system.Object):
-    is_enabled: typing.ClassVar[winrt.system.Boolean]
-    should_avoid_local_storage: typing.ClassVar[winrt.system.Boolean]
+    is_enabled: typing.ClassVar[bool]
+    should_avoid_local_storage: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SharedModeSettings: ...
 
 class SmartAppControlPolicy(winrt.system.Object):
-    is_enabled: typing.ClassVar[winrt.system.Boolean]
+    is_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmartAppControlPolicy: ...
     @staticmethod
@@ -143,10 +143,10 @@ class UnsupportedAppRequirement(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> UnsupportedAppRequirement: ...
 
 class WindowsIntegrityPolicy(winrt.system.Object):
-    can_disable: typing.ClassVar[winrt.system.Boolean]
-    is_disable_supported: typing.ClassVar[winrt.system.Boolean]
-    is_enabled: typing.ClassVar[winrt.system.Boolean]
-    is_enabled_for_trial: typing.ClassVar[winrt.system.Boolean]
+    can_disable: typing.ClassVar[bool]
+    is_disable_supported: typing.ClassVar[bool]
+    is_enabled: typing.ClassVar[bool]
+    is_enabled_for_trial: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsIntegrityPolicy: ...
     @staticmethod

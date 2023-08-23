@@ -75,14 +75,14 @@ class IsolatedWindowsEnvironmentFile(winrt.system.Object):
     host_path: str
     id: uuid.UUID
     guest_path: str
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentFile: ...
     def close(self) -> None: ...
 
 class IsolatedWindowsEnvironmentHost(winrt.system.Object):
     host_errors: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[IsolatedWindowsEnvironmentHostError]]]
-    is_ready: typing.ClassVar[winrt.system.Boolean]
+    is_ready: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentHost: ...
 
@@ -94,13 +94,13 @@ class IsolatedWindowsEnvironmentLaunchFileResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentLaunchFileResult: ...
 
 class IsolatedWindowsEnvironmentOptions(winrt.system.Object):
-    persist_user_profile: winrt.system.Boolean
+    persist_user_profile: bool
     environment_owner_id: str
     clipboard_copy_paste_directions: IsolatedWindowsEnvironmentClipboardCopyPasteDirections
     available_printers: IsolatedWindowsEnvironmentAvailablePrinters
     allowed_clipboard_formats: IsolatedWindowsEnvironmentAllowedClipboardFormats
-    allow_graphics_hardware_acceleration: winrt.system.Boolean
-    allow_camera_and_microphone_access: winrt.system.Boolean
+    allow_graphics_hardware_acceleration: bool
+    allow_camera_and_microphone_access: bool
     shared_folder_name_in_environment: str
     shared_host_folder_path: str
     window_annotation_override: str
@@ -151,7 +151,7 @@ class IsolatedWindowsEnvironmentProcess(winrt.system.Object):
     def wait_for_exit_with_timeout(self, timeout_milliseconds: winrt.system.UInt32, /) -> None: ...
 
 class IsolatedWindowsEnvironmentShareFileRequestOptions(winrt.system.Object):
-    allow_write: winrt.system.Boolean
+    allow_write: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFileRequestOptions: ...
     def __new__(cls: typing.Type[IsolatedWindowsEnvironmentShareFileRequestOptions]) -> IsolatedWindowsEnvironmentShareFileRequestOptions:...
@@ -164,7 +164,7 @@ class IsolatedWindowsEnvironmentShareFileResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFileResult: ...
 
 class IsolatedWindowsEnvironmentShareFolderRequestOptions(winrt.system.Object):
-    allow_write: winrt.system.Boolean
+    allow_write: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentShareFolderRequestOptions: ...
     def __new__(cls: typing.Type[IsolatedWindowsEnvironmentShareFolderRequestOptions]) -> IsolatedWindowsEnvironmentShareFolderRequestOptions:...
@@ -193,8 +193,8 @@ class IsolatedWindowsEnvironmentUserInfo(winrt.system.Object):
     environment_user_sid: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IsolatedWindowsEnvironmentUserInfo: ...
-    def try_wait_for_sign_in_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_wait_for_sign_in_with_progress_async(self) -> winrt.windows.foundation.IAsyncOperationWithProgress[winrt.system.Boolean, IsolatedWindowsEnvironmentSignInProgress]: ...
+    def try_wait_for_sign_in_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_wait_for_sign_in_with_progress_async(self) -> winrt.windows.foundation.IAsyncOperationWithProgress[bool, IsolatedWindowsEnvironmentSignInProgress]: ...
 
 class IsolatedWindowsHostMessenger(winrt.system.Object):
     @staticmethod

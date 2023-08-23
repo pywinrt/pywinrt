@@ -90,15 +90,15 @@ class MapManager(winrt.system.Object):
 class MapRoute(winrt.system.Object):
     bounding_box: typing.Optional[winrt.windows.devices.geolocation.GeoboundingBox]
     estimated_duration: datetime.timedelta
-    is_traffic_based: winrt.system.Boolean
+    is_traffic_based: bool
     legs: typing.Optional[winrt.windows.foundation.collections.IVectorView[MapRouteLeg]]
     length_in_meters: winrt.system.Double
     path: typing.Optional[winrt.windows.devices.geolocation.Geopath]
-    has_blocked_roads: winrt.system.Boolean
+    has_blocked_roads: bool
     violated_restrictions: MapRouteRestrictions
     duration_without_traffic: datetime.timedelta
     traffic_congestion: TrafficCongestion
-    is_scenic: winrt.system.Boolean
+    is_scenic: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRoute: ...
 
@@ -195,7 +195,7 @@ class PlaceInfo(winrt.system.Object):
     display_name: str
     geoshape: typing.Optional[winrt.windows.devices.geolocation.IGeoshape]
     identifier: str
-    is_show_supported: typing.ClassVar[winrt.system.Boolean]
+    is_show_supported: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PlaceInfo: ...
     @typing.overload

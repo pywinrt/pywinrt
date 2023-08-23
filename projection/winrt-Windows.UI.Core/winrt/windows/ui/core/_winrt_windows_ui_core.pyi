@@ -23,11 +23,11 @@ Self = typing.TypeVar('Self')
 class CorePhysicalKeyStatus:
     repeat_count: winrt.system.UInt32
     scan_code: winrt.system.UInt32
-    is_extended_key: winrt.system.Boolean
-    is_menu_key_down: winrt.system.Boolean
-    was_key_down: winrt.system.Boolean
-    is_key_released: winrt.system.Boolean
-    def __new__(cls: typing.Type[CorePhysicalKeyStatus], repeat_count: winrt.system.UInt32, scan_code: winrt.system.UInt32, is_extended_key: winrt.system.Boolean, is_menu_key_down: winrt.system.Boolean, was_key_down: winrt.system.Boolean, is_key_released: winrt.system.Boolean) -> CorePhysicalKeyStatus: ...
+    is_extended_key: bool
+    is_menu_key_down: bool
+    was_key_down: bool
+    is_key_released: bool
+    def __new__(cls: typing.Type[CorePhysicalKeyStatus], repeat_count: winrt.system.UInt32, scan_code: winrt.system.UInt32, is_extended_key: bool, is_menu_key_down: bool, was_key_down: bool, is_key_released: bool) -> CorePhysicalKeyStatus: ...
 
 class CoreProximityEvaluation:
     score: winrt.system.Int32
@@ -39,25 +39,25 @@ class AcceleratorKeyEventArgs(winrt.system.Object):
     key_status: CorePhysicalKeyStatus
     virtual_key: winrt.windows.system.VirtualKey
     device_id: str
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AcceleratorKeyEventArgs: ...
 
 class AutomationProviderRequestedEventArgs(winrt.system.Object):
     automation_provider: typing.Optional[winrt.system.Object]
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationProviderRequestedEventArgs: ...
 
 class BackRequestedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackRequestedEventArgs: ...
 
 class CharacterReceivedEventArgs(winrt.system.Object):
     key_code: winrt.system.UInt32
     key_status: CorePhysicalKeyStatus
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CharacterReceivedEventArgs: ...
 
@@ -75,11 +75,11 @@ class CoreAcceleratorKeys(winrt.system.Object):
     def remove_accelerator_key_activated(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreComponentInputSource(winrt.system.Object):
-    has_focus: winrt.system.Boolean
-    is_input_enabled: winrt.system.Boolean
+    has_focus: bool
+    is_input_enabled: bool
     dispatcher: typing.Optional[CoreDispatcher]
     pointer_cursor: typing.Optional[CoreCursor]
-    has_capture: winrt.system.Boolean
+    has_capture: bool
     pointer_position: winrt.windows.foundation.Point
     dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
     @staticmethod
@@ -127,7 +127,7 @@ class CoreCursor(winrt.system.Object):
     def __new__(cls: typing.Type[CoreCursor], type: CoreCursorType, id: winrt.system.UInt32) -> CoreCursor:...
 
 class CoreDispatcher(winrt.system.Object):
-    has_thread_access: winrt.system.Boolean
+    has_thread_access: bool
     current_priority: CoreDispatcherPriority
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreDispatcher: ...
@@ -135,20 +135,20 @@ class CoreDispatcher(winrt.system.Object):
     def run_async(self, priority: CoreDispatcherPriority, agile_callback: typing.Optional[DispatchedHandler], /) -> winrt.windows.foundation.IAsyncAction: ...
     def run_idle_async(self, agile_callback: typing.Optional[IdleDispatchedHandler], /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
-    def should_yield(self) -> winrt.system.Boolean: ...
+    def should_yield(self) -> bool: ...
     @typing.overload
-    def should_yield(self, priority: CoreDispatcherPriority, /) -> winrt.system.Boolean: ...
+    def should_yield(self, priority: CoreDispatcherPriority, /) -> bool: ...
     def stop_process_events(self) -> None: ...
-    def try_run_async(self, priority: CoreDispatcherPriority, agile_callback: typing.Optional[DispatchedHandler], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_run_idle_async(self, agile_callback: typing.Optional[IdleDispatchedHandler], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_run_async(self, priority: CoreDispatcherPriority, agile_callback: typing.Optional[DispatchedHandler], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_run_idle_async(self, agile_callback: typing.Optional[IdleDispatchedHandler], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_accelerator_key_activated(self, handler: winrt.windows.foundation.TypedEventHandler[CoreDispatcher, AcceleratorKeyEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_accelerator_key_activated(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreIndependentInputSource(winrt.system.Object):
-    is_input_enabled: winrt.system.Boolean
+    is_input_enabled: bool
     dispatcher: typing.Optional[CoreDispatcher]
     pointer_cursor: typing.Optional[CoreCursor]
-    has_capture: winrt.system.Boolean
+    has_capture: bool
     pointer_position: winrt.windows.foundation.Point
     dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
     @staticmethod
@@ -179,8 +179,8 @@ class CoreIndependentInputSource(winrt.system.Object):
     def remove_pointer_routed_to(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreIndependentInputSourceController(winrt.system.Object):
-    is_transparent_for_uncontrolled_input: winrt.system.Boolean
-    is_palm_rejection_enabled: winrt.system.Boolean
+    is_transparent_for_uncontrolled_input: bool
+    is_palm_rejection_enabled: bool
     source: typing.Optional[CoreIndependentInputSource]
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -200,12 +200,12 @@ class CoreWindow(winrt.system.Object):
     pointer_position: winrt.windows.foundation.Point
     pointer_cursor: typing.Optional[CoreCursor]
     flow_direction: CoreWindowFlowDirection
-    is_input_enabled: winrt.system.Boolean
+    is_input_enabled: bool
     dispatcher: typing.Optional[CoreDispatcher]
     automation_host_provider: typing.Optional[winrt.system.Object]
     bounds: winrt.windows.foundation.Rect
     custom_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
-    visible: winrt.system.Boolean
+    visible: bool
     activation_mode: CoreWindowActivationMode
     dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
     u_i_context: typing.Optional[winrt.windows.ui.UIContext]
@@ -287,7 +287,7 @@ class CoreWindowDialog(winrt.system.Object):
     def remove_showing(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CoreWindowEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowEventArgs: ...
 
@@ -315,7 +315,7 @@ class CoreWindowPopupShowingEventArgs(winrt.system.Object):
     def set_desired_size(self, value: winrt.windows.foundation.Size, /) -> None: ...
 
 class CoreWindowResizeManager(winrt.system.Object):
-    should_wait_for_layout_completion: winrt.system.Boolean
+    should_wait_for_layout_completion: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWindowResizeManager: ...
     @staticmethod
@@ -323,18 +323,18 @@ class CoreWindowResizeManager(winrt.system.Object):
     def notify_layout_completed(self) -> None: ...
 
 class IdleDispatchedHandlerArgs(winrt.system.Object):
-    is_dispatcher_idle: winrt.system.Boolean
+    is_dispatcher_idle: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IdleDispatchedHandlerArgs: ...
 
 class InputEnabledEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
-    input_enabled: winrt.system.Boolean
+    handled: bool
+    input_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputEnabledEventArgs: ...
 
 class KeyEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     key_status: CorePhysicalKeyStatus
     virtual_key: winrt.windows.system.VirtualKey
     device_id: str
@@ -342,7 +342,7 @@ class KeyEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> KeyEventArgs: ...
 
 class PointerEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     current_point: typing.Optional[winrt.windows.ui.input.PointerPoint]
     key_modifiers: winrt.windows.system.VirtualKeyModifiers
     @staticmethod
@@ -359,7 +359,7 @@ class SystemNavigationManager(winrt.system.Object):
     def remove_back_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class TouchHitTestingEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     proximity_evaluation: CoreProximityEvaluation
     bounding_box: winrt.windows.foundation.Rect
     point: winrt.windows.foundation.Point
@@ -368,19 +368,19 @@ class TouchHitTestingEventArgs(winrt.system.Object):
     def evaluate_proximity(self, control_bounding_box: winrt.windows.foundation.Rect, /) -> CoreProximityEvaluation: ...
 
 class VisibilityChangedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
-    visible: winrt.system.Boolean
+    handled: bool
+    visible: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisibilityChangedEventArgs: ...
 
 class WindowActivatedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     window_activation_state: CoreWindowActivationState
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowActivatedEventArgs: ...
 
 class WindowSizeChangedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     size: winrt.windows.foundation.Size
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowSizeChangedEventArgs: ...
@@ -393,14 +393,14 @@ class ICoreAcceleratorKeys(winrt.system.Object):
 
 class ICoreInputSourceBase(winrt.system.Object):
     dispatcher: typing.Optional[CoreDispatcher]
-    is_input_enabled: winrt.system.Boolean
+    is_input_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreInputSourceBase: ...
     def add_input_enabled(self, handler: winrt.windows.foundation.TypedEventHandler[winrt.system.Object, InputEnabledEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_input_enabled(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class ICorePointerInputSource(winrt.system.Object):
-    has_capture: winrt.system.Boolean
+    has_capture: bool
     pointer_cursor: typing.Optional[CoreCursor]
     pointer_position: winrt.windows.foundation.Point
     @staticmethod
@@ -424,7 +424,7 @@ class ICorePointerInputSource(winrt.system.Object):
 
 class ICorePointerInputSource2(winrt.system.Object):
     dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
-    has_capture: winrt.system.Boolean
+    has_capture: bool
     pointer_cursor: typing.Optional[CoreCursor]
     pointer_position: winrt.windows.foundation.Point
     @staticmethod
@@ -462,10 +462,10 @@ class ICoreWindow(winrt.system.Object):
     custom_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     dispatcher: typing.Optional[CoreDispatcher]
     flow_direction: CoreWindowFlowDirection
-    is_input_enabled: winrt.system.Boolean
+    is_input_enabled: bool
     pointer_cursor: typing.Optional[CoreCursor]
     pointer_position: winrt.windows.foundation.Point
-    visible: winrt.system.Boolean
+    visible: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWindow: ...
     def activate(self) -> None: ...
@@ -510,7 +510,7 @@ class ICoreWindow(winrt.system.Object):
     def remove_visibility_changed(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class ICoreWindowEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreWindowEventArgs: ...
 

@@ -65,11 +65,11 @@ class EnteredBackgroundEventArgs(winrt.system.Object):
 
 class HtmlPrintDocumentSource(winrt.system.Object):
     top_margin: winrt.system.Single
-    shrink_to_fit: winrt.system.Boolean
+    shrink_to_fit: bool
     right_margin: winrt.system.Single
     percent_scale: winrt.system.Single
     left_margin: winrt.system.Single
-    enable_header_footer: winrt.system.Boolean
+    enable_header_footer: bool
     content: PrintContent
     bottom_margin: winrt.system.Single
     page_range: str
@@ -78,7 +78,7 @@ class HtmlPrintDocumentSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HtmlPrintDocumentSource: ...
     def close(self) -> None: ...
-    def try_set_page_range(self, str_page_range: str, /) -> winrt.system.Boolean: ...
+    def try_set_page_range(self, str_page_range: str, /) -> bool: ...
 
 class LeavingBackgroundEventArgs(winrt.system.Object):
     @staticmethod
@@ -87,7 +87,7 @@ class LeavingBackgroundEventArgs(winrt.system.Object):
 
 class NewWebUIViewCreatedEventArgs(winrt.system.Object):
     activated_event_args: typing.Optional[winrt.windows.applicationmodel.activation.IActivatedEventArgs]
-    has_pending_navigate: winrt.system.Boolean
+    has_pending_navigate: bool
     web_u_i_view: typing.Optional[WebUIView]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NewWebUIViewCreatedEventArgs: ...
@@ -113,7 +113,7 @@ class WebUIApplication(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUIApplication: ...
     @staticmethod
-    def enable_prelaunch(value: winrt.system.Boolean, /) -> None: ...
+    def enable_prelaunch(value: bool, /) -> None: ...
     @staticmethod
     def request_restart_async(launch_arguments: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.applicationmodel.core.AppRestartFailureReason]: ...
     @staticmethod
@@ -220,7 +220,7 @@ class WebUIBackgroundTaskInstanceRuntimeClass(winrt.system.Object):
     suspended_count: winrt.system.UInt32
     task: typing.Optional[winrt.windows.applicationmodel.background.BackgroundTaskRegistration]
     trigger_details: typing.Optional[winrt.system.Object]
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUIBackgroundTaskInstanceRuntimeClass: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.applicationmodel.background.BackgroundTaskDeferral]: ...
@@ -459,7 +459,7 @@ class WebUILaunchActivatedEventArgs(winrt.system.Object):
     arguments: str
     tile_id: str
     tile_activated_info: typing.Optional[winrt.windows.applicationmodel.activation.TileActivatedInfo]
-    prelaunch_activated: winrt.system.Boolean
+    prelaunch_activated: bool
     activated_operation: typing.Optional[ActivatedOperation]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebUILaunchActivatedEventArgs: ...
@@ -636,13 +636,13 @@ class WebUIUserDataAccountProviderActivatedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WebUIUserDataAccountProviderActivatedEventArgs: ...
 
 class WebUIView(winrt.system.Object):
-    ignore_application_content_uri_rules_navigation_restrictions: winrt.system.Boolean
+    ignore_application_content_uri_rules_navigation_restrictions: bool
     application_view_id: winrt.system.Int32
     source: typing.Optional[winrt.windows.foundation.Uri]
     default_background_color: winrt.windows.ui.Color
-    can_go_back: winrt.system.Boolean
-    can_go_forward: winrt.system.Boolean
-    contains_full_screen_element: winrt.system.Boolean
+    can_go_back: bool
+    can_go_forward: bool
+    contains_full_screen_element: bool
     deferred_permission_requests: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.web.ui.WebViewControlDeferredPermissionRequest]]
     document_title: str
     settings: typing.Optional[winrt.windows.web.ui.WebViewControlSettings]
@@ -754,7 +754,7 @@ class IActivatedEventArgsDeferral(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IActivatedEventArgsDeferral: ...
 
 class IWebUIBackgroundTaskInstance(winrt.system.Object):
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebUIBackgroundTaskInstance: ...
 

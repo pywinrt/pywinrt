@@ -19,20 +19,20 @@ Self = typing.TypeVar('Self')
 class Certificate(winrt.system.Object):
     friendly_name: str
     enhanced_key_usages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    has_private_key: winrt.system.Boolean
-    is_strongly_protected: winrt.system.Boolean
+    has_private_key: bool
+    is_strongly_protected: bool
     issuer: str
     serial_number: winrt.system.UInt8
     subject: str
     valid_from: datetime.datetime
     valid_to: datetime.datetime
-    is_security_device_bound: winrt.system.Boolean
+    is_security_device_bound: bool
     key_algorithm_name: str
     key_usages: typing.Optional[CertificateKeyUsages]
     signature_algorithm_name: str
     signature_hash_algorithm_name: str
     subject_alternative_name: typing.Optional[SubjectAlternativeNameInfo]
-    is_per_user: winrt.system.Boolean
+    is_per_user: bool
     key_storage_provider_name: str
     store_name: str
     @staticmethod
@@ -51,7 +51,7 @@ class Certificate(winrt.system.Object):
 class CertificateChain(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateChain: ...
-    def get_certificates(self, include_root: winrt.system.Boolean, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Certificate]]: ...
+    def get_certificates(self, include_root: bool, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[Certificate]]: ...
     @typing.overload
     def validate(self) -> ChainValidationResult: ...
     @typing.overload
@@ -78,21 +78,21 @@ class CertificateEnrollmentManager(winrt.system.Object):
 class CertificateExtension(winrt.system.Object):
     value: winrt.system.UInt8
     object_id: str
-    is_critical: winrt.system.Boolean
+    is_critical: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateExtension: ...
     def __new__(cls: typing.Type[CertificateExtension]) -> CertificateExtension:...
     def encode_value(self, value: str, /) -> None: ...
 
 class CertificateKeyUsages(winrt.system.Object):
-    non_repudiation: winrt.system.Boolean
-    key_encipherment: winrt.system.Boolean
-    key_certificate_sign: winrt.system.Boolean
-    key_agreement: winrt.system.Boolean
-    encipher_only: winrt.system.Boolean
-    digital_signature: winrt.system.Boolean
-    data_encipherment: winrt.system.Boolean
-    crl_sign: winrt.system.Boolean
+    non_repudiation: bool
+    key_encipherment: bool
+    key_certificate_sign: bool
+    key_agreement: bool
+    encipher_only: bool
+    digital_signature: bool
+    data_encipherment: bool
+    crl_sign: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateKeyUsages: ...
     def __new__(cls: typing.Type[CertificateKeyUsages]) -> CertificateKeyUsages:...
@@ -100,12 +100,12 @@ class CertificateKeyUsages(winrt.system.Object):
 class CertificateQuery(winrt.system.Object):
     thumbprint: winrt.system.UInt8
     issuer_name: str
-    hardware_only: winrt.system.Boolean
+    hardware_only: bool
     friendly_name: str
     enhanced_key_usages: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     store_name: str
-    include_expired_certificates: winrt.system.Boolean
-    include_duplicates: winrt.system.Boolean
+    include_expired_certificates: bool
+    include_duplicates: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CertificateQuery: ...
     def __new__(cls: typing.Type[CertificateQuery]) -> CertificateQuery:...
@@ -123,7 +123,7 @@ class CertificateRequestProperties(winrt.system.Object):
     attestation_credential_certificate: typing.Optional[Certificate]
     signing_certificate: typing.Optional[Certificate]
     smartcard_reader_name: str
-    use_existing_key: winrt.system.Boolean
+    use_existing_key: bool
     curve_parameters: winrt.system.UInt8
     curve_name: str
     container_name_prefix: str
@@ -160,10 +160,10 @@ class CertificateStores(winrt.system.Object):
 
 class ChainBuildingParameters(winrt.system.Object):
     validation_timestamp: datetime.datetime
-    revocation_check_enabled: winrt.system.Boolean
-    network_retrieval_enabled: winrt.system.Boolean
-    current_time_validation_enabled: winrt.system.Boolean
-    authority_information_access_enabled: winrt.system.Boolean
+    revocation_check_enabled: bool
+    network_retrieval_enabled: bool
+    current_time_validation_enabled: bool
+    authority_information_access_enabled: bool
     enhanced_key_usages: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     exclusive_trust_roots: typing.Optional[winrt.windows.foundation.collections.IVector[Certificate]]
     @staticmethod
@@ -300,6 +300,6 @@ class UserCertificateStore(winrt.system.Object):
     name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserCertificateStore: ...
-    def request_add_async(self, certificate: typing.Optional[Certificate], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def request_delete_async(self, certificate: typing.Optional[Certificate], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def request_add_async(self, certificate: typing.Optional[Certificate], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def request_delete_async(self, certificate: typing.Optional[Certificate], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 

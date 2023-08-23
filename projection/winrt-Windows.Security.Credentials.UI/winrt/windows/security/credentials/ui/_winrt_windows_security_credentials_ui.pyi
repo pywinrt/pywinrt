@@ -35,9 +35,9 @@ class CredentialPickerOptions(winrt.system.Object):
     custom_authentication_protocol: str
     credential_save_option: CredentialSaveOption
     caption: str
-    caller_saves_credential: winrt.system.Boolean
+    caller_saves_credential: bool
     authentication_protocol: AuthenticationProtocol
-    always_display_dialog: winrt.system.Boolean
+    always_display_dialog: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CredentialPickerOptions: ...
     def __new__(cls: typing.Type[CredentialPickerOptions]) -> CredentialPickerOptions:...
@@ -47,7 +47,7 @@ class CredentialPickerResults(winrt.system.Object):
     credential_domain_name: str
     credential_password: str
     credential_save_option: CredentialSaveOption
-    credential_saved: winrt.system.Boolean
+    credential_saved: bool
     credential_user_name: str
     error_code: winrt.system.UInt32
     @staticmethod

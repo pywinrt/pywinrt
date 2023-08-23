@@ -58,7 +58,7 @@ class GameSaveContainerInfo(winrt.system.Object):
     display_name: str
     last_modified_time: datetime.datetime
     name: str
-    needs_sync: winrt.system.Boolean
+    needs_sync: bool
     total_size: winrt.system.UInt64
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameSaveContainerInfo: ...

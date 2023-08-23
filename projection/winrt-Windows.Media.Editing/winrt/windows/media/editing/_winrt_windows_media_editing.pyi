@@ -103,7 +103,7 @@ class MediaOverlay(winrt.system.Object):
     position: winrt.windows.foundation.Rect
     opacity: winrt.system.Double
     delay: datetime.timedelta
-    audio_enabled: winrt.system.Boolean
+    audio_enabled: bool
     clip: typing.Optional[MediaClip]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaOverlay: ...

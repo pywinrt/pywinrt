@@ -16,15 +16,15 @@ from . import GazeDeviceConfigurationStatePreview
 Self = typing.TypeVar('Self')
 
 class GazeDevicePreview(winrt.system.Object):
-    can_track_eyes: winrt.system.Boolean
-    can_track_head: winrt.system.Boolean
+    can_track_eyes: bool
+    can_track_head: bool
     configuration_state: GazeDeviceConfigurationStatePreview
     id: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GazeDevicePreview: ...
     def get_boolean_control_descriptions(self, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription]]: ...
     def get_numeric_control_descriptions(self, usage_page: winrt.system.UInt16, usage_id: winrt.system.UInt16, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription]]: ...
-    def request_calibration_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def request_calibration_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class GazeDeviceWatcherAddedPreviewEventArgs(winrt.system.Object):
     device: typing.Optional[GazeDevicePreview]
@@ -56,13 +56,13 @@ class GazeDeviceWatcherUpdatedPreviewEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> GazeDeviceWatcherUpdatedPreviewEventArgs: ...
 
 class GazeEnteredPreviewEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     current_point: typing.Optional[GazePointPreview]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GazeEnteredPreviewEventArgs: ...
 
 class GazeExitedPreviewEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     current_point: typing.Optional[GazePointPreview]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GazeExitedPreviewEventArgs: ...
@@ -82,7 +82,7 @@ class GazeInputSourcePreview(winrt.system.Object):
     def remove_gaze_moved(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class GazeMovedPreviewEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     current_point: typing.Optional[GazePointPreview]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GazeMovedPreviewEventArgs: ...

@@ -48,7 +48,7 @@ class DisplayDevice(winrt.system.Object):
     def create_simple_scanout(self, p_source: typing.Optional[DisplaySource], p_surface: typing.Optional[DisplaySurface], sub_resource_index: winrt.system.UInt32, sync_interval: winrt.system.UInt32, /) -> typing.Optional[DisplayScanout]: ...
     def create_simple_scanout_with_dirty_rects_and_options(self, source: typing.Optional[DisplaySource], surface: typing.Optional[DisplaySurface], subresource_index: winrt.system.UInt32, sync_interval: winrt.system.UInt32, dirty_rects: typing.Iterable[winrt.windows.graphics.RectInt32], options: DisplayScanoutOptions, /) -> typing.Optional[DisplayScanout]: ...
     def create_task_pool(self) -> typing.Optional[DisplayTaskPool]: ...
-    def is_capability_supported(self, capability: DisplayDeviceCapability, /) -> winrt.system.Boolean: ...
+    def is_capability_supported(self, capability: DisplayDeviceCapability, /) -> bool: ...
     def wait_for_v_blank(self, source: typing.Optional[DisplaySource], /) -> None: ...
 
 class DisplayFence(winrt.system.Object):
@@ -84,25 +84,25 @@ class DisplayManager(winrt.system.Object):
     def remove_paths_failed_or_invalidated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class DisplayManagerChangedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerChangedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class DisplayManagerDisabledEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerDisabledEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class DisplayManagerEnabledEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerEnabledEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class DisplayManagerPathsFailedOrInvalidatedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayManagerPathsFailedOrInvalidatedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -115,8 +115,8 @@ class DisplayManagerResultWithState(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> DisplayManagerResultWithState: ...
 
 class DisplayModeInfo(winrt.system.Object):
-    is_interlaced: winrt.system.Boolean
-    is_stereo: winrt.system.Boolean
+    is_interlaced: bool
+    is_stereo: bool
     presentation_rate: DisplayPresentationRate
     properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     source_pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat
@@ -126,7 +126,7 @@ class DisplayModeInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayModeInfo: ...
     def get_wire_format_supported_bits_per_channel(self, encoding: DisplayWireFormatPixelEncoding, /) -> DisplayBitsPerChannel: ...
-    def is_wire_format_supported(self, wire_format: typing.Optional[DisplayWireFormat], /) -> winrt.system.Boolean: ...
+    def is_wire_format_supported(self, wire_format: typing.Optional[DisplayWireFormat], /) -> bool: ...
 
 class DisplayPath(winrt.system.Object):
     wire_format: typing.Optional[DisplayWireFormat]
@@ -136,8 +136,8 @@ class DisplayPath(winrt.system.Object):
     scaling: DisplayPathScaling
     rotation: DisplayRotation
     presentation_rate: typing.Optional[typing.Optional[DisplayPresentationRate]]
-    is_stereo: winrt.system.Boolean
-    is_interlaced: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    is_stereo: bool
+    is_interlaced: typing.Optional[typing.Optional[bool]]
     properties: typing.Optional[winrt.windows.foundation.collections.IMap[uuid.UUID, winrt.system.Object]]
     status: DisplayPathStatus
     target: typing.Optional[DisplayTarget]
@@ -152,15 +152,15 @@ class DisplayPrimaryDescription(winrt.system.Object):
     color_space: winrt.windows.graphics.directx.DirectXColorSpace
     format: winrt.windows.graphics.directx.DirectXPixelFormat
     height: winrt.system.UInt32
-    is_stereo: winrt.system.Boolean
+    is_stereo: bool
     multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription
     properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     width: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayPrimaryDescription: ...
-    def __new__(cls: typing.Type[DisplayPrimaryDescription], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: winrt.system.Boolean, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription) -> DisplayPrimaryDescription:...
+    def __new__(cls: typing.Type[DisplayPrimaryDescription], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: bool, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription) -> DisplayPrimaryDescription:...
     @staticmethod
-    def create_with_properties(extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: winrt.system.Boolean, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription, /) -> typing.Optional[DisplayPrimaryDescription]: ...
+    def create_with_properties(extra_properties: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: winrt.windows.graphics.directx.DirectXPixelFormat, color_space: winrt.windows.graphics.directx.DirectXColorSpace, is_stereo: bool, multisample_description: winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription, /) -> typing.Optional[DisplayPrimaryDescription]: ...
 
 class DisplayScanout(winrt.system.Object):
     @staticmethod
@@ -177,14 +177,14 @@ class DisplaySource(winrt.system.Object):
     def remove_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class DisplayState(winrt.system.Object):
-    is_read_only: winrt.system.Boolean
-    is_stale: winrt.system.Boolean
+    is_read_only: bool
+    is_stale: bool
     properties: typing.Optional[winrt.windows.foundation.collections.IMap[uuid.UUID, winrt.system.Object]]
     targets: typing.Optional[winrt.windows.foundation.collections.IVectorView[DisplayTarget]]
     views: typing.Optional[winrt.windows.foundation.collections.IVectorView[DisplayView]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayState: ...
-    def can_connect_target_to_view(self, target: typing.Optional[DisplayTarget], view: typing.Optional[DisplayView], /) -> winrt.system.Boolean: ...
+    def can_connect_target_to_view(self, target: typing.Optional[DisplayTarget], view: typing.Optional[DisplayView], /) -> bool: ...
     def clone(self) -> typing.Optional[DisplayState]: ...
     @typing.overload
     def connect_target(self, target: typing.Optional[DisplayTarget], /) -> typing.Optional[DisplayPath]: ...
@@ -210,18 +210,18 @@ class DisplayTarget(winrt.system.Object):
     adapter: typing.Optional[DisplayAdapter]
     adapter_relative_id: winrt.system.UInt32
     device_interface_path: str
-    is_connected: winrt.system.Boolean
-    is_stale: winrt.system.Boolean
-    is_virtual_mode_enabled: winrt.system.Boolean
-    is_virtual_topology_enabled: winrt.system.Boolean
+    is_connected: bool
+    is_stale: bool
+    is_virtual_mode_enabled: bool
+    is_virtual_topology_enabled: bool
     monitor_persistence: DisplayTargetPersistence
     properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     stable_monitor_id: str
     usage_kind: winrt.windows.devices.display.DisplayMonitorUsageKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayTarget: ...
-    def is_equal(self, other_target: typing.Optional[DisplayTarget], /) -> winrt.system.Boolean: ...
-    def is_same(self, other_target: typing.Optional[DisplayTarget], /) -> winrt.system.Boolean: ...
+    def is_equal(self, other_target: typing.Optional[DisplayTarget], /) -> bool: ...
+    def is_same(self, other_target: typing.Optional[DisplayTarget], /) -> bool: ...
     def try_get_monitor(self) -> typing.Optional[winrt.windows.devices.display.DisplayMonitor]: ...
 
 class DisplayTask(winrt.system.Object):

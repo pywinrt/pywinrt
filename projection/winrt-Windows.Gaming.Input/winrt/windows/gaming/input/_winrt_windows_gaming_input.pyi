@@ -70,7 +70,7 @@ class UINavigationReading:
 
 class ArcadeStick(winrt.system.Object):
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
     arcade_sticks: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[ArcadeStick]]]
     @staticmethod
@@ -98,7 +98,7 @@ class ArcadeStick(winrt.system.Object):
 class FlightStick(winrt.system.Object):
     hat_switch_kind: GameControllerSwitchKind
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
     flight_sticks: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[FlightStick]]]
     @staticmethod
@@ -125,7 +125,7 @@ class FlightStick(winrt.system.Object):
 
 class Gamepad(winrt.system.Object):
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
     vibration: GamepadVibration
     gamepads: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[Gamepad]]]
@@ -160,11 +160,11 @@ class Headset(winrt.system.Object):
 
 class RacingWheel(winrt.system.Object):
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
-    has_clutch: winrt.system.Boolean
-    has_handbrake: winrt.system.Boolean
-    has_pattern_shifter: winrt.system.Boolean
+    has_clutch: bool
+    has_handbrake: bool
+    has_pattern_shifter: bool
     max_pattern_shifter_gear: winrt.system.Int32
     max_wheel_angle: winrt.system.Double
     wheel_motor: typing.Optional[winrt.windows.gaming.input.forcefeedback.ForceFeedbackMotor]
@@ -193,7 +193,7 @@ class RacingWheel(winrt.system.Object):
 
 class RawGameController(winrt.system.Object):
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
     axis_count: winrt.system.Int32
     button_count: winrt.system.Int32
@@ -210,7 +210,7 @@ class RawGameController(winrt.system.Object):
     @staticmethod
     def from_game_controller(game_controller: typing.Optional[IGameController], /) -> typing.Optional[RawGameController]: ...
     def get_button_label(self, button_index: winrt.system.Int32, /) -> GameControllerButtonLabel: ...
-    def get_current_reading(self, button_array: winrt.system.Array[winrt.system.Boolean], switch_array: winrt.system.Array[GameControllerSwitchPosition], axis_array: winrt.system.Array[winrt.system.Double], /) -> winrt.system.UInt64: ...
+    def get_current_reading(self, button_array: winrt.system.Array[bool], switch_array: winrt.system.Array[GameControllerSwitchPosition], axis_array: winrt.system.Array[winrt.system.Double], /) -> winrt.system.UInt64: ...
     def get_switch_kind(self, switch_index: winrt.system.Int32, /) -> GameControllerSwitchKind: ...
     def try_get_battery_report(self) -> typing.Optional[winrt.windows.devices.power.BatteryReport]: ...
     def add_headset_connected(self, value: winrt.windows.foundation.TypedEventHandler[IGameController, Headset], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -230,7 +230,7 @@ class RawGameController(winrt.system.Object):
 
 class UINavigationController(winrt.system.Object):
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
     u_i_navigation_controllers: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[UINavigationController]]]
     @staticmethod
@@ -258,7 +258,7 @@ class UINavigationController(winrt.system.Object):
 
 class IGameController(winrt.system.Object):
     headset: typing.Optional[Headset]
-    is_wireless: winrt.system.Boolean
+    is_wireless: bool
     user: typing.Optional[winrt.windows.system.User]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameController: ...

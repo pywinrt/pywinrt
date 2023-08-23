@@ -18,7 +18,7 @@ Self = typing.TypeVar('Self')
 class OnlineIdAuthenticator(winrt.system.Object):
     application_id: uuid.UUID
     authenticated_safe_customer_id: str
-    can_sign_out: winrt.system.Boolean
+    can_sign_out: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OnlineIdAuthenticator: ...
     def __new__(cls: typing.Type[OnlineIdAuthenticator]) -> OnlineIdAuthenticator:...
@@ -99,8 +99,8 @@ class UserAuthenticationOperation(winrt.system.Object):
 class UserIdentity(winrt.system.Object):
     first_name: str
     id: str
-    is_beta_account: winrt.system.Boolean
-    is_confirmed_p_c: winrt.system.Boolean
+    is_beta_account: bool
+    is_confirmed_p_c: bool
     last_name: str
     safe_customer_id: str
     sign_in_name: str

@@ -45,19 +45,19 @@ class BarcodeScanner(winrt.system.Object):
     def get_device_selector(connection_types: PosConnectionTypes, /) -> str: ...
     def get_supported_profiles(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
     def get_supported_symbologies_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]: ...
-    def is_profile_supported(self, profile: str, /) -> winrt.system.Boolean: ...
-    def is_symbology_supported_async(self, barcode_symbology: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def is_profile_supported(self, profile: str, /) -> bool: ...
+    def is_symbology_supported_async(self, barcode_symbology: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def retrieve_statistics_async(self, statistics_categories: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IBuffer]: ...
     def add_status_updated(self, handler: winrt.windows.foundation.TypedEventHandler[BarcodeScanner, BarcodeScannerStatusUpdatedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_status_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class BarcodeScannerCapabilities(winrt.system.Object):
-    is_image_preview_supported: winrt.system.Boolean
-    is_statistics_reporting_supported: winrt.system.Boolean
-    is_statistics_updating_supported: winrt.system.Boolean
+    is_image_preview_supported: bool
+    is_statistics_reporting_supported: bool
+    is_statistics_updating_supported: bool
     power_reporting_type: UnifiedPosPowerReportingType
-    is_software_trigger_supported: winrt.system.Boolean
-    is_video_preview_supported: winrt.system.Boolean
+    is_software_trigger_supported: bool
+    is_video_preview_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerCapabilities: ...
 
@@ -68,7 +68,7 @@ class BarcodeScannerDataReceivedEventArgs(winrt.system.Object):
 
 class BarcodeScannerErrorOccurredEventArgs(winrt.system.Object):
     error_data: typing.Optional[UnifiedPosErrorData]
-    is_retriable: winrt.system.Boolean
+    is_retriable: bool
     partial_input_data: typing.Optional[BarcodeScannerReport]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeScannerErrorOccurredEventArgs: ...
@@ -193,14 +193,14 @@ class BarcodeSymbologies(winrt.system.Object):
     def get_name(scan_data_type: winrt.system.UInt32, /) -> str: ...
 
 class BarcodeSymbologyAttributes(winrt.system.Object):
-    is_check_digit_validation_enabled: winrt.system.Boolean
-    is_check_digit_transmission_enabled: winrt.system.Boolean
+    is_check_digit_validation_enabled: bool
+    is_check_digit_transmission_enabled: bool
     decode_length_kind: BarcodeSymbologyDecodeLengthKind
     decode_length2: winrt.system.UInt32
     decode_length1: winrt.system.UInt32
-    is_check_digit_transmission_supported: winrt.system.Boolean
-    is_check_digit_validation_supported: winrt.system.Boolean
-    is_decode_length_supported: winrt.system.Boolean
+    is_check_digit_transmission_supported: bool
+    is_check_digit_validation_supported: bool
+    is_decode_length_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BarcodeSymbologyAttributes: ...
 
@@ -208,7 +208,7 @@ class CashDrawer(winrt.system.Object):
     capabilities: typing.Optional[CashDrawerCapabilities]
     device_id: str
     drawer_event_source: typing.Optional[CashDrawerEventSource]
-    is_drawer_open: winrt.system.Boolean
+    is_drawer_open: bool
     status: typing.Optional[CashDrawerStatus]
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -232,11 +232,11 @@ class CashDrawer(winrt.system.Object):
     def remove_status_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CashDrawerCapabilities(winrt.system.Object):
-    is_drawer_open_sensor_available: winrt.system.Boolean
-    is_statistics_reporting_supported: winrt.system.Boolean
-    is_statistics_updating_supported: winrt.system.Boolean
-    is_status_multi_drawer_detect_supported: winrt.system.Boolean
-    is_status_reporting_supported: winrt.system.Boolean
+    is_drawer_open_sensor_available: bool
+    is_statistics_reporting_supported: bool
+    is_statistics_updating_supported: bool
+    is_status_multi_drawer_detect_supported: bool
+    is_status_reporting_supported: bool
     power_reporting_type: UnifiedPosPowerReportingType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CashDrawerCapabilities: ...
@@ -248,7 +248,7 @@ class CashDrawerCloseAlarm(winrt.system.Object):
     alarm_timeout: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CashDrawerCloseAlarm: ...
-    def start_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def start_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_alarm_timeout_expired(self, handler: winrt.windows.foundation.TypedEventHandler[CashDrawerCloseAlarm, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_alarm_timeout_expired(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -282,11 +282,11 @@ class CashDrawerStatusUpdatedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CashDrawerStatusUpdatedEventArgs: ...
 
 class ClaimedBarcodeScanner(winrt.system.Object):
-    is_disabled_on_data_received: winrt.system.Boolean
-    is_decode_data_enabled: winrt.system.Boolean
+    is_disabled_on_data_received: bool
+    is_decode_data_enabled: bool
     device_id: str
-    is_enabled: winrt.system.Boolean
-    is_video_preview_shown_on_enable: winrt.system.Boolean
+    is_enabled: bool
+    is_video_preview_shown_on_enable: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -300,8 +300,8 @@ class ClaimedBarcodeScanner(winrt.system.Object):
     def retain_device(self) -> None: ...
     def set_active_profile_async(self, profile: str, /) -> winrt.windows.foundation.IAsyncAction: ...
     def set_active_symbologies_async(self, symbologies: typing.Iterable[winrt.system.UInt32], /) -> winrt.windows.foundation.IAsyncAction: ...
-    def set_symbology_attributes_async(self, barcode_symbology: winrt.system.UInt32, attributes: typing.Optional[BarcodeSymbologyAttributes], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def show_video_preview_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def set_symbology_attributes_async(self, barcode_symbology: winrt.system.UInt32, attributes: typing.Optional[BarcodeSymbologyAttributes], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def show_video_preview_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def start_software_trigger_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def stop_software_trigger_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def update_statistics_async(self, statistics: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]], /) -> winrt.windows.foundation.IAsyncAction: ...
@@ -327,19 +327,19 @@ class ClaimedBarcodeScannerClosedEventArgs(winrt.system.Object):
 class ClaimedCashDrawer(winrt.system.Object):
     close_alarm: typing.Optional[CashDrawerCloseAlarm]
     device_id: str
-    is_drawer_open: winrt.system.Boolean
-    is_enabled: winrt.system.Boolean
+    is_drawer_open: bool
+    is_enabled: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedCashDrawer: ...
     def close(self) -> None: ...
-    def disable_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def enable_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def open_drawer_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def reset_statistics_async(self, statistics_categories: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def retain_device_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def update_statistics_async(self, statistics: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def disable_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def enable_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def open_drawer_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def reset_statistics_async(self, statistics_categories: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def retain_device_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def update_statistics_async(self, statistics: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_release_device_requested(self, handler: winrt.windows.foundation.TypedEventHandler[ClaimedCashDrawer, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_release_device_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_closed(self, handler: winrt.windows.foundation.TypedEventHandler[ClaimedCashDrawer, ClaimedCashDrawerClosedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -352,21 +352,21 @@ class ClaimedCashDrawerClosedEventArgs(winrt.system.Object):
 class ClaimedJournalPrinter(winrt.system.Object):
     line_spacing: winrt.system.UInt32
     line_height: winrt.system.UInt32
-    is_letter_quality: winrt.system.Boolean
+    is_letter_quality: bool
     color_cartridge: PosPrinterColorCartridge
     characters_per_line: winrt.system.UInt32
-    is_cartridge_empty: winrt.system.Boolean
-    is_cartridge_removed: winrt.system.Boolean
-    is_cover_open: winrt.system.Boolean
-    is_head_cleaning: winrt.system.Boolean
-    is_paper_empty: winrt.system.Boolean
-    is_paper_near_end: winrt.system.Boolean
-    is_ready_to_print: winrt.system.Boolean
+    is_cartridge_empty: bool
+    is_cartridge_removed: bool
+    is_cover_open: bool
+    is_head_cleaning: bool
+    is_paper_empty: bool
+    is_paper_near_end: bool
+    is_ready_to_print: bool
     line_width: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedJournalPrinter: ...
     def create_job(self) -> typing.Optional[JournalPrintJob]: ...
-    def validate_data(self, data: str, /) -> winrt.system.Boolean: ...
+    def validate_data(self, data: str, /) -> bool: ...
 
 class ClaimedLineDisplay(winrt.system.Object):
     capabilities: typing.Optional[LineDisplayCapabilities]
@@ -399,16 +399,16 @@ class ClaimedLineDisplay(winrt.system.Object):
     def get_device_selector(connection_types: PosConnectionTypes, /) -> str: ...
     def get_statistics_async(self, statistics_categories: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[str]: ...
     def retain_device(self) -> None: ...
-    def try_clear_descriptors_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_clear_descriptors_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def try_create_window_async(self, viewport: winrt.windows.foundation.Rect, window_size: winrt.windows.foundation.Size, /) -> winrt.windows.foundation.IAsyncOperation[LineDisplayWindow]: ...
-    def try_set_descriptor_async(self, descriptor: winrt.system.UInt32, descriptor_state: LineDisplayDescriptorState, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_descriptor_async(self, descriptor: winrt.system.UInt32, descriptor_state: LineDisplayDescriptorState, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     def try_store_storage_file_bitmap_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[LineDisplayStoredBitmap]: ...
     @typing.overload
     def try_store_storage_file_bitmap_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], horizontal_alignment: LineDisplayHorizontalAlignment, vertical_alignment: LineDisplayVerticalAlignment, /) -> winrt.windows.foundation.IAsyncOperation[LineDisplayStoredBitmap]: ...
     @typing.overload
     def try_store_storage_file_bitmap_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], horizontal_alignment: LineDisplayHorizontalAlignment, vertical_alignment: LineDisplayVerticalAlignment, width_in_pixels: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[LineDisplayStoredBitmap]: ...
-    def try_update_attributes_async(self, attributes: typing.Optional[LineDisplayAttributes], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_update_attributes_async(self, attributes: typing.Optional[LineDisplayAttributes], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_release_device_requested(self, handler: winrt.windows.foundation.TypedEventHandler[ClaimedLineDisplay, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_release_device_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_status_updated(self, handler: winrt.windows.foundation.TypedEventHandler[ClaimedLineDisplay, LineDisplayStatusUpdatedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -422,13 +422,13 @@ class ClaimedLineDisplayClosedEventArgs(winrt.system.Object):
 
 class ClaimedMagneticStripeReader(winrt.system.Object):
     tracks_to_read: MagneticStripeReaderTrackIds
-    is_transmit_sentinels_enabled: winrt.system.Boolean
-    is_disabled_on_data_received: winrt.system.Boolean
-    is_decode_data_enabled: winrt.system.Boolean
+    is_transmit_sentinels_enabled: bool
+    is_disabled_on_data_received: bool
+    is_decode_data_enabled: bool
     data_encryption_algorithm: winrt.system.UInt32
     device_id: str
-    is_device_authenticated: winrt.system.Boolean
-    is_enabled: winrt.system.Boolean
+    is_device_authenticated: bool
+    is_enabled: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -463,11 +463,11 @@ class ClaimedMagneticStripeReaderClosedEventArgs(winrt.system.Object):
 
 class ClaimedPosPrinter(winrt.system.Object):
     map_mode: PosPrinterMapMode
-    is_character_set_mapping_enabled: winrt.system.Boolean
+    is_character_set_mapping_enabled: bool
     character_set: winrt.system.UInt32
     device_id: str
-    is_cover_open: winrt.system.Boolean
-    is_enabled: winrt.system.Boolean
+    is_cover_open: bool
+    is_enabled: bool
     journal: typing.Optional[ClaimedJournalPrinter]
     receipt: typing.Optional[ClaimedReceiptPrinter]
     slip: typing.Optional[ClaimedSlipPrinter]
@@ -476,11 +476,11 @@ class ClaimedPosPrinter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedPosPrinter: ...
     def close(self) -> None: ...
-    def disable_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def enable_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def reset_statistics_async(self, statistics_categories: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def retain_device_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def update_statistics_async(self, statistics: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def disable_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def enable_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def reset_statistics_async(self, statistics_categories: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def retain_device_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def update_statistics_async(self, statistics: typing.Iterable[winrt.windows.foundation.collections.IKeyValuePair[str, str]], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_release_device_requested(self, handler: winrt.windows.foundation.TypedEventHandler[ClaimedPosPrinter, PosPrinterReleaseDeviceRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_release_device_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_closed(self, handler: winrt.windows.foundation.TypedEventHandler[ClaimedPosPrinter, ClaimedPosPrinterClosedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -498,21 +498,21 @@ class ClaimedReceiptPrinter(winrt.system.Object):
     sideways_max_lines: winrt.system.UInt32
     line_spacing: winrt.system.UInt32
     line_height: winrt.system.UInt32
-    is_letter_quality: winrt.system.Boolean
+    is_letter_quality: bool
     color_cartridge: PosPrinterColorCartridge
     characters_per_line: winrt.system.UInt32
-    is_cartridge_empty: winrt.system.Boolean
-    is_cartridge_removed: winrt.system.Boolean
-    is_cover_open: winrt.system.Boolean
-    is_head_cleaning: winrt.system.Boolean
-    is_paper_empty: winrt.system.Boolean
-    is_paper_near_end: winrt.system.Boolean
-    is_ready_to_print: winrt.system.Boolean
+    is_cartridge_empty: bool
+    is_cartridge_removed: bool
+    is_cover_open: bool
+    is_head_cleaning: bool
+    is_paper_empty: bool
+    is_paper_near_end: bool
+    is_ready_to_print: bool
     line_width: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedReceiptPrinter: ...
     def create_job(self) -> typing.Optional[ReceiptPrintJob]: ...
-    def validate_data(self, data: str, /) -> winrt.system.Boolean: ...
+    def validate_data(self, data: str, /) -> bool: ...
 
 class ClaimedSlipPrinter(winrt.system.Object):
     lines_near_end_to_end: winrt.system.UInt32
@@ -524,31 +524,31 @@ class ClaimedSlipPrinter(winrt.system.Object):
     sideways_max_lines: winrt.system.UInt32
     line_spacing: winrt.system.UInt32
     line_height: winrt.system.UInt32
-    is_letter_quality: winrt.system.Boolean
+    is_letter_quality: bool
     color_cartridge: PosPrinterColorCartridge
     characters_per_line: winrt.system.UInt32
-    is_cartridge_empty: winrt.system.Boolean
-    is_cartridge_removed: winrt.system.Boolean
-    is_cover_open: winrt.system.Boolean
-    is_head_cleaning: winrt.system.Boolean
-    is_paper_empty: winrt.system.Boolean
-    is_paper_near_end: winrt.system.Boolean
-    is_ready_to_print: winrt.system.Boolean
+    is_cartridge_empty: bool
+    is_cartridge_removed: bool
+    is_cover_open: bool
+    is_head_cleaning: bool
+    is_paper_empty: bool
+    is_paper_near_end: bool
+    is_ready_to_print: bool
     line_width: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ClaimedSlipPrinter: ...
     def change_print_side(self, print_side: PosPrinterPrintSide, /) -> None: ...
     def close_jaws(self) -> None: ...
     def create_job(self) -> typing.Optional[SlipPrintJob]: ...
-    def insert_slip_async(self, timeout: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def insert_slip_async(self, timeout: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def open_jaws(self) -> None: ...
-    def remove_slip_async(self, timeout: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def validate_data(self, data: str, /) -> winrt.system.Boolean: ...
+    def remove_slip_async(self, timeout: datetime.timedelta, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def validate_data(self, data: str, /) -> bool: ...
 
 class JournalPrintJob(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JournalPrintJob: ...
-    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def feed_paper_by_line(self, line_count: winrt.system.Int32, /) -> None: ...
     def feed_paper_by_map_mode_unit(self, distance: winrt.system.Int32, /) -> None: ...
     @typing.overload
@@ -563,23 +563,23 @@ class JournalPrintJob(winrt.system.Object):
 class JournalPrinterCapabilities(winrt.system.Object):
     cartridge_sensors: PosPrinterCartridgeSensors
     color_cartridge_capabilities: PosPrinterColorCapabilities
-    is_bold_supported: winrt.system.Boolean
-    is_double_high_double_wide_print_supported: winrt.system.Boolean
-    is_double_high_print_supported: winrt.system.Boolean
-    is_double_wide_print_supported: winrt.system.Boolean
-    is_dual_color_supported: winrt.system.Boolean
-    is_italic_supported: winrt.system.Boolean
-    is_paper_empty_sensor_supported: winrt.system.Boolean
-    is_paper_near_end_sensor_supported: winrt.system.Boolean
-    is_printer_present: winrt.system.Boolean
-    is_underline_supported: winrt.system.Boolean
+    is_bold_supported: bool
+    is_double_high_double_wide_print_supported: bool
+    is_double_high_print_supported: bool
+    is_double_wide_print_supported: bool
+    is_dual_color_supported: bool
+    is_italic_supported: bool
+    is_paper_empty_sensor_supported: bool
+    is_paper_near_end_sensor_supported: bool
+    is_printer_present: bool
+    is_underline_supported: bool
     supported_characters_per_line: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
-    is_reverse_paper_feed_by_line_supported: winrt.system.Boolean
-    is_reverse_paper_feed_by_map_mode_unit_supported: winrt.system.Boolean
-    is_reverse_video_supported: winrt.system.Boolean
-    is_strikethrough_supported: winrt.system.Boolean
-    is_subscript_supported: winrt.system.Boolean
-    is_superscript_supported: winrt.system.Boolean
+    is_reverse_paper_feed_by_line_supported: bool
+    is_reverse_paper_feed_by_map_mode_unit_supported: bool
+    is_reverse_video_supported: bool
+    is_strikethrough_supported: bool
+    is_subscript_supported: bool
+    is_superscript_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JournalPrinterCapabilities: ...
 
@@ -612,8 +612,8 @@ class LineDisplay(winrt.system.Object):
 
 class LineDisplayAttributes(winrt.system.Object):
     screen_size_in_characters: winrt.windows.foundation.Size
-    is_power_notify_enabled: winrt.system.Boolean
-    is_character_set_mapping_enabled: winrt.system.Boolean
+    is_power_notify_enabled: bool
+    is_character_set_mapping_enabled: bool
     current_window: typing.Optional[LineDisplayWindow]
     character_set: winrt.system.Int32
     brightness: winrt.system.Int32
@@ -623,20 +623,20 @@ class LineDisplayAttributes(winrt.system.Object):
 
 class LineDisplayCapabilities(winrt.system.Object):
     can_blink: LineDisplayTextAttributeGranularity
-    can_change_blink_rate: winrt.system.Boolean
-    can_change_screen_size: winrt.system.Boolean
-    can_display_bitmaps: winrt.system.Boolean
-    can_display_custom_glyphs: winrt.system.Boolean
-    can_map_character_sets: winrt.system.Boolean
-    can_read_character_at_cursor: winrt.system.Boolean
+    can_change_blink_rate: bool
+    can_change_screen_size: bool
+    can_display_bitmaps: bool
+    can_display_custom_glyphs: bool
+    can_map_character_sets: bool
+    can_read_character_at_cursor: bool
     can_reverse: LineDisplayTextAttributeGranularity
-    is_brightness_supported: winrt.system.Boolean
-    is_cursor_supported: winrt.system.Boolean
-    is_horizontal_marquee_supported: winrt.system.Boolean
-    is_inter_character_wait_supported: winrt.system.Boolean
-    is_statistics_reporting_supported: winrt.system.Boolean
-    is_statistics_updating_supported: winrt.system.Boolean
-    is_vertical_marquee_supported: winrt.system.Boolean
+    is_brightness_supported: bool
+    is_cursor_supported: bool
+    is_horizontal_marquee_supported: bool
+    is_inter_character_wait_supported: bool
+    is_statistics_reporting_supported: bool
+    is_statistics_updating_supported: bool
+    is_vertical_marquee_supported: bool
     power_reporting_type: UnifiedPosPowerReportingType
     supported_descriptors: winrt.system.UInt32
     supported_windows: winrt.system.UInt32
@@ -644,22 +644,22 @@ class LineDisplayCapabilities(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> LineDisplayCapabilities: ...
 
 class LineDisplayCursor(winrt.system.Object):
-    can_customize: winrt.system.Boolean
-    is_blink_supported: winrt.system.Boolean
-    is_block_supported: winrt.system.Boolean
-    is_half_block_supported: winrt.system.Boolean
-    is_other_supported: winrt.system.Boolean
-    is_reverse_supported: winrt.system.Boolean
-    is_underline_supported: winrt.system.Boolean
+    can_customize: bool
+    is_blink_supported: bool
+    is_block_supported: bool
+    is_half_block_supported: bool
+    is_other_supported: bool
+    is_reverse_supported: bool
+    is_underline_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineDisplayCursor: ...
     def get_attributes(self) -> typing.Optional[LineDisplayCursorAttributes]: ...
-    def try_update_attributes_async(self, attributes: typing.Optional[LineDisplayCursorAttributes], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_update_attributes_async(self, attributes: typing.Optional[LineDisplayCursorAttributes], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class LineDisplayCursorAttributes(winrt.system.Object):
     position: winrt.windows.foundation.Point
-    is_blink_enabled: winrt.system.Boolean
-    is_auto_advance_enabled: winrt.system.Boolean
+    is_blink_enabled: bool
+    is_auto_advance_enabled: bool
     cursor_type: LineDisplayCursorType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineDisplayCursorAttributes: ...
@@ -669,7 +669,7 @@ class LineDisplayCustomGlyphs(winrt.system.Object):
     supported_glyph_codes: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineDisplayCustomGlyphs: ...
-    def try_redefine_async(self, glyph_code: winrt.system.UInt32, glyph_data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_redefine_async(self, glyph_code: winrt.system.UInt32, glyph_data: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class LineDisplayMarquee(winrt.system.Object):
     scroll_wait_interval: datetime.timedelta
@@ -677,8 +677,8 @@ class LineDisplayMarquee(winrt.system.Object):
     format: LineDisplayMarqueeFormat
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineDisplayMarquee: ...
-    def try_start_scrolling_async(self, direction: LineDisplayScrollDirection, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_stop_scrolling_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_start_scrolling_async(self, direction: LineDisplayScrollDirection, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_stop_scrolling_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class LineDisplayStatisticsCategorySelector(winrt.system.Object):
     all_statistics: str
@@ -696,7 +696,7 @@ class LineDisplayStoredBitmap(winrt.system.Object):
     escape_sequence: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineDisplayStoredBitmap: ...
-    def try_delete_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_delete_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class LineDisplayWindow(winrt.system.Object):
     inter_character_wait_interval: datetime.timedelta
@@ -709,26 +709,26 @@ class LineDisplayWindow(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> LineDisplayWindow: ...
     def close(self) -> None: ...
     def read_character_at_cursor_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt32]: ...
-    def try_clear_text_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_clear_text_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_storage_file_bitmap_at_cursor_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_storage_file_bitmap_at_cursor_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_storage_file_bitmap_at_cursor_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], horizontal_alignment: LineDisplayHorizontalAlignment, vertical_alignment: LineDisplayVerticalAlignment, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_storage_file_bitmap_at_cursor_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], horizontal_alignment: LineDisplayHorizontalAlignment, vertical_alignment: LineDisplayVerticalAlignment, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_storage_file_bitmap_at_cursor_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], horizontal_alignment: LineDisplayHorizontalAlignment, vertical_alignment: LineDisplayVerticalAlignment, width_in_pixels: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_storage_file_bitmap_at_cursor_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], horizontal_alignment: LineDisplayHorizontalAlignment, vertical_alignment: LineDisplayVerticalAlignment, width_in_pixels: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_storage_file_bitmap_at_point_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], offset_in_pixels: winrt.windows.foundation.Point, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_storage_file_bitmap_at_point_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], offset_in_pixels: winrt.windows.foundation.Point, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_storage_file_bitmap_at_point_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], offset_in_pixels: winrt.windows.foundation.Point, width_in_pixels: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_display_stored_bitmap_at_cursor_async(self, bitmap: typing.Optional[LineDisplayStoredBitmap], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_storage_file_bitmap_at_point_async(self, bitmap: typing.Optional[winrt.windows.storage.StorageFile], offset_in_pixels: winrt.windows.foundation.Point, width_in_pixels: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_display_stored_bitmap_at_cursor_async(self, bitmap: typing.Optional[LineDisplayStoredBitmap], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_text_async(self, text: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_text_async(self, text: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_text_async(self, text: str, display_attribute: LineDisplayTextAttribute, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_text_async(self, text: str, display_attribute: LineDisplayTextAttribute, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_display_text_async(self, text: str, display_attribute: LineDisplayTextAttribute, start_position: winrt.windows.foundation.Point, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_refresh_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_scroll_text_async(self, direction: LineDisplayScrollDirection, number_of_columns_or_rows: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_display_text_async(self, text: str, display_attribute: LineDisplayTextAttribute, start_position: winrt.windows.foundation.Point, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_refresh_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_scroll_text_async(self, direction: LineDisplayScrollDirection, number_of_columns_or_rows: winrt.system.UInt32, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class MagneticStripeReader(winrt.system.Object):
     capabilities: typing.Optional[MagneticStripeReaderCapabilities]
@@ -796,13 +796,13 @@ class MagneticStripeReaderBankCardDataReceivedEventArgs(winrt.system.Object):
 class MagneticStripeReaderCapabilities(winrt.system.Object):
     authentication_level: MagneticStripeReaderAuthenticationLevel
     card_authentication: str
-    is_iso_supported: winrt.system.Boolean
-    is_jis_one_supported: winrt.system.Boolean
-    is_jis_two_supported: winrt.system.Boolean
-    is_statistics_reporting_supported: winrt.system.Boolean
-    is_statistics_updating_supported: winrt.system.Boolean
-    is_track_data_masking_supported: winrt.system.Boolean
-    is_transmit_sentinels_supported: winrt.system.Boolean
+    is_iso_supported: bool
+    is_jis_one_supported: bool
+    is_jis_two_supported: bool
+    is_statistics_reporting_supported: bool
+    is_statistics_updating_supported: bool
+    is_track_data_masking_supported: bool
+    is_transmit_sentinels_supported: bool
     power_reporting_type: UnifiedPosPowerReportingType
     supported_encryption_algorithms: winrt.system.UInt32
     @staticmethod
@@ -894,12 +894,12 @@ class PosPrinter(winrt.system.Object):
     def remove_status_updated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PosPrinterCapabilities(winrt.system.Object):
-    can_map_character_set: winrt.system.Boolean
+    can_map_character_set: bool
     default_character_set: winrt.system.UInt32
-    has_cover_sensor: winrt.system.Boolean
-    is_statistics_reporting_supported: winrt.system.Boolean
-    is_statistics_updating_supported: winrt.system.Boolean
-    is_transaction_supported: winrt.system.Boolean
+    has_cover_sensor: bool
+    is_statistics_reporting_supported: bool
+    is_statistics_updating_supported: bool
+    is_transaction_supported: bool
     journal: typing.Optional[JournalPrinterCapabilities]
     power_reporting_type: UnifiedPosPowerReportingType
     receipt: typing.Optional[ReceiptPrinterCapabilities]
@@ -916,24 +916,24 @@ class PosPrinterCharacterSetIds(winrt.system.Object):
 
 class PosPrinterFontProperty(winrt.system.Object):
     character_sizes: typing.Optional[winrt.windows.foundation.collections.IVectorView[SizeUInt32]]
-    is_scalable_to_any_size: winrt.system.Boolean
+    is_scalable_to_any_size: bool
     type_face: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PosPrinterFontProperty: ...
 
 class PosPrinterPrintOptions(winrt.system.Object):
-    underline: winrt.system.Boolean
+    underline: bool
     type_face: str
-    superscript: winrt.system.Boolean
-    subscript: winrt.system.Boolean
-    strikethrough: winrt.system.Boolean
-    reverse_video: winrt.system.Boolean
-    italic: winrt.system.Boolean
-    double_wide: winrt.system.Boolean
-    double_high: winrt.system.Boolean
+    superscript: bool
+    subscript: bool
+    strikethrough: bool
+    reverse_video: bool
+    italic: bool
+    double_wide: bool
+    double_high: bool
     character_set: winrt.system.UInt32
     character_height: winrt.system.UInt32
-    bold: winrt.system.Boolean
+    bold: bool
     alignment: PosPrinterAlignment
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PosPrinterPrintOptions: ...
@@ -962,7 +962,7 @@ class ReceiptPrintJob(winrt.system.Object):
     @typing.overload
     def cut_paper(self, percentage: winrt.system.Double, /) -> None: ...
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
-    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def feed_paper_by_line(self, line_count: winrt.system.Int32, /) -> None: ...
     def feed_paper_by_map_mode_unit(self, distance: winrt.system.Int32, /) -> None: ...
     def mark_feed(self, kind: PosPrinterMarkFeedKind, /) -> None: ...
@@ -995,41 +995,41 @@ class ReceiptPrintJob(winrt.system.Object):
     @typing.overload
     def set_custom_aligned_bitmap(self, bitmap_number: winrt.system.UInt32, bitmap: typing.Optional[winrt.windows.graphics.imaging.BitmapFrame], alignment_distance: winrt.system.UInt32, width: winrt.system.UInt32, /) -> None: ...
     def set_print_area(self, value: winrt.windows.foundation.Rect, /) -> None: ...
-    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: winrt.system.Boolean, /) -> None: ...
+    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: bool, /) -> None: ...
     def stamp_paper(self) -> None: ...
 
 class ReceiptPrinterCapabilities(winrt.system.Object):
     cartridge_sensors: PosPrinterCartridgeSensors
     color_cartridge_capabilities: PosPrinterColorCapabilities
-    is_bold_supported: winrt.system.Boolean
-    is_double_high_double_wide_print_supported: winrt.system.Boolean
-    is_double_high_print_supported: winrt.system.Boolean
-    is_double_wide_print_supported: winrt.system.Boolean
-    is_dual_color_supported: winrt.system.Boolean
-    is_italic_supported: winrt.system.Boolean
-    is_paper_empty_sensor_supported: winrt.system.Boolean
-    is_paper_near_end_sensor_supported: winrt.system.Boolean
-    is_printer_present: winrt.system.Boolean
-    is_underline_supported: winrt.system.Boolean
+    is_bold_supported: bool
+    is_double_high_double_wide_print_supported: bool
+    is_double_high_print_supported: bool
+    is_double_wide_print_supported: bool
+    is_dual_color_supported: bool
+    is_italic_supported: bool
+    is_paper_empty_sensor_supported: bool
+    is_paper_near_end_sensor_supported: bool
+    is_printer_present: bool
+    is_underline_supported: bool
     supported_characters_per_line: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
-    is180_rotation_supported: winrt.system.Boolean
-    is_barcode_supported: winrt.system.Boolean
-    is_bitmap_supported: winrt.system.Boolean
-    is_left90_rotation_supported: winrt.system.Boolean
-    is_print_area_supported: winrt.system.Boolean
-    is_right90_rotation_supported: winrt.system.Boolean
+    is180_rotation_supported: bool
+    is_barcode_supported: bool
+    is_bitmap_supported: bool
+    is_left90_rotation_supported: bool
+    is_print_area_supported: bool
+    is_right90_rotation_supported: bool
     ruled_line_capabilities: PosPrinterRuledLineCapabilities
     supported_barcode_rotations: typing.Optional[winrt.windows.foundation.collections.IVectorView[PosPrinterRotation]]
     supported_bitmap_rotations: typing.Optional[winrt.windows.foundation.collections.IVectorView[PosPrinterRotation]]
-    can_cut_paper: winrt.system.Boolean
-    is_stamp_supported: winrt.system.Boolean
+    can_cut_paper: bool
+    is_stamp_supported: bool
     mark_feed_capabilities: PosPrinterMarkFeedCapabilities
-    is_reverse_paper_feed_by_line_supported: winrt.system.Boolean
-    is_reverse_paper_feed_by_map_mode_unit_supported: winrt.system.Boolean
-    is_reverse_video_supported: winrt.system.Boolean
-    is_strikethrough_supported: winrt.system.Boolean
-    is_subscript_supported: winrt.system.Boolean
-    is_superscript_supported: winrt.system.Boolean
+    is_reverse_paper_feed_by_line_supported: bool
+    is_reverse_paper_feed_by_map_mode_unit_supported: bool
+    is_reverse_video_supported: bool
+    is_strikethrough_supported: bool
+    is_subscript_supported: bool
+    is_superscript_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReceiptPrinterCapabilities: ...
 
@@ -1037,7 +1037,7 @@ class SlipPrintJob(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlipPrintJob: ...
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
-    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def feed_paper_by_line(self, line_count: winrt.system.Int32, /) -> None: ...
     def feed_paper_by_map_mode_unit(self, distance: winrt.system.Int32, /) -> None: ...
     @typing.overload
@@ -1069,39 +1069,39 @@ class SlipPrintJob(winrt.system.Object):
     @typing.overload
     def set_custom_aligned_bitmap(self, bitmap_number: winrt.system.UInt32, bitmap: typing.Optional[winrt.windows.graphics.imaging.BitmapFrame], alignment_distance: winrt.system.UInt32, width: winrt.system.UInt32, /) -> None: ...
     def set_print_area(self, value: winrt.windows.foundation.Rect, /) -> None: ...
-    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: winrt.system.Boolean, /) -> None: ...
+    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: bool, /) -> None: ...
 
 class SlipPrinterCapabilities(winrt.system.Object):
     cartridge_sensors: PosPrinterCartridgeSensors
     color_cartridge_capabilities: PosPrinterColorCapabilities
-    is_bold_supported: winrt.system.Boolean
-    is_double_high_double_wide_print_supported: winrt.system.Boolean
-    is_double_high_print_supported: winrt.system.Boolean
-    is_double_wide_print_supported: winrt.system.Boolean
-    is_dual_color_supported: winrt.system.Boolean
-    is_italic_supported: winrt.system.Boolean
-    is_paper_empty_sensor_supported: winrt.system.Boolean
-    is_paper_near_end_sensor_supported: winrt.system.Boolean
-    is_printer_present: winrt.system.Boolean
-    is_underline_supported: winrt.system.Boolean
+    is_bold_supported: bool
+    is_double_high_double_wide_print_supported: bool
+    is_double_high_print_supported: bool
+    is_double_wide_print_supported: bool
+    is_dual_color_supported: bool
+    is_italic_supported: bool
+    is_paper_empty_sensor_supported: bool
+    is_paper_near_end_sensor_supported: bool
+    is_printer_present: bool
+    is_underline_supported: bool
     supported_characters_per_line: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
-    is180_rotation_supported: winrt.system.Boolean
-    is_barcode_supported: winrt.system.Boolean
-    is_bitmap_supported: winrt.system.Boolean
-    is_left90_rotation_supported: winrt.system.Boolean
-    is_print_area_supported: winrt.system.Boolean
-    is_right90_rotation_supported: winrt.system.Boolean
+    is180_rotation_supported: bool
+    is_barcode_supported: bool
+    is_bitmap_supported: bool
+    is_left90_rotation_supported: bool
+    is_print_area_supported: bool
+    is_right90_rotation_supported: bool
     ruled_line_capabilities: PosPrinterRuledLineCapabilities
     supported_barcode_rotations: typing.Optional[winrt.windows.foundation.collections.IVectorView[PosPrinterRotation]]
     supported_bitmap_rotations: typing.Optional[winrt.windows.foundation.collections.IVectorView[PosPrinterRotation]]
-    is_both_sides_printing_supported: winrt.system.Boolean
-    is_full_length_supported: winrt.system.Boolean
-    is_reverse_paper_feed_by_line_supported: winrt.system.Boolean
-    is_reverse_paper_feed_by_map_mode_unit_supported: winrt.system.Boolean
-    is_reverse_video_supported: winrt.system.Boolean
-    is_strikethrough_supported: winrt.system.Boolean
-    is_subscript_supported: winrt.system.Boolean
-    is_superscript_supported: winrt.system.Boolean
+    is_both_sides_printing_supported: bool
+    is_full_length_supported: bool
+    is_reverse_paper_feed_by_line_supported: bool
+    is_reverse_paper_feed_by_map_mode_unit_supported: bool
+    is_reverse_video_supported: bool
+    is_strikethrough_supported: bool
+    is_subscript_supported: bool
+    is_superscript_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlipPrinterCapabilities: ...
 
@@ -1122,60 +1122,60 @@ class ICashDrawerEventSourceEventArgs(winrt.system.Object):
 class ICommonClaimedPosPrinterStation(winrt.system.Object):
     characters_per_line: winrt.system.UInt32
     color_cartridge: PosPrinterColorCartridge
-    is_cartridge_empty: winrt.system.Boolean
-    is_cartridge_removed: winrt.system.Boolean
-    is_cover_open: winrt.system.Boolean
-    is_head_cleaning: winrt.system.Boolean
-    is_letter_quality: winrt.system.Boolean
-    is_paper_empty: winrt.system.Boolean
-    is_paper_near_end: winrt.system.Boolean
-    is_ready_to_print: winrt.system.Boolean
+    is_cartridge_empty: bool
+    is_cartridge_removed: bool
+    is_cover_open: bool
+    is_head_cleaning: bool
+    is_letter_quality: bool
+    is_paper_empty: bool
+    is_paper_near_end: bool
+    is_ready_to_print: bool
     line_height: winrt.system.UInt32
     line_spacing: winrt.system.UInt32
     line_width: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonClaimedPosPrinterStation: ...
-    def validate_data(self, data: str, /) -> winrt.system.Boolean: ...
+    def validate_data(self, data: str, /) -> bool: ...
 
 class ICommonPosPrintStationCapabilities(winrt.system.Object):
     cartridge_sensors: PosPrinterCartridgeSensors
     color_cartridge_capabilities: PosPrinterColorCapabilities
-    is_bold_supported: winrt.system.Boolean
-    is_double_high_double_wide_print_supported: winrt.system.Boolean
-    is_double_high_print_supported: winrt.system.Boolean
-    is_double_wide_print_supported: winrt.system.Boolean
-    is_dual_color_supported: winrt.system.Boolean
-    is_italic_supported: winrt.system.Boolean
-    is_paper_empty_sensor_supported: winrt.system.Boolean
-    is_paper_near_end_sensor_supported: winrt.system.Boolean
-    is_printer_present: winrt.system.Boolean
-    is_underline_supported: winrt.system.Boolean
+    is_bold_supported: bool
+    is_double_high_double_wide_print_supported: bool
+    is_double_high_print_supported: bool
+    is_double_wide_print_supported: bool
+    is_dual_color_supported: bool
+    is_italic_supported: bool
+    is_paper_empty_sensor_supported: bool
+    is_paper_near_end_sensor_supported: bool
+    is_printer_present: bool
+    is_underline_supported: bool
     supported_characters_per_line: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonPosPrintStationCapabilities: ...
 
 class ICommonReceiptSlipCapabilities(winrt.system.Object):
-    is180_rotation_supported: winrt.system.Boolean
-    is_barcode_supported: winrt.system.Boolean
-    is_bitmap_supported: winrt.system.Boolean
-    is_left90_rotation_supported: winrt.system.Boolean
-    is_print_area_supported: winrt.system.Boolean
-    is_right90_rotation_supported: winrt.system.Boolean
+    is180_rotation_supported: bool
+    is_barcode_supported: bool
+    is_bitmap_supported: bool
+    is_left90_rotation_supported: bool
+    is_print_area_supported: bool
+    is_right90_rotation_supported: bool
     ruled_line_capabilities: PosPrinterRuledLineCapabilities
     supported_barcode_rotations: typing.Optional[winrt.windows.foundation.collections.IVectorView[PosPrinterRotation]]
     supported_bitmap_rotations: typing.Optional[winrt.windows.foundation.collections.IVectorView[PosPrinterRotation]]
     cartridge_sensors: PosPrinterCartridgeSensors
     color_cartridge_capabilities: PosPrinterColorCapabilities
-    is_bold_supported: winrt.system.Boolean
-    is_double_high_double_wide_print_supported: winrt.system.Boolean
-    is_double_high_print_supported: winrt.system.Boolean
-    is_double_wide_print_supported: winrt.system.Boolean
-    is_dual_color_supported: winrt.system.Boolean
-    is_italic_supported: winrt.system.Boolean
-    is_paper_empty_sensor_supported: winrt.system.Boolean
-    is_paper_near_end_sensor_supported: winrt.system.Boolean
-    is_printer_present: winrt.system.Boolean
-    is_underline_supported: winrt.system.Boolean
+    is_bold_supported: bool
+    is_double_high_double_wide_print_supported: bool
+    is_double_high_print_supported: bool
+    is_double_wide_print_supported: bool
+    is_dual_color_supported: bool
+    is_italic_supported: bool
+    is_paper_empty_sensor_supported: bool
+    is_paper_near_end_sensor_supported: bool
+    is_printer_present: bool
+    is_underline_supported: bool
     supported_characters_per_line: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.UInt32]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommonReceiptSlipCapabilities: ...
@@ -1183,7 +1183,7 @@ class ICommonReceiptSlipCapabilities(winrt.system.Object):
 class IPosPrinterJob(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPosPrinterJob: ...
-    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def print(self, data: str, /) -> None: ...
     @typing.overload
     def print_line(self) -> None: ...
@@ -1194,7 +1194,7 @@ class IReceiptOrSlipJob(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IReceiptOrSlipJob: ...
     def draw_ruled_line(self, position_list: str, line_direction: PosPrinterLineDirection, line_width: winrt.system.UInt32, line_style: PosPrinterLineStyle, line_color: winrt.system.UInt32, /) -> None: ...
-    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def execute_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def print(self, data: str, /) -> None: ...
     def print_barcode(self, data: str, symbology: winrt.system.UInt32, height: winrt.system.UInt32, width: winrt.system.UInt32, text_position: PosPrinterBarcodeTextPosition, alignment: PosPrinterAlignment, /) -> None: ...
     def print_barcode_custom_align(self, data: str, symbology: winrt.system.UInt32, height: winrt.system.UInt32, width: winrt.system.UInt32, text_position: PosPrinterBarcodeTextPosition, alignment_distance: winrt.system.UInt32, /) -> None: ...
@@ -1221,5 +1221,5 @@ class IReceiptOrSlipJob(winrt.system.Object):
     @typing.overload
     def set_custom_aligned_bitmap(self, bitmap_number: winrt.system.UInt32, bitmap: typing.Optional[winrt.windows.graphics.imaging.BitmapFrame], alignment_distance: winrt.system.UInt32, width: winrt.system.UInt32, /) -> None: ...
     def set_print_area(self, value: winrt.windows.foundation.Rect, /) -> None: ...
-    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: winrt.system.Boolean, /) -> None: ...
+    def set_print_rotation(self, value: PosPrinterRotation, include_bitmaps: bool, /) -> None: ...
 

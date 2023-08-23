@@ -31,7 +31,7 @@ class VoiceCommandCompletedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> VoiceCommandCompletedEventArgs: ...
 
 class VoiceCommandConfirmationResult(winrt.system.Object):
-    confirmed: winrt.system.Boolean
+    confirmed: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VoiceCommandConfirmationResult: ...
 

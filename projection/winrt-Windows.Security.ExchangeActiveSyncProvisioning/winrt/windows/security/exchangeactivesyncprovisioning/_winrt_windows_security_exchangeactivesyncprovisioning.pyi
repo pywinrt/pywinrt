@@ -27,14 +27,14 @@ class EasClientDeviceInformation(winrt.system.Object):
     def __new__(cls: typing.Type[EasClientDeviceInformation]) -> EasClientDeviceInformation:...
 
 class EasClientSecurityPolicy(winrt.system.Object):
-    require_encryption: winrt.system.Boolean
+    require_encryption: bool
     password_history: winrt.system.UInt32
     password_expiration: datetime.timedelta
     min_password_length: winrt.system.UInt8
     min_password_complex_characters: winrt.system.UInt8
     max_password_failed_attempts: winrt.system.UInt8
     max_inactivity_time_lock: datetime.timedelta
-    disallow_convenience_logon: winrt.system.Boolean
+    disallow_convenience_logon: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasClientSecurityPolicy: ...
     def __new__(cls: typing.Type[EasClientSecurityPolicy]) -> EasClientSecurityPolicy:...
@@ -42,7 +42,7 @@ class EasClientSecurityPolicy(winrt.system.Object):
     def check_compliance(self) -> typing.Optional[EasComplianceResults]: ...
 
 class EasComplianceResults(winrt.system.Object):
-    compliant: winrt.system.Boolean
+    compliant: bool
     disallow_convenience_logon_result: EasDisallowConvenienceLogonResult
     max_inactivity_time_lock_result: EasMaxInactivityTimeLockResult
     max_password_failed_attempts_result: EasMaxPasswordFailedAttemptsResult

@@ -24,7 +24,7 @@ class CoreTextRange:
 
 class CoreTextCompositionCompletedEventArgs(winrt.system.Object):
     composition_segments: typing.Optional[winrt.windows.foundation.collections.IVectorView[CoreTextCompositionSegment]]
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextCompositionCompletedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -36,14 +36,14 @@ class CoreTextCompositionSegment(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CoreTextCompositionSegment: ...
 
 class CoreTextCompositionStartedEventArgs(winrt.system.Object):
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextCompositionStartedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class CoreTextEditContext(winrt.system.Object):
     name: str
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     input_scope: CoreTextInputScope
     input_pane_display_policy: CoreTextInputPaneDisplayPolicy
     @staticmethod
@@ -77,7 +77,7 @@ class CoreTextEditContext(winrt.system.Object):
 class CoreTextFormatUpdatingEventArgs(winrt.system.Object):
     result: CoreTextFormatUpdatingResult
     background_color: typing.Optional[typing.Optional[winrt.windows.ui.viewmanagement.UIElementType]]
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     range: CoreTextRange
     reason: CoreTextFormatUpdatingReason
     text_color: typing.Optional[typing.Optional[winrt.windows.ui.viewmanagement.UIElementType]]
@@ -94,7 +94,7 @@ class CoreTextLayoutBounds(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CoreTextLayoutBounds: ...
 
 class CoreTextLayoutRequest(winrt.system.Object):
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     layout_bounds: typing.Optional[CoreTextLayoutBounds]
     range: CoreTextRange
     layout_bounds_visual_pixels: typing.Optional[CoreTextLayoutBounds]
@@ -109,7 +109,7 @@ class CoreTextLayoutRequestedEventArgs(winrt.system.Object):
 
 class CoreTextSelectionRequest(winrt.system.Object):
     selection: CoreTextRange
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextSelectionRequest: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -121,7 +121,7 @@ class CoreTextSelectionRequestedEventArgs(winrt.system.Object):
 
 class CoreTextSelectionUpdatingEventArgs(winrt.system.Object):
     result: CoreTextSelectionUpdatingResult
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     selection: CoreTextRange
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextSelectionUpdatingEventArgs: ...
@@ -144,7 +144,7 @@ class CoreTextServicesManager(winrt.system.Object):
 
 class CoreTextTextRequest(winrt.system.Object):
     text: str
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     range: CoreTextRange
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreTextTextRequest: ...
@@ -158,7 +158,7 @@ class CoreTextTextRequestedEventArgs(winrt.system.Object):
 class CoreTextTextUpdatingEventArgs(winrt.system.Object):
     result: CoreTextTextUpdatingResult
     input_language: typing.Optional[winrt.windows.globalization.Language]
-    is_canceled: winrt.system.Boolean
+    is_canceled: bool
     new_selection: CoreTextRange
     range: CoreTextRange
     text: str

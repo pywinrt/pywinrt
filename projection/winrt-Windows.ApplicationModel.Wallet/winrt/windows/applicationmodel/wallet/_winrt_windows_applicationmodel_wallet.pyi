@@ -35,9 +35,9 @@ class WalletItem(winrt.system.Object):
     body_font_color: winrt.windows.ui.Color
     body_color: winrt.windows.ui.Color
     body_background_image: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]
-    is_display_message_launchable: winrt.system.Boolean
-    is_acknowledged: winrt.system.Boolean
-    is_more_transaction_history_launchable: winrt.system.Boolean
+    is_display_message_launchable: bool
+    is_acknowledged: bool
+    is_more_transaction_history_launchable: bool
     header_font_color: winrt.windows.ui.Color
     header_color: winrt.windows.ui.Color
     header_background_image: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]
@@ -67,7 +67,7 @@ class WalletItemCustomProperty(winrt.system.Object):
     summary_view_position: WalletSummaryViewPosition
     name: str
     detail_view_position: WalletDetailViewPosition
-    auto_detect_links: winrt.system.Boolean
+    auto_detect_links: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WalletItemCustomProperty: ...
     def __new__(cls: typing.Type[WalletItemCustomProperty], name: str, value: str) -> WalletItemCustomProperty:...
@@ -105,8 +105,8 @@ class WalletRelevantLocation(winrt.system.Object):
 
 class WalletTransaction(winrt.system.Object):
     transaction_date: typing.Optional[typing.Optional[datetime.datetime]]
-    is_launchable: winrt.system.Boolean
-    ignore_time_of_day: winrt.system.Boolean
+    is_launchable: bool
+    ignore_time_of_day: bool
     display_location: str
     display_amount: str
     description: str

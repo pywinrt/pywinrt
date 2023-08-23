@@ -11,7 +11,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 class DesktopWindowTarget(winrt.system.Object):
-    is_topmost: winrt.system.Boolean
+    is_topmost: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DesktopWindowTarget: ...
 

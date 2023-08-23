@@ -55,26 +55,26 @@ class AppInfo(winrt.system.Object):
 
 class AppInstallerInfo(winrt.system.Object):
     uri: typing.Optional[winrt.windows.foundation.Uri]
-    automatic_background_task: winrt.system.Boolean
+    automatic_background_task: bool
     dependency_package_uris: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Uri]]
-    force_update_from_any_version: winrt.system.Boolean
+    force_update_from_any_version: bool
     hours_between_update_checks: winrt.system.UInt32
-    is_auto_repair_enabled: winrt.system.Boolean
+    is_auto_repair_enabled: bool
     last_checked: datetime.datetime
-    on_launch: winrt.system.Boolean
+    on_launch: bool
     optional_package_uris: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Uri]]
     paused_until: typing.Optional[typing.Optional[datetime.datetime]]
     policy_source: AppInstallerPolicySource
     repair_uris: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Uri]]
-    show_prompt: winrt.system.Boolean
-    update_blocks_activation: winrt.system.Boolean
+    show_prompt: bool
+    update_blocks_activation: bool
     update_uris: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.foundation.Uri]]
     version: PackageVersion
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppInstallerInfo: ...
 
 class AppInstance(winrt.system.Object):
-    is_current_instance: winrt.system.Boolean
+    is_current_instance: bool
     key: str
     recommended_instance: typing.ClassVar[typing.Optional[AppInstance]]
     @staticmethod
@@ -96,8 +96,8 @@ class CameraApplicationManager(winrt.system.Object):
     def show_installed_applications_u_i() -> None: ...
 
 class DesignMode(winrt.system.Object):
-    design_mode_enabled: typing.ClassVar[winrt.system.Boolean]
-    design_mode2_enabled: typing.ClassVar[winrt.system.Boolean]
+    design_mode_enabled: typing.ClassVar[bool]
+    design_mode2_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DesignMode: ...
 
@@ -108,10 +108,10 @@ class EnteredBackgroundEventArgs(winrt.system.Object):
 
 class FindRelatedPackagesOptions(winrt.system.Object):
     relationship: PackageRelationship
-    include_resources: winrt.system.Boolean
-    include_optionals: winrt.system.Boolean
-    include_host_runtimes: winrt.system.Boolean
-    include_frameworks: winrt.system.Boolean
+    include_resources: bool
+    include_optionals: bool
+    include_host_runtimes: bool
+    include_frameworks: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FindRelatedPackagesOptions: ...
     def __new__(cls: typing.Type[FindRelatedPackagesOptions], relationship: PackageRelationship) -> FindRelatedPackagesOptions:...
@@ -164,17 +164,17 @@ class Package(winrt.system.Object):
     dependencies: typing.Optional[winrt.windows.foundation.collections.IVectorView[Package]]
     id: typing.Optional[PackageId]
     installed_location: typing.Optional[winrt.windows.storage.StorageFolder]
-    is_framework: winrt.system.Boolean
+    is_framework: bool
     description: str
     display_name: str
-    is_bundle: winrt.system.Boolean
-    is_development_mode: winrt.system.Boolean
-    is_resource_package: winrt.system.Boolean
+    is_bundle: bool
+    is_development_mode: bool
+    is_resource_package: bool
     logo: typing.Optional[winrt.windows.foundation.Uri]
     publisher_display_name: str
     installed_date: datetime.datetime
     status: typing.Optional[PackageStatus]
-    is_optional: winrt.system.Boolean
+    is_optional: bool
     signature_kind: PackageSignatureKind
     effective_location: typing.Optional[winrt.windows.storage.StorageFolder]
     mutable_location: typing.Optional[winrt.windows.storage.StorageFolder]
@@ -182,7 +182,7 @@ class Package(winrt.system.Object):
     effective_external_path: str
     effective_path: str
     installed_path: str
-    is_stub: winrt.system.Boolean
+    is_stub: bool
     machine_external_location: typing.Optional[winrt.windows.storage.StorageFolder]
     machine_external_path: str
     mutable_path: str
@@ -203,12 +203,12 @@ class Package(winrt.system.Object):
     def get_logo_as_random_access_stream_reference(self, size: winrt.windows.foundation.Size, /) -> typing.Optional[winrt.windows.storage.streams.RandomAccessStreamReference]: ...
     def get_thumbnail_token(self) -> str: ...
     def launch(self, parameters: str, /) -> None: ...
-    def set_in_use_async(self, in_use: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def set_in_use_async(self, in_use: bool, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     def stage_content_groups_async(self, names: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVector[PackageContentGroup]]: ...
     @typing.overload
-    def stage_content_groups_async(self, names: typing.Iterable[str], move_to_head_of_queue: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVector[PackageContentGroup]]: ...
-    def verify_content_integrity_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def stage_content_groups_async(self, names: typing.Iterable[str], move_to_head_of_queue: bool, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVector[PackageContentGroup]]: ...
+    def verify_content_integrity_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class PackageCatalog(winrt.system.Object):
     @staticmethod
@@ -244,7 +244,7 @@ class PackageCatalogAddOptionalPackageResult(winrt.system.Object):
 
 class PackageCatalogAddResourcePackageResult(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult
-    is_complete: winrt.system.Boolean
+    is_complete: bool
     package: typing.Optional[Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageCatalogAddResourcePackageResult: ...
@@ -262,7 +262,7 @@ class PackageCatalogRemoveResourcePackagesResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageCatalogRemoveResourcePackagesResult: ...
 
 class PackageContentGroup(winrt.system.Object):
-    is_required: winrt.system.Boolean
+    is_required: bool
     name: str
     package: typing.Optional[Package]
     state: PackageContentGroupState
@@ -274,8 +274,8 @@ class PackageContentGroupStagingEventArgs(winrt.system.Object):
     activity_id: uuid.UUID
     content_group_name: str
     error_code: winrt.windows.foundation.HResult
-    is_complete: winrt.system.Boolean
-    is_content_group_required: winrt.system.Boolean
+    is_complete: bool
+    is_content_group_required: bool
     package: typing.Optional[Package]
     progress: winrt.system.Double
     @staticmethod
@@ -298,7 +298,7 @@ class PackageId(winrt.system.Object):
 class PackageInstallingEventArgs(winrt.system.Object):
     activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
-    is_complete: winrt.system.Boolean
+    is_complete: bool
     package: typing.Optional[Package]
     progress: winrt.system.Double
     @staticmethod
@@ -307,28 +307,28 @@ class PackageInstallingEventArgs(winrt.system.Object):
 class PackageStagingEventArgs(winrt.system.Object):
     activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
-    is_complete: winrt.system.Boolean
+    is_complete: bool
     package: typing.Optional[Package]
     progress: winrt.system.Double
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageStagingEventArgs: ...
 
 class PackageStatus(winrt.system.Object):
-    data_offline: winrt.system.Boolean
-    dependency_issue: winrt.system.Boolean
-    deployment_in_progress: winrt.system.Boolean
-    disabled: winrt.system.Boolean
-    license_issue: winrt.system.Boolean
-    modified: winrt.system.Boolean
-    needs_remediation: winrt.system.Boolean
-    not_available: winrt.system.Boolean
-    package_offline: winrt.system.Boolean
-    servicing: winrt.system.Boolean
-    tampered: winrt.system.Boolean
-    is_partially_staged: winrt.system.Boolean
+    data_offline: bool
+    dependency_issue: bool
+    deployment_in_progress: bool
+    disabled: bool
+    license_issue: bool
+    modified: bool
+    needs_remediation: bool
+    not_available: bool
+    package_offline: bool
+    servicing: bool
+    tampered: bool
+    is_partially_staged: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageStatus: ...
-    def verify_is_o_k(self) -> winrt.system.Boolean: ...
+    def verify_is_o_k(self) -> bool: ...
 
 class PackageStatusChangedEventArgs(winrt.system.Object):
     package: typing.Optional[Package]
@@ -338,7 +338,7 @@ class PackageStatusChangedEventArgs(winrt.system.Object):
 class PackageUninstallingEventArgs(winrt.system.Object):
     activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
-    is_complete: winrt.system.Boolean
+    is_complete: bool
     package: typing.Optional[Package]
     progress: winrt.system.Double
     @staticmethod
@@ -353,7 +353,7 @@ class PackageUpdateAvailabilityResult(winrt.system.Object):
 class PackageUpdatingEventArgs(winrt.system.Object):
     activity_id: uuid.UUID
     error_code: winrt.windows.foundation.HResult
-    is_complete: winrt.system.Boolean
+    is_complete: bool
     progress: winrt.system.Double
     source_package: typing.Optional[Package]
     target_package: typing.Optional[Package]

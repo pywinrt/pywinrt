@@ -36,13 +36,13 @@ class StoreAppLicense(winrt.system.Object):
     add_on_licenses: typing.Optional[winrt.windows.foundation.collections.IMapView[str, StoreLicense]]
     expiration_date: datetime.datetime
     extended_json_data: str
-    is_active: winrt.system.Boolean
-    is_trial: winrt.system.Boolean
-    is_trial_owned_by_this_user: winrt.system.Boolean
+    is_active: bool
+    is_trial: bool
+    is_trial_owned_by_this_user: bool
     sku_store_id: str
     trial_time_remaining: datetime.timedelta
     trial_unique_id: str
-    is_disc_license: winrt.system.Boolean
+    is_disc_license: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreAppLicense: ...
 
@@ -71,7 +71,7 @@ class StoreCollectionData(winrt.system.Object):
     developer_offer_id: str
     end_date: datetime.datetime
     extended_json_data: str
-    is_trial: winrt.system.Boolean
+    is_trial: bool
     start_date: datetime.datetime
     trial_time_remaining: datetime.timedelta
     @staticmethod
@@ -87,7 +87,7 @@ class StoreConsumableResult(winrt.system.Object):
 
 class StoreContext(winrt.system.Object):
     user: typing.Optional[winrt.windows.system.User]
-    can_silently_download_store_package_updates: winrt.system.Boolean
+    can_silently_download_store_package_updates: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreContext: ...
     def acquire_store_license_for_optional_package_async(self, optional_package: typing.Optional[winrt.windows.applicationmodel.Package], /) -> winrt.windows.foundation.IAsyncOperation[StoreAcquireLicenseResult]: ...
@@ -153,19 +153,19 @@ class StoreLicense(winrt.system.Object):
     expiration_date: datetime.datetime
     extended_json_data: str
     in_app_offer_token: str
-    is_active: winrt.system.Boolean
+    is_active: bool
     sku_store_id: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreLicense: ...
 
 class StorePackageInstallOptions(winrt.system.Object):
-    allow_forced_app_restart: winrt.system.Boolean
+    allow_forced_app_restart: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePackageInstallOptions: ...
     def __new__(cls: typing.Type[StorePackageInstallOptions]) -> StorePackageInstallOptions:...
 
 class StorePackageLicense(winrt.system.Object):
-    is_valid: winrt.system.Boolean
+    is_valid: bool
     package: typing.Optional[winrt.windows.applicationmodel.Package]
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -177,7 +177,7 @@ class StorePackageLicense(winrt.system.Object):
     def remove_license_lost(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class StorePackageUpdate(winrt.system.Object):
-    mandatory: winrt.system.Boolean
+    mandatory: bool
     package: typing.Optional[winrt.windows.applicationmodel.Package]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorePackageUpdate: ...
@@ -194,7 +194,7 @@ class StorePrice(winrt.system.Object):
     formatted_base_price: str
     formatted_price: str
     formatted_recurrence_price: str
-    is_on_sale: winrt.system.Boolean
+    is_on_sale: bool
     sale_end_date: datetime.datetime
     unformatted_base_price: str
     unformatted_price: str
@@ -205,10 +205,10 @@ class StorePrice(winrt.system.Object):
 class StoreProduct(winrt.system.Object):
     description: str
     extended_json_data: str
-    has_digital_download: winrt.system.Boolean
+    has_digital_download: bool
     images: typing.Optional[winrt.windows.foundation.collections.IVectorView[StoreImage]]
     in_app_offer_token: str
-    is_in_user_collection: winrt.system.Boolean
+    is_in_user_collection: bool
     keywords: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     language: str
     link_uri: typing.Optional[winrt.windows.foundation.Uri]
@@ -220,7 +220,7 @@ class StoreProduct(winrt.system.Object):
     videos: typing.Optional[winrt.windows.foundation.collections.IVectorView[StoreVideo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreProduct: ...
-    def get_is_any_sku_installed_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def get_is_any_sku_installed_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     def request_purchase_async(self) -> winrt.windows.foundation.IAsyncOperation[StorePurchaseResult]: ...
     @typing.overload
@@ -234,7 +234,7 @@ class StoreProductOptions(winrt.system.Object):
 
 class StoreProductPagedQueryResult(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult
-    has_more_results: winrt.system.Boolean
+    has_more_results: bool
     products: typing.Optional[winrt.windows.foundation.collections.IMapView[str, StoreProduct]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreProductPagedQueryResult: ...
@@ -300,7 +300,7 @@ class StoreRateAndReviewResult(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult
     extended_json_data: str
     status: StoreRateAndReviewStatus
-    was_updated: winrt.system.Boolean
+    was_updated: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreRateAndReviewResult: ...
 
@@ -325,9 +325,9 @@ class StoreSku(winrt.system.Object):
     description: str
     extended_json_data: str
     images: typing.Optional[winrt.windows.foundation.collections.IVectorView[StoreImage]]
-    is_in_user_collection: winrt.system.Boolean
-    is_subscription: winrt.system.Boolean
-    is_trial: winrt.system.Boolean
+    is_in_user_collection: bool
+    is_subscription: bool
+    is_trial: bool
     language: str
     price: typing.Optional[StorePrice]
     store_id: str
@@ -336,7 +336,7 @@ class StoreSku(winrt.system.Object):
     videos: typing.Optional[winrt.windows.foundation.collections.IVectorView[StoreVideo]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoreSku: ...
-    def get_is_installed_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def get_is_installed_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
     def request_purchase_async(self) -> winrt.windows.foundation.IAsyncOperation[StorePurchaseResult]: ...
     @typing.overload
@@ -345,7 +345,7 @@ class StoreSku(winrt.system.Object):
 class StoreSubscriptionInfo(winrt.system.Object):
     billing_period: winrt.system.UInt32
     billing_period_unit: StoreDurationUnit
-    has_trial_period: winrt.system.Boolean
+    has_trial_period: bool
     trial_period: winrt.system.UInt32
     trial_period_unit: StoreDurationUnit
     @staticmethod

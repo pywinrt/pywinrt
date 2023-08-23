@@ -27,7 +27,7 @@ class ImageFeatureDescriptor(winrt.system.Object):
     width: winrt.system.UInt32
     pixel_range: LearningModelPixelRange
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     kind: LearningModelFeatureKind
     name: str
     @staticmethod
@@ -95,7 +95,7 @@ class LearningModelBinding(winrt.system.Object, typing.Mapping[str, winrt.system
     def bind(self, name: str, value: typing.Optional[winrt.system.Object], props: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
     def clear(self) -> None: ...
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[winrt.windows.foundation.collections.IKeyValuePair[str, winrt.system.Object]]]: ...
-    def has_key(self, key: str, /) -> winrt.system.Boolean: ...
+    def has_key(self, key: str, /) -> bool: ...
     def lookup(self, key: str, /) -> typing.Optional[winrt.system.Object]: ...
     def split(self) -> typing.Tuple[typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]], typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]]: ...
 
@@ -112,7 +112,7 @@ class LearningModelEvaluationResult(winrt.system.Object):
     correlation_id: str
     error_status: winrt.system.Int32
     outputs: typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LearningModelEvaluationResult: ...
 
@@ -138,7 +138,7 @@ class LearningModelSession(winrt.system.Object):
 
 class LearningModelSessionOptions(winrt.system.Object):
     batch_size_override: winrt.system.UInt32
-    close_model_on_session_creation: winrt.system.Boolean
+    close_model_on_session_creation: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LearningModelSessionOptions: ...
     def __new__(cls: typing.Type[LearningModelSessionOptions]) -> LearningModelSessionOptions:...
@@ -146,7 +146,7 @@ class LearningModelSessionOptions(winrt.system.Object):
 
 class MapFeatureDescriptor(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     kind: LearningModelFeatureKind
     name: str
     key_kind: TensorKind
@@ -156,7 +156,7 @@ class MapFeatureDescriptor(winrt.system.Object):
 
 class SequenceFeatureDescriptor(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     kind: LearningModelFeatureKind
     name: str
     element_descriptor: typing.Optional[ILearningModelFeatureDescriptor]
@@ -179,15 +179,15 @@ class TensorBoolean(winrt.system.Object):
     @staticmethod
     def create(shape: typing.Iterable[winrt.system.Int64], /) -> typing.Optional[TensorBoolean]: ...
     @staticmethod
-    def create_from_array(shape: typing.Iterable[winrt.system.Int64], data: winrt.system.Array[winrt.system.Boolean], /) -> typing.Optional[TensorBoolean]: ...
+    def create_from_array(shape: typing.Iterable[winrt.system.Int64], data: winrt.system.Array[bool], /) -> typing.Optional[TensorBoolean]: ...
     @staticmethod
     def create_from_buffer(shape: winrt.system.Array[winrt.system.Int64], buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], /) -> typing.Optional[TensorBoolean]: ...
     @staticmethod
-    def create_from_iterable(shape: typing.Iterable[winrt.system.Int64], data: typing.Iterable[winrt.system.Boolean], /) -> typing.Optional[TensorBoolean]: ...
+    def create_from_iterable(shape: typing.Iterable[winrt.system.Int64], data: typing.Iterable[bool], /) -> typing.Optional[TensorBoolean]: ...
     @staticmethod
-    def create_from_shape_array_and_data_array(shape: winrt.system.Array[winrt.system.Int64], data: winrt.system.Array[winrt.system.Boolean], /) -> typing.Optional[TensorBoolean]: ...
+    def create_from_shape_array_and_data_array(shape: winrt.system.Array[winrt.system.Int64], data: winrt.system.Array[bool], /) -> typing.Optional[TensorBoolean]: ...
     def create_reference(self) -> typing.Optional[winrt.windows.foundation.IMemoryBufferReference]: ...
-    def get_as_vector_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Boolean]]: ...
+    def get_as_vector_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[bool]]: ...
 
 class TensorDouble(winrt.system.Object):
     kind: LearningModelFeatureKind
@@ -217,7 +217,7 @@ class TensorDouble(winrt.system.Object):
 
 class TensorFeatureDescriptor(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     kind: LearningModelFeatureKind
     name: str
     shape: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Int64]]
@@ -511,7 +511,7 @@ class TensorUInt8Bit(winrt.system.Object):
 
 class ILearningModelFeatureDescriptor(winrt.system.Object):
     description: str
-    is_required: winrt.system.Boolean
+    is_required: bool
     kind: LearningModelFeatureKind
     name: str
     @staticmethod

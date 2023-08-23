@@ -15,7 +15,7 @@ from . import LocationOverrideStatus
 Self = typing.TypeVar('Self')
 
 class GeolocationProvider(winrt.system.Object):
-    is_overridden: winrt.system.Boolean
+    is_overridden: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeolocationProvider: ...
     def __new__(cls: typing.Type[GeolocationProvider]) -> GeolocationProvider:...

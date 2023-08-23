@@ -57,14 +57,14 @@ class UsbConfiguration(winrt.system.Object):
 class UsbConfigurationDescriptor(winrt.system.Object):
     configuration_value: winrt.system.UInt8
     max_power_milliamps: winrt.system.UInt32
-    remote_wakeup: winrt.system.Boolean
-    self_powered: winrt.system.Boolean
+    remote_wakeup: bool
+    self_powered: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbConfigurationDescriptor: ...
     @staticmethod
     def parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Optional[UsbConfigurationDescriptor]: ...
     @staticmethod
-    def try_parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[winrt.system.Boolean, typing.Optional[UsbConfigurationDescriptor]]: ...
+    def try_parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[bool, typing.Optional[UsbConfigurationDescriptor]]: ...
 
 class UsbControlRequestType(winrt.system.Object):
     recipient: UsbControlRecipient
@@ -157,7 +157,7 @@ class UsbEndpointDescriptor(winrt.system.Object):
     @staticmethod
     def parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Optional[UsbEndpointDescriptor]: ...
     @staticmethod
-    def try_parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[winrt.system.Boolean, typing.Optional[UsbEndpointDescriptor]]: ...
+    def try_parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[bool, typing.Optional[UsbEndpointDescriptor]]: ...
 
 class UsbInterface(winrt.system.Object):
     bulk_in_pipes: typing.Optional[winrt.windows.foundation.collections.IVectorView[UsbBulkInPipe]]
@@ -181,7 +181,7 @@ class UsbInterfaceDescriptor(winrt.system.Object):
     @staticmethod
     def parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Optional[UsbInterfaceDescriptor]: ...
     @staticmethod
-    def try_parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[winrt.system.Boolean, typing.Optional[UsbInterfaceDescriptor]]: ...
+    def try_parse(descriptor: typing.Optional[UsbDescriptor], /) -> typing.Tuple[bool, typing.Optional[UsbInterfaceDescriptor]]: ...
 
 class UsbInterfaceSetting(winrt.system.Object):
     bulk_in_endpoints: typing.Optional[winrt.windows.foundation.collections.IVectorView[UsbBulkInEndpointDescriptor]]
@@ -190,7 +190,7 @@ class UsbInterfaceSetting(winrt.system.Object):
     interface_descriptor: typing.Optional[UsbInterfaceDescriptor]
     interrupt_in_endpoints: typing.Optional[winrt.windows.foundation.collections.IVectorView[UsbInterruptInEndpointDescriptor]]
     interrupt_out_endpoints: typing.Optional[winrt.windows.foundation.collections.IVectorView[UsbInterruptOutEndpointDescriptor]]
-    selected: winrt.system.Boolean
+    selected: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UsbInterfaceSetting: ...
     def select_setting_async(self) -> winrt.windows.foundation.IAsyncAction: ...

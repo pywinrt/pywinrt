@@ -51,8 +51,8 @@ class AnchorRequestedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AnchorRequestedEventArgs: ...
 
 class AppBar(winrt.system.Object):
-    is_sticky: winrt.system.Boolean
-    is_open: winrt.system.Boolean
+    is_sticky: bool
+    is_open: bool
     closed_display_mode: AppBarClosedDisplayMode
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.AppBarTemplateSettings]
     light_dismiss_overlay_mode: LightDismissOverlayMode
@@ -82,9 +82,9 @@ class AppBarButton(winrt.system.Object):
     label_position: CommandBarLabelPosition
     keyboard_accelerator_text_override: str
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.AppBarButtonTemplateSettings]
-    is_compact: winrt.system.Boolean
+    is_compact: bool
     dynamic_overflow_order: winrt.system.Int32
-    is_in_overflow: winrt.system.Boolean
+    is_in_overflow: bool
     icon_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_compact_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     label_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -97,9 +97,9 @@ class AppBarButton(winrt.system.Object):
     def __new__(cls: typing.Type[AppBarButton]) -> AppBarButton:...
 
 class AppBarElementContainer(winrt.system.Object):
-    is_compact: winrt.system.Boolean
+    is_compact: bool
     dynamic_overflow_order: winrt.system.Int32
-    is_in_overflow: winrt.system.Boolean
+    is_in_overflow: bool
     dynamic_overflow_order_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_compact_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_in_overflow_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -108,9 +108,9 @@ class AppBarElementContainer(winrt.system.Object):
     def __new__(cls: typing.Type[AppBarElementContainer]) -> AppBarElementContainer:...
 
 class AppBarSeparator(winrt.system.Object):
-    is_compact: winrt.system.Boolean
+    is_compact: bool
     dynamic_overflow_order: winrt.system.Int32
-    is_in_overflow: winrt.system.Boolean
+    is_in_overflow: bool
     is_compact_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     dynamic_overflow_order_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_in_overflow_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -124,9 +124,9 @@ class AppBarToggleButton(winrt.system.Object):
     label_position: CommandBarLabelPosition
     keyboard_accelerator_text_override: str
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.AppBarToggleButtonTemplateSettings]
-    is_compact: winrt.system.Boolean
+    is_compact: bool
     dynamic_overflow_order: winrt.system.Int32
-    is_in_overflow: winrt.system.Boolean
+    is_in_overflow: bool
     icon_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_compact_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     label_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -139,15 +139,15 @@ class AppBarToggleButton(winrt.system.Object):
     def __new__(cls: typing.Type[AppBarToggleButton]) -> AppBarToggleButton:...
 
 class AutoSuggestBox(winrt.system.Object):
-    update_text_on_select: winrt.system.Boolean
+    update_text_on_select: bool
     text_member_path: str
     text_box_style: typing.Optional[winrt.windows.ui.xaml.Style]
     text: str
     placeholder_text: str
     max_suggestion_list_height: winrt.system.Double
-    is_suggestion_list_open: winrt.system.Boolean
+    is_suggestion_list_open: bool
     header: typing.Optional[winrt.system.Object]
-    auto_maximize_suggestion_area: winrt.system.Boolean
+    auto_maximize_suggestion_area: bool
     query_icon: typing.Optional[IconElement]
     light_dismiss_overlay_mode: LightDismissOverlayMode
     description: typing.Optional[winrt.system.Object]
@@ -192,17 +192,17 @@ class AutoSuggestBoxTextChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoSuggestBoxTextChangedEventArgs: ...
     def __new__(cls: typing.Type[AutoSuggestBoxTextChangedEventArgs]) -> AutoSuggestBoxTextChangedEventArgs:...
-    def check_current(self) -> winrt.system.Boolean: ...
+    def check_current(self) -> bool: ...
 
 class BackClickEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackClickEventArgs: ...
     def __new__(cls: typing.Type[BackClickEventArgs]) -> BackClickEventArgs:...
 
 class BitmapIcon(winrt.system.Object):
     uri_source: typing.Optional[winrt.windows.foundation.Uri]
-    show_as_monochrome: winrt.system.Boolean
+    show_as_monochrome: bool
     uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     show_as_monochrome_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -211,7 +211,7 @@ class BitmapIcon(winrt.system.Object):
 
 class BitmapIconSource(winrt.system.Object):
     uri_source: typing.Optional[winrt.windows.foundation.Uri]
-    show_as_monochrome: winrt.system.Boolean
+    show_as_monochrome: bool
     show_as_monochrome_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     uri_source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -250,10 +250,10 @@ class CalendarDatePicker(winrt.system.Object):
     placeholder_text: str
     min_date: datetime.datetime
     max_date: datetime.datetime
-    is_today_highlighted: winrt.system.Boolean
-    is_out_of_scope_enabled: winrt.system.Boolean
-    is_group_label_visible: winrt.system.Boolean
-    is_calendar_open: winrt.system.Boolean
+    is_today_highlighted: bool
+    is_out_of_scope_enabled: bool
+    is_group_label_visible: bool
+    is_calendar_open: bool
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     first_day_of_week: winrt.windows.globalization.DayOfWeek
@@ -312,7 +312,7 @@ class CalendarView(winrt.system.Object):
     display_mode: CalendarViewDisplayMode
     day_of_week_format: str
     day_item_font_weight: winrt.windows.ui.text.FontWeight
-    is_today_highlighted: winrt.system.Boolean
+    is_today_highlighted: bool
     day_item_font_size: winrt.system.Double
     day_item_font_family: typing.Optional[winrt.windows.ui.xaml.media.FontFamily]
     calendar_view_day_item_style: typing.Optional[winrt.windows.ui.xaml.Style]
@@ -332,8 +332,8 @@ class CalendarView(winrt.system.Object):
     min_date: datetime.datetime
     max_date: datetime.datetime
     out_of_scope_foreground: typing.Optional[winrt.windows.ui.xaml.media.Brush]
-    is_out_of_scope_enabled: winrt.system.Boolean
-    is_group_label_visible: winrt.system.Boolean
+    is_out_of_scope_enabled: bool
+    is_group_label_visible: bool
     hover_border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     horizontal_first_of_month_label_alignment: winrt.windows.ui.xaml.HorizontalAlignment
     horizontal_day_item_alignment: winrt.windows.ui.xaml.HorizontalAlignment
@@ -465,7 +465,7 @@ class CalendarView(winrt.system.Object):
     def remove_selected_dates_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class CalendarViewDayItem(winrt.system.Object):
-    is_blackout: winrt.system.Boolean
+    is_blackout: bool
     date: datetime.datetime
     date_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_blackout_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -475,7 +475,7 @@ class CalendarViewDayItem(winrt.system.Object):
     def set_density_colors(self, colors: typing.Iterable[winrt.windows.ui.Color], /) -> None: ...
 
 class CalendarViewDayItemChangingEventArgs(winrt.system.Object):
-    in_recycle_queue: winrt.system.Boolean
+    in_recycle_queue: bool
     item: typing.Optional[CalendarViewDayItem]
     phase: winrt.system.UInt32
     @staticmethod
@@ -540,7 +540,7 @@ class ChoosingGroupHeaderContainerEventArgs(winrt.system.Object):
 
 class ChoosingItemContainerEventArgs(winrt.system.Object):
     item_container: typing.Optional[winrt.windows.ui.xaml.controls.primitives.SelectorItem]
-    is_container_prepared: winrt.system.Boolean
+    is_container_prepared: bool
     item: typing.Optional[winrt.system.Object]
     item_index: winrt.system.Int32
     @staticmethod
@@ -548,7 +548,7 @@ class ChoosingItemContainerEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[ChoosingItemContainerEventArgs]) -> ChoosingItemContainerEventArgs:...
 
 class CleanUpVirtualizedItemEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     u_i_element: typing.Optional[winrt.windows.ui.xaml.UIElement]
     value: typing.Optional[winrt.system.Object]
     @staticmethod
@@ -568,15 +568,15 @@ class ColorPicker(winrt.system.Object):
     max_value: winrt.system.Int32
     max_saturation: winrt.system.Int32
     max_hue: winrt.system.Int32
-    is_more_button_visible: winrt.system.Boolean
-    is_hex_input_visible: winrt.system.Boolean
-    is_color_spectrum_visible: winrt.system.Boolean
-    is_color_slider_visible: winrt.system.Boolean
-    is_color_preview_visible: winrt.system.Boolean
-    is_color_channel_text_input_visible: winrt.system.Boolean
-    is_alpha_text_input_visible: winrt.system.Boolean
-    is_alpha_slider_visible: winrt.system.Boolean
-    is_alpha_enabled: winrt.system.Boolean
+    is_more_button_visible: bool
+    is_hex_input_visible: bool
+    is_color_spectrum_visible: bool
+    is_color_slider_visible: bool
+    is_color_preview_visible: bool
+    is_color_channel_text_input_visible: bool
+    is_alpha_text_input_visible: bool
+    is_alpha_slider_visible: bool
+    is_alpha_enabled: bool
     color_spectrum_shape: ColorSpectrumShape
     color_spectrum_components: ColorSpectrumComponents
     color: winrt.windows.ui.Color
@@ -641,7 +641,7 @@ class ColumnDefinitionCollection(winrt.system.Object, typing.MutableSequence[Col
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[ColumnDefinition]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[ColumnDefinition], /) -> winrt.system.UInt32: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[ColumnDefinition]]: ...
-    def index_of(self, value: typing.Optional[ColumnDefinition], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[ColumnDefinition], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def insert_at(self, index: winrt.system.UInt32, value: typing.Optional[ColumnDefinition], /) -> None: ...
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
     def remove_at_end(self) -> None: ...
@@ -650,9 +650,9 @@ class ColumnDefinitionCollection(winrt.system.Object, typing.MutableSequence[Col
 
 class ComboBox(winrt.system.Object):
     max_drop_down_height: winrt.system.Double
-    is_editable: winrt.system.Boolean
-    is_drop_down_open: winrt.system.Boolean
-    is_selection_box_highlighted: winrt.system.Boolean
+    is_editable: bool
+    is_drop_down_open: bool
+    is_selection_box_highlighted: bool
     selection_box_item: typing.Optional[winrt.system.Object]
     selection_box_item_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.ComboBoxTemplateSettings]
@@ -660,7 +660,7 @@ class ComboBox(winrt.system.Object):
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     light_dismiss_overlay_mode: LightDismissOverlayMode
-    is_text_search_enabled: winrt.system.Boolean
+    is_text_search_enabled: bool
     selection_changed_trigger: ComboBoxSelectionChangedTrigger
     placeholder_foreground: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     text_box_style: typing.Optional[winrt.windows.ui.xaml.Style]
@@ -697,7 +697,7 @@ class ComboBoxItem(winrt.system.Object):
     def __new__(cls: typing.Type[ComboBoxItem]) -> ComboBoxItem:...
 
 class ComboBoxTextSubmittedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxTextSubmittedEventArgs: ...
@@ -708,7 +708,7 @@ class CommandBar(winrt.system.Object):
     command_bar_overflow_presenter_style: typing.Optional[winrt.windows.ui.xaml.Style]
     command_bar_template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.CommandBarTemplateSettings]
     overflow_button_visibility: CommandBarOverflowButtonVisibility
-    is_dynamic_overflow_enabled: winrt.system.Boolean
+    is_dynamic_overflow_enabled: bool
     default_label_position: CommandBarDefaultLabelPosition
     primary_commands_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     secondary_commands_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -735,8 +735,8 @@ class CommandBarOverflowPresenter(winrt.system.Object):
     def __new__(cls: typing.Type[CommandBarOverflowPresenter]) -> CommandBarOverflowPresenter:...
 
 class ContainerContentChangingEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
-    in_recycle_queue: winrt.system.Boolean
+    handled: bool
+    in_recycle_queue: bool
     item: typing.Optional[winrt.system.Object]
     item_container: typing.Optional[winrt.windows.ui.xaml.controls.primitives.SelectorItem]
     item_index: winrt.system.Int32
@@ -775,9 +775,9 @@ class ContentDialog(winrt.system.Object):
     primary_button_text: str
     primary_button_command_parameter: typing.Optional[winrt.system.Object]
     primary_button_command: typing.Optional[winrt.windows.ui.xaml.input.ICommand]
-    is_secondary_button_enabled: winrt.system.Boolean
-    is_primary_button_enabled: winrt.system.Boolean
-    full_size_desired: winrt.system.Boolean
+    is_secondary_button_enabled: bool
+    is_primary_button_enabled: bool
+    full_size_desired: bool
     secondary_button_style: typing.Optional[winrt.windows.ui.xaml.Style]
     primary_button_style: typing.Optional[winrt.windows.ui.xaml.Style]
     default_button: ContentDialogButton
@@ -830,7 +830,7 @@ class ContentDialogButtonClickDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 class ContentDialogButtonClickEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentDialogButtonClickEventArgs: ...
     def get_deferral(self) -> typing.Optional[ContentDialogButtonClickDeferral]: ...
@@ -846,7 +846,7 @@ class ContentDialogClosingDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 class ContentDialogClosingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     result: ContentDialogResult
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentDialogClosingEventArgs: ...
@@ -877,7 +877,7 @@ class ContentPresenter(winrt.system.Object):
     character_spacing: winrt.system.Int32
     text_line_bounds: winrt.windows.ui.xaml.TextLineBounds
     optical_margin_alignment: winrt.windows.ui.xaml.OpticalMarginAlignment
-    is_text_scale_factor_enabled: winrt.system.Boolean
+    is_text_scale_factor_enabled: bool
     vertical_content_alignment: winrt.windows.ui.xaml.VerticalAlignment
     text_wrapping: winrt.windows.ui.xaml.TextWrapping
     padding: winrt.windows.ui.xaml.Thickness
@@ -924,7 +924,7 @@ class ContentPresenter(winrt.system.Object):
     def on_content_template_selector_changed(self, old_content_template_selector: typing.Optional[DataTemplateSelector], new_content_template_selector: typing.Optional[DataTemplateSelector], /) -> None: ...
 
 class ContextMenuEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     cursor_left: winrt.system.Double
     cursor_top: winrt.system.Double
     @staticmethod
@@ -932,8 +932,8 @@ class ContextMenuEventArgs(winrt.system.Object):
 
 class Control(winrt.system.Object):
     padding: winrt.windows.ui.xaml.Thickness
-    is_tab_stop: winrt.system.Boolean
-    is_enabled: winrt.system.Boolean
+    is_tab_stop: bool
+    is_enabled: bool
     horizontal_content_alignment: winrt.windows.ui.xaml.HorizontalAlignment
     foreground: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     font_weight: winrt.windows.ui.text.FontWeight
@@ -950,15 +950,15 @@ class Control(winrt.system.Object):
     vertical_content_alignment: winrt.windows.ui.xaml.VerticalAlignment
     template: typing.Optional[ControlTemplate]
     focus_state: winrt.windows.ui.xaml.FocusState
-    is_text_scale_factor_enabled: winrt.system.Boolean
-    use_system_focus_visuals: winrt.system.Boolean
+    is_text_scale_factor_enabled: bool
+    use_system_focus_visuals: bool
     x_y_focus_up: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     x_y_focus_right: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     x_y_focus_left: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     x_y_focus_down: typing.Optional[winrt.windows.ui.xaml.DependencyObject]
     requires_pointer: RequiresPointer
-    is_focus_engagement_enabled: winrt.system.Boolean
-    is_focus_engaged: winrt.system.Boolean
+    is_focus_engagement_enabled: bool
+    is_focus_engaged: bool
     element_sound_mode: winrt.windows.ui.xaml.ElementSoundMode
     default_style_resource_uri: typing.Optional[winrt.windows.foundation.Uri]
     corner_radius: winrt.windows.ui.xaml.CornerRadius
@@ -1001,12 +1001,12 @@ class Control(winrt.system.Object):
     background_sizing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Control: ...
-    def apply_template(self) -> winrt.system.Boolean: ...
-    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> winrt.system.Boolean: ...
+    def apply_template(self) -> bool: ...
+    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> bool: ...
     @staticmethod
-    def get_is_template_focus_target(element: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], /) -> winrt.system.Boolean: ...
+    def get_is_template_focus_target(element: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], /) -> bool: ...
     @staticmethod
-    def get_is_template_key_tip_target(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_template_key_tip_target(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     def get_template_child(self, child_name: str, /) -> typing.Optional[winrt.windows.ui.xaml.DependencyObject]: ...
     def on_character_received(self, e: typing.Optional[winrt.windows.ui.xaml.input.CharacterReceivedRoutedEventArgs], /) -> None: ...
     def on_double_tapped(self, e: typing.Optional[winrt.windows.ui.xaml.input.DoubleTappedRoutedEventArgs], /) -> None: ...
@@ -1038,9 +1038,9 @@ class Control(winrt.system.Object):
     def on_tapped(self, e: typing.Optional[winrt.windows.ui.xaml.input.TappedRoutedEventArgs], /) -> None: ...
     def remove_focus_engagement(self) -> None: ...
     @staticmethod
-    def set_is_template_focus_target(element: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_is_template_focus_target(element: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], value: bool, /) -> None: ...
     @staticmethod
-    def set_is_template_key_tip_target(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: winrt.system.Boolean, /) -> None: ...
+    def set_is_template_key_tip_target(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], value: bool, /) -> None: ...
     def add_is_enabled_changed(self, handler: typing.Optional[winrt.windows.ui.xaml.DependencyPropertyChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_is_enabled_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_focus_disengaged(self, handler: winrt.windows.foundation.TypedEventHandler[Control, FocusDisengagedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -1077,16 +1077,16 @@ class DatePickedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[DatePickedEventArgs]) -> DatePickedEventArgs:...
 
 class DatePicker(winrt.system.Object):
-    year_visible: winrt.system.Boolean
+    year_visible: bool
     year_format: str
     orientation: Orientation
-    month_visible: winrt.system.Boolean
+    month_visible: bool
     month_format: str
     min_year: datetime.datetime
     max_year: datetime.datetime
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
-    day_visible: winrt.system.Boolean
+    day_visible: bool
     day_format: str
     date: datetime.datetime
     calendar_identifier: str
@@ -1116,11 +1116,11 @@ class DatePicker(winrt.system.Object):
     def remove_selected_date_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class DatePickerFlyout(winrt.system.Object):
-    year_visible: winrt.system.Boolean
-    month_visible: winrt.system.Boolean
+    year_visible: bool
+    month_visible: bool
     min_year: datetime.datetime
     max_year: datetime.datetime
-    day_visible: winrt.system.Boolean
+    day_visible: bool
     date: datetime.datetime
     calendar_identifier: str
     year_format: str
@@ -1156,7 +1156,7 @@ class DatePickerFlyoutItem(winrt.system.Object):
     def get_string_representation(self) -> str: ...
 
 class DatePickerFlyoutPresenter(winrt.system.Object):
-    is_default_shadow_enabled: winrt.system.Boolean
+    is_default_shadow_enabled: bool
     is_default_shadow_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickerFlyoutPresenter: ...
@@ -1180,7 +1180,7 @@ class DragItemsCompletedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> DragItemsCompletedEventArgs: ...
 
 class DragItemsStartingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     data: typing.Optional[winrt.windows.applicationmodel.datatransfer.DataPackage]
     items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Object]]
     @staticmethod
@@ -1207,7 +1207,7 @@ class DynamicOverflowItemsChangingEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[DynamicOverflowItemsChangingEventArgs]) -> DynamicOverflowItemsChangingEventArgs:...
 
 class FlipView(winrt.system.Object):
-    use_touch_animations_for_all_navigation: winrt.system.Boolean
+    use_touch_animations_for_all_navigation: bool
     use_touch_animations_for_all_navigation_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipView: ...
@@ -1228,7 +1228,7 @@ class Flyout(winrt.system.Object):
     def __new__(cls: typing.Type[Flyout]) -> Flyout:...
 
 class FlyoutPresenter(winrt.system.Object):
-    is_default_shadow_enabled: winrt.system.Boolean
+    is_default_shadow_enabled: bool
     is_default_shadow_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutPresenter: ...
@@ -1239,7 +1239,7 @@ class FocusDisengagedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> FocusDisengagedEventArgs: ...
 
 class FocusEngagedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusEngagedEventArgs: ...
 
@@ -1249,8 +1249,8 @@ class FontIcon(winrt.system.Object):
     font_style: winrt.windows.ui.text.FontStyle
     font_size: winrt.system.Double
     font_family: typing.Optional[winrt.windows.ui.xaml.media.FontFamily]
-    is_text_scale_factor_enabled: winrt.system.Boolean
-    mirrored_when_right_to_left: winrt.system.Boolean
+    is_text_scale_factor_enabled: bool
+    mirrored_when_right_to_left: bool
     font_family_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     font_size_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     font_style_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1263,8 +1263,8 @@ class FontIcon(winrt.system.Object):
     def __new__(cls: typing.Type[FontIcon]) -> FontIcon:...
 
 class FontIconSource(winrt.system.Object):
-    mirrored_when_right_to_left: winrt.system.Boolean
-    is_text_scale_factor_enabled: winrt.system.Boolean
+    mirrored_when_right_to_left: bool
+    is_text_scale_factor_enabled: bool
     glyph: str
     font_weight: winrt.windows.ui.text.FontWeight
     font_style: winrt.windows.ui.text.FontStyle
@@ -1285,12 +1285,12 @@ class Frame(winrt.system.Object):
     source_page_type: winrt.windows.ui.xaml.interop.TypeName
     cache_size: winrt.system.Int32
     back_stack_depth: winrt.system.Int32
-    can_go_back: winrt.system.Boolean
-    can_go_forward: winrt.system.Boolean
+    can_go_back: bool
+    can_go_forward: bool
     current_source_page_type: winrt.windows.ui.xaml.interop.TypeName
     back_stack: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.xaml.navigation.PageStackEntry]]
     forward_stack: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.xaml.navigation.PageStackEntry]]
-    is_navigation_stack_enabled: winrt.system.Boolean
+    is_navigation_stack_enabled: bool
     back_stack_depth_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     cache_size_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     can_go_back_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1310,16 +1310,16 @@ class Frame(winrt.system.Object):
     def go_back(self, transition_info_override: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo], /) -> None: ...
     def go_forward(self) -> None: ...
     @typing.overload
-    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, /) -> winrt.system.Boolean: ...
+    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, /) -> bool: ...
     @typing.overload
-    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], /) -> winrt.system.Boolean: ...
+    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], /) -> bool: ...
     @typing.overload
-    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], info_override: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo], /) -> winrt.system.Boolean: ...
-    def navigate_to_type(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], navigation_options: typing.Optional[winrt.windows.ui.xaml.navigation.FrameNavigationOptions], /) -> winrt.system.Boolean: ...
+    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], info_override: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo], /) -> bool: ...
+    def navigate_to_type(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, parameter: typing.Optional[winrt.system.Object], navigation_options: typing.Optional[winrt.windows.ui.xaml.navigation.FrameNavigationOptions], /) -> bool: ...
     @typing.overload
     def set_navigation_state(self, navigation_state: str, /) -> None: ...
     @typing.overload
-    def set_navigation_state(self, navigation_state: str, suppress_navigate: winrt.system.Boolean, /) -> None: ...
+    def set_navigation_state(self, navigation_state: str, suppress_navigate: bool, /) -> None: ...
     def add_navigated(self, handler: typing.Optional[winrt.windows.ui.xaml.navigation.NavigatedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_navigated(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_navigating(self, handler: typing.Optional[winrt.windows.ui.xaml.navigation.NavigatingCancelEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -1393,7 +1393,7 @@ class GroupItem(winrt.system.Object):
 
 class GroupStyle(winrt.system.Object):
     panel: typing.Optional[ItemsPanelTemplate]
-    hides_if_empty: winrt.system.Boolean
+    hides_if_empty: bool
     header_template_selector: typing.Optional[DataTemplateSelector]
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     container_style_selector: typing.Optional[StyleSelector]
@@ -1423,10 +1423,10 @@ class HandwritingPanelOpenedEventArgs(winrt.system.Object):
 class HandwritingView(winrt.system.Object):
     placement_target: typing.Optional[winrt.windows.ui.xaml.UIElement]
     placement_alignment: HandwritingPanelPlacementAlignment
-    are_candidates_enabled: winrt.system.Boolean
-    is_open: winrt.system.Boolean
-    is_switch_to_keyboard_enabled: winrt.system.Boolean
-    is_command_bar_open: winrt.system.Boolean
+    are_candidates_enabled: bool
+    is_open: bool
+    is_switch_to_keyboard_enabled: bool
+    is_command_bar_open: bool
     input_device_types: winrt.windows.ui.core.CoreInputDeviceTypes
     are_candidates_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_open_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1439,8 +1439,8 @@ class HandwritingView(winrt.system.Object):
     def __new__(cls: typing.Type[HandwritingView]) -> HandwritingView:...
     def get_candidates(self, candidates_session_id: winrt.system.UInt32, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]: ...
     def select_candidate(self, candidates_session_id: winrt.system.UInt32, selected_candidate_index: winrt.system.UInt32, /) -> None: ...
-    def try_close(self) -> winrt.system.Boolean: ...
-    def try_open(self) -> winrt.system.Boolean: ...
+    def try_close(self) -> bool: ...
+    def try_open(self) -> bool: ...
     def add_closed(self, handler: winrt.windows.foundation.TypedEventHandler[HandwritingView, HandwritingPanelClosedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_closed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_opened(self, handler: winrt.windows.foundation.TypedEventHandler[HandwritingView, HandwritingPanelOpenedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -1468,8 +1468,8 @@ class Hub(winrt.system.Object):
     sections: typing.Optional[winrt.windows.foundation.collections.IVector[HubSection]]
     sections_in_view: typing.Optional[winrt.windows.foundation.collections.IVector[HubSection]]
     semantic_zoom_owner: typing.Optional[SemanticZoom]
-    is_zoomed_in_view: winrt.system.Boolean
-    is_active_view: winrt.system.Boolean
+    is_zoomed_in_view: bool
+    is_active_view: bool
     default_section_index_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     header_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     header_template_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1494,7 +1494,7 @@ class Hub(winrt.system.Object):
     def remove_sections_in_view_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class HubSection(winrt.system.Object):
-    is_header_interactive: winrt.system.Boolean
+    is_header_interactive: bool
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     content_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
@@ -1530,7 +1530,7 @@ class HubSectionCollection(winrt.system.Object, typing.MutableSequence[HubSectio
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[HubSection]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[HubSection], /) -> winrt.system.UInt32: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[HubSection]]: ...
-    def index_of(self, value: typing.Optional[HubSection], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[HubSection], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def insert_at(self, index: winrt.system.UInt32, value: typing.Optional[HubSection], /) -> None: ...
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
     def remove_at_end(self) -> None: ...
@@ -1596,13 +1596,13 @@ class InkCanvas(winrt.system.Object):
 
 class InkToolbar(winrt.system.Object):
     target_ink_canvas: typing.Optional[InkCanvas]
-    is_ruler_button_checked: winrt.system.Boolean
+    is_ruler_button_checked: bool
     initial_controls: InkToolbarInitialControls
     active_tool: typing.Optional[InkToolbarToolButton]
     children: typing.Optional[winrt.windows.ui.xaml.DependencyObjectCollection]
     ink_drawing_attributes: typing.Optional[winrt.windows.ui.input.inking.InkDrawingAttributes]
     orientation: Orientation
-    is_stencil_button_checked: winrt.system.Boolean
+    is_stencil_button_checked: bool
     button_flyout_placement: InkToolbarButtonFlyoutPlacement
     target_ink_presenter: typing.Optional[winrt.windows.ui.input.inking.InkPresenter]
     active_tool_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1665,7 +1665,7 @@ class InkToolbarCustomToolButton(winrt.system.Object):
     def __new__(cls: typing.Type[InkToolbarCustomToolButton]) -> InkToolbarCustomToolButton:...
 
 class InkToolbarEraserButton(winrt.system.Object):
-    is_clear_all_visible: winrt.system.Boolean
+    is_clear_all_visible: bool
     is_clear_all_visible_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkToolbarEraserButton: ...
@@ -1673,7 +1673,7 @@ class InkToolbarEraserButton(winrt.system.Object):
 
 class InkToolbarFlyoutItem(winrt.system.Object):
     kind: InkToolbarFlyoutItemKind
-    is_checked: winrt.system.Boolean
+    is_checked: bool
     is_checked_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     kind_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -1697,7 +1697,7 @@ class InkToolbarIsStencilButtonCheckedChangedEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[InkToolbarIsStencilButtonCheckedChangedEventArgs]) -> InkToolbarIsStencilButtonCheckedChangedEventArgs:...
 
 class InkToolbarMenuButton(winrt.system.Object):
-    is_extension_glyph_shown: winrt.system.Boolean
+    is_extension_glyph_shown: bool
     menu_kind: InkToolbarMenuKind
     is_extension_glyph_shown_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -1740,8 +1740,8 @@ class InkToolbarRulerButton(winrt.system.Object):
 
 class InkToolbarStencilButton(winrt.system.Object):
     selected_stencil: InkToolbarStencilKind
-    is_ruler_item_visible: winrt.system.Boolean
-    is_protractor_item_visible: winrt.system.Boolean
+    is_ruler_item_visible: bool
+    is_protractor_item_visible: bool
     protractor: typing.Optional[winrt.windows.ui.input.inking.InkPresenterProtractor]
     ruler: typing.Optional[winrt.windows.ui.input.inking.InkPresenterRuler]
     is_protractor_item_visible_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1759,7 +1759,7 @@ class InkToolbarToggleButton(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> InkToolbarToggleButton: ...
 
 class InkToolbarToolButton(winrt.system.Object):
-    is_extension_glyph_shown: winrt.system.Boolean
+    is_extension_glyph_shown: bool
     tool_kind: InkToolbarTool
     is_extension_glyph_shown_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -1799,7 +1799,7 @@ class ItemCollection(winrt.system.Object, typing.MutableSequence[winrt.system.Ob
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[winrt.system.Object]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[winrt.system.Object], /) -> winrt.system.UInt32: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.system.Object]]: ...
-    def index_of(self, value: typing.Optional[winrt.system.Object], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[winrt.system.Object], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def insert_at(self, index: winrt.system.UInt32, value: typing.Optional[winrt.system.Object], /) -> None: ...
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
     def remove_at_end(self) -> None: ...
@@ -1813,7 +1813,7 @@ class ItemContainerGenerator(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ItemContainerGenerator: ...
     def container_from_index(self, index: winrt.system.Int32, /) -> typing.Optional[winrt.windows.ui.xaml.DependencyObject]: ...
     def container_from_item(self, item: typing.Optional[winrt.system.Object], /) -> typing.Optional[winrt.windows.ui.xaml.DependencyObject]: ...
-    def generate_next(self) -> typing.Tuple[typing.Optional[winrt.windows.ui.xaml.DependencyObject], winrt.system.Boolean]: ...
+    def generate_next(self) -> typing.Tuple[typing.Optional[winrt.windows.ui.xaml.DependencyObject], bool]: ...
     def generator_position_from_index(self, item_index: winrt.system.Int32, /) -> winrt.windows.ui.xaml.controls.primitives.GeneratorPosition: ...
     def get_item_container_generator_for_panel(self, panel: typing.Optional[Panel], /) -> typing.Optional[ItemContainerGenerator]: ...
     def index_from_container(self, container: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Int32: ...
@@ -1823,7 +1823,7 @@ class ItemContainerGenerator(winrt.system.Object):
     def recycle(self, position: winrt.windows.ui.xaml.controls.primitives.GeneratorPosition, count: winrt.system.Int32, /) -> None: ...
     def remove(self, position: winrt.windows.ui.xaml.controls.primitives.GeneratorPosition, count: winrt.system.Int32, /) -> None: ...
     def remove_all(self) -> None: ...
-    def start_at(self, position: winrt.windows.ui.xaml.controls.primitives.GeneratorPosition, direction: winrt.windows.ui.xaml.controls.primitives.GeneratorDirection, allow_start_at_realized_item: winrt.system.Boolean, /) -> None: ...
+    def start_at(self, position: winrt.windows.ui.xaml.controls.primitives.GeneratorPosition, direction: winrt.windows.ui.xaml.controls.primitives.GeneratorDirection, allow_start_at_realized_item: bool, /) -> None: ...
     def stop(self) -> None: ...
     def add_items_changed(self, handler: typing.Optional[winrt.windows.ui.xaml.controls.primitives.ItemsChangedEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_items_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -1839,7 +1839,7 @@ class ItemsControl(winrt.system.Object):
     group_style_selector: typing.Optional[GroupStyleSelector]
     display_member_path: str
     group_style: typing.Optional[winrt.windows.foundation.collections.IObservableVector[GroupStyle]]
-    is_grouping: winrt.system.Boolean
+    is_grouping: bool
     item_container_generator: typing.Optional[ItemContainerGenerator]
     items: typing.Optional[ItemCollection]
     items_panel_root: typing.Optional[Panel]
@@ -1864,7 +1864,7 @@ class ItemsControl(winrt.system.Object):
     def get_items_owner(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[ItemsControl]: ...
     def group_header_container_from_item_container(self, item_container: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[winrt.windows.ui.xaml.DependencyObject]: ...
     def index_from_container(self, container: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Int32: ...
-    def is_item_its_own_container_override(self, item: typing.Optional[winrt.system.Object], /) -> winrt.system.Boolean: ...
+    def is_item_its_own_container_override(self, item: typing.Optional[winrt.system.Object], /) -> bool: ...
     def item_from_container(self, container: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
     def items_control_from_item_container(container: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> typing.Optional[ItemsControl]: ...
@@ -1896,8 +1896,8 @@ class ItemsPresenter(winrt.system.Object):
     footer_transitions: typing.Optional[winrt.windows.ui.xaml.media.animation.TransitionCollection]
     footer_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     footer: typing.Optional[winrt.system.Object]
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     header_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     header_template_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     header_transitions_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1926,7 +1926,7 @@ class ItemsStackPanel(winrt.system.Object):
     last_cache_index: winrt.system.Int32
     last_visible_index: winrt.system.Int32
     scrolling_direction: PanelScrollingDirection
-    are_sticky_group_headers_enabled: winrt.system.Boolean
+    are_sticky_group_headers_enabled: bool
     cache_length_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     group_header_placement_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     group_padding_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1949,7 +1949,7 @@ class ItemsWrapGrid(winrt.system.Object):
     last_cache_index: winrt.system.Int32
     last_visible_index: winrt.system.Int32
     scrolling_direction: PanelScrollingDirection
-    are_sticky_group_headers_enabled: winrt.system.Boolean
+    are_sticky_group_headers_enabled: bool
     cache_length_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     group_header_placement_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     group_padding_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -1965,7 +1965,7 @@ class ItemsWrapGrid(winrt.system.Object):
 class ListBox(winrt.system.Object):
     selection_mode: SelectionMode
     selected_items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Object]]
-    single_selection_follows_focus: winrt.system.Boolean
+    single_selection_follows_focus: bool
     selection_mode_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     single_selection_follows_focus_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -2015,28 +2015,28 @@ class ListView(winrt.system.Object):
 
 class ListViewBase(winrt.system.Object):
     selection_mode: ListViewSelectionMode
-    is_swipe_enabled: winrt.system.Boolean
-    is_item_click_enabled: winrt.system.Boolean
+    is_swipe_enabled: bool
+    is_item_click_enabled: bool
     incremental_loading_trigger: IncrementalLoadingTrigger
     incremental_loading_threshold: winrt.system.Double
     header_transitions: typing.Optional[winrt.windows.ui.xaml.media.animation.TransitionCollection]
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     data_fetch_size: winrt.system.Double
-    can_reorder_items: winrt.system.Boolean
-    can_drag_items: winrt.system.Boolean
+    can_reorder_items: bool
+    can_drag_items: bool
     selected_items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Object]]
-    shows_scrolling_placeholders: winrt.system.Boolean
+    shows_scrolling_placeholders: bool
     footer_transitions: typing.Optional[winrt.windows.ui.xaml.media.animation.TransitionCollection]
     footer_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     footer: typing.Optional[winrt.system.Object]
     reorder_mode: ListViewReorderMode
-    is_multi_select_check_box_enabled: winrt.system.Boolean
+    is_multi_select_check_box_enabled: bool
     selected_ranges: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.ui.xaml.data.ItemIndexRange]]
-    single_selection_follows_focus: winrt.system.Boolean
+    single_selection_follows_focus: bool
     semantic_zoom_owner: typing.Optional[SemanticZoom]
-    is_zoomed_in_view: winrt.system.Boolean
-    is_active_view: winrt.system.Boolean
+    is_zoomed_in_view: bool
+    is_active_view: bool
     can_drag_items_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     can_reorder_items_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     data_fetch_size_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2065,7 +2065,7 @@ class ListViewBase(winrt.system.Object):
     def complete_view_change_to(self, source: typing.Optional[SemanticZoomLocation], destination: typing.Optional[SemanticZoomLocation], /) -> None: ...
     def deselect_range(self, item_index_range: typing.Optional[winrt.windows.ui.xaml.data.ItemIndexRange], /) -> None: ...
     def initialize_view_change(self) -> None: ...
-    def is_drag_source(self) -> winrt.system.Boolean: ...
+    def is_drag_source(self) -> bool: ...
     def load_more_items_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.ui.xaml.data.LoadMoreItemsResult]: ...
     def make_visible(self, item: typing.Optional[SemanticZoomLocation], /) -> None: ...
     def prepare_connected_animation(self, key: str, item: typing.Optional[winrt.system.Object], element_name: str, /) -> typing.Optional[winrt.windows.ui.xaml.media.animation.ConnectedAnimation]: ...
@@ -2078,7 +2078,7 @@ class ListViewBase(winrt.system.Object):
     def set_desired_container_update_duration(self, duration: datetime.timedelta, /) -> None: ...
     def start_view_change_from(self, source: typing.Optional[SemanticZoomLocation], destination: typing.Optional[SemanticZoomLocation], /) -> None: ...
     def start_view_change_to(self, source: typing.Optional[SemanticZoomLocation], destination: typing.Optional[SemanticZoomLocation], /) -> None: ...
-    def try_start_connected_animation_async(self, animation: typing.Optional[winrt.windows.ui.xaml.media.animation.ConnectedAnimation], item: typing.Optional[winrt.system.Object], element_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_start_connected_animation_async(self, animation: typing.Optional[winrt.windows.ui.xaml.media.animation.ConnectedAnimation], item: typing.Optional[winrt.system.Object], element_name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_drag_items_starting(self, handler: typing.Optional[DragItemsStartingEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_drag_items_starting(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_item_click(self, handler: typing.Optional[ItemClickEventHandler], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -2120,22 +2120,22 @@ class MediaElement(winrt.system.Object):
     stereo3_d_video_render_mode: winrt.windows.ui.xaml.media.Stereo3DVideoRenderMode
     stereo3_d_video_packing_mode: winrt.windows.ui.xaml.media.Stereo3DVideoPackingMode
     source: typing.Optional[winrt.windows.foundation.Uri]
-    real_time_playback: winrt.system.Boolean
+    real_time_playback: bool
     protection_manager: typing.Optional[winrt.windows.media.protection.MediaProtectionManager]
     poster_source: typing.Optional[winrt.windows.ui.xaml.media.ImageSource]
     position: datetime.timedelta
     playback_rate: winrt.system.Double
-    auto_play: winrt.system.Boolean
+    auto_play: bool
     audio_stream_index: typing.Optional[typing.Optional[winrt.system.Int32]]
-    is_muted: winrt.system.Boolean
+    is_muted: bool
     audio_device_type: winrt.windows.ui.xaml.media.AudioDeviceType
     audio_category: winrt.windows.ui.xaml.media.AudioCategory
     default_playback_rate: winrt.system.Double
-    is_looping: winrt.system.Boolean
+    is_looping: bool
     balance: winrt.system.Double
     download_progress_offset: winrt.system.Double
-    is_audio_only: winrt.system.Boolean
-    is_stereo3_d_video: winrt.system.Boolean
+    is_audio_only: bool
+    is_stereo3_d_video: bool
     markers: typing.Optional[winrt.windows.ui.xaml.media.TimelineMarkerCollection]
     natural_duration: winrt.windows.ui.xaml.Duration
     natural_video_height: winrt.system.Int32
@@ -2146,14 +2146,14 @@ class MediaElement(winrt.system.Object):
     aspect_ratio_width: winrt.system.Int32
     audio_stream_count: winrt.system.Int32
     buffering_progress: winrt.system.Double
-    can_pause: winrt.system.Boolean
-    can_seek: winrt.system.Boolean
+    can_pause: bool
+    can_seek: bool
     current_state: winrt.windows.ui.xaml.media.MediaElementState
     download_progress: winrt.system.Double
     stretch: winrt.windows.ui.xaml.media.Stretch
     play_to_preferred_source_uri: typing.Optional[winrt.windows.foundation.Uri]
-    is_full_window: winrt.system.Boolean
-    are_transport_controls_enabled: winrt.system.Boolean
+    is_full_window: bool
+    are_transport_controls_enabled: bool
     transport_controls: typing.Optional[MediaTransportControls]
     download_progress_offset_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     source_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2195,8 +2195,8 @@ class MediaElement(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaElement: ...
     def __new__(cls: typing.Type[MediaElement]) -> MediaElement:...
-    def add_audio_effect(self, effect_i_d: str, effect_optional: winrt.system.Boolean, effect_configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
-    def add_video_effect(self, effect_i_d: str, effect_optional: winrt.system.Boolean, effect_configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
+    def add_audio_effect(self, effect_i_d: str, effect_optional: bool, effect_configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
+    def add_video_effect(self, effect_i_d: str, effect_optional: bool, effect_configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
     def can_play_type(self, type: str, /) -> winrt.windows.ui.xaml.media.MediaCanPlayResponse: ...
     def get_as_casting_source(self) -> typing.Optional[winrt.windows.media.casting.CastingSource]: ...
     def get_audio_stream_language(self, index: typing.Optional[winrt.system.Int32], /) -> str: ...
@@ -2235,9 +2235,9 @@ class MediaPlayerElement(winrt.system.Object):
     stretch: winrt.windows.ui.xaml.media.Stretch
     source: typing.Optional[winrt.windows.media.playback.IMediaPlaybackSource]
     poster_source: typing.Optional[winrt.windows.ui.xaml.media.ImageSource]
-    is_full_window: winrt.system.Boolean
-    auto_play: winrt.system.Boolean
-    are_transport_controls_enabled: winrt.system.Boolean
+    is_full_window: bool
+    auto_play: bool
+    are_transport_controls_enabled: bool
     media_player: typing.Optional[winrt.windows.media.playback.MediaPlayer]
     are_transport_controls_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     auto_play_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2254,7 +2254,7 @@ class MediaPlayerElement(winrt.system.Object):
 class MediaPlayerPresenter(winrt.system.Object):
     stretch: winrt.windows.ui.xaml.media.Stretch
     media_player: typing.Optional[winrt.windows.media.playback.MediaPlayer]
-    is_full_window: winrt.system.Boolean
+    is_full_window: bool
     is_full_window_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     media_player_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     stretch_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2263,35 +2263,35 @@ class MediaPlayerPresenter(winrt.system.Object):
     def __new__(cls: typing.Type[MediaPlayerPresenter]) -> MediaPlayerPresenter:...
 
 class MediaTransportControls(winrt.system.Object):
-    is_zoom_enabled: winrt.system.Boolean
-    is_zoom_button_visible: winrt.system.Boolean
-    is_volume_enabled: winrt.system.Boolean
-    is_volume_button_visible: winrt.system.Boolean
-    is_stop_enabled: winrt.system.Boolean
-    is_stop_button_visible: winrt.system.Boolean
-    is_seek_enabled: winrt.system.Boolean
-    is_seek_bar_visible: winrt.system.Boolean
-    is_playback_rate_enabled: winrt.system.Boolean
-    is_playback_rate_button_visible: winrt.system.Boolean
-    is_full_window_enabled: winrt.system.Boolean
-    is_full_window_button_visible: winrt.system.Boolean
-    is_fast_rewind_enabled: winrt.system.Boolean
-    is_fast_rewind_button_visible: winrt.system.Boolean
-    is_fast_forward_enabled: winrt.system.Boolean
-    is_fast_forward_button_visible: winrt.system.Boolean
-    is_compact: winrt.system.Boolean
-    is_skip_forward_enabled: winrt.system.Boolean
-    is_skip_forward_button_visible: winrt.system.Boolean
-    is_skip_backward_enabled: winrt.system.Boolean
-    is_skip_backward_button_visible: winrt.system.Boolean
-    is_previous_track_button_visible: winrt.system.Boolean
-    is_next_track_button_visible: winrt.system.Boolean
+    is_zoom_enabled: bool
+    is_zoom_button_visible: bool
+    is_volume_enabled: bool
+    is_volume_button_visible: bool
+    is_stop_enabled: bool
+    is_stop_button_visible: bool
+    is_seek_enabled: bool
+    is_seek_bar_visible: bool
+    is_playback_rate_enabled: bool
+    is_playback_rate_button_visible: bool
+    is_full_window_enabled: bool
+    is_full_window_button_visible: bool
+    is_fast_rewind_enabled: bool
+    is_fast_rewind_button_visible: bool
+    is_fast_forward_enabled: bool
+    is_fast_forward_button_visible: bool
+    is_compact: bool
+    is_skip_forward_enabled: bool
+    is_skip_forward_button_visible: bool
+    is_skip_backward_enabled: bool
+    is_skip_backward_button_visible: bool
+    is_previous_track_button_visible: bool
+    is_next_track_button_visible: bool
     fast_play_fallback_behaviour: winrt.windows.ui.xaml.media.FastPlayFallbackBehaviour
-    show_and_hide_automatically: winrt.system.Boolean
-    is_repeat_enabled: winrt.system.Boolean
-    is_repeat_button_visible: winrt.system.Boolean
-    is_compact_overlay_enabled: winrt.system.Boolean
-    is_compact_overlay_button_visible: winrt.system.Boolean
+    show_and_hide_automatically: bool
+    is_repeat_enabled: bool
+    is_repeat_button_visible: bool
+    is_compact_overlay_enabled: bool
+    is_compact_overlay_button_visible: bool
     is_compact_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_fast_forward_button_visible_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_fast_forward_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2392,7 +2392,7 @@ class MenuFlyoutItemBase(winrt.system.Object):
 
 class MenuFlyoutPresenter(winrt.system.Object):
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.MenuFlyoutPresenterTemplateSettings]
-    is_default_shadow_enabled: winrt.system.Boolean
+    is_default_shadow_enabled: bool
     is_default_shadow_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutPresenter: ...
@@ -2418,9 +2418,9 @@ class NavigationView(winrt.system.Object):
     menu_item_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     menu_item_container_style_selector: typing.Optional[StyleSelector]
     menu_item_container_style: typing.Optional[winrt.windows.ui.xaml.Style]
-    is_settings_visible: winrt.system.Boolean
-    is_pane_toggle_button_visible: winrt.system.Boolean
-    is_pane_open: winrt.system.Boolean
+    is_settings_visible: bool
+    is_pane_toggle_button_visible: bool
+    is_pane_open: bool
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     expanded_mode_threshold_width: winrt.system.Double
@@ -2429,7 +2429,7 @@ class NavigationView(winrt.system.Object):
     compact_mode_threshold_width: winrt.system.Double
     auto_suggest_box: typing.Optional[AutoSuggestBox]
     open_pane_length: winrt.system.Double
-    always_show_header: winrt.system.Boolean
+    always_show_header: bool
     selected_item: typing.Optional[winrt.system.Object]
     pane_toggle_button_style: typing.Optional[winrt.windows.ui.xaml.Style]
     pane_footer: typing.Optional[winrt.windows.ui.xaml.UIElement]
@@ -2437,7 +2437,7 @@ class NavigationView(winrt.system.Object):
     menu_items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Object]]
     settings_item: typing.Optional[winrt.system.Object]
     pane_title: str
-    is_back_enabled: winrt.system.Boolean
+    is_back_enabled: bool
     is_back_button_visible: NavigationViewBackButtonVisible
     shoulder_navigation_enabled: NavigationViewShoulderNavigationEnabled
     selection_follows_focus: NavigationViewSelectionFollowsFocus
@@ -2445,7 +2445,7 @@ class NavigationView(winrt.system.Object):
     pane_display_mode: NavigationViewPaneDisplayMode
     pane_custom_content: typing.Optional[winrt.windows.ui.xaml.UIElement]
     overflow_label_mode: NavigationViewOverflowLabelMode
-    is_pane_visible: winrt.system.Boolean
+    is_pane_visible: bool
     content_overlay: typing.Optional[winrt.windows.ui.xaml.UIElement]
     template_settings: typing.Optional[NavigationViewTemplateSettings]
     expanded_mode_threshold_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2516,7 +2516,7 @@ class NavigationViewDisplayModeChangedEventArgs(winrt.system.Object):
 class NavigationViewItem(winrt.system.Object):
     icon: typing.Optional[IconElement]
     compact_pane_length: winrt.system.Double
-    selects_on_invoked: winrt.system.Boolean
+    selects_on_invoked: bool
     compact_pane_length_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     icon_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     selects_on_invoked_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2535,7 +2535,7 @@ class NavigationViewItemHeader(winrt.system.Object):
 
 class NavigationViewItemInvokedEventArgs(winrt.system.Object):
     invoked_item: typing.Optional[winrt.system.Object]
-    is_settings_invoked: winrt.system.Boolean
+    is_settings_invoked: bool
     invoked_item_container: typing.Optional[NavigationViewItemBase]
     recommended_navigation_transition_info: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo]
     @staticmethod
@@ -2553,12 +2553,12 @@ class NavigationViewList(winrt.system.Object):
     def __new__(cls: typing.Type[NavigationViewList]) -> NavigationViewList:...
 
 class NavigationViewPaneClosingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewPaneClosingEventArgs: ...
 
 class NavigationViewSelectionChangedEventArgs(winrt.system.Object):
-    is_settings_selected: winrt.system.Boolean
+    is_settings_selected: bool
     selected_item: typing.Optional[winrt.system.Object]
     recommended_navigation_transition_info: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo]
     selected_item_container: typing.Optional[NavigationViewItemBase]
@@ -2570,7 +2570,7 @@ class NavigationViewTemplateSettings(winrt.system.Object):
     left_pane_visibility: winrt.windows.ui.xaml.Visibility
     overflow_button_visibility: winrt.windows.ui.xaml.Visibility
     pane_toggle_button_visibility: winrt.windows.ui.xaml.Visibility
-    single_selection_follows_focus: winrt.system.Boolean
+    single_selection_follows_focus: bool
     top_padding: winrt.system.Double
     top_pane_visibility: winrt.windows.ui.xaml.Visibility
     back_button_visibility_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2609,7 +2609,7 @@ class Panel(winrt.system.Object):
     children_transitions: typing.Optional[winrt.windows.ui.xaml.media.animation.TransitionCollection]
     background: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     children: typing.Optional[UIElementCollection]
-    is_items_host: winrt.system.Boolean
+    is_items_host: bool
     background_transition: typing.Optional[winrt.windows.ui.xaml.BrushTransition]
     background_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     children_transitions_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2625,8 +2625,8 @@ class ParallaxView(winrt.system.Object):
     source: typing.Optional[winrt.windows.ui.xaml.UIElement]
     max_vertical_shift_ratio: winrt.system.Double
     max_horizontal_shift_ratio: winrt.system.Double
-    is_vertical_shift_clamped: winrt.system.Boolean
-    is_horizontal_shift_clamped: winrt.system.Boolean
+    is_vertical_shift_clamped: bool
+    is_horizontal_shift_clamped: bool
     horizontal_source_start_offset: winrt.system.Double
     horizontal_source_offset_kind: ParallaxSourceOffsetKind
     horizontal_source_end_offset: winrt.system.Double
@@ -2656,9 +2656,9 @@ class PasswordBox(winrt.system.Object):
     password_char: str
     password: str
     max_length: winrt.system.Int32
-    is_password_reveal_button_enabled: winrt.system.Boolean
+    is_password_reveal_button_enabled: bool
     selection_highlight_color: typing.Optional[winrt.windows.ui.xaml.media.SolidColorBrush]
-    prevent_keyboard_display_on_programmatic_focus: winrt.system.Boolean
+    prevent_keyboard_display_on_programmatic_focus: bool
     placeholder_text: str
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
@@ -2667,7 +2667,7 @@ class PasswordBox(winrt.system.Object):
     input_scope: typing.Optional[winrt.windows.ui.xaml.input.InputScope]
     selection_flyout: typing.Optional[winrt.windows.ui.xaml.controls.primitives.FlyoutBase]
     description: typing.Optional[winrt.system.Object]
-    can_paste_clipboard_content: winrt.system.Boolean
+    can_paste_clipboard_content: bool
     is_password_reveal_button_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     max_length_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     password_char_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2698,7 +2698,7 @@ class PasswordBox(winrt.system.Object):
     def remove_password_changing(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PasswordBoxPasswordChangingEventArgs(winrt.system.Object):
-    is_content_changing: winrt.system.Boolean
+    is_content_changing: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PasswordBoxPasswordChangingEventArgs: ...
 
@@ -2718,8 +2718,8 @@ class PathIconSource(winrt.system.Object):
 
 class PersonPicture(winrt.system.Object):
     profile_picture: typing.Optional[winrt.windows.ui.xaml.media.ImageSource]
-    prefer_small_image: winrt.system.Boolean
-    is_group: winrt.system.Boolean
+    prefer_small_image: bool
+    is_group: bool
     initials: str
     display_name: str
     contact: typing.Optional[winrt.windows.applicationmodel.contacts.Contact]
@@ -2748,13 +2748,13 @@ class PickerConfirmedEventArgs(winrt.system.Object):
 
 class PickerFlyout(winrt.system.Object):
     content: typing.Optional[winrt.windows.ui.xaml.UIElement]
-    confirmation_buttons_visible: winrt.system.Boolean
+    confirmation_buttons_visible: bool
     confirmation_buttons_visible_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     content_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerFlyout: ...
     def __new__(cls: typing.Type[PickerFlyout]) -> PickerFlyout:...
-    def show_at_async(self, target: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_at_async(self, target: typing.Optional[winrt.windows.ui.xaml.FrameworkElement], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_confirmed(self, handler: winrt.windows.foundation.TypedEventHandler[PickerFlyout, PickerConfirmedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_confirmed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -2767,13 +2767,13 @@ class Pivot(winrt.system.Object):
     title: typing.Optional[winrt.system.Object]
     selected_item: typing.Optional[winrt.system.Object]
     selected_index: winrt.system.Int32
-    is_locked: winrt.system.Boolean
+    is_locked: bool
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     right_header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     right_header: typing.Optional[winrt.system.Object]
     left_header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     left_header: typing.Optional[winrt.system.Object]
-    is_header_items_carousel_enabled: winrt.system.Boolean
+    is_header_items_carousel_enabled: bool
     header_focus_visual_placement: PivotHeaderFocusVisualPlacement
     header_template_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_locked_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2820,9 +2820,9 @@ class PivotItemEventArgs(winrt.system.Object):
     def __new__(cls: typing.Type[PivotItemEventArgs]) -> PivotItemEventArgs:...
 
 class ProgressBar(winrt.system.Object):
-    show_paused: winrt.system.Boolean
-    show_error: winrt.system.Boolean
-    is_indeterminate: winrt.system.Boolean
+    show_paused: bool
+    show_error: bool
+    is_indeterminate: bool
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.ProgressBarTemplateSettings]
     is_indeterminate_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     show_error_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2832,7 +2832,7 @@ class ProgressBar(winrt.system.Object):
     def __new__(cls: typing.Type[ProgressBar]) -> ProgressBar:...
 
 class ProgressRing(winrt.system.Object):
-    is_active: winrt.system.Boolean
+    is_active: bool
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.ProgressRingTemplateSettings]
     is_active_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -2851,8 +2851,8 @@ class RatingControl(winrt.system.Object):
     placeholder_value: winrt.system.Double
     max_rating: winrt.system.Int32
     item_info: typing.Optional[RatingItemInfo]
-    is_read_only: winrt.system.Boolean
-    is_clear_enabled: winrt.system.Boolean
+    is_read_only: bool
+    is_clear_enabled: bool
     initial_set_value: winrt.system.Int32
     caption: str
     caption_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -2988,27 +2988,27 @@ class RelativePanel(winrt.system.Object):
     @staticmethod
     def get_align_bottom_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
-    def get_align_bottom_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.Boolean: ...
+    def get_align_bottom_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     @staticmethod
     def get_align_horizontal_center_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
-    def get_align_horizontal_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.Boolean: ...
+    def get_align_horizontal_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     @staticmethod
     def get_align_left_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
-    def get_align_left_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.Boolean: ...
+    def get_align_left_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     @staticmethod
     def get_align_right_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
-    def get_align_right_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.Boolean: ...
+    def get_align_right_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     @staticmethod
     def get_align_top_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
-    def get_align_top_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.Boolean: ...
+    def get_align_top_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     @staticmethod
     def get_align_vertical_center_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
-    def get_align_vertical_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.Boolean: ...
+    def get_align_vertical_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> bool: ...
     @staticmethod
     def get_below(element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Optional[winrt.system.Object]: ...
     @staticmethod
@@ -3020,27 +3020,27 @@ class RelativePanel(winrt.system.Object):
     @staticmethod
     def set_align_bottom_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
-    def set_align_bottom_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_align_bottom_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @staticmethod
     def set_align_horizontal_center_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
-    def set_align_horizontal_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_align_horizontal_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @staticmethod
     def set_align_left_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
-    def set_align_left_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_align_left_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @staticmethod
     def set_align_right_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
-    def set_align_right_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_align_right_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @staticmethod
     def set_align_top_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
-    def set_align_top_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_align_top_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @staticmethod
     def set_align_vertical_center_with(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
-    def set_align_vertical_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: winrt.system.Boolean, /) -> None: ...
+    def set_align_vertical_center_with_panel(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: bool, /) -> None: ...
     @staticmethod
     def set_below(element: typing.Optional[winrt.windows.ui.xaml.UIElement], value: typing.Optional[winrt.system.Object], /) -> None: ...
     @staticmethod
@@ -3051,16 +3051,16 @@ class RelativePanel(winrt.system.Object):
 class RichEditBox(winrt.system.Object):
     text_wrapping: winrt.windows.ui.xaml.TextWrapping
     text_alignment: winrt.windows.ui.xaml.TextAlignment
-    is_text_prediction_enabled: winrt.system.Boolean
-    is_spell_check_enabled: winrt.system.Boolean
-    is_read_only: winrt.system.Boolean
+    is_text_prediction_enabled: bool
+    is_spell_check_enabled: bool
+    is_read_only: bool
     input_scope: typing.Optional[winrt.windows.ui.xaml.input.InputScope]
-    accepts_return: winrt.system.Boolean
+    accepts_return: bool
     document: typing.Optional[winrt.windows.ui.text.ITextDocument]
     selection_highlight_color: typing.Optional[winrt.windows.ui.xaml.media.SolidColorBrush]
-    prevent_keyboard_display_on_programmatic_focus: winrt.system.Boolean
+    prevent_keyboard_display_on_programmatic_focus: bool
     placeholder_text: str
-    is_color_font_enabled: winrt.system.Boolean
+    is_color_font_enabled: bool
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     text_reading_order: winrt.windows.ui.xaml.TextReadingOrder
@@ -3071,7 +3071,7 @@ class RichEditBox(winrt.system.Object):
     horizontal_text_alignment: winrt.windows.ui.xaml.TextAlignment
     disabled_formatting_accelerators: DisabledFormattingAccelerators
     character_casing: CharacterCasing
-    is_handwriting_view_enabled: winrt.system.Boolean
+    is_handwriting_view_enabled: bool
     handwriting_view: typing.Optional[HandwritingView]
     content_link_providers: typing.Optional[winrt.windows.ui.xaml.documents.ContentLinkProviderCollection]
     content_link_foreground_color: typing.Optional[winrt.windows.ui.xaml.media.SolidColorBrush]
@@ -3143,14 +3143,14 @@ class RichEditBox(winrt.system.Object):
     def remove_selection_changing(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class RichEditBoxSelectionChangingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     selection_length: winrt.system.Int32
     selection_start: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditBoxSelectionChangingEventArgs: ...
 
 class RichEditBoxTextChangingEventArgs(winrt.system.Object):
-    is_content_changing: winrt.system.Boolean
+    is_content_changing: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditBoxTextChangingEventArgs: ...
 
@@ -3170,8 +3170,8 @@ class RichTextBlock(winrt.system.Object):
     line_stacking_strategy: winrt.windows.ui.xaml.LineStackingStrategy
     character_spacing: winrt.system.Int32
     line_height: winrt.system.Double
-    is_text_selection_enabled: winrt.system.Boolean
-    has_overflow_content: winrt.system.Boolean
+    is_text_selection_enabled: bool
+    has_overflow_content: bool
     selected_text: str
     selection_end: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]
     selection_start: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]
@@ -3184,11 +3184,11 @@ class RichTextBlock(winrt.system.Object):
     selection_highlight_color: typing.Optional[winrt.windows.ui.xaml.media.SolidColorBrush]
     optical_margin_alignment: winrt.windows.ui.xaml.OpticalMarginAlignment
     max_lines: winrt.system.Int32
-    is_color_font_enabled: winrt.system.Boolean
-    is_text_scale_factor_enabled: winrt.system.Boolean
+    is_color_font_enabled: bool
+    is_text_scale_factor_enabled: bool
     text_decorations: winrt.windows.ui.text.TextDecorations
     horizontal_text_alignment: winrt.windows.ui.xaml.TextAlignment
-    is_text_trimmed: winrt.system.Boolean
+    is_text_trimmed: bool
     text_highlighters: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.xaml.documents.TextHighlighter]]
     selection_flyout: typing.Optional[winrt.windows.ui.xaml.controls.primitives.FlyoutBase]
     character_spacing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3224,7 +3224,7 @@ class RichTextBlock(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> RichTextBlock: ...
     def __new__(cls: typing.Type[RichTextBlock]) -> RichTextBlock:...
     def copy_selection_to_clipboard(self) -> None: ...
-    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> winrt.system.Boolean: ...
+    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> bool: ...
     def get_position_from_point(self, point: winrt.windows.foundation.Point, /) -> typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]: ...
     def select(self, start: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer], end: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer], /) -> None: ...
     def select_all(self) -> None: ...
@@ -3242,9 +3242,9 @@ class RichTextBlockOverflow(winrt.system.Object):
     content_end: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]
     content_source: typing.Optional[RichTextBlock]
     content_start: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]
-    has_overflow_content: winrt.system.Boolean
+    has_overflow_content: bool
     max_lines: winrt.system.Int32
-    is_text_trimmed: winrt.system.Boolean
+    is_text_trimmed: bool
     has_overflow_content_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     overflow_content_target_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     padding_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3253,7 +3253,7 @@ class RichTextBlockOverflow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichTextBlockOverflow: ...
     def __new__(cls: typing.Type[RichTextBlockOverflow]) -> RichTextBlockOverflow:...
-    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> winrt.system.Boolean: ...
+    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> bool: ...
     def get_position_from_point(self, point: winrt.windows.foundation.Point, /) -> typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]: ...
     def add_is_text_trimmed_changed(self, handler: winrt.windows.foundation.TypedEventHandler[RichTextBlockOverflow, IsTextTrimmedChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_is_text_trimmed_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -3294,7 +3294,7 @@ class RowDefinitionCollection(winrt.system.Object, typing.MutableSequence[RowDef
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[RowDefinition]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[RowDefinition], /) -> winrt.system.UInt32: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[RowDefinition]]: ...
-    def index_of(self, value: typing.Optional[RowDefinition], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[RowDefinition], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def insert_at(self, index: winrt.system.UInt32, value: typing.Optional[RowDefinition], /) -> None: ...
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
     def remove_at_end(self) -> None: ...
@@ -3303,16 +3303,16 @@ class RowDefinitionCollection(winrt.system.Object, typing.MutableSequence[RowDef
 
 class ScrollContentPresenter(winrt.system.Object):
     scroll_owner: typing.Optional[winrt.system.Object]
-    can_vertically_scroll: winrt.system.Boolean
-    can_horizontally_scroll: winrt.system.Boolean
+    can_vertically_scroll: bool
+    can_horizontally_scroll: bool
     extent_height: winrt.system.Double
     extent_width: winrt.system.Double
     horizontal_offset: winrt.system.Double
     vertical_offset: winrt.system.Double
     viewport_height: winrt.system.Double
     viewport_width: winrt.system.Double
-    sizes_content_to_templated_parent: winrt.system.Boolean
-    can_content_render_outside_bounds: winrt.system.Boolean
+    sizes_content_to_templated_parent: bool
+    can_content_render_outside_bounds: bool
     can_content_render_outside_bounds_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     sizes_content_to_templated_parent_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
@@ -3336,21 +3336,21 @@ class ScrollContentPresenter(winrt.system.Object):
 
 class ScrollViewer(winrt.system.Object):
     current_anchor: typing.Optional[winrt.windows.ui.xaml.UIElement]
-    is_vertical_rail_enabled: winrt.system.Boolean
-    is_scroll_inertia_enabled: winrt.system.Boolean
-    is_horizontal_scroll_chaining_enabled: winrt.system.Boolean
-    is_horizontal_rail_enabled: winrt.system.Boolean
-    is_deferred_scrolling_enabled: winrt.system.Boolean
+    is_vertical_rail_enabled: bool
+    is_scroll_inertia_enabled: bool
+    is_horizontal_scroll_chaining_enabled: bool
+    is_horizontal_rail_enabled: bool
+    is_deferred_scrolling_enabled: bool
     horizontal_snap_points_type: SnapPointsType
     horizontal_snap_points_alignment: winrt.windows.ui.xaml.controls.primitives.SnapPointsAlignment
     horizontal_scroll_mode: ScrollMode
     horizontal_scroll_bar_visibility: ScrollBarVisibility
     min_zoom_factor: winrt.system.Single
     max_zoom_factor: winrt.system.Single
-    is_zoom_inertia_enabled: winrt.system.Boolean
-    is_zoom_chaining_enabled: winrt.system.Boolean
-    is_vertical_scroll_chaining_enabled: winrt.system.Boolean
-    bring_into_view_on_focus_change: winrt.system.Boolean
+    is_zoom_inertia_enabled: bool
+    is_zoom_chaining_enabled: bool
+    is_vertical_scroll_chaining_enabled: bool
+    bring_into_view_on_focus_change: bool
     zoom_snap_points_type: SnapPointsType
     zoom_mode: ZoomMode
     vertical_snap_points_type: SnapPointsType
@@ -3373,9 +3373,9 @@ class ScrollViewer(winrt.system.Object):
     top_header: typing.Optional[winrt.windows.ui.xaml.UIElement]
     left_header: typing.Optional[winrt.windows.ui.xaml.UIElement]
     vertical_anchor_ratio: winrt.system.Double
-    reduce_viewport_for_core_input_view_occlusions: winrt.system.Boolean
+    reduce_viewport_for_core_input_view_occlusions: bool
     horizontal_anchor_ratio: winrt.system.Double
-    can_content_render_outside_bounds: winrt.system.Boolean
+    can_content_render_outside_bounds: bool
     is_scroll_inertia_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     vertical_snap_points_type_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     viewport_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3420,33 +3420,33 @@ class ScrollViewer(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ScrollViewer: ...
     def __new__(cls: typing.Type[ScrollViewer]) -> ScrollViewer:...
     @typing.overload
-    def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], /) -> winrt.system.Boolean: ...
+    def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], /) -> bool: ...
     @typing.overload
-    def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], disable_animation: winrt.system.Boolean, /) -> winrt.system.Boolean: ...
+    def change_view(self, horizontal_offset: typing.Optional[winrt.system.Double], vertical_offset: typing.Optional[winrt.system.Double], zoom_factor: typing.Optional[winrt.system.Single], disable_animation: bool, /) -> bool: ...
     @staticmethod
-    def get_bring_into_view_on_focus_change(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_bring_into_view_on_focus_change(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_can_content_render_outside_bounds(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_can_content_render_outside_bounds(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
     def get_horizontal_scroll_bar_visibility(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> ScrollBarVisibility: ...
     @staticmethod
     def get_horizontal_scroll_mode(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> ScrollMode: ...
     @staticmethod
-    def get_is_deferred_scrolling_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_deferred_scrolling_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_horizontal_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_horizontal_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_horizontal_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_horizontal_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_scroll_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_scroll_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_vertical_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_vertical_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_vertical_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_vertical_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_zoom_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_zoom_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
-    def get_is_zoom_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_zoom_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
     def get_vertical_scroll_bar_visibility(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> ScrollBarVisibility: ...
     @staticmethod
@@ -3458,29 +3458,29 @@ class ScrollViewer(winrt.system.Object):
     def scroll_to_horizontal_offset(self, offset: winrt.system.Double, /) -> None: ...
     def scroll_to_vertical_offset(self, offset: winrt.system.Double, /) -> None: ...
     @staticmethod
-    def set_bring_into_view_on_focus_change(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], bring_into_view_on_focus_change: winrt.system.Boolean, /) -> None: ...
+    def set_bring_into_view_on_focus_change(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], bring_into_view_on_focus_change: bool, /) -> None: ...
     @staticmethod
-    def set_can_content_render_outside_bounds(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], can_content_render_outside_bounds: winrt.system.Boolean, /) -> None: ...
+    def set_can_content_render_outside_bounds(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], can_content_render_outside_bounds: bool, /) -> None: ...
     @staticmethod
     def set_horizontal_scroll_bar_visibility(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], horizontal_scroll_bar_visibility: ScrollBarVisibility, /) -> None: ...
     @staticmethod
     def set_horizontal_scroll_mode(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], horizontal_scroll_mode: ScrollMode, /) -> None: ...
     @staticmethod
-    def set_is_deferred_scrolling_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_deferred_scrolling_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_deferred_scrolling_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_deferred_scrolling_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_horizontal_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_horizontal_rail_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_horizontal_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_horizontal_rail_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_horizontal_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_horizontal_scroll_chaining_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_horizontal_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_horizontal_scroll_chaining_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_scroll_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_scroll_inertia_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_scroll_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_scroll_inertia_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_vertical_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_vertical_rail_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_vertical_rail_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_vertical_rail_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_vertical_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_vertical_scroll_chaining_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_vertical_scroll_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_vertical_scroll_chaining_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_zoom_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_zoom_chaining_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_zoom_chaining_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_zoom_chaining_enabled: bool, /) -> None: ...
     @staticmethod
-    def set_is_zoom_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_zoom_inertia_enabled: winrt.system.Boolean, /) -> None: ...
+    def set_is_zoom_inertia_enabled(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], is_zoom_inertia_enabled: bool, /) -> None: ...
     @staticmethod
     def set_vertical_scroll_bar_visibility(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], vertical_scroll_bar_visibility: ScrollBarVisibility, /) -> None: ...
     @staticmethod
@@ -3508,25 +3508,25 @@ class ScrollViewerView(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ScrollViewerView: ...
 
 class ScrollViewerViewChangedEventArgs(winrt.system.Object):
-    is_intermediate: winrt.system.Boolean
+    is_intermediate: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollViewerViewChangedEventArgs: ...
     def __new__(cls: typing.Type[ScrollViewerViewChangedEventArgs]) -> ScrollViewerViewChangedEventArgs:...
 
 class ScrollViewerViewChangingEventArgs(winrt.system.Object):
     final_view: typing.Optional[ScrollViewerView]
-    is_inertial: winrt.system.Boolean
+    is_inertial: bool
     next_view: typing.Optional[ScrollViewerView]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollViewerViewChangingEventArgs: ...
 
 class SearchBox(winrt.system.Object):
-    search_history_enabled: winrt.system.Boolean
+    search_history_enabled: bool
     search_history_context: str
     query_text: str
     placeholder_text: str
-    focus_on_keyboard_input: winrt.system.Boolean
-    choose_suggestion_on_enter: winrt.system.Boolean
+    focus_on_keyboard_input: bool
+    choose_suggestion_on_enter: bool
     choose_suggestion_on_enter_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     focus_on_keyboard_input_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     placeholder_text_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3594,9 +3594,9 @@ class SelectionChangedEventArgs(winrt.system.Object):
 class SemanticZoom(winrt.system.Object):
     zoomed_out_view: typing.Optional[ISemanticZoomInformation]
     zoomed_in_view: typing.Optional[ISemanticZoomInformation]
-    is_zoomed_in_view_active: winrt.system.Boolean
-    is_zoom_out_button_enabled: winrt.system.Boolean
-    can_change_views: winrt.system.Boolean
+    is_zoomed_in_view_active: bool
+    is_zoom_out_button_enabled: bool
+    can_change_views: bool
     can_change_views_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_zoom_out_button_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_zoomed_in_view_active_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3620,7 +3620,7 @@ class SemanticZoomLocation(winrt.system.Object):
 
 class SemanticZoomViewChangedEventArgs(winrt.system.Object):
     source_item: typing.Optional[SemanticZoomLocation]
-    is_source_zoomed_in_view: winrt.system.Boolean
+    is_source_zoomed_in_view: bool
     destination_item: typing.Optional[SemanticZoomLocation]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SemanticZoomViewChangedEventArgs: ...
@@ -3652,8 +3652,8 @@ class Slider(winrt.system.Object):
     step_frequency: winrt.system.Double
     snaps_to: winrt.windows.ui.xaml.controls.primitives.SliderSnapsTo
     orientation: Orientation
-    is_thumb_tool_tip_enabled: winrt.system.Boolean
-    is_direction_reversed: winrt.system.Boolean
+    is_thumb_tool_tip_enabled: bool
+    is_direction_reversed: bool
     intermediate_value: winrt.system.Double
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
@@ -3703,7 +3703,7 @@ class SplitView(winrt.system.Object):
     pane_background: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     pane: typing.Optional[winrt.windows.ui.xaml.UIElement]
     open_pane_length: winrt.system.Double
-    is_pane_open: winrt.system.Boolean
+    is_pane_open: bool
     display_mode: SplitViewDisplayMode
     content: typing.Optional[winrt.windows.ui.xaml.UIElement]
     compact_pane_length: winrt.system.Double
@@ -3732,21 +3732,21 @@ class SplitView(winrt.system.Object):
     def remove_pane_opening(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class SplitViewPaneClosingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitViewPaneClosingEventArgs: ...
 
 class StackPanel(winrt.system.Object):
     orientation: Orientation
-    are_scroll_snap_points_regular: winrt.system.Boolean
+    are_scroll_snap_points_regular: bool
     padding: winrt.windows.ui.xaml.Thickness
     corner_radius: winrt.windows.ui.xaml.CornerRadius
     border_thickness: winrt.windows.ui.xaml.Thickness
     border_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     spacing: winrt.system.Double
     background_sizing: BackgroundSizing
-    are_horizontal_snap_points_regular: winrt.system.Boolean
-    are_vertical_snap_points_regular: winrt.system.Boolean
+    are_horizontal_snap_points_regular: bool
+    are_vertical_snap_points_regular: bool
     are_scroll_snap_points_regular_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     orientation_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     border_brush_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3858,7 +3858,7 @@ class SwipeItems(winrt.system.Object, typing.MutableSequence[SwipeItem]):
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[SwipeItem]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[SwipeItem], /) -> winrt.system.UInt32: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[SwipeItem]]: ...
-    def index_of(self, value: typing.Optional[SwipeItem], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[SwipeItem], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def insert_at(self, index: winrt.system.UInt32, value: typing.Optional[SwipeItem], /) -> None: ...
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
     def remove_at_end(self) -> None: ...
@@ -3897,7 +3897,7 @@ class TextBlock(winrt.system.Object):
     line_stacking_strategy: winrt.windows.ui.xaml.LineStackingStrategy
     line_height: winrt.system.Double
     character_spacing: winrt.system.Int32
-    is_text_selection_enabled: winrt.system.Boolean
+    is_text_selection_enabled: bool
     selected_text: str
     selection_end: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]
     selection_start: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer]
@@ -3910,11 +3910,11 @@ class TextBlock(winrt.system.Object):
     selection_highlight_color: typing.Optional[winrt.windows.ui.xaml.media.SolidColorBrush]
     optical_margin_alignment: winrt.windows.ui.xaml.OpticalMarginAlignment
     max_lines: winrt.system.Int32
-    is_color_font_enabled: winrt.system.Boolean
-    is_text_scale_factor_enabled: winrt.system.Boolean
+    is_color_font_enabled: bool
+    is_text_scale_factor_enabled: bool
     text_decorations: winrt.windows.ui.text.TextDecorations
     horizontal_text_alignment: winrt.windows.ui.xaml.TextAlignment
-    is_text_trimmed: winrt.system.Boolean
+    is_text_trimmed: bool
     text_highlighters: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.ui.xaml.documents.TextHighlighter]]
     selection_flyout: typing.Optional[winrt.windows.ui.xaml.controls.primitives.FlyoutBase]
     character_spacing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -3948,7 +3948,7 @@ class TextBlock(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> TextBlock: ...
     def __new__(cls: typing.Type[TextBlock]) -> TextBlock:...
     def copy_selection_to_clipboard(self) -> None: ...
-    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> winrt.system.Boolean: ...
+    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> bool: ...
     def get_alpha_mask(self) -> typing.Optional[winrt.windows.ui.composition.CompositionBrush]: ...
     def select(self, start: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer], end: typing.Optional[winrt.windows.ui.xaml.documents.TextPointer], /) -> None: ...
     def select_all(self) -> None: ...
@@ -3967,14 +3967,14 @@ class TextBox(winrt.system.Object):
     selection_length: winrt.system.Int32
     selected_text: str
     max_length: winrt.system.Int32
-    is_text_prediction_enabled: winrt.system.Boolean
-    is_spell_check_enabled: winrt.system.Boolean
-    is_read_only: winrt.system.Boolean
+    is_text_prediction_enabled: bool
+    is_spell_check_enabled: bool
+    is_read_only: bool
     input_scope: typing.Optional[winrt.windows.ui.xaml.input.InputScope]
-    accepts_return: winrt.system.Boolean
-    is_color_font_enabled: winrt.system.Boolean
+    accepts_return: bool
+    is_color_font_enabled: bool
     placeholder_text: str
-    prevent_keyboard_display_on_programmatic_focus: winrt.system.Boolean
+    prevent_keyboard_display_on_programmatic_focus: bool
     selection_highlight_color: typing.Optional[winrt.windows.ui.xaml.media.SolidColorBrush]
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
@@ -3984,13 +3984,13 @@ class TextBox(winrt.system.Object):
     placeholder_foreground: typing.Optional[winrt.windows.ui.xaml.media.Brush]
     horizontal_text_alignment: winrt.windows.ui.xaml.TextAlignment
     character_casing: CharacterCasing
-    is_handwriting_view_enabled: winrt.system.Boolean
+    is_handwriting_view_enabled: bool
     handwriting_view: typing.Optional[HandwritingView]
     selection_flyout: typing.Optional[winrt.windows.ui.xaml.controls.primitives.FlyoutBase]
     description: typing.Optional[winrt.system.Object]
-    can_paste_clipboard_content: winrt.system.Boolean
-    can_redo: winrt.system.Boolean
-    can_undo: winrt.system.Boolean
+    can_paste_clipboard_content: bool
+    can_redo: bool
+    can_undo: bool
     proofing_menu_flyout: typing.Optional[winrt.windows.ui.xaml.controls.primitives.FlyoutBase]
     text_wrapping_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     text_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -4028,7 +4028,7 @@ class TextBox(winrt.system.Object):
     def copy_selection_to_clipboard(self) -> None: ...
     def cut_selection_to_clipboard(self) -> None: ...
     def get_linguistic_alternatives_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[str]]: ...
-    def get_rect_from_character_index(self, char_index: winrt.system.Int32, trailing_edge: winrt.system.Boolean, /) -> winrt.windows.foundation.Rect: ...
+    def get_rect_from_character_index(self, char_index: winrt.system.Int32, trailing_edge: bool, /) -> winrt.windows.foundation.Rect: ...
     def paste_from_clipboard(self) -> None: ...
     def redo(self) -> None: ...
     def select(self, start: winrt.system.Int32, length: winrt.system.Int32, /) -> None: ...
@@ -4062,20 +4062,20 @@ class TextBox(winrt.system.Object):
     def remove_selection_changing(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class TextBoxBeforeTextChangingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     new_text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBoxBeforeTextChangingEventArgs: ...
 
 class TextBoxSelectionChangingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     selection_length: winrt.system.Int32
     selection_start: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBoxSelectionChangingEventArgs: ...
 
 class TextBoxTextChangingEventArgs(winrt.system.Object):
-    is_content_changing: winrt.system.Boolean
+    is_content_changing: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBoxTextChangingEventArgs: ...
 
@@ -4107,17 +4107,17 @@ class TextCompositionStartedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> TextCompositionStartedEventArgs: ...
 
 class TextControlCopyingToClipboardEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextControlCopyingToClipboardEventArgs: ...
 
 class TextControlCuttingToClipboardEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextControlCuttingToClipboardEventArgs: ...
 
 class TextControlPasteEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextControlPasteEventArgs: ...
 
@@ -4166,7 +4166,7 @@ class TimePickerFlyout(winrt.system.Object):
     def remove_time_picked(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class TimePickerFlyoutPresenter(winrt.system.Object):
-    is_default_shadow_enabled: winrt.system.Boolean
+    is_default_shadow_enabled: bool
     is_default_shadow_enabled_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimePickerFlyoutPresenter: ...
@@ -4184,14 +4184,14 @@ class TimePickerValueChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> TimePickerValueChangedEventArgs: ...
 
 class ToggleMenuFlyoutItem(winrt.system.Object):
-    is_checked: winrt.system.Boolean
+    is_checked: bool
     is_checked_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleMenuFlyoutItem: ...
     def __new__(cls: typing.Type[ToggleMenuFlyoutItem]) -> ToggleMenuFlyoutItem:...
 
 class ToggleSplitButton(winrt.system.Object):
-    is_checked: winrt.system.Boolean
+    is_checked: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleSplitButton: ...
     def __new__(cls: typing.Type[ToggleSplitButton]) -> ToggleSplitButton:...
@@ -4217,7 +4217,7 @@ class ToggleSwitch(winrt.system.Object):
     on_content: typing.Optional[winrt.system.Object]
     off_content_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     off_content: typing.Optional[winrt.system.Object]
-    is_on: winrt.system.Boolean
+    is_on: bool
     header_template: typing.Optional[winrt.windows.ui.xaml.DataTemplate]
     header: typing.Optional[winrt.system.Object]
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.ToggleSwitchTemplateSettings]
@@ -4242,7 +4242,7 @@ class ToolTip(winrt.system.Object):
     vertical_offset: winrt.system.Double
     placement_target: typing.Optional[winrt.windows.ui.xaml.UIElement]
     placement: winrt.windows.ui.xaml.controls.primitives.PlacementMode
-    is_open: winrt.system.Boolean
+    is_open: bool
     horizontal_offset: winrt.system.Double
     template_settings: typing.Optional[winrt.windows.ui.xaml.controls.primitives.ToolTipTemplateSettings]
     placement_rect: typing.Optional[typing.Optional[winrt.windows.foundation.Rect]]
@@ -4289,8 +4289,8 @@ class TreeView(winrt.system.Object):
     item_container_transitions: typing.Optional[winrt.windows.ui.xaml.media.animation.TransitionCollection]
     item_container_style_selector: typing.Optional[StyleSelector]
     item_container_style: typing.Optional[winrt.windows.ui.xaml.Style]
-    can_reorder_items: winrt.system.Boolean
-    can_drag_items: winrt.system.Boolean
+    can_reorder_items: bool
+    can_drag_items: bool
     selection_mode_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     can_drag_items_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     can_reorder_items_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -4334,7 +4334,7 @@ class TreeViewDragItemsCompletedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> TreeViewDragItemsCompletedEventArgs: ...
 
 class TreeViewDragItemsStartingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     data: typing.Optional[winrt.windows.applicationmodel.datatransfer.DataPackage]
     items: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.system.Object]]
     @staticmethod
@@ -4347,7 +4347,7 @@ class TreeViewExpandingEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> TreeViewExpandingEventArgs: ...
 
 class TreeViewItem(winrt.system.Object):
-    is_expanded: winrt.system.Boolean
+    is_expanded: bool
     glyph_size: winrt.system.Double
     glyph_opacity: winrt.system.Double
     glyph_brush: typing.Optional[winrt.windows.ui.xaml.media.Brush]
@@ -4355,7 +4355,7 @@ class TreeViewItem(winrt.system.Object):
     collapsed_glyph: str
     tree_view_item_template_settings: typing.Optional[TreeViewItemTemplateSettings]
     items_source: typing.Optional[winrt.system.Object]
-    has_unrealized_children: winrt.system.Boolean
+    has_unrealized_children: bool
     collapsed_glyph_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     expanded_glyph_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     glyph_brush_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -4370,7 +4370,7 @@ class TreeViewItem(winrt.system.Object):
     def __new__(cls: typing.Type[TreeViewItem]) -> TreeViewItem:...
 
 class TreeViewItemInvokedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     invoked_item: typing.Optional[winrt.system.Object]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewItemInvokedEventArgs: ...
@@ -4394,12 +4394,12 @@ class TreeViewList(winrt.system.Object):
     def __new__(cls: typing.Type[TreeViewList]) -> TreeViewList:...
 
 class TreeViewNode(winrt.system.Object):
-    is_expanded: winrt.system.Boolean
-    has_unrealized_children: winrt.system.Boolean
+    is_expanded: bool
+    has_unrealized_children: bool
     content: typing.Optional[winrt.system.Object]
     children: typing.Optional[winrt.windows.foundation.collections.IVector[TreeViewNode]]
     depth: winrt.system.Int32
-    has_children: winrt.system.Boolean
+    has_children: bool
     parent: typing.Optional[TreeViewNode]
     content_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     depth_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -4460,7 +4460,7 @@ class UIElementCollection(winrt.system.Object, typing.MutableSequence[winrt.wind
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[winrt.windows.ui.xaml.UIElement]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[winrt.windows.ui.xaml.UIElement], /) -> winrt.system.UInt32: ...
     def get_view(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.ui.xaml.UIElement]]: ...
-    def index_of(self, value: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def insert_at(self, index: winrt.system.UInt32, value: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> None: ...
     def move(self, old_index: winrt.system.UInt32, new_index: winrt.system.UInt32, /) -> None: ...
     def remove_at(self, index: winrt.system.UInt32, /) -> None: ...
@@ -4525,7 +4525,7 @@ class VirtualizingPanel(winrt.system.Object):
 
 class VirtualizingStackPanel(winrt.system.Object):
     orientation: Orientation
-    are_scroll_snap_points_regular: winrt.system.Boolean
+    are_scroll_snap_points_regular: bool
     are_scroll_snap_points_regular_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     is_virtualizing_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     orientation_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -4534,7 +4534,7 @@ class VirtualizingStackPanel(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> VirtualizingStackPanel: ...
     def __new__(cls: typing.Type[VirtualizingStackPanel]) -> VirtualizingStackPanel:...
     @staticmethod
-    def get_is_virtualizing(o: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> winrt.system.Boolean: ...
+    def get_is_virtualizing(o: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> bool: ...
     @staticmethod
     def get_virtualization_mode(element: typing.Optional[winrt.windows.ui.xaml.DependencyObject], /) -> VirtualizationMode: ...
     def on_clean_up_virtualized_item(self, e: typing.Optional[CleanUpVirtualizedItemEventArgs], /) -> None: ...
@@ -4548,10 +4548,10 @@ class WebView(winrt.system.Object):
     allowed_script_notify_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
     data_transfer_package: typing.Optional[winrt.windows.applicationmodel.datatransfer.DataPackage]
     default_background_color: winrt.windows.ui.Color
-    can_go_back: winrt.system.Boolean
-    can_go_forward: winrt.system.Boolean
+    can_go_back: bool
+    can_go_forward: bool
     document_title: str
-    contains_full_screen_element: winrt.system.Boolean
+    contains_full_screen_element: bool
     deferred_permission_requests: typing.Optional[winrt.windows.foundation.collections.IVector[WebViewDeferredPermissionRequest]]
     execution_mode: WebViewExecutionMode
     settings: typing.Optional[WebViewSettings]
@@ -4586,7 +4586,7 @@ class WebView(winrt.system.Object):
     @staticmethod
     def clear_temporary_web_data_async() -> winrt.windows.foundation.IAsyncAction: ...
     def deferred_permission_request_by_id(self, id: winrt.system.UInt32, /) -> typing.Optional[WebViewDeferredPermissionRequest]: ...
-    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> winrt.system.Boolean: ...
+    def focus(self, value: winrt.windows.ui.xaml.FocusState, /) -> bool: ...
     def go_back(self) -> None: ...
     def go_forward(self) -> None: ...
     def invoke_script(self, script_name: str, arguments: winrt.system.Array[str], /) -> str: ...
@@ -4667,13 +4667,13 @@ class WebViewDeferredPermissionRequest(winrt.system.Object):
     def deny(self) -> None: ...
 
 class WebViewLongRunningScriptDetectedEventArgs(winrt.system.Object):
-    stop_page_script_execution: winrt.system.Boolean
+    stop_page_script_execution: bool
     execution_time: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewLongRunningScriptDetectedEventArgs: ...
 
 class WebViewNavigationCompletedEventArgs(winrt.system.Object):
-    is_success: winrt.system.Boolean
+    is_success: bool
     uri: typing.Optional[winrt.windows.foundation.Uri]
     web_error_status: winrt.windows.web.WebErrorStatus
     @staticmethod
@@ -4686,13 +4686,13 @@ class WebViewNavigationFailedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WebViewNavigationFailedEventArgs: ...
 
 class WebViewNavigationStartingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewNavigationStartingEventArgs: ...
 
 class WebViewNewWindowRequestedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     referrer: typing.Optional[winrt.windows.foundation.Uri]
     uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
@@ -4719,13 +4719,13 @@ class WebViewSeparateProcessLostEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WebViewSeparateProcessLostEventArgs: ...
 
 class WebViewSettings(winrt.system.Object):
-    is_java_script_enabled: winrt.system.Boolean
-    is_indexed_d_b_enabled: winrt.system.Boolean
+    is_java_script_enabled: bool
+    is_indexed_d_b_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewSettings: ...
 
 class WebViewUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewUnsupportedUriSchemeIdentifiedEventArgs: ...
@@ -4762,13 +4762,13 @@ class WrapGrid(winrt.system.Object):
     def __new__(cls: typing.Type[WrapGrid]) -> WrapGrid:...
 
 class ICommandBarElement(winrt.system.Object):
-    is_compact: winrt.system.Boolean
+    is_compact: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandBarElement: ...
 
 class ICommandBarElement2(winrt.system.Object):
     dynamic_overflow_order: winrt.system.Int32
-    is_in_overflow: winrt.system.Boolean
+    is_in_overflow: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommandBarElement2: ...
 
@@ -4788,7 +4788,7 @@ class IItemContainerMapping(winrt.system.Object):
 class INavigate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INavigate: ...
-    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, /) -> winrt.system.Boolean: ...
+    def navigate(self, source_page_type: winrt.windows.ui.xaml.interop.TypeName, /) -> bool: ...
 
 class IScrollAnchorProvider(winrt.system.Object):
     current_anchor: typing.Optional[winrt.windows.ui.xaml.UIElement]
@@ -4798,8 +4798,8 @@ class IScrollAnchorProvider(winrt.system.Object):
     def unregister_anchor_candidate(self, element: typing.Optional[winrt.windows.ui.xaml.UIElement], /) -> None: ...
 
 class ISemanticZoomInformation(winrt.system.Object):
-    is_active_view: winrt.system.Boolean
-    is_zoomed_in_view: winrt.system.Boolean
+    is_active_view: bool
+    is_zoomed_in_view: bool
     semantic_zoom_owner: typing.Optional[SemanticZoom]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISemanticZoomInformation: ...

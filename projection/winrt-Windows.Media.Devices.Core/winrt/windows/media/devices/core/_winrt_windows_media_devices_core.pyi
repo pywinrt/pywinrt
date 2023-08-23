@@ -53,13 +53,13 @@ class FrameControlCapabilities(winrt.system.Object):
     exposure_compensation: typing.Optional[FrameExposureCompensationCapabilities]
     focus: typing.Optional[FrameFocusCapabilities]
     iso_speed: typing.Optional[FrameIsoSpeedCapabilities]
-    photo_confirmation_supported: winrt.system.Boolean
+    photo_confirmation_supported: bool
     flash: typing.Optional[FrameFlashCapabilities]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameControlCapabilities: ...
 
 class FrameController(winrt.system.Object):
-    photo_confirmation_enabled: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    photo_confirmation_enabled: typing.Optional[typing.Optional[bool]]
     exposure_compensation_control: typing.Optional[FrameExposureCompensationControl]
     exposure_control: typing.Optional[FrameExposureControl]
     focus_control: typing.Optional[FrameFocusControl]
@@ -73,7 +73,7 @@ class FrameExposureCapabilities(winrt.system.Object):
     max: datetime.timedelta
     min: datetime.timedelta
     step: datetime.timedelta
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureCapabilities: ...
 
@@ -81,7 +81,7 @@ class FrameExposureCompensationCapabilities(winrt.system.Object):
     max: winrt.system.Single
     min: winrt.system.Single
     step: winrt.system.Single
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureCompensationCapabilities: ...
 
@@ -92,22 +92,22 @@ class FrameExposureCompensationControl(winrt.system.Object):
 
 class FrameExposureControl(winrt.system.Object):
     value: typing.Optional[typing.Optional[datetime.timedelta]]
-    auto: winrt.system.Boolean
+    auto: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameExposureControl: ...
 
 class FrameFlashCapabilities(winrt.system.Object):
-    power_supported: winrt.system.Boolean
-    red_eye_reduction_supported: winrt.system.Boolean
-    supported: winrt.system.Boolean
+    power_supported: bool
+    red_eye_reduction_supported: bool
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFlashCapabilities: ...
 
 class FrameFlashControl(winrt.system.Object):
-    red_eye_reduction: winrt.system.Boolean
+    red_eye_reduction: bool
     power_percent: winrt.system.Single
     mode: FrameFlashMode
-    auto: winrt.system.Boolean
+    auto: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFlashControl: ...
 
@@ -115,7 +115,7 @@ class FrameFocusCapabilities(winrt.system.Object):
     max: winrt.system.UInt32
     min: winrt.system.UInt32
     step: winrt.system.UInt32
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameFocusCapabilities: ...
 
@@ -128,13 +128,13 @@ class FrameIsoSpeedCapabilities(winrt.system.Object):
     max: winrt.system.UInt32
     min: winrt.system.UInt32
     step: winrt.system.UInt32
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameIsoSpeedCapabilities: ...
 
 class FrameIsoSpeedControl(winrt.system.Object):
     value: typing.Optional[typing.Optional[winrt.system.UInt32]]
-    auto: winrt.system.Boolean
+    auto: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameIsoSpeedControl: ...
 
@@ -143,7 +143,7 @@ class VariablePhotoSequenceController(winrt.system.Object):
     desired_frame_controllers: typing.Optional[winrt.windows.foundation.collections.IVector[FrameController]]
     frame_capabilities: typing.Optional[FrameControlCapabilities]
     max_photos_per_second: winrt.system.Single
-    supported: winrt.system.Boolean
+    supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VariablePhotoSequenceController: ...
     def get_current_frame_rate(self) -> typing.Optional[winrt.windows.media.mediaproperties.MediaRatio]: ...

@@ -34,7 +34,7 @@ class DisplayMonitor(winrt.system.Object):
     red_primary: winrt.windows.foundation.Point
     usage_kind: DisplayMonitorUsageKind
     white_point: winrt.windows.foundation.Point
-    is_dolby_vision_supported_in_hdr_mode: winrt.system.Boolean
+    is_dolby_vision_supported_in_hdr_mode: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DisplayMonitor: ...
     @staticmethod

@@ -23,22 +23,22 @@ class DeploymentProgress:
 class AddPackageOptions(winrt.system.Object):
     target_volume: typing.Optional[PackageVolume]
     stub_package_option: StubPackageOption
-    stage_in_place: winrt.system.Boolean
-    retain_files_on_failure: winrt.system.Boolean
-    required_content_group_only: winrt.system.Boolean
-    install_all_resources: winrt.system.Boolean
-    force_update_from_any_version: winrt.system.Boolean
-    force_target_app_shutdown: winrt.system.Boolean
-    force_app_shutdown: winrt.system.Boolean
+    stage_in_place: bool
+    retain_files_on_failure: bool
+    required_content_group_only: bool
+    install_all_resources: bool
+    force_update_from_any_version: bool
+    force_target_app_shutdown: bool
+    force_app_shutdown: bool
     external_location_uri: typing.Optional[winrt.windows.foundation.Uri]
-    developer_mode: winrt.system.Boolean
-    defer_registration_when_packages_are_in_use: winrt.system.Boolean
-    allow_unsigned: winrt.system.Boolean
+    developer_mode: bool
+    defer_registration_when_packages_are_in_use: bool
+    allow_unsigned: bool
     dependency_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
     optional_package_family_names: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     optional_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
     related_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
-    limit_to_existing_packages: winrt.system.Boolean
+    limit_to_existing_packages: bool
     expected_digests: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.windows.foundation.Uri, str]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AddPackageOptions: ...
@@ -57,13 +57,13 @@ class AppInstallerManager(winrt.system.Object):
 
 class AutoUpdateSettingsOptions(winrt.system.Object):
     version: winrt.windows.applicationmodel.PackageVersion
-    update_blocks_activation: winrt.system.Boolean
-    show_prompt: winrt.system.Boolean
-    on_launch: winrt.system.Boolean
-    is_auto_repair_enabled: winrt.system.Boolean
+    update_blocks_activation: bool
+    show_prompt: bool
+    on_launch: bool
+    is_auto_repair_enabled: bool
     hours_between_update_checks: winrt.system.UInt32
-    force_update_from_any_version: winrt.system.Boolean
-    automatic_background_task: winrt.system.Boolean
+    force_update_from_any_version: bool
+    automatic_background_task: bool
     app_installer_uri: typing.Optional[winrt.windows.foundation.Uri]
     dependency_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
     optional_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
@@ -76,7 +76,7 @@ class AutoUpdateSettingsOptions(winrt.system.Object):
     def create_from_app_installer_info(app_installer_info: typing.Optional[winrt.windows.applicationmodel.AppInstallerInfo], /) -> typing.Optional[AutoUpdateSettingsOptions]: ...
 
 class CreateSharedPackageContainerOptions(winrt.system.Object):
-    force_app_shutdown: winrt.system.Boolean
+    force_app_shutdown: bool
     create_collision_option: SharedPackageContainerCreationCollisionOptions
     members: typing.Optional[winrt.windows.foundation.collections.IVector[SharedPackageContainerMember]]
     @staticmethod
@@ -91,8 +91,8 @@ class CreateSharedPackageContainerResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CreateSharedPackageContainerResult: ...
 
 class DeleteSharedPackageContainerOptions(winrt.system.Object):
-    force_app_shutdown: winrt.system.Boolean
-    all_users: winrt.system.Boolean
+    force_app_shutdown: bool
+    all_users: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeleteSharedPackageContainerOptions: ...
     def __new__(cls: typing.Type[DeleteSharedPackageContainerOptions]) -> DeleteSharedPackageContainerOptions:...
@@ -107,7 +107,7 @@ class DeploymentResult(winrt.system.Object):
     activity_id: uuid.UUID
     error_text: str
     extended_error_code: winrt.windows.foundation.HResult
-    is_registered: winrt.system.Boolean
+    is_registered: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeploymentResult: ...
 
@@ -238,14 +238,14 @@ class PackageUserInformation(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PackageUserInformation: ...
 
 class PackageVolume(winrt.system.Object):
-    is_offline: winrt.system.Boolean
-    is_system_volume: winrt.system.Boolean
+    is_offline: bool
+    is_system_volume: bool
     mount_point: str
     name: str
     package_store_path: str
-    supports_hard_links: winrt.system.Boolean
-    is_appx_install_supported: winrt.system.Boolean
-    is_full_trust_package_supported: winrt.system.Boolean
+    supports_hard_links: bool
+    is_appx_install_supported: bool
+    is_full_trust_package_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PackageVolume: ...
     def find_package(self, package_full_name: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.applicationmodel.Package]]: ...
@@ -277,16 +277,16 @@ class PackageVolume(winrt.system.Object):
     def get_available_space_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.UInt64]: ...
 
 class RegisterPackageOptions(winrt.system.Object):
-    stage_in_place: winrt.system.Boolean
-    install_all_resources: winrt.system.Boolean
-    force_update_from_any_version: winrt.system.Boolean
-    force_target_app_shutdown: winrt.system.Boolean
-    force_app_shutdown: winrt.system.Boolean
+    stage_in_place: bool
+    install_all_resources: bool
+    force_update_from_any_version: bool
+    force_target_app_shutdown: bool
+    force_app_shutdown: bool
     external_location_uri: typing.Optional[winrt.windows.foundation.Uri]
-    developer_mode: winrt.system.Boolean
-    defer_registration_when_packages_are_in_use: winrt.system.Boolean
+    developer_mode: bool
+    defer_registration_when_packages_are_in_use: bool
     app_data_volume: typing.Optional[PackageVolume]
-    allow_unsigned: winrt.system.Boolean
+    allow_unsigned: bool
     dependency_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
     optional_package_family_names: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     expected_digests: typing.Optional[winrt.windows.foundation.collections.IMap[winrt.windows.foundation.Uri, str]]
@@ -329,13 +329,13 @@ class SharedPackageContainerMember(winrt.system.Object):
 class StagePackageOptions(winrt.system.Object):
     target_volume: typing.Optional[PackageVolume]
     stub_package_option: StubPackageOption
-    stage_in_place: winrt.system.Boolean
-    required_content_group_only: winrt.system.Boolean
-    install_all_resources: winrt.system.Boolean
-    force_update_from_any_version: winrt.system.Boolean
+    stage_in_place: bool
+    required_content_group_only: bool
+    install_all_resources: bool
+    force_update_from_any_version: bool
     external_location_uri: typing.Optional[winrt.windows.foundation.Uri]
-    developer_mode: winrt.system.Boolean
-    allow_unsigned: winrt.system.Boolean
+    developer_mode: bool
+    allow_unsigned: bool
     dependency_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
     optional_package_family_names: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     optional_package_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
@@ -346,8 +346,8 @@ class StagePackageOptions(winrt.system.Object):
     def __new__(cls: typing.Type[StagePackageOptions]) -> StagePackageOptions:...
 
 class UpdateSharedPackageContainerOptions(winrt.system.Object):
-    require_packages_present: winrt.system.Boolean
-    force_app_shutdown: winrt.system.Boolean
+    require_packages_present: bool
+    force_app_shutdown: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UpdateSharedPackageContainerOptions: ...
     def __new__(cls: typing.Type[UpdateSharedPackageContainerOptions]) -> UpdateSharedPackageContainerOptions:...

@@ -130,7 +130,7 @@ class StorageProviderStatusUI(winrt.system.Object):
 
 class StorageProviderSyncRootInfo(winrt.system.Object):
     version: str
-    show_siblings_as_group: winrt.system.Boolean
+    show_siblings_as_group: bool
     recycle_bin_uri: typing.Optional[winrt.windows.foundation.Uri]
     protection_mode: StorageProviderProtectionMode
     population_policy: StorageProviderPopulationPolicy
@@ -143,7 +143,7 @@ class StorageProviderSyncRootInfo(winrt.system.Object):
     hardlink_policy: StorageProviderHardlinkPolicy
     display_name_resource: str
     context: typing.Optional[winrt.windows.storage.streams.IBuffer]
-    allow_pinning: winrt.system.Boolean
+    allow_pinning: bool
     storage_provider_item_property_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[StorageProviderItemPropertyDefinition]]
     provider_id: uuid.UUID
     fallback_file_type_info: typing.Optional[winrt.windows.foundation.collections.IVector[StorageProviderFileTypeInfo]]
@@ -161,7 +161,7 @@ class StorageProviderSyncRootManager(winrt.system.Object):
     @staticmethod
     def get_sync_root_information_for_id(id: str, /) -> typing.Optional[StorageProviderSyncRootInfo]: ...
     @staticmethod
-    def is_supported() -> winrt.system.Boolean: ...
+    def is_supported() -> bool: ...
     @staticmethod
     def register(sync_root_information: typing.Optional[StorageProviderSyncRootInfo], /) -> None: ...
     @staticmethod
@@ -175,7 +175,7 @@ class IStorageProviderItemPropertySource(winrt.system.Object):
 class IStorageProviderPropertyCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderPropertyCapabilities: ...
-    def is_property_supported(self, property_canonical_name: str, /) -> winrt.system.Boolean: ...
+    def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
 
 class IStorageProviderStatusUISource(winrt.system.Object):
     @staticmethod

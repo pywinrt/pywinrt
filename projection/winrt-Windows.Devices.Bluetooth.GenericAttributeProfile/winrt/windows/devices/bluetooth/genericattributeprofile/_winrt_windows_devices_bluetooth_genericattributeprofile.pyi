@@ -463,8 +463,8 @@ class GattServiceProviderAdvertisementStatusChangedEventArgs(winrt.system.Object
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderAdvertisementStatusChangedEventArgs: ...
 
 class GattServiceProviderAdvertisingParameters(winrt.system.Object):
-    is_discoverable: winrt.system.Boolean
-    is_connectable: winrt.system.Boolean
+    is_discoverable: bool
+    is_connectable: bool
     service_data: typing.Optional[winrt.windows.storage.streams.IBuffer]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GattServiceProviderAdvertisingParameters: ...
@@ -503,8 +503,8 @@ class GattServiceUuids(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> GattServiceUuids: ...
 
 class GattSession(winrt.system.Object):
-    maintain_connection: winrt.system.Boolean
-    can_maintain_connection: winrt.system.Boolean
+    maintain_connection: bool
+    can_maintain_connection: bool
     device_id: typing.Optional[winrt.windows.devices.bluetooth.BluetoothDeviceId]
     max_pdu_size: winrt.system.UInt16
     session_status: GattSessionStatus

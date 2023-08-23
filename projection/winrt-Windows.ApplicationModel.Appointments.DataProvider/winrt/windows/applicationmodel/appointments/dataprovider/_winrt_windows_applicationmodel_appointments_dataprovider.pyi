@@ -18,7 +18,7 @@ class AppointmentCalendarCancelMeetingRequest(winrt.system.Object):
     appointment_local_id: str
     appointment_original_start_time: typing.Optional[typing.Optional[datetime.datetime]]
     comment: str
-    notify_invitees: winrt.system.Boolean
+    notify_invitees: bool
     subject: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarCancelMeetingRequest: ...
@@ -35,7 +35,7 @@ class AppointmentCalendarCreateOrUpdateAppointmentRequest(winrt.system.Object):
     appointment: typing.Optional[winrt.windows.applicationmodel.appointments.Appointment]
     appointment_calendar_local_id: str
     changed_properties: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
-    notify_invitees: winrt.system.Boolean
+    notify_invitees: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarCreateOrUpdateAppointmentRequest: ...
     def report_completed_async(self, created_or_updated_appointment: typing.Optional[winrt.windows.applicationmodel.appointments.Appointment], /) -> winrt.windows.foundation.IAsyncAction: ...
@@ -104,7 +104,7 @@ class AppointmentCalendarUpdateMeetingResponseRequest(winrt.system.Object):
     appointment_original_start_time: typing.Optional[typing.Optional[datetime.datetime]]
     comment: str
     response: winrt.windows.applicationmodel.appointments.AppointmentParticipantResponse
-    send_update: winrt.system.Boolean
+    send_update: bool
     subject: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppointmentCalendarUpdateMeetingResponseRequest: ...

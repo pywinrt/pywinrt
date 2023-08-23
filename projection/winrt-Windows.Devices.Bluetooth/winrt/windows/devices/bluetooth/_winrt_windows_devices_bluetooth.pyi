@@ -23,14 +23,14 @@ Self = typing.TypeVar('Self')
 class BluetoothAdapter(winrt.system.Object):
     bluetooth_address: winrt.system.UInt64
     device_id: str
-    is_advertisement_offload_supported: winrt.system.Boolean
-    is_central_role_supported: winrt.system.Boolean
-    is_classic_supported: winrt.system.Boolean
-    is_low_energy_supported: winrt.system.Boolean
-    is_peripheral_role_supported: winrt.system.Boolean
-    are_classic_secure_connections_supported: winrt.system.Boolean
-    are_low_energy_secure_connections_supported: winrt.system.Boolean
-    is_extended_advertising_supported: winrt.system.Boolean
+    is_advertisement_offload_supported: bool
+    is_central_role_supported: bool
+    is_classic_supported: bool
+    is_low_energy_supported: bool
+    is_peripheral_role_supported: bool
+    are_classic_secure_connections_supported: bool
+    are_low_energy_secure_connections_supported: bool
+    is_extended_advertising_supported: bool
     max_advertisement_data_length: winrt.system.UInt32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothAdapter: ...
@@ -66,7 +66,7 @@ class BluetoothDevice(winrt.system.Object):
     device_information: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]
     device_access_information: typing.Optional[winrt.windows.devices.enumeration.DeviceAccessInformation]
     bluetooth_device_id: typing.Optional[BluetoothDeviceId]
-    was_secure_connection_used_for_pairing: winrt.system.Boolean
+    was_secure_connection_used_for_pairing: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -89,7 +89,7 @@ class BluetoothDevice(winrt.system.Object):
     @staticmethod
     def get_device_selector_from_device_name(device_name: str, /) -> str: ...
     @staticmethod
-    def get_device_selector_from_pairing_state(pairing_state: winrt.system.Boolean, /) -> str: ...
+    def get_device_selector_from_pairing_state(pairing_state: bool, /) -> str: ...
     @typing.overload
     def get_rfcomm_services_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceServicesResult]: ...
     @typing.overload
@@ -108,8 +108,8 @@ class BluetoothDevice(winrt.system.Object):
 
 class BluetoothDeviceId(winrt.system.Object):
     id: str
-    is_classic_device: winrt.system.Boolean
-    is_low_energy_device: winrt.system.Boolean
+    is_classic_device: bool
+    is_low_energy_device: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothDeviceId: ...
     @staticmethod
@@ -198,9 +198,9 @@ class BluetoothLEConnectionPhy(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> BluetoothLEConnectionPhy: ...
 
 class BluetoothLEConnectionPhyInfo(winrt.system.Object):
-    is_coded_phy: winrt.system.Boolean
-    is_uncoded1_m_phy: winrt.system.Boolean
-    is_uncoded2_m_phy: winrt.system.Boolean
+    is_coded_phy: bool
+    is_uncoded1_m_phy: bool
+    is_uncoded2_m_phy: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEConnectionPhyInfo: ...
 
@@ -215,7 +215,7 @@ class BluetoothLEDevice(winrt.system.Object):
     device_information: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]
     device_access_information: typing.Optional[winrt.windows.devices.enumeration.DeviceAccessInformation]
     bluetooth_device_id: typing.Optional[BluetoothDeviceId]
-    was_secure_connection_used_for_pairing: winrt.system.Boolean
+    was_secure_connection_used_for_pairing: bool
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -246,7 +246,7 @@ class BluetoothLEDevice(winrt.system.Object):
     @staticmethod
     def get_device_selector_from_device_name(device_name: str, /) -> str: ...
     @staticmethod
-    def get_device_selector_from_pairing_state(pairing_state: winrt.system.Boolean, /) -> str: ...
+    def get_device_selector_from_pairing_state(pairing_state: bool, /) -> str: ...
     def get_gatt_service(self, service_uuid: uuid.UUID, /) -> typing.Optional[winrt.windows.devices.bluetooth.genericattributeprofile.GattDeviceService]: ...
     @typing.overload
     def get_gatt_services_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.devices.bluetooth.genericattributeprofile.GattDeviceServicesResult]: ...

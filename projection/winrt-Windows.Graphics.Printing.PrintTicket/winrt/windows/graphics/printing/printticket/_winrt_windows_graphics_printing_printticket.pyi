@@ -122,7 +122,7 @@ class WorkflowPrintTicket(winrt.system.Object):
 
 class WorkflowPrintTicketValidationResult(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult
-    validated: winrt.system.Boolean
+    validated: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WorkflowPrintTicketValidationResult: ...
 

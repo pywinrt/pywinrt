@@ -12,7 +12,7 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class BackPressedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackPressedEventArgs: ...
 

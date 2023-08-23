@@ -26,13 +26,13 @@ class LicenseManager(winrt.system.Object):
     def refresh_licenses_async(refresh_option: LicenseRefreshOption, /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class LicenseSatisfactionInfo(winrt.system.Object):
-    is_satisfied: winrt.system.Boolean
-    satisfied_by_device: winrt.system.Boolean
-    satisfied_by_install_media: winrt.system.Boolean
-    satisfied_by_open_license: winrt.system.Boolean
-    satisfied_by_pass: winrt.system.Boolean
-    satisfied_by_signed_in_user: winrt.system.Boolean
-    satisfied_by_trial: winrt.system.Boolean
+    is_satisfied: bool
+    satisfied_by_device: bool
+    satisfied_by_install_media: bool
+    satisfied_by_open_license: bool
+    satisfied_by_pass: bool
+    satisfied_by_signed_in_user: bool
+    satisfied_by_trial: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LicenseSatisfactionInfo: ...
 

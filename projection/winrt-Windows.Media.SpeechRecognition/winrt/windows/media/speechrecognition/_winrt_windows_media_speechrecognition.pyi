@@ -51,7 +51,7 @@ class SpeechRecognitionCompilationResult(winrt.system.Object):
 class SpeechRecognitionGrammarFileConstraint(winrt.system.Object):
     tag: str
     probability: SpeechRecognitionConstraintProbability
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     type: SpeechRecognitionConstraintType
     grammar_file: typing.Optional[winrt.windows.storage.StorageFile]
     @staticmethod
@@ -74,7 +74,7 @@ class SpeechRecognitionHypothesisGeneratedEventArgs(winrt.system.Object):
 class SpeechRecognitionListConstraint(winrt.system.Object):
     tag: str
     probability: SpeechRecognitionConstraintProbability
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     type: SpeechRecognitionConstraintType
     commands: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     @staticmethod
@@ -111,7 +111,7 @@ class SpeechRecognitionSemanticInterpretation(winrt.system.Object):
 class SpeechRecognitionTopicConstraint(winrt.system.Object):
     tag: str
     probability: SpeechRecognitionConstraintProbability
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     type: SpeechRecognitionConstraintType
     scenario: SpeechRecognitionScenario
     topic_hint: str
@@ -125,7 +125,7 @@ class SpeechRecognitionTopicConstraint(winrt.system.Object):
 class SpeechRecognitionVoiceCommandDefinitionConstraint(winrt.system.Object):
     tag: str
     probability: SpeechRecognitionConstraintProbability
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     type: SpeechRecognitionConstraintType
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechRecognitionVoiceCommandDefinitionConstraint: ...
@@ -154,7 +154,7 @@ class SpeechRecognizer(winrt.system.Object):
     def recognize_with_u_i_async(self) -> winrt.windows.foundation.IAsyncOperation[SpeechRecognitionResult]: ...
     def stop_recognition_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     @staticmethod
-    def try_set_system_speech_language_async(speech_language: typing.Optional[winrt.windows.globalization.Language], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_set_system_speech_language_async(speech_language: typing.Optional[winrt.windows.globalization.Language], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_recognition_quality_degrading(self, speech_recognition_quality_degrading_handler: winrt.windows.foundation.TypedEventHandler[SpeechRecognizer, SpeechRecognitionQualityDegradingEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_recognition_quality_degrading(self, cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_state_changed(self, state_changed_handler: winrt.windows.foundation.TypedEventHandler[SpeechRecognizer, SpeechRecognizerStateChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -175,8 +175,8 @@ class SpeechRecognizerTimeouts(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SpeechRecognizerTimeouts: ...
 
 class SpeechRecognizerUIOptions(winrt.system.Object):
-    show_confirmation: winrt.system.Boolean
-    is_read_back_enabled: winrt.system.Boolean
+    show_confirmation: bool
+    is_read_back_enabled: bool
     example_text: str
     audible_prompt: str
     @staticmethod
@@ -197,7 +197,7 @@ class VoiceCommandSet(winrt.system.Object):
     def set_phrase_list_async(self, phrase_list_name: str, phrase_list: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncAction: ...
 
 class ISpeechRecognitionConstraint(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     probability: SpeechRecognitionConstraintProbability
     tag: str
     type: SpeechRecognitionConstraintType

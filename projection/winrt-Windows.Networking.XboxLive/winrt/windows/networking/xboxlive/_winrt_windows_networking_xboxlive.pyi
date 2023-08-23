@@ -17,8 +17,8 @@ from . import XboxLiveEndpointPairCreationBehaviors, XboxLiveEndpointPairCreatio
 Self = typing.TypeVar('Self')
 
 class XboxLiveDeviceAddress(winrt.system.Object):
-    is_local: winrt.system.Boolean
-    is_valid: winrt.system.Boolean
+    is_local: bool
+    is_valid: bool
     network_access_kind: XboxLiveNetworkAccessKind
     max_snapshot_bytes_size: typing.ClassVar[winrt.system.UInt32]
     @staticmethod
@@ -61,7 +61,7 @@ class XboxLiveEndpointPair(winrt.system.Object):
 class XboxLiveEndpointPairCreationResult(winrt.system.Object):
     device_address: typing.Optional[XboxLiveDeviceAddress]
     endpoint_pair: typing.Optional[XboxLiveEndpointPair]
-    is_existing_path_evaluation: winrt.system.Boolean
+    is_existing_path_evaluation: bool
     status: XboxLiveEndpointPairCreationStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveEndpointPairCreationResult: ...
@@ -103,7 +103,7 @@ class XboxLiveInboundEndpointPairCreatedEventArgs(winrt.system.Object):
 
 class XboxLiveQualityOfServiceMeasurement(winrt.system.Object):
     timeout_in_milliseconds: winrt.system.UInt32
-    should_request_private_payloads: winrt.system.Boolean
+    should_request_private_payloads: bool
     number_of_probes_to_attempt: winrt.system.UInt32
     device_addresses: typing.Optional[winrt.windows.foundation.collections.IVector[XboxLiveDeviceAddress]]
     metric_results: typing.Optional[winrt.windows.foundation.collections.IVectorView[XboxLiveQualityOfServiceMetricResult]]
@@ -112,8 +112,8 @@ class XboxLiveQualityOfServiceMeasurement(winrt.system.Object):
     private_payload_results: typing.Optional[winrt.windows.foundation.collections.IVectorView[XboxLiveQualityOfServicePrivatePayloadResult]]
     published_private_payload: typing.ClassVar[typing.Optional[winrt.windows.storage.streams.IBuffer]]
     max_simultaneous_probe_connections: typing.ClassVar[winrt.system.UInt32]
-    is_system_outbound_bandwidth_constrained: typing.ClassVar[winrt.system.Boolean]
-    is_system_inbound_bandwidth_constrained: typing.ClassVar[winrt.system.Boolean]
+    is_system_outbound_bandwidth_constrained: typing.ClassVar[bool]
+    is_system_inbound_bandwidth_constrained: typing.ClassVar[bool]
     max_private_payload_size: typing.ClassVar[winrt.system.UInt32]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XboxLiveQualityOfServiceMeasurement: ...

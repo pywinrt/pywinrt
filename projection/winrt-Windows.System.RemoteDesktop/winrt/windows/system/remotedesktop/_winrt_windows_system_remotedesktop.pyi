@@ -11,7 +11,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 class InteractiveSession(winrt.system.Object):
-    is_remote: typing.ClassVar[winrt.system.Boolean]
+    is_remote: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractiveSession: ...
 

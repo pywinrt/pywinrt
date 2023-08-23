@@ -29,15 +29,15 @@ class AppRecordingManager(winrt.system.Object):
 class AppRecordingResult(winrt.system.Object):
     duration: datetime.timedelta
     extended_error: winrt.windows.foundation.HResult
-    is_file_truncated: winrt.system.Boolean
-    succeeded: winrt.system.Boolean
+    is_file_truncated: bool
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingResult: ...
 
 class AppRecordingSaveScreenshotResult(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult
     saved_screenshot_infos: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppRecordingSavedScreenshotInfo]]
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingSaveScreenshotResult: ...
 
@@ -48,23 +48,23 @@ class AppRecordingSavedScreenshotInfo(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AppRecordingSavedScreenshotInfo: ...
 
 class AppRecordingStatus(winrt.system.Object):
-    can_record: winrt.system.Boolean
-    can_record_time_span: winrt.system.Boolean
+    can_record: bool
+    can_record_time_span: bool
     details: typing.Optional[AppRecordingStatusDetails]
     historical_buffer_duration: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingStatus: ...
 
 class AppRecordingStatusDetails(winrt.system.Object):
-    is_any_app_broadcasting: winrt.system.Boolean
-    is_app_inactive: winrt.system.Boolean
-    is_blocked_for_app: winrt.system.Boolean
-    is_capture_resource_unavailable: winrt.system.Boolean
-    is_disabled_by_system: winrt.system.Boolean
-    is_disabled_by_user: winrt.system.Boolean
-    is_game_stream_in_progress: winrt.system.Boolean
-    is_gpu_constrained: winrt.system.Boolean
-    is_time_span_recording_disabled: winrt.system.Boolean
+    is_any_app_broadcasting: bool
+    is_app_inactive: bool
+    is_blocked_for_app: bool
+    is_capture_resource_unavailable: bool
+    is_disabled_by_system: bool
+    is_disabled_by_user: bool
+    is_game_stream_in_progress: bool
+    is_gpu_constrained: bool
+    is_time_span_recording_disabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppRecordingStatusDetails: ...
 

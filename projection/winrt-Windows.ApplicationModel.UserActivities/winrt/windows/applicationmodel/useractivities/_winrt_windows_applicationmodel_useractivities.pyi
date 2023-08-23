@@ -27,7 +27,7 @@ class UserActivity(winrt.system.Object):
     activity_id: str
     state: UserActivityState
     visual_elements: typing.Optional[UserActivityVisualElements]
-    is_roamable: winrt.system.Boolean
+    is_roamable: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserActivity: ...
     def __new__(cls: typing.Type[UserActivity], activity_id: str) -> UserActivity:...
@@ -44,7 +44,7 @@ class UserActivity(winrt.system.Object):
 class UserActivityAttribution(winrt.system.Object):
     icon_uri: typing.Optional[winrt.windows.foundation.Uri]
     alternate_text: str
-    add_image_query: winrt.system.Boolean
+    add_image_query: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserActivityAttribution: ...
     @typing.overload

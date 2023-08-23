@@ -13,7 +13,7 @@ import winrt.windows.system
 Self = typing.TypeVar('Self')
 
 class AppBroadcastingMonitor(winrt.system.Object):
-    is_current_app_broadcasting: winrt.system.Boolean
+    is_current_app_broadcasting: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingMonitor: ...
     def __new__(cls: typing.Type[AppBroadcastingMonitor]) -> AppBroadcastingMonitor:...
@@ -21,20 +21,20 @@ class AppBroadcastingMonitor(winrt.system.Object):
     def remove_is_current_app_broadcasting_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class AppBroadcastingStatus(winrt.system.Object):
-    can_start_broadcast: winrt.system.Boolean
+    can_start_broadcast: bool
     details: typing.Optional[AppBroadcastingStatusDetails]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingStatus: ...
 
 class AppBroadcastingStatusDetails(winrt.system.Object):
-    is_any_app_broadcasting: winrt.system.Boolean
-    is_app_inactive: winrt.system.Boolean
-    is_blocked_for_app: winrt.system.Boolean
-    is_capture_resource_unavailable: winrt.system.Boolean
-    is_disabled_by_system: winrt.system.Boolean
-    is_disabled_by_user: winrt.system.Boolean
-    is_game_stream_in_progress: winrt.system.Boolean
-    is_gpu_constrained: winrt.system.Boolean
+    is_any_app_broadcasting: bool
+    is_app_inactive: bool
+    is_blocked_for_app: bool
+    is_capture_resource_unavailable: bool
+    is_disabled_by_system: bool
+    is_disabled_by_user: bool
+    is_game_stream_in_progress: bool
+    is_gpu_constrained: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastingStatusDetails: ...
 

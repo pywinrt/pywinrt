@@ -28,6 +28,7 @@
 - Removed generation of base/core files.
 - Removed `-module` option from `pywinrt.exe`.
 - Removed `winrt.system.Guid` type alias.
+- Removed `winrt.system.Boolean` type alias.
 
 ## [v1.0.0-beta.10] - 2023-08-11
 

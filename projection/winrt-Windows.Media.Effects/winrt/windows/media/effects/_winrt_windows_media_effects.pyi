@@ -138,7 +138,7 @@ class VideoTransformEffectDefinition(winrt.system.Object):
 class VideoTransformSphericalProjection(winrt.system.Object):
     view_orientation: winrt.windows.foundation.numerics.Quaternion
     projection_mode: winrt.windows.media.playback.SphericalVideoProjectionMode
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     horizontal_field_of_view_in_degrees: winrt.system.Double
     frame_format: winrt.windows.media.mediaproperties.SphericalVideoFrameFormat
     @staticmethod
@@ -152,7 +152,7 @@ class IAudioEffectDefinition(winrt.system.Object):
 
 class IBasicAudioEffect(winrt.system.Object):
     supported_encoding_properties: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.mediaproperties.AudioEncodingProperties]]
-    use_input_frame_for_output: winrt.system.Boolean
+    use_input_frame_for_output: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicAudioEffect: ...
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -162,10 +162,10 @@ class IBasicAudioEffect(winrt.system.Object):
     def set_properties(self, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
 
 class IBasicVideoEffect(winrt.system.Object):
-    is_read_only: winrt.system.Boolean
+    is_read_only: bool
     supported_encoding_properties: typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.mediaproperties.VideoEncodingProperties]]
     supported_memory_types: MediaMemoryTypes
-    time_independent: winrt.system.Boolean
+    time_independent: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicVideoEffect: ...
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -175,7 +175,7 @@ class IBasicVideoEffect(winrt.system.Object):
     def set_properties(self, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
 
 class IVideoCompositor(winrt.system.Object):
-    time_independent: winrt.system.Boolean
+    time_independent: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositor: ...
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...

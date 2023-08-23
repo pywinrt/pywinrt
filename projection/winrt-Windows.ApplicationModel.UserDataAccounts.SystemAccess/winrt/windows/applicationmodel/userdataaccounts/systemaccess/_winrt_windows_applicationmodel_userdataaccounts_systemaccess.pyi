@@ -20,47 +20,47 @@ class DeviceAccountConfiguration(winrt.system.Object):
     domain: str
     device_account_type_id: str
     outgoing_server_address: str
-    contacts_sync_enabled: winrt.system.Boolean
-    calendar_sync_enabled: winrt.system.Boolean
+    contacts_sync_enabled: bool
+    calendar_sync_enabled: bool
     account_name: str
     incoming_server_username: str
-    incoming_server_requires_ssl: winrt.system.Boolean
+    incoming_server_requires_ssl: bool
     incoming_server_port: winrt.system.Int32
     incoming_server_address: str
-    email_sync_enabled: winrt.system.Boolean
+    email_sync_enabled: bool
     server_type: DeviceAccountServerType
     outgoing_server_username: str
-    outgoing_server_requires_ssl: winrt.system.Boolean
+    outgoing_server_requires_ssl: bool
     outgoing_server_port: winrt.system.Int32
     account_icon_id: DeviceAccountIconId
     cal_dav_server_url: typing.Optional[winrt.windows.foundation.Uri]
-    cal_dav_requires_ssl: winrt.system.Boolean
-    auto_select_authentication_certificate: winrt.system.Boolean
+    cal_dav_requires_ssl: bool
+    auto_select_authentication_certificate: bool
     authentication_type: DeviceAccountAuthenticationType
     authentication_certificate_id: str
-    is_outgoing_server_authentication_enabled: winrt.system.Boolean
-    is_client_authentication_certificate_required: winrt.system.Boolean
+    is_outgoing_server_authentication_enabled: bool
+    is_client_authentication_certificate_required: bool
     incoming_server_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
-    is_outgoing_server_authentication_required: winrt.system.Boolean
+    is_outgoing_server_authentication_required: bool
     card_dav_sync_schedule_kind: DeviceAccountSyncScheduleKind
-    always_download_full_message: winrt.system.Boolean
+    always_download_full_message: bool
     card_dav_server_url: typing.Optional[winrt.windows.foundation.Uri]
-    card_dav_requires_ssl: winrt.system.Boolean
+    card_dav_requires_ssl: bool
     cal_dav_sync_schedule_kind: DeviceAccountSyncScheduleKind
     incoming_server_certificate_hash: str
-    was_outgoing_server_certificate_hash_confirmed: winrt.system.Boolean
-    was_modified_by_user: winrt.system.Boolean
+    was_outgoing_server_certificate_hash_confirmed: bool
+    was_modified_by_user: bool
     sync_schedule_kind: DeviceAccountSyncScheduleKind
     sso_account_id: str
-    was_incoming_server_certificate_hash_confirmed: winrt.system.Boolean
+    was_incoming_server_certificate_hash_confirmed: bool
     o_auth_refresh_token: str
-    is_externally_managed: winrt.system.Boolean
+    is_externally_managed: bool
     mail_age_filter: DeviceAccountMailAgeFilter
-    is_sync_schedule_managed_by_system: winrt.system.Boolean
+    is_sync_schedule_managed_by_system: bool
     outgoing_server_certificate_hash: str
     outgoing_server_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
-    does_policy_allow_mail_sync: winrt.system.Boolean
-    is_sso_authentication_supported: winrt.system.Boolean
+    does_policy_allow_mail_sync: bool
+    is_sso_authentication_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeviceAccountConfiguration: ...
     def __new__(cls: typing.Type[DeviceAccountConfiguration]) -> DeviceAccountConfiguration:...

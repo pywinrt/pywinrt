@@ -37,7 +37,7 @@ class Calendar(winrt.system.Object):
     day: winrt.system.Int32
     first_second_in_this_minute: winrt.system.Int32
     first_year_in_this_era: winrt.system.Int32
-    is_daylight_saving_time: winrt.system.Boolean
+    is_daylight_saving_time: bool
     languages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     last_day_in_this_month: winrt.system.Int32
     last_era: winrt.system.Int32
@@ -355,11 +355,11 @@ class GeographicRegion(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[GeographicRegion]) -> GeographicRegion:...
     @staticmethod
-    def is_supported(geographic_region_code: str, /) -> winrt.system.Boolean: ...
+    def is_supported(geographic_region_code: str, /) -> bool: ...
 
 class JapanesePhoneme(winrt.system.Object):
     display_text: str
-    is_phrase_start: winrt.system.Boolean
+    is_phrase_start: bool
     yomi_text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JapanesePhoneme: ...
@@ -372,7 +372,7 @@ class JapanesePhoneticAnalyzer(winrt.system.Object):
     def get_words(input: str, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[JapanesePhoneme]]: ...
     @typing.overload
     @staticmethod
-    def get_words(input: str, mono_ruby: winrt.system.Boolean, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[JapanesePhoneme]]: ...
+    def get_words(input: str, mono_ruby: bool, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[JapanesePhoneme]]: ...
 
 class Language(winrt.system.Object):
     display_name: str
@@ -389,9 +389,9 @@ class Language(winrt.system.Object):
     @staticmethod
     def get_mui_compatible_language_list_from_language_tags(language_tags: typing.Iterable[str], /) -> typing.Optional[winrt.windows.foundation.collections.IVector[str]]: ...
     @staticmethod
-    def is_well_formed(language_tag: str, /) -> winrt.system.Boolean: ...
+    def is_well_formed(language_tag: str, /) -> bool: ...
     @staticmethod
-    def try_set_input_method_language_tag(language_tag: str, /) -> winrt.system.Boolean: ...
+    def try_set_input_method_language_tag(language_tag: str, /) -> bool: ...
 
 class NumeralSystemIdentifiers(winrt.system.Object):
     full_wide: typing.ClassVar[str]

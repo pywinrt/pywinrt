@@ -28,7 +28,7 @@ class SpatialGestureRecognizer(winrt.system.Object):
     def __new__(cls: typing.Type[SpatialGestureRecognizer], settings: SpatialGestureSettings) -> SpatialGestureRecognizer:...
     def cancel_pending_gestures(self) -> None: ...
     def capture_interaction(self, interaction: typing.Optional[SpatialInteraction], /) -> None: ...
-    def try_set_gesture_settings(self, settings: SpatialGestureSettings, /) -> winrt.system.Boolean: ...
+    def try_set_gesture_settings(self, settings: SpatialGestureSettings, /) -> bool: ...
     def add_hold_canceled(self, handler: winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialHoldCanceledEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_hold_canceled(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_hold_completed(self, handler: winrt.windows.foundation.TypedEventHandler[SpatialGestureRecognizer, SpatialHoldCompletedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -80,8 +80,8 @@ class SpatialInteraction(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SpatialInteraction: ...
 
 class SpatialInteractionController(winrt.system.Object):
-    has_thumbstick: winrt.system.Boolean
-    has_touchpad: winrt.system.Boolean
+    has_thumbstick: bool
+    has_touchpad: bool
     product_id: winrt.system.UInt16
     simple_haptics_controller: typing.Optional[winrt.windows.devices.haptics.SimpleHapticsController]
     vendor_id: winrt.system.UInt16
@@ -92,9 +92,9 @@ class SpatialInteractionController(winrt.system.Object):
     def try_get_renderable_model_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.storage.streams.IRandomAccessStreamWithContentType]: ...
 
 class SpatialInteractionControllerProperties(winrt.system.Object):
-    is_thumbstick_pressed: winrt.system.Boolean
-    is_touchpad_pressed: winrt.system.Boolean
-    is_touchpad_touched: winrt.system.Boolean
+    is_thumbstick_pressed: bool
+    is_touchpad_pressed: bool
+    is_touchpad_touched: bool
     thumbstick_x: winrt.system.Double
     thumbstick_y: winrt.system.Double
     touchpad_x: winrt.system.Double
@@ -117,7 +117,7 @@ class SpatialInteractionManager(winrt.system.Object):
     @staticmethod
     def get_for_current_view() -> typing.Optional[SpatialInteractionManager]: ...
     @staticmethod
-    def is_source_kind_supported(kind: SpatialInteractionSourceKind, /) -> winrt.system.Boolean: ...
+    def is_source_kind_supported(kind: SpatialInteractionSourceKind, /) -> bool: ...
     def add_interaction_detected(self, handler: winrt.windows.foundation.TypedEventHandler[SpatialInteractionManager, SpatialInteractionDetectedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_interaction_detected(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_source_detected(self, handler: winrt.windows.foundation.TypedEventHandler[SpatialInteractionManager, SpatialInteractionSourceEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -135,9 +135,9 @@ class SpatialInteractionSource(winrt.system.Object):
     id: winrt.system.UInt32
     kind: SpatialInteractionSourceKind
     controller: typing.Optional[SpatialInteractionController]
-    is_grasp_supported: winrt.system.Boolean
-    is_menu_supported: winrt.system.Boolean
-    is_pointing_supported: winrt.system.Boolean
+    is_grasp_supported: bool
+    is_menu_supported: bool
+    is_pointing_supported: bool
     handedness: SpatialInteractionSourceHandedness
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSource: ...
@@ -169,14 +169,14 @@ class SpatialInteractionSourceProperties(winrt.system.Object):
     def try_get_source_loss_mitigation_direction(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], /) -> typing.Optional[typing.Optional[winrt.windows.foundation.numerics.Vector3]]: ...
 
 class SpatialInteractionSourceState(winrt.system.Object):
-    is_pressed: winrt.system.Boolean
+    is_pressed: bool
     properties: typing.Optional[SpatialInteractionSourceProperties]
     source: typing.Optional[SpatialInteractionSource]
     timestamp: typing.Optional[winrt.windows.perception.PerceptionTimestamp]
     controller_properties: typing.Optional[SpatialInteractionControllerProperties]
-    is_grasped: winrt.system.Boolean
-    is_menu_pressed: winrt.system.Boolean
-    is_select_pressed: winrt.system.Boolean
+    is_grasped: bool
+    is_menu_pressed: bool
+    is_select_pressed: bool
     select_pressed_value: winrt.system.Double
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialInteractionSourceState: ...
@@ -224,9 +224,9 @@ class SpatialNavigationCompletedEventArgs(winrt.system.Object):
 
 class SpatialNavigationStartedEventArgs(winrt.system.Object):
     interaction_source_kind: SpatialInteractionSourceKind
-    is_navigating_x: winrt.system.Boolean
-    is_navigating_y: winrt.system.Boolean
-    is_navigating_z: winrt.system.Boolean
+    is_navigating_x: bool
+    is_navigating_y: bool
+    is_navigating_z: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialNavigationStartedEventArgs: ...
     def try_get_pointer_pose(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], /) -> typing.Optional[SpatialPointerPose]: ...
@@ -250,7 +250,7 @@ class SpatialPointerPose(winrt.system.Object):
     head: typing.Optional[winrt.windows.perception.people.HeadPose]
     timestamp: typing.Optional[winrt.windows.perception.PerceptionTimestamp]
     eyes: typing.Optional[winrt.windows.perception.people.EyesPose]
-    is_head_captured_by_system: winrt.system.Boolean
+    is_head_captured_by_system: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialPointerPose: ...
     @staticmethod
@@ -266,7 +266,7 @@ class SpatialRecognitionStartedEventArgs(winrt.system.Object):
     interaction_source_kind: SpatialInteractionSourceKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialRecognitionStartedEventArgs: ...
-    def is_gesture_possible(self, gesture: SpatialGestureSettings, /) -> winrt.system.Boolean: ...
+    def is_gesture_possible(self, gesture: SpatialGestureSettings, /) -> bool: ...
     def try_get_pointer_pose(self, coordinate_system: typing.Optional[winrt.windows.perception.spatial.SpatialCoordinateSystem], /) -> typing.Optional[SpatialPointerPose]: ...
 
 class SpatialTappedEventArgs(winrt.system.Object):

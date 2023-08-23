@@ -16,8 +16,8 @@ from . import GameChatMessageOrigin, GameChatOverlayPosition
 Self = typing.TypeVar('Self')
 
 class GameBar(winrt.system.Object):
-    is_input_redirected: typing.ClassVar[winrt.system.Boolean]
-    visible: typing.ClassVar[winrt.system.Boolean]
+    is_input_redirected: typing.ClassVar[bool]
+    visible: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameBar: ...
     @staticmethod

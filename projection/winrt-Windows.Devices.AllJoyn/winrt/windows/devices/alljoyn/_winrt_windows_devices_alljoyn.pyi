@@ -28,7 +28,7 @@ class AllJoynAboutData(winrt.system.Object):
     support_url: typing.Optional[winrt.windows.foundation.Uri]
     software_version: str
     model_number: str
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     app_names: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
     manufacturers: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
     descriptions: typing.Optional[winrt.windows.foundation.collections.IMap[str, str]]
@@ -62,8 +62,8 @@ class AllJoynAboutDataView(winrt.system.Object):
     def get_data_by_session_port_async(unique_name: str, bus_attachment: typing.Optional[AllJoynBusAttachment], session_port: winrt.system.UInt16, language: typing.Optional[winrt.windows.globalization.Language], /) -> winrt.windows.foundation.IAsyncOperation[AllJoynAboutDataView]: ...
 
 class AllJoynAcceptSessionJoinerEventArgs(winrt.system.Object):
-    same_network: winrt.system.Boolean
-    same_physical_node: winrt.system.Boolean
+    same_network: bool
+    same_physical_node: bool
     session_port: winrt.system.UInt16
     traffic_type: AllJoynTrafficType
     unique_name: str
@@ -75,7 +75,7 @@ class AllJoynAcceptSessionJoinerEventArgs(winrt.system.Object):
 class AllJoynAuthenticationCompleteEventArgs(winrt.system.Object):
     authentication_mechanism: AllJoynAuthenticationMechanism
     peer_unique_name: str
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AllJoynAuthenticationCompleteEventArgs: ...
 

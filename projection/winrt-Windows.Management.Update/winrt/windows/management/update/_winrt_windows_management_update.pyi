@@ -15,15 +15,15 @@ from . import WindowsUpdateAdministratorOptions, WindowsUpdateAdministratorStatu
 Self = typing.TypeVar('Self')
 
 class PreviewBuildsManager(winrt.system.Object):
-    are_preview_builds_allowed: winrt.system.Boolean
+    are_preview_builds_allowed: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PreviewBuildsManager: ...
     def get_current_state(self) -> typing.Optional[PreviewBuildsState]: ...
     @staticmethod
     def get_default() -> typing.Optional[PreviewBuildsManager]: ...
     @staticmethod
-    def is_supported() -> winrt.system.Boolean: ...
-    def sync_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def is_supported() -> bool: ...
+    def sync_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class PreviewBuildsState(winrt.system.Object):
     properties: typing.Optional[winrt.windows.foundation.collections.ValueSet]
@@ -38,16 +38,16 @@ class WindowsUpdate(winrt.system.Object):
     deadline: typing.Optional[typing.Optional[datetime.datetime]]
     description: str
     eula_text: str
-    is_critical: winrt.system.Boolean
-    is_driver: winrt.system.Boolean
-    is_eula_accepted: winrt.system.Boolean
-    is_feature_update: winrt.system.Boolean
-    is_for_o_s: winrt.system.Boolean
-    is_mandatory: winrt.system.Boolean
-    is_minor_impact: winrt.system.Boolean
-    is_security: winrt.system.Boolean
-    is_seeker: winrt.system.Boolean
-    is_urgent: winrt.system.Boolean
+    is_critical: bool
+    is_driver: bool
+    is_eula_accepted: bool
+    is_feature_update: bool
+    is_for_o_s: bool
+    is_mandatory: bool
+    is_minor_impact: bool
+    is_security: bool
+    is_seeker: bool
+    is_urgent: bool
     more_info_url: typing.Optional[winrt.windows.foundation.Uri]
     provider_id: str
     support_url: typing.Optional[winrt.windows.foundation.Uri]
@@ -61,7 +61,7 @@ class WindowsUpdate(winrt.system.Object):
 class WindowsUpdateActionCompletedEventArgs(winrt.system.Object):
     action: str
     extended_error: winrt.windows.foundation.HResult
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     update: typing.Optional[WindowsUpdate]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionCompletedEventArgs: ...
@@ -75,7 +75,7 @@ class WindowsUpdateActionProgress(winrt.system.Object):
 class WindowsUpdateActionResult(winrt.system.Object):
     action: str
     extended_error: winrt.windows.foundation.HResult
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     timestamp: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateActionResult: ...
@@ -103,11 +103,11 @@ class WindowsUpdateAdministrator(winrt.system.Object):
     def unregister_for_administration(organization_name: str, /) -> WindowsUpdateAdministratorStatus: ...
 
 class WindowsUpdateApprovalData(winrt.system.Object):
-    seeker: typing.Optional[typing.Optional[winrt.system.Boolean]]
-    opt_out_of_auto_reboot: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    seeker: typing.Optional[typing.Optional[bool]]
+    opt_out_of_auto_reboot: typing.Optional[typing.Optional[bool]]
     compliance_grace_period_in_days: typing.Optional[typing.Optional[winrt.system.Int32]]
     compliance_deadline_in_days: typing.Optional[typing.Optional[winrt.system.Int32]]
-    allow_download_on_metered: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    allow_download_on_metered: typing.Optional[typing.Optional[bool]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateApprovalData: ...
     def __new__(cls: typing.Type[WindowsUpdateApprovalData]) -> WindowsUpdateApprovalData:...
@@ -143,8 +143,8 @@ class WindowsUpdateItem(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateItem: ...
 
 class WindowsUpdateManager(winrt.system.Object):
-    is_scanning: winrt.system.Boolean
-    is_working: winrt.system.Boolean
+    is_scanning: bool
+    is_working: bool
     last_successful_scan_timestamp: typing.Optional[typing.Optional[datetime.datetime]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateManager: ...
@@ -152,7 +152,7 @@ class WindowsUpdateManager(winrt.system.Object):
     def get_applicable_updates(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WindowsUpdate]]: ...
     def get_most_recent_completed_updates(self, count: winrt.system.Int32, /) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[WindowsUpdateItem]]: ...
     def get_most_recent_completed_updates_async(self, count: winrt.system.Int32, /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[WindowsUpdateItem]]: ...
-    def start_scan(self, user_initiated: winrt.system.Boolean, /) -> None: ...
+    def start_scan(self, user_initiated: bool, /) -> None: ...
     def add_action_completed(self, handler: winrt.windows.foundation.TypedEventHandler[WindowsUpdateManager, WindowsUpdateActionCompletedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_action_completed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_attention_required_reason_changed(self, handler: winrt.windows.foundation.TypedEventHandler[WindowsUpdateManager, WindowsUpdateAttentionRequiredReasonChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -175,7 +175,7 @@ class WindowsUpdateProgressChangedEventArgs(winrt.system.Object):
 class WindowsUpdateRestartRequestOptions(winrt.system.Object):
     title: str
     organization_name: str
-    opt_out_of_auto_reboot: winrt.system.Boolean
+    opt_out_of_auto_reboot: bool
     more_info_url: typing.Optional[winrt.windows.foundation.Uri]
     description: str
     compliance_grace_period_in_days: winrt.system.Int32
@@ -190,7 +190,7 @@ class WindowsUpdateRestartRequestOptions(winrt.system.Object):
 class WindowsUpdateScanCompletedEventArgs(winrt.system.Object):
     extended_error: winrt.windows.foundation.HResult
     provider_id: str
-    succeeded: winrt.system.Boolean
+    succeeded: bool
     updates: typing.Optional[winrt.windows.foundation.collections.IVectorView[WindowsUpdate]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowsUpdateScanCompletedEventArgs: ...

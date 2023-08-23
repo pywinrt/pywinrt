@@ -12,7 +12,7 @@ import winrt.windows.foundation
 Self = typing.TypeVar('Self')
 
 class ScreenReaderPositionChangedEventArgs(winrt.system.Object):
-    is_reading_text: winrt.system.Boolean
+    is_reading_text: bool
     screen_position_in_raw_pixels: winrt.windows.foundation.Rect
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenReaderPositionChangedEventArgs: ...

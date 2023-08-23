@@ -19,13 +19,13 @@ Self = typing.TypeVar('Self')
 
 class FrameNavigationOptions(winrt.system.Object):
     transition_info_override: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo]
-    is_navigation_stack_enabled: winrt.system.Boolean
+    is_navigation_stack_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameNavigationOptions: ...
     def __new__(cls: typing.Type[FrameNavigationOptions]) -> FrameNavigationOptions:...
 
 class NavigatingCancelEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     navigation_mode: NavigationMode
     source_page_type: winrt.windows.ui.xaml.interop.TypeName
     navigation_transition_info: typing.Optional[winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo]
@@ -44,7 +44,7 @@ class NavigationEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> NavigationEventArgs: ...
 
 class NavigationFailedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     exception: winrt.windows.foundation.HResult
     source_page_type: winrt.windows.ui.xaml.interop.TypeName
     @staticmethod

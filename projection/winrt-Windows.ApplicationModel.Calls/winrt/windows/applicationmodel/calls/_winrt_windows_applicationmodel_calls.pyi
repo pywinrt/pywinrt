@@ -55,14 +55,14 @@ class LockScreenCallUI(winrt.system.Object):
     def remove_end_requested(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MuteChangeEventArgs(winrt.system.Object):
-    muted: winrt.system.Boolean
+    muted: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MuteChangeEventArgs: ...
 
 class PhoneCall(winrt.system.Object):
     audio_device: PhoneCallAudioDevice
     call_id: str
-    is_muted: winrt.system.Boolean
+    is_muted: bool
     status: PhoneCallStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCall: ...
@@ -96,30 +96,30 @@ class PhoneCall(winrt.system.Object):
     def remove_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PhoneCallBlocking(winrt.system.Object):
-    block_unknown_numbers: typing.ClassVar[winrt.system.Boolean]
-    block_private_numbers: typing.ClassVar[winrt.system.Boolean]
+    block_unknown_numbers: typing.ClassVar[bool]
+    block_private_numbers: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallBlocking: ...
     @staticmethod
-    def set_call_blocking_list_async(phone_number_list: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def set_call_blocking_list_async(phone_number_list: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class PhoneCallHistoryEntry(winrt.system.Object):
     media: PhoneCallHistoryEntryMedia
-    is_missed: winrt.system.Boolean
-    is_incoming: winrt.system.Boolean
-    is_caller_id_blocked: winrt.system.Boolean
-    is_seen: winrt.system.Boolean
+    is_missed: bool
+    is_incoming: bool
+    is_caller_id_blocked: bool
+    is_seen: bool
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
-    is_emergency: winrt.system.Boolean
-    is_suppressed: winrt.system.Boolean
+    is_emergency: bool
+    is_suppressed: bool
     start_time: datetime.datetime
     source_id_kind: PhoneCallHistorySourceIdKind
     address: typing.Optional[PhoneCallHistoryEntryAddress]
     source_id: str
     remote_id: str
     other_app_read_access: PhoneCallHistoryEntryOtherAppReadAccess
-    is_ringing: winrt.system.Boolean
-    is_voicemail: winrt.system.Boolean
+    is_ringing: bool
+    is_voicemail: bool
     id: str
     source_display_name: str
     @staticmethod
@@ -185,7 +185,7 @@ class PhoneCallHistoryStore(winrt.system.Object):
 class PhoneCallInfo(winrt.system.Object):
     call_direction: PhoneCallDirection
     display_name: str
-    is_hold_supported: winrt.system.Boolean
+    is_hold_supported: bool
     line_id: uuid.UUID
     phone_number: str
     start_time: datetime.datetime
@@ -193,8 +193,8 @@ class PhoneCallInfo(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PhoneCallInfo: ...
 
 class PhoneCallManager(winrt.system.Object):
-    is_call_active: typing.ClassVar[winrt.system.Boolean]
-    is_call_incoming: typing.ClassVar[winrt.system.Boolean]
+    is_call_active: typing.ClassVar[bool]
+    is_call_incoming: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallManager: ...
     @staticmethod
@@ -212,11 +212,11 @@ class PhoneCallStore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallStore: ...
     def get_default_line_async(self) -> winrt.windows.foundation.IAsyncOperation[uuid.UUID]: ...
-    def is_emergency_phone_number_async(self, number: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def is_emergency_phone_number_async(self, number: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def request_line_watcher(self) -> typing.Optional[PhoneLineWatcher]: ...
 
 class PhoneCallVideoCapabilities(winrt.system.Object):
-    is_video_calling_capable: winrt.system.Boolean
+    is_video_calling_capable: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneCallVideoCapabilities: ...
 
@@ -244,7 +244,7 @@ class PhoneDialOptions(winrt.system.Object):
     def __new__(cls: typing.Type[PhoneDialOptions]) -> PhoneDialOptions:...
 
 class PhoneLine(winrt.system.Object):
-    can_dial: winrt.system.Boolean
+    can_dial: bool
     cellular_details: typing.Optional[PhoneLineCellularDetails]
     display_color: winrt.windows.ui.Color
     display_name: str
@@ -252,7 +252,7 @@ class PhoneLine(winrt.system.Object):
     line_configuration: typing.Optional[PhoneLineConfiguration]
     network_name: str
     network_state: PhoneNetworkState
-    supports_tile: winrt.system.Boolean
+    supports_tile: bool
     transport: PhoneLineTransport
     video_calling_capabilities: typing.Optional[PhoneCallVideoCapabilities]
     voicemail: typing.Optional[PhoneVoicemail]
@@ -263,17 +263,17 @@ class PhoneLine(winrt.system.Object):
     def dial_with_options(self, options: typing.Optional[PhoneDialOptions], /) -> None: ...
     def dial_with_result(self, number: str, display_name: str, /) -> typing.Optional[PhoneLineDialResult]: ...
     def dial_with_result_async(self, number: str, display_name: str, /) -> winrt.windows.foundation.IAsyncOperation[PhoneLineDialResult]: ...
-    def enable_text_reply(self, value: winrt.system.Boolean, /) -> None: ...
+    def enable_text_reply(self, value: bool, /) -> None: ...
     @staticmethod
     def from_id_async(line_id: uuid.UUID, /) -> winrt.windows.foundation.IAsyncOperation[PhoneLine]: ...
     def get_all_active_phone_calls(self) -> typing.Optional[PhoneCallsResult]: ...
     def get_all_active_phone_calls_async(self) -> winrt.windows.foundation.IAsyncOperation[PhoneCallsResult]: ...
-    def is_immediate_dial_number_async(self, number: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def is_immediate_dial_number_async(self, number: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_line_changed(self, handler: winrt.windows.foundation.TypedEventHandler[PhoneLine, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_line_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class PhoneLineCellularDetails(winrt.system.Object):
-    is_modem_on: winrt.system.Boolean
+    is_modem_on: bool
     registration_reject_code: winrt.system.Int32
     sim_slot_index: winrt.system.Int32
     sim_state: PhoneSimState
@@ -283,7 +283,7 @@ class PhoneLineCellularDetails(winrt.system.Object):
 
 class PhoneLineConfiguration(winrt.system.Object):
     extended_properties: typing.Optional[winrt.windows.foundation.collections.IMapView[str, winrt.system.Object]]
-    is_video_calling_enabled: winrt.system.Boolean
+    is_video_calling_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineConfiguration: ...
 
@@ -297,11 +297,11 @@ class PhoneLineTransportDevice(winrt.system.Object):
     device_id: str
     transport: PhoneLineTransport
     audio_routing_status: TransportDeviceAudioRoutingStatus
-    in_band_ringing_enabled: winrt.system.Boolean
+    in_band_ringing_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneLineTransportDevice: ...
-    def connect(self) -> winrt.system.Boolean: ...
-    def connect_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def connect(self) -> bool: ...
+    def connect_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @staticmethod
     def from_id(id: str, /) -> typing.Optional[PhoneLineTransportDevice]: ...
     @typing.overload
@@ -310,7 +310,7 @@ class PhoneLineTransportDevice(winrt.system.Object):
     @typing.overload
     @staticmethod
     def get_device_selector(transport: PhoneLineTransport, /) -> str: ...
-    def is_registered(self) -> winrt.system.Boolean: ...
+    def is_registered(self) -> bool: ...
     def register_app(self) -> None: ...
     def register_app_for_user(self, user: typing.Optional[winrt.windows.system.User], /) -> None: ...
     def request_access_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.devices.enumeration.DeviceAccessStatus]: ...

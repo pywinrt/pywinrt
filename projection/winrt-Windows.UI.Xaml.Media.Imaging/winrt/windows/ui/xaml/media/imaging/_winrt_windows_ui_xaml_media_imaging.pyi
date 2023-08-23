@@ -24,9 +24,9 @@ class BitmapImage(winrt.system.Object):
     decode_pixel_height: winrt.system.Int32
     create_options: BitmapCreateOptions
     decode_pixel_type: DecodePixelType
-    auto_play: winrt.system.Boolean
-    is_animated_bitmap: winrt.system.Boolean
-    is_playing: winrt.system.Boolean
+    auto_play: bool
+    is_animated_bitmap: bool
+    is_playing: bool
     create_options_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     decode_pixel_height_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
     decode_pixel_width_property: typing.ClassVar[typing.Optional[winrt.windows.ui.xaml.DependencyProperty]]
@@ -94,7 +94,7 @@ class SurfaceImageSource(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[SurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32) -> SurfaceImageSource:...
     @typing.overload
-    def __new__(cls: typing.Type[SurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: winrt.system.Boolean) -> SurfaceImageSource:...
+    def __new__(cls: typing.Type[SurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: bool) -> SurfaceImageSource:...
 
 class SvgImageSource(winrt.system.Object):
     uri_source: typing.Optional[winrt.windows.foundation.Uri]
@@ -130,7 +130,7 @@ class VirtualSurfaceImageSource(winrt.system.Object):
     @typing.overload
     def __new__(cls: typing.Type[VirtualSurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32) -> VirtualSurfaceImageSource:...
     @typing.overload
-    def __new__(cls: typing.Type[VirtualSurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: winrt.system.Boolean) -> VirtualSurfaceImageSource:...
+    def __new__(cls: typing.Type[VirtualSurfaceImageSource], pixel_width: winrt.system.Int32, pixel_height: winrt.system.Int32, is_opaque: bool) -> VirtualSurfaceImageSource:...
 
 class WriteableBitmap(winrt.system.Object):
     pixel_buffer: typing.Optional[winrt.windows.storage.streams.IBuffer]

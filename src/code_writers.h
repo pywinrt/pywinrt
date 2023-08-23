@@ -2983,7 +2983,7 @@ struct pinterface_python_type<%<%>>
                 switch (type)
                 {
                 case fundamental_type::Boolean:
-                    w.write("winrt.system.Boolean");
+                    w.write("bool");
                     break;
                 case fundamental_type::Char:
                     w.write("winrt.system.Char16");

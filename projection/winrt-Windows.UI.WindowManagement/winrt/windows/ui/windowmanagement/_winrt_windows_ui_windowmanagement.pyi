@@ -23,7 +23,7 @@ class AppWindow(winrt.system.Object):
     content: typing.Optional[winrt.windows.ui.UIContentRoot]
     dispatcher_queue: typing.Optional[winrt.windows.system.DispatcherQueue]
     frame: typing.Optional[AppWindowFrame]
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     presenter: typing.Optional[AppWindowPresenter]
     title_bar: typing.Optional[AppWindowTitleBar]
     u_i_context: typing.Optional[winrt.windows.ui.UIContext]
@@ -46,7 +46,7 @@ class AppWindow(winrt.system.Object):
     def request_size(self, frame_size: winrt.windows.foundation.Size, /) -> None: ...
     @staticmethod
     def try_create_async() -> winrt.windows.foundation.IAsyncOperation[AppWindow]: ...
-    def try_show_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_show_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AppWindow, AppWindowChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_close_requested(self, handler: winrt.windows.foundation.TypedEventHandler[AppWindow, AppWindowCloseRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -55,19 +55,19 @@ class AppWindow(winrt.system.Object):
     def remove_closed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class AppWindowChangedEventArgs(winrt.system.Object):
-    did_available_window_presentations_change: winrt.system.Boolean
-    did_display_regions_change: winrt.system.Boolean
-    did_frame_change: winrt.system.Boolean
-    did_size_change: winrt.system.Boolean
-    did_title_bar_change: winrt.system.Boolean
-    did_visibility_change: winrt.system.Boolean
-    did_window_presentation_change: winrt.system.Boolean
-    did_windowing_environment_change: winrt.system.Boolean
+    did_available_window_presentations_change: bool
+    did_display_regions_change: bool
+    did_frame_change: bool
+    did_size_change: bool
+    did_title_bar_change: bool
+    did_visibility_change: bool
+    did_window_presentation_change: bool
+    did_windowing_environment_change: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowChangedEventArgs: ...
 
 class AppWindowCloseRequestedEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowCloseRequestedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -100,14 +100,14 @@ class AppWindowPresenter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresenter: ...
     def get_configuration(self) -> typing.Optional[AppWindowPresentationConfiguration]: ...
-    def is_presentation_supported(self, presentation_kind: AppWindowPresentationKind, /) -> winrt.system.Boolean: ...
-    def request_presentation(self, presentation_kind: AppWindowPresentationKind, /) -> winrt.system.Boolean: ...
+    def is_presentation_supported(self, presentation_kind: AppWindowPresentationKind, /) -> bool: ...
+    def request_presentation(self, presentation_kind: AppWindowPresentationKind, /) -> bool: ...
 
 class AppWindowTitleBar(winrt.system.Object):
     inactive_foreground_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
     inactive_background_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
     foreground_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
-    extends_content_into_title_bar: winrt.system.Boolean
+    extends_content_into_title_bar: bool
     button_pressed_foreground_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
     button_pressed_background_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
     button_inactive_foreground_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
@@ -117,7 +117,7 @@ class AppWindowTitleBar(winrt.system.Object):
     button_foreground_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
     button_background_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
     background_color: typing.Optional[typing.Optional[winrt.windows.ui.Color]]
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowTitleBar: ...
     def get_preferred_visibility(self) -> AppWindowTitleBarVisibility: ...
@@ -141,7 +141,7 @@ class DefaultPresentationConfiguration(winrt.system.Object):
 
 class DisplayRegion(winrt.system.Object):
     display_monitor_device_id: str
-    is_visible: winrt.system.Boolean
+    is_visible: bool
     windowing_environment: typing.Optional[WindowingEnvironment]
     work_area_offset: winrt.windows.foundation.Point
     work_area_size: winrt.windows.foundation.Size
@@ -151,7 +151,7 @@ class DisplayRegion(winrt.system.Object):
     def remove_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class FullScreenPresentationConfiguration(winrt.system.Object):
-    is_exclusive: winrt.system.Boolean
+    is_exclusive: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FullScreenPresentationConfiguration: ...
     def __new__(cls: typing.Type[FullScreenPresentationConfiguration]) -> FullScreenPresentationConfiguration:...
@@ -163,7 +163,7 @@ class WindowServices(winrt.system.Object):
     def find_all_top_level_window_ids() -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.ui.WindowId]]: ...
 
 class WindowingEnvironment(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     kind: WindowingEnvironmentKind
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WindowingEnvironment: ...

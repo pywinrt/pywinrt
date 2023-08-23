@@ -85,10 +85,10 @@ class BluetoothLEAdvertisementFilter(winrt.system.Object):
 class BluetoothLEAdvertisementPublisher(winrt.system.Object):
     advertisement: typing.Optional[BluetoothLEAdvertisement]
     status: BluetoothLEAdvertisementPublisherStatus
-    use_extended_advertisement: winrt.system.Boolean
+    use_extended_advertisement: bool
     preferred_transmit_power_level_in_d_bm: typing.Optional[typing.Optional[winrt.system.Int16]]
-    is_anonymous: winrt.system.Boolean
-    include_transmit_power_level: winrt.system.Boolean
+    is_anonymous: bool
+    include_transmit_power_level: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementPublisher: ...
     @typing.overload
@@ -114,11 +114,11 @@ class BluetoothLEAdvertisementReceivedEventArgs(winrt.system.Object):
     raw_signal_strength_in_d_bm: winrt.system.Int16
     timestamp: datetime.datetime
     bluetooth_address_type: winrt.windows.devices.bluetooth.BluetoothAddressType
-    is_anonymous: winrt.system.Boolean
-    is_connectable: winrt.system.Boolean
-    is_directed: winrt.system.Boolean
-    is_scan_response: winrt.system.Boolean
-    is_scannable: winrt.system.Boolean
+    is_anonymous: bool
+    is_connectable: bool
+    is_directed: bool
+    is_scan_response: bool
+    is_scannable: bool
     transmit_power_level_in_d_bm: typing.Optional[typing.Optional[winrt.system.Int16]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementReceivedEventArgs: ...
@@ -132,7 +132,7 @@ class BluetoothLEAdvertisementWatcher(winrt.system.Object):
     min_out_of_range_timeout: datetime.timedelta
     min_sampling_interval: datetime.timedelta
     status: BluetoothLEAdvertisementWatcherStatus
-    allow_extended_advertisements: winrt.system.Boolean
+    allow_extended_advertisements: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BluetoothLEAdvertisementWatcher: ...
     @typing.overload

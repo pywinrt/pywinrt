@@ -12,4 +12,4 @@ __all__ = [
 ]
 
 RemoteTextConnection = _winrt_windows_system_remotedesktop_input.RemoteTextConnection
-RemoteTextConnectionDataHandler = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], winrt.system.Boolean]
+RemoteTextConnectionDataHandler = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], bool]

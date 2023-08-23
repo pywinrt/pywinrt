@@ -50,7 +50,7 @@ class VpnChannel(winrt.system.Object):
     @staticmethod
     def process_event_async(third_party_plug_in: typing.Optional[winrt.system.Object], event: typing.Optional[winrt.system.Object], /) -> None: ...
     def replace_and_associate_transport(self, transport: typing.Optional[winrt.system.Object], context: typing.Optional[winrt.system.Object], /) -> None: ...
-    def request_credentials(self, cred_type: VpnCredentialType, is_retry: winrt.system.Boolean, is_single_sign_on_credential: winrt.system.Boolean, certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate], /) -> typing.Optional[VpnPickedCredential]: ...
+    def request_credentials(self, cred_type: VpnCredentialType, is_retry: bool, is_single_sign_on_credential: bool, certificate: typing.Optional[winrt.windows.security.cryptography.certificates.Certificate], /) -> typing.Optional[VpnPickedCredential]: ...
     @typing.overload
     def request_credentials_async(self, cred_type: VpnCredentialType, /) -> winrt.windows.foundation.IAsyncOperation[VpnCredential]: ...
     @typing.overload
@@ -60,16 +60,16 @@ class VpnChannel(winrt.system.Object):
     def request_custom_prompt(self, custom_prompt: winrt.windows.foundation.collections.IVectorView[IVpnCustomPrompt], /) -> None: ...
     def request_custom_prompt_async(self, custom_prompt_element: winrt.windows.foundation.collections.IVectorView[IVpnCustomPromptElement], /) -> winrt.windows.foundation.IAsyncAction: ...
     def request_vpn_packet_buffer(self, type: VpnDataPathType, /) -> typing.Optional[VpnPacketBuffer]: ...
-    def set_allowed_ssl_tls_versions(self, tunnel_transport: typing.Optional[winrt.system.Object], use_tls12: winrt.system.Boolean, /) -> None: ...
+    def set_allowed_ssl_tls_versions(self, tunnel_transport: typing.Optional[winrt.system.Object], use_tls12: bool, /) -> None: ...
     def set_error_message(self, message: str, /) -> None: ...
-    def start(self, assigned_client_i_pv4list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_i_pv6list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], route_scope: typing.Optional[VpnRouteAssignment], namespace_scope: typing.Optional[VpnNamespaceAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, optimize_for_low_cost_network: winrt.system.Boolean, main_outer_tunnel_transport: typing.Optional[winrt.system.Object], optional_outer_tunnel_transport: typing.Optional[winrt.system.Object], /) -> None: ...
-    def start_existing_transports(self, assigned_client_i_pv4list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_i_pv6list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_domain_name: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: winrt.system.Boolean, /) -> None: ...
+    def start(self, assigned_client_i_pv4list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_i_pv6list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], route_scope: typing.Optional[VpnRouteAssignment], namespace_scope: typing.Optional[VpnNamespaceAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, optimize_for_low_cost_network: bool, main_outer_tunnel_transport: typing.Optional[winrt.system.Object], optional_outer_tunnel_transport: typing.Optional[winrt.system.Object], /) -> None: ...
+    def start_existing_transports(self, assigned_client_i_pv4list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_i_pv6list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_domain_name: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: bool, /) -> None: ...
     def start_reconnecting_transport(self, transport: typing.Optional[winrt.system.Object], context: typing.Optional[winrt.system.Object], /) -> None: ...
-    def start_with_main_transport(self, assigned_client_i_pv4list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_i_pv6list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_domain_name: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: winrt.system.Boolean, main_outer_tunnel_transport: typing.Optional[winrt.system.Object], /) -> None: ...
+    def start_with_main_transport(self, assigned_client_i_pv4list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_i_pv6list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_domain_name: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: bool, main_outer_tunnel_transport: typing.Optional[winrt.system.Object], /) -> None: ...
     @typing.overload
-    def start_with_traffic_filter(self, assigned_client_ipv4_addresses: typing.Iterable[winrt.windows.networking.HostName], assigned_client_ipv6_addresses: typing.Iterable[winrt.windows.networking.HostName], vpninterface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_namespace: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: winrt.system.Boolean, transports: typing.Iterable[winrt.system.Object], assigned_traffic_filters: typing.Optional[VpnTrafficFilterAssignment], /) -> None: ...
+    def start_with_traffic_filter(self, assigned_client_ipv4_addresses: typing.Iterable[winrt.windows.networking.HostName], assigned_client_ipv6_addresses: typing.Iterable[winrt.windows.networking.HostName], vpninterface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_namespace: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: bool, transports: typing.Iterable[winrt.system.Object], assigned_traffic_filters: typing.Optional[VpnTrafficFilterAssignment], /) -> None: ...
     @typing.overload
-    def start_with_traffic_filter(self, assigned_client_ipv4_list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_ipv6_list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_namespace: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: winrt.system.Boolean, main_outer_tunnel_transport: typing.Optional[winrt.system.Object], optional_outer_tunnel_transport: typing.Optional[winrt.system.Object], assigned_traffic_filters: typing.Optional[VpnTrafficFilterAssignment], /) -> None: ...
+    def start_with_traffic_filter(self, assigned_client_ipv4_list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], assigned_client_ipv6_list: winrt.windows.foundation.collections.IVectorView[winrt.windows.networking.HostName], vpn_interface_id: typing.Optional[VpnInterfaceId], assigned_routes: typing.Optional[VpnRouteAssignment], assigned_namespace: typing.Optional[VpnDomainNameAssignment], mtu_size: winrt.system.UInt32, max_frame_size: winrt.system.UInt32, reserved: bool, main_outer_tunnel_transport: typing.Optional[winrt.system.Object], optional_outer_tunnel_transport: typing.Optional[winrt.system.Object], assigned_traffic_filters: typing.Optional[VpnTrafficFilterAssignment], /) -> None: ...
     def stop(self) -> None: ...
     def terminate_connection(self, message: str, /) -> None: ...
     def add_activity_change(self, handler: winrt.windows.foundation.TypedEventHandler[VpnChannel, VpnChannelActivityEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -104,11 +104,11 @@ class VpnCredential(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> VpnCredential: ...
 
 class VpnCustomCheckBox(winrt.system.Object):
-    initial_check_state: winrt.system.Boolean
-    checked: winrt.system.Boolean
+    initial_check_state: bool
+    checked: bool
     label: str
-    compulsory: winrt.system.Boolean
-    bordered: winrt.system.Boolean
+    compulsory: bool
+    bordered: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomCheckBox: ...
     def __new__(cls: typing.Type[VpnCustomCheckBox]) -> VpnCustomCheckBox:...
@@ -117,45 +117,45 @@ class VpnCustomComboBox(winrt.system.Object):
     options_text: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     selected: winrt.system.UInt32
     label: str
-    compulsory: winrt.system.Boolean
-    bordered: winrt.system.Boolean
+    compulsory: bool
+    bordered: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomComboBox: ...
     def __new__(cls: typing.Type[VpnCustomComboBox]) -> VpnCustomComboBox:...
 
 class VpnCustomEditBox(winrt.system.Object):
-    no_echo: winrt.system.Boolean
+    no_echo: bool
     default_text: str
     text: str
     label: str
-    compulsory: winrt.system.Boolean
-    bordered: winrt.system.Boolean
+    compulsory: bool
+    bordered: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomEditBox: ...
     def __new__(cls: typing.Type[VpnCustomEditBox]) -> VpnCustomEditBox:...
 
 class VpnCustomErrorBox(winrt.system.Object):
     label: str
-    compulsory: winrt.system.Boolean
-    bordered: winrt.system.Boolean
+    compulsory: bool
+    bordered: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomErrorBox: ...
     def __new__(cls: typing.Type[VpnCustomErrorBox]) -> VpnCustomErrorBox:...
 
 class VpnCustomPromptBooleanInput(winrt.system.Object):
-    initial_value: winrt.system.Boolean
-    value: winrt.system.Boolean
-    emphasized: winrt.system.Boolean
+    initial_value: bool
+    value: bool
+    emphasized: bool
     display_name: str
-    compulsory: winrt.system.Boolean
+    compulsory: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptBooleanInput: ...
     def __new__(cls: typing.Type[VpnCustomPromptBooleanInput]) -> VpnCustomPromptBooleanInput:...
 
 class VpnCustomPromptOptionSelector(winrt.system.Object):
-    emphasized: winrt.system.Boolean
+    emphasized: bool
     display_name: str
-    compulsory: winrt.system.Boolean
+    compulsory: bool
     options: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     selected_index: winrt.system.UInt32
     @staticmethod
@@ -163,20 +163,20 @@ class VpnCustomPromptOptionSelector(winrt.system.Object):
     def __new__(cls: typing.Type[VpnCustomPromptOptionSelector]) -> VpnCustomPromptOptionSelector:...
 
 class VpnCustomPromptText(winrt.system.Object):
-    emphasized: winrt.system.Boolean
+    emphasized: bool
     display_name: str
-    compulsory: winrt.system.Boolean
+    compulsory: bool
     text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptText: ...
     def __new__(cls: typing.Type[VpnCustomPromptText]) -> VpnCustomPromptText:...
 
 class VpnCustomPromptTextInput(winrt.system.Object):
-    emphasized: winrt.system.Boolean
+    emphasized: bool
     display_name: str
-    compulsory: winrt.system.Boolean
+    compulsory: bool
     placeholder_text: str
-    is_text_hidden: winrt.system.Boolean
+    is_text_hidden: bool
     text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomPromptTextInput: ...
@@ -184,8 +184,8 @@ class VpnCustomPromptTextInput(winrt.system.Object):
 
 class VpnCustomTextBox(winrt.system.Object):
     label: str
-    compulsory: winrt.system.Boolean
-    bordered: winrt.system.Boolean
+    compulsory: bool
+    bordered: bool
     display_text: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnCustomTextBox: ...
@@ -266,11 +266,11 @@ class VpnNativeProfile(winrt.system.Object):
     eap_configuration: str
     native_protocol_type: VpnNativeProtocolType
     servers: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
-    require_vpn_client_app_u_i: winrt.system.Boolean
+    require_vpn_client_app_u_i: bool
     connection_status: VpnManagementConnectionStatus
     profile_name: str
-    remember_credentials: winrt.system.Boolean
-    always_on: winrt.system.Boolean
+    remember_credentials: bool
+    always_on: bool
     routes: typing.Optional[winrt.windows.foundation.collections.IVector[VpnRoute]]
     app_triggers: typing.Optional[winrt.windows.foundation.collections.IVector[VpnAppId]]
     traffic_filters: typing.Optional[winrt.windows.foundation.collections.IVector[VpnTrafficFilter]]
@@ -313,11 +313,11 @@ class VpnPlugInProfile(winrt.system.Object):
     vpn_plugin_package_family_name: str
     custom_configuration: str
     server_uris: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.foundation.Uri]]
-    require_vpn_client_app_u_i: winrt.system.Boolean
+    require_vpn_client_app_u_i: bool
     connection_status: VpnManagementConnectionStatus
     profile_name: str
-    remember_credentials: winrt.system.Boolean
-    always_on: winrt.system.Boolean
+    remember_credentials: bool
+    always_on: bool
     app_triggers: typing.Optional[winrt.windows.foundation.collections.IVector[VpnAppId]]
     domain_name_info_list: typing.Optional[winrt.windows.foundation.collections.IVector[VpnDomainNameInfo]]
     routes: typing.Optional[winrt.windows.foundation.collections.IVector[VpnRoute]]
@@ -338,7 +338,7 @@ class VpnRouteAssignment(winrt.system.Object):
     ipv6_exclusion_routes: typing.Optional[winrt.windows.foundation.collections.IVector[VpnRoute]]
     ipv4_inclusion_routes: typing.Optional[winrt.windows.foundation.collections.IVector[VpnRoute]]
     ipv4_exclusion_routes: typing.Optional[winrt.windows.foundation.collections.IVector[VpnRoute]]
-    exclude_local_subnets: winrt.system.Boolean
+    exclude_local_subnets: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnRouteAssignment: ...
     def __new__(cls: typing.Type[VpnRouteAssignment]) -> VpnRouteAssignment:...
@@ -362,8 +362,8 @@ class VpnTrafficFilter(winrt.system.Object):
     def __new__(cls: typing.Type[VpnTrafficFilter], app_id: typing.Optional[VpnAppId]) -> VpnTrafficFilter:...
 
 class VpnTrafficFilterAssignment(winrt.system.Object):
-    allow_outbound: winrt.system.Boolean
-    allow_inbound: winrt.system.Boolean
+    allow_outbound: bool
+    allow_inbound: bool
     traffic_filter_list: typing.Optional[winrt.windows.foundation.collections.IVector[VpnTrafficFilter]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VpnTrafficFilterAssignment: ...
@@ -383,16 +383,16 @@ class IVpnCredential(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IVpnCredential: ...
 
 class IVpnCustomPrompt(winrt.system.Object):
-    bordered: winrt.system.Boolean
-    compulsory: winrt.system.Boolean
+    bordered: bool
+    compulsory: bool
     label: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCustomPrompt: ...
 
 class IVpnCustomPromptElement(winrt.system.Object):
-    compulsory: winrt.system.Boolean
+    compulsory: bool
     display_name: str
-    emphasized: winrt.system.Boolean
+    emphasized: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVpnCustomPromptElement: ...
 
@@ -426,11 +426,11 @@ class IVpnPlugIn(winrt.system.Object):
     def get_keep_alive_payload(self, channel: typing.Optional[VpnChannel], /) -> typing.Optional[VpnPacketBuffer]: ...
 
 class IVpnProfile(winrt.system.Object):
-    always_on: winrt.system.Boolean
+    always_on: bool
     app_triggers: typing.Optional[winrt.windows.foundation.collections.IVector[VpnAppId]]
     domain_name_info_list: typing.Optional[winrt.windows.foundation.collections.IVector[VpnDomainNameInfo]]
     profile_name: str
-    remember_credentials: winrt.system.Boolean
+    remember_credentials: bool
     routes: typing.Optional[winrt.windows.foundation.collections.IVector[VpnRoute]]
     traffic_filters: typing.Optional[winrt.windows.foundation.collections.IVector[VpnTrafficFilter]]
     @staticmethod

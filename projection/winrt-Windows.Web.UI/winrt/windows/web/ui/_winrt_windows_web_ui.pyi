@@ -39,26 +39,26 @@ class WebViewControlDeferredPermissionRequest(winrt.system.Object):
     def deny(self) -> None: ...
 
 class WebViewControlLongRunningScriptDetectedEventArgs(winrt.system.Object):
-    stop_page_script_execution: winrt.system.Boolean
+    stop_page_script_execution: bool
     execution_time: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlLongRunningScriptDetectedEventArgs: ...
 
 class WebViewControlNavigationCompletedEventArgs(winrt.system.Object):
-    is_success: winrt.system.Boolean
+    is_success: bool
     uri: typing.Optional[winrt.windows.foundation.Uri]
     web_error_status: winrt.windows.web.WebErrorStatus
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlNavigationCompletedEventArgs: ...
 
 class WebViewControlNavigationStartingEventArgs(winrt.system.Object):
-    cancel: winrt.system.Boolean
+    cancel: bool
     uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlNavigationStartingEventArgs: ...
 
 class WebViewControlNewWindowRequestedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     referrer: typing.Optional[winrt.windows.foundation.Uri]
     uri: typing.Optional[winrt.windows.foundation.Uri]
     new_window: typing.Optional[IWebViewControl]
@@ -89,14 +89,14 @@ class WebViewControlScriptNotifyEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> WebViewControlScriptNotifyEventArgs: ...
 
 class WebViewControlSettings(winrt.system.Object):
-    is_script_notify_allowed: winrt.system.Boolean
-    is_java_script_enabled: winrt.system.Boolean
-    is_indexed_d_b_enabled: winrt.system.Boolean
+    is_script_notify_allowed: bool
+    is_java_script_enabled: bool
+    is_indexed_d_b_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlSettings: ...
 
 class WebViewControlUnsupportedUriSchemeIdentifiedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControlUnsupportedUriSchemeIdentifiedEventArgs: ...
@@ -116,9 +116,9 @@ class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class IWebViewControl(winrt.system.Object):
-    can_go_back: winrt.system.Boolean
-    can_go_forward: winrt.system.Boolean
-    contains_full_screen_element: winrt.system.Boolean
+    can_go_back: bool
+    can_go_forward: bool
+    contains_full_screen_element: bool
     default_background_color: winrt.windows.ui.Color
     deferred_permission_requests: typing.Optional[winrt.windows.foundation.collections.IVectorView[WebViewControlDeferredPermissionRequest]]
     document_title: str

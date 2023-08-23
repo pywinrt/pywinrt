@@ -75,11 +75,11 @@ class AppServiceTriggerDetails(winrt.system.Object):
     app_service_connection: typing.Optional[AppServiceConnection]
     caller_package_family_name: str
     name: str
-    is_remote_system_connection: winrt.system.Boolean
+    is_remote_system_connection: bool
     caller_remote_connection_token: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppServiceTriggerDetails: ...
-    def check_caller_for_capability_async(self, capability_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def check_caller_for_capability_async(self, capability_name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class StatelessAppServiceResponse(winrt.system.Object):
     message: typing.Optional[winrt.windows.foundation.collections.ValueSet]

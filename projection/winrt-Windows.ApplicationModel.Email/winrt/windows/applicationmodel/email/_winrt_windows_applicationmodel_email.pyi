@@ -22,13 +22,13 @@ class EmailAttachment(winrt.system.Object):
     file_name: str
     data: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]
     mime_type: str
-    is_inline: winrt.system.Boolean
+    is_inline: bool
     estimated_download_size_in_bytes: winrt.system.UInt64
     download_state: EmailAttachmentDownloadState
     content_location: str
     content_id: str
     id: str
-    is_from_base_message: winrt.system.Boolean
+    is_from_base_message: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailAttachment: ...
     @typing.overload
@@ -40,7 +40,7 @@ class EmailAttachment(winrt.system.Object):
 
 class EmailConversation(winrt.system.Object):
     flag_state: EmailFlagState
-    has_attachment: winrt.system.Boolean
+    has_attachment: bool
     id: str
     importance: EmailImportance
     last_email_response_kind: EmailMessageResponseKind
@@ -73,7 +73,7 @@ class EmailConversationReader(winrt.system.Object):
 class EmailFolder(winrt.system.Object):
     remote_id: str
     last_successful_sync_time: datetime.datetime
-    is_sync_enabled: winrt.system.Boolean
+    is_sync_enabled: bool
     display_name: str
     id: str
     kind: EmailSpecialFolderKind
@@ -96,24 +96,24 @@ class EmailFolder(winrt.system.Object):
     def get_message_reader(self, options: typing.Optional[EmailQueryOptions], /) -> typing.Optional[EmailMessageReader]: ...
     def save_message_async(self, message: typing.Optional[EmailMessage], /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
-    def try_move_async(self, new_parent_folder: typing.Optional[EmailFolder], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_move_async(self, new_parent_folder: typing.Optional[EmailFolder], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_move_async(self, new_parent_folder: typing.Optional[EmailFolder], new_folder_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_save_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_move_async(self, new_parent_folder: typing.Optional[EmailFolder], new_folder_name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_save_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
 
 class EmailIrmInfo(winrt.system.Object):
-    can_remove_irm_on_response: winrt.system.Boolean
-    can_print_data: winrt.system.Boolean
-    can_modify_recipients_on_response: winrt.system.Boolean
-    can_forward: winrt.system.Boolean
-    can_extract_data: winrt.system.Boolean
-    can_reply: winrt.system.Boolean
-    can_edit: winrt.system.Boolean
+    can_remove_irm_on_response: bool
+    can_print_data: bool
+    can_modify_recipients_on_response: bool
+    can_forward: bool
+    can_extract_data: bool
+    can_reply: bool
+    can_edit: bool
     template: typing.Optional[EmailIrmTemplate]
-    is_programatic_access_allowed: winrt.system.Boolean
-    is_irm_originator: winrt.system.Boolean
+    is_programatic_access_allowed: bool
+    is_irm_originator: bool
     expiration_date: datetime.datetime
-    can_reply_all: winrt.system.Boolean
+    can_reply_all: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailIrmInfo: ...
     @typing.overload
@@ -146,8 +146,8 @@ class EmailMailbox(winrt.system.Object):
     other_app_read_access: EmailMailboxOtherAppReadAccess
     display_name: str
     id: str
-    is_data_encrypted_under_lock: winrt.system.Boolean
-    is_owned_by_current_app: winrt.system.Boolean
+    is_data_encrypted_under_lock: bool
+    is_owned_by_current_app: bool
     mail_address_aliases: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
     capabilities: typing.Optional[EmailMailboxCapabilities]
     change_tracker: typing.Optional[EmailMailboxChangeTracker]
@@ -180,9 +180,9 @@ class EmailMailbox(winrt.system.Object):
     def get_message_reader(self, options: typing.Optional[EmailQueryOptions], /) -> typing.Optional[EmailMessageReader]: ...
     def get_special_folder_async(self, folder_type: EmailSpecialFolderKind, /) -> winrt.windows.foundation.IAsyncOperation[EmailFolder]: ...
     def mark_folder_as_seen_async(self, folder_id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
-    def mark_folder_sync_enabled_async(self, folder_id: str, is_sync_enabled: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def mark_folder_sync_enabled_async(self, folder_id: str, is_sync_enabled: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
     def mark_message_as_seen_async(self, message_id: str, /) -> winrt.windows.foundation.IAsyncAction: ...
-    def mark_message_read_async(self, message_id: str, is_read: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def mark_message_read_async(self, message_id: str, is_read: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
     def register_sync_manager_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def resolve_recipients_async(self, recipients: typing.Iterable[str], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EmailRecipientResolutionResult]]: ...
     def save_async(self) -> winrt.windows.foundation.IAsyncAction: ...
@@ -190,20 +190,20 @@ class EmailMailbox(winrt.system.Object):
     @typing.overload
     def send_message_async(self, message: typing.Optional[EmailMessage], /) -> winrt.windows.foundation.IAsyncAction: ...
     @typing.overload
-    def send_message_async(self, message: typing.Optional[EmailMessage], smart_send: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def send_message_async(self, message: typing.Optional[EmailMessage], smart_send: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
     def try_create_folder_async(self, parent_folder_id: str, name: str, /) -> winrt.windows.foundation.IAsyncOperation[EmailMailboxCreateFolderResult]: ...
     def try_delete_folder_async(self, folder_id: str, /) -> winrt.windows.foundation.IAsyncOperation[EmailMailboxDeleteFolderStatus]: ...
     def try_empty_folder_async(self, folder_id: str, /) -> winrt.windows.foundation.IAsyncOperation[EmailMailboxEmptyFolderStatus]: ...
-    def try_forward_meeting_async(self, meeting: typing.Optional[EmailMessage], recipients: typing.Iterable[EmailRecipient], subject: str, forward_header_type: EmailMessageBodyKind, forward_header: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_forward_meeting_async(self, meeting: typing.Optional[EmailMessage], recipients: typing.Iterable[EmailRecipient], subject: str, forward_header_type: EmailMessageBodyKind, forward_header: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def try_get_auto_reply_settings_async(self, requested_format: EmailMailboxAutoReplyMessageResponseKind, /) -> winrt.windows.foundation.IAsyncOperation[EmailMailboxAutoReplySettings]: ...
     @typing.overload
-    def try_move_folder_async(self, folder_id: str, new_parent_folder_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_move_folder_async(self, folder_id: str, new_parent_folder_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     @typing.overload
-    def try_move_folder_async(self, folder_id: str, new_parent_folder_id: str, new_folder_name: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_move_message_async(self, message_id: str, new_parent_folder_id: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_propose_new_time_for_meeting_async(self, meeting: typing.Optional[EmailMessage], new_start_time: datetime.datetime, new_duration: datetime.timedelta, subject: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_set_auto_reply_settings_async(self, auto_reply_settings: typing.Optional[EmailMailboxAutoReplySettings], /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
-    def try_update_meeting_response_async(self, meeting: typing.Optional[EmailMessage], response: EmailMeetingResponseType, subject: str, comment: str, send_update: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def try_move_folder_async(self, folder_id: str, new_parent_folder_id: str, new_folder_name: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_move_message_async(self, message_id: str, new_parent_folder_id: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_propose_new_time_for_meeting_async(self, meeting: typing.Optional[EmailMessage], new_start_time: datetime.datetime, new_duration: datetime.timedelta, subject: str, comment: str, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_set_auto_reply_settings_async(self, auto_reply_settings: typing.Optional[EmailMailboxAutoReplySettings], /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
+    def try_update_meeting_response_async(self, meeting: typing.Optional[EmailMessage], response: EmailMeetingResponseType, subject: str, comment: str, send_update: bool, /) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def validate_certificates_async(self, certificates: typing.Iterable[winrt.windows.security.cryptography.certificates.Certificate], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EmailCertificateValidationStatus]]: ...
     def add_mailbox_changed(self, p_handler: winrt.windows.foundation.TypedEventHandler[EmailMailbox, EmailMailboxChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_mailbox_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -216,14 +216,14 @@ class EmailMailboxAction(winrt.system.Object):
 
 class EmailMailboxAutoReply(winrt.system.Object):
     response: str
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxAutoReply: ...
 
 class EmailMailboxAutoReplySettings(winrt.system.Object):
     start_time: typing.Optional[typing.Optional[datetime.datetime]]
     response_kind: EmailMailboxAutoReplyMessageResponseKind
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     end_time: typing.Optional[typing.Optional[datetime.datetime]]
     internal_reply: typing.Optional[EmailMailboxAutoReply]
     known_external_reply: typing.Optional[EmailMailboxAutoReply]
@@ -233,20 +233,20 @@ class EmailMailboxAutoReplySettings(winrt.system.Object):
     def __new__(cls: typing.Type[EmailMailboxAutoReplySettings]) -> EmailMailboxAutoReplySettings:...
 
 class EmailMailboxCapabilities(winrt.system.Object):
-    can_smart_send: winrt.system.Boolean
-    can_update_meeting_responses: winrt.system.Boolean
-    can_server_search_mailbox: winrt.system.Boolean
-    can_server_search_folders: winrt.system.Boolean
-    can_forward_meetings: winrt.system.Boolean
-    can_propose_new_time_for_meetings: winrt.system.Boolean
-    can_get_and_set_internal_auto_replies: winrt.system.Boolean
-    can_get_and_set_external_auto_replies: winrt.system.Boolean
-    can_validate_certificates: winrt.system.Boolean
-    can_resolve_recipients: winrt.system.Boolean
-    can_move_folder: winrt.system.Boolean
-    can_empty_folder: winrt.system.Boolean
-    can_delete_folder: winrt.system.Boolean
-    can_create_folder: winrt.system.Boolean
+    can_smart_send: bool
+    can_update_meeting_responses: bool
+    can_server_search_mailbox: bool
+    can_server_search_folders: bool
+    can_forward_meetings: bool
+    can_propose_new_time_for_meetings: bool
+    can_get_and_set_internal_auto_replies: bool
+    can_get_and_set_external_auto_replies: bool
+    can_validate_certificates: bool
+    can_resolve_recipients: bool
+    can_move_folder: bool
+    can_empty_folder: bool
+    can_delete_folder: bool
+    can_create_folder: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxCapabilities: ...
 
@@ -266,7 +266,7 @@ class EmailMailboxChangeReader(winrt.system.Object):
     def read_batch_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.foundation.collections.IVectorView[EmailMailboxChange]]: ...
 
 class EmailMailboxChangeTracker(winrt.system.Object):
-    is_tracking: winrt.system.Boolean
+    is_tracking: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxChangeTracker: ...
     def enable(self) -> None: ...
@@ -293,9 +293,9 @@ class EmailMailboxPolicies(winrt.system.Object):
     required_smime_signing_algorithm: typing.Optional[typing.Optional[EmailMailboxSmimeSigningAlgorithm]]
     required_smime_encryption_algorithm: typing.Optional[typing.Optional[EmailMailboxSmimeEncryptionAlgorithm]]
     allowed_smime_encryption_algorithm_negotiation: EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation
-    allow_smime_soft_certificates: winrt.system.Boolean
-    must_sign_smime_messages: winrt.system.Boolean
-    must_encrypt_smime_messages: winrt.system.Boolean
+    allow_smime_soft_certificates: bool
+    must_sign_smime_messages: bool
+    must_encrypt_smime_messages: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxPolicies: ...
 
@@ -305,7 +305,7 @@ class EmailMailboxSyncManager(winrt.system.Object):
     last_attempted_sync_time: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMailboxSyncManager: ...
-    def sync_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def sync_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_sync_status_changed(self, handler: winrt.windows.foundation.TypedEventHandler[EmailMailboxSyncManager, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_sync_status_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -328,9 +328,9 @@ class EmailManagerForUser(winrt.system.Object):
 
 class EmailMeetingInfo(winrt.system.Object):
     location: str
-    is_response_requested: winrt.system.Boolean
-    is_all_day: winrt.system.Boolean
-    allow_new_time_proposal: winrt.system.Boolean
+    is_response_requested: bool
+    is_all_day: bool
+    allow_new_time_proposal: bool
     duration: datetime.timedelta
     appointment_roaming_id: str
     appointment_original_start_time: typing.Optional[typing.Optional[datetime.datetime]]
@@ -340,7 +340,7 @@ class EmailMeetingInfo(winrt.system.Object):
     recurrence_start_time: typing.Optional[typing.Optional[datetime.datetime]]
     recurrence: typing.Optional[winrt.windows.applicationmodel.appointments.AppointmentRecurrence]
     proposed_start_time: typing.Optional[typing.Optional[datetime.datetime]]
-    is_reported_out_of_date_by_server: winrt.system.Boolean
+    is_reported_out_of_date_by_server: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailMeetingInfo: ...
     def __new__(cls: typing.Type[EmailMeetingInfo]) -> EmailMeetingInfo:...
@@ -352,7 +352,7 @@ class EmailMessage(winrt.system.Object):
     c_c: typing.Optional[winrt.windows.foundation.collections.IVector[EmailRecipient]]
     attachments: typing.Optional[winrt.windows.foundation.collections.IVector[EmailAttachment]]
     to: typing.Optional[winrt.windows.foundation.collections.IVector[EmailRecipient]]
-    allow_internet_images: winrt.system.Boolean
+    allow_internet_images: bool
     flag_state: EmailFlagState
     estimated_download_size_in_bytes: winrt.system.UInt32
     download_state: EmailMessageDownloadState
@@ -366,19 +366,19 @@ class EmailMessage(winrt.system.Object):
     message_class: str
     meeting_info: typing.Optional[EmailMeetingInfo]
     last_response_kind: EmailMessageResponseKind
-    is_seen: winrt.system.Boolean
-    is_read: winrt.system.Boolean
-    is_server_search_message: winrt.system.Boolean
-    is_smart_sendable: winrt.system.Boolean
+    is_seen: bool
+    is_read: bool
+    is_server_search_message: bool
+    is_smart_sendable: bool
     mailbox_id: str
     change_number: winrt.system.UInt64
     conversation_id: str
     normalized_subject: str
     folder_id: str
-    has_partial_bodies: winrt.system.Boolean
+    has_partial_bodies: bool
     id: str
     in_response_to_message_id: str
-    is_draft_message: winrt.system.Boolean
+    is_draft_message: bool
     smime_kind: EmailMessageSmimeKind
     smime_data: typing.Optional[winrt.windows.storage.streams.IRandomAccessStreamReference]
     sent_representing: typing.Optional[EmailRecipient]

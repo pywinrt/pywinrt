@@ -119,22 +119,22 @@ class AppBroadcastGlobalSettings(winrt.system.Object):
     system_audio_gain: winrt.system.Double
     selected_camera_id: str
     microphone_gain: winrt.system.Double
-    is_microphone_capture_enabled_by_default: winrt.system.Boolean
-    is_echo_cancellation_enabled: winrt.system.Boolean
-    is_cursor_image_capture_enabled: winrt.system.Boolean
-    is_camera_capture_enabled_by_default: winrt.system.Boolean
-    is_audio_capture_enabled: winrt.system.Boolean
+    is_microphone_capture_enabled_by_default: bool
+    is_echo_cancellation_enabled: bool
+    is_cursor_image_capture_enabled: bool
+    is_camera_capture_enabled_by_default: bool
+    is_audio_capture_enabled: bool
     camera_overlay_size: AppBroadcastCameraOverlaySize
     camera_overlay_location: AppBroadcastCameraOverlayLocation
-    has_hardware_encoder: winrt.system.Boolean
-    is_broadcast_enabled: winrt.system.Boolean
-    is_disabled_by_policy: winrt.system.Boolean
-    is_gpu_constrained: winrt.system.Boolean
+    has_hardware_encoder: bool
+    is_broadcast_enabled: bool
+    is_disabled_by_policy: bool
+    is_gpu_constrained: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastGlobalSettings: ...
 
 class AppBroadcastHeartbeatRequestedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastHeartbeatRequestedEventArgs: ...
 
@@ -166,7 +166,7 @@ class AppBroadcastPlugIn(winrt.system.Object):
 
 class AppBroadcastPlugInManager(winrt.system.Object):
     default_plug_in: typing.Optional[AppBroadcastPlugIn]
-    is_broadcast_provider_available: winrt.system.Boolean
+    is_broadcast_provider_available: bool
     plug_in_list: typing.Optional[winrt.windows.foundation.collections.IVectorView[AppBroadcastPlugIn]]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastPlugInManager: ...
@@ -237,7 +237,7 @@ class AppBroadcastServices(winrt.system.Object):
     capture_target_type: AppBroadcastCaptureTargetType
     broadcast_title: str
     broadcast_language: str
-    can_capture: winrt.system.Boolean
+    can_capture: bool
     state: typing.Optional[AppBroadcastState]
     user_name: str
     @staticmethod
@@ -257,10 +257,10 @@ class AppBroadcastSignInStateChangedEventArgs(winrt.system.Object):
 
 class AppBroadcastState(winrt.system.Object):
     sign_in_state: AppBroadcastSignInState
-    should_capture_microphone: winrt.system.Boolean
-    should_capture_camera: winrt.system.Boolean
+    should_capture_microphone: bool
+    should_capture_camera: bool
     authentication_result: typing.Optional[winrt.windows.security.authentication.web.WebAuthenticationResult]
-    is_capture_target_running: winrt.system.Boolean
+    is_capture_target_running: bool
     microphone_capture_error: winrt.system.UInt32
     microphone_capture_state: AppBroadcastMicrophoneCaptureState
     o_auth_callback_uri: typing.Optional[winrt.windows.foundation.Uri]
@@ -300,7 +300,7 @@ class AppBroadcastStreamAudioHeader(winrt.system.Object):
     absolute_timestamp: datetime.datetime
     duration: datetime.timedelta
     frame_id: winrt.system.UInt64
-    has_discontinuity: winrt.system.Boolean
+    has_discontinuity: bool
     relative_timestamp: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamAudioHeader: ...
@@ -337,8 +337,8 @@ class AppBroadcastStreamVideoHeader(winrt.system.Object):
     absolute_timestamp: datetime.datetime
     duration: datetime.timedelta
     frame_id: winrt.system.UInt64
-    has_discontinuity: winrt.system.Boolean
-    is_key_frame: winrt.system.Boolean
+    has_discontinuity: bool
+    is_key_frame: bool
     relative_timestamp: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBroadcastStreamVideoHeader: ...
@@ -354,14 +354,14 @@ class AppBroadcastViewerCountChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AppBroadcastViewerCountChangedEventArgs: ...
 
 class AppCapture(winrt.system.Object):
-    is_capturing_audio: winrt.system.Boolean
-    is_capturing_video: winrt.system.Boolean
+    is_capturing_audio: bool
+    is_capturing_video: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCapture: ...
     @staticmethod
     def get_for_current_view() -> typing.Optional[AppCapture]: ...
     @staticmethod
-    def set_allowed_async(allowed: winrt.system.Boolean, /) -> winrt.windows.foundation.IAsyncAction: ...
+    def set_allowed_async(allowed: bool, /) -> winrt.windows.foundation.IAsyncAction: ...
     def add_capturing_changed(self, handler: winrt.windows.foundation.TypedEventHandler[AppCapture, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_capturing_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -432,7 +432,7 @@ class AppCaptureRecordOperation(winrt.system.Object):
     duration: typing.Optional[typing.Optional[datetime.timedelta]]
     error_code: typing.Optional[typing.Optional[winrt.system.UInt32]]
     file: typing.Optional[winrt.windows.storage.StorageFile]
-    is_file_truncated: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    is_file_truncated: typing.Optional[typing.Optional[bool]]
     state: AppCaptureRecordingState
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureRecordOperation: ...
@@ -451,7 +451,7 @@ class AppCaptureRecordingStateChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> AppCaptureRecordingStateChangedEventArgs: ...
 
 class AppCaptureServices(winrt.system.Object):
-    can_capture: winrt.system.Boolean
+    can_capture: bool
     state: typing.Optional[AppCaptureState]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureServices: ...
@@ -459,14 +459,14 @@ class AppCaptureServices(winrt.system.Object):
     def record_time_span(self, start_time: datetime.datetime, duration: datetime.timedelta, /) -> typing.Optional[AppCaptureRecordOperation]: ...
 
 class AppCaptureSettings(winrt.system.Object):
-    is_historical_capture_on_wireless_display_allowed: winrt.system.Boolean
+    is_historical_capture_on_wireless_display_allowed: bool
     video_encoding_bitrate_mode: AppCaptureVideoEncodingBitrateMode
-    is_historical_capture_on_battery_allowed: winrt.system.Boolean
-    is_audio_capture_enabled: winrt.system.Boolean
-    is_app_capture_enabled: winrt.system.Boolean
+    is_historical_capture_on_battery_allowed: bool
+    is_audio_capture_enabled: bool
+    is_app_capture_enabled: bool
     app_capture_destination_folder: typing.Optional[winrt.windows.storage.StorageFolder]
     historical_buffer_length: winrt.system.UInt32
-    is_historical_capture_enabled: winrt.system.Boolean
+    is_historical_capture_enabled: bool
     custom_video_encoding_width: winrt.system.UInt32
     custom_video_encoding_height: winrt.system.UInt32
     custom_video_encoding_bitrate: winrt.system.UInt32
@@ -475,26 +475,26 @@ class AppCaptureSettings(winrt.system.Object):
     video_encoding_resolution_mode: AppCaptureVideoEncodingResolutionMode
     screenshot_destination_folder: typing.Optional[winrt.windows.storage.StorageFolder]
     maximum_record_length: datetime.timedelta
-    has_hardware_encoder: winrt.system.Boolean
-    is_cpu_constrained: winrt.system.Boolean
-    is_memory_constrained: winrt.system.Boolean
-    is_disabled_by_policy: winrt.system.Boolean
+    has_hardware_encoder: bool
+    is_cpu_constrained: bool
+    is_memory_constrained: bool
+    is_disabled_by_policy: bool
     alternate_shortcut_keys: typing.Optional[AppCaptureAlternateShortcutKeys]
-    is_gpu_constrained: winrt.system.Boolean
-    is_microphone_capture_enabled: winrt.system.Boolean
+    is_gpu_constrained: bool
+    is_microphone_capture_enabled: bool
     video_encoding_frame_rate_mode: AppCaptureVideoEncodingFrameRateMode
     system_audio_gain: winrt.system.Double
     microphone_gain: winrt.system.Double
-    is_microphone_capture_enabled_by_default: winrt.system.Boolean
-    is_echo_cancellation_enabled: winrt.system.Boolean
-    is_cursor_image_capture_enabled: winrt.system.Boolean
+    is_microphone_capture_enabled_by_default: bool
+    is_echo_cancellation_enabled: bool
+    is_cursor_image_capture_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppCaptureSettings: ...
 
 class AppCaptureState(winrt.system.Object):
-    should_capture_microphone: winrt.system.Boolean
-    is_historical_capture_enabled: winrt.system.Boolean
-    is_target_running: winrt.system.Boolean
+    should_capture_microphone: bool
+    is_historical_capture_enabled: bool
+    is_target_running: bool
     microphone_capture_error: winrt.system.UInt32
     microphone_capture_state: AppCaptureMicrophoneCaptureState
     @staticmethod
@@ -518,7 +518,7 @@ class CameraCaptureUIPhotoCaptureSettings(winrt.system.Object):
     format: CameraCaptureUIPhotoFormat
     cropped_size_in_pixels: winrt.windows.foundation.Size
     cropped_aspect_ratio: winrt.windows.foundation.Size
-    allow_cropping: winrt.system.Boolean
+    allow_cropping: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraCaptureUIPhotoCaptureSettings: ...
 
@@ -526,7 +526,7 @@ class CameraCaptureUIVideoCaptureSettings(winrt.system.Object):
     max_resolution: CameraCaptureUIMaxVideoResolution
     max_duration_in_seconds: winrt.system.Single
     format: CameraCaptureUIVideoFormat
-    allow_trimming: winrt.system.Boolean
+    allow_trimming: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CameraCaptureUIVideoCaptureSettings: ...
 
@@ -544,8 +544,8 @@ class CapturedFrame(winrt.system.Object):
     software_bitmap: typing.Optional[winrt.windows.graphics.imaging.SoftwareBitmap]
     content_type: str
     size: winrt.system.UInt64
-    can_read: winrt.system.Boolean
-    can_write: winrt.system.Boolean
+    can_read: bool
+    can_write: bool
     position: winrt.system.UInt64
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -553,7 +553,7 @@ class CapturedFrame(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CapturedFrame: ...
     def clone_stream(self) -> typing.Optional[winrt.windows.storage.streams.IRandomAccessStream]: ...
     def close(self) -> None: ...
-    def flush_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def flush_async(self) -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def get_input_stream_at(self, position: winrt.system.UInt64, /) -> typing.Optional[winrt.windows.storage.streams.IInputStream]: ...
     def get_output_stream_at(self, position: winrt.system.UInt64, /) -> typing.Optional[winrt.windows.storage.streams.IOutputStream]: ...
     def read_async(self, buffer: typing.Optional[winrt.windows.storage.streams.IBuffer], count: winrt.system.UInt32, options: winrt.windows.storage.streams.InputStreamOptions, /) -> winrt.windows.foundation.IAsyncOperationWithProgress[winrt.windows.storage.streams.IBuffer, winrt.system.UInt32]: ...
@@ -564,7 +564,7 @@ class CapturedFrameControlValues(winrt.system.Object):
     exposure: typing.Optional[typing.Optional[datetime.timedelta]]
     exposure_compensation: typing.Optional[typing.Optional[winrt.system.Single]]
     flash_power_percent: typing.Optional[typing.Optional[winrt.system.Single]]
-    flashed: typing.Optional[typing.Optional[winrt.system.Boolean]]
+    flashed: typing.Optional[typing.Optional[bool]]
     focus: typing.Optional[typing.Optional[winrt.system.UInt32]]
     iso_speed: typing.Optional[typing.Optional[winrt.system.UInt32]]
     scene_mode: typing.Optional[typing.Optional[winrt.windows.media.devices.CaptureSceneMode]]
@@ -688,7 +688,7 @@ class MediaCapture(winrt.system.Object):
     def get_preview_frame_async(self) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.media.VideoFrame]: ...
     @typing.overload
     def get_preview_frame_async(self, destination: typing.Optional[winrt.windows.media.VideoFrame], /) -> winrt.windows.foundation.IAsyncOperation[winrt.windows.media.VideoFrame]: ...
-    def get_preview_mirroring(self) -> winrt.system.Boolean: ...
+    def get_preview_mirroring(self) -> bool: ...
     def get_preview_rotation(self) -> VideoRotation: ...
     def get_record_rotation(self) -> VideoRotation: ...
     @typing.overload
@@ -696,7 +696,7 @@ class MediaCapture(winrt.system.Object):
     @typing.overload
     def initialize_async(self, media_capture_initialization_settings: typing.Optional[MediaCaptureInitializationSettings], /) -> winrt.windows.foundation.IAsyncAction: ...
     @staticmethod
-    def is_video_profile_supported(video_device_id: str, /) -> winrt.system.Boolean: ...
+    def is_video_profile_supported(video_device_id: str, /) -> bool: ...
     def pause_record_async(self, behavior: winrt.windows.media.devices.MediaCapturePauseBehavior, /) -> winrt.windows.foundation.IAsyncAction: ...
     def pause_record_with_result_async(self, behavior: winrt.windows.media.devices.MediaCapturePauseBehavior, /) -> winrt.windows.foundation.IAsyncOperation[MediaCapturePauseResult]: ...
     def prepare_advanced_photo_capture_async(self, encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.ImageEncodingProperties], /) -> winrt.windows.foundation.IAsyncOperation[AdvancedPhotoCapture]: ...
@@ -713,7 +713,7 @@ class MediaCapture(winrt.system.Object):
     def resume_record_async(self) -> winrt.windows.foundation.IAsyncAction: ...
     def set_encoder_property(self, media_stream_type: MediaStreamType, property_id: uuid.UUID, property_value: typing.Optional[winrt.system.Object], /) -> None: ...
     def set_encoding_properties_async(self, media_stream_type: MediaStreamType, media_encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.IMediaEncodingProperties], encoder_properties: typing.Optional[winrt.windows.media.mediaproperties.MediaPropertySet], /) -> winrt.windows.foundation.IAsyncAction: ...
-    def set_preview_mirroring(self, value: winrt.system.Boolean, /) -> None: ...
+    def set_preview_mirroring(self, value: bool, /) -> None: ...
     def set_preview_rotation(self, value: VideoRotation, /) -> None: ...
     def set_record_rotation(self, value: VideoRotation, /) -> None: ...
     def start_preview_async(self) -> winrt.windows.foundation.IAsyncAction: ...
@@ -778,7 +778,7 @@ class MediaCaptureInitializationSettings(winrt.system.Object):
     source_group: typing.Optional[winrt.windows.media.capture.frames.MediaFrameSourceGroup]
     sharing_mode: MediaCaptureSharingMode
     memory_preference: MediaCaptureMemoryPreference
-    always_play_system_shutter_sound: winrt.system.Boolean
+    always_play_system_shutter_sound: bool
     device_uri_password_credential: typing.Optional[winrt.windows.security.credentials.PasswordCredential]
     device_uri: typing.Optional[winrt.windows.foundation.Uri]
     @staticmethod
@@ -813,9 +813,9 @@ class MediaCaptureSettings(winrt.system.Object):
     video_device_characteristic: VideoDeviceCharacteristic
     video_device_id: str
     audio_processing: winrt.windows.media.AudioProcessing
-    camera_sound_required_for_region: winrt.system.Boolean
-    concurrent_record_and_photo_sequence_supported: winrt.system.Boolean
-    concurrent_record_and_photo_supported: winrt.system.Boolean
+    camera_sound_required_for_region: bool
+    concurrent_record_and_photo_sequence_supported: bool
+    concurrent_record_and_photo_supported: bool
     horizontal35mm_equivalent_focal_length: typing.Optional[typing.Optional[winrt.system.UInt32]]
     media_category: MediaCategory
     pitch_offset_degrees: typing.Optional[typing.Optional[winrt.system.Int32]]
@@ -848,8 +848,8 @@ class MediaCaptureVideoProfile(winrt.system.Object):
 class MediaCaptureVideoProfileMediaDescription(winrt.system.Object):
     frame_rate: winrt.system.Double
     height: winrt.system.UInt32
-    is_hdr_video_supported: winrt.system.Boolean
-    is_variable_photo_sequence_supported: winrt.system.Boolean
+    is_hdr_video_supported: bool
+    is_variable_photo_sequence_supported: bool
     width: winrt.system.UInt32
     properties: typing.Optional[winrt.windows.foundation.collections.IMapView[uuid.UUID, winrt.system.Object]]
     subtype: str
@@ -877,8 +877,8 @@ class PhotoConfirmationCapturedEventArgs(winrt.system.Object):
 
 class ScreenCapture(winrt.system.Object):
     audio_source: typing.Optional[winrt.windows.media.core.IMediaSource]
-    is_audio_suspended: winrt.system.Boolean
-    is_video_suspended: winrt.system.Boolean
+    is_audio_suspended: bool
+    is_video_suspended: bool
     video_source: typing.Optional[winrt.windows.media.core.IMediaSource]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScreenCapture: ...
@@ -888,8 +888,8 @@ class ScreenCapture(winrt.system.Object):
     def remove_source_suspension_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class SourceSuspensionChangedEventArgs(winrt.system.Object):
-    is_audio_suspended: winrt.system.Boolean
-    is_video_suspended: winrt.system.Boolean
+    is_audio_suspended: bool
+    is_video_suspended: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SourceSuspensionChangedEventArgs: ...
 

@@ -11,7 +11,7 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 class RetailMode(winrt.system.Object):
-    retail_mode_enabled: typing.ClassVar[winrt.system.Boolean]
+    retail_mode_enabled: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RetailMode: ...
 

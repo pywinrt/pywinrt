@@ -23,7 +23,7 @@ class DiagnosticActionResult(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> DiagnosticActionResult: ...
 
 class DiagnosticInvoker(winrt.system.Object):
-    is_supported: typing.ClassVar[winrt.system.Boolean]
+    is_supported: typing.ClassVar[bool]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DiagnosticInvoker: ...
     @staticmethod
@@ -52,7 +52,7 @@ class ProcessDiagnosticInfo(winrt.system.Object):
     parent: typing.Optional[ProcessDiagnosticInfo]
     process_id: winrt.system.UInt32
     process_start_time: datetime.datetime
-    is_packaged: winrt.system.Boolean
+    is_packaged: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProcessDiagnosticInfo: ...
     def get_app_diagnostic_infos(self) -> typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.system.AppDiagnosticInfo]]: ...
@@ -120,7 +120,7 @@ class SystemDiagnosticInfo(winrt.system.Object):
     @staticmethod
     def get_for_current_system() -> typing.Optional[SystemDiagnosticInfo]: ...
     @staticmethod
-    def is_architecture_supported(type: winrt.windows.system.ProcessorArchitecture, /) -> winrt.system.Boolean: ...
+    def is_architecture_supported(type: winrt.windows.system.ProcessorArchitecture, /) -> bool: ...
 
 class SystemMemoryUsage(winrt.system.Object):
     @staticmethod

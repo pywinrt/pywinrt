@@ -18,8 +18,8 @@ class CurrencyFormatter(winrt.system.Object):
     currency: str
     mode: CurrencyFormatterMode
     numeral_system: str
-    is_grouped: winrt.system.Boolean
-    is_decimal_point_always_displayed: winrt.system.Boolean
+    is_grouped: bool
+    is_decimal_point_always_displayed: bool
     integer_digits: winrt.system.Int32
     fraction_digits: winrt.system.Int32
     geographic_region: str
@@ -27,7 +27,7 @@ class CurrencyFormatter(winrt.system.Object):
     resolved_language: str
     languages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     number_rounder: typing.Optional[INumberRounder]
-    is_zero_signed: winrt.system.Boolean
+    is_zero_signed: bool
     significant_digits: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrencyFormatter: ...
@@ -45,9 +45,9 @@ class CurrencyFormatter(winrt.system.Object):
     def parse_uint(self, text: str, /) -> typing.Optional[typing.Optional[winrt.system.UInt64]]: ...
 
 class DecimalFormatter(winrt.system.Object):
-    is_decimal_point_always_displayed: winrt.system.Boolean
+    is_decimal_point_always_displayed: bool
     integer_digits: winrt.system.Int32
-    is_grouped: winrt.system.Boolean
+    is_grouped: bool
     numeral_system: str
     fraction_digits: winrt.system.Int32
     geographic_region: str
@@ -55,7 +55,7 @@ class DecimalFormatter(winrt.system.Object):
     resolved_geographic_region: str
     resolved_language: str
     number_rounder: typing.Optional[INumberRounder]
-    is_zero_signed: winrt.system.Boolean
+    is_zero_signed: bool
     significant_digits: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DecimalFormatter: ...
@@ -97,9 +97,9 @@ class NumeralSystemTranslator(winrt.system.Object):
     def translate_numerals(self, value: str, /) -> str: ...
 
 class PercentFormatter(winrt.system.Object):
-    is_decimal_point_always_displayed: winrt.system.Boolean
+    is_decimal_point_always_displayed: bool
     integer_digits: winrt.system.Int32
-    is_grouped: winrt.system.Boolean
+    is_grouped: bool
     numeral_system: str
     fraction_digits: winrt.system.Int32
     geographic_region: str
@@ -107,7 +107,7 @@ class PercentFormatter(winrt.system.Object):
     resolved_geographic_region: str
     resolved_language: str
     number_rounder: typing.Optional[INumberRounder]
-    is_zero_signed: winrt.system.Boolean
+    is_zero_signed: bool
     significant_digits: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PercentFormatter: ...
@@ -124,9 +124,9 @@ class PercentFormatter(winrt.system.Object):
     def parse_uint(self, text: str, /) -> typing.Optional[typing.Optional[winrt.system.UInt64]]: ...
 
 class PermilleFormatter(winrt.system.Object):
-    is_decimal_point_always_displayed: winrt.system.Boolean
+    is_decimal_point_always_displayed: bool
     integer_digits: winrt.system.Int32
-    is_grouped: winrt.system.Boolean
+    is_grouped: bool
     numeral_system: str
     fraction_digits: winrt.system.Int32
     geographic_region: str
@@ -134,7 +134,7 @@ class PermilleFormatter(winrt.system.Object):
     resolved_geographic_region: str
     resolved_language: str
     number_rounder: typing.Optional[INumberRounder]
-    is_zero_signed: winrt.system.Boolean
+    is_zero_signed: bool
     significant_digits: winrt.system.Int32
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PermilleFormatter: ...
@@ -179,8 +179,8 @@ class INumberFormatterOptions(winrt.system.Object):
     fraction_digits: winrt.system.Int32
     geographic_region: str
     integer_digits: winrt.system.Int32
-    is_decimal_point_always_displayed: winrt.system.Boolean
-    is_grouped: winrt.system.Boolean
+    is_decimal_point_always_displayed: bool
+    is_grouped: bool
     languages: typing.Optional[winrt.windows.foundation.collections.IVectorView[str]]
     numeral_system: str
     resolved_geographic_region: str
@@ -211,7 +211,7 @@ class INumberRounderOption(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> INumberRounderOption: ...
 
 class ISignedZeroOption(winrt.system.Object):
-    is_zero_signed: winrt.system.Boolean
+    is_zero_signed: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignedZeroOption: ...
 

@@ -31,7 +31,7 @@ class SearchSuggestion(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SearchSuggestion: ...
 
 class SearchSuggestionManager(winrt.system.Object):
-    search_history_enabled: winrt.system.Boolean
+    search_history_enabled: bool
     search_history_context: str
     suggestions: typing.Optional[winrt.windows.foundation.collections.IObservableVector[SearchSuggestion]]
     @staticmethod

@@ -31,7 +31,7 @@ class BackgroundMediaPlayer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundMediaPlayer: ...
     @staticmethod
-    def is_media_playing() -> winrt.system.Boolean: ...
+    def is_media_playing() -> bool: ...
     @staticmethod
     def send_message_to_background(value: typing.Optional[winrt.windows.foundation.collections.ValueSet], /) -> None: ...
     @staticmethod
@@ -55,7 +55,7 @@ class CurrentMediaPlaybackItemChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CurrentMediaPlaybackItemChangedEventArgs: ...
 
 class MediaBreak(winrt.system.Object):
-    can_start: winrt.system.Boolean
+    can_start: bool
     custom_properties: typing.Optional[winrt.windows.foundation.collections.ValueSet]
     insertion_method: MediaBreakInsertionMethod
     playback_list: typing.Optional[MediaPlaybackList]
@@ -139,12 +139,12 @@ class MediaPlaybackAudioTrackList(winrt.system.Object, typing.Sequence[winrt.win
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[winrt.windows.media.core.AudioTrack]]: ...
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[winrt.windows.media.core.AudioTrack]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[winrt.windows.media.core.AudioTrack], /) -> winrt.system.UInt32: ...
-    def index_of(self, value: typing.Optional[winrt.windows.media.core.AudioTrack], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[winrt.windows.media.core.AudioTrack], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def add_selected_index_changed(self, handler: winrt.windows.foundation.TypedEventHandler[winrt.windows.media.core.ISingleSelectMediaTrackList, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_selected_index_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MediaPlaybackCommandManager(winrt.system.Object):
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     auto_repeat_mode_behavior: typing.Optional[MediaPlaybackCommandManagerCommandBehavior]
     fast_forward_behavior: typing.Optional[MediaPlaybackCommandManagerCommandBehavior]
     media_player: typing.Optional[MediaPlayer]
@@ -180,7 +180,7 @@ class MediaPlaybackCommandManager(winrt.system.Object):
     def remove_shuffle_received(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     auto_repeat_mode: winrt.windows.media.MediaPlaybackAutoRepeatMode
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs: ...
@@ -189,65 +189,65 @@ class MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs(winrt.system.Ob
 class MediaPlaybackCommandManagerCommandBehavior(winrt.system.Object):
     enabling_rule: MediaCommandEnablingRule
     command_manager: typing.Optional[MediaPlaybackCommandManager]
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerCommandBehavior: ...
     def add_is_enabled_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MediaPlaybackCommandManagerCommandBehavior, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_is_enabled_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MediaPlaybackCommandManagerFastForwardReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerFastForwardReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerNextReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerNextReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerPauseReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPauseReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerPlayReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPlayReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerPositionReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     position: datetime.timedelta
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPositionReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerPreviousReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerPreviousReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerRateReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     playback_rate: winrt.system.Double
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerRateReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerRewindReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
+    handled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerRewindReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
 
 class MediaPlaybackCommandManagerShuffleReceivedEventArgs(winrt.system.Object):
-    handled: winrt.system.Boolean
-    is_shuffle_requested: winrt.system.Boolean
+    handled: bool
+    is_shuffle_requested: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackCommandManagerShuffleReceivedEventArgs: ...
     def get_deferral(self) -> typing.Optional[winrt.windows.foundation.Deferral]: ...
@@ -257,11 +257,11 @@ class MediaPlaybackItem(winrt.system.Object):
     source: typing.Optional[winrt.windows.media.core.MediaSource]
     timed_metadata_tracks: typing.Optional[MediaPlaybackTimedMetadataTrackList]
     video_tracks: typing.Optional[MediaPlaybackVideoTrackList]
-    can_skip: winrt.system.Boolean
+    can_skip: bool
     break_schedule: typing.Optional[MediaBreakSchedule]
     duration_limit: typing.Optional[typing.Optional[datetime.timedelta]]
     start_time: datetime.timedelta
-    is_disabled_in_playback_list: winrt.system.Boolean
+    is_disabled_in_playback_list: bool
     auto_loaded_display_properties: AutoLoadedDisplayPropertyKind
     total_download_progress: winrt.system.Double
     @staticmethod
@@ -301,8 +301,8 @@ class MediaPlaybackItemOpenedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackItemOpenedEventArgs: ...
 
 class MediaPlaybackList(winrt.system.Object):
-    shuffle_enabled: winrt.system.Boolean
-    auto_repeat_enabled: winrt.system.Boolean
+    shuffle_enabled: bool
+    auto_repeat_enabled: bool
     current_item: typing.Optional[MediaPlaybackItem]
     current_item_index: winrt.system.UInt32
     items: typing.Optional[winrt.windows.foundation.collections.IObservableVector[MediaPlaybackItem]]
@@ -330,16 +330,16 @@ class MediaPlaybackSession(winrt.system.Object):
     playback_rate: winrt.system.Double
     normalized_source_rect: winrt.windows.foundation.Rect
     buffering_progress: winrt.system.Double
-    can_pause: winrt.system.Boolean
-    can_seek: winrt.system.Boolean
+    can_pause: bool
+    can_seek: bool
     download_progress: winrt.system.Double
-    is_protected: winrt.system.Boolean
+    is_protected: bool
     media_player: typing.Optional[MediaPlayer]
     natural_duration: datetime.timedelta
     natural_video_height: winrt.system.UInt32
     natural_video_width: winrt.system.UInt32
     playback_state: MediaPlaybackState
-    is_mirroring: winrt.system.Boolean
+    is_mirroring: bool
     spherical_video_projection: typing.Optional[MediaPlaybackSphericalVideoProjection]
     playback_rotation: winrt.windows.media.mediaproperties.MediaRotation
     @staticmethod
@@ -348,7 +348,7 @@ class MediaPlaybackSession(winrt.system.Object):
     def get_output_degradation_policy_state(self) -> typing.Optional[MediaPlaybackSessionOutputDegradationPolicyState]: ...
     def get_played_ranges(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.MediaTimeRange]]: ...
     def get_seekable_ranges(self) -> typing.Optional[winrt.windows.foundation.collections.IVectorView[winrt.windows.media.MediaTimeRange]]: ...
-    def is_supported_playback_rate_range(self, rate1: winrt.system.Double, rate2: winrt.system.Double, /) -> winrt.system.Boolean: ...
+    def is_supported_playback_rate_range(self, rate1: winrt.system.Double, rate2: winrt.system.Double, /) -> bool: ...
     def add_buffering_ended(self, value: winrt.windows.foundation.TypedEventHandler[MediaPlaybackSession, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_buffering_ended(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
     def add_buffering_progress_changed(self, value: winrt.windows.foundation.TypedEventHandler[MediaPlaybackSession, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
@@ -379,7 +379,7 @@ class MediaPlaybackSession(winrt.system.Object):
     def remove_supported_playback_rates_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
 class MediaPlaybackSessionBufferingStartedEventArgs(winrt.system.Object):
-    is_playback_interruption: winrt.system.Boolean
+    is_playback_interruption: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackSessionBufferingStartedEventArgs: ...
 
@@ -391,7 +391,7 @@ class MediaPlaybackSessionOutputDegradationPolicyState(winrt.system.Object):
 class MediaPlaybackSphericalVideoProjection(winrt.system.Object):
     view_orientation: winrt.windows.foundation.numerics.Quaternion
     projection_mode: SphericalVideoProjectionMode
-    is_enabled: winrt.system.Boolean
+    is_enabled: bool
     horizontal_field_of_view_in_degrees: winrt.system.Double
     frame_format: winrt.windows.media.mediaproperties.SphericalVideoFrameFormat
     @staticmethod
@@ -410,7 +410,7 @@ class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, typing.Sequence[w
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[winrt.windows.media.core.TimedMetadataTrack]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[winrt.windows.media.core.TimedMetadataTrack], /) -> winrt.system.UInt32: ...
     def get_presentation_mode(self, index: winrt.system.UInt32, /) -> TimedMetadataTrackPresentationMode: ...
-    def index_of(self, value: typing.Optional[winrt.windows.media.core.TimedMetadataTrack], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[winrt.windows.media.core.TimedMetadataTrack], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def set_presentation_mode(self, index: winrt.system.UInt32, value: TimedMetadataTrackPresentationMode, /) -> None: ...
     def add_presentation_mode_changed(self, handler: winrt.windows.foundation.TypedEventHandler[MediaPlaybackTimedMetadataTrackList, TimedMetadataPresentationModeChangedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_presentation_mode_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -428,7 +428,7 @@ class MediaPlaybackVideoTrackList(winrt.system.Object, typing.Sequence[winrt.win
     def first(self) -> typing.Optional[winrt.windows.foundation.collections.IIterator[winrt.windows.media.core.VideoTrack]]: ...
     def get_at(self, index: winrt.system.UInt32, /) -> typing.Optional[winrt.windows.media.core.VideoTrack]: ...
     def get_many(self, start_index: winrt.system.UInt32, items: winrt.system.Array[winrt.windows.media.core.VideoTrack], /) -> winrt.system.UInt32: ...
-    def index_of(self, value: typing.Optional[winrt.windows.media.core.VideoTrack], /) -> typing.Tuple[winrt.system.Boolean, winrt.system.UInt32]: ...
+    def index_of(self, value: typing.Optional[winrt.windows.media.core.VideoTrack], /) -> typing.Tuple[bool, winrt.system.UInt32]: ...
     def add_selected_index_changed(self, handler: winrt.windows.foundation.TypedEventHandler[winrt.windows.media.core.ISingleSelectMediaTrackList, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_selected_index_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -436,29 +436,29 @@ class MediaPlayer(winrt.system.Object):
     volume: winrt.system.Double
     position: datetime.timedelta
     playback_rate: winrt.system.Double
-    is_looping_enabled: winrt.system.Boolean
-    is_muted: winrt.system.Boolean
-    auto_play: winrt.system.Boolean
+    is_looping_enabled: bool
+    is_muted: bool
+    auto_play: bool
     current_state: MediaPlayerState
     natural_duration: datetime.timedelta
     playback_media_markers: typing.Optional[PlaybackMediaMarkerSequence]
-    is_protected: winrt.system.Boolean
+    is_protected: bool
     buffering_progress: winrt.system.Double
-    can_pause: winrt.system.Boolean
-    can_seek: winrt.system.Boolean
+    can_pause: bool
+    can_seek: bool
     audio_device_type: MediaPlayerAudioDeviceType
     audio_category: MediaPlayerAudioCategory
     system_media_transport_controls: typing.Optional[winrt.windows.media.SystemMediaTransportControls]
     timeline_controller_position_offset: datetime.timedelta
     timeline_controller: typing.Optional[winrt.windows.media.MediaTimelineController]
     stereoscopic_video_render_mode: StereoscopicVideoRenderMode
-    real_time_playback: winrt.system.Boolean
+    real_time_playback: bool
     audio_device: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]
     audio_balance: winrt.system.Double
     command_manager: typing.Optional[MediaPlaybackCommandManager]
     break_manager: typing.Optional[MediaBreakManager]
     playback_session: typing.Optional[MediaPlaybackSession]
-    is_video_frame_server_enabled: winrt.system.Boolean
+    is_video_frame_server_enabled: bool
     audio_state_monitor: typing.Optional[winrt.windows.media.audio.AudioStateMonitor]
     protection_manager: typing.Optional[winrt.windows.media.protection.MediaProtectionManager]
     source: typing.Optional[IMediaPlaybackSource]
@@ -467,8 +467,8 @@ class MediaPlayer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayer: ...
     def __new__(cls: typing.Type[MediaPlayer]) -> MediaPlayer:...
-    def add_audio_effect(self, activatable_class_id: str, effect_optional: winrt.system.Boolean, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
-    def add_video_effect(self, activatable_class_id: str, effect_optional: winrt.system.Boolean, effect_configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
+    def add_audio_effect(self, activatable_class_id: str, effect_optional: bool, configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
+    def add_video_effect(self, activatable_class_id: str, effect_optional: bool, effect_configuration: typing.Optional[winrt.windows.foundation.collections.IPropertySet], /) -> None: ...
     def close(self) -> None: ...
     def copy_frame_to_stereoscopic_video_surfaces(self, destination_left_eye: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], destination_right_eye: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], /) -> None: ...
     @typing.overload
@@ -481,9 +481,9 @@ class MediaPlayer(winrt.system.Object):
     def play(self) -> None: ...
     def remove_all_effects(self) -> None: ...
     @typing.overload
-    def render_subtitles_to_surface(self, destination: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], /) -> winrt.system.Boolean: ...
+    def render_subtitles_to_surface(self, destination: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], /) -> bool: ...
     @typing.overload
-    def render_subtitles_to_surface(self, destination: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], target_rectangle: winrt.windows.foundation.Rect, /) -> winrt.system.Boolean: ...
+    def render_subtitles_to_surface(self, destination: typing.Optional[winrt.windows.graphics.directx.direct3d11.IDirect3DSurface], target_rectangle: winrt.windows.foundation.Rect, /) -> bool: ...
     def set_file_source(self, file: typing.Optional[winrt.windows.storage.IStorageFile], /) -> None: ...
     def set_media_source(self, source: typing.Optional[winrt.windows.media.core.IMediaSource], /) -> None: ...
     def set_stream_source(self, stream: typing.Optional[winrt.windows.storage.streams.IRandomAccessStream], /) -> None: ...

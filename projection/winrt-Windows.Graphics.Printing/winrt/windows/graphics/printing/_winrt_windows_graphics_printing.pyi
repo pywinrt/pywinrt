@@ -30,9 +30,9 @@ class PrintManager(winrt.system.Object):
     @staticmethod
     def get_for_current_view() -> typing.Optional[PrintManager]: ...
     @staticmethod
-    def is_supported() -> winrt.system.Boolean: ...
+    def is_supported() -> bool: ...
     @staticmethod
-    def show_print_u_i_async() -> winrt.windows.foundation.IAsyncOperation[winrt.system.Boolean]: ...
+    def show_print_u_i_async() -> winrt.windows.foundation.IAsyncOperation[bool]: ...
     def add_print_task_requested(self, event_handler: winrt.windows.foundation.TypedEventHandler[PrintManager, PrintTaskRequestedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_print_task_requested(self, event_cookie: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
 
@@ -57,9 +57,9 @@ class PrintPageRange(winrt.system.Object):
     def __new__(cls: typing.Type[PrintPageRange], page: winrt.system.Int32) -> PrintPageRange:...
 
 class PrintPageRangeOptions(winrt.system.Object):
-    allow_custom_set_of_pages: winrt.system.Boolean
-    allow_current_page: winrt.system.Boolean
-    allow_all_pages: winrt.system.Boolean
+    allow_custom_set_of_pages: bool
+    allow_current_page: bool
+    allow_all_pages: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintPageRangeOptions: ...
 
@@ -67,9 +67,9 @@ class PrintTask(winrt.system.Object):
     options: typing.Optional[PrintTaskOptions]
     properties: typing.Optional[winrt.windows.applicationmodel.datatransfer.DataPackagePropertySet]
     source: typing.Optional[IPrintDocumentSource]
-    is_preview_enabled: winrt.system.Boolean
-    is_printer_target_enabled: winrt.system.Boolean
-    is3_d_manufacturing_target_enabled: winrt.system.Boolean
+    is_preview_enabled: bool
+    is_printer_target_enabled: bool
+    is3_d_manufacturing_target_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTask: ...
     def add_completed(self, event_handler: winrt.windows.foundation.TypedEventHandler[PrintTask, PrintTaskCompletedEventArgs], /) -> winrt.windows.foundation.EventRegistrationToken: ...

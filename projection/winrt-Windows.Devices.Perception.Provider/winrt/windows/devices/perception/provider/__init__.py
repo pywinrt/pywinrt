@@ -35,5 +35,5 @@ PerceptionPropertyChangeRequest = _winrt_windows_devices_perception_provider.Per
 PerceptionVideoFrameAllocator = _winrt_windows_devices_perception_provider.PerceptionVideoFrameAllocator
 IPerceptionFrameProvider = _winrt_windows_devices_perception_provider.IPerceptionFrameProvider
 IPerceptionFrameProviderManager = _winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager
-PerceptionStartFaceAuthenticationHandler = typing.Callable[[typing.Optional[PerceptionFaceAuthenticationGroup]], winrt.system.Boolean]
+PerceptionStartFaceAuthenticationHandler = typing.Callable[[typing.Optional[PerceptionFaceAuthenticationGroup]], bool]
 PerceptionStopFaceAuthenticationHandler = typing.Callable[[typing.Optional[PerceptionFaceAuthenticationGroup]], None]

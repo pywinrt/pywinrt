@@ -18,15 +18,15 @@ from . import AccessoryNotificationType, CalendarChangedEvent, PhoneCallAudioEnd
 Self = typing.TypeVar('Self')
 
 class AccessoryManager(winrt.system.Object):
-    phone_mute: typing.ClassVar[winrt.system.Boolean]
+    phone_mute: typing.ClassVar[bool]
     phone_call_audio_endpoint: typing.ClassVar[PhoneCallAudioEndpoint]
-    battery_saver_state: typing.ClassVar[winrt.system.Boolean]
-    do_not_disturb_enabled: typing.ClassVar[winrt.system.Boolean]
-    driving_mode_enabled: typing.ClassVar[winrt.system.Boolean]
+    battery_saver_state: typing.ClassVar[bool]
+    do_not_disturb_enabled: typing.ClassVar[bool]
+    driving_mode_enabled: typing.ClassVar[bool]
     media_playback_capabilities: typing.ClassVar[PlaybackCapability]
     media_playback_status: typing.ClassVar[PlaybackStatus]
     phone_line_details: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[PhoneLineDetails]]]
-    is_phone_pin_locked: typing.ClassVar[winrt.system.Boolean]
+    is_phone_pin_locked: typing.ClassVar[bool]
     speed_dial_list: typing.ClassVar[typing.Optional[winrt.windows.foundation.collections.IVectorView[SpeedDialEntry]]]
     volume_info: typing.ClassVar[typing.Optional[VolumeInfo]]
     @staticmethod
@@ -88,13 +88,13 @@ class AccessoryManager(winrt.system.Object):
     @staticmethod
     def get_phone_line_details(phone_line: uuid.UUID, /) -> typing.Optional[PhoneLineDetails]: ...
     @staticmethod
-    def get_user_consent() -> winrt.system.Boolean: ...
+    def get_user_consent() -> bool: ...
     @staticmethod
-    def hold_phone_call(phone_call_id: winrt.system.UInt32, hold_call: winrt.system.Boolean, /) -> None: ...
+    def hold_phone_call(phone_call_id: winrt.system.UInt32, hold_call: bool, /) -> None: ...
     @staticmethod
     def increase_volume(step: winrt.system.Int32, /) -> None: ...
     @staticmethod
-    def is_notification_enabled_for_application(app_id: str, /) -> winrt.system.Boolean: ...
+    def is_notification_enabled_for_application(app_id: str, /) -> bool: ...
     @typing.overload
     @staticmethod
     def make_phone_call(phone_line: uuid.UUID, phone_number: str, /) -> None: ...
@@ -122,9 +122,9 @@ class AccessoryManager(winrt.system.Object):
     @staticmethod
     def ring_device() -> None: ...
     @staticmethod
-    def set_mute(mute: winrt.system.Boolean, /) -> None: ...
+    def set_mute(mute: bool, /) -> None: ...
     @staticmethod
-    def set_ringer_vibrate(ringer: winrt.system.Boolean, vibrate: winrt.system.Boolean, /) -> None: ...
+    def set_ringer_vibrate(ringer: bool, vibrate: bool, /) -> None: ...
     @typing.overload
     @staticmethod
     def snooze_alarm(alarm_id: uuid.UUID, /) -> None: ...
@@ -144,10 +144,10 @@ class AccessoryManager(winrt.system.Object):
     @staticmethod
     def swap_phone_calls(phone_call_id_to_hold: winrt.system.UInt32, phone_call_id_on_hold: winrt.system.UInt32, /) -> None: ...
     @staticmethod
-    def update_email_read_status(message_entry_id: typing.Optional[BinaryId], is_read: winrt.system.Boolean, /) -> None: ...
+    def update_email_read_status(message_entry_id: typing.Optional[BinaryId], is_read: bool, /) -> None: ...
 
 class AlarmNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -173,7 +173,7 @@ class BinaryId(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> BinaryId: ...
 
 class CalendarChangedNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -184,7 +184,7 @@ class CalendarChangedNotificationTriggerDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CalendarChangedNotificationTriggerDetails: ...
 
 class CortanaTileNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -204,18 +204,18 @@ class CortanaTileNotificationTriggerDetails(winrt.system.Object):
 
 class EmailAccountInfo(winrt.system.Object):
     display_name: str
-    is_notification_enabled: winrt.system.Boolean
+    is_notification_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailAccountInfo: ...
 
 class EmailFolderInfo(winrt.system.Object):
     display_name: str
-    is_notification_enabled: winrt.system.Boolean
+    is_notification_enabled: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailFolderInfo: ...
 
 class EmailNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -231,20 +231,20 @@ class EmailNotificationTriggerDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> EmailNotificationTriggerDetails: ...
 
 class EmailReadNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
     time_created: datetime.datetime
     account_name: str
-    is_read: winrt.system.Boolean
+    is_read: bool
     message_entry_id: typing.Optional[BinaryId]
     parent_folder_name: str
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailReadNotificationTriggerDetails: ...
 
 class MediaControlsTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -282,7 +282,7 @@ class PhoneCallDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PhoneCallDetails: ...
 
 class PhoneLineDetails(winrt.system.Object):
-    default_outgoing_line: winrt.system.Boolean
+    default_outgoing_line: bool
     display_name: str
     line_id: uuid.UUID
     line_number: str
@@ -293,7 +293,7 @@ class PhoneLineDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PhoneLineDetails: ...
 
 class PhoneNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -305,7 +305,7 @@ class PhoneNotificationTriggerDetails(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PhoneNotificationTriggerDetails: ...
 
 class ReminderNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
@@ -335,12 +335,12 @@ class TextResponse(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> TextResponse: ...
 
 class ToastNotificationTriggerDetails(winrt.system.Object):
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
     time_created: datetime.datetime
-    suppress_popup: winrt.system.Boolean
+    suppress_popup: bool
     text1: str
     text2: str
     text3: str
@@ -351,7 +351,7 @@ class ToastNotificationTriggerDetails(winrt.system.Object):
 
 class VolumeInfo(winrt.system.Object):
     call_volume: winrt.system.UInt32
-    is_muted: winrt.system.Boolean
+    is_muted: bool
     is_vibrate_enabled: VibrateState
     media_volume: winrt.system.UInt32
     system_volume: winrt.system.UInt32
@@ -362,7 +362,7 @@ class IAccessoryNotificationTriggerDetails(winrt.system.Object):
     accessory_notification_type: AccessoryNotificationType
     app_display_name: str
     app_id: str
-    started_processing: winrt.system.Boolean
+    started_processing: bool
     time_created: datetime.datetime
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAccessoryNotificationTriggerDetails: ...

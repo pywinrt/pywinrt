@@ -584,7 +584,7 @@ namespace pywinrt
             switch (type)
             {
             case ElementType::Boolean:
-                return "winrt.system.Boolean";
+                return "bool";
             case ElementType::Char:
                 return "winrt.system.Char16";
             case ElementType::I1:

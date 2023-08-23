@@ -27,11 +27,11 @@ class UserDataAccount(winrt.system.Object):
     device_account_type_id: str
     id: str
     package_family_name: str
-    is_protected_under_lock: winrt.system.Boolean
+    is_protected_under_lock: bool
     enterprise_id: str
     display_name: str
     explict_read_access_package_family_names: typing.Optional[winrt.windows.foundation.collections.IVector[str]]
-    can_show_create_contact_group: winrt.system.Boolean
+    can_show_create_contact_group: bool
     provider_properties: typing.Optional[winrt.windows.foundation.collections.IPropertySet]
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccount: ...

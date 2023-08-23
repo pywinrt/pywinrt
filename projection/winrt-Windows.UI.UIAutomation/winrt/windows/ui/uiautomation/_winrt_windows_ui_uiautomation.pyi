@@ -13,7 +13,7 @@ Self = typing.TypeVar('Self')
 class AutomationConnection(winrt.system.Object):
     app_user_model_id: str
     executable_file_name: str
-    is_remote_system: winrt.system.Boolean
+    is_remote_system: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationConnection: ...
 
@@ -25,7 +25,7 @@ class AutomationConnectionBoundObject(winrt.system.Object):
 class AutomationElement(winrt.system.Object):
     app_user_model_id: str
     executable_file_name: str
-    is_remote_system: winrt.system.Boolean
+    is_remote_system: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationElement: ...
 

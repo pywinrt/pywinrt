@@ -30,7 +30,7 @@ class AudioDeviceInputNode(winrt.system.Object):
     outgoing_connections: typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]
     emitter: typing.Optional[AudioNodeEmitter]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     def __enter__(self: Self) -> Self: ...
@@ -52,7 +52,7 @@ class AudioDeviceInputNode(winrt.system.Object):
 class AudioDeviceOutputNode(winrt.system.Object):
     device: typing.Optional[winrt.windows.devices.enumeration.DeviceInformation]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     listener: typing.Optional[AudioNodeListener]
@@ -78,7 +78,7 @@ class AudioFileInputNode(winrt.system.Object):
     outgoing_connections: typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]
     emitter: typing.Optional[AudioNodeEmitter]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     def __enter__(self: Self) -> Self: ...
@@ -104,7 +104,7 @@ class AudioFileOutputNode(winrt.system.Object):
     file: typing.Optional[winrt.windows.storage.IStorageFile]
     file_encoding_profile: typing.Optional[winrt.windows.media.mediaproperties.MediaEncodingProfile]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     def __enter__(self: Self) -> Self: ...
@@ -130,7 +130,7 @@ class AudioFrameInputNode(winrt.system.Object):
     outgoing_connections: typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]
     emitter: typing.Optional[AudioNodeEmitter]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     def __enter__(self: Self) -> Self: ...
@@ -157,7 +157,7 @@ class AudioFrameInputNode(winrt.system.Object):
 
 class AudioFrameOutputNode(winrt.system.Object):
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     def __enter__(self: Self) -> Self: ...
@@ -272,7 +272,7 @@ class AudioNodeEmitter(winrt.system.Object):
     distance_scale: winrt.system.Double
     direction: winrt.windows.foundation.numerics.Vector3
     decay_model: typing.Optional[AudioNodeEmitterDecayModel]
-    is_doppler_disabled: winrt.system.Boolean
+    is_doppler_disabled: bool
     shape: typing.Optional[AudioNodeEmitterShape]
     spatial_audio_model: SpatialAudioModel
     @staticmethod
@@ -384,7 +384,7 @@ class AudioSubmixNode(winrt.system.Object):
     outgoing_connections: typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]
     emitter: typing.Optional[AudioNodeEmitter]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     def __enter__(self: Self) -> Self: ...
@@ -488,7 +488,7 @@ class MediaSourceAudioInputNode(winrt.system.Object):
     outgoing_connections: typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]
     emitter: typing.Optional[AudioNodeEmitter]
     outgoing_gain: winrt.system.Double
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     start_time: typing.Optional[typing.Optional[datetime.timedelta]]
@@ -520,7 +520,7 @@ class MediaSourceAudioInputNode(winrt.system.Object):
 class ReverbEffectDefinition(winrt.system.Object):
     high_e_q_gain: winrt.system.UInt8
     high_e_q_cutoff: winrt.system.UInt8
-    disable_late_field: winrt.system.Boolean
+    disable_late_field: bool
     density: winrt.system.Double
     position_right: winrt.system.UInt8
     decay_time: winrt.system.Double
@@ -556,12 +556,12 @@ class SpatialAudioDeviceConfiguration(winrt.system.Object):
     active_spatial_audio_format: str
     default_spatial_audio_format: str
     device_id: str
-    is_spatial_audio_supported: winrt.system.Boolean
+    is_spatial_audio_supported: bool
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpatialAudioDeviceConfiguration: ...
     @staticmethod
     def get_for_device_id(device_id: str, /) -> typing.Optional[SpatialAudioDeviceConfiguration]: ...
-    def is_spatial_audio_format_supported(self, subtype: str, /) -> winrt.system.Boolean: ...
+    def is_spatial_audio_format_supported(self, subtype: str, /) -> bool: ...
     def set_default_spatial_audio_format_async(self, subtype: str, /) -> winrt.windows.foundation.IAsyncOperation[SetDefaultSpatialAudioFormatResult]: ...
     def add_configuration_changed(self, handler: winrt.windows.foundation.TypedEventHandler[SpatialAudioDeviceConfiguration, winrt.system.Object], /) -> winrt.windows.foundation.EventRegistrationToken: ...
     def remove_configuration_changed(self, token: winrt.windows.foundation.EventRegistrationToken, /) -> None: ...
@@ -588,7 +588,7 @@ class SpatialAudioFormatSubtype(winrt.system.Object):
 
 class IAudioInputNode(winrt.system.Object):
     outgoing_connections: typing.Optional[winrt.windows.foundation.collections.IVectorView[AudioGraphConnection]]
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     outgoing_gain: winrt.system.Double
@@ -610,7 +610,7 @@ class IAudioInputNode(winrt.system.Object):
 
 class IAudioInputNode2(winrt.system.Object):
     emitter: typing.Optional[AudioNodeEmitter]
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     outgoing_gain: winrt.system.Double
@@ -632,7 +632,7 @@ class IAudioInputNode2(winrt.system.Object):
     def stop(self) -> None: ...
 
 class IAudioNode(winrt.system.Object):
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     outgoing_gain: winrt.system.Double
@@ -649,7 +649,7 @@ class IAudioNode(winrt.system.Object):
 
 class IAudioNodeWithListener(winrt.system.Object):
     listener: typing.Optional[AudioNodeListener]
-    consume_input: winrt.system.Boolean
+    consume_input: bool
     effect_definitions: typing.Optional[winrt.windows.foundation.collections.IVector[winrt.windows.media.effects.IAudioEffectDefinition]]
     encoding_properties: typing.Optional[winrt.windows.media.mediaproperties.AudioEncodingProperties]
     outgoing_gain: winrt.system.Double
