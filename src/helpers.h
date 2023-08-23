@@ -17,6 +17,28 @@ namespace pywinrt
             .count();
     }
 
+    /**
+     * Filters a list of types by a filter.
+     * @param [in]  filter  The filter to apply.
+     * @param [in]  types   The types to filter.
+     * @returns A new vector containing only the types that match the filter.
+     */
+    auto filter_types(filter const& filter, std::vector<TypeDef> const& types)
+    {
+        std::vector<TypeDef> filtered{};
+
+        std::copy_if(
+            types.begin(),
+            types.end(),
+            std::back_inserter(filtered),
+            [&filter](auto& t)
+            {
+                return filter.includes(t);
+            });
+
+        return filtered;
+    }
+
     auto get_dotted_name_segments(std::string_view ns)
     {
         std::vector<std::string_view> segments;

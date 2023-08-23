@@ -198,11 +198,6 @@ static void custom_set(winrt::hresult& instance, int32_t value)
 
         write_license(w, "#");
 
-        if (!members.enums.empty())
-        {
-            w.write("import enum\n");
-        }
-
         w.write("import datetime\n");
         w.write("import sys\n");
         w.write("import types\n");
@@ -211,8 +206,14 @@ static void custom_set(winrt::hresult& instance, int32_t value)
         w.write("import winrt.system\n");
 
         w.write_each<write_python_import_namespace>(needed_namespaces);
-        settings.filter.bind_each<write_python_enum>(members.enums)(w);
+
         w.write("\n");
+        auto enum_types = filter_types(settings.filter, members.enums);
+        if (!enum_types.empty())
+        {
+            w.write("from . import %\n", bind_list<write_type_name>(", ", enum_types));
+            w.write("\n");
+        }
 
         write_python_type_vars(w, members.interfaces, members.delegates);
         w.write("\n");

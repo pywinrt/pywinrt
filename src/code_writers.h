@@ -99,6 +99,14 @@ namespace pywinrt
     }
 
     /**
+     * Writes a type name (without generic specifier).
+     */
+    void write_type_name(writer& w, TypeDef const& type)
+    {
+        w.write("@", type.TypeName());
+    }
+
+    /**
      * Writes the binary extension module name for the given namespace.
      *
      * Example: "Windows.Foundation" becomes "_winrt_windows_foundation".
